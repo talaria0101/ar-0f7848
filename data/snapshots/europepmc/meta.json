@@ -1,0 +1,28 @@
+{
+ "slug": "europepmc",
+ "name": "Europe PMC REST API",
+ "docs": {
+  "url": "https://europepmc.org/RestfulWebService",
+  "final_url": "https://europepmc.org/RestfulWebService",
+  "status": 403,
+  "content_type": "text/html; charset=UTF-8",
+  "bytes": 5678,
+  "truncated": false,
+  "sha256": "47ec74d0e4ab08ec64bff73d14b15c4fc5f25c3b3edf0cae4f50470d47146675",
+  "fetched_at": "2026-10-20T01:31:41+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 16
+ },
+ "probe": {
+  "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=test&format=json&pageSize=1",
+  "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=test&format=json&pageSize=1",
+  "status": 200,
+  "content_type": "application/json;charset=UTF-8",
+  "bytes": 1187,
+  "truncated": false,
+  "sha256": "d55d78113c0dea4ae5c44fb3f4d86f22e89d828ab0dc085f8e0814c8eda6e092",
+  "fetched_at": "2026-10-20T01:31:41+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 1187
+ }
+}

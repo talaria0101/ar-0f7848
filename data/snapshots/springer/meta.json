@@ -1,0 +1,28 @@
+{
+ "slug": "springer",
+ "name": "Springer Nature API",
+ "docs": {
+  "url": "https://dev.springernature.com/",
+  "final_url": "https://dev.springernature.com/",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 163015,
+  "truncated": false,
+  "sha256": "74df2221f21be77bed5be71330caa82fa87d9ff13bd7acebcc8e96374419a6a0",
+  "fetched_at": "2026-10-20T01:31:54+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 4796
+ },
+ "probe": {
+  "url": "https://api.springernature.com/meta/v2/json?q=test&p=1&api_key=invalid",
+  "final_url": "https://api.springernature.com/meta/v2/json?q=test&p=1&api_key=invalid",
+  "status": 401,
+  "content_type": "application/json; charset=utf-8",
+  "bytes": 234,
+  "truncated": false,
+  "sha256": "2bc6e7f13df7d6fd5b7757790521c5cf095962e46c3c6cf714ff7f6fc5102e24",
+  "fetched_at": "2026-10-20T01:31:55+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 234
+ }
+}

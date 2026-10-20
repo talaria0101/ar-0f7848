@@ -1,0 +1,30 @@
+{
+ "slug": "dryad",
+ "name": "Dryad API",
+ "docs": {
+  "url": "https://datadryad.org/api",
+  "final_url": "https://datadryad.org/api",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 9796,
+  "truncated": false,
+  "sha256": "aae13cdefabe8de63b7f472921f03be7a7eb5b94b664c19926a30b11cb2f9f10",
+  "fetched_at": "2026-10-20T01:31:51+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 406
+ },
+ "probe": {
+  "url": "https://datadryad.org/api/v2/search?q=test&per_page=1",
+  "final_url": "https://datadryad.org/api/v2/search?q=test&per_page=1",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "bytes": 6485,
+  "truncated": false,
+  "sha256": "4629d0e1a949624dae414cc8e8576a02e87a0d9d6ca76d48887e8544610f5964",
+  "fetched_at": "2026-10-20T01:31:52+00:00",
+  "ratelimit_headers": {
+   "x-api-version": "2.1.0"
+  },
+  "text_bytes": 6483
+ }
+}

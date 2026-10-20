@@ -1,0 +1,1 @@
+{"type":"orkg:problem:not_found","title":"Not Found","status":404,"detail":"No static resource api/swagger-ui/index.html.","instance":"/api/swagger-ui/index.html","error":"Not Found","message":"No static resource api/swagger-ui/index.html.","path":"/api/swagger-ui/index.html","timestamp":"2026-10-20T03:33:12.094570319+02:00"}

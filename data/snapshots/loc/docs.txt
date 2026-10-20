@@ -1,0 +1,153 @@
+APIs at the Library of Congress | Library of Congress
+ Loading... 
+ Top of page
+ Skip to main content
+ Library of Congress 
+ Everything 
+ Audio Recordings
+ Books/Printed Material
+ Films, Videos
+ Legislation
+ Manuscripts/Mixed Material
+ Maps
+ Notated Music
+ Newspapers
+ Periodicals
+ Personal Narratives
+ Photos, Prints, Drawings
+ Software, E-Resources
+ Web Archives
+ Web Pages
+ 3D Objects
+ APIs at the Library of Congress
+ Search 
+ Toggle Search 
+ Global Menu 
+ Discover
+ Services
+ Visit
+ Education
+ Connect
+ About
+ Ask a Librarian
+ Help
+ Contact
+ Search Online Catalog
+ Copyright.gov
+ Congress.gov
+ Library of Congress 
+ More 
+ APIs at the Library of Congress
+ Share
+ Copied!
+ Error copying link to clipboard.
+ Services
+ APIs at the Library of Congress
+ Menu 
+ APIs for LoC.gov
+ JSON/YAML for LoC.gov
+ JSON/YAML for LoC.gov
+ Making API Requests
+ API Endpoints
+ API Request Parameters
+ Understanding API Responses
+ Search Results Responses
+ Item and Resource Responses
+ Working Within Limits
+ Dynamic Examples
+ Sitemaps
+ Microservices
+ Microservices
+ Text Services
+ Image Services
+ Streaming Services
+ Additional APIs and Data Services
+ Additional APIs and Data Services
+ Congress.gov API
+ NLS BARD API
+ Chronicling America
+ PPOC - JSON HTTP API
+ Linked Data Service
+ Search/Retrieval via URL
+ Contact
+ APIs for LoC.gov
+ This site 
+ describes how the Library makes information available via a series of
+ application programming interfaces (APIs). Specifically, it includes technical
+ documentation of the Library's loc.gov JSON API, its sitemaps, and suite of microservices.
+ If you're looking for non-computational ways to access digital materials online, the Guide to Digital Scholarship at the Library of Congress and the
+ Using the Library of Congress Online Guide for Middle and High School Students provide strategies for searching the digital collections.
+ The benefits of using an API to obtain information about the Library's
+ online content instead of searching the website include:
+ First, an API enables automation. It returns information in a more
+ machine-readable form than the loc.gov website does. So, for example,
+ if you are a software developer, computer programmer, or computational
+ researcher building an application or pulling down a lot of information
+ at one time, an API may be more useful than scraping the website. 
+ Second, machine-readable information makes data available in a structured format. 
+ So, as another example, if you are a student or an educator who wants to compile a
+ spreadsheet of LC collections related to "cats" you could more easily
+ convert the API response (which in the case of the loc.gov API comes in
+ the form of JSON data) into a csv file. You could then open this csv in
+ any spreadsheet viewing program like Excel.
+ Third, JSON data also makes it easy to page through the data made available by
+ the API. Once you have the results of an API query, you can more easily
+ iterate through the responses to see which match the attributes you're
+ looking for. It's important to know that, sometimes, you can sort by
+ attributes that are not available as facets (such as "original format,"
+ "online format," "date, or "location") on the loc.gov website.
+ Finally, an API query provides more flexibility with faceting,
+ filtering, and organizing your results while you're actively searching. 
+ So, if you can't find what you're looking for as a facet on the
+ left-hand side of a search result, consider checking out the JSON
+ API's query parameters to see if they better suit your needs.
+ Available APIs 
+ The Library of Congress makes three different loc.gov APIs available to the public: 
+ JSON/YAML for loc.gov: The
+ loc.gov API
+ provides structured data about Library of Congress collections. The
+ API was originally designed to power the loc.gov website, but in
+ addition to providing HTML for the website it can provide a wealth of
+ information in JSON format.
+ Sitemaps: A sitemap provides information on the
+ relationships between the pages, videos, images and other resources
+ on a website. They are primarily used to inform search engines about
+ the pages that are available for crawling. It is expressed as an XML
+ file listing URLs and their associated metadata. Conventionally,
+ sitemaps are not described as APIs but it's convenient to discuss
+ them in relationship to other LC APIs since they are also used for
+ automated interactions, especially by web crawlers. 
+ Microservices: A microservice is a limited-purpose
+ computer system written to carry out a specific role and using a
+ lightweight API. The three microservices described on this page fall
+ into three categories: Text Services, Image Services, and Streaming
+ Services.
+ Text Services provides an API for accessing full text OCR, word
+ coordinates and context snippets on loc.gov .
+ Image Services provides an IIIF-compliant API for accessing and
+ manipulating images from the Library of Congress.
+ Streaming Services provides an audio and video (A/V) delivery API for
+ the Library of Congress.
+ Additional APIs 
+ In addition to the loc.gov API, there are other APIs and machine-readable
+ data services maintained by the Library separately from the loc.gov API.
+ A number of them are detailed under
+ Additional APIs and Services .
+ Additional Resources 
+ For more guidance on using the Library's web applications, APIs, and other
+ data services to explore digital collections, see the
+ Guide to Digital Scholarship at the Library of Congress .
+ Back to top
+ Follow Us 
+ Take our survey 
+ Accessibility 
+ Legal 
+ Inspector General 
+ External Link Disclaimer 
+ USA.gov 
+ Contact 
+ Media 
+ Donate 
+ Shop 
+ Opens in new window 
+ Download

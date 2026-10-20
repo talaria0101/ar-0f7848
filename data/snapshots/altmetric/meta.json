@@ -1,0 +1,34 @@
+{
+ "slug": "altmetric",
+ "name": "Altmetric Details Page API",
+ "docs": {
+  "url": "https://details-page-api-docs.altmetric.com/",
+  "final_url": "https://docs.altmetric.com/details-page-api/",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 50463,
+  "truncated": false,
+  "sha256": "6621ec9450e667e3f5b8d52e8cb2b4cf4a13f81e3fae6b011117f8ccd182d530",
+  "fetched_at": "2026-10-20T01:31:45+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 2864
+ },
+ "probe": {
+  "url": "https://api.altmetric.com/v1/doi/10.1038/nature12373",
+  "final_url": "https://api.altmetric.com/v1/doi/10.1038/nature12373",
+  "status": 403,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 242,
+  "truncated": false,
+  "sha256": "d9745c5012b7b0242693e844f967aac7bfd4eaed1a724b2e41c57a6f26373660",
+  "fetched_at": "2026-10-20T01:31:46+00:00",
+  "ratelimit_headers": {
+   "X-APIRequestId": "4726dd1d-41f7-4517-a52f-180b3d6a8234",
+   "X-HourlyRateLimit-Limit": "720",
+   "X-HourlyRateLimit-Remaining": "719",
+   "X-DailyRateLimit-Limit": "1200",
+   "X-DailyRateLimit-Remaining": "1199"
+  },
+  "text_bytes": 242
+ }
+}

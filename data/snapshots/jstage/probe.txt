@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed  xmlns="http://www.w3.org/2005/Atom"
+  xmlns:prism="http://prismstandard.org/namespaces/basic/2.0/"
+  xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/"
+  xml:lang="ja" > 
+  <result>
+    <status>WARN_002</status>
+    <message>WARN_002</message>
+  </result>
+  <title>Articles</title>
+  <link href="https://api.jstage.jst.go.jp/searchapi/do?service=3&amp;text=test&amp;count=1"/>
+  <id>https://api.jstage.jst.go.jp/searchapi/do?service=3&amp;text=test&amp;count=1</id>
+  <servicecd>3</servicecd>
+  <updated>2026-10-20T10:31+09:00</updated>
+  <opensearch:totalResults>644708</opensearch:totalResults>
+  <opensearch:startIndex>1</opensearch:startIndex>
+  <opensearch:itemsPerPage>1</opensearch:itemsPerPage>
+  <entry>
+    <article_title>
+      <en><![CDATA[A Self-Test of Dynamically Reconfigurable Processors with Test Frames]]></en>
+      <ja/>
+    </article_title>
+    <article_link>
+      <en>https://www.jstage.jst.go.jp/article/transinf/E91.D/3/E91.D_3_756/_article</en>
+      <ja>https://www.jstage.jst.go.jp/article/transinf/E91.D/3/E91.D_3_756/_article/-char/ja/</ja>
+    </article_link>
+    <author>
+      <en>
+        <name><![CDATA[Tomoo INOUE]]></name>
+        <name><![CDATA[Takashi FUJII]]></name>
+        <name><![CDATA[Hideyuki ICHIHARA]]></name>
+      </en>
+      <ja/>
+    </author>
+    <cdjournal>transinf</cdjournal>
+    <material_title>
+      <en><![CDATA[IEICE Transactions on Information and Systems]]></en>
+      <ja><![CDATA[IEICE Transactions on Information and Systems]]></ja>
+    </material_title>
+    <prism:issn>0916-8532</prism:issn>
+    <prism:eIssn>1745-1361</prism:eIssn>
+    <prism:volume>E91.D</prism:volume>
+    <prism:number>3</prism:number>
+    <prism:startingPage>756</prism:startingPage>
+    <prism:endingPage>762</prism:endingPage>
+    <pubyear>2008</pubyear>
+    <prism:doi>10.1093/ietisy/e91-d.3.756</prism:doi>
+    <systemcode>1</systemcode>
+    <systemname>J-STAGE</systemname>
+    <title><![CDATA[A Self-Test of Dynamically Reconfigurable Processors with Test Frames]]></title>
+    <link href="https://www.jstage.jst.go.jp/article/transinf/E91.D/3/E91.D_3_756/_article/-char/ja/"/>
+    <id>https://www.jstage.jst.go.jp/article/transinf/E91.D/3/E91.D_3_756/_article/-char/ja/</id>
+    <updated>2010-03-01T09:00+09:00</updated>
+  </entry>
+</feed>

@@ -1,0 +1,28 @@
+{
+ "slug": "ia-advancedsearch",
+ "name": "Internet Archive Advanced Search",
+ "docs": {
+  "url": "https://archive.org/advancedsearch.php",
+  "final_url": "https://archive.org/advancedsearch.php",
+  "status": 200,
+  "content_type": "text/html; charset=UTF-8",
+  "bytes": 242012,
+  "truncated": false,
+  "sha256": "67379f4261da8a1328d72f97c8669bc0e655dd28904ab4d7f074a149ce714722",
+  "fetched_at": "2026-10-20T01:31:33+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 34127
+ },
+ "probe": {
+  "url": "https://archive.org/advancedsearch.php?q=mediatype%3Atexts&fl%5B%5D=identifier&rows=1&output=json",
+  "final_url": "https://archive.org/advancedsearch.php?q=mediatype%3Atexts&fl%5B%5D=identifier&rows=1&output=json",
+  "status": 200,
+  "content_type": "application/json",
+  "bytes": 253,
+  "truncated": false,
+  "sha256": "70f4a575be2e3d650e4d15f0b7b124463d0eb8e1d257508798432a67965ba433",
+  "fetched_at": "2026-10-20T01:31:35+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 253
+ }
+}

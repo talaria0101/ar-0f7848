@@ -1,0 +1,35 @@
+{
+ "slug": "arquivo-pt",
+ "name": "Arquivo.pt Web Archive",
+ "docs": {
+  "url": "https://github.com/arquivo/pwa-technologies/wiki/Arquivo.pt-API",
+  "final_url": "https://github.com/arquivo/pwa-technologies/wiki/Arquivo.pt-API",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 309963,
+  "truncated": false,
+  "sha256": "5f37203a0e4b212907ee839ca435c91ad88d927d7c9c3393ba87a4291c3e9af4",
+  "fetched_at": "2026-10-20T01:31:33+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 28515
+ },
+ "probe": {
+  "url": "https://arquivo.pt/wayback/cdx?url=example.com&limit=2&output=json",
+  "final_url": "https://arquivo.pt/wayback/cdx?url=example.com&limit=2&output=json",
+  "status": 200,
+  "content_type": "text/x-ndjson",
+  "bytes": 735,
+  "truncated": false,
+  "sha256": "939fbb4b89489e6ac6cba71724ef466243622ed7a496b81d80d95e1de7f80d2d",
+  "fetched_at": "2026-10-20T01:31:35+00:00",
+  "ratelimit_headers": {
+   "X-RateLimit-Limit": "250",
+   "X-RateLimit-Reset": "t=1792459889215718",
+   "RateLimit-Limit": "250",
+   "RateLimit-Reset": "60",
+   "X-RateLimit-Policy": "250;w=60",
+   "X-RateLimit-Scope": "ip"
+  },
+  "text_bytes": 734
+ }
+}

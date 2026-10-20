@@ -1,0 +1,28 @@
+{
+ "slug": "ia-scholar",
+ "name": "Internet Archive Scholar / fatcat",
+ "docs": {
+  "url": "https://guide.fatcat.wiki/http_api.html",
+  "final_url": "https://guide.fatcat.wiki/http_api.html",
+  "status": 0,
+  "content_type": "",
+  "bytes": 76,
+  "truncated": false,
+  "sha256": "827902037efde5f0988e94d8c881353fe54c846b290a0e59ef00ade936917d7e",
+  "fetched_at": "2026-10-20T01:31:33+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 76
+ },
+ "probe": {
+  "url": "https://api.fatcat.wiki/v0/release/lookup?doi=10.1038/nature12373",
+  "final_url": "https://api.fatcat.wiki/v0/release/lookup?doi=10.1038/nature12373",
+  "status": 0,
+  "content_type": "",
+  "bytes": 76,
+  "truncated": false,
+  "sha256": "827902037efde5f0988e94d8c881353fe54c846b290a0e59ef00ade936917d7e",
+  "fetched_at": "2026-10-20T01:31:38+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 76
+ }
+}

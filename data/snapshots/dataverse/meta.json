@@ -1,0 +1,28 @@
+{
+ "slug": "dataverse",
+ "name": "Harvard Dataverse Search API",
+ "docs": {
+  "url": "https://guides.dataverse.org/en/latest/api/search.html",
+  "final_url": "https://guides.dataverse.org/en/latest/api/search.html",
+  "status": 200,
+  "content_type": "text/html; charset=UTF-8",
+  "bytes": 150693,
+  "truncated": false,
+  "sha256": "8a7ec020be42547c036c84ae97df2458a7747e1727a7b3681d271219f5fa44c7",
+  "fetched_at": "2026-10-20T01:31:51+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 33310
+ },
+ "probe": {
+  "url": "https://dataverse.harvard.edu/api/search?q=test&per_page=1",
+  "final_url": "https://dataverse.harvard.edu/api/search?q=test&per_page=1",
+  "status": 200,
+  "content_type": "application/json;charset=UTF-8",
+  "bytes": 1374,
+  "truncated": false,
+  "sha256": "849cede416c4a143ca033767d02808fabbd9caf21986efeb6206b8f49858bdc4",
+  "fetched_at": "2026-10-20T01:31:54+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 1374
+ }
+}

@@ -1,0 +1,259 @@
+Wayback Machine APIs | Internet Archive 
+ Skip to main content 
+ Keep the news in the Wayback Machine. Sign Fight for the Future's letter . 
+ Wayback Machine 
+ Texts 
+ Video 
+ Audio 
+ Software 
+ Images 
+ Donate 
+ More 
+ "Donate to the archive" 
+ Sign up 
+ |
+ Log in 
+ Upload 
+ Internet Archive Audio 
+ Live Music
+ Archive 
+ Librivox
+ Free Audio 
+ Featured 
+ All Audio 
+ Grateful Dead 
+ Netlabels 
+ Old Time Radio 
+ 78 RPMs
+ and Cylinder Recordings 
+ Top 
+ Audio Books
+ & Poetry 
+ Computers,
+ Technology and Science 
+ Music, Arts
+ & Culture 
+ News &
+ Public Affairs 
+ Spirituality
+ & Religion 
+ Podcasts 
+ Radio News
+ Archive 
+ Images 
+ Metropolitan Museum 
+ Cleveland
+ Museum of Art 
+ Featured 
+ All Images 
+ Flickr Commons 
+ Occupy Wall
+ Street Flickr 
+ Cover Art 
+ USGS Maps 
+ Top 
+ NASA Images 
+ Solar System
+ Collection 
+ Ames Research
+ Center 
+ Software 
+ Internet
+ Arcade 
+ Console Living Room 
+ Featured 
+ All Software 
+ Old School
+ Emulation 
+ MS-DOS Games 
+ Historical
+ Software 
+ Classic PC
+ Games 
+ Software
+ Library 
+ Top 
+ Kodi
+ Archive and Support File 
+ Vintage
+ Software 
+ APK 
+ MS-DOS 
+ CD-ROM
+ Software 
+ CD-ROM
+ Software Library 
+ Software Sites 
+ Tucows
+ Software Library 
+ Shareware
+ CD-ROMs 
+ Software
+ Capsules Compilation 
+ CD-ROM Images 
+ ZX Spectrum 
+ DOOM Level CD 
+ Texts 
+ Open Library 
+ American
+ Libraries 
+ Featured 
+ All Texts 
+ Smithsonian
+ Libraries 
+ FEDLINK (US) 
+ Genealogy 
+ Lincoln
+ Collection 
+ Democracy’s Library 
+ Top 
+ American
+ Libraries 
+ Canadian
+ Libraries 
+ Universal
+ Library 
+ Project
+ Gutenberg 
+ Children's
+ Library 
+ Biodiversity
+ Heritage Library 
+ Books by
+ Language 
+ Folkscanomy 
+ Government Documents 
+ Video 
+ TV News 
+ Understanding
+ 9/11 
+ Featured 
+ All Video 
+ Prelinger
+ Archives 
+ Democracy Now! 
+ Occupy Wall
+ Street 
+ TV NSA Clip
+ Library 
+ Top 
+ Animation
+ & Cartoons 
+ Arts & Music 
+ Computers
+ & Technology 
+ Cultural
+ & Academic Films 
+ Ephemeral Films 
+ Movies 
+ News &
+ Public Affairs 
+ Spirituality
+ & Religion 
+ Sports Videos 
+ Television 
+ Videogame
+ Videos 
+ Vlogs 
+ Youth Media 
+ Search the history of more than 1 trillion
+ web pages .
+ Search the Wayback Machine 
+ Mobile Apps 
+ Wayback Machine (iOS) 
+ Wayback Machine (Android) 
+ Browser Extensions 
+ Chrome 
+ Firefox 
+ Safari 
+ Edge 
+ Archive-It Subscription 
+ Explore the Collections 
+ Learn More 
+ Build Collections 
+ Save Page Now 
+ Capture a web page as it appears now for use as a trusted
+ citation in the future. 
+ Enter a URL to save 
+ Please enter a valid web address 
+ About 
+ Blog 
+ Events 
+ Projects 
+ Help 
+ Donate 
+ Contact 
+ Jobs 
+ Volunteer 
+ Sign up for free
+ Log in
+ About 
+ Blog 
+ Events 
+ Projects 
+ Help 
+ Donate 
+ Contact 
+ Jobs 
+ Volunteer 
+ Wayback Machine APIs 
+ The Internet Archive Wayback Machine supports a number of different APIs to make it
+ easier for developers to retrieve information about Wayback capture data. 
+ The following is a listing of currently supported APIs. This page is subject to change frequently,
+ please check back for the latest info. 
+ Updated on September, 24, 2013 
+ Wayback Availability JSON API 
+ This simple API for Wayback is a test to see if a given url is archived
+ and currenlty accessible in the Wayback Machine.
+This API is useful for providing a 404 or other error handler which checks Wayback
+to see if it has an archived copy ready to display.
+The API can be used as follows: 
+ http://archive.org/wayback/available?url=example.com 
+ which might return: 
+{
+ "archived_snapshots": {
+ "closest": {
+ "available": true,
+ "url": "http://web.archive.org/web/20130919044612/http://example.com/",
+ "timestamp": "20130919044612",
+ "status": "200"
+ }
+ }
+}
+ if the url is available. When available, the url is the link to the archived snapshot in the Wayback Machine
+At this time, archived_snapshots just returns a single closest snapshot,
+but additional snapshots may be added in the future. 
+If the url is not available (not archived or currently not accessible), the response will be:
+{"archived_snapshots":{}}
+ Other Options 
+Additional options which may be specified are timestamp and callback 
+ timestamp is the timestamp to look up in Wayback.
+ If not specified, the most recenty available capture in Wayback is returned.
+ The format of the timestamp is 1-14 digits (YYYYMMDDhhmmss) ex:
+ http://archive.org/wayback/available?url=example.com&timestamp=20060101 
+ may result in the following response (note that the snapshot timestamp is now close to 20060101):
+{
+ "archived_snapshots": {
+ "closest": {
+ "available": true,
+ "url": "http://web.archive.org/web/20060101064348/http://www.example.com:80/",
+ "timestamp": "20060101064348",
+ "status": "200"
+ }
+ }
+}
+ callback is an optional callback which may be specified to produce a JSONP response. 
+ Memento API 
+The Internet Archive Wayback Machine is also fully compliant with the
+ Memento Protocol 
+The Memento API provides additional interfaces for querying snapshots (eg 'Mementos') in the Wayback Machine.
+The Availability API is partially based on the Memento APIs.
+Here are some
+ specific examples of Memento support in the Wayback Machine 
+ Wayback CDX Server API 
+The CDX Server is another API which allows for complex querying,
+filtering and analysis of Wayback capture data.
+If you are looking for more in depth information about Wayback machine data,
+please take a look at the CDX server API.
+The latest documentation on the CDX server can be found at:
+ Wayback CDX Server @ GitHub

@@ -1,0 +1,33 @@
+{
+ "slug": "zenodo",
+ "name": "Zenodo REST API",
+ "docs": {
+  "url": "https://developers.zenodo.org/",
+  "final_url": "https://developers.zenodo.org/",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 191492,
+  "truncated": false,
+  "sha256": "bbd72463dcf7e07f597ed2b145e8019fb0e861c4811a8d22e0e5d202bde69e61",
+  "fetched_at": "2026-10-20T01:31:48+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 65629
+ },
+ "probe": {
+  "url": "https://zenodo.org/api/records?size=1",
+  "final_url": "https://zenodo.org/api/records?size=1",
+  "status": 200,
+  "content_type": "application/json",
+  "bytes": 12253,
+  "truncated": false,
+  "sha256": "0da96ddff4c1f2bff1d0891c1cc1eeaaa9e8844480b6cc0dcc6a205768d256cf",
+  "fetched_at": "2026-10-20T01:31:49+00:00",
+  "ratelimit_headers": {
+   "x-ratelimit-limit": "30",
+   "x-ratelimit-remaining": "29",
+   "x-ratelimit-reset": "1792459964",
+   "retry-after": "59"
+  },
+  "text_bytes": 12253
+ }
+}

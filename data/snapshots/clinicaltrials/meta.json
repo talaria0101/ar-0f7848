@@ -1,0 +1,28 @@
+{
+ "slug": "clinicaltrials",
+ "name": "ClinicalTrials.gov API v2",
+ "docs": {
+  "url": "https://clinicaltrials.gov/data-api/api",
+  "final_url": "https://clinicaltrials.gov/data-api/api",
+  "status": 200,
+  "content_type": "text/html",
+  "bytes": 94247,
+  "truncated": false,
+  "sha256": "c8f2db34b30c0fd6a31735436288114df705be51bf54fbaf2ad98f957f1af94d",
+  "fetched_at": "2026-10-20T01:31:53+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 183
+ },
+ "probe": {
+  "url": "https://clinicaltrials.gov/api/v2/studies?pageSize=1",
+  "final_url": "https://clinicaltrials.gov/api/v2/studies?pageSize=1",
+  "status": 200,
+  "content_type": "application/json",
+  "bytes": 23989,
+  "truncated": false,
+  "sha256": "d1056bb2ae314e9f5d185b183f40e5bbaef39ee53a0a94e3ea17b0a7a6b3c1c2",
+  "fetched_at": "2026-10-20T01:31:54+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 23985
+ }
+}

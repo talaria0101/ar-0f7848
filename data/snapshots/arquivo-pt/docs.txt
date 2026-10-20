@@ -1,0 +1,564 @@
+Arquivo.pt API · arquivo/pwa-technologies Wiki · GitHub 
+ Skip to content 
+ Navigation Menu Sign in Appearance settings Platform AI CODE CREATION GitHub Copilot Write better code with AI GitHub Copilot app Direct agents from issue to merge MCP Registry Integrate external tools DEVELOPER WORKFLOWS Actions Automate any workflow Codespaces Instant dev environments Issues Plan and track work Code Review Manage code changes Code Quality Enforce quality at merge APPLICATION SECURITY GitHub Advanced Security Find and fix vulnerabilities Code security Secure your code as you build Secret protection Stop leaks before they start EXPLORE Why GitHub Documentation Blog Changelog Marketplace View all features Solutions BY COMPANY SIZE Enterprises Small and medium teams Startups Nonprofits BY USE CASE App Modernization DevSecOps DevOps CI/CD View all use cases BY INDUSTRY Healthcare Financial services Manufacturing Government View all industries View all solutions Resources EXPLORE BY TOPIC AI Software Development DevOps Security View all topics EXPLORE BY TYPE Customer stories Events & webinars Ebooks & reports Business insights GitHub Skills SUPPORT & SERVICES Documentation Customer support Community forum Trust center Partners View all resources Open Source COMMUNITY GitHub Sponsors Fund open source developers PROGRAMS Security Lab Maintainer Community GitHub Stars Archive Program REPOSITORIES Topics Trending Collections Enterprise ENTERPRISE SOLUTIONS Enterprise platform AI-powered developer platform AVAILABLE ADD-ONS GitHub Advanced Security Enterprise-grade security features Copilot for Business Enterprise-grade AI features Premium Support Enterprise-grade 24/7 support Pricing Search / Sign in Sign up Appearance settings 
+ You signed in with another tab or window. Reload to refresh your session. 
+ You signed out in another tab or window. Reload to refresh your session. 
+ You switched accounts on another tab or window. Reload to refresh your session. 
+ Dismiss alert 
+ {{ message }} 
+ arquivo pwa-technologies Repository navigation Code Issues 153  ( 153 ) Pull requests Actions Projects Wiki Security and quality Insights More items 
+ Arquivo.pt API 
+ Jump to bottom 
+ Edit 
+ New page 
+ Ivo Branco edited this page Oct 14, 2026 
+ ·
+ 23 revisions 
+ The Arquivo.pt API allows full-text search over the web pages and documents preserved by Arquivo.pt, from 1996 onwards, and access to their content and metadata. It can also list every preserved version of a URL.
+The API returns JSON and can be called directly from a browser, as it allows cross-origin requests (CORS). 
+ Endpoint : https://arquivo.pt/textsearch 
+ OpenAPI specification : https://arquivo.pt/textsearch/api-docs/v3 
+ Try it out : the Swagger playground lists every parameter and lets you send requests to the API from the browser. 
+ Note: a full-text search returns a maximum of 500 results per request ( maxItems ); use offset to page through more. 
+ The API can be used in three ways, each with its own parameters: 
+ Search for terms (full-text search), with q . 
+ Search for URL , with versionHistory , to list the preserved versions of a URL. 
+ Search for metadata , with metadata , to get the details of one preserved version. 
+ The extracted text of a preserved version is available on a separate endpoint. 
+ Request Parameters 
+ Search for terms 
+ Parameter Name 
+ Description 
+ Examples 
+ q 
+ Query search terms. Every term must match, so adding terms narrows the results. The query can contain advanced search operators: 
+ " " : search for items containing the exact expression between quotes (e.g. a phrase or a named entity). 
+ - : excludes the items that contain the given term. 
+ Do not input URLs in parameter q because it will return an HTTP 400 Bad Request error. Use the versionHistory parameter to search for URLs, or alternative APIs that support URL search: CDX-server API , Memento API . 
+ q=James Davis           q="António Costa" q=Albert -Einstein 
+ from 
+ Only return pages captured on or after this date. Format: YYYYMMDDHHMMSS, also accepts a shorter date (e.g. YYYY or YYYYMMDD), which is completed with the start of that period: from=2005 means from 1 January 2005. Default: no lower limit. A page is matched by its most recent capture, so a page first captured before this date can still be returned if it was captured again on or after it. 
+ from=2005 
+ to 
+ Only return pages captured on or before this date. Format: YYYYMMDDHHMMSS, also accepts a shorter date, which is completed with the start of that period: to=2006 means until 1 January 2006, 00:00:00, so it leaves out 2006. To include a whole year or day, give the full timestamp, e.g. to=20061231235959. Default: no upper limit. A page is matched by its oldest capture, so a page also captured after this date can still be returned if it was first captured on or before it. 
+ to=20061231235959 
+ type 
+ Only return documents of these types, as a comma-separated list (a document of any of them is returned). Case-insensitive. 
+ pdf, doc/docx, xls/xlsx, ppt/pptx, ps/ai/eps, htm/html and rtf match the MIME types of those formats, e.g. doc matches both Word formats. 
+ A value with a / is matched as an exact MIME type, e.g. application/pdf. 
+ Any other value matches every MIME type containing it, e.g. opendocument. 
+ type=pdf type=doc,xls type=application/pdf 
+ siteSearch 
+ Only return pages from these sites, as a comma-separated list (a page from any of them is returned). 
+ A host matches that host only, not its subdomains: sapo.pt returns pages from sapo.pt but not from blogs.sapo.pt. 
+ Prefix a host with *. to also match all of its subdomains: *.sapo.pt returns pages from sapo.pt and from any subdomain of it. The * wildcard is only supported as a *. prefix of a host. 
+ A URL with a path matches every page whose URL starts with it, e.g. sapo.pt/noticias. 
+ The protocol and a leading www . are ignored, so http://www.publico.pt , https://publico.pt and publico.pt are the same site. 
+ When searching within a site, results are deduplicated by URL instead of by title (see dedupField). 
+ siteSearch=publico.pt siteSearch=*.sapo.pt siteSearch=publico.pt,expresso.pt 
+ collection 
+ Only return results from these collections, as a comma-separated list. A trailing * matches every collection sharing a prefix, e.g. FAWP* matches FAWP1, FAWP2, ..., FAWP34. A list of all the collections preserved by Arquivo.pt is publicly available 
+ collection=EAWP13,EAWP21 collection=FAWP* 
+ titleSearch 
+ Only return pages whose title is exactly this text. The match is case-sensitive: Expresso and EXPRESSO are different titles. 
+ titleSearch=Expresso 
+ language 
+ Only return pages detected as being written in this language, as a two-letter code (ISO 639-1). 
+ language=pt 
+ minLanguageConfidence 
+ Lowest language detection confidence the results may have: HIGH, MEDIUM or LOW. The levels are cumulative: MEDIUM also includes the HIGH results and LOW includes every result. Default: HIGH, when filtering by language. 
+ language=en&minLanguageConfidence=MEDIUM 
+ offset 
+ Number of results to skip, to page through them. Default: 0 
+ offset=50 
+ maxItems 
+ Maximum number of results per page. Default: 50 Max: 500 
+ maxItems=10 
+ dedupField 
+ ⚠️ Warning: do not rely on this parameter. Its behaviour will change in upcoming releases, and support for custom dedup fields will be removed in the near future. Field the results are deduplicated by: for each distinct value, only the newest dedupValue results are returned. 
+ title: pages with exactly the same title. 
+ url: captures of exactly the same URL. 
+ collection: results of the same collection. 
+ type: results with the same MIME type. 
+ site: currently behaves exactly like url (see #1619 ). 
+ Default: title , or url when searching with siteSearch. 
+ dedupField=url 
+ dedupValue 
+ Maximum number of results per distinct dedupField value. 0 and 1 both return one result per value. -1 turns deduplication off. Default: 2 
+ dedupValue=1 dedupValue=-1 
+ fields 
+ Only include these fields in each result, as a comma-separated list. Possible fields: title, originalURL, linkToArchive, tstamp, digest, mimeType, linkToScreenshot, linkToNoFrame, linkToExtractedText, linkToMetadata, linkToOriginalFile, snippet, collection, language, languageConfidence. By default every field above is returned except language and languageConfidence. spellcheck isn't a result field: it asks for a spelling correction of the query, returned in suggested_query. On its own, fields=spellcheck keeps the default result fields. 
+ fields=title,originalURL,linkToArchive,tstamp fields=title,spellcheck 
+ titleMaxLength 
+ Maximum number of characters of the title field. Longer titles are cut short and end with an ellipsis (…). 0 disables truncation. Default: 300 
+ titleMaxLength=30 
+ snippetMaxLength 
+ Maximum number of characters of the snippet field. Longer snippets are cut short. 0 disables truncation. Default: 300 
+ snippetMaxLength=100 
+ timeline 
+ When true, also returns a timeline with the number of matching pages per year. See Timeline . Default: false 
+ timeline=true 
+ yearBalance 
+ Lifts the ranking of pages from the years the archive holds the fewest pages from, which would otherwise be outranked by pages from the better-covered years. Takes true (default strength, 0.5), false (no effect) or a strength between 0.0 and 1.0. Default: false 
+ yearBalance=true yearBalance=0.8 
+ prettyPrint 
+ When true, the response is indented with line breaks, to be human-readable. Default: false 
+ prettyPrint=true 
+ Search for URL 
+ Search by URL lists the preserved versions of a URL, from the most recent to the oldest. 
+ Parameter name 
+ Description 
+ Examples 
+ versionHistory 
+ URL whose preserved versions should be listed. The protocol (http or https) is ignored. You must encode the URL with percent-encoding (URL encoding). 
+ versionHistory=publico.pt OR versionHistory=http%3A%2F%2Fwww.imooty.pt/ %2FOpiniao.php%3Fsort/ %3Dlanguage%26action%3Dsort 
+ from 
+ Only list versions captured on or after this date. Format: YYYYMMDDHHMMSS, also accepts a shorter date, e.g. YYYY. 
+ from=2005 
+ to 
+ Only list versions captured on or before this date. Format: YYYYMMDDHHMMSS, also accepts a shorter date, e.g. YYYY. 
+ to=2006 
+ offset 
+ Number of versions to skip, to page through them. Default: 0 
+ offset=50 
+ maxItems 
+ Maximum number of versions per page. Default: 50 
+ maxItems=5 
+ prettyPrint 
+ When true, the response is indented with line breaks, to be human-readable. Default: false 
+ prettyPrint=true 
+ The other full-text search parameters, like fields, don't apply to the search for URL. 
+ Search for metadata 
+ Returns the metadata of a single preserved version. The links to it are returned in the linkToMetadata field of the other searches. 
+ Parameter name 
+ Description 
+ Examples 
+ metadata 
+ Preserved version, as <URL>/<timestamp> , percent-encoded. 
+ metadata=http%3A%2F%2Fwww.expresso.pt%3A80%2F%2F20000302151731 
+ Extracted text 
+ The text extracted from a preserved version is returned as plain text by a separate endpoint, https://arquivo.pt/textextracted . The links to it are returned in the linkToExtractedText field of the full-text search. It returns HTTP 404 Not Found when there is no text for that version. 
+ Parameter name 
+ Description 
+ Examples 
+ m 
+ Preserved version, as <URL>/<timestamp> , percent-encoded. 
+ m=https%3A%2F%2Fsaldanhasanches.pt%2F conteudos%2Foutros.html%2F20091218144830 
+ Response fields 
+ Type of Search 
+ Field Name 
+ Description 
+ Examples 
+ Full-text , URL , Metadata 
+ serviceName           
+ Service name.     
+ "serviceName": "Arquivo.pt - the Portuguese web-archive" 
+ Full-text , URL , Metadata 
+ linkToService 
+ URL of the service. 
+ "linkToService": " https://arquivo.pt " 
+ Full-text 
+ request_parameters 
+ The parameters the search was run with, including the defaults that were applied. 
+ "request_parameters": {   "offset": 0,   "titleMaxLength": 300,   "snippetMaxLength": 300,   "dedupValue": 2,   "dedupField": "title",   "q": "Albert Einstein",   "maxItems": 50 } 
+ Full-text , URL 
+ next_page 
+ URL of the next page of results. Not returned on the last page. 
+ "next_page": " https://arquivo.pt/textsearch?q=hello%20world&offset=50 " 
+ Full-text , URL 
+ previous_page 
+ URL of the previous page of results. Not returned on the first page. 
+ "previous_page": " https://arquivo.pt/textsearch?q=hello%20world&offset=0 " 
+ Full-text , URL 
+ estimated_nr_results 
+ Estimated total number of results of the search, across every page. 
+ "estimated_nr_results": 8654051 
+ Full-text 
+ suggested_query 
+ Spelling correction of the query, only returned when fields includes spellcheck. Empty when the query looks well spelled. 
+ "suggested_query": "futebol" 
+ Full-text 
+ timeline 
+ Number of matching pages per year, only returned when timeline=true. See Timeline . 
+ "timeline": {   "counts": { "2010": 3111, ... },   "impact": { "2010": 0.0000348, ... } } 
+ Full-text , URL , Metadata 
+ response_items 
+ List of results, each with the fields below. 
+ Full-text , URL , Metadata 
+ title* 
+ Content of the HTML <title> tag of the preserved version. For the search for URL and metadata, it's the URL. 
+ "title": "Albert Einstein" 
+ Full-text , URL , Metadata 
+ originalURL* 
+ URL of the preserved version. 
+ "originalURL": " https://if.ufrgs.br/einstein " 
+ Full-text , URL , Metadata 
+ linkToArchive* 
+ URL of the preserved version in Arquivo.pt. 
+ "linkToArchive": " https://arquivo.pt/wayback /20090709033948/https://if.ufrgs.br /einstein " 
+ Full-text , URL , Metadata 
+ tstamp* 
+ UTC timestamp of when the page was crawled, NOT of when it was published . Format: YYYYMMDDHHMMSS 
+ "tstamp": "20090709033948" 
+ URL , Metadata 
+ contentLength* 
+ Size in bytes of the preserved version. 
+ "contentLength": 8856 
+ Full-text , URL , Metadata 
+ digest* 
+ Hash of the content of the preserved version. 
+ "digest": "C5A8703B9990ADCBC81120B98F402327" 
+ Full-text , URL , Metadata 
+ mimeType* 
+ MIME type of the preserved version. 
+ "mimeType": "text/html" 
+ Full-text , URL , Metadata 
+ linkToScreenshot* 
+ URL of a screenshot of the preserved version. 
+ "linkToScreenshot": " https://arquivo.pt/screenshot? url=https%3A%2F%2Farquivo.pt%2Fno Frame%2Freplay%2F20090709033948 %2Fhttps%3A%2F%2Fif.ufrgs.br%2F einstein " 
+ Full-text , URL , Metadata 
+ linkToNoFrame* 
+ URL of the preserved version, without the Arquivo.pt replay bar. 
+ "linkToNoFrame": " https://arquivo.pt/noFrame/rep lay/20090709033948/https://if.ufrgs .br/einstein " 
+ Full-text , URL , Metadata 
+ linkToOriginalFile* 
+ URL of the original file of the preserved version, as it was crawled. 
+ "linkToOriginalFile": " https://arquivo.pt/noFrame/rep lay/20090709033948id_/https://if.uf rgs.br/einstein " 
+ Full-text 
+ linkToExtractedText* 
+ URL of the text extracted from the preserved version. See Extracted text . Some versions have no extracted text, and their link returns HTTP 404 Not Found. 
+ "linkToExtractedText": " https://arquivo.pt/texte xtracted?m=https%3A%2F%2Fsaldanha sanches.pt%2Fconteudos%2Foutros.html %2F20091218144830 " 
+ Full-text , URL , Metadata 
+ linkToMetadata* 
+ URL of the metadata of the preserved version. See Search for metadata . 
+ "linkToMetadata": " https://arquivo.pt/textse arch?metadata=https%3A%2F%2Fif.ufr gs.br%2Feinstein%2F20090709033948 " 
+ Full-text 
+ snippet* 
+ Block of text of the preserved version containing the search terms, in HTML, with the terms within <em> tags. The same snippet shown on the Arquivo.pt search page. 
+ "snippet": "... Links interessantes sobre <em>Albert</em> <em>Einstein</em> ..." 
+ Full-text , URL , Metadata 
+ collection* 
+ Identifier of the collection the preserved version belongs to. The crawls of the web preserved by Arquivo.pt are divided into collections. 
+ "collection": "AWP4" 
+ Full-text 
+ language* 
+ Language the page was detected as being written in, as a two-letter code (ISO 639-1). Only returned when listed in fields. 
+ "language": "pt" 
+ Full-text 
+ languageConfidence* 
+ Confidence of the language detection: HIGH, MEDIUM or LOW. Only returned when listed in fields. 
+ "languageConfidence": "HIGH" 
+ URL , Metadata 
+ statusCode* 
+ HTTP status code the server replied with when the version was crawled. 
+ "statusCode": 200 
+ URL , Metadata 
+ fileName* 
+ Name of the (W)ARC file holding the preserved version. 
+ "fileName": "PT-HISTORICAL-2000-GROUP-ALV-20100830000000-00000.arc.gz" 
+ URL , Metadata 
+ offset* 
+ Position of the preserved version in its (W)ARC file. 
+ "offset": 7340016 
+ *Fields of each result, repeated for every item of response_items. 
+ Timeline 
+ With timeline=true, the response includes the number of matching pages per year: 
+ counts : number of matching pages per year. Years without matches are kept with a count of 0. 
+ impact : share of the pages archived in that year that match the query. The counts alone say little, since the archive holds many more pages from some years than from others; impact makes the years comparable. 
+ When the search is bounded by from or to, the years outside that range are always 0. 
+ Errors 
+ Errors are returned with an HTTP error status code and a JSON body describing the error: 
+ {"message":"Invalid API Request","httpStatus":400,"timestamp":"2026-10-12T14:16:19.358Z"}
+ 400 Bad Request : the request is invalid, e.g. it has neither q, versionHistory nor metadata, q holds a URL, or minLanguageConfidence has an unknown value. 
+ 404 Not Found : the requested version doesn't exist, e.g. on textextracted. 
+ Examples Requests 
+ Example Request - Full-text Search 
+ Full-text search for the terms Albert and Einstein, with 1 result per title, limited to 1 result, with formatting. 
+ https://arquivo.pt/textsearch?q=Albert%20Einstein&maxItems=1&dedupValue=1&prettyPrint=true 
+ Example Response - Full-text Search 
+ {
+ "serviceName" : "Arquivo.pt - the Portuguese web-archive",
+ "linkToService" : "https://arquivo.pt",
+ "next_page" : "https://arquivo.pt/textsearch?q=Albert%20Einstein&maxItems=1&dedupValue=1&prettyPrint=true&offset=1",
+ "estimated_nr_results" : 15641175,
+ "request_parameters" : {
+ "offset" : 0,
+ "titleMaxLength" : 300,
+ "snippetMaxLength" : 300,
+ "dedupValue" : 1,
+ "dedupField" : "title",
+ "q" : "Albert Einstein",
+ "maxItems" : 1
+ },
+ "response_items" : [ {
+ "title" : "Albert Einstein",
+ "originalURL" : "https://if.ufrgs.br/einstein",
+ "linkToArchive" : "https://arquivo.pt/wayback/20090709033948/https://if.ufrgs.br/einstein",
+ "tstamp" : "20090709033948",
+ "digest" : "C5A8703B9990ADCBC81120B98F402327",
+ "mimeType" : "text/html",
+ "linkToScreenshot" : "https://arquivo.pt/screenshot?url=https%3A%2F%2Farquivo.pt%2FnoFrame%2Freplay%2F20090709033948%2Fhttps%3A%2F%2Fif.ufrgs.br%2Feinstein",
+ "linkToNoFrame" : "https://arquivo.pt/noFrame/replay/20090709033948/https://if.ufrgs.br/einstein",
+ "linkToExtractedText" : "https://arquivo.pt/textextracted?m=https%3A%2F%2Fif.ufrgs.br%2Feinstein%2F20090709033948",
+ "linkToMetadata" : "https://arquivo.pt/textsearch?metadata=https%3A%2F%2Fif.ufrgs.br%2Feinstein%2F20090709033948",
+ "linkToOriginalFile" : "https://arquivo.pt/noFrame/replay/20090709033948id_/https://if.ufrgs.br/einstein",
+ "snippet" : "dos Santos Cinquentenário do IF-UFRGS Sitio comemorativo Programa do Jô Links interessantes sobre <em>Albert</em> <em>Einstein</em> <em>Albert</em> <em>Einstein</em> <em>Einstein</em>-Image and Impact. AIP History Center exhibit. <em>Einstein</em> Papers Project <em>Albert</em> <em>Einstein</em> Arc<span class=\"ellipsis\"> ... </span>",
+ "collection" : "AWP4"
+ } ]
+}
+ Example Request - Spelling correction, language and timeline 
+ Full-text search for the misspelled term fotebol , in Portuguese pages, asking for a spelling correction and the timeline, limited to 1 result. 
+ https://arquivo.pt/textsearch?q=fotebol&language=pt&fields=title,language,languageConfidence,spellcheck&timeline=true&maxItems=1&dedupValue=1&prettyPrint=true 
+ Example Response - Spelling correction, language and timeline 
+ {
+ "serviceName" : "Arquivo.pt - the Portuguese web-archive",
+ "linkToService" : "https://arquivo.pt",
+ "next_page" : "https://arquivo.pt/textsearch?q=fotebol&language=pt&fields=title,language,languageConfidence,spellcheck&timeline=true&maxItems=1&dedupValue=1&prettyPrint=true&offset=1",
+ "estimated_nr_results" : 58300,
+ "request_parameters" : {
+ "offset" : 0,
+ "titleMaxLength" : 300,
+ "snippetMaxLength" : 300,
+ "dedupValue" : 1,
+ "fields" : [ "title", "language", "languageConfidence", "spellcheck" ],
+ "dedupField" : "title",
+ "language" : "pt",
+ "minLanguageConfidence" : "HIGH",
+ "q" : "fotebol",
+ "maxItems" : 1,
+ "timeline" : true
+ },
+ "suggested_query" : "futebol",
+ "response_items" : [ {
+ "title" : "Fotebol",
+ "language" : "pt",
+ "languageConfidence" : "HIGH"
+ } ],
+ "timeline" : {
+ "counts" : {
+ "1996" : 0,
+ "1997" : 1,
+ ...
+ "2010" : 3111,
+ ...
+ "2026" : 0
+ },
+ "impact" : {
+ "1996" : 0.0,
+ "1997" : 4.5697e-06,
+ ...
+ "2026" : 0.0
+ }
+ }
+}
+ Example Request - URL Search 
+ URL search for the versions of expresso.pt , limited to 2 results, with formatting. 
+ https://arquivo.pt/textsearch?versionHistory=expresso.pt&maxItems=2&prettyPrint=true 
+ Example Response - URL Search 
+ {
+ "serviceName" : "Arquivo.pt - the Portuguese web-archive",
+ "linkToService" : "https://arquivo.pt",
+ "next_page" : "https://arquivo.pt/textsearch?versionHistory=expresso.pt&maxItems=2&prettyPrint=true&offset=2",
+ "estimated_nr_results" : 5130,
+ "response_items" : [ {
+ "title" : "http://expresso.pt/",
+ "originalURL" : "http://expresso.pt/",
+ "linkToArchive" : "https://arquivo.pt/wayback/20260623042044/http://expresso.pt/",
+ "tstamp" : "20260623042044",
+ "contentLength" : 608,
+ "digest" : "WMCR2F5G5SGJ4FTL6CNGFNECMGVYNFL3",
+ "mimeType" : "text/html",
+ "linkToScreenshot" : "https://arquivo.pt/screenshot?url=https%3A%2F%2Farquivo.pt%2FnoFrame%2Freplay%2F20260623042044%2Fhttp%3A%2F%2Fexpresso.pt%2F",
+ "linkToNoFrame" : "https://arquivo.pt/noFrame/replay/20260623042044/http://expresso.pt/",
+ "linkToMetadata" : "https://arquivo.pt/textsearch?metadata=http%3A%2F%2Fexpresso.pt%2F%2F20260623042044",
+ "linkToOriginalFile" : "https://arquivo.pt/noFrame/replay/20260623042044id_/http://expresso.pt/",
+ "fileName" : "WEB-20260623041841427-p49.arquivo.pt.warc.gz",
+ "collection" : "EAWP54",
+ "offset" : 22555416,
+ "statusCode" : 301
+ }, {
+ "title" : "https://expresso.pt/",
+ "originalURL" : "https://expresso.pt/",
+ "linkToArchive" : "https://arquivo.pt/wayback/20260623041201/https://expresso.pt/",
+ "tstamp" : "20260623041201",
+ "contentLength" : 1370,
+ "digest" : "J2GTGYFXVCKYZSYVLAAIXOWFHBGFG4T5",
+ "mimeType" : "text/html",
+ "linkToScreenshot" : "https://arquivo.pt/screenshot?url=https%3A%2F%2Farquivo.pt%2FnoFrame%2Freplay%2F20260623041201%2Fhttps%3A%2F%2Fexpresso.pt%2F",
+ "linkToNoFrame" : "https://arquivo.pt/noFrame/replay/20260623041201/https://expresso.pt/",
+ "linkToMetadata" : "https://arquivo.pt/textsearch?metadata=https%3A%2F%2Fexpresso.pt%2F%2F20260623041201",
+ "linkToOriginalFile" : "https://arquivo.pt/noFrame/replay/20260623041201id_/https://expresso.pt/",
+ "fileName" : "WEB-20260623040611210-p49.arquivo.pt.warc.gz",
+ "collection" : "EAWP54",
+ "offset" : 93543994,
+ "statusCode" : 403
+ } ]
+}
+ Example Request - Metadata Search 
+ Metadata of the expresso.pt version with the 20000302151731 timestamp, with formatting. 
+ https://arquivo.pt/textsearch?metadata=http%3A%2F%2Fwww.expresso.pt%3A80%2F%2F20000302151731&prettyPrint=true 
+ Example Response - Metadata Search 
+ {
+ "serviceName" : "Arquivo.pt - the Portuguese web-archive",
+ "linkToService" : "https://arquivo.pt",
+ "response_items" : [ {
+ "title" : "http://www.expresso.pt:80/",
+ "originalURL" : "http://www.expresso.pt:80/",
+ "linkToArchive" : "https://arquivo.pt/wayback/20000302151731/http://www.expresso.pt:80/",
+ "tstamp" : "20000302151731",
+ "contentLength" : 8856,
+ "digest" : "IGLEXSO4SFEQJD5NGIZZTQVLXHEPM5GS",
+ "mimeType" : "text/html",
+ "linkToScreenshot" : "https://arquivo.pt/screenshot?url=https%3A%2F%2Farquivo.pt%2FnoFrame%2Freplay%2F20000302151731%2Fhttp%3A%2F%2Fwww.expresso.pt%3A80%2F",
+ "linkToNoFrame" : "https://arquivo.pt/noFrame/replay/20000302151731/http://www.expresso.pt:80/",
+ "linkToMetadata" : "https://arquivo.pt/textsearch?metadata=http%3A%2F%2Fwww.expresso.pt%3A80%2F%2F20000302151731",
+ "linkToOriginalFile" : "https://arquivo.pt/noFrame/replay/20000302151731id_/http://www.expresso.pt:80/",
+ "fileName" : "PT-HISTORICAL-2000-GROUP-ALV-20100830000000-00000.arc.gz",
+ "collection" : "IA",
+ "offset" : 7340016,
+ "statusCode" : 200
+ } ]
+}
+ REST from JavaScript 
+ The API allows cross-origin requests (CORS), so it can be called with fetch() from any web page, to build applications that show Arquivo.pt search results without any server-side code. A complete example is available at https://github.com/arquivo/example-api . 
+ The following example displays the first page of search results for the query Simone de Beauvoir : 
+ <html>
+ <head>
+ <title>Arquivo.pt API Example</title>
+ </head>
+ <body>
+ <div id="content"></div>
+ <script>
+ fetch("https://arquivo.pt/textsearch?q=simone%20de%20beauvoir&from=1996&to=20001231235959&maxItems=10")
+ .then(response => response.json())
+ .then(data => {
+ const content = document.getElementById("content");
+ for (const item of data.response_items) {
+ const link = document.createElement("a");
+ link.href = item.linkToArchive;
+ link.textContent = item.title;
+ content.append(link, document.createElement("br"));
+ }
+ });
+ </script>
+ </body>
+</html>
+ The callback parameter (JSONP) is no longer supported, see #1477 . 
+ Client API JAVA 
+ https://github.com/arquivo/client-java-api 
+ Add a custom footer
+ Wiki pages 
+ Pages 20 
+ Loading 
+ Home
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ APIs
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ Arquivo.pt API
+ Request Parameters 
+ Search for terms 
+ Search for URL 
+ Search for metadata 
+ Extracted text 
+ Response fields 
+ Timeline 
+ Errors 
+ Examples Requests 
+ Example Request - Full-text Search 
+ Example Response - Full-text Search 
+ Example Request - Spelling correction, language and timeline 
+ Example Response - Spelling correction, language and timeline 
+ Example Request - URL Search 
+ Example Response - URL Search 
+ Example Request - Metadata Search 
+ Example Response - Metadata Search 
+ REST from JavaScript 
+ Client API JAVA 
+ Loading 
+ Arquivo.pt image search repositories
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ Arquivo.pt in a nutshell: overview of services and activities
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ Arquivo.pt page search repositories
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ Arquivo404: broken link fixer
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ Guia de anotação de resultados de pesquisa (pt)
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ ImageSearch API v1 (beta)
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ ImageSearch API v1.1
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ L2R4WAIR
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ Link graph dataset definition
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ MainFeatures of the Arquivo.pt full text search engine
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ Memento API
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ Memento API URL Search in Arquivo.pt
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ RelatedProjects
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ Releases
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ TestCollection
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ URL search: CDX server API
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Loading 
+ Wayback PyWb
+ Uh oh!
+ There was an error while loading. Please reload this page . 
+ Show 5 more pages…
+ Add a custom sidebar
+ Clone this wiki locally 
+ Footer 
+ © 2026 GitHub, Inc.
+ Footer navigation 
+ Terms 
+ Privacy 
+ Security 
+ Status 
+ Community 
+ Docs 
+ Contact 
+ Manage cookies
+ Do not share my personal information
+ You can’t perform that action at this time.

@@ -1,0 +1,28 @@
+{
+ "slug": "gallica",
+ "name": "Gallica SRU (BnF)",
+ "docs": {
+  "url": "https://api.bnf.fr/api-sru-gallica",
+  "final_url": "https://api.bnf.fr/api-sru-gallica",
+  "status": 404,
+  "content_type": "text/html; charset=UTF-8",
+  "bytes": 20382,
+  "truncated": false,
+  "sha256": "68b6087edf2bd3e22fe39fc248ef9f7e453006dc69a540b7d419c2c2a62b805c",
+  "fetched_at": "2026-10-20T01:31:37+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 667
+ },
+ "probe": {
+  "url": "https://gallica.bnf.fr/SRU?operation=searchRetrieve&version=1.2&query=%28gallica%20all%20%22test%22%29&maximumRecords=1",
+  "final_url": "https://gallica.bnf.fr/SRU?operation=searchRetrieve&version=1.2&query=%28gallica%20all%20%22test%22%29&maximumRecords=1",
+  "status": 403,
+  "content_type": "text/html; charset=UTF-8",
+  "bytes": 6083,
+  "truncated": false,
+  "sha256": "b7cb3502bcb5ba4dabf8f65f7e09c434f6e2c352412cdebadb09d616977cb24c",
+  "fetched_at": "2026-10-20T01:31:38+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 16
+ }
+}

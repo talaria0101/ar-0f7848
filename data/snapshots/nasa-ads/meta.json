@@ -1,0 +1,28 @@
+{
+ "slug": "nasa-ads",
+ "name": "NASA Astrophysics Data System API",
+ "docs": {
+  "url": "https://ui.adsabs.harvard.edu/help/api/",
+  "final_url": "https://ui.adsabs.harvard.edu/help/api/",
+  "status": 202,
+  "content_type": "text/html; charset=UTF-8",
+  "bytes": 2099,
+  "truncated": false,
+  "sha256": "2a5aaa914c7924f4756e4f9bfe8bd711e3bb254ececd983d1e93cfe7643a6a47",
+  "fetched_at": "2026-10-20T01:31:45+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 0
+ },
+ "probe": {
+  "url": "https://api.adsabs.harvard.edu/v1/search/query?q=test&rows=1",
+  "final_url": "https://api.adsabs.harvard.edu/v1/search/query?q=test&rows=1",
+  "status": 401,
+  "content_type": "application/json",
+  "bytes": 52,
+  "truncated": false,
+  "sha256": "6ea5cf105c21df4126ea67c1511885a38b7946139ef8bd160a90f6e0e5bd57b6",
+  "fetched_at": "2026-10-20T01:31:46+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 52
+ }
+}

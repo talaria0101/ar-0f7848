@@ -1,0 +1,28 @@
+{
+ "slug": "arxiv",
+ "name": "arXiv API",
+ "docs": {
+  "url": "https://info.arxiv.org/help/api/index.html",
+  "final_url": "https://info.arxiv.org/help/api/index.html",
+  "status": 200,
+  "content_type": "text/html",
+  "bytes": 81483,
+  "truncated": false,
+  "sha256": "d39ef59296d8d1636f81eabea2f98476d2bb62c43c66dde3b408f9a3a2f3dbc8",
+  "fetched_at": "2026-10-20T01:31:39+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 4663
+ },
+ "probe": {
+  "url": "https://export.arxiv.org/api/query?search_query=all:test&max_results=1",
+  "final_url": "https://export.arxiv.org/api/query?search_query=all:test&max_results=1",
+  "status": 200,
+  "content_type": "application/atom+xml; charset=utf-8",
+  "bytes": 1576,
+  "truncated": false,
+  "sha256": "731beec43b2f8d92f660514208e370817256145ccfcd9d8f3d3a45c24af1beb1",
+  "fetched_at": "2026-10-20T01:31:41+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 1575
+ }
+}

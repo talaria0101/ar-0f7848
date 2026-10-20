@@ -1,0 +1,32 @@
+{
+ "slug": "smithsonian",
+ "name": "Smithsonian Open Access API",
+ "docs": {
+  "url": "https://edan.si.edu/openaccess/apidocs/",
+  "final_url": "https://edan.si.edu/openaccess/apidocs/",
+  "status": 200,
+  "content_type": "text/html; charset=UTF-8",
+  "bytes": 44522,
+  "truncated": false,
+  "sha256": "ffe0fe2e2ac46f1efecee67594d013bd75336e39a40e52d7ffdfb40c3143a2d1",
+  "fetched_at": "2026-10-20T01:31:37+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 26
+ },
+ "probe": {
+  "url": "https://api.si.edu/openaccess/api/v1.0/search?q=test&rows=1&api_key=DEMO_KEY",
+  "final_url": "https://api.si.edu/openaccess/api/v1.0/search?q=test&rows=1&api_key=DEMO_KEY",
+  "status": 200,
+  "content_type": "application/json;charset=utf-8",
+  "bytes": 6061,
+  "truncated": false,
+  "sha256": "9df356907c6dd48b73bdbaa9df01860b9236c6060002daea860f9129687621f1",
+  "fetched_at": "2026-10-20T01:31:39+00:00",
+  "ratelimit_headers": {
+   "X-Api-Umbrella-Request-Id": "d1arnmq28ihf3gspbrog",
+   "X-Ratelimit-Limit": "10",
+   "X-Ratelimit-Remaining": "9"
+  },
+  "text_bytes": 6043
+ }
+}

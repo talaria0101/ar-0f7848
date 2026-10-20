@@ -1,0 +1,255 @@
+PMC ID Converter API - PMC
+ Skip to main content
+ An official website of the United States government
+ Here's how you know 
+ Here's how you know 
+ Official websites use .gov 
+ A
+ .gov website belongs to an official
+ government organization in the United States.
+ Secure .gov websites use HTTPS 
+ A lock (
+ ) or https:// means you've safely
+ connected to the .gov website. Share sensitive
+ information only on official, secure websites.
+ Search
+ Log in 
+ Dashboard
+ Publications
+ Account settings
+ Log out
+ Search…
+ Search NCBI
+ Primary site navigation
+ Search
+ Logged in as:
+ Dashboard
+ Publications
+ Account settings
+ Log in
+ Search PMC Full-Text Archive 
+ Search in PMC 
+ Journal List
+ User Guide
+ About PMC 
+ About PMC
+ Accessibility
+ Citation Search
+ Copyright Notice
+ Disclaimer
+ FAQs
+ Journal List
+ Journal Selection Statistics
+ National Advisory Committee
+ New in PMC
+ PMC and Research Funder Policies
+ PMC International
+ Policies
+ User Guide
+ Collections 
+ Collections - Home
+ Author Manuscripts
+ Back Issue Digitization
+ COVID-19 Collection
+ Journal List
+ Mpox Collection
+ NIH Preprint Pilot
+ Open Access Subset
+ PMC Article Datasets
+ Selective Deposit Collections
+ For Authors 
+ For Authors - Home
+ Author Manuscripts in PMC
+ FAQs for Authors
+ Journal List
+ NIH Manuscript Submission System
+ NIH Public Access and PMC
+ PMC and Research Funder Policies
+ PMC ID Converter
+ For Publishers 
+ For Publishers - Home
+ FAQs for Publishers
+ File Submission Specifications
+ PMC Banner Specifications
+ File Validation Tools
+ Application and Evaluation Process
+ Journal Selection for PMC
+ Minimum Data Criteria
+ Participation Agreements
+ Policies
+ Production Data Requirements
+ For Developers 
+ For Developers - Home
+ Cloud Service
+ FTP Service
+ OAI-PMH Service
+ PMC Article Datasets
+ PMC ID Converter
+ PMC ID Converter API
+ PMC ID Converter API 
+ The ID Converter API is the backend web service that is used by the PMC ID Converter . This API allows you to programmatically retrieve and convert between the IDs used in our system to identify an article or a version of an article, such as a PubMed Central article ID (PMCID), a versioned PubMed Central article ID, a PubMed ID (PMID), an Author Manuscript ID (MID), or a Document Object Identifier (DOI). 
+ The base URL of the PMC ID Conversion API service is https://pmc.ncbi.nlm.nih.gov/tools/idconv/api/v1/articles/ . This is shown as "service-root" in the examples below. 
+ The PMC ID Converter API will only return related IDs if the article is in PubMed Central (PMC). 
+ Parameters 
+ Requested Parameters: tool and email 
+ When using this API programmatically, we request that you: 
+ use the tool and email parameters to identify the application making the request. 
+ tool should be the name of your application, as a string value with no internal spaces. 
+ email should be the e-mail address of the maintainer of your tool, and should be a valid e-mail address. 
+ For brevity, these have been left out of the displayed URLs in the examples below. 
+ ids Parameter 
+ The ids parameter specifies the article ID or IDs that you want to convert and retrieve. It can accept up to 200 IDs separated by commas. By default, the service will auto-detect the type of the ID(s) from the format, you can specify the id type with the idtype parameter described in a section below. In any given API service call, all of the IDs must be of the same type. 
+ Here are examples, one for each type of ID that the service understands: 
+ PubMed ID or PMID: service-root?ids=23193287 
+ PubMed Central ID or PMCID: service-root?ids=PMC3531190 
+ PMCID without PMC prefix included in identifier (using idtype=pmcid ): service-root?idtype=pmcid&ids=3531190 
+ Author Manuscript ID or MID: service-root?ids=NIHMS1677310 ( Learn more about author manuscripts in PMC .) 
+ Document Object Identifier or DOI: service-root?ids=10.1093/nar/gks1195 
+ Versioned PMCID (with versions=yes and showaiid=yes): service-root?ids=PMC2808187.2&versions=yes&showaiid=yes 
+ Multiple IDs 
+ Use commas to separate multiple IDs. The API service allows for up to 200 IDs in a single request. If you have a larger number of IDs, split your list into smaller subsets. Another option for bulk-conversion and retrieval of identifiers in the PMC system is to download the PMC-ids.csv.gz file, as described on the FTP Service page . 
+ service-root?ids=PMC1193645,PMC1134901 
+ <pmcids response-date="2025-06-10 14:13:24" status="ok">
+ <request format="xml" ids="PMC1193645,PMC1134901" idtype="pmcid" showaiid="no" versions="no">
+ <echo>tool=my_tool&email=my_email%40example.com&ids=PMC1193645,PMC1134901</echo>
+ </request>
+ <record doi="10.1084/jem.20020509" pmcid="PMC1193645" pmid="14699080" requested-id="PMC1193645" />
+ <record doi="10.1042/bj2950447" pmcid="PMC1134901" pmid="8240242" requested-id="PMC1134901" />
+</pmcids> 
+ idtype Parameter 
+ You can override ID type auto-detection behavior by using the idtype parameter. Valid values are "pmcid", "pmid", "mid", and "doi". For example, the using idtype=pmcid lets you specify PMCIDs as simple numeric values. If the idtype parameter is not used, PMCIDs must have the "PMC" prefix, in order to distinguish them from PMIDs, which can have the same numerical value as the numerical portion of a PMCID. Default: idtype is not set, API auto-detects from the value(s) in ids 
+ service-root?ids=14900&idtype=pmcid 
+ versions Parameter 
+ The default for this parameter is versions=no. If you want to display version information if it exists, e.g. if there is an author manuscript ID (MID) or other version of an article, use the parameter setting: versions=yes . Default: versions=no 
+ showaiid Parameter 
+ If an article has more than one version in PMC, then in addition to the PMCID of the article (PMC + digits), which is the original accession ID in PMC, each additional version is assigned an Article Instance ID (aiid), which has a numerical value only, no PMC prefix. The showaiid parameter set to a value of yes is used to display this Article Instance ID. The aiid of the first version in PMC is equal to the numerical portion of the PMCID. Subsequent versions will have aiid values that differ from the numerical portion of the PMCID. Default: showaiid=no 
+ format Parameter 
+ The service can provide output in a number of formats, as specified by the format parameter, which can be one of "html", "xml", "json", or "csv". Default: format=xml 
+ Examples 
+ XML Output 
+ service-root?ids=PMC1193645 
+ <pmcids response-date="2025-06-10 12:00:38" status="ok">
+ <request format="xml" ids="PMC1193645" idtype="pmcid" showaiid="no" versions="no">
+ <echo>tool=my_tool;email=my_email%40example.com;ids=PMC1193645</echo>
+ </request>
+ <record doi="10.1084/jem.20020509" pmcid="PMC1193645" pmid="14699080" requested-id="PMC1193645" /> 
+</pmcids> 
+ XML Output with versions=yes 
+ The example below is the same PMCID as in the example above, the only difference is the addition of the versions=yes parameter. 
+ service-root?ids=PMC1193645&versions=yes 
+ <pmcids response-date="2025-06-10 12:08:45" status="ok">
+ <request format="xml" ids="PMC1193645" idtype="pmcid" showaiid="no" versions="yes">
+ <echo>tool=my_tool;email=my_email%40example.com;ids=PMC1193645&versions=yes </echo>
+ </request>
+ <record doi="10.1084/jem.20020509" pmcid="PMC1193645" pmid="14699080" requested-id="PMC1193645" /> 
+ <versions>
+ <version current="false" doi="10.1084/jem.20020509" mid=NIHMS2203" pmcid="PMC1193645.1" />
+ <version current="true" doi="10.1084/jem.2002059" pmcid=PMC1193645.2" />
+ </versions>
+ <record>
+</pmcids> 
+ Note that each version of the article is listed within its own <version> element, and that MIDs, which correspond to specific versions, are always given there. The current attribute specifies which version is rendered by default by the PMC system, when the article is accessed by its PMCID without a version number appended (for example, here ). 
+ XML Output with versions=yes and showaiid=yes 
+ The example below is the same PMCID as in the example above, the only difference is the addition of the showaiid=yes parameter. 
+ service-root?ids=PMC1193645&versions=yes&showaiid=yes 
+ <pmcids response-date="2025-06-10 12:08:45" status="ok">
+ <request format="xml" ids="PMC1193645" idtype="pmcid" showaiid="yes" versions="yes">
+ <echo>tool=my_tool;email=my_email%40example.com;ids=PMC1193645&versions=yes </echo>
+ </request>
+ <record aiid="1887721" doi="10.1084/jem.20020509" pmcid="PMC1193645" pmid="14699080" requested-id="PMC1193645" /> 
+ <versions>
+ <version current="false" aiid="1193645" doi="10.1084/jem.20020509" mid=NIHMS2203" pmcid="PMC1193645.1" />
+ <version current="true" aiid="1887721" doi="10.1084/jem.2002059" pmcid=PMC1193645.2" />
+ </versions>
+ <record>
+</pmcids> 
+ XML Output for Article under Embargo 
+ If an article is under embargo, then that information will be conveyed as in the following example. (Note that these examples are, by necessity, time-sensitive. If the embargo period has passed, the results will be different than those shown here.) 
+ service-root?ids=PMC11901554 
+ <pmcids response-date="2025-06-10 12:39:34" status="ok">
+<request format="xml" ids="PMC11901554" idtype="pmcid" showaiid="no" versions="no" >
+<echo>tool=my_tool;email=my_email%40example.com;ids=PMC11901554</echo>
+</request>
+<doi="10.1080/14796678.2025.2472581" live="false" pmcid="PMC11901554" pmid="40035694" release-date="2026-03-04" requested-id="PMC11901554">
+</record>
+</pmcids> 
+ Above you see the attributes live="false" and release-date="2026-03-04" which respectively indicate that the article is not yet available in full text in PMC and the full text will be available on 2026-03-04. 
+ Some articles are available as manuscripts while the final published version is under embargo. For example, 
+ service-root?ids=PMC1190307&versions=yes&showaiid=yes 
+ <pmcids status="ok">
+ <request format="xml" ids="PMC11903078" idtype="pmcid" showaiid="yes" versions="yes">
+ <echo>tool=my_tool;email=my_email%40example.com;ids=PMC119030788&versions=yes&showaiid=yes</echo>
+ </request>
+ <record aiid="11903161" doi="10.2105/AJPH.2024.307961" pmcid="PMC11903078" pmid="39883902" requested-id="PMC11903078">
+ <versions>
+ <version aiid="11903078" current="false" doi="10.2105/AJPH.2024.307961" live="false" pmcid="PMC11903078.1" release-date="2027-04-01"/>
+ <version aiid="11903161" current="true" doi="10.2105/AJPH.2024.307961" mid="NIHMS2040988" pmcid="PMC11903078.2"/>
+ </versions>
+ </record>
+</pmcids> 
+ JSON Output with format=json 
+ service-root?ids=PMC7611378&format=json 
+ {
+ "status": "ok",
+ "response-date": "2025-06-10 13:51:31",
+ "request": {
+ "warnings": [],
+ "format": "json",
+ "ids": [
+ "PMC7611378"
+ ],
+ "email": "my_email@example.com",
+ "tool": "my_tool",
+ "echo": "tool=my_tool&email=my_email%40example.com&ids=PMC7611378&format=json",
+ "versions": "no",
+ "showaiid": "no",
+ "idtype": "pmcid"
+ },
+ "records": [
+ {
+ "doi": "10.1136/archdischild-2015-309789",
+ "pmcid": "PMC7611378",
+ "pmid": 27102758,
+ "requested-id": "PMC7611378"
+ }
+ ]
+} 
+ CSV Output with format=csv 
+ Default (versions=no)
+ service-root?ids=PMC1193645&format=csv 
+ "PMID","PMCID","DOI","IsLive","ReleaseDate","ErrorMessage"
+"14699080","PMC1193645","10.1084/jem.20020509",1,"","" 
+ With Versions (versions=yes)
+ service-root?ids=PMC1193645&format=csv&versions=yes 
+ "PMID","PMCID","DOI","Version","MID","IsCurrent","IsLive","ReleaseDate","ErrorMessage"
+14699080,"PMC1193645","10.1084/jem.20020509","PMC1193645.1","NIHMS2203",0,1,"",""
+14699080,"PMC1193645","10.1084/jem.20020509","PMC1193645.2","",1,1,"","" 
+ With Versions and Article Instance IDs (versions=yes, showaiid=yes)
+ service-root?ids=PMC1193645&format=csv&version=yes&showaiid=yes 
+ "PMID","PMCID","ArticleInstanceId","DOI","Version","MID","IsCurrent","IsLive","ReleaseDate","ErrorMessage"
+14699080,"PMC1193645",1193645,"10.1084/jem.20020509","PMC1193645.1","NIHMS2203",0,1,"",""
+14699080,"PMC1193645",1887721,"10.1084/jem.20020509","PMC1193645.2","",1,1,"","" 
+ Last modified: Tue June 10 2025
+ Follow NCBI
+ NCBI on X (formerly known as Twitter) 
+ NCBI on Facebook 
+ NCBI on LinkedIn 
+ NCBI on GitHub 
+ NCBI RSS feed 
+ Connect with NLM
+ NLM on X (formerly known as Twitter) 
+ NLM on Facebook 
+ NLM on YouTube 
+ National Library of Medicine
+ 8600 Rockville Pike Bethesda, MD 20894 
+ Web Policies
+ FOIA
+ HHS Vulnerability Disclosure
+ Help
+ Accessibility
+ Careers
+ NLM
+ NIH
+ HHS
+ USA.gov
+ Back to Top

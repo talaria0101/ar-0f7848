@@ -1,0 +1,31 @@
+{
+ "slug": "pubmed-eutils",
+ "name": "NCBI E-utilities (PubMed)",
+ "docs": {
+  "url": "https://www.ncbi.nlm.nih.gov/books/NBK25497/",
+  "final_url": "https://www.ncbi.nlm.nih.gov/books/NBK25497/",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 21301,
+  "truncated": false,
+  "sha256": "8561cb34837aaa08b47835a7fc1f49c616f98d15ead33d334c3441f9a5d1ee1b",
+  "fetched_at": "2026-10-20T01:31:40+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 165
+ },
+ "probe": {
+  "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=test&retmax=1&retmode=json",
+  "final_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=test&retmax=1&retmode=json",
+  "status": 200,
+  "content_type": "application/json; charset=UTF-8",
+  "bytes": 491,
+  "truncated": false,
+  "sha256": "c285ae69879df54f25140a2b11ef12f821eb4013fc76f9015b54203721102aac",
+  "fetched_at": "2026-10-20T01:31:41+00:00",
+  "ratelimit_headers": {
+   "X-Ratelimit-Limit": "3",
+   "X-Ratelimit-Remaining": "2"
+  },
+  "text_bytes": 490
+ }
+}

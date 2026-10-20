@@ -1,0 +1,28 @@
+{
+ "slug": "memento",
+ "name": "Memento Time Travel",
+ "docs": {
+  "url": "http://timetravel.mementoweb.org/guide/api/",
+  "final_url": "http://timetravel.mementoweb.org/guide/api/",
+  "status": 502,
+  "content_type": "",
+  "bytes": 0,
+  "truncated": false,
+  "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "fetched_at": "2026-10-20T01:31:33+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 0
+ },
+ "probe": {
+  "url": "http://timetravel.mementoweb.org/timemap/json/http://example.com/",
+  "final_url": "http://timetravel.mementoweb.org/timemap/json/http://example.com/",
+  "status": 502,
+  "content_type": "",
+  "bytes": 0,
+  "truncated": false,
+  "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "fetched_at": "2026-10-20T01:31:33+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 0
+ }
+}

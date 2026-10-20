@@ -1,0 +1,28 @@
+{
+ "slug": "orkg",
+ "name": "Open Research Knowledge Graph",
+ "docs": {
+  "url": "https://orkg.org/api/swagger-ui/index.html",
+  "final_url": "https://orkg.org/api/swagger-ui/index.html",
+  "status": 404,
+  "content_type": "application/problem+json",
+  "bytes": 327,
+  "truncated": false,
+  "sha256": "c378c2c392b84e73227de209d3a6aa6d4932e8e9c57d1fe5385dafde45fc69d9",
+  "fetched_at": "2026-10-20T01:33:18+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 327
+ },
+ "probe": {
+  "url": "https://orkg.org/api/resources?size=1",
+  "final_url": "https://orkg.org/api/resources?size=1",
+  "status": 200,
+  "content_type": "application/json",
+  "bytes": 546,
+  "truncated": false,
+  "sha256": "04b470127abe49ecb9730b02ac6a80ce0aae5014162247555d3ad2120e7d37f1",
+  "fetched_at": "2026-10-20T01:33:19+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 546
+ }
+}

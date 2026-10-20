@@ -1,0 +1,1 @@
+{"total":1930,"supporting":22,"contradicting":1,"mentioning":1898,"unclassified":9,"doi":"10.1038/nature12373","citingPublications":2153}

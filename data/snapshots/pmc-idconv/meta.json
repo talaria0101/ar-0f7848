@@ -1,0 +1,28 @@
+{
+ "slug": "pmc-idconv",
+ "name": "PMC ID Converter API",
+ "docs": {
+  "url": "https://pmc.ncbi.nlm.nih.gov/tools/id-converter-api/",
+  "final_url": "https://pmc.ncbi.nlm.nih.gov/tools/id-converter-api/",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 94867,
+  "truncated": false,
+  "sha256": "ab725b1a6d048cf3f7d77afbcdba612b2a8aaf8feaa72a31536290323e7a565f",
+  "fetched_at": "2026-10-20T01:31:41+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 12393
+ },
+ "probe": {
+  "url": "https://pmc.ncbi.nlm.nih.gov/tools/idconv/api/v1/articles/?ids=10.1038/nature12373&format=json",
+  "final_url": "https://pmc.ncbi.nlm.nih.gov/tools/idconv/api/v1/articles/?ids=10.1038/nature12373&format=json",
+  "status": 200,
+  "content_type": "application/json",
+  "bytes": 401,
+  "truncated": false,
+  "sha256": "192fd9a291334d53de6fd6d8572daab0eed9bb394ed5b80e19507a30ab389acd",
+  "fetched_at": "2026-10-20T01:31:42+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 401
+ }
+}

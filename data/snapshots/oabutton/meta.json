@@ -1,0 +1,28 @@
+{
+ "slug": "oabutton",
+ "name": "Open Access Button API",
+ "docs": {
+  "url": "https://openaccessbutton.org/api",
+  "final_url": "https://openaccessbutton.org/api",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 8606,
+  "truncated": false,
+  "sha256": "4038d9090129a8d5d3b93103c40a9cd9ecc9bdec0dd5d2c115cf7cfffee3251e",
+  "fetched_at": "2026-10-20T01:31:47+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 787
+ },
+ "probe": {
+  "url": "https://api.openaccessbutton.org/find?id=10.1038/nature12373",
+  "final_url": "https://api.openaccessbutton.org/find?id=10.1038/nature12373",
+  "status": 0,
+  "content_type": "",
+  "bytes": 80,
+  "truncated": false,
+  "sha256": "fde4bd913166c3494f5596bbd17fc36c0c01e180ccc00808380f513569dd8ea5",
+  "fetched_at": "2026-10-20T01:31:47+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 80
+ }
+}

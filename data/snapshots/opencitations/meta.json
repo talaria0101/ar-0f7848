@@ -1,0 +1,28 @@
+{
+ "slug": "opencitations",
+ "name": "OpenCitations Index API",
+ "docs": {
+  "url": "https://opencitations.net/index/api/v2",
+  "final_url": "https://api.opencitations.net/index/v2",
+  "status": 200,
+  "content_type": "text/html",
+  "bytes": 47799,
+  "truncated": false,
+  "sha256": "c3b08c712e6cd39fb7e59e0bbdaef6c5bd66ad361381279f968bbe3a2feccef0",
+  "fetched_at": "2026-10-20T01:31:45+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 16773
+ },
+ "probe": {
+  "url": "https://opencitations.net/index/api/v2/citations/doi:10.1038/nature12373",
+  "final_url": "https://api.opencitations.net/index/v2/citations/doi:10.1038/nature12373",
+  "status": 200,
+  "content_type": "application/json",
+  "bytes": 658798,
+  "truncated": false,
+  "sha256": "f7fe7951638095d8244ddb10ca254040da359b9bccf639fad9d2ab02db3d761a",
+  "fetched_at": "2026-10-20T01:31:47+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 658798
+ }
+}

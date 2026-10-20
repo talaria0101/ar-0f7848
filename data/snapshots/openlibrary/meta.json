@@ -1,0 +1,28 @@
+{
+ "slug": "openlibrary",
+ "name": "Open Library API",
+ "docs": {
+  "url": "https://openlibrary.org/developers/api",
+  "final_url": "https://openlibrary.org/developers/api",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 61173,
+  "truncated": false,
+  "sha256": "0c62f5cb67dc92b02e816463cb300c21c757d213bc0ad9b1394e5f3988595622",
+  "fetched_at": "2026-10-20T01:31:36+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 11772
+ },
+ "probe": {
+  "url": "https://openlibrary.org/search.json?q=test&limit=1",
+  "final_url": "https://openlibrary.org/search.json?q=test&limit=1",
+  "status": 200,
+  "content_type": "application/json",
+  "bytes": 719,
+  "truncated": false,
+  "sha256": "f210c5f47de1c1b1a84ef0260e9cd73355ae844706fe341aadace78233702d9e",
+  "fetched_at": "2026-10-20T01:31:38+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 719
+ }
+}

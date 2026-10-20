@@ -1,0 +1,28 @@
+{
+ "slug": "inspirehep",
+ "name": "INSPIRE HEP API",
+ "docs": {
+  "url": "https://github.com/inspirehep/rest-api-doc",
+  "final_url": "https://github.com/inspirehep/rest-api-doc",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 361657,
+  "truncated": false,
+  "sha256": "8ed31eedd8dc60e0e4a939bda4ce3881493d0c7ab9971315a75a1e8d3b9cecd5",
+  "fetched_at": "2026-10-20T01:31:44+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 19827
+ },
+ "probe": {
+  "url": "https://inspirehep.net/api/literature?size=1&q=test&fields=titles",
+  "final_url": "https://inspirehep.net/api/literature?size=1&q=test&fields=titles",
+  "status": 200,
+  "content_type": "application/json",
+  "bytes": 1557,
+  "truncated": false,
+  "sha256": "65f1cc9e6ed766ccc49a9a0cd57b3d7d883617be0d346bc2497fa515764fbf2d",
+  "fetched_at": "2026-10-20T01:31:45+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 1557
+ }
+}

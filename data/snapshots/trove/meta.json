@@ -1,0 +1,28 @@
+{
+ "slug": "trove",
+ "name": "Trove API (NLA)",
+ "docs": {
+  "url": "https://trove.nla.gov.au/about/create-something/using-api",
+  "final_url": "https://trove.nla.gov.au/about/create-something/using-api",
+  "status": 200,
+  "content_type": "text/html; charset=UTF-8",
+  "bytes": 72227,
+  "truncated": false,
+  "sha256": "184c10c063e5f5fbabe10c67b55a406a623db99f25388a9e38f46f606d67ecf1",
+  "fetched_at": "2026-10-20T01:31:57+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 11202
+ },
+ "probe": {
+  "url": "https://api.trove.nla.gov.au/v3/result?q=test&category=newspaper",
+  "final_url": "https://api.trove.nla.gov.au/v3/result?q=test&category=newspaper",
+  "status": 401,
+  "content_type": "application/json; charset=utf-8",
+  "bytes": 96,
+  "truncated": false,
+  "sha256": "e4349cacbb5f0c7677ec0f0082be0c1101a66715b660df30bcdfc13757f29142",
+  "fetched_at": "2026-10-20T01:31:59+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 96
+ }
+}

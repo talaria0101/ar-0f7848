@@ -1,0 +1,554 @@
+[
+ {
+  "slug": "wayback-cdx",
+  "name": "Wayback Machine CDX Server",
+  "category": "archive",
+  "docs": "https://github.com/internetarchive/wayback/blob/master/wayback-cdx-server/README.md",
+  "probe": "http://web.archive.org/cdx/search/cdx?url=example.com&limit=2&output=json",
+  "accept": "application/json"
+ },
+ {
+  "slug": "wayback-availability",
+  "name": "Wayback Machine Availability API",
+  "category": "archive",
+  "docs": "https://archive.org/help/wayback_api.php",
+  "probe": "https://archive.org/wayback/available?url=example.com",
+  "accept": "application/json"
+ },
+ {
+  "slug": "wayback-spn2",
+  "name": "Wayback Save Page Now 2 API",
+  "category": "archive",
+  "docs": "https://docs.google.com/document/d/1Nsv52MvSjbLb2PCpHlat0gkzw0EvtSgpKHu4mk0MnrA/export?format=txt",
+  "probe": "https://web.archive.org/save/status/system",
+  "accept": "application/json"
+ },
+ {
+  "slug": "ia-advancedsearch",
+  "name": "Internet Archive Advanced Search",
+  "category": "archive",
+  "docs": "https://archive.org/advancedsearch.php",
+  "probe": "https://archive.org/advancedsearch.php?q=mediatype%3Atexts&fl%5B%5D=identifier&rows=1&output=json",
+  "accept": "application/json"
+ },
+ {
+  "slug": "ia-metadata",
+  "name": "Internet Archive Metadata API",
+  "category": "archive",
+  "docs": "https://archive.org/developers/metadata.html",
+  "probe": "https://archive.org/metadata/nasa",
+  "accept": "application/json"
+ },
+ {
+  "slug": "ia-scholar",
+  "name": "Internet Archive Scholar / fatcat",
+  "category": "archive",
+  "docs": "https://guide.fatcat.wiki/http_api.html",
+  "probe": "https://api.fatcat.wiki/v0/release/lookup?doi=10.1038/nature12373",
+  "accept": "application/json"
+ },
+ {
+  "slug": "commoncrawl",
+  "name": "Common Crawl Index",
+  "category": "archive",
+  "docs": "https://commoncrawl.org/get-started",
+  "probe": "https://index.commoncrawl.org/collinfo.json",
+  "accept": "application/json"
+ },
+ {
+  "slug": "memento",
+  "name": "Memento Time Travel",
+  "category": "archive",
+  "docs": "http://timetravel.mementoweb.org/guide/api/",
+  "probe": "http://timetravel.mementoweb.org/timemap/json/http://example.com/",
+  "accept": "application/json"
+ },
+ {
+  "slug": "arquivo-pt",
+  "name": "Arquivo.pt Web Archive",
+  "category": "archive",
+  "docs": "https://github.com/arquivo/pwa-technologies/wiki/Arquivo.pt-API",
+  "probe": "https://arquivo.pt/wayback/cdx?url=example.com&limit=2&output=json",
+  "accept": "application/json"
+ },
+ {
+  "slug": "software-heritage",
+  "name": "Software Heritage Archive",
+  "category": "archive",
+  "docs": "https://archive.softwareheritage.org/api/",
+  "probe": "https://archive.softwareheritage.org/api/1/origin/https://github.com/torvalds/linux/get/",
+  "accept": "application/json"
+ },
+ {
+  "slug": "loc",
+  "name": "Library of Congress API",
+  "category": "library",
+  "docs": "https://www.loc.gov/apis/",
+  "probe": "https://www.loc.gov/search/?q=test&fo=json&c=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "europeana",
+  "name": "Europeana Search API",
+  "category": "library",
+  "docs": "https://pro.europeana.eu/page/search",
+  "probe": "https://api.europeana.eu/record/v2/search.json?wskey=api2demo&query=test&rows=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "hathitrust",
+  "name": "HathiTrust Bibliographic API",
+  "category": "library",
+  "docs": "https://www.hathitrust.org/member-libraries/resources-for-librarians/data-resources/bib-api/",
+  "probe": "https://catalog.hathitrust.org/api/volumes/brief/oclc/424023.json",
+  "accept": "application/json"
+ },
+ {
+  "slug": "dpla",
+  "name": "Digital Public Library of America",
+  "category": "library",
+  "docs": "https://pro.dp.la/developers/api-codex",
+  "probe": "https://api.dp.la/v2/items?q=test&page_size=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "openlibrary",
+  "name": "Open Library API",
+  "category": "library",
+  "docs": "https://openlibrary.org/developers/api",
+  "probe": "https://openlibrary.org/search.json?q=test&limit=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "googlebooks",
+  "name": "Google Books API",
+  "category": "library",
+  "docs": "https://developers.google.com/books/docs/v1/using",
+  "probe": "https://www.googleapis.com/books/v1/volumes?q=test&maxResults=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "gutendex",
+  "name": "Gutendex (Project Gutenberg)",
+  "category": "library",
+  "docs": "https://gutendex.com/",
+  "probe": "https://gutendex.com/books/?search=dickens",
+  "accept": "application/json"
+ },
+ {
+  "slug": "gallica",
+  "name": "Gallica SRU (BnF)",
+  "category": "library",
+  "docs": "https://api.bnf.fr/api-sru-gallica",
+  "probe": "https://gallica.bnf.fr/SRU?operation=searchRetrieve&version=1.2&query=%28gallica%20all%20%22test%22%29&maximumRecords=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "nara",
+  "name": "US National Archives Catalog API",
+  "category": "library",
+  "docs": "https://catalog.archives.gov/api/v2/api-docs",
+  "probe": "https://catalog.archives.gov/api/v2/records/search?q=test&limit=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "smithsonian",
+  "name": "Smithsonian Open Access API",
+  "category": "library",
+  "docs": "https://edan.si.edu/openaccess/apidocs/",
+  "probe": "https://api.si.edu/openaccess/api/v1.0/search?q=test&rows=1&api_key=DEMO_KEY",
+  "accept": "application/json"
+ },
+ {
+  "slug": "wikipedia",
+  "name": "MediaWiki Action API (Wikipedia)",
+  "category": "encyclopedia",
+  "docs": "https://www.mediawiki.org/wiki/API:Main_page",
+  "probe": "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=test&srlimit=1&format=json",
+  "accept": "application/json"
+ },
+ {
+  "slug": "wikidata",
+  "name": "Wikidata API / SPARQL",
+  "category": "encyclopedia",
+  "docs": "https://www.wikidata.org/wiki/Wikidata:Data_access",
+  "probe": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=Marie%20Curie&language=en&limit=1&format=json",
+  "accept": "application/json"
+ },
+ {
+  "slug": "openalex",
+  "name": "OpenAlex",
+  "category": "scholarly",
+  "docs": "https://docs.openalex.org/",
+  "probe": "https://api.openalex.org/works?per-page=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "crossref",
+  "name": "Crossref REST API",
+  "category": "scholarly",
+  "docs": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+  "probe": "https://api.crossref.org/works?rows=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "datacite",
+  "name": "DataCite REST API",
+  "category": "scholarly",
+  "docs": "https://support.datacite.org/docs/api",
+  "probe": "https://api.datacite.org/dois?page%5Bsize%5D=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "semanticscholar",
+  "name": "Semantic Scholar Academic Graph",
+  "category": "scholarly",
+  "docs": "https://api.semanticscholar.org/api-docs/",
+  "probe": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1038/nature12373?fields=title",
+  "accept": "application/json"
+ },
+ {
+  "slug": "core",
+  "name": "CORE API",
+  "category": "scholarly",
+  "docs": "https://core.ac.uk/services/api",
+  "probe": "https://api.core.ac.uk/v3/search/works?q=test&limit=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "arxiv",
+  "name": "arXiv API",
+  "category": "preprint",
+  "docs": "https://info.arxiv.org/help/api/index.html",
+  "probe": "https://export.arxiv.org/api/query?search_query=all:test&max_results=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "pubmed-eutils",
+  "name": "NCBI E-utilities (PubMed)",
+  "category": "biomed",
+  "docs": "https://www.ncbi.nlm.nih.gov/books/NBK25497/",
+  "probe": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=test&retmax=1&retmode=json",
+  "accept": "application/json"
+ },
+ {
+  "slug": "europepmc",
+  "name": "Europe PMC REST API",
+  "category": "biomed",
+  "docs": "https://europepmc.org/RestfulWebService",
+  "probe": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=test&format=json&pageSize=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "pmc-idconv",
+  "name": "PMC ID Converter API",
+  "category": "biomed",
+  "docs": "https://pmc.ncbi.nlm.nih.gov/tools/id-converter-api/",
+  "probe": "https://pmc.ncbi.nlm.nih.gov/tools/idconv/api/v1/articles/?ids=10.1038/nature12373&format=json",
+  "accept": "application/json"
+ },
+ {
+  "slug": "unpaywall",
+  "name": "Unpaywall REST API",
+  "category": "oa",
+  "docs": "https://unpaywall.org/products/api",
+  "probe": "https://api.unpaywall.org/v2/10.1038/nature12373?email=research@example.org",
+  "accept": "application/json"
+ },
+ {
+  "slug": "doaj",
+  "name": "Directory of Open Access Journals API",
+  "category": "oa",
+  "docs": "https://doaj.org/api/v4/docs",
+  "probe": "https://doaj.org/api/search/articles/test?pageSize=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "openaire",
+  "name": "OpenAIRE Graph API",
+  "category": "scholarly",
+  "docs": "https://graph.openaire.eu/docs/apis/graph-api/",
+  "probe": "https://api.openaire.eu/graph/v1/researchProducts?search=test&pageSize=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "base",
+  "name": "BASE (Bielefeld Academic Search Engine)",
+  "category": "oa",
+  "docs": "https://www.base-search.net/about/en/about_develop.php",
+  "probe": "https://api.base-search.net/cgi-bin/BaseHttpSearchInterface.fcgi?func=PerformSearch&query=test&hits=1&format=json",
+  "accept": "application/json"
+ },
+ {
+  "slug": "biorxiv",
+  "name": "bioRxiv / medRxiv API",
+  "category": "preprint",
+  "docs": "https://api.biorxiv.org/",
+  "probe": "https://api.biorxiv.org/details/biorxiv/2024-01-01/2024-01-02/0",
+  "accept": "application/json"
+ },
+ {
+  "slug": "hal",
+  "name": "HAL Search API",
+  "category": "oa",
+  "docs": "https://api.archives-ouvertes.fr/docs/search",
+  "probe": "https://api.archives-ouvertes.fr/search/?q=test&rows=1&wt=json",
+  "accept": "application/json"
+ },
+ {
+  "slug": "orcid",
+  "name": "ORCID Public API",
+  "category": "identifier",
+  "docs": "https://info.orcid.org/documentation/features/public-api/",
+  "probe": "https://pub.orcid.org/v3.0/search/?q=test&rows=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "ror",
+  "name": "Research Organization Registry API",
+  "category": "identifier",
+  "docs": "https://ror.readme.io/docs/rest-api",
+  "probe": "https://api.ror.org/v2/organizations?query=harvard",
+  "accept": "application/json"
+ },
+ {
+  "slug": "inspirehep",
+  "name": "INSPIRE HEP API",
+  "category": "scholarly",
+  "docs": "https://github.com/inspirehep/rest-api-doc",
+  "probe": "https://inspirehep.net/api/literature?size=1&q=test&fields=titles",
+  "accept": "application/json"
+ },
+ {
+  "slug": "nasa-ads",
+  "name": "NASA Astrophysics Data System API",
+  "category": "scholarly",
+  "docs": "https://ui.adsabs.harvard.edu/help/api/",
+  "probe": "https://api.adsabs.harvard.edu/v1/search/query?q=test&rows=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "dblp",
+  "name": "dblp API",
+  "category": "scholarly",
+  "docs": "https://dblp.org/faq/How+to+use+the+dblp+search+API.html",
+  "probe": "https://dblp.org/search/publ/api?q=test&format=json&h=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "opencitations",
+  "name": "OpenCitations Index API",
+  "category": "scholarly",
+  "docs": "https://opencitations.net/index/api/v2",
+  "probe": "https://opencitations.net/index/api/v2/citations/doi:10.1038/nature12373",
+  "accept": "application/json"
+ },
+ {
+  "slug": "crossref-events",
+  "name": "Crossref Event Data API",
+  "category": "scholarly",
+  "docs": "https://www.crossref.org/documentation/event-data/",
+  "probe": "https://api.eventdata.crossref.org/v1/events?rows=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "altmetric",
+  "name": "Altmetric Details Page API",
+  "category": "scholarly",
+  "docs": "https://details-page-api-docs.altmetric.com/",
+  "probe": "https://api.altmetric.com/v1/doi/10.1038/nature12373",
+  "accept": "application/json"
+ },
+ {
+  "slug": "orkg",
+  "name": "Open Research Knowledge Graph",
+  "category": "scholarly",
+  "docs": "https://orkg.org/api/swagger-ui/index.html",
+  "probe": "https://orkg.org/api/resources?size=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "oabutton",
+  "name": "Open Access Button API",
+  "category": "oa",
+  "docs": "https://openaccessbutton.org/api",
+  "probe": "https://api.openaccessbutton.org/find?id=10.1038/nature12373",
+  "accept": "application/json"
+ },
+ {
+  "slug": "oapen",
+  "name": "OAPEN Library (DSpace REST)",
+  "category": "oa",
+  "docs": "https://library.oapen.org/",
+  "probe": "https://library.oapen.org/rest/search?query=test&limit=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "zbmath",
+  "name": "zbMATH Open API",
+  "category": "scholarly",
+  "docs": "https://api.zbmath.org/",
+  "probe": "https://api.zbmath.org/v1/document/_search?search_string=test&page=0&results_per_page=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "openreview",
+  "name": "OpenReview API",
+  "category": "scholarly",
+  "docs": "https://docs.openreview.net/",
+  "probe": "https://api2.openreview.net/notes?limit=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "scielo",
+  "name": "SciELO ArticleMeta API",
+  "category": "oa",
+  "docs": "https://github.com/scieloorg/articlemeta",
+  "probe": "https://articlemeta.scielo.org/api/v1/journal/?limit=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "jstage",
+  "name": "J-STAGE WebAPI",
+  "category": "oa",
+  "docs": "https://www.jstage.jst.go.jp/static/pages/WebAPI/-char/en",
+  "probe": "https://api.jstage.jst.go.jp/searchapi/do?service=3&text=test&count=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "zenodo",
+  "name": "Zenodo REST API",
+  "category": "repository",
+  "docs": "https://developers.zenodo.org/",
+  "probe": "https://zenodo.org/api/records?size=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "figshare",
+  "name": "Figshare API",
+  "category": "repository",
+  "docs": "https://docs.figshare.com/",
+  "probe": "https://api.figshare.com/v2/articles?page_size=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "osf",
+  "name": "Open Science Framework API",
+  "category": "repository",
+  "docs": "https://developer.osf.io/",
+  "probe": "https://api.osf.io/v2/nodes/?page%5Bsize%5D=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "dryad",
+  "name": "Dryad API",
+  "category": "repository",
+  "docs": "https://datadryad.org/api",
+  "probe": "https://datadryad.org/api/v2/search?q=test&per_page=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "dataverse",
+  "name": "Harvard Dataverse Search API",
+  "category": "repository",
+  "docs": "https://guides.dataverse.org/en/latest/api/search.html",
+  "probe": "https://dataverse.harvard.edu/api/search?q=test&per_page=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "mendeley-data",
+  "name": "Mendeley Data API",
+  "category": "repository",
+  "docs": "https://data.mendeley.com/api/docs/",
+  "probe": "https://data.mendeley.com/public-api/datasets?query=test",
+  "accept": "application/json"
+ },
+ {
+  "slug": "gbif",
+  "name": "GBIF API",
+  "category": "science",
+  "docs": "https://techdocs.gbif.org/en/openapi/",
+  "probe": "https://api.gbif.org/v1/species/search?q=puma&limit=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "clinicaltrials",
+  "name": "ClinicalTrials.gov API v2",
+  "category": "biomed",
+  "docs": "https://clinicaltrials.gov/data-api/api",
+  "probe": "https://clinicaltrials.gov/api/v2/studies?pageSize=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "pubchem",
+  "name": "PubChem PUG REST",
+  "category": "science",
+  "docs": "https://pubchem.ncbi.nlm.nih.gov/docs/pug-rest",
+  "probe": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/aspirin/property/MolecularFormula/JSON",
+  "accept": "application/json"
+ },
+ {
+  "slug": "springer",
+  "name": "Springer Nature API",
+  "category": "publisher",
+  "docs": "https://dev.springernature.com/",
+  "probe": "https://api.springernature.com/meta/v2/json?q=test&p=1&api_key=invalid",
+  "accept": "application/json"
+ },
+ {
+  "slug": "elsevier",
+  "name": "Elsevier Developer Portal (Scopus/ScienceDirect)",
+  "category": "publisher",
+  "docs": "https://dev.elsevier.com/",
+  "probe": "https://api.elsevier.com/content/search/scopus?query=test&count=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "ieee",
+  "name": "IEEE Xplore API",
+  "category": "publisher",
+  "docs": "https://developer.ieee.org/",
+  "probe": "https://ieeexploreapi.ieee.org/api/v1/search/articles?querytext=test&max_records=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "wos",
+  "name": "Web of Science API",
+  "category": "publisher",
+  "docs": "https://developer.clarivate.com/apis",
+  "probe": "https://api.clarivate.com/apis/wos-starter/v1/documents?q=TS%3Dtest&limit=1",
+  "accept": "application/json"
+ },
+ {
+  "slug": "lens",
+  "name": "The Lens API",
+  "category": "scholarly",
+  "docs": "https://docs.api.lens.org/",
+  "probe": "https://api.lens.org/scholarly/search",
+  "accept": "application/json"
+ },
+ {
+  "slug": "dimensions",
+  "name": "Dimensions Analytics API",
+  "category": "scholarly",
+  "docs": "https://docs.dimensions.ai/dsl/",
+  "probe": "https://app.dimensions.ai/api/auth",
+  "accept": "application/json"
+ },
+ {
+  "slug": "scite",
+  "name": "scite API",
+  "category": "scholarly",
+  "docs": "https://api.scite.ai/docs",
+  "probe": "https://api.scite.ai/tallies/10.1038/nature12373",
+  "accept": "application/json"
+ },
+ {
+  "slug": "trove",
+  "name": "Trove API (NLA)",
+  "category": "library",
+  "docs": "https://trove.nla.gov.au/about/create-something/using-api",
+  "probe": "https://api.trove.nla.gov.au/v3/result?q=test&category=newspaper",
+  "accept": "application/json"
+ }
+]

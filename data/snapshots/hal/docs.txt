@@ -1,0 +1,452 @@
+API HAL | API Archive Ouverte HAL
+ Toggle navigation 
+ API HAL  API de recherche HAL 
+ Documentation 
+ API HAL 
+   Accès API HAL 
+  Point d'entrée 
+  Types de champs 
+  Fields 
+  Requests 
+ Operator 
+ Reply formats 
+ Fields to return 
+  Filters 
+ Number of results 
+  Sort results 
+   Facets 
+   Grouper des résultats 
+ Point d'entrée de l'API de recherche HAL 
+ Par défaut le point d'entrée de l'API est http://api.archives-ouvertes.fr/search/ , donc le
+ portail HAL 
+ Limiter la recherche à un portail 
+ Si vous le souhaitez, vous pouvez limiter vos requêtes à un portail, en précisant l'instance du portail dans
+ l'URL 
+ La liste des instances de portails est disponible dans le référentiel instance des Instances de portail .
+ Exemples pour un portail 
+ Limiter les requêtes au portail TEL ( instance: tel ) TEL : 
+ //api.archives-ouvertes.fr/search/tel/ 
+ Limiter la recherche à une collection 
+ Vous pouvez aussi limiter la recherche à une collection en précisant le code de la collection dans l'URL d'accès 
+ Exemple pour une collection 
+ Limiter les requêtes à la collection FRANCE-GRILLES :
+ //api.archives-ouvertes.fr/search/FRANCE-GRILLES/ 
+ La casse est Importante 
+ La casse du texte après /search/ définit si la recherche est limitée à un portail ou
+ une COLLECTION 
+ avec /search/tel/ la recherche est limitée au portail TEL 
+ avec /search/FRANCE-GRILLES/ la recherche est limitée à la collection FRANCE-GRILLES 
+ Avec cette API vous pouvez utiliser la syntaxe de Apache Solr . En plus des options détaillées
+ ci-dessous vous pouvez consulter la documentation en anglais de Apache Solr 
+ Requêtes 
+ Il faut au moins un paramètre dans l'URL pour faire une requête, ce paramètre
+ est
+ q 
+ Ce paramètre contient la requête à effectuer. 
+ Le paramètre doit être suivi du nom du champ dans lequel rechercher puis de
+ la valeur à chercher. 
+ Un certain nombre de caractères utilisés par la syntaxe de Apache Solr doivent être échappés avant d'être envoyés à l'API. Voir RFC3986 
+ Caractères utilisés par Apache Solr à échapper + - && || ! ( ) { } [ ] ^ " ~ * ? : \ . 
+ Vous pouvez échapper ces caractères avec un \ avant le caractère. Par exemple (1+1):2 devient \(1\+1\)\:2 . 
+ Exemples 
+ q=exemple 
+ Exemple recherche du terme 'test' : 
+http://api.archives-ouvertes.fr/search/?q=test&wt=xml 
+ Recherche basique 
+ Exemples 
+ Si le nom du champ dans lequel chercher est omis, par défaut la recherche
+ porte sur l'index
+ text 
+ qui contient les valeurs de plusieurs champs.
+ Ainsi : 
+http://api.archives-ouvertes.fr/ref/anrproject/?q=asie&wt=xml 
+ donne le même résultat que : 
+http://api.archives-ouvertes.fr/ref/anrproject/?q=text:asie&wt=xml 
+ Recherche dans un champ en particulier 
+ Pour chercher dans un champ particulier la syntaxe est champ : terme 
+ Exemple 
+ Recherche du terme 'japon' dans le champ title_t 
+http://api.archives-ouvertes.fr/search/?q=title_t:japon&wt=xml 
+ Recherche dans un champ en particulier plusieurs termes 
+ L'opérateur booléen par défaut est AND 
+ Utiliser (terme1 terme2) 
+ Exemple 
+ Recherche des termes 'japon' et 'france' dans le champ title_t 
+http://api.archives-ouvertes.fr/search/?q=title_t:(japon france)&wt=xml 
+ Recherche dans un champ en particulier un terme ou un autre 
+ Utiliser (terme1 OR terme2) 
+ Voir aussi la liste des opérateurs booléens 
+ Exemple 
+ Recherche des termes 'japon' ou 'france' dans le champ title_t 
+ http://api.archives-ouvertes.fr/search/?q=title_t:(japon OR france)&wt=xml 
+ Recherche de phrase 
+ Utiliser les guillemets doubles "terme1 terme2" 
+ Exemple 
+ Recherche de la phrase 'Dictionnaire des idées reçues' dans le champ title_t 
+http://api.archives-ouvertes.fr/search/?q=title_t:"Dictionnaire des idées reçues"&wt=xml 
+ Troncature sur un caractère avec ? 
+ Exemple 
+http://api.archives-ouvertes.fr/ref/anrproject/?q=agricol?&wt=xml 
+ Troncature sur plus d'un caractère avec * 
+ Exemple 
+http://api.archives-ouvertes.fr/search/?q=agri*&wt=xml 
+ Recherche approchante ~ 
+ Exemple 
+ La syntaxe aluminum~ retourne des titres qui contiennent aluminum, Aluminium, alumimium, etc. 
+ On peut préciser le nombre de permutations possibles avec un chiffre entre 0 et 2 (par défaut) : aluminum~1 
+api.archives-ouvertes.fr/search/?q=title_t:aluminum~&wt=xml&fl=title_s 
+ Recherche par proximité 
+ Exemple 
+ La syntaxe "aluminium fer"~3 cherche des titres qui contiennent aluminium et fer à une distance maximale de 3 termes :
+api.archives-ouvertes.fr/search/?q=title_t:"aluminium fer"~3&wt=xml&fl=title_s 
+ Opérateurs 
+ Opérateur booléen 
+ Symbole 
+ Description 
+ AND 
+ && 
+ Les termes de chaque côté de l'opérateur doivent être présents 
+ NOT 
+ ! 
+ Le terme suivant l'opérateur doit être absent 
+ OR 
+ || 
+ Au moins un des 2 termes de chaque côté de l'opérateur doit être présent 
+ + 
+ Le terme suivant l'opérateur doit être présent 
+ - 
+ Le terme suivant l'opérateur doit être absent 
+ Exemples 
+ Paris -France +Texas 
+ Paris AND France AND history NOT (Texas AND history) 
+ Journal AND (Histoire OR History) 
+ Formats de réponse 
+ Le format de réponse par défaut est JSON 
+ Le format de réponse est spécifié par le paramètre
+ wt 
+ Par exemple
+ wt=json 
+ Les réponses peuvent être obtenues dans plusieurs formats : 
+ Format 
+ Paramètre 
+ Description 
+ JSON (format par défaut) 
+ json 
+ Réponse de Apache Solr au format JSON 
+ XML 
+ xml 
+ Réponse de Apache Solr au format XML 
+ XML-TEI 
+ xml-tei 
+ Réponse de l'API au format XML- TEI 
+ BibTeX 
+ bibtex 
+ Réponse de l'API au format BibTeX 
+ Endnote 
+ endnote 
+ Réponse de l'API au format de Endnote 
+ Flux RSS 
+ rss 
+ Réponse de l'API au format RSS 
+ Flux Atom 
+ atom 
+ Réponse de l'API au format Atom 
+ CSV 
+ csv 
+ Réponse de Apache Solr au format CSV (séparateur de champs
+ , 
+ - valeurs séparées par
+ " )
+ Ajouter
+ indent=true 
+ pour indenter le format de réponse.
+ Exemples 
+ Format ATOM : http://api.archives-ouvertes.fr/search/?q=*:*&wt=atom Format BIBTEX : http://api.archives-ouvertes.fr/search/?q=*:*&wt=bibtex Format CSV : http://api.archives-ouvertes.fr/search/?q=*:*&wt=csv Format ENDNOTE : http://api.archives-ouvertes.fr/search/?q=*:*&wt=endnote Format JSON : http://api.archives-ouvertes.fr/search/?q=*:*&wt=json Format RSS : http://api.archives-ouvertes.fr/search/?q=*:*&wt=rss Format XML : http://api.archives-ouvertes.fr/search/?q=*:*&wt=xml Format XML-TEI : http://api.archives-ouvertes.fr/search/?q=*:*&wt=xml-tei 
+ Champs retournés dans la réponse 
+ Par défaut seuls les champs
+ docid 
+ et
+ label_s 
+ sont retournés dans une réponse. Cependant tous les champs stockés peuvent être retournés
+ dans le format de réponse.
+ Le paramètre pour choisir les champs à retourner est
+ fl 
+ .
+ Les champs demandés doivent être séparés par le signe
+ , 
+ On peut utiliser le caractère
+ * 
+ comme troncature de nom de champ, eg
+ fl=cha* 
+  Ce paramètre fl est disponible avec les formats de sortie :
+ JSON 
+ XML 
+ CSV 
+ Exemple 
+ fl=champ1_s,champ2_bool,champ3_t 
+ Exemple pour ne retourner que le champ label_s : 
+ http://api.archives-ouvertes.fr/search/?q=*:*&wt=xml&fl=label_s 
+ Tri des résultats 
+ Par défaut, les résultats sont triés par pertinence. Le tri des résultats peut
+ se faire sur n'importe quel champ en évitant les champs de type
+ text (suffixe "_t") 
+ et les champs multi-valués qui donneront des résultats imprévisibles.
+ Le paramètre pour choisir les champs à retourner est
+ sort 
+ + le sens de tri
+ asc 
+ ou
+ desc 
+ .
+ Exemple 
+ sort=champ_s asc 
+ Exemple 
+ http://api.archives-ouvertes.fr/search/?q=*:*&wt=xml&sort=docid asc 
+ Filtres sur les requêtes 
+Pour limiter les résultats retournés, il est possibles d'utiliser des filtres
+ Le paramètre pour ajouter des filtres est
+ fq suivi de la requête servant au filtre.
+ Exemple 
+ fq=submitType_s:file 
+ Exemple pour n'avoir que les dépôts avec fichiers : 
+http://api.archives-ouvertes.fr/search/?q=*:*&wt=xml&fq=submitType_s:file 
+ Exemple pour n'avoir que les dépôts de type THESE OU HDR : 
+ http://api.archives-ouvertes.fr/search/?q=*:*&fq=docType_s:(THESE OR HDR)&wt=xml 
+ On peut empiler les filtres, par exemple les dépôts du mois dernier, sans les notices 
+http://api.archives-ouvertes.fr/search/?q=*:*&wt=xml&fq=submittedDate_tdate:[NOW-1MONTHS/DAY TO NOW/HOUR]&fq=submitType_s:(-notice)&fl=label_s,submittedDate_tdate,submitType_s&sort=submittedDate_tdate asc 
+ Filtrer sur un intervalle de données 
+ Il est possible de faire des requêtes sur des intervalles avec cette syntaxe champ:[valeurDébut TO valeurFin] 
+ Exemple sur un intervalle d'années [2000 TO 2013] 
+http://api.archives-ouvertes.fr/search/?q=*:*&wt=xml&fq=submittedDateY_i:[2000 TO 2013] 
+ Exemple sur un intervalle d'années [2000 TO *] depuis 2000 jusqu'à la valeur maximale. 
+http://api.archives-ouvertes.fr/search/?q=*:*&wt=xml&fq=submittedDateY_i:[2000 TO *] 
+ Exemple sur un intervalle d'années excluant la valeur de fin [2000 TO 2013} 
+http://api.archives-ouvertes.fr/search/?q=*:*&wt=xml&fq=submittedDateY_i:[2000 TO 2013} 
+ Exemple sur un intervalle de valeur texte, les document dont la valeur du champ ville 'city_s' commence par Aa jusqu'à Ab : fq=city_s:[Aa TO Ab] 
+http://api.archives-ouvertes.fr/search/?q=*:*&wt=xml&fq=city_s:[Aa TO Ab]&fl=city_s 
+ Exemples de filtres sur des intervalles avec calcul de dates 
+ Les champs de type
+ _tdate 
+ permettent des requêtes en faisant des calculs de dates, par exemple :
+ NOW-2YEARS TO NOW correspond au critère Il y a 2 ans jusqu'à ajourd'hui 
+ NOW-1MONTHS TO NOW correspond au critère Il y a 1 mois jusqu'à ajourd'hui 
+ NOW correspond par défaut à l'heure de la requête eg 2014-11-01T23:55:08Z exprimé en temps UTC 
+ On peut arrondir le calcul avec
+ /DAY pour le début du jour 
+ ou même
+ /HOUR pour le début de l'heure courante 
+ Exemple de filtre pour les documents déposés ces 2 dernières années
+ fq=submittedDate_tdate:[NOW-1YEARS/DAY TO NOW/HOUR] 
+http://api.archives-ouvertes.fr/search/?q=*:*&wt=xml&fq=submittedDate_tdate:[NOW-1YEARS/DAY TO NOW/HOUR]&fl=label_s,submittedDate_tdate 
+ NOW 
+ peut être remplacé par une date
+ 2026-11-01T00:00:00Z 
+ Exemple pour des documents 1 an avant le 2026-11-01T00:00:00Z jusqu'à aujourd'hui 
+http://api.archives-ouvertes.fr/search/?q=*:*&wt=xml&fq=submittedDate_tdate:[2026-11-01T00:00:00Z-1YEARS/DAY TO NOW/DAY]&fl=label_s,submittedDate_tdate,submitType_s&sort=submittedDate_tdate asc 
+ Exemples pour trouver les documents qui contiennent ou non des valeurs dans un champ ; trouver des documents où le champ est vide, ou non vide 
+ Exemple de syntaxe pour avoir les documents sans DOI
+ fq= -doiId_s:["" TO *] 
+http://api.archives-ouvertes.fr/search/?q=*:*&wt=xml&fq=-doiId_s:["" TO *] 
+ Exemple de syntaxe pour avoir les documents avec un DOI
+ fq= doiId_s:["" TO *] 
+http://api.archives-ouvertes.fr/search/?q=*:*&wt=xml&fq=doiId_s:["" TO *]&fl=label_s,doiId_s 
+ Nombre de résultats 
+ Le nombre de réponses à retourner est définit par le paramètre
+ rows 
+ .
+ Le nombre total de dépôt/notices ne change pas avec ce paramètres, seul le nombre de résultats
+ effectivement retournés varie. 
+ Par défaut les requêtes ne retournent que les 30 premiers résultats, le maximum
+ autorisé est 10000 . Si vous souhaitez
+ plus de résultats vous devez utiliser la pagination .
+ Le paramètre
+ &rows=0 
+ peut permettre de ne retourner que le nombre de résultats et d'enlever les documents du corps de la
+ réponse. Vous pouvez par exemple utiliser ce paramètre à des fins de statistiques ou si vous voulez retourner uniquement des facettes.
+ Exemple 
+ Récupérer 100 résultats : 
+ http://api.archives-ouvertes.fr/search/?q=*:*&rows=100 
+ En dehors de besoins spécifiques, il vaut mieux éviter de dépasser les
+ 500/1000 lignes par réponse - pour des raisons de performance. 
+ Pagination 
+ Les résultats peuvent être paginés/décalés avec le paramètre
+ start 
+ .
+ Exemple 
+ Pour décaler les résultats et commencer au résultat 50 :
+ http://api.archives-ouvertes.fr/search/?q=*:*&start=50&rows=50 
+ Curseurs 
+ Si vous devez parcourir plusieurs milliers de résultats, pour des raisons de performance il est
+ fortement recommandé d'utiliser les curseurs 
+ Utilisation : 
+ Spécifier le nombre de résultats à retourner avec le paramètre
+ &rows= 
+ Ajouter un tri par clé unique à la requête, dans nos référentiels la clé unique est
+ docid 
+ . Donc ajouter
+ &sort=docid asc 
+ à votre requête.
+ À votre première requête, ajouter le paramètre
+ &cursorMark=* 
+ pour demander à solr d'ajouter un curseur dans le résultat de votre requête.
+ Le résultat de la requête contiendra par exemple
+ "nextCursorMark":"AoFakgE=" 
+ Pour la requête suivante, ajouter
+ &cursorMark=AoFakgE= 
+ où
+ AoFakgE= 
+ est la valeur récupérée dans le résultat de la requête précédente.
+ Continuer ainsi en récupérant chaque paramètre
+ cursorMark 
+ de la requête précédente.
+ Fin des résultats : 
+ Quand la valeur de
+ cursorMark 
+ dans le résultat est la même que celle envoyée avec la requête il n'y a plus de résultats à
+ récupérer.
+ Plus d'information dans le guide de référence
+ de Solr 
+ Exemple 
+ Obtenir un premier cursorMark :
+ http://api.archives-ouvertes.fr/search/?q=*:*&rows=10&sort=docid asc&cursorMark=* 
+ Utilisation des facettes 
+ Les facettes sont des listes de termes extraits en fonction d'une requête. 
+ On peut les utiliser pour avoir une liste de valeurs distinctes sur un champ donné. 
+ Pour générer des facettes, il faut ajouter le paramètre facet=true à une requête.
+ Il faut ensuite ajouter les champs avec lesquel construire les facettes avec le paramètre facet.field=NomDuChamp à une requête.
+ Plus d'information dans la documentation sur les facettes de Apache Solr 
+ Exemples 
+ facet=true&facet.field=keyword_s 
+ Exemple pour avoir une liste de mots-clés : 
+ http://api.archives-ouvertes.fr/search/?q=*%3A*&rows=0&wt=json&indent=true&facet=true&facet.field=keyword_s 
+ Ajouter le paramètre
+ facet.sort=index 
+ pour un tri lexicographique :
+ http://api.archives-ouvertes.fr/search/?q=*%3A*&rows=0&wt=json&indent=true&facet=true&facet.field=keyword_s&facet.sort=index 
+ Ajouter le paramètre
+ facet.sort=count 
+ pour trier par nombre d'occurences :
+ http://api.archives-ouvertes.fr/search/?q=*%3A*&rows=0&wt=json&indent=true&facet=true&facet.field=keyword_s&facet.sort=count 
+ Ajouter le paramètre
+ facet.prefix= 
+ pour retourner des facettes qui commencent par un préfixe :
+ http://api.archives-ouvertes.fr/search/?q=*%3A*&rows=0&wt=json&indent=true&facet=true&facet.field=keyword_s&facet.prefix= A 
+ Liste de mots clés pour des documents publiés en 2006, triée par nombre d'occurences : 
+ http://api.archives-ouvertes.fr/search/?q=*:*&fq=producedDateY_i:2006&rows=0&wt=json&indent=true&facet=true&facet.field=keyword_s 
+ On peut demander plusieurs facettes dans la même requête : 
+ http://api.archives-ouvertes.fr/search/?q=*:*&rows=0&wt=xml&indent=true&facet=true&facet.field=authFullName_s&facet.field=authIdHal_s&facet.limit=5 
+ Facettes commençant par un terme 
+ Vous pouvez limiter les facettes retournées à celles qui commencent par une chaine avec le paramètre : facet.prefix 
+ Exemples 
+ http://api.archives-ouvertes.fr/search/?q=*%3A*&rows=0&fl=auth*&wt=json&indent=true&facet=true&facet.field=authLastNameFirstName_s&facet.prefix=A 
+ Facettes contenant un terme 
+ Vous pouvez limiter les facettes retournées à celles contenant une chaine avec le paramètre : facet.contains 
+ Exemples 
+ http://api.archives-ouvertes.fr/search/?q=*%3A*&rows=0&fl=auth*&wt=json&indent=true&facet=true&facet.field=authLastNameFirstName_s&facet.contains=Ernst 
+ Pour ignorer la casse 
+ En plus de facet.contains ajouter le paramètre : facet.contains.ignoreCase=true pour ignorer la casse 
+ Exemples 
+ http://api.archives-ouvertes.fr/search/?q=*%3A*&rows=0&fl=auth*&wt=json&indent=true&facet=true&facet.field=authLastNameFirstName_s&facet.contains=Ernst&facet.contains.ignoreCase=true 
+ Facettes avec pivots 
+ Les champs qui ne sont pas multivalués peuvent permettre de faire un pivot sur une facette. Par
+ exemple une liste de types de documents, avec pour chaque type une liste de type de dépôts
+ associée
+ facet.pivot=docType_s,submitType_s 
+ Exemples 
+ Tri par nombre de documents 
+ http://api.archives-ouvertes.fr/search/?q=*:*&rows=0&wt=xml&indent=true&facet=true&facet.pivot=docType_s,submitType_s 
+ Une liste d'années de dépôt, pour chaque année : une liste de types de documents, avec pour
+ chaque type une liste de type de dépôts associée
+ facet.pivot=submittedDateY_i,docType_s,submitType_s 
+ Tri par nombre de documents 
+ http://api.archives-ouvertes.fr/search/?q=*:*&rows=0&wt=xml&indent=true&facet=true&facet.pivot=submittedDateY_i,docType_s,submitType_s 
+ Facettes avec une plage de données 
+ Il est possible d'obtenir des facettes avec des plages de valeurs 
+ Paramètre 
+ Description 
+ facet.range 
+ Le champ pour faire la facette. 
+ facet.range.start 
+ La valeur minimale, de début de la facette. 
+ facet.range.end 
+ La valeur maximale, de fin de la facette 
+ facet.range.gap 
+ Le pas à utiliser entre chaque plage 
+ Exemple 
+ http://api.archives-ouvertes.fr/search/?q=*:*&rows=0&wt=xml&indent=true&facet=true&facet.range=submittedDateY_i&facet.range.start=1990&facet.range.end=2010&facet.range.gap=2 
+ Donne le résultat ci-dessous, où de 1990 à 1992 on a 3296 dépôts, de 1992 à 1994 on a 3439
+ dépôts, etc.
+<response>
+<result name="response" numFound="953150" start="0"></result>
+<lst name="facet_ranges">
+<lst name="submittedDateY_i">
+<lst name="counts">
+<int name="1990">3296</int>
+<int name="1992">3439</int>
+<int name="1994">4187</int>
+<int name="1996">3742</int>
+<int name="1998">6641</int>
+<int name="2000">14433</int>
+<int name="2002">6527</int>
+<int name="2004">27913</int>
+<int name="2006">136634</int>
+<int name="2008">167039</int>
+</lst>
+<int name="gap">2</int>
+<int name="start">1990</int>
+<int name="end">2010</int>
+</lst>
+</lst>
+</lst>
+</response>
+ Grouper des résultats 
+ Vous pouvez obtenir vos résultats de requêtes groupés selon un critère de votre choix, à condition que le critère soit représenté par un champ non multivalué et de type string 
+ Paramètre 
+ Type 
+ Description 
+ group 
+ Booléen 
+ Si true les résultats seront groupés 
+ group.field 
+ chaine 
+ Le champ doit être de type string et ne doit pas être multivalué 
+ group.limit 
+ entier 
+ Le nombre de résultats dans chaque groupe (1 par défaut). 
+ group.sort 
+ Tri 
+ Le critère de tri à l'intérieur des groupes, par défaut score desc 
+ group.query 
+ requête 
+ Requête permettant de retourner un groupe de documents, répétable 
+ Exemples 
+ Les 20 premiers documents de la collection FRANCE-GRILLES, triés par date de publication descendante, groupés par type de dépôt : 
+http://api.archives-ouvertes.fr/search/?q=*:*&fq=collCode_s:FRANCE-GRILLES&group=true&group.field=submitType_s&indent=true&group.limit=20&wt=xml&sort=producedDate_tdate desc 
+ Les 20 premiers documents de la collection FRANCE-GRILLES, triés par date de publication descendante, groupés par type de documents : 
+http://api.archives-ouvertes.fr/search/?q=*:*&fq=collCode_s:FRANCE-GRILLES&group=true&group.field=docType_s&indent=true&group.limit=20&wt=xml&sort=producedDate_tdate desc 
+ Contact 
+ Support 
+ Resources 
+ Documentation 
+ FAQ 
+ API 
+ OAI-PMH 
+ AuréHAL 
+ Hal Monitor 
+ Information 
+ Données personnelles 
+ Mentions légales 
+ Accessibility 
+ RGAA compliance 
+ Legal issues 
+ I publish, what are my rights? 
+ Sherpa Romeo 
+ Portals 
+ Liste des portails 
+ HAL SHS 
+ HAL Thèses 
+ mediHAL 
+ CCSD 
+ CCSD 
+ episciences.org 
+ sciencesconf.org

@@ -1,0 +1,28 @@
+{
+ "slug": "dpla",
+ "name": "Digital Public Library of America",
+ "docs": {
+  "url": "https://pro.dp.la/developers/api-codex",
+  "final_url": "https://pro.dp.la/developers/api-codex",
+  "status": 403,
+  "content_type": "text/html",
+  "bytes": 919,
+  "truncated": false,
+  "sha256": "971a6b65932142f18a6f1e3d8cf89f2f6b9278c5baf2cb67120bf931cae96592",
+  "fetched_at": "2026-10-20T01:31:36+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 558
+ },
+ "probe": {
+  "url": "https://api.dp.la/v2/items?q=test&page_size=1",
+  "final_url": "https://api.dp.la/v2/items?q=test&page_size=1",
+  "status": 403,
+  "content_type": "application/json",
+  "bytes": 132,
+  "truncated": false,
+  "sha256": "bd4dd81621dfe9a704278902ed4f92e1ae2b3a89bb99a0a9d6867d1e68e3c82e",
+  "fetched_at": "2026-10-20T01:31:36+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 132
+ }
+}

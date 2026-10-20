@@ -1,0 +1,28 @@
+{
+ "slug": "figshare",
+ "name": "Figshare API",
+ "docs": {
+  "url": "https://docs.figshare.com/",
+  "final_url": "https://docs.figshare.com/v2/",
+  "status": 200,
+  "content_type": "text/html",
+  "bytes": 243312,
+  "truncated": false,
+  "sha256": "fd0f3c90f9ba5f8d08d3ee10e8e91ae3344a0f226c8dd364384cf2262d344de4",
+  "fetched_at": "2026-10-20T01:31:49+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 141044
+ },
+ "probe": {
+  "url": "https://api.figshare.com/v2/articles?page_size=1",
+  "final_url": "https://api.figshare.com/v2/articles?page_size=1",
+  "status": 200,
+  "content_type": "application/json",
+  "bytes": 1195,
+  "truncated": false,
+  "sha256": "faac877477dc7f2f75fc9f0281a6f1091ef8ea44dc80ff3da119f752c4545c5b",
+  "fetched_at": "2026-10-20T01:31:52+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 1195
+ }
+}

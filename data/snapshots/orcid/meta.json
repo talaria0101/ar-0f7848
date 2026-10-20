@@ -1,0 +1,28 @@
+{
+ "slug": "orcid",
+ "name": "ORCID Public API",
+ "docs": {
+  "url": "https://info.orcid.org/documentation/features/public-api/",
+  "final_url": "https://info.orcid.org/what-is-orcid/services/public-api/",
+  "status": 200,
+  "content_type": "text/html; charset=UTF-8",
+  "bytes": 185508,
+  "truncated": false,
+  "sha256": "d4a7268081ddd2fafe122aca344e4771b15a683b40f2b1d8e0ee839bce974271",
+  "fetched_at": "2026-10-20T01:31:43+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 10111
+ },
+ "probe": {
+  "url": "https://pub.orcid.org/v3.0/search/?q=test&rows=1",
+  "final_url": "https://pub.orcid.org/v3.0/search/?q=test&rows=1",
+  "status": 200,
+  "content_type": "application/json;charset=UTF-8",
+  "bytes": 148,
+  "truncated": false,
+  "sha256": "8a8bcf413e00259904d23476b7401d6f82d63d40a53c70c4b1351517785512df",
+  "fetched_at": "2026-10-20T01:31:44+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 148
+ }
+}

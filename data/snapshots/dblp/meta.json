@@ -1,0 +1,28 @@
+{
+ "slug": "dblp",
+ "name": "dblp API",
+ "docs": {
+  "url": "https://dblp.org/faq/How+to+use+the+dblp+search+API.html",
+  "final_url": "https://dblp.org/faq/How+to+use+the+dblp+search+API.html",
+  "status": 202,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 3338,
+  "truncated": false,
+  "sha256": "107186ee4b179ee6814d765521f3140710ec038ff0674bbe4af49253656f1832",
+  "fetched_at": "2026-10-20T01:31:45+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 272
+ },
+ "probe": {
+  "url": "https://dblp.org/search/publ/api?q=test&format=json&h=1",
+  "final_url": "https://dblp.org/search/publ/api?q=test&format=json&h=1",
+  "status": 202,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 3339,
+  "truncated": false,
+  "sha256": "115b4aee4904f9f15a3a0eaaeb66ceb5f774b3d46f11d24f4a656599e2e92266",
+  "fetched_at": "2026-10-20T01:31:46+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 272
+ }
+}

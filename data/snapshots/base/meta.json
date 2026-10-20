@@ -1,0 +1,28 @@
+{
+ "slug": "base",
+ "name": "BASE (Bielefeld Academic Search Engine)",
+ "docs": {
+  "url": "https://www.base-search.net/about/en/about_develop.php",
+  "final_url": "https://www.base-search.net/about/en/about_develop.php",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 7814,
+  "truncated": false,
+  "sha256": "175c6585dc2af17c7da1f5571dc21853f4281d69b29fb3d8d5895750beffeb02",
+  "fetched_at": "2026-10-20T01:31:42+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 1504
+ },
+ "probe": {
+  "url": "https://api.base-search.net/cgi-bin/BaseHttpSearchInterface.fcgi?func=PerformSearch&query=test&hits=1&format=json",
+  "final_url": "https://api.base-search.net/cgi-bin/BaseHttpSearchInterface.fcgi?func=PerformSearch&query=test&hits=1&format=json",
+  "status": 200,
+  "content_type": "application/json; charset=UTF-8",
+  "bytes": 152,
+  "truncated": false,
+  "sha256": "bea79b10039dd335142f0680e9067bbb404de01033e864fa4dc914d2cae3426d",
+  "fetched_at": "2026-10-20T01:31:43+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 152
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "slug": "zbmath",
+ "name": "zbMATH Open API",
+ "docs": {
+  "url": "https://api.zbmath.org/",
+  "final_url": "https://api.zbmath.org/",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 1027,
+  "truncated": false,
+  "sha256": "6946b6702b9e10912708b10cdebc3ed62ce378bc7a5da14f973868acdeb44623",
+  "fetched_at": "2026-10-20T01:31:47+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 122
+ },
+ "probe": {
+  "url": "https://api.zbmath.org/v1/document/_search?search_string=test&page=0&results_per_page=1",
+  "final_url": "https://api.zbmath.org/v1/document/_search?search_string=test&page=0&results_per_page=1",
+  "status": 200,
+  "content_type": "application/json",
+  "bytes": 10151,
+  "truncated": false,
+  "sha256": "205ad112ab8c8b7c812c9cb869ba5a7f1c3d47dd2868f39fd696c425b8977a04",
+  "fetched_at": "2026-10-20T01:31:48+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 10148
+ }
+}

@@ -1,0 +1,164 @@
+{
+  "status": 200,
+  "responseCode": 1,
+  "response": {
+    "rows": [
+      {
+        "id": "ld1-1643398853934-1643398890477-0",
+        "title": "Psychological Tests, Haines Group Alertness Tests",
+        "unitCode": "NMAH",
+        "type": "edanmdm",
+        "url": "edanmdm:nmah_694280",
+        "content": {
+          "freetext": {
+            "name": [
+              {
+                "label": "maker",
+                "content": "Haines, Thomas H."
+              },
+              {
+                "label": "publisher",
+                "content": "C. H. Stoelting Company"
+              }
+            ],
+            "notes": [
+              {
+                "label": "Description",
+                "content": "The Haines Test has been assigned three subindex numbers. This folder contains the Haines Group Alertness Tests, Forms X and A: A Manual of Directions for Giving the Tests and for Scoring the Results of Tests, The Haines Alertness Test—Form X, and a cardboard sheet with Test 1 and Test 2 on the front and Tests 3, 4, and 5 on the back."
+              },
+              {
+                "label": "Description",
+                "content": "316371.19.01"
+              },
+              {
+                "label": "Description",
+                "content": "The Manual of Directions is twenty pages long. The group test (form X) aimed to measure “general intelligence of adult illiterates of school children in grades I to IV inclusive and in small rural schools.” The booklet provides a script for what the proctor should say. It also provides an opportunity to “practice” each of the different tests before the test itself is given. The different tests include a directions test; a scorekeeping test; a maze test; an unfinished pictures test; and an unfinished sentences test. The group test (form A) was an “adaptation of the Army Alpha Test for use in schools.” This included a directions test; an arithmetic test; a maze test; an antonym test; a disarranged sentence test; an analogy test; a practical judgment test; and a number series extension test."
+              },
+              {
+                "label": "Description",
+                "content": "316371.19.02"
+              },
+              {
+                "label": "Description",
+                "content": "The Haines’ Alertness Test—Form X is eight pages long. It was copyrighted in 1924 by C.H. Stoelting Co."
+              },
+              {
+                "label": "Description",
+                "content": "316371.19.03"
+              },
+              {
+                "label": "Description",
+                "content": "This cardboard sheet does not have a title. It is labeled Test 1 and Test 2 on the front and Tests 3, 4, and 5 on the back."
+              },
+              {
+                "label": "Location",
+                "content": "Currently not on view"
+              }
+            ],
+            "topic": [
+              {
+                "label": "Subject",
+                "content": "Psychology"
+              },
+              {
+                "label": "Subject",
+                "content": "Psychological Tests"
+              },
+              {
+                "label": "Subject",
+                "content": "Mathematics"
+              }
+            ],
+            "setName": [
+              {
+                "label": "See more items in",
+                "content": "Medicine and Science: Mathematics"
+              }
+            ],
+            "creditLine": [
+              {
+                "label": "Credit Line",
+                "content": "Gift of David Shakow"
+              }
+            ],
+            "dataSource": [
+              {
+                "label": "Data Source",
+                "content": "National Museum of American History"
+              }
+            ],
+            "identifier": [
+              {
+                "label": "ID Number",
+                "content": "MA.316371.019"
+              },
+              {
+                "label": "catalog number",
+                "content": "316371.019"
+              },
+              {
+                "label": "accession number",
+                "content": "316371"
+              }
+            ],
+            "objectType": [
+              {
+                "label": "Object Name",
+                "content": "psychological test"
+              }
+            ],
+            "physicalDescription": [
+              {
+                "label": "Physical Description",
+                "content": "paper (overall material)"
+              },
+              {
+                "label": "Measurements",
+                "content": "overall: 21.5 cm x 28.3 cm; 8 15/32 in x 11 5/32 in"
+              }
+            ]
+          },
+          "indexedStructured": {
+            "name": [
+              "Haines, Thomas H.",
+              "C. H. Stoelting Company"
+            ],
+            "topic": [
+              "Psychology",
+              "Psychological Tests",
+              "Mathematics"
+            ],
+            "object_type": [
+              "psychological test"
+            ],
+            "online_media_type": [
+              "Images"
+            ]
+          },
+          "descriptiveNonRepeating": {
+            "guid": "https://n2t.net/ark:/65665/ng49ca746b4-d5fc-704b-e053-15f76fa0b4fa",
+            "title": {
+              "label": "Title",
+              "content": "Psychological Tests, Haines Group Alertness Tests"
+            },
+            "record_ID": "nmah_694280",
+            "unit_code": "NMAH",
+            "title_sort": "PSYCHOLOGICAL TESTS, HAINES GROUP ALERTNESS TESTS",
+            "data_source": "National Museum of American History",
+            "metadata_usage": {
+              "access": "CC0"
+            }
+          }
+        },
+        "hash": "9e7e9cb4c23fc6393ff4e3e351e67dc0cfb8a5c5",
+        "docSignature": "32f4acbf69a77f8b01e7da8ce57a6e66",
+        "timestamp": "1663782564",
+        "lastTimeUpdated": "1732284690",
+        "version": "1732271515"
+      }
+    ],
+    "facets": {},
+    "rowCount": 17502,
+    "message": "content found"
+  }
+}

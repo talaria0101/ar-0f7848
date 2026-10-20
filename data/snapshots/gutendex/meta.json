@@ -1,0 +1,28 @@
+{
+ "slug": "gutendex",
+ "name": "Gutendex (Project Gutenberg)",
+ "docs": {
+  "url": "https://gutendex.com/",
+  "final_url": "https://gutendex.com/",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 10739,
+  "truncated": false,
+  "sha256": "3dc8c0cbb208cf5980b0eeac9fd3e5bd48a14d1e8063dfd8bc0041f0a9426c4b",
+  "fetched_at": "2026-10-20T01:31:36+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 4234
+ },
+ "probe": {
+  "url": "https://gutendex.com/books/?search=dickens",
+  "final_url": "https://gutendex.com/books/?search=dickens",
+  "status": 200,
+  "content_type": "application/json",
+  "bytes": 50352,
+  "truncated": false,
+  "sha256": "ceae41d31689d2e3af642e10677da081d5903174bd035d2655d1e1e90f065d1e",
+  "fetched_at": "2026-10-20T01:31:37+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 50335
+ }
+}

@@ -1,0 +1,199 @@
+The REST API for OpenCitations Index 
+ Menu 
+ The REST API for OpenCitations Index 
+ DESCRIPTION 
+ PARAMETERS 
+ OPERATIONS 
+ /citation/{oci} /citation-count/{id} /venue-citation-count/{id} /reference-count/{id} /citations/{id} /references/{id} 
+ HOME 
+ The REST API for OpenCitations Index 
+ Version: Version 2.2.0 (2025-04-15) 
+ API URL: https://api.opencitations.net/index/v2 
+ Contact: contact@opencitations.net 
+ License: This document is licensed with a Creative Commons Attribution 4.0 International License , while the REST API itself has been created using RAMOSE , the Restful API Manager Over SPARQL Endpoints created by Silvio Peroni , which is licensed with an ISC license . 
+ Description back to top 
+ This document describe the REST API for accessing the data stored in the OpenCitations Index hosted by OpenCitations . This API implements operations to retrieve the citation data for all the references to other works appearing in a particular bibliographic entity, or the citation data for all the references appearing in other works to a particular bibliographic entity, given the identifier of a bibliographic entity, or to retrieve citation data about a particular citation identified by means of its Open Citation Identifier (OCI) . 
+ All the present operations return either a JSON document (default) or a CSV document according to the mimetype specified in the Accept header of the request. If you would like to suggest an additional operation to be included in this API, please use the issue tracker of the OpenCitations APIs available on GitHub. 
+ API calls are rate-limited to 180 requests/minute per IP address to ensure fair usage and service availability. For large-scale data retrieval, please use the database dumps available at download.opencitations.net . 
+ If you are going to use the REST APIs within an application/code, we encourage you to get the OpenCitations Access Token and specify it in the "authorization" header of your REST API call. Here is a usage example in Python: 
+from requests import get
+API_CALL = "https://api.opencitations.net/index/v2/references/doi:10.1186/1756-8722-6-59"
+HTTP_HEADERS = {"authorization": "YOUR-OPENCITATIONS-ACCESS-TOKEN"}
+get(API_CALL, headers=HTTP_HEADERS)
+ Parameters back to top 
+ Parameters can be used to filter and control the results returned by the API. They are passed as normal HTTP parameters in the URL of the call. They are: 
+ require=<field_name> : all the rows that have an empty value in the <field_name> specified are removed from the result set - e.g. require=given_name removes all the rows that do not have any string specified in the given_name field. 
+ filter=<field_name>:<operator><value> : only the rows compliant with <value> are kept in the result set. The parameter <operation> is not mandatory. If <operation> is not specified, <value> is interpreted as a regular expression, otherwise it is compared by means of the specified operation. Possible operators are "=", "<", and ">". For instance, filter=title:semantics? returns all the rows that contain the string "semantic" or "semantics" in the field title , while filter=date:>2016-05 returns all the rows that have a date greater than May 2016. 
+ sort=<order>(<field_name>) : sort in ascending ( <order> set to "asc") or descending ( <order> set to "desc") order the rows in the result set according to the values in <field_name> . For instance, sort=desc(date) sorts all the rows according to the value specified in the field date in descending order. 
+ format=<format_type> : the final table is returned in the format specified in <format_type> that can be either "csv" or "json" - e.g. format=csv returns the final table in CSV format. This parameter has higher priority of the type specified through the "Accept" header of the request. Thus, if the header of a request to the API specifies Accept: text/csv and the URL of such request includes format=json , the final table is returned in JSON. 
+ json=<operation_type>("<separator>",<field>,<new_field_1>,<new_field_2>,...) : in case a JSON format is requested in return, tranform each row of the final JSON table according to the rule specified. If <operation_type> is set to "array", the string value associated to the field name <field> is converted into an array by splitting the various textual parts by means of <separator> . For instance, considering the JSON table [ { "names": "Doe, John; Doe, Jane" }, ... ] , the execution of array("; ",names) returns [ { "names": [ "Doe, John", "Doe, Jane" ], ... ] . Instead, if <operation_type> is set to "dict", the string value associated to the field name <field> is converted into a dictionary by splitting the various textual parts by means of <separator> and by associating the new fields <new_field_1> , <new_field_2> , etc., to these new parts. For instance, considering the JSON table [ { "name": "Doe, John" }, ... ] , the execution of dict(", ",name,fname,gname) returns [ { "name": { "fname": "Doe", "gname": "John" }, ... ] . 
+ It is possible to specify one or more filtering operation of the same kind (e.g. require=given_name&require=family_name ). In addition, these filtering operations are applied in the order presented above - first all the require operation, then all the filter operations followed by all the sort operation, and finally the format and the json operation (if applicable). It is worth mentioning that each of the aforementioned rules is applied in order, and it works on the structure returned after the execution of the previous rule. 
+ Example: <api_operation_url>?require=doi&filter=date:>2015&sort=desc(date) . 
+ Operations back to top 
+ The operations that this API implements are: 
+ /citation/{oci} : This operation retrieves the citation metadata for the citation identified by the input Open Citation Identifier (OCI). 
+ /citation-count/{id} : This operation retrieves the number of incoming citations to the bibliographic entity identified by the input PID (DOI, PMID, ISSN, ISBN, OMID).. 
+ /venue-citation-count/{id} : This operation retrieves the number of incoming citations to all the bibliographic entities published into aspecific journal identified by the input ISSN. 
+ /reference-count/{id} : This operation retrieves the number of outgoing citations from the bibliographic entity identified by the input PID (DOI, PMID, ISSN, ISBN, OMID). 
+ /citations/{id} : This operation retrieves the citation data for all the references appearing in the reference lists of other citing works to the bibliographic entity identified by the input PID (DOI, PMID, ISSN, ISBN, OMID), that constitute the incoming citations of that identified bibliographic entity. 
+ /references/{id} : This operation retrieves the citation data for all the outgoing references to other cited works appearing in the reference list of the bibliographic entity identified by the input PID (DOI, PMID, ISSN, ISBN, OMID).. 
+ /citation/{oci} back to operations 
+ This operation retrieves the citation metadata for the citation identified by the input Open Citation Identifier (OCI). 
+ The Open Citation Identifier is a globally unique persistent identifier for bibliographic citations, which has a simple structure: the lower-case letters "oci" followed by a colon, followed by two numbers separated by a dash. For example, oci:1-18 is a valid OCI. 
+ It is worth mentioning that, in this REST operation, the prefix "oci:" should not be specified, and only the dash-separated numbers of the OCI should be provided, as shown in the example below. 
+ The fields returned by this operation are: 
+ oci : the Open Citation Identifier (OCI) of the citation in consideration; 
+ citing : the PIDs of the citing entity; 
+ cited : the PIDs of the cited entity; 
+ creation : the creation date of the citation according to the ISO date format YYYY-MM-DD , which corresponds to the publication date of the citing entity; 
+ timespan : the interval between the publication date of the cited entity and the publication date of the citing entity, expressed using the XSD duration format PnYnMnD ; 
+ journal_sc : it records whether the citation is a journal self-citations (i.e. the citing and the cited entities are published in the same journal); 
+ author_sc : it records whether the citation is an author self-citation (i.e. the citing and the cited entities have at least one author in common). 
+ The values of all the fields are prefixed with [index name] => , so as to cleary identify from where the related data is coming, and can contain one or more information, separated by ; . This is particularly useful when a citation is actually contained in two or more OpenCitations Indexes. In this case, only one row will be returned, and the prefix used in the various data allows one to understand the source Index of such data. 
+ Accepted HTTP method(s) get 
+ Parameter(s) oci : type str , regular expression shape [0-9]+-[0-9]+ 
+ Result fields type oci (str) , citing (str) , cited (str) , creation (datetime) , timespan (duration) , journal_sc (str) , author_sc (str) 
+ Example /citation/06101801781-06180334099 
+ Exemplar output (in JSON) Expand [
+ {
+ "oci": "06101801781-06180334099",
+ "citing": "omid:br/06101801781 doi:10.7717/peerj-cs.421 pmid:33817056",
+ "cited": "omid:br/06180334099 doi:10.1108/jd-12-2013-0166",
+ "creation": "2021-03-10",
+ "timespan": "P6Y0M1D",
+ "journal_sc": "no",
+ "author_sc": "no"
+ }
+] 
+ /citation-count/{id} back to operations 
+ This operation retrieves the number of incoming citations to the bibliographic entity identified by the input PID (DOI, PMID, ISSN, ISBN, OMID).. 
+ The field returned by this operation is: 
+ count : the number of incoming citations to the input bibliographic entity. 
+ Accepted HTTP method(s) get 
+ Parameter(s) id : type str , regular expression shape (omid|doi|pmid|issn|isbn):(.+) 
+ Result fields type count (int) 
+ Example /citation-count/doi:10.1108/jd-12-2013-0166 
+ Exemplar output (in JSON) Expand [
+ {
+ "count": "34"
+ }
+] 
+ /venue-citation-count/{id} back to operations 
+ This operation retrieves the number of incoming citations to all the bibliographic entities published into aspecific journal identified by the input ISSN. 
+ The field returned by this operation is: 
+ count : the number of incoming citations to the input bibliographic entity. 
+ Accepted HTTP method(s) get 
+ Parameter(s) id : type str , regular expression shape (issn):(.+) 
+ Result fields type count (int) 
+ Example /venue-citation-count/issn:0138-9130 
+ Exemplar output (in JSON) Expand [
+ {
+ "count": "64352"
+ }
+] 
+ /reference-count/{id} back to operations 
+ This operation retrieves the number of outgoing citations from the bibliographic entity identified by the input PID (DOI, PMID, ISSN, ISBN, OMID). 
+ The field returned by this operation is: 
+ count : the number of outgoing citations from the input bibliographic entity. 
+ Accepted HTTP method(s) get 
+ Parameter(s) id : type str , regular expression shape (omid|doi|pmid|issn|isbn):(.+) 
+ Result fields type count (int) 
+ Example /reference-count/doi:10.7717/peerj-cs.421 
+ Exemplar output (in JSON) Expand [
+ {
+ "count": "35"
+ }
+] 
+ /citations/{id} back to operations 
+ This operation retrieves the citation data for all the references appearing in the reference lists of other citing works to the bibliographic entity identified by the input PID (DOI, PMID, ISSN, ISBN, OMID), that constitute the incoming citations of that identified bibliographic entity. 
+ The fields returned by this operation are: 
+ oci : the Open Citation Identifier (OCI) of the citation in consideration; 
+ citing : the PIDs of the citing entity; 
+ cited : the PIDs of the cited entity; 
+ creation : the creation date of the citation according to the ISO date format YYYY-MM-DD , which corresponds to the publication date of the citing entity; 
+ timespan : the interval between the publication date of the cited entity and the publication date of the citing entity, expressed using the XSD duration format PnYnMnD ; 
+ journal_sc : it records whether the citation is a journal self-citations (i.e. the citing and the cited entities are published in the same journal); 
+ author_sc : it records whether the citation is an author self-citation (i.e. the citing and the cited entities have at least one author in common). 
+ The values of all the fields are prefixed with [index name] => , so as to cleary identify from where the related data is coming, and can contain one or more information, separated by ; . This is particularly useful when a citation is actually contained in two or more OpenCitations Indexes. In this case, only one row will be returned, and the prefix used in the various data allows one to understand the source Index of such data. 
+ Accepted HTTP method(s) get 
+ Parameter(s) id : type str , regular expression shape (omid|doi|pmid|issn|isbn):(.+) 
+ Result fields type oci (str) , citing (str) , cited (str) , creation (datetime) , timespan (duration) , journal_sc (str) , author_sc (str) 
+ Example /citations/doi:10.1108/jd-12-2013-0166 
+ Exemplar output (in JSON) Expand [
+ {
+ "oci": "06101801781-06180334099",
+ "citing": "omid:br/06101801781 doi:10.7717/peerj-cs.421 pmid:33817056",
+ "cited": "omid:br/06180334099 doi:10.1108/jd-12-2013-0166",
+ "creation": "2021-03-10",
+ "timespan": "P6Y0M1D",
+ "journal_sc": "no",
+ "author_sc": "no"
+ },
+ {
+ "oci": "06102227626-06180334099",
+ "citing": "omid:br/06102227626 doi:10.3233/ds-190019",
+ "cited": "omid:br/06180334099 doi:10.1108/jd-12-2013-0166",
+ "creation": "2019-11-25",
+ "timespan": "P4Y8M16D",
+ "journal_sc": "no",
+ "author_sc": "no"
+ },
+ {
+ "oci": "06102227629-06180334099",
+ "citing": "omid:br/06102227629 doi:10.3233/ds-190016",
+ "cited": "omid:br/06180334099 doi:10.1108/jd-12-2013-0166",
+ "creation": "2019-11-25",
+ "timespan": "P4Y8M16D",
+ "journal_sc": "no",
+ "author_sc": "yes"
+ },
+ ...
+] 
+ /references/{id} back to operations 
+ This operation retrieves the citation data for all the outgoing references to other cited works appearing in the reference list of the bibliographic entity identified by the input PID (DOI, PMID, ISSN, ISBN, OMID).. 
+ The fields returned by this operation are: 
+ oci : the Open Citation Identifier (OCI) of the citation in consideration; 
+ citing : the PIDs of the citing entity; 
+ cited : the PIDs of the cited entity; 
+ creation : the creation date of the citation according to the ISO date format YYYY-MM-DD , which corresponds to the publication date of the citing entity; 
+ timespan : the interval between the publication date of the cited entity and the publication date of the citing entity, expressed using the XSD duration format PnYnMnD ; 
+ journal_sc : it records whether the citation is a journal self-citations (i.e. the citing and the cited entities are published in the same journal); 
+ author_sc : it records whether the citation is an author self-citation (i.e. the citing and the cited entities have at least one author in common). 
+ The values of all the fields are prefixed with [index name] => , so as to cleary identify from where the related data is coming, and can contain one or more information, separated by ; . This is particularly useful when a citation is actually contained in two or more OpenCitations Indexes. In this case, only one row will be returned, and the prefix used in the various data allows one to understand the source Index of such data. 
+ Accepted HTTP method(s) get 
+ Parameter(s) id : type str , regular expression shape (omid|doi|pmid|issn|isbn):(.+) 
+ Result fields type oci (str) , citing (str) , cited (str) , creation (datetime) , timespan (duration) , journal_sc (str) , author_sc (str) 
+ Example /references/doi:10.7717/peerj-cs.421 
+ Exemplar output (in JSON) Expand [
+ {
+ "oci": "06101801781-06101802023",
+ "citing": "omid:br/06101801781 doi:10.7717/peerj-cs.421 pmid:33817056",
+ "cited": "omid:br/06101802023 doi:10.7717/peerj-cs.163 pmid:33816816 doi:10.7287/peerj.preprints.26727v1",
+ "creation": "2021-03-10",
+ "timespan": "P2Y5M21D",
+ "journal_sc": "yes",
+ "author_sc": "no"
+ },
+ {
+ "oci": "06101801781-061202127742",
+ "citing": "omid:br/06101801781 doi:10.7717/peerj-cs.421 pmid:33817056",
+ "cited": "omid:br/061202127742 doi:10.1007/s11192-020-03792-z",
+ "creation": "2021-03-10",
+ "timespan": "P0Y3M6D",
+ "journal_sc": "no",
+ "author_sc": "no"
+ },
+ {
+ "oci": "06101801781-061202127823",
+ "citing": "omid:br/06101801781 doi:10.7717/peerj-cs.421 pmid:33817056",
+ "cited": "omid:br/061202127823 doi:10.1007/s11192-020-03690-4 pmid:32981987",
+ "creation": "2021-03-10",
+ "timespan": "P0Y5M17D",
+ "journal_sc": "no",
+ "author_sc": "no"
+ },
+ ...
+] 
+ This API and the related documentation has been created with RAMOSE , the Restful API Manager Over SPARQL Endpoints , developed by Silvio Peroni , Marilena Daquino and Arcangelo Massari . 
+ JSON output 
+ Close

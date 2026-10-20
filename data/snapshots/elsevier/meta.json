@@ -1,0 +1,28 @@
+{
+ "slug": "elsevier",
+ "name": "Elsevier Developer Portal (Scopus/ScienceDirect)",
+ "docs": {
+  "url": "https://dev.elsevier.com/",
+  "final_url": "https://dev.elsevier.com/",
+  "status": 200,
+  "content_type": "text/html;charset=UTF-8",
+  "bytes": 78901,
+  "truncated": false,
+  "sha256": "2a7a481aa213828f8cd0fa39dcc55ef97ce0557da110eea6bc6685bb9da6233c",
+  "fetched_at": "2026-10-20T01:31:54+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 3354
+ },
+ "probe": {
+  "url": "https://api.elsevier.com/content/search/scopus?query=test&count=1",
+  "final_url": "https://api.elsevier.com/content/search/scopus?query=test&count=1",
+  "status": 401,
+  "content_type": "application/json;charset=UTF-8",
+  "bytes": 97,
+  "truncated": false,
+  "sha256": "e8e2e7043df49b66091c864ccd17ff4689c75d65a2da83cdafed451a73a861b1",
+  "fetched_at": "2026-10-20T01:31:56+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 97
+ }
+}

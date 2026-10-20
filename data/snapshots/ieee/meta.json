@@ -1,0 +1,28 @@
+{
+ "slug": "ieee",
+ "name": "IEEE Xplore API",
+ "docs": {
+  "url": "https://developer.ieee.org/",
+  "final_url": "https://developer.ieee.org/",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 16124,
+  "truncated": false,
+  "sha256": "c506d8c11408223eae06f728b5f13657574be6e6d6670963c97c2ab24b015cb3",
+  "fetched_at": "2026-10-20T01:31:55+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 400
+ },
+ "probe": {
+  "url": "https://ieeexploreapi.ieee.org/api/v1/search/articles?querytext=test&max_records=1",
+  "final_url": "https://ieeexploreapi.ieee.org/api/v1/search/articles?querytext=test&max_records=1",
+  "status": 403,
+  "content_type": "text/xml",
+  "bytes": 27,
+  "truncated": false,
+  "sha256": "e3354396d4f5d8bdee55d5523eb75bc97c191d1963cd8bdef9bba7e6f140c52a",
+  "fetched_at": "2026-10-20T01:31:57+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 27
+ }
+}

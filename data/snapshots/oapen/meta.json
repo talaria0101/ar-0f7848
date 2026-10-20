@@ -1,0 +1,28 @@
+{
+ "slug": "oapen",
+ "name": "OAPEN Library (DSpace REST)",
+ "docs": {
+  "url": "https://library.oapen.org/",
+  "final_url": "https://library.oapen.org/",
+  "status": 200,
+  "content_type": "text/html;charset=utf-8",
+  "bytes": 33386,
+  "truncated": false,
+  "sha256": "f9efbb35e7127c65b053bcc7ff9a629fda6b0e7416ab5cf75a4e05e56f426097",
+  "fetched_at": "2026-10-20T01:31:47+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 4813
+ },
+ "probe": {
+  "url": "https://library.oapen.org/rest/search?query=test&limit=1",
+  "final_url": "https://library.oapen.org/rest/search?query=test&limit=1",
+  "status": 403,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 46,
+  "truncated": false,
+  "sha256": "e1fbecd1ac19766cfb40ca82ac50b1ff87ab115a4f0d66ab02a9c0267017253c",
+  "fetched_at": "2026-10-20T01:31:51+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 46
+ }
+}

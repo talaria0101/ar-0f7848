@@ -1,0 +1,28 @@
+{
+ "slug": "mendeley-data",
+ "name": "Mendeley Data API",
+ "docs": {
+  "url": "https://data.mendeley.com/api/docs/",
+  "final_url": "https://data.mendeley.com/api/docs/",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 411390,
+  "truncated": false,
+  "sha256": "135696c0c89893255afbdfebba7777cef7d9ce51fef7bc73ca805d118c441626",
+  "fetched_at": "2026-10-20T01:31:52+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 530
+ },
+ "probe": {
+  "url": "https://data.mendeley.com/public-api/datasets?query=test",
+  "final_url": "https://data.mendeley.com/public-api/datasets?query=test",
+  "status": 404,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 158,
+  "truncated": false,
+  "sha256": "c53e550ee0a71ab9e1c26b6201fd2b9abd20e7e5b8377dcfc35062b891788e4f",
+  "fetched_at": "2026-10-20T01:31:54+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 39
+ }
+}

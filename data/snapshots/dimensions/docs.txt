@@ -1,0 +1,147 @@
+The Dimensions Search Language — Dimensions Search Language 
+ Skip to main content 
+ Back to top 
+ Ctrl + K 
+ Search 
+ Ctrl + K 
+ The Dimensions Search Language
+ Getting Started Checklist 
+ A Tour of the DSL 
+ Query Syntax 
+ Functions Syntax 
+ Expert Identification 
+ Data Sources 
+ Publications 
+ Grants 
+ Patents 
+ Clinical Trials 
+ Policy Documents 
+ Datasets 
+ Source Titles 
+ Reports 
+ Researchers 
+ Organizations 
+ Funder Groups 
+ Research Org Groups 
+ Example Queries and Results 
+ API Access 
+ Dimensions Analytics MCP 
+ Google Sheets / Excel Add-in 
+ Google Sheets Connector 
+ Dimensions API Connector for Microsoft Excel 
+ Glossary 
+ Reasonable Use 
+ Release Notes and Deprecations 
+ Frequently Asked Questions 
+ .rst 
+ .pdf 
+ System Settings 
+ Light 
+ Dark 
+ The Dimensions Search Language 
+ Contents 
+ Version 2.16 
+ Contents: 
+ The Dimensions Search Language # 
+ Version 2.16 # 
+ Welcome to the documentation of the Dimensions Search Language (DSL) project.
+The DSL enables users to perform analytics on the Dimensions database. 
+ This documentation contains high-level information about the project and its development, as well as the language’s features and usage. Please see the APIs Homepage for more details about available API packages and subscriptions, and The Analytics API and the CRIS API for how they differ. 
+ Note 
+ The Dimensions Analytics API is available through an institutional subscription, subject to restrictions on use. Contact us for more information on licensing for your institution. Digital Science offers free access to the Analytics API for eligible scientometric research projects; please click here to learn more . 
+ Important 
+ The Dimensions Analytics API is not intended for bulk data or to power dashboards or other derivative products. The purpose of the API is to help support complex analytical tasks that could not otherwise be achieved through use of the Dimensions platform. For more information see also the page about Reasonable use . 
+ See also 
+ Explore real-world applications of the API at the Dimensions API Lab , an open-source repository of Jupyter notebooks demonstrating how to carry out common scholarly analytics tasks e.g. building a citation network, doing a journal competitors analysis, tracking researchers’ affiliations over time etc.. 
+ Contents: # 
+ Getting Started Checklist 
+ A Tour of the DSL 
+ A simple query 
+ The anatomy of a query 
+ search for source documents 
+ return information about documents 
+ Query Syntax 
+ Basic query structure 
+ Full-text Searching 
+ Field Searching 
+ Searching for Researchers 
+ Searching using concepts 
+ Searching using abstracts 
+ Returning results 
+ Formal language specification 
+ Functions Syntax 
+ Basic functions structure 
+ Function: classify 
+ Function: extract_affiliations 
+ Function: extract_concepts 
+ Function: extract_grants 
+ Expert Identification 
+ Step 1: Concept Extraction 
+ Step 2: Expert Identification 
+ Data Sources 
+ Publications 
+ Grants 
+ Patents 
+ Clinical Trials 
+ Policy Documents 
+ Datasets 
+ Source Titles 
+ Reports 
+ Researchers 
+ Organizations 
+ Funder Groups 
+ Research Org Groups 
+ Auxiliary Entities 
+ Literal Field Types 
+ Metadata API 
+ Example Queries and Results 
+ Minimal valid query 
+ Searching records 
+ Returning records 
+ Returning facets 
+ Naming/grouping results 
+ Limiting/paging results 
+ Indicators Aggregations 
+ API Access 
+ The Analytics API and the CRIS API 
+ Getting an API Key 
+ Querying the API 
+ Python : raw access 
+ Python : Dimcli 
+ curl + jq 
+ PowerShell 
+ Postman 
+ Dimensions Analytics MCP 
+ Third-party Libraries and Tools 
+ Dimensions Analytics MCP 
+ Prerequisites 
+ Install in Claude Desktop 
+ Quick install 
+ Manual setup 
+ Hosted server 
+ Using Dimensions in chat 
+ Troubleshooting 
+ Updating and uninstalling 
+ Further documentation 
+ Google Sheets / Excel Add-in 
+ Google Sheets Connector 
+ Dimensions API Connector for Microsoft Excel 
+ Glossary 
+ Reasonable Use 
+ Technical Limits 
+ Release Notes and Deprecations 
+ Versions History 
+ Deprecations History 
+ Frequently Asked Questions 
+ 1. API Access & Support 
+ 2. Queries and Errors 
+ 3. Data Model 
+ 4. Logging and data retention 
+ next 
+ Getting Started Checklist 
+ Contents
+ Version 2.16 
+ Contents: 
+ Last updated on Oct 15, 2026.
+ © Copyright 2026 Digital Science & Research Solutions, Inc. All Rights Reserved | About us · Privacy policy · Legal terms 
+ Cookie Settings

@@ -1,0 +1,28 @@
+{
+ "slug": "wos",
+ "name": "Web of Science API",
+ "docs": {
+  "url": "https://developer.clarivate.com/apis",
+  "final_url": "https://developer.clarivate.com/apis",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 28881,
+  "truncated": false,
+  "sha256": "ba6b2c6f646267883dff64ee4f8a57642434fbe4d19b9dccab2e3e67b3483058",
+  "fetched_at": "2026-10-20T01:31:55+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 7353
+ },
+ "probe": {
+  "url": "https://api.clarivate.com/apis/wos-starter/v1/documents?q=TS%3Dtest&limit=1",
+  "final_url": "https://api.clarivate.com/apis/wos-starter/v1/documents?q=TS%3Dtest&limit=1",
+  "status": 401,
+  "content_type": "application/json; charset=utf-8",
+  "bytes": 96,
+  "truncated": false,
+  "sha256": "9ef57d406df7c0c152ae857beeb7ae59014f9414b37261379acca36b16919dd2",
+  "fetched_at": "2026-10-20T01:31:57+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 96
+ }
+}

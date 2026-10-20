@@ -1,0 +1,28 @@
+{
+ "slug": "googlebooks",
+ "name": "Google Books API",
+ "docs": {
+  "url": "https://developers.google.com/books/docs/v1/using",
+  "final_url": "https://developers.google.com/books/docs/v1/using",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 124005,
+  "truncated": false,
+  "sha256": "9950b2589e7eedbee537e07d36a5b8bbfe9e652db1d9cc822542200d5565fff2",
+  "fetched_at": "2026-10-20T01:31:36+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 40211
+ },
+ "probe": {
+  "url": "https://www.googleapis.com/books/v1/volumes?q=test&maxResults=1",
+  "final_url": "https://www.googleapis.com/books/v1/volumes?q=test&maxResults=1",
+  "status": 429,
+  "content_type": "application/json; charset=UTF-8",
+  "bytes": 1306,
+  "truncated": false,
+  "sha256": "ce40dd7dca864837c22de6f71801d72714ad74a5c8f705aa98496f9770fe291a",
+  "fetched_at": "2026-10-20T01:31:38+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 1305
+ }
+}

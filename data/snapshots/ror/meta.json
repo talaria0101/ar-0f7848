@@ -1,0 +1,32 @@
+{
+ "slug": "ror",
+ "name": "Research Organization Registry API",
+ "docs": {
+  "url": "https://ror.readme.io/docs/rest-api",
+  "final_url": "https://ror.readme.io/docs/rest-api",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 148028,
+  "truncated": false,
+  "sha256": "a18f736b9cb4b68ea6ecae2394be28557624a80d17880b4a18c5d5d937e03ba0",
+  "fetched_at": "2026-10-20T01:31:43+00:00",
+  "ratelimit_headers": {
+   "x-ratelimit-limit": "100",
+   "x-ratelimit-remaining": "99",
+   "x-ratelimit-reset": "1792459899"
+  },
+  "text_bytes": 5601
+ },
+ "probe": {
+  "url": "https://api.ror.org/v2/organizations?query=harvard",
+  "final_url": "https://api.ror.org/v2/organizations?query=harvard",
+  "status": 200,
+  "content_type": "application/json",
+  "bytes": 26044,
+  "truncated": false,
+  "sha256": "3044cbb4a3b8ac1f01f2e1c8a837056ece983666d9bb546680d1b882219b7b7f",
+  "fetched_at": "2026-10-20T01:31:44+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 26038
+ }
+}

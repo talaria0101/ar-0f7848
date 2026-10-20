@@ -1,0 +1,28 @@
+{
+ "slug": "jstage",
+ "name": "J-STAGE WebAPI",
+ "docs": {
+  "url": "https://www.jstage.jst.go.jp/static/pages/WebAPI/-char/en",
+  "final_url": "https://www.jstage.jst.go.jp/static/pages/WebAPI/-char/en",
+  "status": 404,
+  "content_type": "text/html;charset=utf-8",
+  "bytes": 19883,
+  "truncated": false,
+  "sha256": "c7769a42a8935483fcfeaa0e3619cc5bb1df5ee4e902be8716a30fad83e3805e",
+  "fetched_at": "2026-10-20T01:31:48+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 1355
+ },
+ "probe": {
+  "url": "https://api.jstage.jst.go.jp/searchapi/do?service=3&text=test&count=1",
+  "final_url": "https://api.jstage.jst.go.jp/searchapi/do?service=3&text=test&count=1",
+  "status": 200,
+  "content_type": "application/xml;charset=ISO-8859-1",
+  "bytes": 2339,
+  "truncated": false,
+  "sha256": "3b1bc08f4257c529d1050f14d8c058a0d9fb5c84dff78735d0cf5404ff076f0a",
+  "fetched_at": "2026-10-20T01:31:49+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 2338
+ }
+}

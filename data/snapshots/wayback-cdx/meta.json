@@ -1,0 +1,28 @@
+{
+ "slug": "wayback-cdx",
+ "name": "Wayback Machine CDX Server",
+ "docs": {
+  "url": "https://github.com/internetarchive/wayback/blob/master/wayback-cdx-server/README.md",
+  "final_url": "https://github.com/internetarchive/wayback/blob/master/wayback-cdx-server/README.md",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 352146,
+  "truncated": false,
+  "sha256": "e4bdcc07c3729af3f59ce31960a7e3b271438e133a8e1336f2e007e4616b8d15",
+  "fetched_at": "2026-10-20T01:31:33+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 19971
+ },
+ "probe": {
+  "url": "http://web.archive.org/cdx/search/cdx?url=example.com&limit=2&output=json",
+  "final_url": "http://web.archive.org/cdx/search/cdx?url=example.com&limit=2&output=json",
+  "status": 200,
+  "content_type": "application/json",
+  "bytes": 323,
+  "truncated": false,
+  "sha256": "9e69b95d3b36b4498bf5be32e6e874392ad3f3de1021be6843f488828760e797",
+  "fetched_at": "2026-10-20T01:31:34+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 322
+ }
+}

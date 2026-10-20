@@ -1,0 +1,28 @@
+{
+ "slug": "wayback-availability",
+ "name": "Wayback Machine Availability API",
+ "docs": {
+  "url": "https://archive.org/help/wayback_api.php",
+  "final_url": "https://archive.org/help/wayback_api.php",
+  "status": 200,
+  "content_type": "text/html; charset=UTF-8",
+  "bytes": 144159,
+  "truncated": false,
+  "sha256": "f4c209b129a06b0660744d01fb43c03dd665e8225df39c3c4ca5a727fcdd7913",
+  "fetched_at": "2026-10-20T01:31:33+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 5435
+ },
+ "probe": {
+  "url": "https://archive.org/wayback/available?url=example.com",
+  "final_url": "https://archive.org/wayback/available?url=example.com",
+  "status": 200,
+  "content_type": "application/json",
+  "bytes": 199,
+  "truncated": false,
+  "sha256": "f284a029fb8d93138108bd8dc0683c7f6364e7fbf9a17c69a05599b8042c9289",
+  "fetched_at": "2026-10-20T01:31:35+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 199
+ }
+}

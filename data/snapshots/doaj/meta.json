@@ -1,0 +1,28 @@
+{
+ "slug": "doaj",
+ "name": "Directory of Open Access Journals API",
+ "docs": {
+  "url": "https://doaj.org/api/v4/docs",
+  "final_url": "https://doaj.org/api/v4/docs",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 75258,
+  "truncated": false,
+  "sha256": "e4580b5ffa7394dca9a1cc6f6322abcfbf77122e304a4a46254d82d30e48dd47",
+  "fetched_at": "2026-10-20T01:31:41+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 14264
+ },
+ "probe": {
+  "url": "https://doaj.org/api/search/articles/test?pageSize=1",
+  "final_url": "https://doaj.org/api/search/articles/test?pageSize=1",
+  "status": 200,
+  "content_type": "application/json",
+  "bytes": 3256,
+  "truncated": false,
+  "sha256": "13ee313c117fffc728153eeb54193fb6c1980e6f99f7f0b66a2d3676c7764b9b",
+  "fetched_at": "2026-10-20T01:31:42+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 3256
+ }
+}

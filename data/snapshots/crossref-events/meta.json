@@ -1,0 +1,28 @@
+{
+ "slug": "crossref-events",
+ "name": "Crossref Event Data API",
+ "docs": {
+  "url": "https://www.crossref.org/documentation/event-data/",
+  "final_url": "https://www.crossref.org/documentation/event-data/",
+  "status": 200,
+  "content_type": "text/html",
+  "bytes": 301,
+  "truncated": false,
+  "sha256": "396cfa07ff7dde78d85219d91eec5e115b52d287d922d23d0ea6af77452248dc",
+  "fetched_at": "2026-10-20T01:31:45+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 36
+ },
+ "probe": {
+  "url": "https://api.eventdata.crossref.org/v1/events?rows=1",
+  "final_url": "https://api.eventdata.crossref.org/v1/events?rows=1",
+  "status": 0,
+  "content_type": "",
+  "bytes": 76,
+  "truncated": false,
+  "sha256": "827902037efde5f0988e94d8c881353fe54c846b290a0e59ef00ade936917d7e",
+  "fetched_at": "2026-10-20T01:31:46+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 76
+ }
+}

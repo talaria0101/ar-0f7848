@@ -1,0 +1,28 @@
+{
+ "slug": "wikidata",
+ "name": "Wikidata API / SPARQL",
+ "docs": {
+  "url": "https://www.wikidata.org/wiki/Wikidata:Data_access",
+  "final_url": "https://www.wikidata.org/wiki/Wikidata:Data_access",
+  "status": 200,
+  "content_type": "text/html; charset=UTF-8",
+  "bytes": 144051,
+  "truncated": false,
+  "sha256": "2a9a9e592e41b3d9a5728395310f2b8edb9d5f838644d4ccb5130ef106bc509b",
+  "fetched_at": "2026-10-20T01:31:37+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 23109
+ },
+ "probe": {
+  "url": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=Marie%20Curie&language=en&limit=1&format=json",
+  "final_url": "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=Marie%20Curie&language=en&limit=1&format=json",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "bytes": 559,
+  "truncated": false,
+  "sha256": "9b39d659d672fbaed809d78756a9328c8c0e82878c3ba8959fddd611132d31a0",
+  "fetched_at": "2026-10-20T01:31:38+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 559
+ }
+}

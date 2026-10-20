@@ -1,0 +1,42 @@
+{
+ "slug": "scite",
+ "name": "scite API",
+ "docs": {
+  "url": "https://api.scite.ai/docs",
+  "final_url": "https://api.scite.ai/docs",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 84574,
+  "truncated": false,
+  "sha256": "004a2aa196e9dda2dd3aeb3c381844669d73ddb3c3d978aaf6d5e026f9c546b1",
+  "fetched_at": "2026-10-20T01:31:56+00:00",
+  "ratelimit_headers": {
+   "RateLimit-Reset": "1",
+   "X-RateLimit-Remaining-Minute": "59",
+   "RateLimit-Limit": "13",
+   "X-RateLimit-Remaining-Second": "12",
+   "X-RateLimit-Limit-Second": "13",
+   "X-RateLimit-Limit-Minute": "60",
+   "RateLimit-Remaining": "12"
+  },
+  "text_bytes": 14
+ },
+ "probe": {
+  "url": "https://api.scite.ai/tallies/10.1038/nature12373",
+  "final_url": "https://api.scite.ai/tallies/10.1038/nature12373",
+  "status": 200,
+  "content_type": "application/json",
+  "bytes": 137,
+  "truncated": false,
+  "sha256": "2e7167c27278b3cfb43cb63a7f02b11cf89583c3aa23bb9624e69ed4d3e79502",
+  "fetched_at": "2026-10-20T01:31:58+00:00",
+  "ratelimit_headers": {
+   "RateLimit-Reset": "9",
+   "X-RateLimit-Limit-Minute": "60",
+   "X-RateLimit-Remaining-Minute": "59",
+   "RateLimit-Limit": "60",
+   "RateLimit-Remaining": "59"
+  },
+  "text_bytes": 137
+ }
+}

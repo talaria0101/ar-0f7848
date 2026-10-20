@@ -1,0 +1,30 @@
+{
+ "slug": "gbif",
+ "name": "GBIF API",
+ "docs": {
+  "url": "https://techdocs.gbif.org/en/openapi/",
+  "final_url": "https://techdocs.gbif.org/en/openapi/",
+  "status": 200,
+  "content_type": "text/html; charset=UTF-8",
+  "bytes": 23511,
+  "truncated": false,
+  "sha256": "9d5744bd574e711124a74a65c54e4543af2796b88858269e8518434eb7275ba3",
+  "fetched_at": "2026-10-20T01:31:53+00:00",
+  "ratelimit_headers": {
+   "X-RateLimit": ""
+  },
+  "text_bytes": 8357
+ },
+ "probe": {
+  "url": "https://api.gbif.org/v1/species/search?q=puma&limit=1",
+  "final_url": "https://api.gbif.org/v1/species/search?q=puma&limit=1",
+  "status": 200,
+  "content_type": "application/json",
+  "bytes": 931,
+  "truncated": false,
+  "sha256": "1fef12ff7830341ba3049b6d7cb531a1efdaea307b63b4fadca93137590eb828",
+  "fetched_at": "2026-10-20T01:31:54+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 931
+ }
+}

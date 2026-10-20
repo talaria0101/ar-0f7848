@@ -1,0 +1,32 @@
+{
+ "slug": "crossref",
+ "name": "Crossref REST API",
+ "docs": {
+  "url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+  "final_url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+  "status": 200,
+  "content_type": "text/html",
+  "bytes": 70799,
+  "truncated": false,
+  "sha256": "7bccbaff86c4f0840f0b8c9620eac091c9cede4d08abf2963d9ee515371b0b82",
+  "fetched_at": "2026-10-20T01:31:39+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 14008
+ },
+ "probe": {
+  "url": "https://api.crossref.org/works?rows=1",
+  "final_url": "https://api.crossref.org/works?rows=1",
+  "status": 200,
+  "content_type": "application/json",
+  "bytes": 2472,
+  "truncated": false,
+  "sha256": "85ad3cb7845ec050797f7c81ba290e4129606fb03f82ef2da44dcd2b635ac463",
+  "fetched_at": "2026-10-20T01:31:41+00:00",
+  "ratelimit_headers": {
+   "x-rate-limit-limit": "1",
+   "x-rate-limit-interval": "1s",
+   "x-api-pool": "public-array"
+  },
+  "text_bytes": 2472
+ }
+}

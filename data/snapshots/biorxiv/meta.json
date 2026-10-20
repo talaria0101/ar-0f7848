@@ -1,0 +1,28 @@
+{
+ "slug": "biorxiv",
+ "name": "bioRxiv / medRxiv API",
+ "docs": {
+  "url": "https://api.biorxiv.org/",
+  "final_url": "https://api.biorxiv.org/",
+  "status": 200,
+  "content_type": "text/html; charset=UTF-8",
+  "bytes": 15899,
+  "truncated": false,
+  "sha256": "ac8302fbc99e14273f33c16268b2a12065c204fe888ff2aa52ab31dda1f5c2b4",
+  "fetched_at": "2026-10-20T01:31:42+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 10808
+ },
+ "probe": {
+  "url": "https://api.biorxiv.org/details/biorxiv/2024-01-01/2024-01-02/0",
+  "final_url": "https://api.biorxiv.org/details/biorxiv/2024-01-01/2024-01-02/0",
+  "status": 200,
+  "content_type": "application/json",
+  "bytes": 70317,
+  "truncated": false,
+  "sha256": "b286d86815d5359c78700aac57920c4a9f3e7429f421ce925d7164b6a4bdab8f",
+  "fetched_at": "2026-10-20T01:31:44+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 70309
+ }
+}

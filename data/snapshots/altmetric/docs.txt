@@ -1,0 +1,99 @@
+Details Page API - Altmetric Documentation 
+ Skip to content
+ Altmetric Documentation
+ Details Page API
+ Search
+ Home
+ MCP Server
+ Details Page API
+ Explorer API
+ BigQuery
+ Badges
+ Implementation Guide
+ Altmetric Documentation
+ Home
+ MCP Server
+ MCP Server
+ Tools Reference
+ Details Page API
+ Details Page API
+ Getting Started
+ Endpoints
+ Endpoints
+ Counts
+ Fetch
+ Citations
+ Translate
+ Appendix
+ Appendix
+ Licensing
+ Attribution
+ Reasonable Use
+ X (Twitter) Data
+ Explorer API
+ Explorer API
+ Getting Started
+ Endpoints
+ Endpoints
+ Research Outputs
+ Attention Summary
+ Demographics
+ Mentions
+ Mention Sources
+ Journals
+ Departments
+ Identifier Lists
+ Demo
+ API Client
+ Appendix
+ Reasonable Use
+ BigQuery
+ BigQuery
+ Getting Started
+ GCP Setup
+ Service Accounts
+ Data Sources
+ Data Sources
+ Overview
+ Attention Sources
+ Posts
+ Research Outputs
+ Publications
+ Organizations
+ Tutorials
+ Examples
+ Notebooks
+ Performance & Cost
+ Cost Reduction
+ FAQ
+ Release Notes
+ Reasonable Use
+ Badges
+ Badges
+ Getting Started
+ Customizations
+ Playground
+ Implementation Guide
+ Implementation Guide
+ Explorer for Institutions (EFI)
+ Explorer for Institutions (EFI)
+ Getting Started
+ Branding
+ Securing Access
+ Populating Data
+ Altmetric Apps
+ Altmetric Apps
+ Share of Voice (SoV) Dashboard
+ Publication Impact Dashboard (PID)
+ Journal Selection Dashboard (JSD)
+ Impact Metrics and Data Provision
+ Support & Training
+ Details Page API ¶ 
+ Altmetric does all the heavy lifting involved in extracting, disambiguating and collating mentions of scholarly content online, allowing you to focus on the bigger picture. 
+ The Details Page API provides you with programmatic access to the metrics data associated with articles, datasets, books and many other research outputs collected by Altmetric. 
+ With technical expertise, you can create your own ways of slicing and viewing our data, which gives you the freedom to complete more complex research, ask more granular questions of our data, and build custom visualizations. The major advantage is that API calls allow for programmatic, automated data flows, so that the data can be called into your own system, and remain current. 
+ The Details Page API focuses on a subset of the data we have about research outputs and mentions. It is a very powerful tool if you have the skills and resources needed to use it. 
+ The Details Page API allows you to find out everything you need to know about an individual research output (identified by DOI, PubMed ID or other scholarly identifier) or a wider range of results when querying using one or more journal ISSNs. 
+ This API works best when you have a list of output identifiers for which you want either the count of mentions Counts Only or the full text of mentions Full Access . 
+ Back to top
+ © 2026 Altmetric , a Digital Science company  |  Terms  ·  Privacy  |  Found an error? Let us know

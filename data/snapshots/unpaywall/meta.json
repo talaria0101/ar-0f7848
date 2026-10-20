@@ -1,0 +1,28 @@
+{
+ "slug": "unpaywall",
+ "name": "Unpaywall REST API",
+ "docs": {
+  "url": "https://unpaywall.org/products/api",
+  "final_url": "https://unpaywall.org/products/api",
+  "status": 200,
+  "content_type": "text/html; charset=UTF-8",
+  "bytes": 1421,
+  "truncated": false,
+  "sha256": "0445953f2b1255c157c7fb0aa91d60f75298895086bded982c89e46d6c5d5b01",
+  "fetched_at": "2026-10-20T01:31:41+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 9
+ },
+ "probe": {
+  "url": "https://api.unpaywall.org/v2/10.1038/nature12373?email=research@example.org",
+  "final_url": "https://api.unpaywall.org/v2/10.1038/nature12373?email=research@example.org",
+  "status": 200,
+  "content_type": "application/json",
+  "bytes": 5405,
+  "truncated": false,
+  "sha256": "d335c2cb2af11aeb86edc2b670d9ca4007c67ffbd7691215f3e1f91b80d720c5",
+  "fetched_at": "2026-10-20T01:31:42+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 5404
+ }
+}

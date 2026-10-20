@@ -1,0 +1,28 @@
+{
+ "slug": "lens",
+ "name": "The Lens API",
+ "docs": {
+  "url": "https://docs.api.lens.org/",
+  "final_url": "https://docs.api.lens.org/",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 10793,
+  "truncated": false,
+  "sha256": "851c28ce48d3d742b27565063b82cb787aade5beae42dd59e22ed95d58153466",
+  "fetched_at": "2026-10-20T01:31:56+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 2324
+ },
+ "probe": {
+  "url": "https://api.lens.org/scholarly/search",
+  "final_url": "https://api.lens.org/scholarly/search",
+  "status": 401,
+  "content_type": "application/json;charset=UTF-8",
+  "bytes": 114,
+  "truncated": false,
+  "sha256": "7f0170e242787b4acf2be7922d6631bdb743fe92d9b080541ca530d05056d040",
+  "fetched_at": "2026-10-20T01:31:56+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 114
+ }
+}

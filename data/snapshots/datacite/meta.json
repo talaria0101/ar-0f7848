@@ -1,0 +1,32 @@
+{
+ "slug": "datacite",
+ "name": "DataCite REST API",
+ "docs": {
+  "url": "https://support.datacite.org/docs/api",
+  "final_url": "https://support.datacite.org/docs/api",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 347658,
+  "truncated": false,
+  "sha256": "aa9e56f323f154b34cebfdb23533b1b4eb865cd26d3b775a1f362d03a11253a8",
+  "fetched_at": "2026-10-20T01:31:39+00:00",
+  "ratelimit_headers": {
+   "x-ratelimit-limit": "100",
+   "x-ratelimit-remaining": "99",
+   "x-ratelimit-reset": "1792459243"
+  },
+  "text_bytes": 14551
+ },
+ "probe": {
+  "url": "https://api.datacite.org/dois?page%5Bsize%5D=1",
+  "final_url": "https://api.datacite.org/dois?page%5Bsize%5D=1",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "bytes": 15916,
+  "truncated": false,
+  "sha256": "5120a8ee60484b6e4cfec4d272d64c9a9789297f55d8e2933b93cd86ce9e0210",
+  "fetched_at": "2026-10-20T01:31:39+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 15916
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "slug": "ia-metadata",
+ "name": "Internet Archive Metadata API",
+ "docs": {
+  "url": "https://archive.org/developers/metadata.html",
+  "final_url": "https://archive.org/developers/metadata.html",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 22198,
+  "truncated": false,
+  "sha256": "635675662ca159c3b120db5a51577cbf9dfefb2e99caef4b329fa80f80476325",
+  "fetched_at": "2026-10-20T01:31:33+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 3746
+ },
+ "probe": {
+  "url": "https://archive.org/metadata/nasa",
+  "final_url": "https://archive.org/metadata/nasa",
+  "status": 200,
+  "content_type": "application/json",
+  "bytes": 6703,
+  "truncated": false,
+  "sha256": "dcc447b649f0b5ea2526462f47d4bae5c1f7f809c975acc317e9d06699faf69c",
+  "fetched_at": "2026-10-20T01:31:35+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 6703
+ }
+}

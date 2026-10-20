@@ -1,0 +1,1 @@
+{"result":[{"orcid-identifier":{"uri":"https://orcid.org/0000-0002-6104-6796","path":"0000-0002-6104-6796","host":"orcid.org"}}],"num-found":328927}

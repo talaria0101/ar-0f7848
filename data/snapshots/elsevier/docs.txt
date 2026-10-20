@@ -1,0 +1,82 @@
+Elsevier Developer Portal 
+ Skip to main content 
+ Elsevier Developer Portal 
+ My API Key 
+ FAQ 
+ Products 
+ Scopus 
+ ScienceDirect 
+ SciVal 
+ Engineering Village 
+ Embase 
+ SUSHI COP5 
+ Documentation 
+ API Specification 
+ Use Cases 
+ Use Policies 
+ API Service Agreement 
+ Text and Data Mining 
+ Start Coding 
+ How to Guides 
+ Interactive APIs 
+ Examples 
+ Python SDK 
+ API Key Settings 
+ Contact Us 
+ (Opens new window) 
+ My API
+ Key 
+ Products 
+ Scopus 
+ ScienceDirect 
+ SciVal 
+ Engineering Village 
+ Embase 
+ SUSHI COP5 
+ Documentation 
+ API Specification 
+ Use Cases 
+ Use Policies 
+ API Service Agreement 
+ Text and Data Mining 
+ Start Coding 
+ How to Guides 
+ Interactive APIs 
+ Examples 
+ Python SDK 
+ API Key Settings 
+ Support 
+ FAQ 
+ Contact Us 
+ (Opens new window) 
+ Home 
+ Elsevier Research Products APIs 
+ Various options are available for researchers who want to use Elsevier APIs: 
+ Elsevier APIs are available to eligible customers, approved partners and other authorized integrations with a valid entitlement. Registering for or holding an API key does not by itself grant access to Elsevier data or content. Access is enabled only after the applicable entitlement or approval has been confirmed. 
+ Commercial Users (Researchers in Private Sector & Commercial Institutions) : APIs are available (for commercial use), with an API license and subscription, please contact us here to discuss your request 
+ 1. Request an API Key 
+ Find out more about default API key settings , quotas and throttling. 
+ I want an API Key 
+ 2. Look at use cases 
+ Elsevier's APIs have different policies depending on the intended use. See them here. 
+ Use cases 
+ 3. Start coding 
+ Check out our Interactive APIs and the How to Guides . 
+ How to Guides 
+ About the APIs 
+ Get programmatic access to: 
+ Citation data, metadata, and abstracts from scholarly journals, as indexed by Scopus , Elsevier's citation database.kl 
+ Full-text journals and books published by Elsevier on the ScienceDirect full-text platform. 
+ Research metrics available on SciVal , Elsevier's platform for research performance benchmarking. 
+ Engineering resources available on Engineering Village. . 
+ Curated abstracts, indices and other metadata indexed by Embase , Elsevier's biomedical abstract and indexing database. 
+ Reactions, chemical structures & chemistry information from Reaxys , Elsevier's expert curated chemistry database. 
+ Learn more: 
+ Elsevier APIs are available to eligible customers, approved partners and other authorized integrations with a valid entitlement. Registering for or holding an API key does not by itself grant access to Elsevier data or content. Access is enabled only after the applicable entitlement or approval has been confirmed. 
+ APIs are also available for OAuth authentication; for electronic holdings exchange in KBART format and for checking a user's access rights for specific publications. These APIs are made available to customers and partners upon request, subject to approval. 
+ Support 
+ Terms and conditions 
+ Privacy policy 
+ Cookie policy 
+ Copyright © Elsevier B.V. All rights reserved, including those for text and data mining, AI training, and similar technologies. Elsevier Developers is a registered trademark of Elsevier B.V. 
+ We use cookies to help provide and enhance our service and tailor content. Cookie Settings

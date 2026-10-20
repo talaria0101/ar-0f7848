@@ -1,0 +1,38 @@
+{
+ "slug": "openalex",
+ "name": "OpenAlex",
+ "docs": {
+  "url": "https://docs.openalex.org/",
+  "final_url": "https://help.openalex.org/",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 20753,
+  "truncated": false,
+  "sha256": "4da0d6bd341a2db9ce877ea6fcd78d15908150f09d83b02fa43c2e8845c37077",
+  "fetched_at": "2026-10-20T01:31:39+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 1354
+ },
+ "probe": {
+  "url": "https://api.openalex.org/works?per-page=1",
+  "final_url": "https://api.openalex.org/works?per-page=1",
+  "status": 200,
+  "content_type": "application/json",
+  "bytes": 18234,
+  "truncated": false,
+  "sha256": "2fcefb7646a5d3dabc5dc8be0365a6fd4a334ea4aa37a83aeb37ec3e516bbe92",
+  "fetched_at": "2026-10-20T01:31:39+00:00",
+  "ratelimit_headers": {
+   "X-RateLimit-Cost-USD": "0.0001",
+   "X-RateLimit-Credits-Used": "1",
+   "X-RateLimit-Limit": "1000",
+   "X-RateLimit-Limit-USD": "0.1",
+   "X-RateLimit-Onetime-Remaining": "0",
+   "X-RateLimit-Prepaid-Remaining-USD": "0",
+   "X-RateLimit-Remaining": "993",
+   "X-RateLimit-Remaining-USD": "0.0993",
+   "X-RateLimit-Reset": "80907"
+  },
+  "text_bytes": 18234
+ }
+}

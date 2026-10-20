@@ -1,0 +1,31 @@
+{
+ "slug": "openaire",
+ "name": "OpenAIRE Graph API",
+ "docs": {
+  "url": "https://graph.openaire.eu/docs/apis/graph-api/",
+  "final_url": "https://graph.openaire.eu/docs/apis/graph-api/",
+  "status": 200,
+  "content_type": "text/html",
+  "bytes": 20113,
+  "truncated": false,
+  "sha256": "9df0b44693e8d7ac4429a2fda50b535db1615cedb3653af40213b698ab288c8f",
+  "fetched_at": "2026-10-20T01:31:42+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 2514
+ },
+ "probe": {
+  "url": "https://api.openaire.eu/graph/v1/researchProducts?search=test&pageSize=1",
+  "final_url": "https://api.openaire.eu/graph/v1/researchProducts?search=test&pageSize=1",
+  "status": 200,
+  "content_type": "application/json",
+  "bytes": 2791,
+  "truncated": false,
+  "sha256": "ae3feb20baacbe2e2aace850dca2783c8b0fd6469f0a20d22c2bcf3a0b5904bc",
+  "fetched_at": "2026-10-20T01:31:44+00:00",
+  "ratelimit_headers": {
+   "x-ratelimit-used": "2",
+   "x-ratelimit-limit": "7199"
+  },
+  "text_bytes": 2791
+ }
+}

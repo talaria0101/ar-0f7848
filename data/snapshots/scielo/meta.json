@@ -1,0 +1,28 @@
+{
+ "slug": "scielo",
+ "name": "SciELO ArticleMeta API",
+ "docs": {
+  "url": "https://github.com/scieloorg/articlemeta",
+  "final_url": "https://github.com/scieloorg/articlemeta",
+  "status": 404,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 264772,
+  "truncated": false,
+  "sha256": "0beb8cbab1561aaafc50cf2288461e81b9e3c7471a0da1461f304514eeaecba5",
+  "fetched_at": "2026-10-20T01:31:47+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 2930
+ },
+ "probe": {
+  "url": "https://articlemeta.scielo.org/api/v1/journal/?limit=1",
+  "final_url": "https://articlemeta.scielo.org/api/v1/journal/?limit=1",
+  "status": 200,
+  "content_type": "application/json",
+  "bytes": 1500000,
+  "truncated": true,
+  "sha256": "7a26309e3d344528f68fef83552b91cae6f22c91a77c8e44c0fafd55c2b81627",
+  "fetched_at": "2026-10-20T01:31:49+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 1500000
+ }
+}

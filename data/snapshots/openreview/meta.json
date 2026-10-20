@@ -1,0 +1,36 @@
+{
+ "slug": "openreview",
+ "name": "OpenReview API",
+ "docs": {
+  "url": "https://docs.openreview.net/",
+  "final_url": "https://docs.openreview.net/",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 533386,
+  "truncated": false,
+  "sha256": "a73f710a508a1f095d52d8fad20ffc8089715ada519aadc66e8e45b29ef08b15",
+  "fetched_at": "2026-10-20T01:31:47+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 1809
+ },
+ "probe": {
+  "url": "https://api2.openreview.net/notes?limit=1",
+  "final_url": "https://api2.openreview.net/notes?limit=1",
+  "status": 403,
+  "content_type": "application/json; charset=utf-8",
+  "bytes": 265,
+  "truncated": false,
+  "sha256": "c331fe640b68a75eeeaca2727e683abc8fd4059e4c9ce3e0d07d9233d6b82649",
+  "fetched_at": "2026-10-20T01:31:48+00:00",
+  "ratelimit_headers": {
+   "x-ratelimit-limit": "180",
+   "x-ratelimit-remaining": "179",
+   "x-ratelimit-reset": "1792459962",
+   "ratelimit-policy": "180;w=60",
+   "ratelimit-limit": "180",
+   "ratelimit-remaining": "179",
+   "ratelimit-reset": "60"
+  },
+  "text_bytes": 265
+ }
+}

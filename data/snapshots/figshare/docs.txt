@@ -1,0 +1,3854 @@
+Figshare API v2 
+ API documentation
+ API Version 
+ Loading versions... 
+ Token 
+ Api Reference 
+ Figshare Documentation 
+ Introduction 
+ OAuth 
+ Introduction 
+ Quick Guide 
+ Scope 
+ Grant Types 
+ API Features 
+ Sending
+ Parameters 
+ Resource
+ Representations 
+ Authentication 
+ Errors 
+ Searching &
+ Pagination 
+ Rate Limiting 
+ Conditional
+ Requests 
+ CORS Policy 
+ Impersonation 
+ Upload Files 
+ Steps to upload file 
+ Uploads API 
+ Parts API 
+ Example Upload on figshare 
+ Output of Script 
+ Upload Bash Script 
+ Upload S3 File to Figshare 
+ Search 
+ How to find data on figshare 
+ Search operators 
+ Searchable attributes 
+ Quick search 
+ Advanced search 
+ Combined field search 
+ Complex searches 
+ Stats 
+ Stats service 
+ Breakdown 
+ Timeline 
+ Tops 
+ Totals 
+ Count Articles 
+ OAI PMH 
+ OAI-PMH 
+ Base URL 
+ Item equals Article 
+ Metadata formats 
+ Datestamps 
+ Sets 
+ Update schedule 
+ Pagination and Resumption Token Expiration 
+ Rate limit 
+ Future development 
+ Some examples 
+ HR Feed 
+ HR Feed Private Endpoint 
+ HR Feed examples 
+ Response 
+ Errors 
+ Notes 
+ Custom Fields 
+ Custom Fields Private Endpoints 
+ Custom Fields examples 
+ Response 
+ Errors 
+ Notes 
+ Authentication 
+ The v2 API supports OAuth2 access tokens, issued as
+ described in the oauth section . 
+ In addition to oauth access tokens, you can also use a personal token 
+ which grants you full access to your account. Personal tokens can be
+ created and managed from the applications
+ page at figshare. 
+ Any of these tokens can be used to authenticate and there are 2 options
+ to include them in requests: 
+ HTTP header ( recommended ) 
+ GET /v2/token HTTP/1.1
+ Host: api.figshare.com
+ Authorization: token ACCESS_TOKEN
+ Example with curl : 
+ curl -H "Authorization: token ACCESS_TOKEN" https://api.figshare.com/v2
+ Query param: 
+ GET /v2/token?access_token=ACCESS_TOKEN HTTP/1.1
+ Host: api.figshare.com
+ Example with curl : 
+ curl https://api.figshare.com/v2?access_token=ACCESS_TOKEN
+ CORS policy 
+ The API supports CORS for AJAX requests from any origin. 
+ Endpoints can respond with error responses. The common error responses
+ for all endpoints are presented below and errors specific to individual
+ enpoints are documented along with the endpoint. 
+ Each error response will have a specific HTTP status code and a JSON
+ body with the following fields: 
+ Field 
+ Description 
+ message 
+ A human friendly message explaining the error. 
+ code 
+ A machine friendly error code, used by the dev team to identify the error. 
+ data 
+ An object containing extra information about the error. Documented for each error. 
+ 404 Not found 
+ Trying to access resources that do not exist, will trigger this response
+ from the API. 
+ This is also returned if you try to access a resource on which you don't
+ have a read permission. 
+ 400 Bad request 
+ Sending a body that cannot be parsed as JSON will result in this error
+ response. 
+ 422 Unprocessable Entity 
+ Sending an invalid data structure in the body will trigger this error.
+ Invalid data can be any of the following: 
+ missing field 
+ invalid value for a field 
+ any other rules specific to an endpoint 
+ 401 Unauthorized 
+ This error is returned when the authorization was unsuccessfull. This can
+ be either due to: 
+ missing authorization info in the request 
+ invalid or unknown authorization info 
+ expired or disabled account 
+ 403 Forbidden 
+ This response is presented whenever you try to do something which is not
+ permitted for your current authorization.
+ authorization info 
+ The figshare api v2 is accessible at https://api.figshare.com/v2. All
+ communication is done through https and all data is encoded as JSON . 
+ Impersonation 
+ This feature is available only for institutional accounts with administrative privileges. 
+ To impersonate an account you have to include the impersonate option inside your http
+ request. 
+ The value for impersonate must be the account_id of the account you wish to
+ impersonate. 
+ You can see the accounts which can be impersonated using our account/institution/accounts 
+ endpoint. 
+ The impersonate option must be included in the query string when using the GET and DELETE
+ methods, and in the body when using the POST and PUT methods. 
+ GET Impersonation example: 
+ Request: 
+ GET /v2/account/articles?impersonate=1000009 HTTP/1.1
+ Response will contain articles of the impersonated account 
+ POST Impersonation example: 
+ Request: 
+ POST /v2/account/articles HTTP/1.1
+ Body: 
+ {
+ "title": "test",
+ "impersonate": 1000009
+} 
+ Will create an article for the impersonated account 
+ Sending parameters 
+ More often than not you need to send parameters to an endpoint. For
+ GET requests these are usualy sent in the query string but for POST 
+ and PUT requests they are usually in the body of the request. 
+ Query string 
+ Query strings can contain parameters encoded as application/x-www-form-urlencoded . Very common
+ for GET requests. 
+ Example : Sending page parameter when listing articles: 
+ GET /v2/articles?page=3 HTTP/1.1
+ Host: api.figshare.com
+ Authorization: token a287ab8c7ebdbe6
+ Request json body 
+ POST and PUT request usualy read their params from the body of the
+ http request. Our API only understands application/json encoded
+ bodies. 
+ Example : Sending search_for parameter when searching for articles: 
+ POST /v2/articles/search HTTP/1.1
+ Host: api.figshare.com
+ Authorization: token a287ab8c7ebdbe6
+ {
+ "search_for": "figshare"
+ }
+ Rate limiting 
+ We do not have automatic rate limiting in place for API requests. However, we do carry out monitoring to
+ detect and mitigate abuse and prevent the platform's resources from being overused. We recommend that
+ clients use the API responsibly and do not make more than one request per second. We reserve the right to
+ throttle or block requests if we detect abuse. 
+ Conditional requests 
+ Most responses should return an ETag header and a Last-Modified header.
+ You can use the values of these headers to create conditional requests.
+ We encourage to use these whenever possible. 
+ Resource representations 
+ Resources can be presented differently across endpoints. Usually
+ endpoints that return a list of resources will send a lighter 
+ representation of each resource while an endpoint for an individual
+ resource will use a more detailed and complete representation. 
+ Representations for each resource type are documented inside each endpoint in the Body Schema section. 
+ Blank resource fields are included in the representation as null instead
+ of being omitted. 
+ Searching, filtering and pagination 
+ Endpoints that list items usually support any of the following features: 
+ pagination 
+ ordering 
+ searching 
+ filtering 
+ Pagination params 
+ Pagination can be done by specifing either page and page_size params
+ pair or the limit and offset params pair. If confusing combinations
+ appear in a request, a 422 Unprocessable Entity will be returned. 
+ field 
+ type 
+ default 
+ description 
+ page 
+ int 
+ 1 
+ Page number 
+ page_size 
+ int 
+ 10 
+ The number of results included on a page 
+ limit 
+ int 
+ 10 
+ Number of results included on a page 
+ offset 
+ int 
+ 0 
+ Where to start the listing(the offset of the first result) 
+ Please note that there's a limit on the maximum offset or page number you can require.
+ The offset is currently limited at 1000 and if exceeded a 422 Unprocessable Entity error will
+ be returned. For pages, it depends on the page_size 
+ but for a page_size of 10 , the maximum page would be 1000 / 10 = 100 
+ Ordering params 
+ Ordering is done via the order and order_direction params. 
+ field 
+ type 
+ default 
+ description 
+ order 
+ string 
+ varies 
+ The field by which to order. Default varies by endpoint/resource. For articles and collections,
+ valid values are: published_date and modified_date .
+ order_direction 
+ string 
+ varies 
+ Only asc and desc values are supported. Default varies by
+ endpoint/resource
+ Searching params 
+ field 
+ type 
+ description 
+ search_for 
+ string 
+ Search endpoints require this field. Usually min length is 3 
+ Filtering params 
+ Some endpoints allow filtering results. Filters are extra fields in the
+ body and the documentation for each endpoint will present them in detail. 
+ Upload Custom Fields File 
+ Request 
+ POST /v2/institution/custom_fields/{custom_field_id}/items/upload
+ The request needs to be of type multipart/form-data and have its Content-Type 
+ header set to the same value; the body of the file is sent as the form data.
+ A typical request looks like this: 
+ POST institution/custom_fields/{custom_field_id}/items/upload HTTP/1.1
+Host: api.figshare.com
+Content-Length: 975
+Accept-Encoding: gzip, deflate
+Accept: */*
+User-Agent: python-requests/2.5.3 CPython/2.7.10 Linux/4.1.4-1-ARCH
+Connection: keep-alive
+Content-Type: multipart/form-data; boundary=529448d158064de596afd8f892c84e15
+Authorization: token 86bbaa5d6d51fc0ae2f2defd3a474dac77ae27179ff6d04dd37e74c531bd6ed059eda584b41356337c362a259e482eb36a34825c805344e0600bb875a77444df
+--529448d158064de596afd8f892c84e15
+Content-Disposition: form-data; name="external_file"; filename="example_file.csv"
+[file content goes there]
+--529448d158064de596afd8f892c84e15--
+ Standard error responses 
+ Other specific errors: 
+ {
+ "message": "Previous import still in progress!",
+ "code": "PreviousCustomFieldUploadNotComplete"
+}
+ when the feed has already been submitted within a 60 minutes span. 
+ {
+ "message": "You are not allowed to upload values for this custom field",
+ "code": "DropdownLargeListFieldUpdateUnauthorizedError"
+}
+ when the user is not authorized to make the upload 
+ {
+ "message": "This custom field cannot be updated via this method",
+ "code": "BadRequest"
+}
+ when trying to upload a file for a custom field of a different type besides dropdown_large_list. 
+ For the .NET / mono users there's this snippet of code: 
+using System;
+using System.Net.Http;
+using System.IO;
+using System.Threading.Tasks;
+namespace CSVUploaderExample
+{
+ class MainClass
+ {
+ private const String API_URL = "https://api.figshare.com/v2/account/institution/custom_fields/1/items/upload";
+ private const String TOKEN = "86bbaa5d6d51fc0ae2f2defd3a474dac77ae27179ff6d04dd37e74c531bd6ed059eda584b41356337c362a259e482eb36a34825c805344e0600bb875a77444df";
+ private String fileName = null;
+ public static void Main (string[] args)
+ {
+ MainClass app = new MainClass (args [0]);
+ app.Upload ();
+ }
+ MainClass(String fileName) {
+ this.fileName = fileName;
+ }
+ public void Upload() {
+ HttpClient httpClient = new HttpClient ();
+ httpClient.DefaultRequestHeaders.Add ("Authorization", "token " + MainClass.TOKEN);
+ MultipartFormDataContent form = new MultipartFormDataContent ();
+ using (StreamReader sr = new StreamReader (this.fileName)) {
+ String content = sr.ReadToEnd ();
+ byte[] data = System.Text.Encoding.UTF8.GetBytes (content);
+ form.Add (new ByteArrayContent (data, 0, data.Length), "external_file", this.fileName);
+ }
+ Task task = httpClient.PostAsync (MainClass.API_URL, form);
+ task.Wait();
+ HttpResponseMessage response = task.Result;
+ response.EnsureSuccessStatusCode();
+ Console.WriteLine ("Status code was: " + response.StatusCode);
+ httpClient.Dispose();
+ }
+ }
+}
+ Probably one of the most versatile ways of uploading a Custom Fields values CSV is through
+ curl given the possibility
+ of integrating it into any other command line utility on linux/unix. 
+ curl -XPOST\
+ -H"Authorization: token 86bbaa5d6d51fc0ae2f2defd3a474dac77ae27179ff6d04dd37e74c531bd6ed059eda584b41356337c362a259e482eb36a34825c805344e0600bb875a77444df"\
+ -F"external_file=@my_file.csv"\
+ https://api.figshare.com/v2/account/institution/custom_fields/1/items/upload
+ For java one can use apache httpcomponents : 
+ import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.lang.Throwable;
+import org.apache.http.HttpEntity;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.ContentType;
+import org.apache.http.entity.mime.MultipartEntityBuilder;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+public class CSVUploaderExample {
+ public static void main(String[] args) {
+ try {
+ CSVUploaderExample ex = new CSVUploaderExample(args[0]);
+ ex.upload();
+ } catch (Throwable t) {
+ t.printStackTrace(System.err);
+ }
+ }
+ private static final String API_URL = "https://api.figshare.com/v2/account/institution/custom_fields/1/items/upload";
+ private static final String TOKEN = "86bbaa5d6d51fc0ae2f2defd3a474dac77ae27179ff6d04dd37e74c531bd6ed059eda584b41356337c362a259e482eb36a34825c805344e0600bb875a77444df";
+ private String fileName = null;
+ CSVUploaderExample(String fileName) {
+ this.fileName = fileName;
+ }
+ public void upload() throws IOException {
+ CloseableHttpClient httpClient = HttpClients.createDefault();
+ HttpPost uploadFile = new HttpPost(API_URL);
+ uploadFile.addHeader("Authorization", "token " + TOKEN);
+ MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+ File file = new File(fileName);
+ builder.addBinaryBody("external_file", new FileInputStream(file), ContentType.TEXT_PLAIN, file.getName());
+ HttpEntity multipart = builder.build();
+ uploadFile.setEntity(multipart);
+ CloseableHttpResponse response = httpClient.execute(uploadFile);
+ int status = response.getStatusLine().getStatusCode();
+ System.out.println("Status code was: " + status);
+ }
+}
+ One of the simpler examples is in python . For this to work one would need to install the requests 
+ python package. 
+ #!/usr/bin/env python
+import requests
+FILE_NAME = 'example_file.csv'
+API_URL = 'https://api.figshare.com/v2/account/institution/custom_fields/{custom_field_id}/items/upload'.format(custom_field_id=1)
+TOKEN = '86bbaa5d6d51fc0ae2f2defd3a474dac77ae27179ff6d04dd37e74c531bd6ed059eda584b41356337c362a259e482eb36a34825c805344e0600bb875a77444df'
+def main():
+ headers = {"Authorization": "token " + TOKEN}
+ with open(FILE_NAME, 'rb') as fin:
+ files = {'external_file': (FILE_NAME, fin)}
+ resp = requests.post(API_URL, files=files, headers=headers)
+ print(resp.content)
+ resp.raise_for_status()
+ The success response only indicates the fact that the system has
+ understood the request, has received the file and has initiated the necessary tasks. It is not a
+ confirmation that the file processing is complete.
+ The token given in the upper examples is a general Fig share API personal belonging
+ to an admin/owner
+ of the group the custom field has been created in (either institutional admin or group admin/owner). No
+ other users
+ should be able to use this endpoint (otherwise an Unauthorised error will be returned).
+ By default, only one file upload can be initiated every 60 minutes per portal. The enforced delay will not be
+ automatically lifted
+ if the custom field is deleted in the meantime. The length of this enforced delay can be customized by
+ submitting a request to Figshare support. 
+ The only supported file format at the moment is CSV. The first line of the file will be ignored, as it is
+ assumed to be a header row.
+ For all further rows, the values in all columns will be concatenated, with a single space inserted between
+ each pair of values,
+ and the result will be added as an item for the custom metadata field.
+ For example, the following file content: 
+ header1,header2,header 3
+ 123,My awesome field value,456
+ will generate a single custom field value 123 My awesome field value 456. 
+ Values must have a minimum of 3 characters and a maximum of 255 characters. All values outside of this
+ interval will simply be ignored. 
+ {
+ "message": "OK",
+ "code": "200"
+}
+ Upload HRFeed File 
+ Request 
+ POST /v2/institution/hrfeed/upload
+ The request needs to be of type multipart/form-data and have its Content-Type 
+ header set to the same value; the body of the file is sent as the form data.
+ A typical request looks like this: 
+ POST /v2/institution/hrfeed/upload HTTP/1.1
+Host: api.figshare.com
+Content-Length: 975
+Accept-Encoding: gzip, deflate
+Accept: */*
+User-Agent: python-requests/2.5.3 CPython/2.7.10 Linux/4.1.4-1-ARCH
+Connection: keep-alive
+Content-Type: multipart/form-data; boundary=529448d158064de596afd8f892c84e15
+Authorization: token 86bbaa5d6d51fc0ae2f2defd3a474dac77ae27179ff6d04dd37e74c531bd6ed059eda584b41356337c362a259e482eb36a34825c805344e0600bb875a77444df
+--529448d158064de596afd8f892c84e15
+Content-Disposition: form-data; name="hrfeed"; filename="feed.xml"
+<?xml version="1.0"?>
+<HRFeed>
+ <Record>
+ <UniqueID>1234567</UniqueID>
+ <Orcid>1122-1299-6202-273X</Orcid>
+ <FirstName>Jane</FirstName>
+ <LastName>Doe</LastName>
+ <Title>Mrs</Title>
+ <Initials>JD</Initials>
+ <Suffix></Suffix>
+ <Email>j.doe@sillymail.io</Email>
+ <IsActive>Y</IsActive>
+ <UserQuota>1048576000</UserQuota>
+ <UserAssociationCriteria>IT</UserAssociationCriteria>
+ </Record>
+ <Record>
+ <UniqueID>1234568</UniqueID>
+ <Orcid>0000-0002-3109-4308</Orcid>
+ <FirstName>John</FirstName>
+ <LastName>Smith</LastName>
+ <Title>Mr</Title>
+ <Initials></Initials>
+ <Suffix></Suffix>
+ <Email>js@seriousness.com</Email>
+ <IsActive>Y</IsActive>
+ <UserQuota>10485760000</UserQuota>
+ <UserAssociationCriteria></UserAssociationCriteria>
+ </Record>
+</HRFeed>
+--529448d158064de596afd8f892c84e15--
+ Standard error responses 
+ Most common: 
+ {
+ "message": "Previous feed import not complete.",
+ "data": null,
+ "errcode": "FigshareAPIException"
+}
+ when the feed has already been submitted within a 24 hour span. 
+ For the .NET / mono users there's this snippet of code: 
+using System;
+using System.Net.Http;
+using System.IO;
+using System.Threading.Tasks;
+namespace HRFeedUploadExample
+{
+ class MainClass
+ {
+ private const String API_URL = "https://api.figshare.com/v2/institution/hrfeed/upload";
+ private const String TOKEN = "86bbaa5d6d51fc0ae2f2defd3a474dac77ae27179ff6d04dd37e74c531bd6ed059eda584b41356337c362a259e482eb36a34825c805344e0600bb875a77444df";
+ private String fileName = null;
+ public static void Main (string[] args)
+ {
+ MainClass app = new MainClass (args [0]);
+ app.Upload ();
+ }
+ MainClass(String fileName) {
+ this.fileName = fileName;
+ }
+ public void Upload() {
+ HttpClient httpClient = new HttpClient ();
+ httpClient.DefaultRequestHeaders.Add ("Authorization", "token " + MainClass.TOKEN);
+ MultipartFormDataContent form = new MultipartFormDataContent ();
+ using (StreamReader sr = new StreamReader (this.fileName)) {
+ String content = sr.ReadToEnd ();
+ byte[] data = System.Text.Encoding.UTF8.GetBytes (content);
+ form.Add (new ByteArrayContent (data, 0, data.Length), "hrfeed", this.fileName);
+ }
+ Task<HttpResponseMessage> task = httpClient.PostAsync (MainClass.API_URL, form);
+ task.Wait();
+ HttpResponseMessage response = task.Result;
+ response.EnsureSuccessStatusCode();
+ Console.WriteLine ("Status code was: " + response.StatusCode);
+ httpClient.Dispose();
+ }
+ }
+}
+ Probably one of the most versatile ways of uploading an HRFeed is through curl given the
+ possibility
+ of integrating it into any other command line utility on linux/unix. 
+ curl -XPOST\
+ -H"Authorization: token 86bbaa5d6d51fc0ae2f2defd3a474dac77ae27179ff6d04dd37e74c531bd6ed059eda584b41356337c362a259e482eb36a34825c805344e0600bb875a77444df"\
+ -F"hrfeed=@feed.csv"\
+ https://api.figshare.com/v2/institution/hrfeed/upload
+ For java one can use apache httpcomponents : 
+ import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.lang.Throwable;
+import org.apache.http.HttpEntity;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.ContentType;
+import org.apache.http.entity.mime.MultipartEntityBuilder;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+public class HRFeedUploaderExample {
+ public static void main(String[] args) {
+ try {
+ HRFeedUploaderExample hfue = new HRFeedUploaderExample(args[0]);
+ hfue.upload();
+ } catch (Throwable t) {
+ t.printStackTrace(System.err);
+ }
+ }
+ private static final String API_URL = "https://api.figshare.com/v2/institution/hrfeed/upload";
+ private static final String TOKEN = "86bbaa5d6d51fc0ae2f2defd3a474dac77ae27179ff6d04dd37e74c531bd6ed059eda584b41356337c362a259e482eb36a34825c805344e0600bb875a77444df";
+ private String fileName = null;
+ HRFeedUploaderExample(String fileName) {
+ this.fileName = fileName;
+ }
+ public void upload() throws IOException {
+ CloseableHttpClient httpClient = HttpClients.createDefault();
+ HttpPost uploadFile = new HttpPost(API_URL);
+ uploadFile.addHeader("Authorization", "token " + TOKEN);
+ MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+ File file = new File(fileName);
+ builder.addBinaryBody("hrfeed", new FileInputStream(file), ContentType.TEXT_PLAIN, file.getName());
+ HttpEntity multipart = builder.build();
+ uploadFile.setEntity(multipart);
+ CloseableHttpResponse response = httpClient.execute(uploadFile);
+ int status = response.getStatusLine().getStatusCode();
+ System.out.println("Status code was: " + status);
+ }
+}
+ Or if you don't mind getting down and dirty with raw HTTP : 
+ import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.lang.Throwable;
+import java.net.URL;
+import java.net.HttpURLConnection;
+public class HRFeedUploaderExample {
+ public static void main(String[] args) {
+ try {
+ HRFeedUploaderExample hfue = new HRFeedUploaderExample(args[0]);
+ hfue.upload();
+ } catch (Throwable t) {
+ t.printStackTrace(System.err);
+ }
+ }
+ private static final String API_URL = "https://api.figshare.com/v2/institution/hrfeed/upload";
+ private static final String TOKEN = "86bbaa5d6d51fc0ae2f2defd3a474dac77ae27179ff6d04dd37e74c531bd6ed059eda584b41356337c362a259e482eb36a34825c805344e0600bb875a77444df";
+ private String fileName = null;
+ HRFeedUploaderExample(String fileName) {
+ this.fileName = fileName;
+ }
+ public void upload() throws IOException {
+ HttpURLConnection con = (HttpURLConnection) new URL(API_URL).openConnection();
+ String boundary = "123456789boundary987654321";
+ byte[] byteBoundary = ("\n--" + boundary + "\n").getBytes("UTF-8");
+ con.setDoOutput(true);
+ con.setRequestProperty("Content-Type", "multipart/form-data; boundary=" + boundary);
+ con.setRequestProperty("Authorization", "token " + TOKEN);
+ File file = new File(fileName);
+ try (OutputStream out = con.getOutputStream()) {
+ out.write(byteBoundary);
+ out.write(("Content-Disposition: form-data; name=\"hrfeed\"; filename=\"" + fileName + "\"\n\n").getBytes("UTF-8"));
+ try (FileInputStream in = new FileInputStream(file)) {
+ byte[] data = new byte[(int) file.length()];
+ in.read(data);
+ out.write(data);
+ }
+ out.write(byteBoundary);
+ }
+ int status = con.getResponseCode();
+ System.out.println("Status code was: " + status);
+ }
+}
+ One of the simpler examples is in python . For this to work one would need to install the requests 
+ python package. 
+ #!/usr/bin/env python
+import requests
+FILE_NAME = 'feed.xml'
+API_URL = 'https://api.figshare.com/v2/institution/hrfeed/upload'
+TOKEN = '86bbaa5d6d51fc0ae2f2defd3a474dac77ae27179ff6d04dd37e74c531bd6ed059eda584b41356337c362a259e482eb36a34825c805344e0600bb875a77444df'
+def main():
+ headers = {"Authorization": "token " + TOKEN}
+ with open(FILE_NAME, 'rb') as fin:
+ files = {'hrfeed': (FILE_NAME, fin)}
+ resp = requests.post(API_URL, files=files, headers=headers)
+ print(resp.content)
+ resp.raise_for_status()
+if __name__ == '__main__':
+ main()
+ The success response doesn't give much information other than the fact that the system has
+ understood the request, has received the file and has initiated the necessary tasks.
+ There are plans for a way to get more in depth information for the state of the HRFeed
+ Process . 
+ The token given in the upper examples is a general fig share API personal token of
+ any of
+ the admins at the institution. No other user should be able to access this endpoint, apart from
+ those given the express permission of uploading HR feeds. 
+ {
+ "message": "OK",
+ "code": "200"
+}
+ The definite guide for figshare and the home of all user documentation. 
+ Version 3.0 of the API provides the new APIs for item-type based metadata. 
+ Base URL 
+ All URLs referenced in this version have the following base: 
+ https://api.figshare.com/v3 
+ The Figshare REST API is served over HTTPS. To ensure data privacy, unencrypted HTTP is not
+ supported. 
+ Authentication 
+ Figshare supports the OAuth 2.0 Authorization Framework. See more about it in the OAuth section of
+ the v2 documentation ; the same tokens apply here. 
+ Since January 2016 figshare supports the OAuth 2.0
+ Authorization Framework . If you're new to OAuth make sure you have at least a basic understanding before
+ moving on. 
+ OAuth tokens are not version specific — the same tokens are used to authenticate requests against both
+ the v2 and v3 APIs. 
+ Quick guide 
+ To receive a client id and secret you need to register an application in
+ our system. You can easily do this from the figshare
+ applications
+ page in your account. 
+ Authorization endpoint 
+ The authorization endpoint is located at
+ https://figshare.com/account/applications/authorize . The endpoint
+ supports both
+ authorization code grant and implicit grant . 
+ Request params 
+ client_id 
+ response_type 
+ scope 
+ state 
+ redirect_uri 
+ Response params 
+ User is redirected back to redirect_uri with the following params
+ added to the query: 
+ Success as described in rfc6749#section-4.1.2 
+ or rfc6749#section-4.2.2 : 
+ code 
+ state 
+ Error as described in rfc6749#4.1.2.1 :
+ error 
+ error_description 
+ Token endpoint 
+ The token endpoint is located at https://api.figshare.com/v3/token .
+ In order to receive an access token you need to make a POST request. 
+ To get info about an existing access token use the GET method with the usual authorization
+ means. 
+ Request 
+ Then endpoint accepts both application/x-www-form-urlencoded and
+ application/json content types. It will only respond with JSON
+ content. 
+ client_id 
+ client_secret 
+ grant_type 
+ and, based on the value of grant_type : 
+ code 
+ refresh_token 
+ username 
+ password 
+ Response 
+ Successful responses are always 200 and failed ones are always 400 ,
+ even for failed authorization. 
+ Success response is a JSON as described in http://tools.ietf.org/html/rfc6749#section-5.1 .
+ access_token 
+ token_type 
+ expires_in 
+ refresh_token 
+ scope - not available yet 
+ Error response as described in rfc6749#section-5.2 
+ Scope 
+ Currently the only scope available is all which grants full access to
+ the resource owner's data. We're working on a more flexible approach. 
+ Grant Types 
+ The supported grant types at this moment are: 
+ authorization_code 
+ refresh_token 
+ password 
+ The figshare api v3 is accessible at https://api.figshare.com/v3. All
+ communication is done through https and all data is encoded as JSON . 
+ Version 3.0 exposes the item-type based metadata API. Resources are modelled as
+ items (rather than v2 articles) and their metadata is set through a single
+ fields object. 
+ Sending parameters 
+ More often than not you need to send parameters to an endpoint. For
+ GET requests these are usualy sent in the query string but for POST 
+ and PUT requests they are usually in the body of the request. 
+ Query string 
+ Query strings can contain parameters encoded as application/x-www-form-urlencoded . Very common
+ for GET requests. 
+ Example : Sending page parameter when listing items: 
+ GET /v3/items?page=3 HTTP/1.1
+ Host: api.figshare.com
+ Authorization: token a287ab8c7ebdbe6
+ Request json body 
+ POST and PUT request usualy read their params from the body of the
+ http request. Our API only understands application/json encoded
+ bodies. 
+ Example : Sending search_for parameter when searching for items: 
+ POST /v3/items/search HTTP/1.1
+ Host: api.figshare.com
+ Authorization: token a287ab8c7ebdbe6
+ {
+ "search_for": "figshare"
+ }
+ Resource representations 
+ Resources can be presented differently across endpoints. Usually
+ endpoints that return a list of resources will send a lighter 
+ representation of each resource while an endpoint for an individual
+ resource will use a more detailed and complete representation. 
+ Representations for each resource type are documented inside each endpoint in the Body Schema section. 
+ Blank resource fields are included in the representation as null instead
+ of being omitted. 
+ Authentication 
+ The v3 API supports OAuth2 access tokens, issued as
+ described in the oauth section . 
+ In addition to oauth access tokens, you can also use a personal token 
+ which grants you full access to your account. Personal tokens can be
+ created and managed from the applications
+ page at figshare. 
+ Any of these tokens can be used to authenticate and there are 2 options
+ to include them in requests: 
+ HTTP header ( recommended ) 
+ GET /v3/token HTTP/1.1
+ Host: api.figshare.com
+ Authorization: token ACCESS_TOKEN
+ Example with curl : 
+ curl -H "Authorization: token ACCESS_TOKEN" https://api.figshare.com/v3
+ Query param: 
+ GET /v3/token?access_token=ACCESS_TOKEN HTTP/1.1
+ Host: api.figshare.com
+ Example with curl : 
+ curl https://api.figshare.com/v3?access_token=ACCESS_TOKEN
+ Endpoints can respond with error responses. The common error responses
+ for all endpoints are presented below and errors specific to individual
+ enpoints are documented along with the endpoint. 
+ Each error response will have a specific HTTP status code and a JSON
+ body with the following fields: 
+ Field 
+ Description 
+ message 
+ A human friendly message explaining the error. 
+ code 
+ A machine friendly error code, used by the dev team to identify the error. 
+ data 
+ An object containing extra information about the error. Documented for each error. 
+ 404 Not found 
+ Trying to access resources that do not exist, will trigger this response
+ from the API. 
+ This is also returned if you try to access a resource on which you don't
+ have a read permission. 
+ 400 Bad request 
+ Sending a body that cannot be parsed as JSON will result in this error
+ response. 
+ 422 Unprocessable Entity 
+ Sending an invalid data structure in the body will trigger this error.
+ Invalid data can be any of the following: 
+ missing field 
+ invalid value for a field 
+ any other rules specific to an endpoint 
+ 401 Unauthorized 
+ This error is returned when the authorization was unsuccessfull. This can
+ be either due to: 
+ missing authorization info in the request 
+ invalid or unknown authorization info 
+ expired or disabled account 
+ 403 Forbidden 
+ This response is presented whenever you try to do something which is not
+ permitted for your current authorization.
+ authorization info 
+ Searching, filtering and pagination 
+ Endpoints that list items usually support any of the following features: 
+ pagination 
+ ordering 
+ searching 
+ filtering 
+ Pagination params 
+ Pagination can be done by specifing either page and page_size params
+ pair or the limit and offset params pair. If confusing combinations
+ appear in a request, a 422 Unprocessable Entity will be returned. 
+ field 
+ type 
+ default 
+ description 
+ page 
+ int 
+ 1 
+ Page number 
+ page_size 
+ int 
+ 10 
+ The number of results included on a page 
+ limit 
+ int 
+ 10 
+ Number of results included on a page 
+ offset 
+ int 
+ 0 
+ Where to start the listing(the offset of the first result) 
+ Please note that there's a limit on the maximum offset or page number you can require.
+ The offset is currently limited at 1000 and if exceeded a 422 Unprocessable Entity error will
+ be returned. For pages, it depends on the page_size 
+ but for a page_size of 10 , the maximum page would be 1000 / 10 = 100 
+ Ordering params 
+ Ordering is done via the order and order_direction params. 
+ field 
+ type 
+ default 
+ description 
+ order 
+ string 
+ varies 
+ The field by which to order. Default varies by endpoint/resource. For items and collections,
+ valid values are: published_date and modified_date .
+ order_direction 
+ string 
+ varies 
+ Only asc and desc values are supported. Default varies by
+ endpoint/resource
+ Searching params 
+ field 
+ type 
+ description 
+ search_for 
+ string 
+ Search endpoints require this field. Usually min length is 3 
+ Filtering params 
+ Some endpoints allow filtering results. Filters are extra fields in the
+ body and the documentation for each endpoint will present them in detail. 
+ Rate limiting 
+ We do not have automatic rate limiting in place for API requests. However, we do carry out monitoring to
+ detect and mitigate abuse and prevent the platform's resources from being overused. We recommend that
+ clients use the API responsibly and do not make more than one request per second. We reserve the right to
+ throttle or block requests if we detect abuse. 
+ Conditional requests 
+ Most responses should return an ETag header and a Last-Modified header.
+ You can use the values of these headers to create conditional requests.
+ We encourage to use these whenever possible. 
+ CORS policy 
+ The API supports CORS for AJAX requests from any origin. 
+ Impersonation 
+ This feature is available only for institutional accounts with administrative privileges. 
+ To impersonate an account you have to include the impersonate option inside your http
+ request. 
+ The value for impersonate must be the account_id of the account you wish to
+ impersonate. 
+ You can see the accounts which can be impersonated using our account/institution/accounts 
+ endpoint. 
+ The impersonate option must be included in the query string when using the GET and DELETE
+ methods, and in the body when using the POST and PUT methods. 
+ GET Impersonation example: 
+ Request: 
+ GET /v3/account/items?impersonate=1000009 HTTP/1.1
+ Response will contain items of the impersonated account 
+ POST Impersonation example: 
+ Request: 
+ POST /v3/account/items HTTP/1.1
+ Body: 
+ {
+ "item_type_id": 1,
+ "fields": {
+ "title": "test"
+ },
+ "impersonate": 1000009
+} 
+ Will create an item for the impersonated account 
+ Initiate file upload - this request returns an endpoint
+ with file data
+ Send a GET request to the Uploader Service with the
+ upload_url (which also contains the upload_token ) provided in previous step and
+ receive the number of file parts
+ Upload / Delete / Retry uploading file parts until all parts are uploaded successfully 
+ Complete file upload 
+ Upload status 
+ An upload status can be: 
+ PENDING - waiting for it's parts to be uploaded 
+ COMPLETED - all parts were uploaded and the file was assembled on the storage 
+ ABORTED - canceled for some reason(user request, timeout, error) 
+ The uploader service is shared across API versions; only the figshare API endpoints used to initiate and
+ complete an upload differ (v3 uses account/items instead of v2 account/articles ). 
+ Endpoints 
+ GET /upload/<token> - get upload info 
+ Response: 
+ Status Code 
+ Explanation 
+ Body 
+ 200 OK 
+ all good 
+ explained below 
+ 500 Internal Server Error 
+ internal error 
+ empty 
+ 404 Not Found 
+ unknown upload token 
+ empty 
+ 200 OK 
+ Body:
+ js
+ {
+ token: "upload-token",
+ name: "my-file.zip",
+ size: 10249281,
+ md5: "filemd5", // as provided on upload creation
+ status: "PENDING",
+ parts: [
+ {
+ // upload parts -- see parts API for representation
+ }
+ ]
+ } 
+ Part status 
+ PENDING -- part is ready to be uploaded 
+ COMPLETE -- part data has been complete and saved to storage 
+ Part locking 
+ When a part is being uploaded it is being locked, by setting the
+ locked flag to true. No changes/uploads can happen on this part from
+ other requests. 
+ Byte ranges 
+ The part range is specified by startOffset and endOffset . They
+ indexes zero-based and inclusive. Example: 
+ Given: 
+ the following file data: "abcdefghij" 
+ part1 with startOffset=0 and endOffset=3 
+ part2 with startOffset=4 and endOffset=7 
+ Then: 
+ part1 is abcd 
+ part2 is efgh 
+ Endpoints 
+ GET /upload/<token>/<part_no> - get part info 
+ Responses: 
+ Status Code 
+ Explanation 
+ Body 
+ 200 OK 
+ all good 
+ explained below 
+ 500 Internal Server Error 
+ internal error 
+ empty 
+ 404 Not Found 
+ unknown upload token or part number 
+ empty 
+ 200 OK 
+ Body:
+ js
+ {
+ partNo: 3,
+ startOffset: 1024,
+ endOffset: 2047,
+ status: "PENDING",
+ locked: false
+ } 
+ PUT /upload/<token>/<part_no> - receives part data 
+ The entire body of the request is piped as-is to S3. It is assumed that the
+ body is the correct piece of the file, from startOffset to endOffset 
+ While this requests is being processed the part is going to be in a
+ locked state. The request can end with a 409 status code if a
+ lock for the part could not be obtained. 
+ Warning if content length is less than part size the request will
+ timeout 
+ Responses: 
+ Status Code 
+ Explanation 
+ Body 
+ 200 OK 
+ all good 
+ explained below 
+ 500 Internal Server Error 
+ internal error 
+ empty 
+ 404 Not Found 
+ unknown upload token or part number 
+ empty 
+ 409 Conflict 
+ part data cannot be uploaded 
+ empty 
+ 200 OK 
+ DELETE /upload/<token>/<part_no> - reset part data 
+ This will reset the part to it's PENDING state and remove any
+ storage meta. 
+ Responses: 
+ Status Code 
+ Explanation 
+ Body 
+ 200 Accepted 
+ all good 
+ empty 
+ 500 Internal Server Error 
+ internal error 
+ empty 
+ 404 Not Found 
+ unknown upload token or part number 
+ empty 
+ 409 Conflict 
+ upload completed or part locked 
+ empty 
+ To upload a file to fig share , one needs to use the standard
+ fig share API , coupled
+ with the fig share upload system API .
+ A full script that lists items before and after the new item and
+ file are created
+ would look like this: 
+ #!/usr/bin/env python
+import hashlib
+import json
+import os
+import requests
+from requests.exceptions import HTTPError
+BASE_URL = 'https://api.figshare.com/v3/{endpoint}'
+TOKEN = '<insert access token here>'
+CHUNK_SIZE = 1048576
+FILE_PATH = '/path/to/work/directory/cat.obj'
+TITLE = 'A 3D cat object model'
+ITEM_TYPE_ID = 1 # see GET /v3/item_types for the values enabled for your institution
+def raw_issue_request(method, url, data=None, binary=False):
+ headers = {'Authorization': 'token ' + TOKEN}
+ if data is not None and not binary:
+ data = json.dumps(data)
+ response = requests.request(method, url, headers=headers, data=data)
+ try:
+ response.raise_for_status()
+ try:
+ data = json.loads(response.content)
+ except ValueError:
+ data = response.content
+ except HTTPError as error:
+ print('Caught an HTTPError: {}'.format(error))
+ print('Body:\n', response.content)
+ raise
+ return data
+def issue_request(method, endpoint, *args, **kwargs):
+ return raw_issue_request(method, BASE_URL.format(endpoint=endpoint), *args, **kwargs)
+def list_items():
+ result = issue_request('GET', 'account/items')
+ print('Listing current items:')
+ if result:
+ for item in result:
+ print(u' {url} - {title}'.format(**item))
+ else:
+ print(' No items.')
+ print()
+def create_item(title):
+ # Structural inputs stay top-level; all metadata goes inside 'fields'.
+ data = {
+ 'item_type_id': ITEM_TYPE_ID,
+ 'fields': {
+ 'title': title # add any other configured fields here, e.g. 'description', 'keywords'
+ }
+ }
+ result = issue_request('POST', 'account/items', data=data)
+ print('Created item:', result['location'], '\n')
+ result = raw_issue_request('GET', result['location'])
+ return result['id']
+def list_files_of_item(item_id):
+ result = issue_request('GET', 'account/items/{}/files'.format(item_id))
+ print('Listing files for item {}:'.format(item_id))
+ if result:
+ for item in result:
+ print(' {id} - {name}'.format(**item))
+ else:
+ print(' No files.')
+ print()
+def get_file_check_data(file_name):
+ with open(file_name, 'rb') as fin:
+ md5 = hashlib.md5()
+ size = 0
+ data = fin.read(CHUNK_SIZE)
+ while data:
+ size += len(data)
+ md5.update(data)
+ data = fin.read(CHUNK_SIZE)
+ return md5.hexdigest(), size
+def initiate_new_upload(item_id, file_name):
+ endpoint = 'account/items/{}/files'
+ endpoint = endpoint.format(item_id)
+ md5, size = get_file_check_data(file_name)
+ name = os.path.basename(file_name)
+ data = {'md5': md5, 'size': size, 'name': name}
+ result = issue_request('POST', endpoint, data=data)
+ print('Initiated file upload:', result['location'], '\n')
+ result = raw_issue_request('GET', result['location'])
+ return result
+def complete_upload(item_id, file_id):
+ issue_request('POST', 'account/items/{}/files/{}'.format(item_id, file_id))
+def upload_parts(file_info):
+ url = '{upload_url}'.format(**file_info)
+ result = raw_issue_request('GET', url)
+ print('Uploading parts:')
+ with open(FILE_PATH, 'rb') as fin:
+ for part in result['parts']:
+ upload_part(file_info, fin, part)
+ print()
+def upload_part(file_info, stream, part):
+ udata = file_info.copy()
+ udata.update(part)
+ url = '{upload_url}/{partNo}'.format(**udata)
+ stream.seek(part['startOffset'])
+ data = stream.read(part['endOffset'] - part['startOffset'] + 1)
+ raw_issue_request('PUT', url, data=data, binary=True)
+ print(' Uploaded part {partNo} from {startOffset} to {endOffset}'.format(**part))
+def main():
+ # We first create the item
+ list_items()
+ item_id = create_item(TITLE)
+ list_items()
+ list_files_of_item(item_id)
+ # Then we upload the file.
+ file_info = initiate_new_upload(item_id, FILE_PATH)
+ # Until here we used the figshare API; following lines use the figshare upload service API.
+ upload_parts(file_info)
+ # We return to the figshare API to complete the file upload process.
+ complete_upload(item_id, file_info['id'])
+ list_files_of_item(item_id)
+if __name__ == '__main__':
+ main()
+ This is an example of how the script would output on an account with no added items or files yet. 
+ Listing current items:
+ No items.
+Created item: https://api.figshare.com/v3/account/items/2012182
+Listing current items:
+ https://api.figshare.com/v3/items/2012182 - A 3D cat object model
+Listing files for item 2012182:
+ No files.
+Initiated file upload: https://api.figshare.com/v3/account/items/2012182/files/3008150
+Uploading parts:
+ Uploaded part 1 from 0 to 213325
+Listing files for item 2012182:
+ 3008150 - cat.obj
+ This is a bash script for uploading files. You'll have to replace certain strings inside it with your
+ keys. 
+#!/bin/bash
+# exit script if any command fails
+set -e
+#modify BASE_URL, ACCESS_TOKEN, FILE_NAME and FILE_PATH according to your needs
+BASE_URL='https://api.figshare.com/v3/account/items'
+ACCESS_TOKEN='insert access token here'
+FILE_NAME='test.txt'
+FILE_PATH='/path/to/your/file/'$FILE_NAME
+# see GET /v3/item_types for the item type ids enabled for your institution
+ITEM_TYPE_ID=1
+# ####################################################################################
+#Retrieve the file size and MD5 values for the item which needs to be uploaded
+FILE_SIZE=$(stat -c%s $FILE_PATH)
+MD5=($(md5sum $FILE_PATH))
+# List all of the existing items
+echo 'List all of the existing items...'
+RESPONSE=$(curl -s -f -H 'Authorization: token '$ACCESS_TOKEN -X GET "$BASE_URL")
+echo "The item list dict contains: "$RESPONSE
+echo ''
+# Create a new item (structural inputs top-level, metadata inside "fields")
+echo 'Creating a new item...'
+RESPONSE=$(curl -s -f -d '{"item_type_id": '$ITEM_TYPE_ID', "fields": {"title": "Sample upload item"}}' -H 'Authorization: token '$ACCESS_TOKEN -H 'Content-Type: application/json' -X POST "$BASE_URL")
+echo "The location of the created item is "$RESPONSE
+echo ''
+# Retrieve item id
+echo 'Retrieving the item id...'
+ITEM_ID=$(echo "$RESPONSE" | sed -r "s/.*\/([0-9]+).*/\1/")
+echo "The item id is "$ITEM_ID
+echo ''
+# List item files
+echo 'Retrieving the item files...'
+FILES_LIST=$(curl -s -f -H 'Authorization: token '$ACCESS_TOKEN -X GET "$BASE_URL/$ITEM_ID/files")
+echo 'The files list of the newly-create item should be an empty one. Returned results: '$FILES_LIST
+echo ''
+# Initiate new upload:
+echo 'A new upload had been initiated...'
+RESPONSE=$(curl -s -f -d '{"md5": "'${MD5}'", "name": "'${FILE_NAME}'", "size": '${FILE_SIZE}'}' -H 'Content-Type: application/json' -H 'Authorization: token '$ACCESS_TOKEN -X POST "$BASE_URL/$ITEM_ID/files")
+echo $RESPONSE
+echo ''
+# Retrieve file id
+echo 'The file id is retrieved...'
+FILE_ID=$(echo "$RESPONSE" | sed -r "s/.*\/([0-9]+).*/\1/")
+echo 'The file id is: '$FILE_ID
+echo ''
+# Retrieve the upload url
+echo 'Retrieving the upload URL...'
+RESPONSE=$(curl -s -f -H 'Authorization: token '$ACCESS_TOKEN -X GET "$BASE_URL/$ITEM_ID/files/$FILE_ID")
+UPLOAD_URL=$(echo "$RESPONSE" | sed -r 's/.*"upload_url":\s"([^"]+)".*/\1/')
+echo 'The upload URL is: '$UPLOAD_URL
+echo ''
+# Retrieve the upload parts
+echo 'Retrieving the part value...'
+RESPONSE=$(curl -s -f -H 'Authorization: token '$ACCESS_TOKEN -X GET "$UPLOAD_URL")
+PARTS_SIZE=$(echo "$RESPONSE" | sed -r 's/"endOffset":([0-9]+).*/\1/' | sed -r 's/.*,([0-9]+)/\1/')
+PARTS_SIZE=$(($PARTS_SIZE+1))
+echo 'The part value is: '$PARTS_SIZE
+echo ''
+# Split item into needed parts
+echo 'Spliting the provided item into parts process had begun...'
+split -b$PARTS_SIZE $FILE_PATH part_ --numeric=1
+echo 'Process completed!'
+# Retrive the number of parts
+MAX_PART=$((($FILE_SIZE+$PARTS_SIZE-1)/$PARTS_SIZE))
+echo 'The number of parts is: '$MAX_PART
+echo ''
+# Perform the PUT operation of parts
+echo 'Perform the PUT operation of parts...'
+for ((i=1; i<=$MAX_PART; i++))
+do
+ PART_VALUE='part_'$i
+ if [ "$i" -le 9 ]
+ then
+ PART_VALUE='part_0'$i
+ fi
+ RESPONSE=$(curl -s -f -H 'Authorization: token '$ACCESS_TOKEN -X PUT "$UPLOAD_URL/$i" --data-binary @$PART_VALUE)
+ echo "Done uploading part nr: $i/"$MAX_PART
+done
+echo 'Process was finished!'
+echo ''
+# Complete upload
+echo 'Completing the file upload...'
+RESPONSE=$(curl -s -f -H 'Authorization: token '$ACCESS_TOKEN -X POST "$BASE_URL/$ITEM_ID/files/$FILE_ID")
+echo 'Done!'
+echo ''
+#remove the part files
+rm part_*
+# List all of the existing items
+RESPONSE=$(curl -s -f -H 'Authorization: token '$ACCESS_TOKEN -X GET "$BASE_URL")
+echo 'New list of items: '$RESPONSE
+echo ''
+ This is a python script for uploading files. You'll have to replace certain strings inside it with your
+ keys. 
+import hashlib
+import json
+import requests
+from requests.exceptions import HTTPError
+from boto.s3.connection import S3Connection
+BASE_URL = "https://api.figshare.com/v3/{endpoint}"
+CHUNK_SIZE = 1048576 # bytes
+TOKEN = "<insert access token here>"
+BUCKET_NAME = "<insert bucket name here>"
+FILE_KEY = "<insert file key here>"
+AWS_KEY = "<insert AWS key here>"
+AWS_SECRET = "<insert AWS secret here>"
+RECORD_TITLE = "<insert Figshare record title here>"
+ITEM_TYPE_ID = 1 # see GET /v3/item_types for the values enabled for your institution
+def retrieve_key():
+ conn = S3Connection(AWS_KEY, AWS_SECRET, is_secure=False)
+ bucket = conn.get_bucket(BUCKET_NAME)
+ key = bucket.lookup(FILE_KEY)
+ return key
+def raw_issue_request(method, url, data=None, binary=False):
+ headers = {"Authorization": "token " + TOKEN}
+ if data is not None and not binary:
+ data = json.dumps(data)
+ response = requests.request(method, url, headers=headers, data=data)
+ try:
+ response.raise_for_status()
+ try:
+ data = json.loads(response.content)
+ except ValueError:
+ data = response.content
+ except HTTPError as error:
+ print("Caught an HTTPError: {}".format(error))
+ print("Body:\n", response.content)
+ raise
+ return data
+def issue_request(method, endpoint, *args, **kwargs):
+ return raw_issue_request(method, BASE_URL.format(endpoint=endpoint), *args, **kwargs)
+def list_items():
+ result = issue_request("GET", "account/items")
+ print("Listing current items:")
+ if result:
+ for item in result:
+ print(u" {url} - {title}".format(**item))
+ else:
+ print(" No items.")
+def create_item(title):
+ # Structural inputs top-level; all metadata goes inside "fields".
+ data = {"item_type_id": ITEM_TYPE_ID, "fields": {"title": title}}
+ result = issue_request("POST", "account/items", data=data)
+ print("Created item:", result["location"], "\n")
+ result = raw_issue_request("GET", result["location"])
+ return result["id"]
+def list_files_of_item(item_id):
+ result = issue_request("GET", "account/items/{}/files".format(item_id))
+ print("Listing files for item {}:".format(item_id))
+ if result:
+ for item in result:
+ print(" {id} - {name}".format(**item))
+ else:
+ print(" No files.")
+def get_file_check_data(key):
+ md5 = hashlib.md5()
+ start_byte = 0
+ stop_byte = min(CHUNK_SIZE, key.size) - 1
+ headers = {"Range": "bytes={}-{}".format(start_byte, stop_byte)}
+ data = key.get_contents_as_string(headers=headers)
+ size = len(data)
+ while size < key.size:
+ md5.update(data)
+ start_byte = size
+ stop_byte = min(size + CHUNK_SIZE, key.size) - 1
+ headers = {"Range": "bytes={}-{}".format(start_byte, stop_byte)}
+ data = key.get_contents_as_string(headers=headers)
+ size += len(data)
+ md5.update(data)
+ file_name = key.name.rsplit("/", 1)[1] if "/" in key.name else key.name
+ return md5.hexdigest(), key.size, file_name
+def initiate_new_upload(item_id, key):
+ endpoint = "account/items/{}/files"
+ endpoint = endpoint.format(item_id)
+ md5, size, name = get_file_check_data(key)
+ data = {"md5": md5, "size": size, "name": name}
+ result = issue_request("POST", endpoint, data=data)
+ print("Initiated file upload:", result["location"], "\n")
+ result = raw_issue_request("GET", result["location"])
+ return result
+def complete_upload(item_id, file_id):
+ issue_request("POST", "account/items/{}/files/{}".format(item_id, file_id))
+def upload_parts(file_info, key):
+ url = "{upload_url}".format(**file_info)
+ result = raw_issue_request("GET", url)
+ print("Uploading parts:")
+ for part in result["parts"]:
+ upload_part(file_info, part, key)
+def upload_part(file_info, part, key):
+ udata = file_info.copy()
+ udata.update(part)
+ url = "{upload_url}/{partNo}".format(**udata)
+ your_bytes = key.get_contents_as_string(
+ headers={"Range": "bytes=" + str(part["startOffset"]) + "-" + str(part["endOffset"])}
+ )
+ raw_issue_request("PUT", url, data=your_bytes, binary=True)
+ print(" Uploaded part {partNo} from {startOffset} to {endOffset}".format(**part))
+def main():
+ # We first create the item
+ list_items()
+ item_id = create_item(RECORD_TITLE)
+ list_files_of_item(item_id)
+ # Then we retrieve the file
+ file_key = retrieve_key()
+ # Then we upload the file.
+ file_info = initiate_new_upload(item_id, file_key)
+ # Until here we used the figshare API; following lines use the figshare upload service API.
+ upload_parts(file_info, file_key)
+ # We return to the figshare API to complete the file upload process.
+ complete_upload(item_id, file_info["id"])
+ list_files_of_item(item_id)
+if __name__ == "__main__":
+ main()
+ Data appears on the portal homepage with the newest uploads appearing first, you also have the option to
+ browse by Popular content and Categories. Categories will only appear available for browsing if there are
+ public items with the category assigned. 
+ The query syntax below applies to the search_for field of the v3 search endpoints
+ ( POST /v3/items/search and POST /v3/account/items/search ). 
+ figshare supports a predefined set of characters for the main search operators and for phrase searches. 
+ Operator 
+ Supported characters 
+ AND 
+ AND 
+ OR 
+ OR 
+ NOT 
+ NOT 
+ field delimiter 
+ : 
+ phrase search delimiter 
+ " " 
+ grouping 
+ ( ) 
+ You can build queries based on the following attributes: 
+ :title: - string (exact match), 
+ :description: - string (exact match), 
+ :tag: - string (exact match), the tag is the keyword used to describe an item such as ":tag: artificial
+ intelligence"
+ :category: - string (exact match), 
+ :author: - string (exact match), 
+ :item_type: - string, the selectable item types are configured per institution; retrieve the available
+ values from GET /v3/item_types 
+ :search_term: - string (will search in all fields and match phrase) 
+ :orcid: - string (exact match) 
+ :extension: - string (exact match for the file extensions) 
+ :references: - string (exact match) 
+ :doi: - string (exact match) 
+ :institution: - string, this is only for institutions that have figshare and you would use the string id
+ from the URL (for example, Loughborough University has the URL https://lboro.figshare.com/ and you would
+ type ":institutions: lboro" into the search bar)
+ :project: - string (exact match) 
+ :published_before: - string (exact match) 
+ :published_after: - string (exact match) 
+ :licence: - string (exact match), for example ":licence: CCBY" 
+ :resource_doi: - string (exact match) 
+ :resource_title: - string (exact match) 
+ :resource_link: - string (exact match) 
+ :article_id: * - string 
+ :categories: * - string 
+ :commissioning_body: * - string 
+ :edition: * - string 
+ :finish_date: * - date (YYYY-MM-DD), supports :before and :after operators 
+ :first_online: * - date (YYYY-MM-DD), supports :before and :after operators 
+ :funding_list: * - string 
+ :issue: * - string 
+ :journal: * - string 
+ :language: * - string 
+ :medium: * - string 
+ :name_of_conference: * - string 
+ :pagination: * - string 
+ :place_of_publication: * - string 
+ :publisher: * - string 
+ :publisher_accepted: * - date (YYYY-MM-DD), supports :before and :after operators 
+ :publisher_published: * - date (YYYY-MM-DD), supports :before and :after operators 
+ :related_materials: * - string 
+ :series: * - string 
+ :start_date: * - date (YYYY-MM-DD), supports :before and :after operators 
+ :thesis_level: * - string 
+ :thesis_name: * - string 
+ :volume: * - string 
+ * Only available on figshare.com or in institutional portals that have the stock field enabled. 
+ In order for the search to filter the attribute the user must use the following syntax: :tag:
+ cell 
+ Simple search 
+ Search string: cell 
+ As a result of this search you will see all figshare items that will contain the word "cell" in any of the
+ metadata fields. The search will also return the items that contain the term cells or all inflected words
+ derived from the common stem. 
+ Phrase search - phase 2 
+ Search string: "stem cell" 
+ As a result of this search you will see all figshare items that will contain the exact phrase "stem cell"
+ in any of the metadata fields. 
+ Multi term search 
+ Search string: cancer cells treatment 
+ As a result of this search you will see all figshare items that contain at least one of the query terms.
+ The results will be ordered by relevance first ones being the ones that would be found in a phrase search if
+ available. 
+ As explained also in the table above the space is used by the figshare search as an OR operator. The search
+ will also return the items that contain all inflected words derived from the common stems. 
+ As the tags might contain special characters they will have a special treatment within the figshare search,
+ where we would do an exact match. The examples below will illustrate how field search works in general and
+ how is customised for tags. 
+ Search string: :tag: cancer cell 
+ This search will return all items with the exact tag cancer cell. 
+ Search string: :tag: music and puppets 
+ This search will return all items with the exact tag music and puppets. Only the operator AND will work as
+ search delimiter. 
+ Search string: :tag: "scrf=(cpcm,solvent=benzene)" 
+ This search will return all items with the exact tag. 
+ Search string: :tag: cancer category chemistry 
+ This search will return all items with the exact tag "cancer category chemistry". If the user wants to
+ break the tag and search also for a specific category please see Combined field search below. 
+ Search string: :title: environmental science 
+ This search will return all items that have at least one of the words in the title working as in field
+ multi-term search by relevance. 
+ Search string: :title: Line balancing for improving production 
+ Figshare engine will add the space where needed between the operator and the actual term This search will
+ return only the items that have the specified phrase included in the title. As usual the search will
+ return also with a lower priority results containing all inflected words derived from the common stems. 
+ Search string: :description: growth of Indian manufacturing sector 
+ This search will return all items that have at least one of the words from above contained in the
+ description from the list above as multi-term search ordered by relevance. As usual, the search will return
+ also with a lower priority results containing all inflected words derived from the common stems. 
+ Search string: description: "industrial case study" 
+ This search will return all items that have the phrase from above contained in the description. As usual,
+ the search will return also with a lower priority results containing all inflected words derived from the
+ common stems. 
+ Search string: :author: M. Hahnel OR :author: J. Smith OR :Author: Albert Einstein 
+ This search will return all items that have at least one of the authors from the list above. 
+ Search string: :title: Line balancing for improving production AND :tag: cancer cell 
+ This search will return all results where the title matches phrase (multi term search by relevance) from
+ above and has the "cancer cell" tag. As usual the search will return also with a lower priority results
+ containing all inflected words derived from the common stems. 
+ Search string: :tag: chemistry applied AND :category: biochemistry 
+ This search will return all results where the tag is chemistry applied and the category is biochemistry. As
+ usual the search will return also with a lower priority results containing all inflected words derived from
+ the common stems. 
+ Search string: :title: science AND :tag: cell AND :search term: private research 
+ This search will return items that have the word science in the title and the tag cell and has the
+ expression private research in any metadata field. 
+ Search string: :title: law OR :tag: democrat AND :search term: respect 
+ This search will return all items that contain law in title or the tag democrat but also contain the word
+ respect in any of the metadata fields. 
+ fig share 's OAI-PMH v2.0 protocol implementation has the following baseURL :
+ https://api.figshare.com/v3/oai 
+ Every record has a datestamp which is the published datetime of that article.
+ The earliest datestamp is given in the <earliestDatestamp> element of the
+ Identify response. 
+ Please let us know that you are harvesting us.
+ Your input will drive the future development of the OAI-PMH protocol at figshare. 
+ An Item in the OAI-PMH interface is the most recent version of an article. 
+ Currently, the supported formats are:
+ Dublin Core ( oai_dc ),
+ Datacite ( oai_datacite ),
+ RDF ( rdf ),
+ CERIF XML ( cerif ),
+ Qualified Dublin Core ( qdc ) (hasPart support),
+ Metadata Encoding and Transmission Standard ( mets ) and UKETD_DC ( uketd_dc ).
+ Results for ListSets , ListIdentifiers , ListRecords are
+ paginated.
+ To request the next page, use the resumptionToken value provided for the
+ current page. You can read more
+ here ,
+ but your harvesting software system should be able to use resumption tokens with
+ no problem. 
+ One particularity on fig share OAI-PMH is the expiration datetime (UTC) for
+ resumption tokens. Thus, a token expires after 60 minutes. 
+ fig share supports the Open Archives Initiative (OAI) and implements the
+ OAI-PMH service to provide access to public articles metadata.
+ For more detailed information, please refer to the
+ protocol specification . 
+ We do not have automatic rate limiting in place for API requests. However, we do carry out monitoring to
+ detect and mitigate abuse and prevent the platform's resources from being overused. We recommend that
+ clients use the API responsibly and do not make more than one request per second. We reserve the right to
+ throttle or block requests if we detect abuse. 
+ You can get a list of all the sets supported with the
+ ListSets verb. 
+ At this moment selectieve harvesting can be performed using sets representing: 
+ an item
+ type 
+ ...
+ <header>
+ <identifier>oai:figshare.com:article/2001969</identifier>
+ <datestamp>2015-08-17T14:09:33Z</datestamp>
+ <setSpec>category_184</setSpec>
+ <setSpec>category_185</setSpec>
+ <setSpec>portal_15</setSpec>
+ <setSpec>item_type_7</setSpec>
+ </header>
+ ...
+ a portal/institution 
+ ...
+ <header>
+ <identifier>oai:figshare.com:article/2009490</identifier>
+ <datestamp>2015-12-16T14:30:27Z</datestamp>
+ <setSpec>category_1</setSpec>
+ <setSpec>category_4</setSpec>
+ <setSpec>category_12</setSpec>
+ <setSpec>category_14</setSpec>
+ <setSpec>category_19</setSpec>
+ <setSpec>category_21</setSpec>
+ <setSpec>category_128</setSpec>
+ <setSpec>category_133</setSpec>
+ <setSpec>category_272</setSpec>
+ <setSpec>category_873</setSpec>
+ <setSpec>category_931</setSpec>
+ <setSpec>portal_63</setSpec>
+ <setSpec>item_type_6</setSpec>
+ </header>
+ ...
+ a category :
+ ...
+ <header>
+ <identifier>oai:figshare.com:article/2058654</identifier>
+ <datestamp>2015-12-27T23:40:01Z</datestamp>
+ <setSpec>category_54</setSpec>
+ <setSpec>category_55</setSpec>
+ <setSpec>category_56</setSpec>
+ <setSpec>category_57</setSpec>
+ <setSpec>category_58</setSpec>
+ <setSpec>category_59</setSpec>
+ <setSpec>category_145</setSpec>
+ <setSpec>category_146</setSpec>
+ <setSpec>category_147</setSpec>
+ <setSpec>category_148</setSpec>
+ <setSpec>category_149</setSpec>
+ <setSpec>category_150</setSpec>
+ <setSpec>category_492</setSpec>
+ <setSpec>category_493</setSpec>
+ <setSpec>category_494</setSpec>
+ <setSpec>category_496</setSpec>
+ <setSpec>category_497</setSpec>
+ <setSpec>category_498</setSpec>
+ <setSpec>category_499</setSpec>
+ <setSpec>category_500</setSpec>
+ <setSpec>category_501</setSpec>
+ <setSpec>category_502</setSpec>
+ <setSpec>item_type_6</setSpec>
+ </header>
+ ...
+ or a month_year :
+ ...
+ <header>
+ <identifier>oai:figshare.com:article/2004335</identifier>
+ <datestamp>2016-10-31T11:14:47Z</datestamp>
+ <setSpec>category_215</setSpec>
+ <setSpec>category_239</setSpec>
+ <setSpec>portal_15</setSpec>
+ <setSpec>item_type_11</setSpec>
+ </header>
+ ...
+ Identify 
+ curl https://api.figshare.com/v3/oai?verb=Identify
+<?xml version='1.0' encoding='utf-8'?>
+<?xml-stylesheet type="text/xsl" href="/v3/static/oai2.xsl"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+ <responseDate>2016-04-29T11:58:28Z</responseDate>
+ <request verb="Identify">https://api.figshare.com/v3/oai</request>
+ <Identify>
+ <repositoryName>figshare</repositoryName>
+ <baseURL>https://api.figshare.com/v3/oai</baseURL>
+ <protocolVersion>2.0</protocolVersion>
+ <adminEmail>info@figshare.com</adminEmail>
+ <earliestDatestamp>2010-01-08T01:24:54Z</earliestDatestamp>
+ <deletedRecord>transient</deletedRecord>
+ <granularity>YYYY-MM-DDThh:mm:ssZ</granularity>
+ </Identify>
+</OAI-PMH>
+ ListSets 
+ curl https://api.figshare.com/v3/oai?verb=ListSets
+<?xml version='1.0' encoding='utf-8'?>
+<?xml-stylesheet type="text/xsl" href="/v3/static/oai2.xsl"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+ <responseDate>2016-04-29T12:00:46Z</responseDate>
+ <request verb="ListSets">https://api.figshare.com/v3/oai</request>
+ <ListSets>
+ <set>
+ <setSpec>portal_147</setSpec>
+ <setName>Karger Publishers</setName>
+ </set>
+ <set>
+ <setSpec>portal_144</setSpec>
+ <setName>Digital Science</setName>
+ </set>
+ <!-- ... -->
+ <set>
+ <setSpec>portal_102</setSpec>
+ <setName>Wiley</setName>
+ </set>
+ <resumptionToken expirationDate="2016-04-29T13:00:46Z">dmVyYj1MaXN0U2V0cyZwYWdlPTI=</resumptionToken>
+ </ListSets>
+</OAI-PMH>
+ ListIdentifiers 
+ Selective harvesting: using set category_539 (Chemical Engineering Design). 
+ curl "https://api.figshare.com/v3/oai?verb=ListIdentifiers&metadataPrefix=oai_dc&set=category_539"
+<?xml version='1.0' encoding='utf-8'?>
+<?xml-stylesheet type="text/xsl" href="/v3/static/oai2.xsl"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+<responseDate>2016-04-29T12:11:18Z</responseDate>
+<request metadataPrefix="oai_dc" set="category_539" verb="ListIdentifiers">https://api.figshare.com/v3/oai</request>
+ <ListIdentifiers>
+ <header>
+ <identifier>oai:figshare.com:article/2060079</identifier>
+ <datestamp>2016-01-04T08:32:32Z</datestamp>
+ <setSpec>category_539</setSpec>
+ <setSpec>category_614</setSpec>
+ <setSpec>category_1094</setSpec>
+ <setSpec>category_1100</setSpec>
+ <setSpec>item_type_6</setSpec>
+ </header>
+ </ListIdentifiers>
+</OAI-PMH>
+ ListRecords 
+ Selective harvesting: only articles published until 2010-08-18T08:33:01Z. 
+ curl "https://api.figshare.com/v3/oai?verb=ListRecords&metadataPrefix=oai_dc&until=2010-08-18T08:33:01Z"
+<?xml version='1.0' encoding='utf-8'?>
+<?xml-stylesheet type="text/xsl" href="/v3/static/oai2.xsl"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+ <responseDate>2016-09-29T08:03:12Z</responseDate>
+ <request metadataPrefix="oai_dc" until="2010-08-18T08:33:01Z" verb="ListRecords">https://api.figshare.com/v3/oai</request>
+ <ListRecords>
+ <record>
+ <header>
+ <identifier>oai:figshare.com:article/145088</identifier>
+ <datestamp>2010-01-08T01:24:54Z</datestamp>
+ <setSpec>category_4</setSpec>
+ <setSpec>category_12</setSpec>
+ <setSpec>portal_5</setSpec>
+ <setSpec>item_type_3</setSpec>
+ </header>
+ <metadata>
+ <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dc="http://purl.org/dc/terms/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+ <dc:title>A Modular BAM Complex in the Outer Membrane of the α-Proteobacterium &lt;em&gt;Caulobacter crescentus&lt;/em&gt;</dc:title>
+ <dc:creator>Anthony W. Purcell (105036)</dc:creator>
+ <dc:creator>Trevor Lithgow (105055)</dc:creator>
+ <dc:creator>Kipros Gabriel (189246)</dc:creator>
+ <dc:creator>Nicholas Noinaj (216256)</dc:creator>
+ <dc:creator>Sebastian Poggio (251019)</dc:creator>
+ <dc:creator>Khatira Anwari (254980)</dc:creator>
+ <dc:creator>Andrew Perry (254989)</dc:creator>
+ <dc:creator>Xenia Gatsos (254994)</dc:creator>
+ <dc:creator>Sri Harsha Ramarathinam (255001)</dc:creator>
+ <dc:creator>Nicholas A. Williamson (255006)</dc:creator>
+ <dc:creator>Susan Buchanan (255012)</dc:creator>
+ <dc:creator>Christine Jacobs-Wagner (255016)</dc:creator>
+ <dc:subject>Biochemistry</dc:subject>
+ <dc:subject>Cell Biology</dc:subject>
+ <dc:subject>modular</dc:subject>
+ <dc:subject>bam</dc:subject>
+ <dc:subject>membrane</dc:subject>
+ <dc:description>&lt;div&gt;&lt;p&gt;Mitochondria are organelles derived from an intracellular α-proteobacterium. The biogenesis of mitochondria relies on the assembly of β-barrel proteins into the mitochondrial outer membrane, a process inherited from the bacterial ancestor. &lt;em&gt;Caulobacter crescentus&lt;/em&gt; is an α-proteobacterium, and the BAM (β-barrel assembly machinery) complex was purified and characterized from this model organism. Like the mitochondrial sorting and assembly machinery complex, we find the BAM complex to be modular in nature. A ∼150 kDa core BAM complex containing BamA, BamB, BamD, and BamE associates with additional modules in the outer membrane. One of these modules, Pal, is a lipoprotein that provides a means for anchorage to the peptidoglycan layer of the cell wall. We suggest the modular design of the BAM complex facilitates access to substrates from the protein translocase in the inner membrane.&lt;/p&gt;&lt;/div&gt;</dc:description>
+ <dc:date>2010-01-08T01:24:48Z</dc:date>
+ <dc:type>Dataset</dc:type>
+ <dc:identifier>10.1371/journal.pone.0008619</dc:identifier>
+ <dc:relation>https://figshare.com/articles/A_Modular_BAM_Complex_in_the_Outer_Membrane_of_the_Proteobacterium_em_Caulobacter_crescentus_em_/145088</dc:relation>
+ <dc:rights>CC BY</dc:rights>
+ </oai_dc:dc>
+ </metadata>
+ </record>
+ </ListRecords>
+</OAI-PMH>
+ Usually, metadata for a published article becomes available in a few moments
+ after its publication on fig share . 
+ Upload HRFeed File 
+ Request 
+ POST /v3/institution/hrfeed/upload
+ The request needs to be of type multipart/form-data and have its Content-Type 
+ header set to the same value; the body of the file is sent as the form data.
+ A typical request looks like this: 
+ POST /v3/institution/hrfeed/upload HTTP/1.1
+Host: api.figshare.com
+Content-Length: 975
+Accept-Encoding: gzip, deflate
+Accept: */*
+User-Agent: python-requests/2.5.3 CPython/2.7.10 Linux/4.1.4-1-ARCH
+Connection: keep-alive
+Content-Type: multipart/form-data; boundary=529448d158064de596afd8f892c84e15
+Authorization: token 86bbaa5d6d51fc0ae2f2defd3a474dac77ae27179ff6d04dd37e74c531bd6ed059eda584b41356337c362a259e482eb36a34825c805344e0600bb875a77444df
+--529448d158064de596afd8f892c84e15
+Content-Disposition: form-data; name="hrfeed"; filename="feed.xml"
+<?xml version="1.0"?>
+<HRFeed>
+ <Record>
+ <UniqueID>1234567</UniqueID>
+ <Orcid>1122-1299-6202-273X</Orcid>
+ <FirstName>Jane</FirstName>
+ <LastName>Doe</LastName>
+ <Title>Mrs</Title>
+ <Initials>JD</Initials>
+ <Suffix></Suffix>
+ <Email>j.doe@sillymail.io</Email>
+ <IsActive>Y</IsActive>
+ <UserQuota>1048576000</UserQuota>
+ <UserAssociationCriteria>IT</UserAssociationCriteria>
+ </Record>
+ <Record>
+ <UniqueID>1234568</UniqueID>
+ <Orcid>0000-0002-3109-4308</Orcid>
+ <FirstName>John</FirstName>
+ <LastName>Smith</LastName>
+ <Title>Mr</Title>
+ <Initials></Initials>
+ <Suffix></Suffix>
+ <Email>js@seriousness.com</Email>
+ <IsActive>Y</IsActive>
+ <UserQuota>10485760000</UserQuota>
+ <UserAssociationCriteria></UserAssociationCriteria>
+ </Record>
+</HRFeed>
+--529448d158064de596afd8f892c84e15--
+ One of the simpler examples is in python . For this to work one would need to install the requests 
+ python package. 
+ #!/usr/bin/env python
+import requests
+FILE_NAME = 'feed.xml'
+API_URL = 'https://api.figshare.com/v3/institution/hrfeed/upload'
+TOKEN = '86bbaa5d6d51fc0ae2f2defd3a474dac77ae27179ff6d04dd37e74c531bd6ed059eda584b41356337c362a259e482eb36a34825c805344e0600bb875a77444df'
+def main():
+ headers = {"Authorization": "token " + TOKEN}
+ with open(FILE_NAME, 'rb') as fin:
+ files = {'hrfeed': (FILE_NAME, fin)}
+ resp = requests.post(API_URL, files=files, headers=headers)
+ print(resp.content)
+ resp.raise_for_status()
+if __name__ == '__main__':
+ main()
+ For java one can use apache httpcomponents : 
+ import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.lang.Throwable;
+import org.apache.http.HttpEntity;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.ContentType;
+import org.apache.http.entity.mime.MultipartEntityBuilder;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+public class HRFeedUploaderExample {
+ public static void main(String[] args) {
+ try {
+ HRFeedUploaderExample hfue = new HRFeedUploaderExample(args[0]);
+ hfue.upload();
+ } catch (Throwable t) {
+ t.printStackTrace(System.err);
+ }
+ }
+ private static final String API_URL = "https://api.figshare.com/v3/institution/hrfeed/upload";
+ private static final String TOKEN = "86bbaa5d6d51fc0ae2f2defd3a474dac77ae27179ff6d04dd37e74c531bd6ed059eda584b41356337c362a259e482eb36a34825c805344e0600bb875a77444df";
+ private String fileName = null;
+ HRFeedUploaderExample(String fileName) {
+ this.fileName = fileName;
+ }
+ public void upload() throws IOException {
+ CloseableHttpClient httpClient = HttpClients.createDefault();
+ HttpPost uploadFile = new HttpPost(API_URL);
+ uploadFile.addHeader("Authorization", "token " + TOKEN);
+ MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+ File file = new File(fileName);
+ builder.addBinaryBody("hrfeed", new FileInputStream(file), ContentType.TEXT_PLAIN, file.getName());
+ HttpEntity multipart = builder.build();
+ uploadFile.setEntity(multipart);
+ CloseableHttpResponse response = httpClient.execute(uploadFile);
+ int status = response.getStatusLine().getStatusCode();
+ System.out.println("Status code was: " + status);
+ }
+}
+ For the .NET / mono users there's this snippet of code: 
+using System;
+using System.Net.Http;
+using System.IO;
+using System.Threading.Tasks;
+namespace HRFeedUploadExample
+{
+ class MainClass
+ {
+ private const String API_URL = "https://api.figshare.com/v3/institution/hrfeed/upload";
+ private const String TOKEN = "86bbaa5d6d51fc0ae2f2defd3a474dac77ae27179ff6d04dd37e74c531bd6ed059eda584b41356337c362a259e482eb36a34825c805344e0600bb875a77444df";
+ private String fileName = null;
+ public static void Main (string[] args)
+ {
+ MainClass app = new MainClass (args [0]);
+ app.Upload ();
+ }
+ MainClass(String fileName) {
+ this.fileName = fileName;
+ }
+ public void Upload() {
+ HttpClient httpClient = new HttpClient ();
+ httpClient.DefaultRequestHeaders.Add ("Authorization", "token " + MainClass.TOKEN);
+ MultipartFormDataContent form = new MultipartFormDataContent ();
+ using (StreamReader sr = new StreamReader (this.fileName)) {
+ String content = sr.ReadToEnd ();
+ byte[] data = System.Text.Encoding.UTF8.GetBytes (content);
+ form.Add (new ByteArrayContent (data, 0, data.Length), "hrfeed", this.fileName);
+ }
+ Task<HttpResponseMessage> task = httpClient.PostAsync (MainClass.API_URL, form);
+ task.Wait();
+ HttpResponseMessage response = task.Result;
+ response.EnsureSuccessStatusCode();
+ Console.WriteLine ("Status code was: " + response.StatusCode);
+ httpClient.Dispose();
+ }
+ }
+}
+ Probably one of the most versatile ways of uploading an HRFeed is through curl given the
+ possibility
+ of integrating it into any other command line utility on linux/unix. 
+ curl -XPOST\
+ -H"Authorization: token 86bbaa5d6d51fc0ae2f2defd3a474dac77ae27179ff6d04dd37e74c531bd6ed059eda584b41356337c362a259e482eb36a34825c805344e0600bb875a77444df"\
+ -F"hrfeed=@feed.csv"\
+ https://api.figshare.com/v3/institution/hrfeed/upload
+ {
+ "message": "OK",
+ "code": "200"
+}
+ Standard error responses 
+ Most common: 
+ {
+ "message": "Previous feed import not complete.",
+ "data": null,
+ "errcode": "FigshareAPIException"
+}
+ when the feed has already been submitted within a 24 hour span. 
+ The success response doesn't give much information other than the fact that the system has
+ understood the request, has received the file and has initiated the necessary tasks.
+ There are plans for a way to get more in depth information for the state of the HRFeed
+ Process . 
+ The token given in the upper examples is a general fig share API personal token of
+ any of
+ the admins at the institution. No other user should be able to access this endpoint, apart from
+ those given the express permission of uploading HR feeds. 
+ In the item-type based metadata API, item metadata (core, stock and custom fields) is set through the
+ fields object when creating or updating an item — see POST /v3/account/items 
+ and PUT /v3/account/items/{item_id} . To discover the fields available to your institution and
+ how they are configured per item type, use the catalog endpoints: 
+ GET /v3/account/items/fields - list the underlying field definitions (core, stock and
+ custom) 
+ GET /v3/account/items/fields/configuration/{item_type_id} - the fields configured for a
+ specific item type (display name, hint text, whether mandatory, order, display area, settings) 
+ GET /v3/item_types - the institution's selectable item types with their field
+ configuration 
+ The equivalent catalogs exist for projects and collections:
+ GET /v3/account/projects/fields and GET /v3/account/collections/fields . 
+ Upload Field Values File 
+ Request 
+ POST /v3/account/institution/fields/{field_id}/items/upload
+ Uploads a CSV containing values for a specific field of type dropdown_large_list . The
+ field_id path parameter accepts both classic custom field IDs (legacy) and underlying field
+ IDs; the lookup is performed automatically, so no additional parameter is required. 
+ The request needs to be of type multipart/form-data and have its Content-Type 
+ header set to the same value; the body of the file is sent as the form data.
+ A typical request looks like this: 
+ POST /v3/account/institution/fields/{field_id}/items/upload HTTP/1.1
+Host: api.figshare.com
+Content-Length: 975
+Accept-Encoding: gzip, deflate
+Accept: */*
+User-Agent: python-requests/2.5.3 CPython/2.7.10 Linux/4.1.4-1-ARCH
+Connection: keep-alive
+Content-Type: multipart/form-data; boundary=529448d158064de596afd8f892c84e15
+Authorization: token 86bbaa5d6d51fc0ae2f2defd3a474dac77ae27179ff6d04dd37e74c531bd6ed059eda584b41356337c362a259e482eb36a34825c805344e0600bb875a77444df
+--529448d158064de596afd8f892c84e15
+Content-Disposition: form-data; name="external_file"; filename="example_file.csv"
+[file content goes there]
+--529448d158064de596afd8f892c84e15--
+ One of the simpler examples is in python . For this to work one would need to install the requests 
+ python package. 
+ #!/usr/bin/env python
+import requests
+FILE_NAME = 'example_file.csv'
+API_URL = 'https://api.figshare.com/v3/account/institution/fields/{field_id}/items/upload'.format(field_id=1)
+TOKEN = '86bbaa5d6d51fc0ae2f2defd3a474dac77ae27179ff6d04dd37e74c531bd6ed059eda584b41356337c362a259e482eb36a34825c805344e0600bb875a77444df'
+def main():
+ headers = {"Authorization": "token " + TOKEN}
+ with open(FILE_NAME, 'rb') as fin:
+ files = {'external_file': (FILE_NAME, fin)}
+ resp = requests.post(API_URL, files=files, headers=headers)
+ print(resp.content)
+ resp.raise_for_status()
+ For java one can use apache httpcomponents : 
+ import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.lang.Throwable;
+import org.apache.http.HttpEntity;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.ContentType;
+import org.apache.http.entity.mime.MultipartEntityBuilder;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+public class CSVUploaderExample {
+ public static void main(String[] args) {
+ try {
+ CSVUploaderExample ex = new CSVUploaderExample(args[0]);
+ ex.upload();
+ } catch (Throwable t) {
+ t.printStackTrace(System.err);
+ }
+ }
+ private static final String API_URL = "https://api.figshare.com/v3/account/institution/fields/1/items/upload";
+ private static final String TOKEN = "86bbaa5d6d51fc0ae2f2defd3a474dac77ae27179ff6d04dd37e74c531bd6ed059eda584b41356337c362a259e482eb36a34825c805344e0600bb875a77444df";
+ private String fileName = null;
+ CSVUploaderExample(String fileName) {
+ this.fileName = fileName;
+ }
+ public void upload() throws IOException {
+ CloseableHttpClient httpClient = HttpClients.createDefault();
+ HttpPost uploadFile = new HttpPost(API_URL);
+ uploadFile.addHeader("Authorization", "token " + TOKEN);
+ MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+ File file = new File(fileName);
+ builder.addBinaryBody("external_file", new FileInputStream(file), ContentType.TEXT_PLAIN, file.getName());
+ HttpEntity multipart = builder.build();
+ uploadFile.setEntity(multipart);
+ CloseableHttpResponse response = httpClient.execute(uploadFile);
+ int status = response.getStatusLine().getStatusCode();
+ System.out.println("Status code was: " + status);
+ }
+}
+ For the .NET / mono users there's this snippet of code: 
+using System;
+using System.Net.Http;
+using System.IO;
+using System.Threading.Tasks;
+namespace CSVUploaderExample
+{
+ class MainClass
+ {
+ private const String API_URL = "https://api.figshare.com/v3/account/institution/fields/1/items/upload";
+ private const String TOKEN = "86bbaa5d6d51fc0ae2f2defd3a474dac77ae27179ff6d04dd37e74c531bd6ed059eda584b41356337c362a259e482eb36a34825c805344e0600bb875a77444df";
+ private String fileName = null;
+ public static void Main (string[] args)
+ {
+ MainClass app = new MainClass (args [0]);
+ app.Upload ();
+ }
+ MainClass(String fileName) {
+ this.fileName = fileName;
+ }
+ public void Upload() {
+ HttpClient httpClient = new HttpClient ();
+ httpClient.DefaultRequestHeaders.Add ("Authorization", "token " + MainClass.TOKEN);
+ MultipartFormDataContent form = new MultipartFormDataContent ();
+ using (StreamReader sr = new StreamReader (this.fileName)) {
+ String content = sr.ReadToEnd ();
+ byte[] data = System.Text.Encoding.UTF8.GetBytes (content);
+ form.Add (new ByteArrayContent (data, 0, data.Length), "external_file", this.fileName);
+ }
+ Task task = httpClient.PostAsync (MainClass.API_URL, form);
+ task.Wait();
+ HttpResponseMessage response = task.Result;
+ response.EnsureSuccessStatusCode();
+ Console.WriteLine ("Status code was: " + response.StatusCode);
+ httpClient.Dispose();
+ }
+ }
+}
+ Probably one of the most versatile ways of uploading a field values CSV is through
+ curl given the possibility
+ of integrating it into any other command line utility on linux/unix. 
+ curl -XPOST\
+ -H"Authorization: token 86bbaa5d6d51fc0ae2f2defd3a474dac77ae27179ff6d04dd37e74c531bd6ed059eda584b41356337c362a259e482eb36a34825c805344e0600bb875a77444df"\
+ -F"external_file=@my_file.csv"\
+ https://api.figshare.com/v3/account/institution/fields/1/items/upload
+ {
+ "message": "OK",
+ "code": "200"
+}
+ Standard error responses 
+ Other specific errors: 
+ {
+ "message": "Previous import still in progress!",
+ "code": "PreviousCustomFieldUploadNotComplete"
+}
+ when the feed has already been submitted within a 60 minutes span. 
+ {
+ "message": "You are not allowed to upload values for this field",
+ "code": "DropdownLargeListFieldUpdateUnauthorizedError"
+}
+ when the user is not authorized to make the upload 
+ {
+ "message": "This field cannot be updated via this method",
+ "code": "BadRequest"
+}
+ when trying to upload a file for a field of a different type besides dropdown_large_list. 
+ The success response only indicates the fact that the system has
+ understood the request, has received the file and has initiated the necessary tasks. It is not a
+ confirmation that the file processing is complete.
+ The token given in the upper examples is a general Fig share API personal belonging
+ to an admin/owner
+ of the group the field has been created in (either institutional admin or group admin/owner). No
+ other users
+ should be able to use this endpoint (otherwise an Unauthorised error will be returned).
+ By default, only one file upload can be initiated every 60 minutes per portal. The enforced delay will not be
+ automatically lifted
+ if the field is deleted in the meantime. The length of this enforced delay can be customized by
+ submitting a request to Figshare support. 
+ The only supported file format at the moment is CSV. The first line of the file will be ignored, as it is
+ assumed to be a header row.
+ For all further rows, the values in all columns will be concatenated, with a single space inserted between
+ each pair of values,
+ and the result will be added as an item for the field.
+ For example, the following file content: 
+ header1,header2,header 3
+ 123,My awesome field value,456
+ will generate a single field value 123 My awesome field value 456. 
+ Values must have a minimum of 3 characters and a maximum of 255 characters. All values outside of this
+ interval will simply be ignored. 
+ The definite guide for figshare and the home of all user documentation. 
+ The sources for these pages are publicly hosted on github at figshare/user_documentation 
+ and it's open for contributions. If you feel you can improve anything, fix a mistake, expand on a topic,
+ feel free to open up a pull request. 
+ We are Open API compatible, you can download the Open API Swagger specification here 
+ Base URL 
+ All URLs referenced in the documentation have the following base: 
+ https://api.figshare.com/v2 
+ The Figshare REST API is served over HTTPS. To ensure data privacy, unencrypted HTTP is not supported. 
+ Authentication 
+ Figshare supports the OAuth 2.0 Authorization Framework. See more about it in the OAuth section.
+ fig share OAI-PMH v2.0 implementation has at the following baseURL :
+ https://api.figshare.com/v2/oai 
+ Every record has a datestamp which is the published datetime of that article.
+ The earliest datestamp is given in the <earliestDatestamp> element of the
+ Identify response. 
+ Please let us know that you are harvesting us.
+ Your input will drive the future development of the OAI-PMH protocol at figshare. 
+ An Item in the OAI-PMH interface is the most recent version of an article. 
+ Currently, the supported formats are:
+ Dublin Core ( oai_dc ),
+ Datacite ( oai_datacite ),
+ RDF ( rdf ),
+ CERIF XML ( cerif ),
+ Qualified Dublin Core ( qdc ) (hasPart support),
+ Metadata Encoding and Transmission Standard ( mets ) and UKETD_DC ( uketd_dc ).
+ Results for ListSets , ListIdentifiers , ListRecords are
+ paginated.
+ To request the next page, use the resumptionToken value provided for the
+ current page. You can read more
+ here ,
+ but your harvesting software system should be able to use resumption tokens with
+ no problem. 
+ One particularity on fig share OAI-PMH is the expiration datetime (UTC) for
+ resumption tokens. Thus, a token expires after 60 minutes. 
+ fig share supports the Open Archives Initiative (OAI) and implements the
+ OAI-PMH service to provide access to public articles metadata.
+ For more detailed information, please refer to the
+ protocol specification . 
+ We do not have automatic rate limiting in place for API requests. However, we do carry out monitoring to
+ detect and mitigate abuse and prevent the platform's resources from being overused. We recommend that
+ clients use the API responsibly and do not make more than one request per second. We reserve the right to
+ throttle or block requests if we detect abuse. 
+ You can get a list of all the sets supported with the
+ ListSets verb. 
+ At this moment selectieve harvesting can be performed using sets representing: 
+ an item
+ type 
+ ...
+ <header>
+ <identifier>oai:figshare.com:article/2001969</identifier>
+ <datestamp>2015-08-17T14:09:33Z</datestamp>
+ <setSpec>category_184</setSpec>
+ <setSpec>category_185</setSpec>
+ <setSpec>portal_15</setSpec>
+ <setSpec>item_type_7</setSpec>
+ </header>
+ ...
+ a portal/institution 
+ ...
+ <header>
+ <identifier>oai:figshare.com:article/2009490</identifier>
+ <datestamp>2015-12-16T14:30:27Z</datestamp>
+ <setSpec>category_1</setSpec>
+ <setSpec>category_4</setSpec>
+ <setSpec>category_12</setSpec>
+ <setSpec>category_14</setSpec>
+ <setSpec>category_19</setSpec>
+ <setSpec>category_21</setSpec>
+ <setSpec>category_128</setSpec>
+ <setSpec>category_133</setSpec>
+ <setSpec>category_272</setSpec>
+ <setSpec>category_873</setSpec>
+ <setSpec>category_931</setSpec>
+ <setSpec>portal_63</setSpec>
+ <setSpec>item_type_6</setSpec>
+ </header>
+ ...
+ a category :
+ ...
+ <header>
+ <identifier>oai:figshare.com:article/2058654</identifier>
+ <datestamp>2015-12-27T23:40:01Z</datestamp>
+ <setSpec>category_54</setSpec>
+ <setSpec>category_55</setSpec>
+ <setSpec>category_56</setSpec>
+ <setSpec>category_57</setSpec>
+ <setSpec>category_58</setSpec>
+ <setSpec>category_59</setSpec>
+ <setSpec>category_145</setSpec>
+ <setSpec>category_146</setSpec>
+ <setSpec>category_147</setSpec>
+ <setSpec>category_148</setSpec>
+ <setSpec>category_149</setSpec>
+ <setSpec>category_150</setSpec>
+ <setSpec>category_492</setSpec>
+ <setSpec>category_493</setSpec>
+ <setSpec>category_494</setSpec>
+ <setSpec>category_496</setSpec>
+ <setSpec>category_497</setSpec>
+ <setSpec>category_498</setSpec>
+ <setSpec>category_499</setSpec>
+ <setSpec>category_500</setSpec>
+ <setSpec>category_501</setSpec>
+ <setSpec>category_502</setSpec>
+ <setSpec>item_type_6</setSpec>
+ </header>
+ ...
+ or a month_year :
+ ...
+ <header>
+ <identifier>oai:figshare.com:article/2004335</identifier>
+ <datestamp>2016-10-31T11:14:47Z</datestamp>
+ <setSpec>category_215</setSpec>
+ <setSpec>category_239</setSpec>
+ <setSpec>portal_15</setSpec>
+ <setSpec>item_type_11</setSpec>
+ </header>
+ ...
+ Identify 
+ curl https://api.figshare.com/v2/oai?verb=Identify
+<?xml version='1.0' encoding='utf-8'?>
+<?xml-stylesheet type="text/xsl" href="/v2/static/oai2.xsl"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+ <responseDate>2016-04-29T11:58:28Z</responseDate>
+ <request verb="Identify">https://api.figshare.com/v2/oai</request>
+ <Identify>
+ <repositoryName>figshare</repositoryName>
+ <baseURL>https://api.figshare.com/v2/oai</baseURL>
+ <protocolVersion>2.0</protocolVersion>
+ <adminEmail>info@figshare.com</adminEmail>
+ <earliestDatestamp>2010-01-08T01:24:54Z</earliestDatestamp>
+ <deletedRecord>transient</deletedRecord>
+ <granularity>YYYY-MM-DDThh:mm:ssZ</granularity>
+ </Identify>
+</OAI-PMH>
+ ListSets 
+ curl https://api.figshare.com/v2/oai?verb=ListSets
+<?xml version='1.0' encoding='utf-8'?>
+<?xml-stylesheet type="text/xsl" href="/v2/static/oai2.xsl"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+ <responseDate>2016-04-29T12:00:46Z</responseDate>
+ <request verb="ListSets">https://api.figshare.com/v2/oai</request>
+ <ListSets>
+ <set>
+ <setSpec>portal_147</setSpec>
+ <setName>Karger Publishers</setName>
+ </set>
+ <set>
+ <setSpec>portal_144</setSpec>
+ <setName>Digital Science</setName>
+ </set>
+ <!-- ... -->
+ <set>
+ <setSpec>portal_102</setSpec>
+ <setName>Wiley</setName>
+ </set>
+ <resumptionToken expirationDate="2016-04-29T13:00:46Z">dmVyYj1MaXN0U2V0cyZwYWdlPTI=</resumptionToken>
+ </ListSets>
+</OAI-PMH>
+ ListIdentifiers 
+ Selective harvesting: using set category_539 (Chemical Engineering Design). 
+ curl "https://api.figshare.com/v2/oai?verb=ListIdentifiers&metadataPrefix=oai_dc&set=category_539"
+<?xml version='1.0' encoding='utf-8'?>
+<?xml-stylesheet type="text/xsl" href="/v2/static/oai2.xsl"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+<responseDate>2016-04-29T12:11:18Z</responseDate>
+<request metadataPrefix="oai_dc" set="category_539" verb="ListIdentifiers">https://api.figshare.com/v2/oai</request>
+ <ListIdentifiers>
+ <header>
+ <identifier>oai:figshare.com:article/2060079</identifier>
+ <datestamp>2016-01-04T08:32:32Z</datestamp>
+ <setSpec>category_539</setSpec>
+ <setSpec>category_614</setSpec>
+ <setSpec>category_1094</setSpec>
+ <setSpec>category_1100</setSpec>
+ <setSpec>item_type_6</setSpec>
+ </header>
+ </ListIdentifiers>
+</OAI-PMH>
+ ListRecords 
+ Selective harvesting: only articles published until 2010-08-18T08:33:01Z. 
+ curl "https://api.figshare.com/v2/oai?verb=ListRecords&metadataPrefix=oai_dc&until=2010-08-18T08:33:01Z"
+<?xml version='1.0' encoding='utf-8'?>
+<?xml-stylesheet type="text/xsl" href="/v2/static/oai2.xsl"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+ <responseDate>2016-09-29T08:03:12Z</responseDate>
+ <request metadataPrefix="oai_dc" until="2010-08-18T08:33:01Z" verb="ListRecords">https://api.figshare.com/v2/oai</request>
+ <ListRecords>
+ <record>
+ <header>
+ <identifier>oai:figshare.com:article/145088</identifier>
+ <datestamp>2010-01-08T01:24:54Z</datestamp>
+ <setSpec>category_4</setSpec>
+ <setSpec>category_12</setSpec>
+ <setSpec>portal_5</setSpec>
+ <setSpec>item_type_3</setSpec>
+ </header>
+ <metadata>
+ <oai_dc:dc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dc="http://purl.org/dc/terms/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+ <dc:title>A Modular BAM Complex in the Outer Membrane of the α-Proteobacterium &lt;em&gt;Caulobacter crescentus&lt;/em&gt;</dc:title>
+ <dc:creator>Anthony W. Purcell (105036)</dc:creator>
+ <dc:creator>Trevor Lithgow (105055)</dc:creator>
+ <dc:creator>Kipros Gabriel (189246)</dc:creator>
+ <dc:creator>Nicholas Noinaj (216256)</dc:creator>
+ <dc:creator>Sebastian Poggio (251019)</dc:creator>
+ <dc:creator>Khatira Anwari (254980)</dc:creator>
+ <dc:creator>Andrew Perry (254989)</dc:creator>
+ <dc:creator>Xenia Gatsos (254994)</dc:creator>
+ <dc:creator>Sri Harsha Ramarathinam (255001)</dc:creator>
+ <dc:creator>Nicholas A. Williamson (255006)</dc:creator>
+ <dc:creator>Susan Buchanan (255012)</dc:creator>
+ <dc:creator>Christine Jacobs-Wagner (255016)</dc:creator>
+ <dc:subject>Biochemistry</dc:subject>
+ <dc:subject>Cell Biology</dc:subject>
+ <dc:subject>modular</dc:subject>
+ <dc:subject>bam</dc:subject>
+ <dc:subject>membrane</dc:subject>
+ <dc:description>&lt;div&gt;&lt;p&gt;Mitochondria are organelles derived from an intracellular α-proteobacterium. The biogenesis of mitochondria relies on the assembly of β-barrel proteins into the mitochondrial outer membrane, a process inherited from the bacterial ancestor. &lt;em&gt;Caulobacter crescentus&lt;/em&gt; is an α-proteobacterium, and the BAM (β-barrel assembly machinery) complex was purified and characterized from this model organism. Like the mitochondrial sorting and assembly machinery complex, we find the BAM complex to be modular in nature. A ∼150 kDa core BAM complex containing BamA, BamB, BamD, and BamE associates with additional modules in the outer membrane. One of these modules, Pal, is a lipoprotein that provides a means for anchorage to the peptidoglycan layer of the cell wall. We suggest the modular design of the BAM complex facilitates access to substrates from the protein translocase in the inner membrane.&lt;/p&gt;&lt;/div&gt;</dc:description>
+ <dc:date>2010-01-08T01:24:48Z</dc:date>
+ <dc:type>Dataset</dc:type>
+ <dc:identifier>10.1371/journal.pone.0008619</dc:identifier>
+ <dc:relation>https://figshare.com/articles/A_Modular_BAM_Complex_in_the_Outer_Membrane_of_the_Proteobacterium_em_Caulobacter_crescentus_em_/145088</dc:relation>
+ <dc:rights>CC BY</dc:rights>
+ </oai_dc:dc>
+ </metadata>
+ </record>
+ </ListRecords>
+</OAI-PMH>
+ Usually, metadata for a published article becomes available in a few moments
+ after its publication on fig share . 
+ Grant Types 
+ The supported grant types at this moment are: 
+ authorization_code 
+ refresh_token 
+ password 
+ Since January 2016 figshare supports the OAuth 2.0
+ Authorization Framework . If you're new to OAuth make sure you have at least a basic understanding before
+ moving on. 
+ Quick guide 
+ To receive a client id and secret you need to register an application in
+ our system. You can easily do this from the figshare
+ applications
+ page in your account. 
+ Authorization endpoint 
+ The authorization endpoint is located at
+ https://figshare.com/account/applications/authorize . The endpoint
+ supports both
+ authorization code grant and implicit grant . 
+ Request params 
+ client_id 
+ response_type 
+ scope 
+ state 
+ redirect_uri 
+ Response params 
+ User is redirected back to redirect_uri with the following params
+ added to the query: 
+ Success as described in rfc6749#section-4.1.2 
+ or rfc6749#section-4.2.2 : 
+ code 
+ state 
+ Error as described in rfc6749#4.1.2.1 :
+ error 
+ error_description 
+ Token endpoint 
+ The token endpoint is located at https://api.figshare.com/v2/token .
+ In order to receive an access token you need to make a POST request. 
+ To get info about an existing access token use the GET method with the usual authorization
+ means. 
+ Request 
+ Then endpoint accepts both application/x-www-form-urlencoded and
+ application/json content types. It will only respond with JSON
+ content. 
+ client_id 
+ client_secret 
+ grant_type 
+ and, based on the value of grant_type : 
+ code 
+ refresh_token 
+ username 
+ password 
+ Response 
+ Successful responses are always 200 and failed ones are always 400 ,
+ even for failed authorization. 
+ Success response is a JSON as described in http://tools.ietf.org/html/rfc6749#section-5.1 .
+ access_token 
+ token_type 
+ expires_in 
+ refresh_token 
+ scope - not available yet 
+ Error response as described in rfc6749#section-5.2 
+ Scope 
+ Currently the only scope available is all which grants full access to
+ the resource owner's data. We're working on a more flexible approach. 
+ As the tags might contain special characters they will have a special treatment within the figshare search,
+ where we would do an exact match. The examples below will illustrate how field search works in general and
+ how is customised for tags. 
+ Search string: :tag: cancer cell 
+ This search will return all articles with the exact tag cancer cell. 
+ Search string: :tag: music and puppets 
+ This search will return all articles with the exact tag music and puppets. Only the operator AND will work as
+ search delimiter. 
+ Search string: :tag: "scrf=(cpcm,solvent=benzene)" 
+ This search will return all articles with the exact tag. 
+ Search string: :tag: cancer category chemistry 
+ This search will return all articles with the exact tag "cancer category chemistry". If the user wants to
+ break the tag and search also for a specific category please see Combined field search below. 
+ Search string: :title: environmental science 
+ This search will return all articles that have at least one of the words in the title working as in field
+ multi-term search by relevance. 
+ Search string: :title: Line balancing for improving production 
+ Figshare engine will add the space where needed between the operator and the actual term This search will
+ return only the articles that have the specified phrase included in the title. As usual the search will
+ return also with a lower priority results containing all inflected words derived from the common stems. 
+ Search string: :description: growth of Indian manufacturing sector 
+ This search will return all articles that have at least one of the words from above contained in the
+ description from the list above as multi-term search ordered by relevance. As usual, the search will return
+ also with a lower priority results containing all inflected words derived from the common stems. 
+ Search string: description: "industrial case study" 
+ This search will return all articles that have the phrase from above contained in the description. As usual,
+ the search will return also with a lower priority results containing all inflected words derived from the
+ common stems. 
+ You can build queries based on the following attributes: 
+ :title: - string (exact match), 
+ :description: - string (exact match), 
+ :tag: - string (exact match), the tag is the keyword used to describe an item such as ":tag: artificial
+ intelligence"
+ :category: - string (exact match), 
+ :author: - string (exact match), 
+ :item_type: - string, can be one of the following: [article, project, collection, dataset, figure,
+ poster, media, presentation, paper, fileset, thesis, code]
+ :search_term: - string (will search in all fields and match phrase) 
+ :orcid: - string (exact match) 
+ :extension: - string (exact match for the file extensions) 
+ :references: - string (exact match) 
+ :doi: - string (exact match) 
+ :institution: - string, this is only for institutions that have figshare and you would use the string id
+ from the URL (for example, Loughborough University has the URL https://lboro.figshare.com/ and you would
+ type ":institutions: lboro" into the search bar)
+ :project: - string (exact match) 
+ :published_before: - string (exact match) 
+ :published_after: - string (exact match) 
+ :licence: - string (exact match), for example ":licence: CCBY" 
+ :resource_doi: - string (exact match) 
+ :resource_title: - string (exact match) 
+ :resource_link: - string (exact match) 
+ In order for the search to filter the attribute the user must use the following syntax: :tag:
+ cell 
+ Search string: :author: M. Hahnel OR :author: J. Smith OR :Author: Albert Einstein 
+ This search will return all articles that have at least one of the authors from the list above. 
+ Search string: :title: Line balancing for improving production AND :tag: cancer cell 
+ This search will return all results where the title matches phrase (multi term search by relevance) from
+ above and has the "cancer cell" tag. As usual the search will return also with a lower priority results
+ containing all inflected words derived from the common stems. 
+ Search string: :tag: chemistry applied AND :category: biochemistry 
+ This search will return all results where the tag is chemistry applied and the category is biochemistry. As
+ usual the search will return also with a lower priority results containing all inflected words derived from
+ the common stems. 
+ Search string: :title: science AND :tag: cell AND :search term: private research 
+ This search will return articles that have the word science in the title and the tag cell and has the
+ expression private research in any metadata field. 
+ Search string: :title: law OR :tag: democrat AND :search term: respect 
+ This search will return all articles that contain law in title or the tag democrat but also contain the word
+ respect in any of the metadata fields. 
+ Data appears on the portal homepage with the newest uploads appearing first, you also have the option to
+ browse by Popular content and Categories. Categories will only appear available for browsing if there are
+ public items with the category assigned. 
+ figshare supports a predefined set of characters for the main search operators and for phrase searches. 
+ Operator 
+ Supported characters 
+ AND 
+ AND 
+ OR 
+ OR 
+ NOT 
+ NOT 
+ field delimiter 
+ : 
+ phrase search delimiter 
+ " " 
+ grouping 
+ ( ) 
+ Simple search 
+ Search string: cell 
+ As a result of this search you will see all figshare articles that will contain the word "cell" in any of the
+ metadata fields. The search will also return the articles that contain the term cells or all inflected words
+ derived from the common stem. 
+ Phrase search - phase 2 
+ Search string: "stem cell" 
+ As a result of this search you will see all figshare articles that will contain the exact phrase "stem cell"
+ in any of the metadata fields. 
+ Multi term search 
+ Search string: cancer cells treatment 
+ As a result of this search you will see all figshare articles that contain at least one of the query terms.
+ The results will be ordered by relevance first ones being the ones that would be found in a phrase search if
+ available. 
+ As explained also in the table above the space is used by the figshare search as an OR operator. The search
+ will also return the articles that contain all inflected words derived from the common stems. 
+ Basic HTTP authentication is required for timeline endpoints within the scope of an institution. 
+ This type of endpoint enables the retrieval of a geo-location breakdown of the number
+ of views , downloads or shares for a specific item. 
+ Authorization 
+ Endpoint format 
+ Request parameters 
+ Examples 
+ Daily breakdown of views for an unaffiliated
+ article 
+ Request 
+ GET https://stats.figshare.com/breakdown/day/views/article/766364?start_date=2017-04-19&end_date=2017-04-21 
+ Response 
+ HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+ {
+ "breakdown": {
+ "2017-04-20": {
+ "United States": {
+ "Bellevue": 1,
+ "Fayetteville": 2,
+ "total": 7,
+ "Wilmington": 3,
+ "Everett": 1
+ },
+ "Netherlands": {
+ "Unknown": 1,
+ "total": 2,
+ "Venlo": 1
+ },
+ "Pakistan": {
+ "Karachi": 2,
+ "total": 2
+ },
+ "South Africa": {
+ "Johannesburg": 2,
+ "total": 2
+ },
+ "United Kingdom": {
+ "Grimsby": 1,
+ "Southampton": 1,
+ "Liverpool": 1,
+ "Unknown": 2,
+ "Huntingdon": 1,
+ "Falkirk": 1,
+ "Middlesbrough": 1,
+ "London": 1,
+ "Oxford": 1,
+ "Colchester": 1,
+ "total": 12
+ },
+ "Ethiopia": {
+ "Unknown": 2,
+ "total": 2
+ },
+ "Sweden": {
+ "total": 2,
+ "Avesta": 2
+ },
+ "Australia": {
+ "Unknown": 1,
+ "total": 2,
+ "Darwin": 1
+ },
+ "Ireland": {
+ "total": 2,
+ "Dublin": 2
+ },
+ "Japan": {
+ "total": 1,
+ "Tokyo": 1
+ }
+ },
+ "2017-04-19": {
+ "Brazil": {
+ "Unknown": 1,
+ "total": 1
+ },
+ "United Kingdom": {
+ "Coventry": 1,
+ "Unknown": 1,
+ "Twickenham": 1,
+ "Canterbury": 1,
+ "Huddersfield": 1,
+ "total": 5
+ },
+ "Netherlands": {
+ "Babberich": 1,
+ "total": 3,
+ "Unknown": 1,
+ "Enschede": 1
+ },
+ "Canada": {
+ "total": 1,
+ "Niagara Falls": 1
+ },
+ "Egypt": {
+ "Unknown": 2,
+ "total": 2
+ },
+ "United Arab Emirates": {
+ "Dubai": 2,
+ "total": 2
+ },
+ "France": {
+ "total": 2,
+ "Nantes": 2
+ },
+ "United States": {
+ "Unknown": 3,
+ "Kansas City": 1,
+ "Mountain View": 1,
+ "San Francisco": 1,
+ "total": 7,
+ "Pomona": 1
+ },
+ "Australia": {
+ "Perth": 1,
+ "total": 6,
+ "Darwin": 1,
+ "Sydney": 3,
+ "Unknown": 1
+ },
+ "Chile": {
+ "Osorno": 1,
+ "total": 1
+ }
+ }
+ }
+}
+ Yearly breakdown of views for an
+ article 
+ Request 
+ GET https://stats.figshare.com/breakdown/year/views/article/766364?start_date=2015-04-19&end_date=2016-04-21 
+ Response 
+ HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+{
+ "breakdown": {
+ "2015": {
+ "Canada": {
+ "Toronto": 120,
+ "Edmonton": 35,
+ "Burnaby": 15,
+ "Ottawa": 46,
+ "London": 20,
+ "Vancouver": 45,
+ "Unkown": 49,
+ "Calgary": 19,
+ "Hamilton": 26,
+ "total": 688,
+ "Montreal": 36
+ },
+ "United Kingdom": {
+ "Edinburgh": 97,
+ "Liverpool": 47,
+ "Sheffield": 58,
+ "Leeds": 44,
+ "Unkown": 253,
+ "Nottingham": 56,
+ "Manchester": 78,
+ "London": 280,
+ "total": 1957,
+ "Birmingham": 51,
+ "Glasgow": 37
+ },
+ "Australia": {
+ "Bundoora": 16,
+ "Clayton North": 22,
+ "Canberra": 21,
+ "Brisbane": 153,
+ "Unkown": 249,
+ "Melbourne": 109,
+ "Perth": 99,
+ "Sydney": 114,
+ "Streaky Bay": 20,
+ "total": 1355,
+ "Adelaide": 62
+ },
+ "Singapore": {
+ "total": 195,
+ "Unkown": 13,
+ "Singapore": 182
+ },
+ "Unknown": {
+ "Unknown": 331,
+ "total": 345,
+ "Unkown": 14
+ },
+ "India": {
+ "New Delhi": 11,
+ "Pune": 8,
+ "Chennai": 9,
+ "Mumbai": 42,
+ "Delhi": 10,
+ "Unkown": 30,
+ "Chandigarh": 4,
+ "Hyderabad": 10,
+ "Kolkata": 7,
+ "Bangalore": 13,
+ "total": 191
+ },
+ "United States": {
+ "Phoenix": 33,
+ "Mountain View": 633,
+ "Washington": 36,
+ "Unkown": 232,
+ "Brooklyn": 31,
+ "New York": 46,
+ "Los Angeles": 43,
+ "Boston": 40,
+ "San Francisco": 81,
+ "total": 3415,
+ "Baltimore": 32
+ },
+ "Netherlands": {
+ "Groningen": 10,
+ "total": 161,
+ "The Hague": 4,
+ "Amstelveen": 4,
+ "Unkown": 26,
+ "Maastricht": 8,
+ "Utrecht": 9,
+ "Nijmegen": 4,
+ "Amsterdam": 17,
+ "Rotterdam": 14,
+ "Enschede": 5
+ },
+ "Ireland": {
+ "Galway": 22,
+ "Sligo": 3,
+ "Navan": 2,
+ "Drogheda": 2,
+ "Limerick": 5,
+ "Dublin": 84,
+ "Unkown": 67,
+ "Cork": 28,
+ "Ballina": 1,
+ "Naas": 2,
+ "total": 226
+ },
+ "Denmark": {
+ "Nibe": 2,
+ "Svendborg": 2,
+ "Odense": 40,
+ "Aalborg": 3,
+ "Lyngby": 2,
+ "Unkown": 17,
+ "Bronshoj": 4,
+ "Aarhus": 19,
+ "Frederiksberg": 8,
+ "Copenhagen": 15,
+ "total": 129
+ }
+ },
+ "2016": {
+ "Canada": {
+ "Toronto": 43,
+ "Hamilton": 8,
+ "Ottawa": 20,
+ "Saskatoon": 10,
+ "Vancouver": 15,
+ "Unkown": 11,
+ "Calgary": 11,
+ "London": 9,
+ "total": 277,
+ "Windsor": 15,
+ "Montreal": 19
+ },
+ "United Kingdom": {
+ "Liverpool": 41,
+ "Unknown": 60,
+ "Leeds": 30,
+ "Unkown": 165,
+ "Nottingham": 29,
+ "Newcastle upon Tyne": 53,
+ "Manchester": 82,
+ "London": 211,
+ "total": 1487,
+ "Birmingham": 34,
+ "Glasgow": 24
+ },
+ "Netherlands": {
+ "Groningen": 7,
+ "Rotterdam": 5,
+ "The Hague": 4,
+ "Leiden": 4,
+ "Unkown": 24,
+ "Centrum": 3,
+ "Maastricht": 8,
+ "Utrecht": 7,
+ "Unknown": 4,
+ "Amsterdam": 15,
+ "total": 113
+ },
+ "India": {
+ "Kumar": 2,
+ "Chennai": 6,
+ "Mumbai": 21,
+ "Delhi": 10,
+ "Unkown": 12,
+ "Secunderabad": 2,
+ "Jaipur": 2,
+ "New Delhi": 2,
+ "Kolkata": 3,
+ "Bangalore": 10,
+ "total": 85
+ },
+ "France": {
+ "Lyon": 1,
+ "Cr\u00e9teil": 1,
+ "Lille": 1,
+ "Paris": 3,
+ "Unknown": 74,
+ "Bondy": 2,
+ "Unkown": 12,
+ "Fontenay-aux-Roses": 2,
+ "total": 101,
+ "Caen": 1,
+ "Mouguerre": 1
+ },
+ "United States": {
+ "Redmond": 80,
+ "Los Angeles": 20,
+ "Chicago": 20,
+ "Unknown": 38,
+ "Unkown": 103,
+ "New York": 19,
+ "Denver": 20,
+ "Sunnyvale": 24,
+ "Mountain View": 485,
+ "San Francisco": 64,
+ "total": 1730
+ },
+ "Australia": {
+ "Bundoora": 9,
+ "Burwood": 7,
+ "Bentley": 4,
+ "Brisbane": 76,
+ "Unknown": 70,
+ "Unkown": 74,
+ "Melbourne": 27,
+ "Perth": 38,
+ "Sydney": 59,
+ "total": 540,
+ "Adelaide": 20
+ },
+ "Germany": {
+ "Hanover": 2,
+ "Unknown": 4,
+ "Munich": 12,
+ "Cologne": 3,
+ "Stuttgart": 4,
+ "Berlin": 8,
+ "Unkown": 26,
+ "Dortmund": 2,
+ "total": 92,
+ "Karlsruhe": 3,
+ "Bonn": 2
+ },
+ "Ireland": {
+ "Ballivor": 1,
+ "Galway": 12,
+ "Unknown": 4,
+ "Limerick": 7,
+ "Dublin": 34,
+ "Athlone": 14,
+ "Cork": 3,
+ "Unkown": 20,
+ "Waterford": 2,
+ "Letterkenny": 2,
+ "total": 105
+ },
+ "New Zealand": {
+ "Auckland": 31,
+ "Unknown": 2,
+ "Wellington": 5,
+ "Unkown": 7,
+ "Tauranga": 2,
+ "Hamilton": 8,
+ "Christchurch": 9,
+ "total": 75,
+ "Dunedin": 4,
+ "Hunterville": 1,
+ "Hastings": 1
+ }
+ }
+ }
+}
+ Total breakdown of
+ downloads from filesets found in a specified institutional group 
+ Request 
+ GET https://stats.figshare.com/lboro/breakdown/total/downloads/group/17?sub_item=item_type&sub_item_id=fileset&start_date=2015-02-11&end_date=2015-05-17
+Authorization: Basic dGhpcyBpcyBub3QgdGhlIHJlYWwgcGFzc3dvcmQsIGZvb2wh
+ Response 
+ HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+{
+ "breakdown": {
+ "total": {
+ "Spain": {
+ "Seville": 6,
+ "Barcelona": 7,
+ "Madrid": 3,
+ "total": 16
+ },
+ "China": {
+ "Chengdu": 7,
+ "Fuzhou": 4,
+ "total": 11
+ },
+ "United States": {
+ "Kansas City": 3,
+ "Orlando": 7,
+ "total": 10
+ },
+ "Brazil": {
+ "total": 2,
+ "Indaiatuba": 2
+ }
+ }
+ }
+}
+ Monthly breakdown of
+ views from projects found in a specified institutional group 
+ Request 
+ GET https://stats.figshare.com/melbourne/breakdown/month/views/group/234&sub_item=item_type&sub_item_id=project&start_date=2015-02-11&end_date=2015-03-17
+Authorization: Basic dGhpcyBpcyBub3QgdGhlIHJlYWwgcGFzc3dvcmQsIGZvb2wh
+ Response 
+ HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+{
+ "breakdown": {
+ "2015-02": {
+ "France": {
+ "Paris": 12,
+ "Montpellier": 7,
+ "total": 19
+ },
+ "Germany": {
+ "Munich": 13,
+ "Frankfurt": 2,
+ "total": 15
+ }
+ },
+ "2015-03": {
+ "Spain": {
+ "Madrid": 3,
+ "Mallorca": 5,
+ "total": 8
+ }
+ }
+ }
+}
+ Breakdown of institutional statistics
+ with missing authorization 
+ Request 
+ GET https://stats.figshare.com/melbourne/breakdown/month/views/group/234
+ Response 
+ HTTP/1.1 403 Forbidden
+Content-Type: application/json; charset=UTF-8
+{
+ "data": null,
+ "code": "Forbidden",
+ "message": "Unauthorized request"
+}
+ Breakdown Response Limitations 
+ The breakdown responses have the following limitations: 
+ Cities per country : A maximum of 10 cities and a total are included in the response
+ for each country. The sum of events from individual cities may not equal the country total, as only
+ the top 10 cities are displayed in the response.
+ Number of countries : Only the first 200 countries are displayed in the response. If
+ there are more than 200 countries in the data, only the top 200 will be included.
+ For items outside an institution scope the endpoints have the format: 
+ /breakdown/{granularity}/{counter}/{item}/{item_id}
+ and inside an institution scope they have the format: 
+ /{institution}/breakdown/{granularity}{counter}/{item}/{item_id}
+ where granularity is one of year , month , day or
+ total ,
+ counter is one of views , downloads or shares 
+ and item is one of article , author , collection ,
+ group or project . 
+ The results on this endpoint can be filtered further by a start_date and end_date 
+ and
+ a specified category or item_type . By default, start_date and end_date 
+ are set
+ to reflect the events of the last month. The supplementary filters can be provided in the
+ query parameters of the request. 
+ The following table describes the optional parameters: 
+ Parameter 
+ Comments 
+ start_date 
+ By default this is set to the 1st of the current month. 
+ end_date 
+ By default this is set to today. 
+ sub_item 
+ Can be one of category and item_type . Acts as a filter on the result. 
+ sub_item_id 
+ Required if sub_item is also specified. 
+ Date intervals 
+ When start_date and end_date are both specified, a number of limitations are added
+ depending
+ on the granularity: 
+ Granularity 
+ Limits 
+ day 
+ end_date cannot be set to more than 1 year from the start_date 
+ month 
+ end_date cannot be set to more than 2 years from the start_date 
+ year 
+ end_date cannot be set to more than 5 years from the start_date 
+ total 
+ end_date cannot be set to more than 1 year from the start_date 
+ In case the specified end_date exceeds the allowed interval, it will simply be ignored
+ and the maximum allowed date will be used instead. 
+ No authorization is required. 
+ This type of endpoint provides a way to get the number of articles in one or more public groups. 
+ Authorization 
+ Endpoint format 
+ Examples 
+ Number of articles in groups with ids 327, 328, 329 
+ Request 
+ POST https://stats.figshare.com/count/articles
+ Request Body 
+{
+ "groups": [
+ {"id":327},
+ {"id":328},
+ {"id":329}
+ ]
+}
+ Response 
+ HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+{
+ "327": 20,
+ "328": 1,
+ "329": 1
+}
+ /count/articles
+ For some specialized endpoints, access to institution specific statistics requires
+ sending a base64 -encoded pair of username:password in the basic authorization
+ header: 
+ GET https://stats.figshare.com/lboro/top/views/article
+ Authorization: Basic dGhpcyBpcyBub3QgdGhlIHJlYWwgcGFzc3dvcmQsIGZvb2wh
+ Please note that the analogous endpoint for retrieving statistics for items outside
+ the institutional scope, requires no authentication: 
+ GET https://stats.figshare.com/top/views/article
+ The statistics service endpoints can be classified in 4 categories: 
+ Totals 
+ Timeline 
+ Breakdown 
+ Tops 
+ Scope 
+ All endpoints are applicable for the following items: 
+ group : events on items inside the specified group 
+ author : events on items authored by the specified user 
+ article : events on the specified article 
+ project : events on the specified project 
+ collection : events on the specified collection 
+ Totals 
+ This type of endpoint enables the retrieval of the total number of events for a specific item.
+ More details and examples are provided here . 
+ Timeline 
+ This type of endpoint enables the retrieval of a timeline of the number of events for a specific
+ item, with a specified granularity. More details and examples are provided here . 
+ Breakdown 
+ This type of endpoint enables the retrieval of a geo-location breakdown of the number of events for a
+ specific
+ item, with a specified granularity. More details and examples are provided here . 
+ Tops 
+ This type of endpoint enables the retrieval of rankings of the most viewed, downloaded or shared items,
+ over a specific period of time. More details and examples are provided here . 
+ Error responses are common for all endpoints and are presented below. 
+ Each error response will have a specific HTTP status code and a JSON body with the
+ following fields 
+ Field 
+ Description 
+ message 
+ A human friendly message explaining the error. 
+ code 
+ A machine friendly error code, used by the dev team to identify the error. 
+ data 
+ An object containing extra information about the error. 
+ 400 Bad Request 
+ This error response will be raised when an invalid field is sent in the parameters of the
+ request or when a field is missing from the parameters of the request. Required and
+ optional fields in the body are documented for each endpoint, where applicable. 
+ 403 Forbidden 
+ This error response is presented when attempting to retrieve information from a protected endpoint
+ without the appropriate Authorization header. 
+ 404 Not Found 
+ This error response is presented when attempting to access a non existing endpoint. Please note
+ that it will not be raised when attempting to gather statistics for an item which doesn't
+ exist on fig share, instead an appropriate empty result will be returned. 
+ The fig share statistics service is available at https://stats.figshare.com and
+ it supports retrieving information about the number of views , downloads and
+ shares 
+ related to items available of fig share . From here on, an event is one of view ,
+ download or share . 
+ All communication with the service is done through https and all data is encoded as json .
+ Optional authorization for specific endpoints is done through basic access authentication. 
+ Authentication 
+ Errors 
+ Endpoints 
+ Basic HTTP authentication is required for timeline endpoints within the scope of an institution. 
+ This type of endpoint enables the retrieval of a timeline of the number of views , downloads 
+ or shares for a specific item. 
+ Authorization 
+ Endpoint format 
+ Request parameters 
+ Examples 
+ Daily timeline of downloads for an unaffiliated
+ article 
+ Request 
+ GET https://stats.figshare.com/timeline/day/downloads/article/766364
+ Response 
+ HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+{
+"timeline": {
+ "2015-11-19": 11,
+ "2015-11-18": 4,
+ "2015-11-11": 15,
+ "2015-11-10": 13,
+ "2015-11-13": 2,
+ "2015-11-12": 4,
+ "2015-11-15": 8,
+ "2015-11-14": 2,
+ "2015-11-17": 11,
+ "2015-11-16": 11,
+ }
+}
+ Yearly timeline of views for an
+ article 
+ Request 
+ GET https://stats.figshare.com/timeline/year/views/article/766364
+ Response 
+ HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+{
+ "timeline": {
+ "2015": 14305,
+ "2014": 6867,
+ "2017": 6923,
+ "2016": 17026,
+ "2013": 967
+ }
+}
+ Monthly timeline of shares for items in a specified institutional group, matching a specified category 
+ Request 
+ GET https://stats.figshare.com/monash/timeline/month/shares/group/10?sub_item=category&sub_item_id=2&start_date=2014-01-03&end_date=2014-05-12
+Authorization: Basic dGhpcyBpcyBub3QgdGhlIHJlYWwgcGFzc3dvcmQsIGZvb2wh
+ Response 
+ HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+{
+ "timeline": {
+ "2014-01": 3,
+ "2014-02": 5,
+ "2014-03": 18,
+ "2014-04": 4,
+ "2014-05": 2
+ }
+}
+ Daily timeline of views
+ for datasets found in a specified institutional group 
+ Request 
+ GET https://stats.figshare.com/monash/timeline/day/views/group/10?sub_item=item_type&sub_item_id=dataset&start_date=2014-03-01&end_date=2014-03-04
+Authorization: Basic dGhpcyBpcyBub3QgdGhlIHJlYWwgcGFzc3dvcmQsIGZvb2wh
+ Response 
+ HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+{
+ "timeline": {
+ "2014-03-01": 10,
+ "2014-03-02": 14,
+ "2014-03-03": 15,
+ "2014-03-04": 9
+ }
+}
+ Total timeline of views for a
+ collection associated to an institution 
+ Request 
+ GET https://stats.figshare.com/lboro/timeline/total/views/collection/15?start_date=2014-01-02&end_date=2014-03-05
+Authorization: Basic dGhpcyBpcyBub3QgdGhlIHJlYWwgcGFzc3dvcmQsIGZvb2wh
+ Response 
+ HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+{
+ "timeline": {
+ "total": 10
+ }
+}
+ Timeline with missing request parameter 
+ Request * 
+ GET https://stats.figshare.com/lboro/timeline/month/views/group/1?sub_item=category&start_date=2014-01-01&end_date=2015-02-03
+Authorization: Basic dGhpcyBpcyBub3QgdGhlIHJlYWwgcGFzc3dvcmQsIGZvb2wh
+ Response 
+ HTTP/1.1 400 Bad Request
+Content-Type: application/json; charset=UTF-8
+{
+ "data": {
+ "missing_params": "sub_item_id",
+ "parameters": {
+ "end_date": "2015-02-03",
+ "start_date": "2014-01-01",
+ "sub_item": "category"
+ },
+ "path": "/lboro/timeline/month/views/group/1"
+ },
+ "code": "MissingParams",
+ "message": "Missing required params: sub_item_id"
+}
+ For items outside an institution scope the endpoints have the format: 
+ /timeline/{granularity}/{counter}/{item}/{item_id}
+ and inside an institution scope they have the format: 
+ /{institution}/timeline/{granularity}{counter}/{item}/{item_id}
+ where granularity is one of year , month , day or
+ total 
+ , counter is one of views , downloads or shares 
+ and item is one of article , author , collection ,
+ group or project . 
+ The results on this endpoint can be filtered further by a start_date and end_date 
+ and
+ a specified category or item_type . By default, start_date and end_date 
+ are set
+ to reflect the events of the last month. The supplementary filters can be provided in the
+ request parameters. 
+ The following table describes the optional parameters: 
+ Parameter 
+ Comments 
+ start_date 
+ By default this is set to the 1st of the current month. 
+ end_date 
+ By default this is set to today. 
+ sub_item 
+ Can be one of category and item_type . Acts as a filter on the result. 
+ sub_item_id 
+ Required if sub_item is also specified. 
+ Basic HTTP authentication is required for timeline endpoints within the scope of an institution. 
+ This type of endpoints enables the retrieval or rankings of the most viewed, downloaded or shared
+ items, over a specific period of time. 
+ Authorization 
+ Endpoint format 
+ Request parameters 
+ Examples 
+ Top 10 most viewed unaffiliated articles in
+ the last month 
+ Request 
+ GET https://stats.figshare.com/top/views/article
+ Response 
+ HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+{
+ "top": {
+ "1130885": 31334,
+ "1256369": 32128,
+ "2064072": 65819,
+ "1286826": 25929,
+ "653676": 33393,
+ "4291565": 36494,
+ "1018769": 46370,
+ "1031637": 36428,
+ "766364": 46088,
+ "3413821": 39133
+ }
+}
+ Top 3 most viewed categories in
+ a specified institutional group in 2014 
+ Request 
+ GET https://stats.figshare.com/monash/top/views/group?item_id=2&sub_item=category&count=3&start_date=2014-01-01&end_date=2014-12-31
+Authorization: Basic dGhpcyBpcyBub3QgdGhlIHJlYWwgcGFzc3dvcmQsIGZvb2wh
+ Response 
+ HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+{
+ "top": {
+ "2": 12351,
+ "7": 11001,
+ "3": 10435
+ }
+}
+ Top 2 referrals for a specific
+ unaffiliated project in the last month 
+ Request 
+ GET https://stats.figshare.com/top/views/project?item_id=13&count=2&sub_item=referral
+ Response 
+ HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+{
+ "www.google.com": 212,
+ "www.figshare.com": 175
+}
+ Top 3 item types for shares
+ related to a specific unaffiliated author 
+ Request 
+ GET https://stats.figshare.com/top/shares/author?item_id=13456&count=3&sub_item=item_type
+ Response 
+ HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+{
+ "fileset": 135,
+ "collection": 120,
+ "figure": 98
+}
+ For items outside an institution scope the endpoints have the format: 
+ /top/{counter}/{item}
+ and inside and institution scope they have the format: 
+ /{institution}/top/{counter}/{item}
+ where counter is one of views , shares or downloads 
+ and item is one of article , author , collection ,
+ group or project . 
+ The results on this endpoint can be filtered further by a specified sub_item 
+ which can be one of: category , item_type or referral . The results can
+ also be filtered
+ by a start_date and end_date which by default are set to reflect the events of the
+ last
+ month ONLY if a sub_item filter has been specified. Otherwise, the results
+ will reflect
+ the total events.
+ The number of results in the ranking can be specified as the count parameter which
+ by default is set to 10 . The supplementary filters and options can be provided in the query
+ parameters of the request. 
+ The following table describes the optional parameters: 
+ Parameter 
+ Comments 
+ start_date 
+ By default this is set to the 1st of the current month if a sub_item is specified 
+ end_date 
+ By default this is set to today if a sub_item is specified. 
+ sub_item 
+ Can be one of category , item_type or referral . Acts as a
+ filter on the result.
+ count 
+ By default this is set to 10. 
+ No authorization is required. 
+ This type of endpoint provides the total number of views , downloads or shares . 
+ Authorization 
+ Endpoint format 
+ Examples 
+ Number of views for an unaffiliated article 
+ Request 
+ GET https://stats.figshare.com/total/views/article/23
+ Response 
+ HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+{
+ "totals": 231
+}
+ Number of shares for items authored by a
+ specific user 
+ Request 
+ GET https://stats.figshare.com/total/shares/author/15
+ Response 
+ HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+{
+ "totals": 134
+}
+ Number of downloads for items in an
+ institutional group 
+ Request 
+ GET https://stats.figshare.com/monash/total/downloads/group/10
+ Response 
+ HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+{
+ "totals": 5
+}
+ Number of views for a collection
+ associated to an institution 
+ Request 
+ GET https://stats.figshare.com/lboro/total/views/collection/15
+ Response 
+ HTTP/1.1 200 OK
+Content-Type: application/json; charset=UTF-8
+{
+ "totals": 3
+}
+ Unsupported counter request for an unaffiliated
+ article 
+ Request 
+ GET https://stats.figshare.com/total/hugs/article/215
+ Response 
+ HTTP/1.1 400 Bad Request
+Content-Type: application/json; charset=UTF-8
+{
+ "data": {
+ "extra": "Counter type not supported: hugs",
+ "invalid_params": "counter"
+ },
+ "code": "InvalidParams",
+ "message": "Invalid or unsupported params: counter"
+}
+ For items outside an institution scope the endpoints have the format: 
+ /total/{counter}/{item}/{item_id}
+ and inside an institution scope they have the format: 
+ /{institution}/total/{counter}/{item}/{item_id}
+ where counter is one of views , downloads or shares 
+ and item is one of article , author , collection ,
+ group or project . 
+ Upload status 
+ An upload status can be: 
+ PENDING - waiting for it's parts to be uploaded 
+ COMPLETED - all parts were uploaded and the file was assembled on the storage 
+ ABORTED - canceled for some reason(user request, timeout, error) 
+ Endpoints 
+ GET /upload/<token> - get upload info 
+ Response: 
+ Status Code 
+ Explanation 
+ Body 
+ 200 OK 
+ all good 
+ explained below 
+ 500 Internal Server Error 
+ internal error 
+ empty 
+ 404 Not Found 
+ unknown upload token 
+ empty 
+ 200 OK 
+ Body:
+ js
+ {
+ token: "upload-token",
+ name: "my-file.zip",
+ size: 10249281,
+ md5: "filemd5", // as provided on upload creation
+ status: "PENDING",
+ parts: [
+ {
+ // upload parts -- see parts API for representation
+ }
+ ]
+ } 
+ This is a bash script for uploading files. You'll have to replace certain strings inside it with your
+ keys. 
+#!/bin/bash
+# exit script if any command fails
+set -e
+#modify BASE_URL, ACCESS_TOKEN, FILE_NAME and FILE_PATH according to your needs
+BASE_URL='https://api.figshare.com/v2/account/articles'
+ACCESS_TOKEN='insert access token here'
+FILE_NAME='test.txt'
+FILE_PATH='/path/to/your/file/'$FILE_NAME
+# ####################################################################################
+#Retrieve the file size and MD5 values for the item which needs to be uploaded
+FILE_SIZE=$(stat -c%s $FILE_PATH)
+MD5=($(md5sum $FILE_PATH))
+# List all of the existing items
+echo 'List all of the existing items...'
+RESPONSE=$(curl -s -f -H 'Authorization: token '$ACCESS_TOKEN -X GET "$BASE_URL")
+echo "The item list dict contains: "$RESPONSE
+echo ''
+# Create a new item
+echo 'Creating a new item...'
+RESPONSE=$(curl -s -f -d '{"title": "Sample upload item"}' -H 'Authorization: token '$ACCESS_TOKEN -H 'Content-Type: application/json' -X POST "$BASE_URL")
+echo "The location of the created item is "$RESPONSE
+echo ''
+# Retrieve item id
+echo 'Retrieving the item id...'
+ITEM_ID=$(echo "$RESPONSE" | sed -r "s/.*\/([0-9]+).*/\1/")
+echo "The item id is "$ITEM_ID
+echo ''
+# List item files
+echo 'Retrieving the item files...'
+FILES_LIST=$(curl -s -f -H 'Authorization: token '$ACCESS_TOKEN -X GET "$BASE_URL/$ITEM_ID/files")
+echo 'The files list of the newly-create item should be an empty one. Returned results: '$FILES_LIST
+echo ''
+# Initiate new upload:
+echo 'A new upload had been initiated...'
+RESPONSE=$(curl -s -f -d '{"md5": "'${MD5}'", "name": "'${FILE_NAME}'", "size": '${FILE_SIZE}'}' -H 'Content-Type: application/json' -H 'Authorization: token '$ACCESS_TOKEN -X POST "$BASE_URL/$ITEM_ID/files")
+echo $RESPONSE
+echo ''
+# Retrieve file id
+echo 'The file id is retrieved...'
+FILE_ID=$(echo "$RESPONSE" | sed -r "s/.*\/([0-9]+).*/\1/")
+echo 'The file id is: '$FILE_ID
+echo ''
+# Retrieve the upload url
+echo 'Retrieving the upload URL...'
+RESPONSE=$(curl -s -f -H 'Authorization: token '$ACCESS_TOKEN -X GET "$BASE_URL/$ITEM_ID/files/$FILE_ID")
+UPLOAD_URL=$(echo "$RESPONSE" | sed -r 's/.*"upload_url":\s"([^"]+)".*/\1/')
+echo 'The upload URL is: '$UPLOAD_URL
+echo ''
+# Retrieve the upload parts
+echo 'Retrieving the part value...'
+RESPONSE=$(curl -s -f -H 'Authorization: token '$ACCESS_TOKEN -X GET "$UPLOAD_URL")
+PARTS_SIZE=$(echo "$RESPONSE" | sed -r 's/"endOffset":([0-9]+).*/\1/' | sed -r 's/.*,([0-9]+)/\1/')
+PARTS_SIZE=$(($PARTS_SIZE+1))
+echo 'The part value is: '$PARTS_SIZE
+echo ''
+# Split item into needed parts
+echo 'Spliting the provided item into parts process had begun...'
+split -b$PARTS_SIZE $FILE_PATH part_ --numeric=1
+echo 'Process completed!'
+# Retrive the number of parts
+MAX_PART=$((($FILE_SIZE+$PARTS_SIZE-1)/$PARTS_SIZE))
+echo 'The number of parts is: '$MAX_PART
+echo ''
+# Perform the PUT operation of parts
+echo 'Perform the PUT operation of parts...'
+for ((i=1; i<=$MAX_PART; i++))
+do
+ PART_VALUE='part_'$i
+ if [ "$i" -le 9 ]
+ then
+ PART_VALUE='part_0'$i
+ fi
+ RESPONSE=$(curl -s -f -H 'Authorization: token '$ACCESS_TOKEN -X PUT "$UPLOAD_URL/$i" --data-binary @$PART_VALUE)
+ echo "Done uploading part nr: $i/"$MAX_PART
+done
+echo 'Process was finished!'
+echo ''
+# Complete upload
+echo 'Completing the file upload...'
+RESPONSE=$(curl -s -f -H 'Authorization: token '$ACCESS_TOKEN -X POST "$BASE_URL/$ITEM_ID/files/$FILE_ID")
+echo 'Done!'
+echo ''
+#remove the part files
+rm part_*
+# List all of the existing items
+RESPONSE=$(curl -s -f -H 'Authorization: token '$ACCESS_TOKEN -X GET "$BASE_URL")
+echo 'New list of items: '$RESPONSE
+echo ''
+ To upload a file to the fig share , one needs to use the standard
+ fig share API , coupled
+ with the fig share upload system API .
+ A full script that lists articles before and after the new article and
+ file are created
+ would look like this: 
+ #!/usr/bin/env python 
+ import hashlib
+ import json
+ import os
+ import requests
+ from requests.exceptions import HTTPError
+BASE_URL = 'https://api.figshare.com/v2/{endpoint}' 
+TOKEN = '<insert access token here>' 
+CHUNK_SIZE = 1048576 
+FILE_PATH = '/path/to/work/directory/cat.obj' 
+TITLE = 'A 3D cat object model' 
+ def raw_issue_request (method, url, data=None, binary=False) : 
+ headers = { 'Authorization' : 'token ' + TOKEN}
+ if data is not None and not binary:
+ data = json.dumps(data)
+ response = requests.request(method, url, headers=headers, data=data)
+ try :
+ response.raise_for_status()
+ try :
+ data = json.loads(response.content)
+ except ValueError:
+ data = response.content
+ except HTTPError as error:
+ print 'Caught an HTTPError: {}' .format(error.message)
+ print 'Body:\n' , response.content
+ raise 
+ return data
+ def issue_request (method, endpoint, *args, **kwargs) : 
+ return raw_issue_request(method, BASE_URL.format(endpoint=endpoint), *args, **kwargs)
+ def list_articles () : 
+ result = issue_request( 'GET' , 'account/articles' )
+ print 'Listing current articles:' 
+ if result:
+ for item in result:
+ print u' {url} - {title}' .format(**item)
+ else :
+ print ' No articles.' 
+ print 
+ def create_article (title) : 
+ data = {
+ 'title' : title # You may add any other information about the article here as you wish. 
+ }
+ result = issue_request( 'POST' , 'account/articles' , data=data)
+ print 'Created article:' , result[ 'location' ], '\n' 
+ result = raw_issue_request( 'GET' , result[ 'location' ])
+ return result[ 'id' ]
+ def list_files_of_article (article_id) : 
+ result = issue_request( 'GET' , 'account/articles/{}/files' .format(article_id))
+ print 'Listing files for article {}:' .format(article_id)
+ if result:
+ for item in result:
+ print ' {id} - {name}' .format(**item)
+ else :
+ print ' No files.' 
+ print 
+ def get_file_check_data (file_name) : 
+ with open(file_name, 'rb' ) as fin:
+ md5 = hashlib.md5()
+ size = 0 
+ data = fin.read(CHUNK_SIZE)
+ while data:
+ size += len(data)
+ md5.update(data)
+ data = fin.read(CHUNK_SIZE)
+ md5.update(data)
+ file_name = key.name.rsplit("/", 1)[1] if "/" in key.name else key.name
+ return md5.hexdigest(), key.size, file_name
+ def initiate_new_upload (article_id, file_name) : 
+ endpoint = 'account/articles/{}/files' 
+ endpoint = endpoint.format(article_id)
+ md5, size, name = get_file_check_data(file_name)
+ data = {"md5": md5, "size": size, "name": name}
+ print data
+ result = issue_request("POST", endpoint, data=data)
+ print "Initiated file upload:", result["location"], "\n"
+ result = raw_issue_request("GET", result["location"])
+ return result
+ def complete_upload (article_id, file_id) : 
+ issue_request("POST", "account/articles/{}/files/{}".format(article_id, file_id))
+ def upload_parts (file_info) : 
+ url = '{upload_url}' .format(**file_info)
+ result = raw_issue_request("GET", url)
+ print 'Uploading parts:' 
+ with open(FILE_PATH, 'rb' ) as fin:
+ for part in result[ 'parts' ]:
+ upload_part(file_info, fin, part)
+ print 
+ def upload_part (file_info, stream, part) : 
+ udata = file_info.copy()
+ udata.update(part)
+ url = '{upload_url}/{partNo}' .format(**udata)
+ stream.seek(part[ 'startOffset' ])
+ data = stream.read(part[ 'endOffset' ] - part[ 'startOffset' ] + 1 )
+ raw_issue_request("PUT", url, data=data, binary= True )
+ print ' Uploaded part {partNo} from {startOffset} to {endOffset}' .format(**part)
+ def main () : 
+ # We first create the article 
+ list_articles()
+ article_id = create_article(TITLE)
+ list_articles()
+ list_files_of_article(article_id)
+ # Then we upload the file. 
+ file_info = initiate_new_upload(article_id, FILE_PATH)
+ # Until here we used the figshare API; following lines use the figshare upload service API. 
+ upload_parts(file_info)
+ # We return to the figshare API to complete the file upload process. 
+ complete_upload(article_id, file_info[ 'id' ])
+ list_files_of_article(article_id)
+ if __name__ == '__main__' :
+ main()
+ This is a python script for uploading files. You'll have to replace certain strings inside it with your
+ keys. 
+import hashlib
+import json
+import requests
+from requests.exceptions import HTTPError
+from boto.s3.connection import S3Connection
+BASE_URL = "https://api.figshare.com/v2/{endpoint}"
+CHUNK_SIZE = 1048576 # bytes
+TOKEN = "<insert access token here>"
+BUCKET_NAME = "<insert bucket name here>"
+FILE_KEY = "<insert file key here>"
+AWS_KEY = "<insert AWS key here>"
+AWS_SECRET = "<insert AWS secret here>"
+RECORD_TITLE = "<insert Figshare record title here>"
+def retrieve_key():
+ conn = S3Connection(AWS_KEY, AWS_SECRET, is_secure=False)
+ bucket = conn.get_bucket(BUCKET_NAME)
+ key = bucket.lookup(FILE_KEY)
+ return key
+def raw_issue_request(method, url, data=None, binary=False):
+ headers = {"Authorization": "token " + TOKEN}
+ if data is not None and not binary:
+ data = json.dumps(data)
+ response = requests.request(method, url, headers=headers, data=data)
+ try:
+ response.raise_for_status()
+ try:
+ data = json.loads(response.content)
+ except ValueError:
+ data = response.content
+ except HTTPError as error:
+ print "Caught an HTTPError: {}".format(error.message)
+ print "Body:\n", response.content
+ raise
+ return data
+def issue_request(method, endpoint, *args, **kwargs):
+ return raw_issue_request(method, BASE_URL.format(endpoint=endpoint), *args, **kwargs)
+def list_articles():
+ result = issue_request("GET", "account/articles")
+ print "Listing current articles:"
+ if result:
+ for item in result:
+ print u" {url} - {title}".format(**item)
+ else:
+ print " No articles."
+def create_article(title):
+ data = {"title": title} # You may add any other information about the article here as you wish.
+ result = issue_request("POST", "account/articles", data=data)
+ print "Created article:", result["location"], "\n"
+ result = raw_issue_request("GET", result["location"])
+ return result["id"]
+def list_files_of_article(article_id):
+ result = issue_request("GET", "account/articles/{}/files".format(article_id))
+ print "Listing files for article {}:".format(article_id)
+ if result:
+ for item in result:
+ print " {id} - {name}".format(**item)
+ else:
+ print " No files."
+def get_file_check_data(key):
+ md5 = hashlib.md5()
+ start_byte = 0
+ stop_byte = min(CHUNK_SIZE, key.size) - 1
+ headers = {"Range": "bytes={}-{}".format(start_byte, stop_byte)}
+ data = key.get_contents_as_string(headers=headers)
+ size = len(data)
+ while size < key.size:
+ md5.update(data)
+ start_byte = size
+ stop_byte = min(size + CHUNK_SIZE, key.size) - 1
+ headers = {"Range": "bytes={}-{}".format(start_byte, stop_byte)}
+ data = key.get_contents_as_string(headers=headers)
+ size += len(data)
+ md5.update(data)
+ file_name = key.name.rsplit("/", 1)[1] if "/" in key.name else key.name
+ return md5.hexdigest(), key.size, file_name
+def initiate_new_upload(article_id, key):
+ endpoint = "account/articles/{}/files"
+ endpoint = endpoint.format(article_id)
+ md5, size, name = get_file_check_data(key)
+ data = {"md5": md5, "size": size, "name": name}
+ print data
+ result = issue_request("POST", endpoint, data=data)
+ print "Initiated file upload:", result["location"], "\n"
+ result = raw_issue_request("GET", result["location"])
+ return result
+def complete_upload(article_id, file_id):
+ issue_request("POST", "account/articles/{}/files/{}".format(article_id, file_id))
+def upload_parts(file_info, key):
+ url = "{upload_url}".format(**file_info)
+ result = raw_issue_request("GET", url)
+ print result
+ print "Uploading parts:"
+ for part in result["parts"]:
+ upload_part(file_info, part, key)
+ print
+def upload_part(file_info, part, key):
+ udata = file_info.copy()
+ udata.update(part)
+ url = "{upload_url}/{partNo}".format(**udata)
+ your_bytes = key.get_contents_as_string(
+ headers={"Range": "bytes=" + str(part["startOffset"]) + "-" + str(part["endOffset"])}
+ )
+ raw_issue_request("PUT", url, data=your_bytes, binary=True)
+ print " Uploaded part {partNo} from {startOffset} to {endOffset}".format(**part)
+def main():
+ # We first create the article
+ list_articles()
+ article_id = create_article(RECORD_TITLE)
+ list_files_of_article(article_id)
+ # Then we retrieve the file
+ file_key = retrieve_key()
+ # Then we upload the file.
+ file_info = initiate_new_upload(article_id, file_key)
+ # Until here we used the figshare API; following lines use the figshare upload service API.
+ upload_parts(file_info, file_key)
+ # We return to the figshare API to complete the file upload process.
+ complete_upload(article_id, file_info["id"])
+ list_files_of_article(article_id)
+if __name__ == "__main__":
+ main()
+ This is an example of how the script would output on an account with no added articles or files yet. 
+ Listing current articles:
+No articles.
+Created article : https: //api.figshare.com/v2/account/articles/2012182 
+Listing current articles:
+https: //api.figshare.com/v2/articles/2012182 - A 3D cat object model 
+Listing files for article 2012182 :
+No files.
+Initiated file upload: https: //api.figshare.com/v2/account/articles/2012182/files/3008150 
+Uploading parts:
+Uploaded part 1 from 0 to 213325 
+Listing files for article 2012182 :
+ 3008150 - cat .obj 
+ Part status 
+ PENDING -- part is ready to be uploaded 
+ COMPLETE -- part data has been complete and saved to storage 
+ Part locking 
+ When a part is being uploaded it is being locked, by setting the
+ locked flag to true. No changes/uploads can happen on this part from
+ other requests. 
+ Byte ranges 
+ The part range is specified by startOffset and endOffset . They
+ indexes zero-based and inclusive. Example: 
+ Given: 
+ the following file data: "abcdefghij" 
+ part1 with startOffset=0 and endOffset=3 
+ part2 with startOffset=4 and endOffset=7 
+ Then: 
+ part1 is abcd 
+ part2 is efgh 
+ Endpoints 
+ GET /upload/<token>/<part_no> - get part info 
+ Responses: 
+ Status Code 
+ Explanation 
+ Body 
+ 200 OK 
+ all good 
+ explained below 
+ 500 Internal Server Error 
+ internal error 
+ empty 
+ 404 Not Found 
+ unknown upload token or part number 
+ empty 
+ 200 OK 
+ Body:
+ js
+ {
+ partNo: 3,
+ startOffset: 1024,
+ endOffset: 2047,
+ status: "PENDING",
+ locked: false
+ } 
+ PUT /upload/<token>/<part_no> - receives part data 
+ The entire body of the request is piped as-is to S3. It is assumed that the
+ body is the correct piece of the file, from startOffset to endOffset 
+ While this requests is being processed the part is going to be in a
+ locked state. The request can end with a 409 status code if a
+ lock for the part could not be obtained. 
+ Warning if content length is less than part size the request will
+ timeout 
+ Responses: 
+ Status Code 
+ Explanation 
+ Body 
+ 200 OK 
+ all good 
+ explained below 
+ 500 Internal Server Error 
+ internal error 
+ empty 
+ 404 Not Found 
+ unknown upload token or part number 
+ empty 
+ 409 Conflict 
+ part data cannot be uploaded 
+ empty 
+ 200 OK 
+ DELETE /upload/<token>/<part_no> - reset part data 
+ This will reset the part to it's PENDING state and remove any
+ storage meta. 
+ Responses: 
+ Status Code 
+ Explanation 
+ Body 
+ 200 Accepted 
+ all good 
+ empty 
+ 500 Internal Server Error 
+ internal error 
+ empty 
+ 404 Not Found 
+ unknown upload token or part number 
+ empty 
+ 409 Conflict 
+ upload completed or part locked 
+ empty 
+ Initiate file upload - this request returns an endpoint
+ with file data
+ Send a GET request to the Uploader Service with the
+ upload_url (which also contains the upload_token ) provided in previous step and
+ receive the number of file parts
+ Upload / Delete / Retry uploading file parts until all parts are uploaded successfully 
+ Complete file upload 
+ Notice
+ ×

@@ -1,0 +1,259 @@
+APIs | Open Library 
+ Skip to main content 
+ It looks like you're offline. 
+ Donate ♥ 
+ English 
+ العربية 
+ Azərbaycanca 
+ Čeština 
+ Deutsch 
+ English 
+ Español 
+ Français 
+ हिंदी 
+ Hrvatski 
+ Italiano 
+ 한국어 
+ Português 
+ Română 
+ Sardu 
+ తెలుగు 
+ Українська 
+ 中文 
+ Filipino 
+ Page Status 
+ My Books
+ Browse
+ Subjects 
+ Browse books by topic 
+ Trending 
+ Most popular right now 
+ Library Explorer 
+ Browse the virtual shelves 
+ Lists 
+ Reader-curated collections 
+ Collections
+ K-12 Student Library
+ Book Talks
+ Random Book
+ Advanced Search
+ Search 
+ Log In 
+ Sign Up 
+ My Open Library 
+ Log In 
+ Sign Up 
+ Browse 
+ Subjects 
+ Trending 
+ Library Explorer 
+ Lists 
+ Collections 
+ K-12 Student Library 
+ Book Talks 
+ Random Book 
+ Advanced Search 
+ Contribute 
+ Improve the Catalog 
+ Add a Book 
+ Recent Community Edits 
+ Resources 
+ Help & Support 
+ Developer Center 
+ Librarians Portal 
+ My Books
+ Browse
+ Subjects 
+ Browse books by topic 
+ Trending 
+ Most popular right now 
+ Library Explorer 
+ Browse the virtual shelves 
+ Lists 
+ Reader-curated collections 
+ Collections
+ K-12 Student Library
+ Book Talks
+ Random Book
+ Advanced Search
+ Last edited by The Poison Path Collection 
+ October 9, 2026 | History 
+ Edit 
+ APIs 
+ Developer Center (Home) 
+ | 
+ Web API 
+ | 
+ Client Library 
+ | 
+ Data Dumps 
+ | 
+ Source Code 
+ | 
+ Report an Issue 
+ | 
+ Licensing 
+ Getting Started 
+ Open Library provides APIs in JSON, YAML and RDF/XML formats to support public-good, open, human-centered book discovery and lookup services. If you are building an open source or mission-aligned application that helps people find and use books in real time, these APIs are for you.
+ Usage Guidelines 
+ Rate Limits 
+ Bulk Access 
+ Index of APIs 
+ Try the interactive OpenAPI Documentation .
+ Registering Your Application 
+ Please use this link  to register your use-case or application. This information helps our team understand how Open Library's APIs are being used and maintain and improve our services to meet the community's diverse needs.
+ Usage Guidelines 
+ Open Library’s APIs exist to support the open book ecosystem and human-centered discovery. Due to limited resources, they are not intended to serve as a data backend for third-party services.
+ We prioritize:
+ Open-source and mission-aligned projects (like Wikidata & Wikipedia) 
+ Library & metadata partners 
+ Research, learning, & education tools 
+ Book tools & services that facilitate lookup for humans
+ These APIs are not intended to serve as a bulk data backend or high-traffic commercial infrastructure. For bulk access, please download our free monthly data dumps or contact us at openlibrary@archive.org .
+ Please Do: 
+ Make useful, time-sensitive requests on behalf of human users 
+ Cache responses whenever possible 
+ Identify your application with a User-Agent header and email 
+ Please Do Not: 
+ Scrape HTML pages (use API endpoints instead) or harvest HTML in bulk 
+ Distribute requests across multiple IPs 
+ Make hundreds of single-book requests (use search.json for batch results)
+ Use Open Library as a backend for high-traffic commercial services
+ Violations may result in aggressive rate limiting or blocking.
+ Rate Limits 
+ If your application will make regular, frequent use of Open Library's APIs (e.g. multiple calls per minute), please add a HEADER that specifies a User-Agent string with (a) the name of your application and (b) your contact email or phone number, so we may contact you when we notice high request volume. In addition, identified requests will enjoy a 3x request limit.
+ Default (non-identified requests):
+ 1 request per second
+ Identified requests (with User-Agent and email ):
+ 3 requests per second
+ User-Agent: MyLibraryApp (contact@example.org) 
+ Example Requests: 
+ JavaScript example request 
+ Python example request 
+ Bulk Access 
+ We make our data publicly available each month for partners. If you want a dump of complete data, please visit our Bulk Download options, or email us at openlibrary@archive.org .
+ Please do not use our APIs to bulk download metadata because this impacts our ability to serve patrons.
+ Index of APIs 
+ Book Search API - Search results for books, authors, and more 
+ Search inside API - Search for matching text within millions of books 
+ Covers API - Fetch book covers by ISBN or Open Library identifier 
+ Your Books API - Retrieve books on a patron's public reading log 
+ Lists API - Reading, modifying, or creating user lists 
+ - RESTful APIs 
+ Work & Edition APIs - Retrieve a specific work or edition by identifier
+ Authors API - Retrieve an author and their works by author identifier
+ Subjects API - Fetch books by subject name
+ Recent Changes API - Programatic access to changes across Open Library
+ Legacy APIs:
+ Legacy Partner API API -- Formerly the "Read" API, fetch one or more books by library identifiers (ISBNs, OCLC, LCCNs) 
+ Legacy JSON API is deprecated and preserved for backward compatibility.
+ More APIs 
+ Nearly every item on Open Library has an API version. You can return structured bibliographic data for any Open Library page by adding a .rdf/.json/.yml extension to the end of any Open Library identifier.
+ For instance: https://openlibrary.org/works/OL15626917W.json or https://openlibrary.org/authors/OL33421A.json . Many pages, such as the Books, Authors, and Lists, will include links to their RDF and JSON formats.
+ The history of an item can be accessed by appending ?m=history to the page like this .
+ Services using Open Library APIs 
+ Several developers are creating amazing things with the Open Library APIs:
+ Trove by the National Library of Australia 
+ Trove is a new discovery experience focused on Australia and Australians. It supplements what search engines provide with reliable information from Australia's memory institutions. The system hits Open Library when public domain books turn up in searches, and displays links to Open Library. 
+ Koha 
+ Koha is an open source library system for public libraries that includes catalog searches and member organizing. It uses Open Library covers, displays OL related subjects, and lendable eBooks using the Read API. 
+ Evergreen 
+ Evergreen is highly-scalable software for libraries that helps library patrons find library materials, and helps libraries manage, catalog, and circulate those materials. It uses Open Library for covers, tables of contents, with plans to expand into other areas. 
+ read.gov by the Library of Congress 
+ OK, this isn't exactly Open Library, but it's still awesome! The Library of Congress have modified the Internet Archive's Book Reader to sit perfectly within their Rare Books Collection site. 
+ OpenBook WordPress Plug-in by John Miedema 
+ OpenBook is useful for anyone who wants to add book covers and other book data on a WordPress website. OpenBook links to detailed book information in Open Library, the main data source, as well as other book sites. Users have complete control over the display through templates. OpenBook can link to library records by configuring an OpenURL resolver or through a WorldCat link. OpenBook inserts COinS so that other applications like Zotero can pick up the book data. 
+ Umlaut by Jason Ronallo 
+ Umlaut is a middle-tier OpenURL link resolver that adds functions and services to commercial link resolving software. 
+ Virtual Shelf by Jonathan Breitbart and Devin Blong (UC Berkeley School of Information) 
+ The Virtual Shelf is a visualization created by two students at the UC Berkeley School of Information. The project includes the student's master thesis, with research into the searching and browsing patterns of library patrons. The Open Library RESTful API was utilized during the project as a source of metadata for the user interface. 
+ RDC UI Toolkit by Rural Design Collective 
+ This group created a suite of tools that facilitates the creation of localized user interfaces for public domain books. The RDC used the Open Library Covers API and the Internet Archive Book Reader in their online demonstration customized for the OLPC XO. 
+ Dreambooks.club by Bernat Fortet 
+ Dreambooks is a portal and community where parents and children can discover new books to read together. Think of it as the online equivalent of your library's children's corner. All the book data is powered by OpenLibary's API. 
+ MyBooks.Life by Mark Webster 
+ MyBooks.Life is an android app and website designed primarily to manage TBR (to-be-read) lists. You can keep track of your reading progress, make notes, manage your wishlist, and rate your books. MyBooks.Life uses Open Library data to power its search. 
+ Bookmind 
+ Bookmind is now available at https://apps.apple.com/app/bookmind/id6593662584 . It uses open library’s api exclusively for book data. You can even see the rough prototype source at https://github.com/dave-ruest/Bookmind . 
+ Hobbyverse let's you track all your hobbies in one place. Users can add their books to their digital library and track their progress reading books, view what books their friends are reading, earn achievements, etc. 
+ ReadOtter 
+ ReadOtter, a classroom library management app designed to help teachers organize their classroom libraries. 
+ Chapter 
+ Chapter is an online reading library and reading organizer app. 
+ Land of Readers 
+ is a free, easy-to-use book discovery tool designed to help readers find books that match their interests, age group, and reading level. 
+ Austen 
+ is a web app that uses the Open Library API to generate visual character relationship diagrams for books using AI. Here is a live demo of their work. 
+ mcp-open-library by Ben Smith 
+ A Model Context Protocol (MCP) server for the Open Library API that enables AI assistants to search for book and author information. The source code can be found here . So far on a MCP server website its been called 5.2k times: https://smithery.ai/server/@8enSmith/mcp-open-library . It has also been published to npm: https://www.npmjs.com/package/mcp-open-library . 
+ CiteMe 
+ is a free citation tool for students and researchers that uses Open Library's Books API to verify and resolve book references. 
+ TheCoverVerse 
+ is a book edition catalogue built around cover art, letting readers browse and compare editions of the same work side by side. It uses Open Library’s edition data and covers API to populate metadata and cover images : https://www.thecoververse.com 
+ Are you using the Open Library APIs? We'd love to hear about it! Please email us at openlibrary@archive.org .
+ History
+ Created November 12, 2009 
+ 108 revisions 
+ October 9, 2026 
+ Edited by The Poison Path Collection 
+Added CiteMe and improved the format of the links (they were sub-bulleted under Trove by the National ... instead of being independent bullet points)
+ October 3, 2026 
+ Edited by raybb 
+fix docs link
+ October 2, 2026 
+ Edited by Mek 
+fix sandbox url
+ October 1, 2026 
+ Edited by AgentSapphire 
+update
+ November 12, 2009 
+ Created by George 
+Building out the sitemap
+ Open Library 
+ Vision 
+ Volunteer 
+ Partner With Us 
+ Careers 
+ Blog 
+ Terms of Service 
+ Donate 
+ Discover 
+ Home 
+ Books 
+ Authors 
+ Subjects 
+ Collections 
+ Advanced Search 
+ Return to Top 
+ Develop 
+ Developer Center 
+ API Documentation 
+ Bulk Data Dumps 
+ Writing Bots 
+ Help 
+ Help Center 
+ Contact Us 
+ Suggesting Edits 
+ Add a Book 
+ Release Notes 
+ Change Website Language 
+ العربية 
+ Azərbaycanca 
+ Čeština 
+ Deutsch 
+ English 
+ Español 
+ Français 
+ हिंदी 
+ Hrvatski 
+ Italiano 
+ 한국어 
+ Português 
+ Română 
+ Sardu 
+ తెలుగు 
+ Українська 
+ 中文 
+ Filipino 
+ Open Library is an initiative of the Internet Archive , a 501(c)(3) non-profit, building a digital library of Internet sites and other cultural artifacts in digital form. Other projects include the Wayback Machine , archive.org and archive-it.org 
+ version d52436c

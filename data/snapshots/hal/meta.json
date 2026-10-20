@@ -1,0 +1,28 @@
+{
+ "slug": "hal",
+ "name": "HAL Search API",
+ "docs": {
+  "url": "https://api.archives-ouvertes.fr/docs/search",
+  "final_url": "https://api.archives-ouvertes.fr/docs/search",
+  "status": 200,
+  "content_type": "text/html; charset=UTF-8",
+  "bytes": 47529,
+  "truncated": false,
+  "sha256": "86eeada6e1979c419b477eff51039d66bf495369384b42371f6abc9a287bc02c",
+  "fetched_at": "2026-10-20T01:31:43+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 19339
+ },
+ "probe": {
+  "url": "https://api.archives-ouvertes.fr/search/?q=test&rows=1&wt=json",
+  "final_url": "https://api.archives-ouvertes.fr/search/?q=test&rows=1&wt=json",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "bytes": 431,
+  "truncated": false,
+  "sha256": "24d6741e906b4c3fbe90ea9d9ee8fd7fb7352e8273d9f3c0ae6df0b9fb7f90db",
+  "fetched_at": "2026-10-20T01:31:44+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 427
+ }
+}

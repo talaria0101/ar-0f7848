@@ -1,0 +1,177 @@
+Using the API | Trove 
+ Skip to main content
+ Skip to main nagivation
+ About 
+ Help 
+ News 
+ Partners 
+ Sign up 
+ Login 
+ Main navigation 
+ Explore 
+ Categories 
+ Community 
+ Research 
+ First Australians 
+ Mobile MENU 
+ Trove 
+ About 
+ Create something 
+ Using the API
+ Using the API 
+ The Trove Application Programming Interface (API) allows you to build a complex search query and then delivers it in a machine-readable form, enabling you to develop new applications, tools and interfaces. 
+ Check out What is the Trove API? for more information about the types of data available and what it can be used for. 
+ There are four steps to get started with the Trove API:  
+ Agree to the Trove API terms of use   
+ Get an API key  
+ The application process  
+ Begin using the Trove API  
+ 1. Access and Terms of Use 
+ On-going use of the Trove API will require an active API key.  
+ By using any Trove API functionality, you agree to the Trove API Terms of Use .  
+ 2. Get an API key 
+ You will need a Trove account to receive a Trove API key. If you don't already have a Trove account, it's easy to sign up .  
+ Once you have a Trove account, complete the Request a Trove API key form to apply for a Trove API key. This form is also available in your Trove account by selecting your profile and then the ‘Trove API’ tab.   
+ In the form you will need to tell us:  
+ your Trove username and other contact details  
+ the rate of calls you require  
+ why you are requesting access to the Trove API key  
+ how you will use the Trove API  
+ that you have read and agreed to our Terms of Use  
+ if you require an exemption to the Trove API Terms of Use  
+ Please have these details ready as the form will time out after 20 minutes. If you have any questions about how to request an API key, please contact us . 
+ 3. The application process 
+ Once you have submitted your application, we will review the form to determine the level of review. Information about the levels of review is available in Table 1.   
+ Most requests will be answered within a week, however complex enquiries or those that need higher review may take longer.  
+ Table 1: Trove API application review levels  
+ Level of Review  
+ Call rate  
+ Reason for Accessing API  
+ Intended Use of API  
+ Exemption Required?  
+ Technical  
+ Custom  
+ N  
+ Level 1  
+ 200m  
+ Personal use  
+ Education or Training  
+ Academic Research  
+ To create something for a library or cultural institution  
+ To create something for an Australian Government organisation  
+ Develop a new application or research tool  
+ Link Trove search results to another website  
+ Teach, demonstrate or learn about API capabilities  
+ Bulk download of search results  
+ Download metadata for analyses or research  
+ Cross-reference Trove records with another institution’s holdings  
+ N  
+ Level 2  
+ 200m  
+ Private employment – Non-commercial use  
+ Non-Commercial websites  
+ Other responses  
+ Use with existing applications or research tools (please specify)   
+ Other responses   
+ N  
+ Level 3  
+ 200m  
+ Commercial websites  
+ Private employment – Commercial use  
+ Downloading/harvesting full-text records  
+ AI modelling/Machine learning  
+ Y  
+ Level 4  
+ 200m  
+ Training generative AI  
+ Y  
+ No approval  
+ Creating backlinks to other sites  
+ Advertising products or services  
+ n/a  
+ For transparency and guidance, we have outlined what we will be looking for at each of the different review levels in Table 2.  
+ Table 2: Review focus for each level of Trove API application review.    
+ Level of Review  
+ Review focus  
+ Technical  
+ Does the requested call rate pose any technical risks?  
+ Level 1  
+ Is the form complete?  
+ Do they agree to the Trove API Terms of Use?  
+ Level 2  
+ Does the stated use align with the Trove API Terms of Use?  
+ Have they provided sufficient detail about their intended use?  
+ Are they working with applications or research tools that draw on metadata rather than full text?  
+ Does the stated use match non-commercial use?  
+ Do any of the responses contradict each other or require further investigation?  
+ Level 3  
+ Have they requested an exemption to the Trove API Terms of Use?  
+ If no, does their stated use align with the Trove API Terms of Use?  
+ If yes, have they provided sufficient justification for an exemption?  
+ Is it research? (and what kind/level)  
+ Have they detailed the project?  
+ Can the project be done without an exemption?  
+ Is there a data sharing agreement in place?  
+ Will any commercial use of the Trove API acknowledge Trove and the NLA?  
+ Has the application indicated that it will be accessing content that is still in copyright?  
+ Level 4  
+ What are the benefits or positive outcomes of the project for the Australian public?  
+ Does the stated use pose a reputational risk to the library? Factors to consider include the probability of: ICIP, copyright, moral rights or infringements; potential of hate speech or other harms or potential to deliberately mislead the public.  
+ Is the user intending to use the API to access material that is in copyright?  
+ Does the stated use oppose our obligations as collection custodians?  
+ Does the stated use align with the Library’s AI framework?  
+ Is there a data sharing agreement in place?  
+ Uses of the Trove API that require higher review may require a data sharing agreement between you or your organisation and the National Library of Australia.   
+ If you would like to dispute a decision, you can reopen your application enquiry, and it will be escalated to the next level of review. You may be asked to provide additional information.  
+ 4. Begin using the Trove API 
+ Once we have generated an API key, you're ready to get started.  
+ You can find your Trove API key, your rate of calls and other details about your access to the Trove API in your Trove account. To access:  
+ Log in to your Trove Account and click on your username  
+ Select 'My Profile'  
+ Select the 'Trove API' tab  
+ The Trove API version 3.0  has a handy interface to assist you in building your first search query. You can start experimenting with the search parameters available in each field. 
+ Be sure to check out the API v3 technical guide for detailed assistance. 
+ Trove API versions  
+ v3.0 
+ We have released the Trove API version 3.0, which received investment from the Australian Research Data Commons (ARDC) . The ARDC is funded by the National Collaborative Research Infrastructure Strategy (NCRIS) . 
+ Version 2.0 was discontinued in September 2024. This introduction (PDF:231KB) outlines what we changed in the Trove API v3 and why. If you have any feedback on v3.0, please contact us . 
+ Share it 
+ We would love to hear how you've used the API to create something, so feel free to share your creation or research with us. Contact us , or share with us on Twitter or Facebook . 
+ What is Trove 
+ Who we are 
+ Join the Trove community 
+ Create something 
+ Using the API 
+ What is the Trove API? 
+ API Terms of Use 
+ API technical guide 
+ People and Organisations data 
+ Bulk download 
+ Case studies 
+ Presentations and Workshops 
+ Policies 
+ Contact us 
+ Acknowledgement of Country 
+ Trove acknowledges First Australian peoples as the Traditional Custodians of this country and their continued connection to land, sea, and culture. Trove pays their respects to the resilience and strength of Ancestors and Elders past, present, and emerging and extends that respect to all First Australian peoples. 
+ First Australians 
+ Trove newsletter 
+ Stay in the know about Trove news, events, search tips and more by signing up to our Treasures eNews, delivered straight to your email inbox. 
+ Subscribe 
+ Social 
+ Facebook 
+ Youtube 
+ Links 
+ Help 
+ News 
+ Contact 
+ Trove is a collaboration between the National Library of Australia and hundreds of Partner organisations around Australia. 
+ See our Partners 
+ Footer menu 
+ Partners 
+ Acknowledgement of Country 
+ Terms of use 
+ Privacy 
+ Disclaimer 
+ Contact 
+ Subscribe 
+ Explore Categories Community Research First Australians About What is Trove History Trove Content Technical ecosystem Known IT issues Trove system updates Who we are Trove brand guidelines Brand architecture Visual identity Our logo Join the Trove community Voluntroves Partner organisations Researchers Book sellers Collection Features Merchandise Share your presentations / training notes Keeping up to date Create something Using the API What is the Trove API? API Terms of Use API technical guide People and Organisations data Bulk download Case studies Presentations and Workshops Trove Roadshows Workshop - Australian School Library Association Workshop - History Teachers Association of Australia Policies Disclaimer Terms of use Privacy Copyright Website accessibility Acknowledgement of Country Trove Content Inclusion Policy Trove Stories Privacy Notice Contact us Help Categories Newspapers and Gazettes Magazines and Newsletters Images, Maps and Artefacts Research and Reports Books and Libraries Diaries, Letters and Archives Music, Audio and Video People and Organisations Websites Searching Basic Search Advanced Search Constructing a Complex Search Query Navigating Trove records Newspaper viewer Journal viewer Image viewer Map viewer Book viewer Finding aids Audio player Web archive Using Trove Borrowing Getting copies Downloading Printing Citing Browser and Operating System Your Trove Tools Lists Using and Managing Lists Collaborative Lists Notes Tags Text Correction Adding Article Categories Your Trove Account Creating an Account Multi-Factor Authentication (MFA) for your account Managing your account Forgot or Reset Password Copyright Copyright and re-use First Australian content Searching language groups Using Austlang codes AustLang code-a-thon on Trove Cultural safety for First Australians News Announcement New in August 2021 Blog Commonwealth Gazette 1901 to 1957 Meet Jack, the lawnmower man The perfect Trove record - Part 1 The perfect Trove record - Part 2 Trove - a bookworm's paradise Your Trove Stories Event Partners What is a Trove Partner? List of partners Partner services Digitise Digitisation process Digitisation terms and conditions Digitisation pricing Trove Partners and digitisation Contribute Sync your collection data Systems we work with Trove Data Dictionary State-based online collections Provide enriched data AUSTLANG Australian extension to Library of Congress Subject Headings Cultural sensitivity Licensing and re-use NHMRC and ARC acknowledgements Place information Manage Cataloguing tools Downloading from the ANBD Resource sharing Access Analyse Partner dashboard Accessing your Partner dashboard Collection analysis tools Connect How are Trove Partner services managed Managing your accounts Become a partner Trove Content Contributors How to become Trove ready Support organisations and programs for collecting organisations Partner Learning Hub Promote your organisation Blog posts Events and news Co-branding Collection features Trove Strategic Advisory Committee Committee members TSAC meetings Partner Support Multi-Factor Authentication Trove Partners Cataloguing known issues Trove Partners Cataloguing release schedule Sign up Login

@@ -1,0 +1,28 @@
+{
+ "slug": "wikipedia",
+ "name": "MediaWiki Action API (Wikipedia)",
+ "docs": {
+  "url": "https://www.mediawiki.org/wiki/API:Main_page",
+  "final_url": "https://www.mediawiki.org/wiki/API:Main_page",
+  "status": 200,
+  "content_type": "text/html; charset=UTF-8",
+  "bytes": 159177,
+  "truncated": false,
+  "sha256": "b8683a5ce768eefa9fdc24dbb63d338ee9806ec379a5f231e03a2e090df0e065",
+  "fetched_at": "2026-10-20T01:31:37+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 26542
+ },
+ "probe": {
+  "url": "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=test&srlimit=1&format=json",
+  "final_url": "https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=test&srlimit=1&format=json",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "bytes": 717,
+  "truncated": false,
+  "sha256": "324b29bcc684c2517dbcdb8a22dfd616f3969dbecd5f44ad9b1763ec38545aa6",
+  "fetched_at": "2026-10-20T01:31:38+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 717
+ }
+}

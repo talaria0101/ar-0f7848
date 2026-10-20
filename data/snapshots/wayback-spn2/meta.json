@@ -1,0 +1,28 @@
+{
+ "slug": "wayback-spn2",
+ "name": "Wayback Save Page Now 2 API",
+ "docs": {
+  "url": "https://docs.google.com/document/d/1Nsv52MvSjbLb2PCpHlat0gkzw0EvtSgpKHu4mk0MnrA/export?format=txt",
+  "final_url": "https://doc-08-ao-docstext.googleusercontent.com/export/s8v029du74rmth76t5k6ldhbqs/gqcam3s6tl5kvenu0kt167g02o/1792459885000/102865373526214175798/*/1Nsv52MvSjbLb2PCpHlat0gkzw0EvtSgpKHu4mk0MnrA?format=txt",
+  "status": 200,
+  "content_type": "text/plain; charset=utf-8",
+  "bytes": 25484,
+  "truncated": false,
+  "sha256": "9eb4e28b894e0da718ae870621f99ac805e0e900aac43e78e03e4115b161b583",
+  "fetched_at": "2026-10-20T01:31:33+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 25460
+ },
+ "probe": {
+  "url": "https://web.archive.org/save/status/system",
+  "final_url": "https://web.archive.org/save/status/system",
+  "status": 401,
+  "content_type": "application/json",
+  "bytes": 60,
+  "truncated": false,
+  "sha256": "508c5bf4d8d77aceca3896dbd5f0ab1a470169fbf828774a9b397c8db6b195f3",
+  "fetched_at": "2026-10-20T01:31:35+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 60
+ }
+}

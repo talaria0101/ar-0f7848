@@ -1,0 +1,28 @@
+{
+ "slug": "nara",
+ "name": "US National Archives Catalog API",
+ "docs": {
+  "url": "https://catalog.archives.gov/api/v2/api-docs",
+  "final_url": "https://catalog.archives.gov/api/v2/api-docs",
+  "status": 200,
+  "content_type": "text/html",
+  "bytes": 5454,
+  "truncated": false,
+  "sha256": "64f334d04ad9c9e56607f11c4fad19022e8cd8cb5acb7de9a7b1938eb94b43d1",
+  "fetched_at": "2026-10-20T01:31:37+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 0
+ },
+ "probe": {
+  "url": "https://catalog.archives.gov/api/v2/records/search?q=test&limit=1",
+  "final_url": "https://catalog.archives.gov/api/v2/records/search?q=test&limit=1",
+  "status": 200,
+  "content_type": "text/html",
+  "bytes": 5454,
+  "truncated": false,
+  "sha256": "64f334d04ad9c9e56607f11c4fad19022e8cd8cb5acb7de9a7b1938eb94b43d1",
+  "fetched_at": "2026-10-20T01:31:38+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 0
+ }
+}

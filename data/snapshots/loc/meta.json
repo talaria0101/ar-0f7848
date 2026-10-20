@@ -1,0 +1,28 @@
+{
+ "slug": "loc",
+ "name": "Library of Congress API",
+ "docs": {
+  "url": "https://www.loc.gov/apis/",
+  "final_url": "https://www.loc.gov/apis/",
+  "status": 200,
+  "content_type": "text/html",
+  "bytes": 46595,
+  "truncated": false,
+  "sha256": "ae748e1ce1177c7fde9f26e5012364a985028b9dafbceceec110cd7f6cde21b1",
+  "fetched_at": "2026-10-20T01:31:36+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 5662
+ },
+ "probe": {
+  "url": "https://www.loc.gov/search/?q=test&fo=json&c=1",
+  "final_url": "https://www.loc.gov/search/?q=test&fo=json&c=1",
+  "status": 403,
+  "content_type": "text/html; charset=UTF-8",
+  "bytes": 5816,
+  "truncated": false,
+  "sha256": "4221bed4eb3c27702818d969a58a4afa93ea3e3017f8fca2de406dfe44fea1c7",
+  "fetched_at": "2026-10-20T01:31:36+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 16
+ }
+}

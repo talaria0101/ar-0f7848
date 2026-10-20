@@ -1,0 +1,38 @@
+Clarivate Developer Portal Toggle navigation Home APIs Applications Contact Content Log in APIs This is the index of available APIs. Click on an API below to learn more and view subscription options. Or find information about Web of Science , Cortellis , or Derwent Innovation APIs by clicking on the appropriate links. Note: The approval process may take a few days. 
+   API Categories AI AI-API C3 CDDI Converis Cortellis Data Feed API Derwent Derwent Sequence Search DI GraphQL Download DSS EndNote HDS Incites IP LSH AI Agent (project name) MCP Metabase patentmonitor-innography Publons Search & Retrieve API Web of Science Filter   Clear EndNote API Deprecated This API allows you to create and update information within an EndNote library. 
+ Information » InCites Document Level Metrics API InCites Benchmarking & Analytics™ is a citation-based evaluation tool for academic and government administrators to analyze institutional productivity and benchmark output against peers and aspirational peers in a national or international context. This API provides article-level metrics to support integration in Research Management Systems or Current Research Information Systems (CRIS). 
+ Information » Web of Science API Expanded The Web of Science™ API Expanded API supports rich searching across the Web of Science to retrieve full item-level metadata, including times cited counts, contributor addresses/affiliations and funding data. Additional operations support the ability to discover related records as well as cited references and citing items. 
+ Information » Web of Science API Lite Support search and data integration using Web of Science data returned as JSON or XML. Note, this API has been replaced by the Web of Science Starter API. 
+ Information » Publons Reviewer Connect API Deprecated Publons Reviewer Connect is a full-stack solution to find, screen, and contact expert peer reviewers. This API helps you integrate Publons Reviewer Connect with your editorial or grant management system. 
+ Information » Web of Science SUSHI API This API helps you harvest usage statistics from the Web of Science platform via the NISO SUSHI protocol in accordance with the COUNTER R5 Code of Practice. 
+ Information » Web of Science SUSHI Status API Public status endpoint for SUSHI API - No authentication required 
+ Information » Converis Read API This Read API allows applications to read data from Converis in order to use it in other systems. The URL needs to be adapted to the Converis instance's specific domain. 
+ Information » MetaBase API Deprecated The MetaBase API provides you access to MetaBase™ which is the knowledge base behind all Systems Biology products of Clarivate. 
+ Information » Metabase API Lite Deprecated MetaBase API Lite provides Search-and-Browse access to the contents of MetaBase™ , the most comprehensive manually curated database of mammalian biology data available today in both industry and academia. 
+ Information » Web of Science Reviewer Locator API Web of Science Reviewer Locator is a full-stack solution to find, screen, and contact expert peer reviewers. This API helps you integrate Web of Science Reviewer Locator with your editorial or grant management system. 
+ Information » Web of Science Journals API This API provides journal-level metadata and metrics for all journals in the Journal Citation Reports™ covered in the Web of Science Core Collection, including the Journal Impact Factor™ and other new metrics. Integrate journal data into your internal systems or retrieve journal indicators for bibliometrics studies. 
+ Information » Intellectual Property (IP) Data API This API provides consolidated access to normalized and linked IP Group data including trademarks, patents, designs, case law. 
+ Information » Web of Science Starter API The Web of Science™ Starter API allows for a real-time check of bibliographic metadata such as DOI, author, source title, etc., against the Web of Science Core Collection and other Web of Science Product Databases. This enables building article-level links to the Web of Science from external systems and retrieving times-cited counts from the Web of Science. 
+ Information » LSH AI Agent (project name) The LSH AI Agent (project name) is a conversational, AI-powered data retrieval service for the Life Sciences & Healthcare domain. 
+ Information » LSH AI Reasoning Agent LSH AI Reasoning Agent 
+ Information » LSH AI Reasoning Agent (OAuth) LSH AI Reasoning Agent (OAuth) 
+ Information » Data Feed API This API provides consolidated access to download as data feeds various Clarivate content sets from multiple domains. 
+ Information » LSH Data Product Search & Retrieve API This graphQL API provides a single access point to query various Clarivate content sets from multiple domains. 
+ Information » CDDI SUSHI REST API SUSHI REST API for COUNTER 5 
+ Information » Web of Science Researcher API The Web of Science™ Researcher API enables users to query and harvest data from Web of Science author records. 
+ Information » DI GraphQL API (With Auth) Deprecated Authenticated access to POST /derwent-graphql. 
+ Information » DI GraphQL API Explorer (No Auth) Public access to GET /derwent-graphql without authentication. 
+ Information » AI API This API provides a pathway to seek prediction from Clarivate models by passing feature values through API call. The models and data are always current and always available. 
+ Information » Cortellis API Collection This section details information on the Cortellis API collection, its diverse content sets and analytical capabilities An API can be seen as a toolbox of building blocks that allows data integration implementation.Programming phases are required before being able to query and access the data.Contact us for more information about the Cortellis APIs and how to get an API subscription. 
+ Information » Converis Additional API's It consolidates five additional APIs: AuditInfoWs, Cache Management API, PentahoParamTokenScheduler API, Components Version API, and Data Integration Process as a Web Service API. 
+ Information » Converis CUD API The CUD API facilitates Create, Update, and Delete operations on data entities within the converis, enabling clients to add, modify, and remove records programmatically. The URL needs to be adapted to the Converis instance's specific domain. 
+ Information » Converis Legacy API Legacy API provides programmatic means to read public content of Converis. The URL needs to be adapted to the Converis instance's specific domain. 
+ Information » patentmonitor-innography Patent Monitor APIs to interact with Innography Application 
+ Information » Cortellis CRI MCP Server (API Key) Cortellis CRI MCP Server (API Key) 
+ Information » Derwent Sequence Search API Derwent Sequence Search API 
+ Information » LSH Dataviz Download Service LSH Dataviz download service; it allows key-auth base download ability to ext clients 
+ Information » Cortellis CCI MCP Server (API Key) Cortellis CCI MCP Server (API Key) 
+ Information » twa-riskmark-integration TWA application will provide you the information about watched trademark and cited trademark based on the threat ID sent. 
+ Information » CMC MCP Server (API Key) CMC MCP Server (API Key) 
+ Information » OFF-X MCP Server (API Key) OFF-X MCP Server (API Key) 
+ Information » © Terms of use        Privacy policy

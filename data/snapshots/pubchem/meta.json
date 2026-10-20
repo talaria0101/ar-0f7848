@@ -1,0 +1,28 @@
+{
+ "slug": "pubchem",
+ "name": "PubChem PUG REST",
+ "docs": {
+  "url": "https://pubchem.ncbi.nlm.nih.gov/docs/pug-rest",
+  "final_url": "https://pubchem.ncbi.nlm.nih.gov/docs/pug-rest",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 21313,
+  "truncated": false,
+  "sha256": "d44c5e8d3ea2cce155ec81ed51f1b34374d3116711e49fe42650d6ef2150dc58",
+  "fetched_at": "2026-10-20T01:31:53+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 169
+ },
+ "probe": {
+  "url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/aspirin/property/MolecularFormula/JSON",
+  "final_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/aspirin/property/MolecularFormula/JSON",
+  "status": 200,
+  "content_type": "application/json",
+  "bytes": 129,
+  "truncated": false,
+  "sha256": "11581258d350dd50c4a3ef6a46e0d0ddd9df977daefbbc87bca93f41ba5ba400",
+  "fetched_at": "2026-10-20T01:31:54+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 128
+ }
+}

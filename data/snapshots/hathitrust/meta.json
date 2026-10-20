@@ -1,0 +1,28 @@
+{
+ "slug": "hathitrust",
+ "name": "HathiTrust Bibliographic API",
+ "docs": {
+  "url": "https://www.hathitrust.org/member-libraries/resources-for-librarians/data-resources/bib-api/",
+  "final_url": "https://www.hathitrust.org/member-libraries/resources-for-librarians/data-resources/bib-api/",
+  "status": 403,
+  "content_type": "text/html; charset=UTF-8",
+  "bytes": 66900,
+  "truncated": false,
+  "sha256": "3b3e6523a06c4dee8f7e1ced179f55e5df26de7129eecf113f67a200c10f7882",
+  "fetched_at": "2026-10-20T01:31:36+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 1125
+ },
+ "probe": {
+  "url": "https://catalog.hathitrust.org/api/volumes/brief/oclc/424023.json",
+  "final_url": "https://catalog.hathitrust.org/api/volumes/brief/oclc/424023.json",
+  "status": 200,
+  "content_type": "application/json; charset=UTF-8",
+  "bytes": 761,
+  "truncated": false,
+  "sha256": "237746ff16d44fa8ce53b3ee63a142ed9325d2140405664e1e08f0a6eaf32e2b",
+  "fetched_at": "2026-10-20T01:31:36+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 761
+ }
+}

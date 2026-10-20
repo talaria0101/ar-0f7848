@@ -1,0 +1,28 @@
+{
+ "slug": "dimensions",
+ "name": "Dimensions Analytics API",
+ "docs": {
+  "url": "https://docs.dimensions.ai/dsl/",
+  "final_url": "https://docs.dimensions.ai/dsl/",
+  "status": 200,
+  "content_type": "text/html",
+  "bytes": 31513,
+  "truncated": false,
+  "sha256": "4bf441de34e83f29eb03632229fa2e022ff228f18f15cefc9d9b3f7805e07570",
+  "fetched_at": "2026-10-20T01:31:56+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 4412
+ },
+ "probe": {
+  "url": "https://app.dimensions.ai/api/auth",
+  "final_url": "https://app.dimensions.ai/api/auth",
+  "status": 404,
+  "content_type": "application/json",
+  "bytes": 2,
+  "truncated": false,
+  "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "fetched_at": "2026-10-20T01:31:57+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 2
+ }
+}

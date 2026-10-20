@@ -1,0 +1,28 @@
+{
+ "slug": "osf",
+ "name": "Open Science Framework API",
+ "docs": {
+  "url": "https://developer.osf.io/",
+  "final_url": "https://developer.osf.io/",
+  "status": 200,
+  "content_type": "text/html",
+  "bytes": 551,
+  "truncated": false,
+  "sha256": "8fcdce0773fb855ff9a8cd1da929347522aed744a5b20516ba94829d0094494e",
+  "fetched_at": "2026-10-20T01:31:50+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 23
+ },
+ "probe": {
+  "url": "https://api.osf.io/v2/nodes/?page%5Bsize%5D=1",
+  "final_url": "https://api.osf.io/v2/nodes/?page%5Bsize%5D=1",
+  "status": 200,
+  "content_type": "application/vnd.api+json; charset=utf-8",
+  "bytes": 4852,
+  "truncated": false,
+  "sha256": "3f937a151eadc3a821c378e27121bfad4e9abc571b40034d759ac0feab024aec",
+  "fetched_at": "2026-10-20T01:31:51+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 4849
+ }
+}

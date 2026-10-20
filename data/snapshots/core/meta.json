@@ -1,0 +1,32 @@
+{
+ "slug": "core",
+ "name": "CORE API",
+ "docs": {
+  "url": "https://core.ac.uk/services/api",
+  "final_url": "https://core.ac.uk/services/api",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 1500000,
+  "truncated": true,
+  "sha256": "f796656984459d15aa2dc5e512140d9ee87984b06803441459fe8ecd6c45f2ed",
+  "fetched_at": "2026-10-20T01:31:39+00:00",
+  "ratelimit_headers": {},
+  "text_bytes": 1422118
+ },
+ "probe": {
+  "url": "https://api.core.ac.uk/v3/search/works?q=test&limit=1",
+  "final_url": "https://api.core.ac.uk/v3/search/works/?q=test&limit=1",
+  "status": 200,
+  "content_type": "application/json",
+  "bytes": 1230,
+  "truncated": false,
+  "sha256": "679eb2510529fee5a1eedc2a8e5feb561604a0036d4503790de147c864f3f5e8",
+  "fetched_at": "2026-10-20T01:31:40+00:00",
+  "ratelimit_headers": {
+   "x-ratelimit-limit": "10",
+   "x-ratelimit-remaining": "9",
+   "x-ratelimit-retry-after": "2026-10-20T01:32:01+0000"
+  },
+  "text_bytes": 1230
+ }
+}
