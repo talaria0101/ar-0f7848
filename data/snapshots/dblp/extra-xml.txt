@@ -1,0 +1,14 @@
+Index of /xml 
+ Index of /xml 
+ Name Last modified Size Description 
+ Parent Directory   -   
+ CHANGES.txt 2023-06-28 16:48 4.8K   
+ README.txt 2019-11-22 21:20 3.5K   
+ dblp.dtd 2023-06-28 16:19 13K   
+ dblp.xml.gz 2026-10-20 02:08 1.0G   
+ dblp.xml.gz.md5 2026-10-20 02:08 46   
+ docu/ 2018-03-01 16:43 -   
+ osd.xml 2020-12-18 16:26 1.5K   
+ release/ 2025-06-04 13:35 -   
+ subm/ 2022-02-21 11:20 -   
+ Apache/2.4.52 (Ubuntu) Server at dblp.org Port 443

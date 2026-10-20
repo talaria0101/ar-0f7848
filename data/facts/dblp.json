@@ -1,0 +1,34 @@
+{
+ "slug": "dblp",
+ "auth": "unreachable",
+ "auth_note": "API probe and docs pages returned an Anubis proxy challenge (HTTP 202), so API auth behaviour was not captured.",
+ "cost": "not established",
+ "rate_limit": "not established",
+ "data_license": "CC0 1.0 Public Domain Dedication for metadata (secondary license ODC-BY 1.0)",
+ "bulk_access": "https://dblp.org/xml/ (dblp.xml.gz monthly snapshot XML release)",
+ "probe_status": 202,
+ "probe_observation": "Probe returned HTTP 202 with an Anubis browser-check page (\"Making sure you're not a bot!\"), not API data.",
+ "evidence": [
+  {
+   "claim": "probe",
+   "quote": "Making sure you're not a bot! Making sure you're not a bot! Loading... Please wait a moment while we ensure the security of your connection. Protected by Anubis",
+   "snapshot": "data/snapshots/dblp/probe.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "is released under the CC0 1.0 Public Domain Dedication license. That is, you are free to copy, distribute, use, modify, transform, build upon, and produce derived works from our data",
+   "snapshot": "data/snapshots/dblp/extra-readme.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "dblp.xml.gz 2026-10-20 02:08 1.0G",
+   "snapshot": "data/snapshots/dblp/extra-xml.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "Making sure you're not a bot! Making sure you're not a bot! Loading...",
+   "snapshot": "data/snapshots/dblp/probe.txt"
+  }
+ ],
+ "not_established": "Search API auth, cost and rate limits: dblp.org docs/FAQ/terms pages and the probe all returned an Anubis challenge (202) to the sandbox; routes tried: FAQ page, licence FAQ, GitHub raw docs (404). Challenge is not an API outage."
+}

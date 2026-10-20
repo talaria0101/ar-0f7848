@@ -1,0 +1,37 @@
+> For the complete documentation index, see [llms.txt](https://docs.openreview.net/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.openreview.net/getting-started/using-the-api.md).
+
+# Using the API
+
+There are currently two APIs supported. The current API (referred to in the documentation as API or API 2) is the current API version, and is the default version used for all operations unless otherwise specified.
+
+The legacy API v1 is being phased out, but is still used for some conferences (primarily those before 2024)
+
+While most operations will work on both APIs, pay careful attention when that is not the case, for example, the JSON format for each API is different.
+
+## You need an OpenReview account
+
+You need an OpenReview account to use the API. You authenticate with the same username and password you use on the website, and the API enforces the same permissions as the site does: you can only read and edit what your account is allowed to read and edit.
+
+If you do not have an account yet, [sign up for one](/getting-started/creating-an-openreview-profile/signing-up-for-openreview.md) before going any further. Once you have one, see [Installing and Instantiating the Python client](/getting-started/using-the-api/installing-and-instantiating-the-python-client.md) for how to authenticate.
+
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information that is not directly available in this page, you can query the documentation by asking a question.
+
+Perform an HTTP GET request on the following URL with the `ask` and `goal` query parameters:
+
+```
+GET https://docs.openreview.net/getting-started/using-the-api.md?ask=<question>&goal=<user_goal>
+```
+
+`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
+`goal` is what the user is ultimately trying to achieve, the reason they need the answer. Sharing it helps GitBook give you a better, more relevant answer. A goal is most helpful when it describes the outcome the user wants rather than restating the question. For example, with `ask=how do I create an API token`, a goal like `automate deployments from our CI pipeline` lets GitBook tailor the answer to that use case.
+
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

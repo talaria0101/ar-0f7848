@@ -1,0 +1,142 @@
+*Last updated: March 26, 2026*
+
+# Downloading PubChem Data
+
+[PubChem](https://pubchem.ncbi.nlm.nih.gov) is a free to use database with most of the data readily available for download. 
+Exceptions may exist in cases where licensing agreements prevent our data contributors from 
+allowing bulk downloads of some data sets. 
+
+Please consult the NCBI Policies and Disclaimers 
+webpage (https://www.ncbi.nlm.nih.gov/home/about/policies/) and the NLM Web Policies 
+webpage (https://www.nlm.nih.gov/web_policies.html).
+
+
+The data in PubChem comes from hundreds of data contributors 
+(https://pubchem.ncbi.nlm.nih.gov/source/).  A data source may provide explicit data license 
+information.  One should check with the PubChem data source for the most current data 
+licensing information.
+
+
+PubChem strives to make clear the data provenance of all content.  Within a given data table row
+or beneath provided content, the data provenance is provided.  For example, this data shows 
+Medical Subject Headings (MeSH) as the data source for the assertion of a chemical being a 
+“Fibrinolytic Agent”:
+
+![PubChem data provenance example](../content-images/downloads-provenance.png)
+
+The data provenance can be expanded with a click. Using the earlier example, here is the expanded view:
+
+![PubChem data expanded provenance example](../content-images/downloads-provenance-expanded.png)
+
+This example provides details as to who provided the content, what record within the data 
+source, a link to the record within the data source, a description of the data source, and the data 
+license for the provided content.  This provenance metadata information varies by data source 
+and should be consulted when using the provided content.
+
+
+There are multiple ways to download PubChem data.
+
+
+## Individual Record Download
+
+All or part of the data for an individual PubChem record may be downloaded in various file formats, using the _**Download**_ button available on the top-right corner of a Compound Summary, Substance Record, or BioAssay Record page.  A _**Download**_ button is also available above various [data views](widgets.md) that present certain types of information (for example, [bioassay data tables](bioassay-data-table-widget-example.md), [classification views](compound-classification-widget-example.md), [3-D conformer views](3d-structure-viewer.md), etc.)
+
+
+## Programmatic Download
+
+PubChem data may be downloaded programmatically using various programmatic access routes including: 
+
+[E-Utilities](https://www.ncbi.nlm.nih.gov/books/NBK25501/) 
+
+[Power User Gateway (PUG)](power-user-gateway.md)
+
+[PUG-SOAP](pug-soap.md)
+
+[PUG-REST](pug-rest.md) 
+
+[PUG-View](pug-view.md)
+
+[PubChemRDF REST interface](rdf-rest.md)
+
+For more details, refer to PubChem [programmatic access overview](programmatic-access.md).
+
+
+## Bulk Download
+
+### From PubChem Search pages
+
+The PubChem Search pages (e.g. the [PubChem home page](https://pubchem.ncbi.nlm.nih.gov/) and underlying result lists) provide a direct interface to downloading search results. The download button is on the upper right side (when results are for a specific entity type, like compounds or proteins etc., are shown):
+
+![](../content-images/downloads-1.png)
+
+This will bring up a pop-up panel of options that lets you select the format and compression options for a downloaded file. Simply select options (radio buttons) and a format, and the download will begin immediately. Note that the options are different for different record types. For compounds it looks like this:
+
+![](../content-images/downloads-2.png)
+
+#### Download Formats and Options
+
+Search results can be downloaded in the following formats:
+
+| Format | Description                                                                                                                             |
+| ------ | --------------------------------------------------------------------------------------------------------------------------------------- |
+| CSV    | Tabular data in comma-separated values format, suitable for spreadsheets and simple data processing workflows.                          |
+| JSON   | Structured data encoded as a JSON array, where each array element represents a separate record.                                         |
+| JSONL  | Structured data in JSON Lines format, where each line contains a separate JSON object for easier streaming and line-by-line processing. |
+| XML    | Structured data in XML (eXtensible Markup Language), using tagged elements to represent records and their associated fields.            |
+
+For each format, you can click **FIELDS TO DOWNLOAD** to select the columns you want to include. The downloaded data can also be compressed in Gzip format.
+
+If you have a specific list of records  you would like to download, you can use the "Upload ID List" function on the [homepage](https://pubchem.ncbi.nlm.nih.gov/):
+
+![](../content-images/downloads-3.png)
+
+This will bring up an input panel where you can specify what type of record you're talking about (compounds, assays, etc.), and provide a list of record identifiers either directly or via file upload. After uploading your list, you can download the records as above.
+
+### From the PubChem FTP Site
+
+
+> WARNING
+>>**503 HTTP STATUS CODE**:  Please note that this status code may be returned when the server is temporarily unable to service your request due to maintenance downtime or capacity problems. (Please try again later.) Please also note that an HTML document may be returned.
+
+
+The PubChem FTP site ([https://ftp.ncbi.nlm.nih.gov/pubchem](https://ftp.ncbi.nlm.nih.gov/pubchem)) allows the user to download various kinds of PubChem data in bulk. (Historically this area used File Transfer Protocol (FTP) but now HTTP access is preferred.) Here is a brief overview of the layout of the directories at the FTP site.  For more detailed information on the content in each directory, please see the README file in that directory. Note that files in this FTP site can be accessed via either FTP or HTTPS protocols.
+
+[Bioassay](https://ftp.ncbi.nlm.nih.gov/pubchem/Bioassay)
+
+PubChem BioAssay data
+
+[Compound](https://ftp.ncbi.nlm.nih.gov/pubchem/Compound)
+
+Full and incremental data dump for PubChem compounds (without annotations and 3-D conformer models).
+
+[Compound_3D](https://ftp.ncbi.nlm.nih.gov/pubchem/Compound_3D)
+
+Computationally generated 3-D structures for PubChem compounds, along with other 3-D properties such as molecular volume, shape quadrupoles, shape fingerprint, etc.
+
+[Other](https://ftp.ncbi.nlm.nih.gov/pubchem/Other)
+
+Other PubChem data, including chemical-patent data from Google Patents and IBM.
+
+[RDF](https://ftp.ncbi.nlm.nih.gov/pubchem/RDF)
+
+PubChem data formatted in Resource Description Framework (RDF).
+
+[Substance](https://ftp.ncbi.nlm.nih.gov/pubchem/Substance)
+
+Full and incremental data dump for PubChem substances, deposited by individual data submitters.
+
+[Target](https://ftp.ncbi.nlm.nih.gov/pubchem/Target)
+
+List of genes targeted in PubChem BioAssays.
+
+[Presentations](https://ftp.ncbi.nlm.nih.gov/pubchem/presentations)
+
+Slides for some PubChem presentations.
+
+[Publications](https://ftp.ncbi.nlm.nih.gov/pubchem/publications)
+
+Some full-text articles about PubChem. A full publication list is available on the [publications page](publications.md).
+
+[Specifications](https://ftp.ncbi.nlm.nih.gov/pubchem/specifications)
+
+Data specification for PubChem records.

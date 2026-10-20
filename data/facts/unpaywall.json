@@ -1,0 +1,29 @@
+{
+ "slug": "unpaywall",
+ "auth": "none",
+ "auth_note": "Probe succeeded anonymously (only a placeholder email query param, no key); docs page could not be captured so any email requirement is unconfirmed.",
+ "cost": "not established",
+ "rate_limit": "not established",
+ "data_license": "not established",
+ "bulk_access": "none documented",
+ "probe_status": 200,
+ "probe_observation": "Returned a JSON object starting with best_oa_location for doi 10.1038/nature12373 with is_oa true and oa_status bronze.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "\"doi\":\"10.1038/nature12373\",\"doi_url\":\"https://doi.org/10.1038/nature12373\"",
+   "snapshot": "data/snapshots/unpaywall/probe.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "\"is_oa\":true",
+   "snapshot": "data/snapshots/unpaywall/probe.txt"
+  },
+  {
+   "claim": "other",
+   "quote": "\"documentation_url\":\"https://unpaywall.org/api/v2\",\"msg\":\"Don't panic\",\"version\":\"2.0.1\"",
+   "snapshot": "data/snapshots/unpaywall/extra-v2.txt"
+  }
+ ],
+ "not_established": "Cost, rate limit, data license, bulk/snapshot route, and whether an email param is mandatory: unpaywall.org/products/api (and /api/v2, /products, /faq, /data-format, oadoi.org/api/v2) is a JS SPA shell whose captured text is 9 bytes; GitHub README via raw and api.github.com returned empty bodies; the github.com repo page (MIT code license) has no API docs."
+}

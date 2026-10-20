@@ -1,0 +1,24 @@
+{
+ "slug": "wayback-availability",
+ "auth": "none",
+ "auth_note": "Anonymous GET returned a snapshot; no key is mentioned in the docs.",
+ "cost": "not established",
+ "rate_limit": "not established",
+ "data_license": "not established",
+ "bulk_access": "none documented",
+ "probe_status": 200,
+ "probe_observation": "Anonymous request returned HTTP 200 JSON with url example.com and archived_snapshots.closest available true, status 200.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "{\"url\": \"example.com\", \"archived_snapshots\": {\"closest\": {\"status\": \"200\", \"available\": true",
+   "snapshot": "data/snapshots/wayback-availability/probe.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "\"available\": true, \"url\": \"http://web.archive.org/web/20261020000012/https://example.com/\"",
+   "snapshot": "data/snapshots/wayback-availability/probe.txt"
+  }
+ ],
+ "not_established": "Rate limits, data license and cost are not stated in the docs page (last updated Sept 2013 per page). archive.org/about/terms.php returned an Anubis/JS shell (93 bytes) with no terms text."
+}

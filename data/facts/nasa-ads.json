@@ -1,0 +1,39 @@
+{
+ "slug": "nasa-ads",
+ "auth": "key-free",
+ "auth_note": "Anonymous probe is refused with 401; docs say to create an account and press Generate a new key to get a token sent as a Bearer header.",
+ "cost": "not established",
+ "rate_limit": "Each endpoint individually rate-limited; example header shows X-RateLimit-Limit: 5000 daily queries per user, reset at midnight UTC",
+ "data_license": "not established",
+ "bulk_access": "none documented",
+ "probe_status": 401,
+ "probe_observation": "Probe returned HTTP 401 with JSON body {\"message\": \"Missing \\\"Authorization\\\" in headers.\"}.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "{\"message\": \"Missing \\\"Authorization\\\" in headers.\"}",
+   "snapshot": "data/snapshots/nasa-ads/probe.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "Create an account and log in to the latest version of the [ADS](https://ui.adsabs.harvard.edu). 1. Push the \"Generate a new key\" button",
+   "snapshot": "data/snapshots/nasa-ads/extra-gh.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "{\"message\": \"Missing \\\"Authorization\\\" in headers.\"}",
+   "snapshot": "data/snapshots/nasa-ads/probe.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "Each endpoint is individually rate-limited. ... The Limit variable indicates the amount of daily queries allowed to the user (in this case 5000).",
+   "snapshot": "data/snapshots/nasa-ads/extra-gh.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "You won\u2019t try to create a partial or full copy of the data maintained and made available by the API, either by systematically downloading or crawling our content.",
+   "snapshot": "data/snapshots/nasa-ads/extra-terms.txt"
+  }
+ ],
+ "not_established": "Docs page https://ui.adsabs.harvard.edu/help/api/ returned 202 with empty text (challenge); evidence comes from the GitHub README and terms page. Cost is not stated explicitly (key is self-serve). The actual default quota is only an example header value (5000/day), not a stated policy. Data license not stated: terms say publisher copyright applies to abstracts/full text and no redistribution. No bulk route; terms forbid systematic copying and say to contact ADS first."
+}

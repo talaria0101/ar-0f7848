@@ -24,5 +24,43 @@
   "fetched_at": "2026-10-20T01:31:46+00:00",
   "ratelimit_headers": {},
   "text_bytes": 52
+ },
+ "extra": {
+  "gh": {
+   "url": "https://raw.githubusercontent.com/adsabs/adsabs-dev-api/master/README.md",
+   "final_url": "https://raw.githubusercontent.com/adsabs/adsabs-dev-api/master/README.md",
+   "status": 200,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 4121,
+   "truncated": false,
+   "sha256": "3b9646a68b49100adb1bf00115f876d514571a0a579de35ed22e599e53ff25bf",
+   "fetched_at": "2026-10-20T01:37:44+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 4120
+  },
+  "terms": {
+   "url": "https://adsabs.github.io/help/terms/",
+   "final_url": "https://adsabs.github.io/help/terms/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 38564,
+   "truncated": false,
+   "sha256": "88702bdae4cc2951400e938f7d656e7edf0676731754f4aff23dd984c322a1ef",
+   "fetched_at": "2026-10-20T01:38:03+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 8082
+  },
+  "limits": {
+   "url": "https://raw.githubusercontent.com/adsabs/adsabs-dev-api/master/README.md",
+   "final_url": "https://raw.githubusercontent.com/adsabs/adsabs-dev-api/master/README.md",
+   "status": 200,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 4121,
+   "truncated": false,
+   "sha256": "3b9646a68b49100adb1bf00115f876d514571a0a579de35ed22e599e53ff25bf",
+   "fetched_at": "2026-10-20T01:38:03+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 4120
+  }
  }
 }

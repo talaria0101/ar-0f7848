@@ -1,0 +1,54 @@
+{
+ "slug": "core",
+ "auth": "none",
+ "auth_note": "CORE API is free without registration at a lower rate; registering for an API key gives a faster rate. Anonymous probe returned data.",
+ "cost": "freemium",
+ "rate_limit": "One batch request or five single requests per 10 seconds; registered users get a faster rate, VIP rate on request.",
+ "data_license": "ODC-By for CORE datasets; other datasets and the API need a CORE licence under the Terms & Conditions (free licence for eligible individuals and public research organisations)",
+ "bulk_access": "CORE Dataset (https://core.ac.uk/services/dataset); ODC-By licenced datasets per https://core.ac.uk/terms; FastSync also listed",
+ "probe_status": 200,
+ "probe_observation": "The probe returned JSON starting {\"totalHits\":6586088,\"limit\":1,\"offset\":0,\"results\":[...]} with one work.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "{\"totalHits\":6586088,\"limit\":1,\"offset\":0,\"results\":[{\"acceptedDate\"",
+   "snapshot": "data/snapshots/core/probe.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "CORE API is free and does not require registration, subject to our rate limits",
+   "snapshot": "data/snapshots/core/docs.txt"
+  },
+  {
+   "claim": "cost",
+   "quote": "However, organisations that register get a faster rate that is typically not free.",
+   "snapshot": "data/snapshots/core/docs.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "One batch request or five single requests per 10 seconds.",
+   "snapshot": "data/snapshots/core/docs.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "ODC-By licenced datasets You can use these datasets for any commercial or non-commercial purposes in line with the ODC-By licence",
+   "snapshot": "data/snapshots/core/extra-terms.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "While you need to obtain a licence to use other",
+   "snapshot": "data/snapshots/core/extra-terms.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "Explore all CORE services Access to raw data API Dataset FastSync",
+   "snapshot": "data/snapshots/core/docs.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "{\"totalHits\":6586088,\"limit\":1,\"offset\":0",
+   "snapshot": "data/snapshots/core/probe.txt"
+  }
+ ],
+ "not_established": "Exact licence of API-returned metadata: Terms say ODC-By applies to specific datasets and that other datasets and the API need a licence, but the captured text does not give the API data licence by name. The rate-limit detail page (api.core.ac.uk/docs/v3, an SPA) captured only 22 bytes, so the registered-key rate numbers are not established. Dataset page content was not read in detail; OpenAPI URL guesses returned 404."
+}

@@ -1,0 +1,49 @@
+{
+ "slug": "openaire",
+ "auth": "none",
+ "auth_note": "Anonymous requests work (probe returned 200 JSON); registration and a personal token raise the rate limit.",
+ "cost": "free",
+ "rate_limit": "Unauthenticated up to 60 requests per hour; authenticated up to 7200 requests per hour.",
+ "data_license": "CC-BY (parts re-usable as CC-0)",
+ "bulk_access": "Full graph dataset on Zenodo: https://doi.org/10.5281/zenodo.3516917 (offset paging also capped at 10,000 results; cursor paging available)",
+ "probe_status": 200,
+ "probe_observation": "Returned JSON starting with a header object with numFound 7688693 and one researchProducts result (pageSize 1).",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "\"header\":{\"numFound\":7688693,\"maxScore\":3.876644,\"queryTime\":276,\"page\":1,\"pageSize\":1}",
+   "snapshot": "data/snapshots/openaire/probe.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "can be accessed over HTTPS both by authenticated and unauthenticated requests",
+   "snapshot": "data/snapshots/openaire/extra-limits.txt"
+  },
+  {
+   "claim": "cost",
+   "quote": "The OpenAIRE APIs are free-to-use by any third-party service",
+   "snapshot": "data/snapshots/openaire/extra-limits.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "The rate limit for the former type of requests is up to 7200 requests per hour, while the latter is up to 60 requests per hour.",
+   "snapshot": "data/snapshots/openaire/extra-limits.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "OpenAIRE Graph is available for download and re-use as CC-BY (due to some input sources whose license is CC-BY). Parts of the graphs can be re-used as CC-0.",
+   "snapshot": "data/snapshots/openaire/extra-license.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "Dataset: https://doi.org/10.5281/zenodo.3516917",
+   "snapshot": "data/snapshots/openaire/extra-bulk.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "\"header\":{\"numFound\":7688693",
+   "snapshot": "data/snapshots/openaire/probe.txt"
+  }
+ ],
+ "not_established": "Nothing major. Note: the probe response headers reported x-ratelimit-limit 7199 (meta.json only, not in a snapshot text), which differs from the documented 60/hour anonymous figure; not reconciled."
+}

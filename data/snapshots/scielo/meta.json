@@ -24,5 +24,103 @@
   "fetched_at": "2026-10-20T01:31:49+00:00",
   "ratelimit_headers": {},
   "text_bytes": 1500000
+ },
+ "extra": {
+  "readme": {
+   "url": "https://raw.githubusercontent.com/scieloorg/articlemeta/master/README.md",
+   "final_url": "https://raw.githubusercontent.com/scieloorg/articlemeta/master/README.md",
+   "status": 404,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 14,
+   "truncated": false,
+   "sha256": "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed",
+   "fetched_at": "2026-10-20T01:38:56+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 14
+  },
+  "swagger": {
+   "url": "https://articlemeta.scielo.org/api/v1/",
+   "final_url": "https://articlemeta.scielo.org/api/v1/",
+   "status": 404,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 152,
+   "truncated": false,
+   "sha256": "b2d8ed80e73d618b01dd4470f0786bc05ab45dacb7525a8f66524ecafe0ea5b4",
+   "fetched_at": "2026-10-20T01:38:57+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 64
+  },
+  "oai": {
+   "url": "https://articlemeta.scielo.org/oai/?verb=Identify",
+   "final_url": "https://articlemeta.scielo.org/oai/?verb=Identify",
+   "status": 404,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 152,
+   "truncated": false,
+   "sha256": "b2d8ed80e73d618b01dd4470f0786bc05ab45dacb7525a8f66524ecafe0ea5b4",
+   "fetched_at": "2026-10-20T01:38:58+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 64
+  },
+  "gh": {
+   "url": "https://github.com/scieloorg/articles_meta",
+   "final_url": "https://github.com/scieloorg/articles_meta",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 304074,
+   "truncated": false,
+   "sha256": "98a03fc50ac0bb69f2a4918733c94d14cd189fb3c11661e0eb46cec22b4beb52",
+   "fetched_at": "2026-10-20T01:39:10+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 6170
+  },
+  "raw": {
+   "url": "https://raw.githubusercontent.com/scieloorg/articles_meta/master/README.md",
+   "final_url": "https://raw.githubusercontent.com/scieloorg/articles_meta/master/README.md",
+   "status": 200,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 2698,
+   "truncated": false,
+   "sha256": "8f53f138d1cd17e3503c03c899eb6f67770556c77f2ed4480d8d229cd87d1b54",
+   "fetched_at": "2026-10-20T01:39:12+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 2667
+  },
+  "api": {
+   "url": "https://articlemeta.scielo.org/api/v1/docs",
+   "final_url": "https://articlemeta.scielo.org/api/v1/docs",
+   "status": 404,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 152,
+   "truncated": false,
+   "sha256": "b2d8ed80e73d618b01dd4470f0786bc05ab45dacb7525a8f66524ecafe0ea5b4",
+   "fetched_at": "2026-10-20T01:39:12+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 64
+  },
+  "about": {
+   "url": "https://scielo.org/en/about-scielo/open-access-statement/",
+   "final_url": "https://www.scielo.org/en/about-scielo/open-access-statement/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 26400,
+   "truncated": false,
+   "sha256": "1ea3d5b092eba13fa2acf8fe147359cf33ad6f5c537ed99e7d3065562b1dd273",
+   "fetched_at": "2026-10-20T01:39:14+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 2666
+  },
+  "ratelimit": {
+   "url": "https://articlemeta.scielo.org/api/v1/journal/identifiers/?limit=1",
+   "final_url": "https://articlemeta.scielo.org/api/v1/journal/identifiers/?limit=1",
+   "status": 200,
+   "content_type": "application/json",
+   "bytes": 262,
+   "truncated": false,
+   "sha256": "733ed7a07b7e6d1c389994ec299eeea058f9a3e25a2416dc41ba4878a714e59f",
+   "fetched_at": "2026-10-20T01:39:17+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 262
+  }
  }
 }

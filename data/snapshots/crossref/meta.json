@@ -28,5 +28,59 @@
    "x-api-pool": "public-array"
   },
   "text_bytes": 2472
+ },
+ "extra": {
+  "rl": {
+   "url": "https://api.crossref.org/swagger-ui/index.html",
+   "final_url": "https://api.crossref.org/swagger-ui/index.html",
+   "status": 200,
+   "content_type": "text/html",
+   "bytes": 734,
+   "truncated": false,
+   "sha256": "bb9928afd0ea8c12e124c42fef58fb080f36770389684badb2a4dcf548624eeb",
+   "fetched_at": "2026-10-20T01:35:50+00:00",
+   "ratelimit_headers": {
+    "x-rate-limit-limit": "1",
+    "x-rate-limit-interval": "1s",
+    "x-api-pool": "public-array"
+   },
+   "text_bytes": 10
+  },
+  "tips": {
+   "url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/tips-for-using-the-crossref-rest-api/",
+   "final_url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/tips-for-using-the-crossref-rest-api/",
+   "status": 200,
+   "content_type": "text/html",
+   "bytes": 76605,
+   "truncated": false,
+   "sha256": "6d207e8b60b0a3c6c4db0591337fd64d5cb9ca7e4d546cb9dc759c638dcfc94c",
+   "fetched_at": "2026-10-20T01:35:51+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 19891
+  },
+  "plus": {
+   "url": "https://www.crossref.org/documentation/metadata-plus/",
+   "final_url": "https://www.crossref.org/documentation/metadata-plus/",
+   "status": 200,
+   "content_type": "text/html",
+   "bytes": 69103,
+   "truncated": false,
+   "sha256": "1370f954ac806d9d6eb320fcf3805e498989d92914aec3cf4b79bd68f43629e2",
+   "fetched_at": "2026-10-20T01:35:53+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 13170
+  },
+  "terms": {
+   "url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/rest-api-metadata-license-information/",
+   "final_url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/rest-api-metadata-license-information/",
+   "status": 404,
+   "content_type": "application/xml",
+   "bytes": 387,
+   "truncated": false,
+   "sha256": "bc08eba89585496545005a316526b941bc29c6e37aec0dfe6886015f8d3b65f7",
+   "fetched_at": "2026-10-20T01:35:55+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 387
+  }
  }
 }

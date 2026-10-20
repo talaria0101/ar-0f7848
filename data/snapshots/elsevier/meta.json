@@ -24,5 +24,19 @@
   "fetched_at": "2026-10-20T01:31:56+00:00",
   "ratelimit_headers": {},
   "text_bytes": 97
+ },
+ "extra": {
+  "keys": {
+   "url": "https://dev.elsevier.com/api_key_settings.html",
+   "final_url": "https://dev.elsevier.com/api_key_settings.html",
+   "status": 200,
+   "content_type": "text/html;charset=UTF-8",
+   "bytes": 96312,
+   "truncated": false,
+   "sha256": "ab2586a1e696e25fdba3cdde493ffaa47b4ffa270ddde916a125db7e8b796a86",
+   "fetched_at": "2026-10-20T01:40:09+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 7671
+  }
  }
 }

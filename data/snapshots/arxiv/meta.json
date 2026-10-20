@@ -24,5 +24,43 @@
   "fetched_at": "2026-10-20T01:31:41+00:00",
   "ratelimit_headers": {},
   "text_bytes": 1575
+ },
+ "extra": {
+  "terms": {
+   "url": "https://info.arxiv.org/help/api/tou.html",
+   "final_url": "https://info.arxiv.org/help/api/tou.html",
+   "status": 200,
+   "content_type": "text/html",
+   "bytes": 85062,
+   "truncated": false,
+   "sha256": "badbec1e87aa317038c3a519a3fad3c4a855ebe019f0e681772d72f6a14f4e49",
+   "fetched_at": "2026-10-20T01:36:28+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 8099
+  },
+  "basics": {
+   "url": "https://info.arxiv.org/help/api/basics.html",
+   "final_url": "https://info.arxiv.org/help/api/basics.html",
+   "status": 200,
+   "content_type": "text/html",
+   "bytes": 96450,
+   "truncated": false,
+   "sha256": "aa422653fc5f0a79d497a94dc1b0f0a4c7423c67880fdf4f9a455795c77064f0",
+   "fetched_at": "2026-10-20T01:36:30+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 14028
+  },
+  "bulk": {
+   "url": "https://info.arxiv.org/help/bulk_data.html",
+   "final_url": "https://info.arxiv.org/help/bulk_data.html",
+   "status": 200,
+   "content_type": "text/html",
+   "bytes": 84571,
+   "truncated": false,
+   "sha256": "010c4806063c9029ac01f8c551921f0df65a5b55cece8a52b46ff7b946340272",
+   "fetched_at": "2026-10-20T01:36:32+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 6780
+  }
  }
 }

@@ -1,0 +1,39 @@
+{
+ "auth": "none",
+ "auth_note": "Anonymous GET to https://data.mendeley.com/api/datasets?query=test returned dataset records (HTTP 200); the listed probe URL /public-api/datasets returned 404. Write operations need a login (not captured).",
+ "cost": "free",
+ "rate_limit": "not established",
+ "data_license": "not established",
+ "bulk_access": "OAI-PMH at https://data.mendeley.com/oai",
+ "probe_status": 404,
+ "probe_observation": "Probe body was 'Error  Cannot GET /public-api/datasets' (HTTP 404, HTML); the endpoint path in providers.json does not exist.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "{\"data\":{\"results\":[{\"id\":\"jxj8bn2vyf\",\"doi\":{\"id\":\"10.17632/jxj8bn2vyf.3\"",
+   "snapshot": "data/snapshots/mendeley-data/extra-ds2.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "Cannot GET /public-api/datasets",
+   "snapshot": "data/snapshots/mendeley-data/probe.txt"
+  },
+  {
+   "claim": "cost",
+   "quote": "Mendeley Data is the Elsevier open generalist data repository to create, share and access FAIR data globally provided free to journal authors and researchers",
+   "snapshot": "data/snapshots/mendeley-data/extra-faq.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "Mendeley Data supports harvesting our entire repository of public dataset records using the Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH) standard.",
+   "snapshot": "data/snapshots/mendeley-data/extra-faq.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "<baseURL>https://data.mendeley.com/oai</baseURL>",
+   "snapshot": "data/snapshots/mendeley-data/extra-oaiv.txt"
+  }
+ ],
+ "not_established": "docs.txt is a JS shell (530 bytes) so no documented rate limits or API terms captured; /terms and /terms-of-use gave Cloudflare block (403) or 404 from this sandbox. Cost statement concerns the repository service, not API pricing specifically. Metadata licence not established: dataset licences are chosen by depositors (default CC BY 4.0 per FAQ) and the site footer says all rights reserved except Creative Commons terms for open access content. Auth for write endpoints (login/OAuth) not captured.",
+ "slug": "mendeley-data"
+}

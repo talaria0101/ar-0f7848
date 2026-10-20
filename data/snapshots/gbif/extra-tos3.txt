@@ -1,0 +1,65 @@
+Using data :: Technical Documentation 
+ Technical Documentation 
+ Data publishing 
+ Data processing 
+ Data use 
+ API 
+ Cloud services 
+ System components 
+ English 
+ Leave feedback on GitHub 
+ Send feedback by email 
+ Edit this page on GitHub 
+ Data Use 
+ Data downloads 
+ Occurrence download formats 
+ Importing into ArcGIS 
+ Importing into Excel 
+ Importing into LibreOffice 
+ Importing into QGIS 
+ Issues and flags 
+ Occurrence issues and flags 
+ Checklist issues and flags 
+ API Usage 
+ API Introduction 
+ rgbif 
+ pygbif 
+ Java 
+ API Downloads 
+ API Downloads 
+ API SQL Downloads 
+ API SQL Downloads – Functions 
+ Species occurrence cubes 
+ Cloud computing services 
+ Citation 
+ Data Use 
+ Using data 
+ Using data 
+ GBIF users can access the data they need in several ways, and each method generally offers data in a choice of formats. 
+ The easiest option is to use the GBIF website , which allows searching and browsing individual records, as well as requesting data downloads in the most common formats. 
+ Data downloads are compatible with a wide range of software. We have specific advice for loading data into spreadsheet software ( LibreOffice , Excel ) and GIS software ( QGIS , ArcGIS ). 
+ For more structured access, consider using the GBIF API, either directly or using the rgbif or pygbif libraries. 
+ Some workflows are best served using cloud computing systems, and GBIF data is available on Amazon AWS, Google GCS and Microsoft Azure for this purpose. 
+ Data downloads 
+ Downloads can be requested in three main formats: Simple, Darwin Core Archive and Species List. Registered users may create them using the website or through the API, or using rgbif or pygbif. 
+ See API Downloads for creating a download directly through the API. See rgbif and pygbif for creating downloads using R or Python. 
+ See Occurrence download formats for details on the structure of each download format, regardless of how it was created. 
+Submitting the same download query within 48 hours will return the previous download. The system will redirect you to the existing download page.
+ API usage 
+ The GBIF API provides a programmatic way to query and publish data on GBIF.org. It can be useful or necessary to use the API to 
+ make advanced queries, not supported by the website, 
+ include the results of GBIF queries in scripts, workflows or analyses, which can then be repeated reliably and automatically, 
+ embed GBIF data into other websites. 
+ It can be accessed by any programming language, from a command-line terminal interface, or in some cases using a web browser. 
+ See Introduction to the GBIF API for general advice on using the API, including clients in R, Python and Java. Detailed information on using the API to make downloads is in the API Downloads section. 
+ Complete reference documentation is in the API Reference section. 
+ Cloud computing services 
+ Each month, an export of GBIF occurrence data is uploaded to various cloud computing services. These services allow users to query the data, integrate it into workflows running on cloud or local systems and make more complex queries than are possible using the GBIF API. See Cloud computing services for more information. 
+ Citation 
+ Under the terms of the GBIF data user agreement, users who download data agree to cite a DOI. Please see GBIF’s citation guidelines . 
+ Occurrence download formats 
+ GBIF.org 
+ Data blog 
+ Terms and agreements 
+ Contact 
+ GBIF Secretariat • Universitetsparken 15 • DK-2100 Copenhagen Ø • Denmark

@@ -1,0 +1,39 @@
+{
+ "slug": "zbmath",
+ "auth": "none",
+ "auth_note": "Anonymous GET of the search endpoint returned JSON with no key or header.",
+ "cost": "not established",
+ "rate_limit": "not established",
+ "data_license": "CC-BY-SA 4.0",
+ "bulk_access": "OAI-PMH API at https://oai.zbmath.org/ (captured page shows only its Terms & Conditions gate)",
+ "probe_status": 200,
+ "probe_observation": "Anonymous probe returned JSON starting with {\"result\":[{...}] holding one zbMATH document record (id 6113598) including a per-record license field.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "{\"result\":[{\"biographic_references\":[],\"contributors\":{\"authors\":[{\"aliases\":[],\"checked\":\"+\"",
+   "snapshot": "data/snapshots/zbmath/probe.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "{\"result\":[{\"biographic_references\":[],\"contributors\":{\"authors\":[",
+   "snapshot": "data/snapshots/zbmath/probe.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "content accessed via this API is licensed under the",
+   "snapshot": "data/snapshots/zbmath/extra-openapi.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "CC-BY-SA 4.0",
+   "snapshot": "data/snapshots/zbmath/extra-openapi.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "zbMATH Open OAI-PMH API \u2013 Terms & Conditions",
+   "snapshot": "data/snapshots/zbmath/extra-oai.txt"
+  }
+ ],
+ "not_established": "Cost statement not found in captured pages. Numeric rate limits not found: OpenAPI text only says 'Each API endpoint's documentation may detail more specific usage limits'. The terms page is an unrendered agreement stub (122 bytes), so terms text was not captured. Some records carry a different license (probe shows by-nc-nd 4.0 on one record) and some third-party content is withheld ('contents unavailable due to conflicting licenses'). OAI-PMH endpoint itself was not probed with a verb; only its terms stub was captured."
+}

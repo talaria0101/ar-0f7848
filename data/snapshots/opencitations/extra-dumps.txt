@@ -1,0 +1,150 @@
+OpenCitations download page 
+ Search
+ API
+ Download
+ Other Services
+ SPARQL
+ OCI Resolver
+ Statistics
+ SPARQL
+ OCI Resolver
+ Statistics
+ Open Citations 
+ data downloads 
+ Access all data dumps from OpenCitations Meta and OpenCitations Index
+ Data available through Zenodo , Figshare and the Internet Archive 
+ Meta 
+ Bibliographic metadata for all publications in the OpenCitations Index 
+ Latest: June 2026 dump 
+ Includes data on 147M+ bibliographic entities, 422M+ authors, and 2.3M+ publication venues 
+ View Meta downloads 
+ Updated on 2026-06-27 
+ Index 
+ OMID-to-OMID references representing all citations from multiple sources 
+ Latest: July 2026 dump 
+ Includes data on 2.5 billion+ citations from various sources 
+ View Index downloads 
+ Updated on 2026-07-28 
+ Open Citations Meta
+ The Open Citations Meta database stores and delivers bibliographic metadata for all publications involved in the Open Citations Index. 
+ Most recent OpenCitations Meta data dump - June 2026 
+ Released on 2026-06-27, compared to the previous version, includes metadata related to citing and cited bibliographic resources added from the February 2026 version of Crossref and the August 2025 version of JaLC . It also includes an alignment with OpenAlex identifiers and introduces OUTCITE and Matilda as new sources. 
+ Key statistics 
+ 147M+ 
+ Bibliographic entities 
+ 422M+ 
+ Authors 
+ 2.3M+ 
+ Publication venues 
+ 3,673,399 editors and 115,504,540 publishers (counted by roles, without disambiguating individuals) 
+ Download files 
+ Type and format 
+ Archive 
+ Size 
+ Metadata database (OpenLink Virtuoso) Kubernetes ready 
+ Download 7z 
+ 31.2GB zipped (187GB uncompressed) 
+ Metadata (CSV) 
+ Download 7z 
+ 8.4GB zipped (56GB uncompressed) 
+ Metadata and provenance (RDF) 
+ Download 7z 
+ 45.7GB zipped (72GB uncompressed) 
+ Provenance database (QLever) 
+ Download 7z 
+ 41.6GB zipped 
+ Previous dumps 
+ Dump created on 2026-01-20
+ Compared to the previous version, includes metadata related to citing and cited bibliographic resources added in the September 2025 version of Crossref , as well as the DataCite Public Data File 2025 . 
+ Available in CSV (metadata) , OpenLink Virtuoso database , RDF (metadata and provenance) , and OpenLink Virtuoso provenance database . 
+ Dump created on 2025-06-06
+ Compared to the previous version, includes metadata from the April 2025 version of Crossref and the December 2024 dump of JaLC . 
+ Available in CSV (metadata) , Kubernetes-ready database , RDF (metadata and provenance) , and RDF (provenance database) . 
+ Dump created on 2025-02-13
+ The metadata CSV is available on Figshare at the following link: https://doi.org/10.6084/m9.figshare.21747461.v11 
+ Metadata and Provenance is available on Figshare at the following link: https://doi.org/10.6084/m9.figshare.21747536.v8 
+ Dump created on 2024-06-20
+ Compared to the previous dump, this one adds the metadata contained in the Crossref dump dated March 2024 . 
+ Available in CSV (metadata) and JSON-LD (metadata and provenance) formats. 
+ Dump created on 2024-04-06
+ Compared to the previous dump, this one incorporates OpenAlex IDs, leveraging data from the OpenAlex dump. 
+ Available in CSV (metadata) and RDF (metadata and provenance) formats. 
+ Dump created on 2023-11-29
+ Compared to the previous dump, this one adds the metadata contained in the Japan Link Center (JaLC) . 
+ Available in CSV (metadata) format. 
+ View older dumps
+ 2023-10-24: Adds the metadata from OpenAIRE and the Crossref dump dated September 2023 . 
+ Available in CSV (metadata) and JSON-LD (metadata and provenance) formats. 
+ 2023-06-28: Adds the metadata from the dump of NIH Open Citation Collection dated November 2022 . 
+ Available in CSV (metadata) and JSON-LD (metadata and provenance) formats. 
+ 2023-02-24: Adds the metadata from the last dump of DataCite dated 22 October 2021 . 
+ Available in CSV (metadata) and JSON-LD (metadata and provenance) formats. 
+ 2022-12-20: Based on open references to works with DOIs within the Crossref dump dated December 2022. 
+ Available in CSV (metadata) and JSON-LD (metadata and provenance) formats. 
+ Open Citations Index
+ The Open Citations Index stores OMID-to-OMID references representing all the references gathered from several sources. 
+ Most recent OpenCitations Index data dump - July 2026 
+ Released on 2026-07-28, this dataset adds the citation data contained in the February 2026 version of Crossref and the August 2025 version of JaLC . Also this version introduces two new sources: OUTCITE and Matilda . 
+ Key statistics 
+ 2.5 Billion+ 
+ Citations (2,559,460,009) 
+ Download files 
+ Type and format 
+ Archive 
+ Size 
+ Citations database (Qlever) Kubernetes ready 
+ Download 7Z 
+ 69GB zipped (132GB uncompressed) 
+ Citations database RDF data 
+ Download 7Z 
+ 64GB zipped (1.5T uncompressed) 
+ Citation data (CSV) 
+ Download Zip 
+ 36GB zipped (250GB uncompressed) 
+ Citation data (N-Triple) 
+ Download Zip 
+ 88GB zipped (2.5TB uncompressed) 
+ Citation data (Scholix) 
+ Download Zip 
+ 51GB zipped (2.2TB uncompressed) 
+ Provenance data (CSV) 
+ Download Zip 
+ 27GB zipped (510GB uncompressed) 
+ Provenance data (N-Triple) 
+ Download Zip 
+ 160GB zipped (5TB uncompressed) 
+ Additional files 
+ Type and format 
+ Archive 
+ Size 
+ Citation data sources' info (N-Triple): information regarding the data source collection (e.g., COCI, DOCI, POCI, etc) of all the citation data 
+ Download Zip 
+ 29GB zipped (480GB uncompressed) 
+ Citation count data (CSV): the number of incoming citations to each bibliographic entity (identified by a DOI) in OpenCitations Index 
+ Download CSV 
+ 3GB 
+ OpenCitations OMID Index for Bibliographic Resources (BR) and Responsible Agents (RA) (CSV) 
+ Download Zip 
+ 3.5GB zipped (11.5GB uncompressed) 
+ Previous dumps 
+ Dump created on 2026-02-17
+ Database available as Qlever triplestore and RDF for the stored data in it.
+ Data dump available in CSV (citation data) , N-Triple (citation data) , SCHOLIX (citation data) , CSV (provenance data) , and N-Triple (provenance data) . 
+ In addition, a N-Triple containing information regarding the data source collection; in CSV Citation count data; and in CSV an the OMID (br and ra) Index 
+ Dump created on 2025-07-10
+ Available in CSV (citation data) , N-Triple (citation data) , SCHOLIX (citation data) , CSV (provenance data) , and N-Triple (provenance data) . 
+ In addition, a N-Triple and CSV dump, containing information regarding the data source collection. 
+ Dump created on 2025-03-24
+ Available in CSV (citation data) , N-Triple (citation data) , SCHOLIX (citation data) , CSV (provenance data) , and N-Triple (provenance data) . 
+ In addition, a N-Triple and CSV dump, containing information regarding the data source collection. 
+ Dump created on 2024-07-01
+ Available in CSV (citation data) , N-Triple (citation data) , SCHOLIX (citation data) , CSV (provenance data) , and N-Triple (provenance data) . 
+ In addition, a N-Triple dump containing information regarding the data source collection, and a citation count dump with the number of incoming citations to each bibliographic entity (identified by an OMID). 
+ Dump created on 2023-11-29
+ Available in CSV (citation data) , N-Triple (citation data) , SCHOLIX (citation data) , CSV (provenance data) , and N-Triple (provenance data) . 
+ In addition, a N-Triple dump containing information regarding the data source collection, and a citation count dump with the number of incoming citations to each bibliographic entity (identified by an OMID). 
+ Dump created on 2023-10-25
+ Available in CSV (citation data) , N-Triple (citation data) , SCHOLIX (citation data) , CSV (provenance data) , and N-Triple (provenance data) . 
+ In addition, a N-Triple dump containing information regarding the data source collection. 
+ Privacy Policies 
+ OC Home Page

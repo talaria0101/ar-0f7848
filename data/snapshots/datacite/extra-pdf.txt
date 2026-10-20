@@ -1,0 +1,107 @@
+---
+updatedAt: 2026-08-07T14:20:15.000Z
+agentTools:
+  projectIndex: https://support.datacite.org/llms.txt
+---
+
+# DataCite Public Data File
+
+DataCite Public Data Files contain metadata for all publicly available DataCite DOIs.
+
+We release an updated version of the public data file annually. Each annual public data file contains all DOIs that were registered up to the end of the year.
+
+All metadata contained in the file is freely available under a CC0 waiver. For more information, see the [DataCite Data File Use Policy](https://support.datacite.org/docs/datacite-data-file-use-policy).
+
+## Access the Public Data Files
+
+All available public data files are accessible through <https://datafiles.datacite.org/>.
+
+## Contents of the Public Data Files
+
+### DataCite Public Data File 2024 and later
+
+* The [DataCite Public Data File 2025](https://doi.org/10.14454/t5qb-d995) contains all DataCite DOIs in Findable state that were registered up to the end of 2025. The file was generated on January 6, 2026.
+* The [DataCite Public Data File 2024](https://doi.org/10.14454/tjpc-9m93) contains all DataCite DOIs in Findable state that were registered up to the end of 2024. The file was generated on January 6, 2025.
+
+#### Archive structure and compression
+
+The top-level file is packaged into a TAR archive, and individual files inside are compressed with GZIP. This allows both 1) a specific selection of files to be extracted from the archive without needing to decompress the entire file (a function of how GZIP works), and 2) decompression of the whole data file in parallel.
+
+#### Directory structure
+
+The public data file contains a top-level `dois` folder. The `dois` folder contains a series of folders named with an `updated_YYYY-MM` convention. Each of these folders contains:
+
+1. All Findable DataCite DOI records updated during the corresponding month (at the time the public data file was generated).
+2. Tabular report for the corresponding month.
+
+The directory structure looks like this:
+
+```
+dois
+├── updated_2024-07
+│   ├── 2024-07.csv.gz
+│   ├── part_0000.jsonl.gz
+│   ├── part_0001.jsonl.gz
+│   ├── part_0002.jsonl.gz
+├── updated_2024-08
+... ├── 2024-08.csv.gz
+    ├── part_0000.jsonl.gz
+    ├── part_0001.jsonl.gz
+    ├── part_0002.jsonl.gz
+    ├── part_0003.jsonl.gz
+    ...
+```
+
+#### DataCite DOI records
+
+DataCite DOI records are compressed in a series of gzip files within each  `updated_YYYY-MM` folder. Each gzip file contains up to 10,000 DataCite DOI records in JSON Lines format. The `.gz` files are named with a `part_[four-digit part number].jsonl.gz` convention.
+
+##### What DataCite DOI records are included?
+
+The public data file contains a record of every Findable state DOI. Each record is represented once in a folder corresponding to the month the DOI was last updated.
+
+##### What is the format of individual records?
+
+The format of individual records in the file will reflect [a DOI singleton response from the DataCite REST API](https://support.datacite.org/docs/api-get-doi#response) with the following adjustments:
+
+* The records contain additional affiliation and publisher metadata returned when the following REST API URL parameters are set: `affiliation=true` and `publisher=true`. See [Can I see more detailed affiliation and publisher information in the REST API?](https://support.datacite.org/docs/can-i-see-more-detailed-affiliation-information-in-the-rest-api) for more details.
+* The records do not contain the `xml` value.
+
+#### Tabular reports
+
+Each  `updated_YYYY-MM` folder contains a tabular report in CSV format, compressed with gzip, that contains:
+
+* A list of all registered DataCite DOIs (in Findable or Registered state) updated during the corresponding month (at the time the public data file was generated)
+* The date they were updated
+* Their current state (`findable` or `registered`)
+* Their current Repository ID.
+
+Rows in the CSV file are structured like the following:
+
+| doi                               | state      | client\_id   | updated              |
+| --------------------------------- | ---------- | ------------ | -------------------- |
+| 10.0166/fk2.stagefigshare.9753211 | findable   | figshare.dud | 2024-08-01T00:20:45Z |
+| 10.15493/dea.mims.20210317        | registered | nrf.saeon    | 2024-08-01T00:32:57  |
+
+Registered state DOIs are included to identify [DOIs that are no longer publicly available](https://support.datacite.org/docs/doi-states#registered-doi-name) . Repository IDs aid in identifying DOIs that have moved between repositories.
+
+### DataCite Public Data File 2023
+
+The [DataCite Public Data File 2023](https://doi.org/10.14454/zhaw-tm22) contains all DataCite DOIs in Findable state that were registered up to the end of 2023.
+
+The 2023 file has the following compression and file structure differences from later Public Data Files:
+
+* The metadata is available within a TAR file compressed with GZIP. Individual files inside are not compressed.
+* Individual records within the file are grouped into folders by DOI prefix rather than updated date.
+* Each prefix folder contains a set of JSON files, comprising up to 1,000 records each.
+
+Each record is in a JSON format that is based on the [DataCite Metadata Schema](https://support.datacite.org/docs/datacite-metadata-schema). For more information, see the [DataCite XML to JSON Mapping](https://support.datacite.org/docs/datacite-xml-to-json-mapping).
+
+## Using the Public Data Files
+
+As each public data file contains metadata for all Findable DataCite DOIs (through the given year), it can be used to seed an initial harvest of DataCite DOI metadata.
+
+For newly registered DOIs and updates to existing DOI metadata, the DataCite REST API can be used to retrieve a list of DOIs. The results can be sorted and filtered by the last updated date. For example:
+
+* Sort by date updated (newest to oldest): <https://api.datacite.org/dois?disable-facets=true&sort=-updated&publisher=true&affiliation=true>
+* Filter by date updated and sort oldest to newest: <https://api.datacite.org/dois?disable-facets=true&sort=updated&publisher=true&affiliation=true&query=updated:[2025-01-01%20TO%202025-01-31]>

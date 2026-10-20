@@ -28,5 +28,115 @@
   "fetched_at": "2026-10-20T01:31:39+00:00",
   "ratelimit_headers": {},
   "text_bytes": 15916
+ },
+ "extra": {
+  "rate": {
+   "url": "https://support.datacite.org/docs/rate-limit.md",
+   "final_url": "https://support.datacite.org/docs/rate-limit.md",
+   "status": 200,
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 2794,
+   "truncated": false,
+   "sha256": "d789840104182b839ba978fc65030876d12240dc2e11b79297c63299fc3b9425",
+   "fetched_at": "2026-10-20T01:36:22+00:00",
+   "ratelimit_headers": {
+    "x-ratelimit-limit": "100",
+    "x-ratelimit-remaining": "99",
+    "x-ratelimit-reset": "1792460177"
+   },
+   "text_bytes": 2791
+  },
+  "api-guide": {
+   "url": "https://support.datacite.org/docs/api.md",
+   "final_url": "https://support.datacite.org/docs/api.md",
+   "status": 200,
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 4393,
+   "truncated": false,
+   "sha256": "23f5d2875ee3fcca7d74b964bca2d18962141ba01eec38a6af1094beb4e92d92",
+   "fetched_at": "2026-10-20T01:36:22+00:00",
+   "ratelimit_headers": {
+    "x-ratelimit-limit": "100",
+    "x-ratelimit-remaining": "98",
+    "x-ratelimit-reset": "1792460177"
+   },
+   "text_bytes": 4384
+  },
+  "license": {
+   "url": "https://support.datacite.org/docs/can-i-use-datacite-metadata-and-what-are-the-terms.md",
+   "final_url": "https://support.datacite.org/docs/can-i-use-datacite-metadata-and-what-are-the-terms.md",
+   "status": 404,
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 236,
+   "truncated": false,
+   "sha256": "a68a7286516e1d89aa2d3149f6f56ab9fc910e4b827273d13013f2fd3a513578",
+   "fetched_at": "2026-10-20T01:36:23+00:00",
+   "ratelimit_headers": {
+    "x-ratelimit-limit": "100",
+    "x-ratelimit-remaining": "99",
+    "x-ratelimit-reset": "1792460178"
+   },
+   "text_bytes": 235
+  },
+  "pdf": {
+   "url": "https://support.datacite.org/docs/datacite-public-data-file.md",
+   "final_url": "https://support.datacite.org/docs/datacite-public-data-file.md",
+   "status": 200,
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 6224,
+   "truncated": false,
+   "sha256": "d1c8d7e3a4213f02c789ba4670dbc096130f516902fc134e94445a9a210d92e5",
+   "fetched_at": "2026-10-20T01:36:46+00:00",
+   "ratelimit_headers": {
+    "x-ratelimit-limit": "100",
+    "x-ratelimit-remaining": "99",
+    "x-ratelimit-reset": "1792345071"
+   },
+   "text_bytes": 6150
+  },
+  "oai": {
+   "url": "https://support.datacite.org/docs/datacite-oai-pmh-guide.md",
+   "final_url": "https://support.datacite.org/docs/datacite-oai-pmh-guide.md",
+   "status": 404,
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 236,
+   "truncated": false,
+   "sha256": "a68a7286516e1d89aa2d3149f6f56ab9fc910e4b827273d13013f2fd3a513578",
+   "fetched_at": "2026-10-20T01:36:47+00:00",
+   "ratelimit_headers": {
+    "x-ratelimit-limit": "100",
+    "x-ratelimit-remaining": "98",
+    "x-ratelimit-reset": "1792460202"
+   },
+   "text_bytes": 235
+  },
+  "terms": {
+   "url": "https://datacite.org/terms-of-use/",
+   "final_url": "https://datacite.org/terms-of-use/",
+   "status": 403,
+   "content_type": "text/html",
+   "bytes": 52,
+   "truncated": false,
+   "sha256": "889403e5cfbb7981f7a26aced0d7492524e5397d6996f7fccd67562d2a4a71a3",
+   "fetched_at": "2026-10-20T01:36:47+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 51
+  },
+  "apiref": {
+   "url": "https://support.datacite.org/reference/introduction.md",
+   "final_url": "https://support.datacite.org/reference/introduction.md",
+   "status": 200,
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 647,
+   "truncated": false,
+   "sha256": "cf2d99285b7999fe8e719d1b6da897fddfcd7ad0bad9c2e6f8738a95ab8c6020",
+   "fetched_at": "2026-10-20T01:36:48+00:00",
+   "ratelimit_headers": {
+    "x-ratelimit-limit": "100",
+    "x-ratelimit-remaining": "99",
+    "x-ratelimit-reset": "1792460204"
+   },
+   "text_bytes": 647
+  }
  }
 }

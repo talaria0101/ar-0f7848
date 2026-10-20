@@ -1,0 +1,1036 @@
+API de recherche de Gallica | BnF API et jeux de données 
+ Contenu principal
+ Menu de navigation
+ Recherche
+ Pied de page
+ API et jeux de données 
+ Accéder aux données
+ API 
+ Jeux de données brutes 
+ Jeux de données transformées 
+ Par source 
+ Apprendre & utiliser
+ Découvrir api.bnf.fr 
+ Documentation 
+ Exemples d'utilisations 
+ Services 
+ Professionnels
+ Chercheurs 
+ Métiers du livre 
+ Blog 
+ XML 
+ SRU 
+ API de recherche de Gallica 
+ Présentation 
+ Cette API permet de rechercher dans le fonds numérique et de fournir également un ensemble d'éléments d'affinage des requêtes. Cette API a été créée afin de rester pérenne quelle que soit l'implémentation du moteur de recherche. 
+ Console
+ Service de recherche SRU Gallica (protocole standard)
+ Cette API est une interface de recherche avec le moteur de recherche de Gallica. Il s'agit d'un service web fournissant les documents liés à une requête selon un format XML. 
+ Le service implémente le protocole de recherche SRU dans sa version 1.2, dont la norme est disponible ici : Norme SRU 
+ Utilisation 
+ Ce service implémente la partie recherche, ce qui se traduit par l'appel à un service web dont la syntaxe minimale est la suivante : 
+ https://gallica.bnf.fr/SRU?version=1.2&operation=searchRetrieve&query= 
+ Description des paramètres :  
+ version : la version de la norme SRU implémentée (ici, 1.2) 
+ operation : l'opération à effectuer (ici, searchRetrieve) 
+ query : la requête à effectuer pour obtenir les résultats souhaités. La valeur du paramètre query est écrit en langage CQL ("Contextual Query Language") dont la norme est décrite ici : Norme CQL. 
+ En plus de ces trois paramètres obligatoires, il existe d'autres paramètres optionnels : 
+ startRecord : il s'agit d'un nombre compris entre 1 et le nombre total de résultats renvoyés par la requête (ce nombre est fourni dans le flux XML rendu dans l'élément srw:numberOfRecords). 
+ maximumRecords : il s'agit du nombre de résultats retournés par le service SRU. Ce chiffre est compris entre 0 et 50 (au delà de 50, la valeur du paramètre est surchargée côté back-office par 50). Par défaut, si ce paramètre est absent, la valeur est 15. 
+ collapsing : ce paramètre permet d'agréger (valeur "true" par défaut) les résultats dans le cas d'un document multivolume ou d'un périodique. La valeur "false" permet d'obtenir tous les documents. 
+ Les deux premiers paramètres permettent de paginer une liste de documents liés à une requête. Avec une requête initiale : https://gallica.bnf.fr/SRU?operation=searchRetrieve&version=1.2&query=%28gallica%20all%20%22toto%22%29&suggest=0 
+ Il est possible de la paginer comme suit : 
+ https://gallica.bnf.fr/SRU?operation=searchRetrieve&version=1.2&query=%28gallica%20all%20%22toto%22%29&suggest=0&startRecord=15 
+ puis : 
+ https://gallica.bnf.fr/SRU?operation=searchRetrieve&version=1.2&query=%28gallica%20all%20%22toto%22%29&suggest=0&startRecord=30 
+ Exemple de flux XML : 
+ <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<srw:searchRetrieveResponse xmlns="https://gallica.bnf.fr/namespaces/gallica/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:onix="http://www.editeur.org/onix/2.1/reference/" xmlns:srw="http://www.loc.gov/zing/srw/" xmlns:onix_dc="http://bibnum.bnf.fr/NS/onix_dc/">
+ <srw:version>1.2</srw:version>
+ <srw:echoedSearchRetrieveRequest>
+ <srw:query>(dc.creator all "molière" or dc.contributor all "molière" ) and (dc.type all "monographie") and (provenance adj "bnf.fr")</srw:query>
+ <srw:version>1.2</srw:version>
+ </srw:echoedSearchRetrieveRequest>
+ <srw:numberOfRecords>257</srw:numberOfRecords>
+ <srw:records>
+ <srw:record>
+ <srw:recordSchema>http://www.openarchives.org/OAI/2.0/OAIdc.xsd</srw:recordSchema>
+ <srw:recordPacking>xml</srw:recordPacking>
+ <srw:recordData>
+ <oai_dc:dc>
+ <dc:contributor>Lemaistre, Félix. Éditeur scientifique</dc:contributor>
+ <dc:creator>Molière (1622-1673)</dc:creator>
+ <dc:date>1867</dc:date> etc... 
+ Description du flux XML en réponse 
+ srw:searchRetrieveResponse est la racine du document XML contenant les espaces de noms spécifiques au srw (Search/Retrieve Web service) qui est le format XML de réponse à une requête SRU
+ srw:version est la version du protocole SRU de la requête initiale 
+ srw:echoedSearchRetrieveRequest est le rappel de la requête qui a donné cette réponse 
+ srw:query : la requête en CQL 
+ srw:numberOfRecords est le nombre total de résultats pour cette requête 
+ les résultats de la requête
+ srw:records est l'enveloppe srw des résultats du flux XML 
+ srw:record est l'enveloppe d'un résultat 
+ srw:recordSchema décrit le format utilisé pour les données du résultat 
+ srw:recordPacking décrit le type du format du résultat 
+ srw:recordData contient le résultat dans le format et le type décrit dans recordSchema et recordPacking 
+ On trouve ensuite le résultat au format Dublin Core. 
+ Les mots clés implémentés en CQL 
+ En ce qui concerne le paramètre query exprimé en CQL, voici les spécificités de l'implémentation. 
+ Liste des critères de recherche 
+ dc.title : il s'agit d'un champ texte libre permettant la recherche par mots dans l'index des titres 
+ dc.creator : il s'agit d'un champ texte libre permettant la recherche par mots dans l'index des auteurs 
+ dc.publisher : il s'agit d'un champ texte libre permettant la recherche par mots dans l'index des éditeurs 
+ text : il s'agit d'un champ texte libre permettant la recherche par mots dans le texte des documents OCRisés 
+ toc : il s'agit d'un champ texte libre permettant la recherche par mots dans le contenu des tables des matières ou des index des documents 
+ légendes : il s'agit d'un champ texte libre permettant la recherche par mots dans le contenu des légendes associées aux documents de type image, carte, ou objet 
+ metadata : il s'agit d'un champ texte libre permettant la recherche dans toutes les métadonnées de la notice du document numérique (titre, auteurs, éditeurs, etc.) 
+ ISBN : il s'agit d'un champ texte libre permettant la recherche dans l'index ISBN 
+ gallica : il s'agit d'un champ texte libre permettant la recherche par mots dans toutes les informations (métadonnées, texte, table etc.) 
+ dc.date : il s'agit d'un champ texte libre permettant la recherche dans l'index des dates d'édition (correspond à l’indexation de la balise dc:date, qui peut comporter différents types de formats de date) 
+ dc.type : il s'agit d'un champ texte libre permettant la recherche dans l'index des types de documents de la bibliothèque numérique. Les valeurs possibles sont monographie, carte, image, fascicule (pour les publications en série), manuscrit, partition, sonore (pour les documents son), objet et vidéo. Ce champ correspond au type de document proposé dans la recherche avancée. Exemple : https://gallica.bnf.fr/SRU?version=1.2&operation=searchRetrieve&query=dc... any fascicule. 
+ ocrquality : il s'agit d'un champ texte libre permettant la recherche dans l'index de qualité de l'océrisation. La valeur est comprise entre 0 et 100. Exemple ocrquality any "099.99". Les guillemets sont importants et le format xxx.xx aussi. Cela permet de spécifier une valeur de qualité, 100.00 étant un OCR sans faute. Cet index n'est pas interrogeable sur un intervalle. 
+ dewey : il s'agit d'un champ texte libre permettant la recherche dans l'index de classification Dewey. La requête se fait sur l'indice Dewey dont la spécification à la BnF est disponible ici. Exemple: dewey any 1 =>les documents dont le thème est "Philosophie et psychologie". Le plan de classement Dewey utilisé par Gallica est disponible et la liste des indices de premier niveau et leur signification est donnée ci-après :  
+ 0 = Généralités
+ 1 = Philosophie et psychologie
+ 2 = Religion
+ 3 = Économie et société
+ 4 = Langues
+ 5 = Sciences
+ 6 = Techniques
+ 7 = Arts et loisirs
+ 8 = Littérature
+ 9 = Histoire et géographie 
+ Cela correspond à la partie "par thème" de la recherche avancée. Exemple : https://gallica.bnf.fr/SRU?version=1.2&operation=searchRetrieve&query=de... 
+ provenance : il s'agit d'un champ texte libre permettant la recherche dans l'index des provenances. Les valeurs possibles sont repérées dans les balises id_provenance des notices des documents. Ainsi la provenance "bnf.fr" est le code pour les documents numérisés par la BnF et appartenant aux collections de la BnF. 
+ access : il s'agit d'un champ texte libre permettant la recherche dans l'index des droits. Les valeurs possibles sont :
+ fayes : document libres de droits 
+ fano : document sous conditions de réutilisation 
+ indexationdate : il s'agit d'un champ texte permettant la recherche dans l'index des dates de première indexation du document numérique. Le format de date possible est YYYYMMJJ 
+ Exemple sur une date : tous les documents indexés le 20/10/2014 https://gallica.bnf.fr/SRU?version=1.2&operation=searchRetrieve&query=in... ou un intervalle de dates entre le 20/10/2014 et le 20/10/2015 https://gallica.bnf.fr/SRU?version=1.2&operation=searchRetrieve&query=in... 
+ dc.relation : il s'agit d'un champ texte libre permettant la recherche par mots dans l'index relation et qui correspond à l'indexation de la balise dc:relation des notices. Ce champ d'index est tokenizé, ce qui signifie que chaque mot contenu dans la balise peut répondre. Exemple : les relations des documents numériques avec une notice du catalogue général https://gallica.bnf.fr/SRU?operation=searchRetrieve&version=1.2&maximumR... 
+ dc.rights : il s'agit d'un champ texte libre permettant la recherche par mots dans l'index des droits. Il s'agit du contenu des balises dc:rights des notices 
+ dc.source : il s'agit d'un champ texte libre permettant la recherche par mots dans l'index des sources. Il s'agit du contenu des balises dc:source des notices 
+ dc.subject : il s'agit d'un champ texte libre permettant la recherche par mots dans l'index des sujets. Il s'agit du contenu des balises dc:subject des notices 
+ dc.format : il s'agit d'un champ texte libre permettant la recherche par mots dans l'index des formats. Il s'agit du contenu des balises dc:format des notices 
+ dc.language : il s'agit d'un champ texte libre permettant la recherche par mots dans l'index des langues dans laquelle le document original a été édité. Cela correspond à l'indexation de la balise dc:language des notices. La normalisation BnF est la suivante avec un code langue sur 3 caractères (pour les collections de nos partenaires, l'attribut langue n'est pas toujours conforme à cette normalisation) : 
+ ale = Aléoute
+ alg = langues algonquiennes
+ ang = anglo-saxon
+ ara = Arabe
+ arm = Arménien
+ aze = Azéri
+ ber = Berbère
+ bre = breton
+ bul = Bulgare
+ cat = Catalan
+ cau = Caucasiennes, autres langues
+ che = Tchétchène
+ chi = Chinois
+ cop = copte
+ cos = Corse
+ cpf = Créoles et pidgins français, autres
+ cze = Tchèque
+ dan = danois
+ dut = Néerlandais
+ eng = Anglais
+ enm = anglais moyen
+ epo = Espéranto
+ est = Estonien
+ eth = Ethiopien
+ fin = Finnois
+ frd = Français, Dialectes
+ fre = Français
+ frm = Français moyen
+ fro = Français ancien
+ gaa = Ga
+ ged = Gade
+ gem = Langues germaniques
+ geo = Géorgien
+ ger = Allemand
+ gez = guèze
+ gle = Irlandais
+ glg = Galicien
+ gmh = moyen haut allemand
+ goh = vieux haut allemand
+ got = gothique
+ grc = Grec
+ gre = grec moderne (1453-)
+ haw = hawaïen
+ heb = Hébreu
+ hun = Hongrois
+ ita = Italien
+ itd = italien ancien
+ jpn = Japonais
+ kab = Kabyle
+ lan = Languedocien
+ lat = Latin
+ lav = Letton
+ lit = Lituanien
+ mlg = Malgache
+ mul = Multilingue
+ nor = Norvégien
+ oci = occitan (après 1500)
+ oss = Ossète
+ ota = Turc ottoman (1500-1928)
+ per = Persan
+ pol = Polonais
+ por = Portugais
+ pro = Provençal ancien
+ pus = Pachto
+ roa = Langue Romane
+ rom = Roumain
+ rum = Roumain
+ rus = Russe
+ scc = Serbe
+ scr = Croate
+ slo = Slovaque
+ spa = Espagnol
+ swe = Suédois
+ tat = Tatar
+ ukr = Ukrainien
+ und = indéterminée
+ uzb = Ouszbek
+ vie = vietnamien
+ wel = Gallois
+ yid = Yiddish
+ yor = Yoruba 
+ Exemple : https://gallica.bnf.fr/SRU?operation=searchRetrieve&version=1.2&maximumR... 
+ dc.identifier : il s'agit d'un champ texte libre permettant la recherche dans l'index des identifiants liés à un document numérique. Cela correspond à l'indexation de la balise dc:identifier 
+ dc.description : il s'agit d'un champ texte libre permettant la recherche par mots dans l'index des descriptions associées à un document numérique. Il s'agit d'un contenu de la balise dc:description 
+ Liste des opérateurs possibles pour interroger un champ d'index 
+ all     : correspond à tous les mots. Il faut mettre des guillemets autour du/des terme(s) recherché(s) si plus d’un. 
+ any     : correspond à l’un des mots au moins. Il faut mettre des guillemets autour du/des terme(s) recherché(s) si plus d’un. 
+ adj     : Il s'agit de l'expression exacte/égal.Il faut mettre des guillemets autour du/des terme(s) recherché(s). Attention, l'utilisation de ce critère entraîne automatiquement la recherche sans expansion (contrairement aux autres opérateurs qui laissent le moteur effectuer certains élargissements pour les mots de la requête). S'il est présent dans une des requêtes unitaires, les expansions sont désactivées pour tous les champs de la requête. 
+ prox :  une recherche par proximité peut être appliquée sur le texte. La syntaxe est la suivante :  text all "mot1"  prox/unit=word/distance=5 "mot2" 
+ Sur les index de dates (dc.date, indexationdate), on peut aussi utiliser les éléments classiques suivant : < , <= , > , >= 
+ Les mots clés de recherche sur les champs d'index et les opérateurs ci-dessus permettent de générer des éléments de requête unitaire. Par exemple : dc.language any "yor" 
+ On peut ensuite utiliser l'algèbre de Boole avec les éléments suivants pour combiner le tout. 
+ and signifie ET 
+ or signifie OU 
+ not signifie SAUF 
+ Les critères de tri 
+ À la fin du paramètre query, une fois que la requête est construite, on peut ajouter, toujours en CQL, un critère de tri. 
+ Voici les possibilités : 
+ dc.creator/sort.ascending : tri par ordre croissant des auteurs 
+ dc.title/sort.ascending : tri par ordre croissant des titres 
+ dc.date/sort.ascending : tri par ordre croissant des dates d'édition 
+ dc.date/sort.descending : tri par ordre décroissant des dates d'édition 
+ ocr.quality/sort.descending : tri par ordre décroissant de la qualité de l'OCR 
+ indexationdate/sort.descending : tri par ordre décroissant des dates de mise en ligne 
+ Exemples de requêtes 
+ des recherches combinant des index de recherche
+ Recherche des 10 premières images dans l’ensemble des images de Gallica contenant le mot « Hugo » https://gallica.bnf.fr/SRU?operation=searchRetrieve&version=1.2&maximumRecords=10&startRecord=1&query=dc.type any image and gallica any "Hugo" 
+ Recherche des 10 premières images dans l’ensemble des images de Gallica avec un titre contenant le mot « Hugo » https://gallica.bnf.fr/SRU?operation=searchRetrieve&version=1.2&maximumRecords=10&startRecord=1&query=dc.type any image and dc.title any "Hugo" 
+ Recherche des 10 premières images dans l’ensemble des images de Gallica avec un auteur contenant le mot « Hugo » https://gallica.bnf.fr/SRU?operation=searchRetrieve&version=1.2&maximumRecords=10&startRecord=1&query=dc.type any image and dc.creator any "Hugo" 
+ des recherches permettant la pagination
+ Recherche des images de 11 à 20 dans l’ensemble des images de Gallica contenant le mot « Hugo » https://gallica.bnf.fr/SRU?operation=searchRetrieve&version=1.2&maximumRecords=11&startRecord=1&query=dc.type any image and gallica any "Hugo" 
+ Recherche des images de 11 à 20 dans l’ensemble des images de Gallica avec un titre contenant le mot « Hugo » https://gallica.bnf.fr/SRU?operation=searchRetrieve&version=1.2&maximumRecords=11&startRecord=1&query=dc.type any image and dc.title any "Hugo" 
+ Recherche des images de 11 à 20 dans l’ensemble des images de Gallica avec un auteur contenant le mot « Hugo » . https://gallica.bnf.fr/SRU?operation=searchRetrieve&version=1.2&maximumRecords=11&startRecord=1&query=dc.type any image and dc.creator any "Hugo" 
+ exemples de tri
+ Liste des documents dont la date de mise en ligne est le 01/12/2007, triée par titre : https://gallica.bnf.fr/SRU?operation=searchRetrieve&version=1.2&query= indexationdate adj "20071201" sortby dc.title/sort.ascending 
+ Liste des documents dont le titre contient le mot “balzac” ou “hugo” et la description contient “sorbonne” triée par titre : https://gallica.bnf.fr/SRU?operation=searchRetrieve&version=1.2&query= dc.title any "balzac hugo" and dc.description adj "sorbonne" sortby dc.title/sort.ascending 
+ Astuce 
+ Si vous souhaitez écrire des requêtes SRU non programmatiquement, nous vous conseillons d'utiliser Gallica .  Effectuez une recherche via l'interface Gallica, et une fois affichée, la page des résultats contiendra une URL de ce type : 
+ https://gallica.bnf.fr/services/engine/search/sru?operation=searchRetrieve&exactSearch=false&collapsing=true&version=1.2&query=(dc.creator all "molière" or dc.contributor all "molière" ) and (dc.type all "monographie") and (provenance adj "bnf.fr")&suggest=10 
+ Il suffit alors de récupérer le contenu du paramètre query, ici : (dc.creator all "molière" or dc.contributor all "molière" ) and (dc.type all "monographie") and (provenance adj "bnf.fr") et de l'utiliser comme valeur du paramètre query du service SRU, comme suit : 
+ https://gallica.bnf.fr/SRU?version=1.2&operation=searchRetrieve&query=(dc.creator all "molière" or dc.contributor all "molière" ) and (dc.type all "monographie") and (provenance adj "bnf.fr") 
+ Difficulté 
+ Il s'agit d'un parsing classique d'un flux XML. La difficulté tient à l'écriture de la requête en CQL et à la connaissance du format Dublin Core pour savoir quel index interroger en fonction de ce que l'on souhaite rechercher. 
+ Service d'affinage de recherche
+ Après avoir effectué une recherche via le service SRU,  on peut souhaiter affiner la recherche en fonction de critères prédéfinis. Pour ce faire, le service Catégories permet d’agréger des informations sur la requête initiale. 
+ Utilisation 
+ Le service s'interroge de la sorte : 
+ https://gallica.bnf.fr/services/Categories?SRU= 
+ le paramètre SRU est en fait une requête écrite en CQL (cf ci-dessus, section "Les mots clés implémentés en CQL") 
+ Pour la requête SRU suivante : https://gallica.bnf.fr/SRU?operation=searchRetrieve&version=1.2&query=gallica all "toto" 
+ il faut appeler le service Categories de la sorte : https://gallica.bnf.fr/services/Categories?SRU=%28gallica%20all%20%22toto%22%29 
+ Ce service va alors renvoyer un flux au format JSON. 
+ Les informations sont regroupées selon les critères suivants : 
+ provenance : informations sur la provenance numérique du document 
+ language : informations sur les langues trouvées pour une requête 
+ sdewey : il s'agit ici des sous-catégories thématiques Dewey 
+ dewey .  domaine thématique du livre 
+ century : la répartition par siècle d'édition 
+ typedoc : la répartition par type de document 
+ date : la répartition par année d'édition 
+ free_access : la répartition par document libre ou sous conditions 
+ creator : la répartition par auteur 
+ nqamoyen : le nombre de documents disposant d'un mode texte 
+ Le nombre d'éléments rendus par critère est de 20 au maximum, ainsi des critères comme language, provenance, date et creator peuvent ne pas être exhaustifs contrairement à typedoc, free_access et nqamoyen. 
+ howmany : c'est le nombre de documents répondant à ce critère (cette valeur est une approximation calculée par le moteur ; ainsi le nombre de résultats après affinage de la requête peut être différent) 
+ value : c'est le critère 
+ cleanValue : c'est la valeur nécessaire pour générer une sous-requête pour le critère en question 
+ libelleValue : il s'agit du libellé d'affichage pour garder une cohérence sur les valeurs du site web et les consommateurs de cet API. Si cette information n'est pas remplie, c'est que la valeur de cleanValue est suffisante pour l'affichage 
+ Le mapping critères API Catégories vers critères CQL SRU est le suivant : 
+ provenance - provenance 
+ language - dc.language 
+ sdewey - sdewey 
+ century - century 
+ typedoc - dc.type 
+ date - dc.date 
+ free_access - access 
+ creator - dc.creator 
+ nqamoyen - ocr.quality 
+ Ainsi pour l'exemple précédent, le flux JSON en sortie du service Catégories est : 
+ [ 
+ { 
+ "howMany":24839,
+ "value":"provenance",
+ "cleanValue":"bnf.fr",
+ "libelleValue":"Gallica"
+ },
+ { 
+ "howMany":46,
+ "value":"provenance",
+ "cleanValue":"erara.ch",
+ "libelleValue":"e-rara.ch"
+ },
+ { 
+ "howMany":2,
+ "value":"provenance",
+ "cleanValue":"biusante.parisdescartes.fr",
+ "libelleValue":"Medic@"
+ },
+ { 
+ "howMany":1,
+ "value":"provenance",
+ "cleanValue":"biusante.image.parisdescartes.fr",
+ "libelleValue":"Banque d\u0027images - BIU Santé"
+ },
+ { 
+ "howMany":1,
+ "value":"provenance",
+ "cleanValue":"tolosana",
+ "libelleValue":"Tolosana - Université de Toulouse"
+ },
+ { 
+ "howMany":1,
+ "value":"provenance",
+ "cleanValue":"bmmontpellier",
+ "libelleValue":"Montpellier Méditerranée Métropole"
+ },
+ { 
+ "howMany":1,
+ "value":"provenance",
+ "cleanValue":"numerique.bibliotheque.toulouse.fr",
+ "libelleValue":"Bibliothèque municipale de Toulouse"
+ },
+ { 
+ "howMany":1,
+ "value":"provenance",
+ "cleanValue":"mediachaum",
+ "libelleValue":"Médiathèque de Chaumont"
+ },
+ { 
+ "howMany":1,
+ "value":"provenance",
+ "cleanValue":"bm-dijon",
+ "libelleValue":"Bibliothèque municipale de Dijon"
+ },
+ { 
+ "howMany":22207,
+ "value":"language",
+ "cleanValue":"fre",
+ "libelleValue":""
+ },
+ { 
+ "howMany":1993,
+ "value":"language",
+ "cleanValue":"lat",
+ "libelleValue":""
+ },
+ { 
+ "howMany":128,
+ "value":"language",
+ "cleanValue":"mul",
+ "libelleValue":""
+ },
+ { 
+ "howMany":83,
+ "value":"language",
+ "cleanValue":"ger",
+ "libelleValue":""
+ },
+ { 
+ "howMany":82,
+ "value":"language",
+ "cleanValue":"eng",
+ "libelleValue":""
+ },
+ { 
+ "howMany":64,
+ "value":"language",
+ "cleanValue":"frm",
+ "libelleValue":""
+ },
+ { 
+ "howMany":49,
+ "value":"language",
+ "cleanValue":"ita",
+ "libelleValue":""
+ },
+ { 
+ "howMany":41,
+ "value":"language",
+ "cleanValue":"spa",
+ "libelleValue":""
+ },
+ { 
+ "howMany":33,
+ "value":"language",
+ "cleanValue":"grc",
+ "libelleValue":""
+ },
+ { 
+ "howMany":26,
+ "value":"language",
+ "cleanValue":"fro",
+ "libelleValue":""
+ },
+ { 
+ "howMany":15,
+ "value":"language",
+ "cleanValue":"jpn",
+ "libelleValue":""
+ },
+ { 
+ "howMany":9,
+ "value":"language",
+ "cleanValue":"mis",
+ "libelleValue":""
+ },
+ { 
+ "howMany":7,
+ "value":"language",
+ "cleanValue":"oci",
+ "libelleValue":""
+ },
+ { 
+ "howMany":6,
+ "value":"language",
+ "cleanValue":"chi",
+ "libelleValue":""
+ },
+ { 
+ "howMany":6,
+ "value":"language",
+ "cleanValue":"baq",
+ "libelleValue":""
+ },
+ { 
+ "howMany":5,
+ "value":"language",
+ "cleanValue":"pro",
+ "libelleValue":""
+ },
+ { 
+ "howMany":4,
+ "value":"language",
+ "cleanValue":"roa",
+ "libelleValue":""
+ },
+ { 
+ "howMany":4,
+ "value":"language",
+ "cleanValue":"ara",
+ "libelleValue":""
+ },
+ { 
+ "howMany":4,
+ "value":"language",
+ "cleanValue":"zxx",
+ "libelleValue":""
+ },
+ { 
+ "howMany":3,
+ "value":"language",
+ "cleanValue":"heb",
+ "libelleValue":""
+ },
+ { 
+ "howMany":3,
+ "value":"language",
+ "cleanValue":"dut",
+ "libelleValue":""
+ },
+ { 
+ "howMany":2,
+ "value":"language",
+ "cleanValue":"frd",
+ "libelleValue":""
+ },
+ { 
+ "howMany":2,
+ "value":"language",
+ "cleanValue":"rus",
+ "libelleValue":""
+ },
+ { 
+ "howMany":1,
+ "value":"language",
+ "cleanValue":"epo",
+ "libelleValue":""
+ },
+ { 
+ "howMany":1,
+ "value":"language",
+ "cleanValue":"gmh",
+ "libelleValue":""
+ },
+ { 
+ "howMany":1,
+ "value":"language",
+ "cleanValue":"cpf",
+ "libelleValue":""
+ },
+ { 
+ "howMany":1,
+ "value":"language",
+ "cleanValue":"gre",
+ "libelleValue":""
+ },
+ { 
+ "howMany":1,
+ "value":"language",
+ "cleanValue":"gez",
+ "libelleValue":""
+ },
+ { 
+ "howMany":1,
+ "value":"language",
+ "cleanValue":"tur",
+ "libelleValue":""
+ },
+ { 
+ "howMany":2565,
+ "value":"sdewey",
+ "cleanValue":"34",
+ "libelleValue":""
+ },
+ { 
+ "howMany":2061,
+ "value":"sdewey",
+ "cleanValue":"61",
+ "libelleValue":""
+ },
+ { 
+ "howMany":1976,
+ "value":"sdewey",
+ "cleanValue":"944",
+ "libelleValue":""
+ },
+ { 
+ "howMany":1944,
+ "value":"sdewey",
+ "cleanValue":"84",
+ "libelleValue":""
+ },
+ { 
+ "howMany":1302,
+ "value":"sdewey",
+ "cleanValue":"35",
+ "libelleValue":""
+ },
+ { 
+ "howMany":1059,
+ "value":"sdewey",
+ "cleanValue":"80",
+ "libelleValue":""
+ },
+ { 
+ "howMany":980,
+ "value":"sdewey",
+ "cleanValue":"33",
+ "libelleValue":""
+ },
+ { 
+ "howMany":677,
+ "value":"sdewey",
+ "cleanValue":"07",
+ "libelleValue":""
+ },
+ { 
+ "howMany":674,
+ "value":"sdewey",
+ "cleanValue":"90",
+ "libelleValue":""
+ },
+ { 
+ "howMany":607,
+ "value":"sdewey",
+ "cleanValue":"20",
+ "libelleValue":""
+ },
+ { 
+ "howMany":536,
+ "value":"sdewey",
+ "cleanValue":"94",
+ "libelleValue":""
+ },
+ { 
+ "howMany":532,
+ "value":"sdewey",
+ "cleanValue":"32",
+ "libelleValue":""
+ },
+ { 
+ "howMany":518,
+ "value":"sdewey",
+ "cleanValue":"50",
+ "libelleValue":""
+ },
+ { 
+ "howMany":454,
+ "value":"sdewey",
+ "cleanValue":"30",
+ "libelleValue":""
+ },
+ { 
+ "howMany":435,
+ "value":"sdewey",
+ "cleanValue":"63",
+ "libelleValue":""
+ },
+ { 
+ "howMany":430,
+ "value":"sdewey",
+ "cleanValue":"92",
+ "libelleValue":""
+ },
+ { 
+ "howMany":416,
+ "value":"sdewey",
+ "cleanValue":"37",
+ "libelleValue":""
+ },
+ { 
+ "howMany":408,
+ "value":"sdewey",
+ "cleanValue":"91",
+ "libelleValue":""
+ },
+ { 
+ "howMany":389,
+ "value":"sdewey",
+ "cleanValue":"87",
+ "libelleValue":""
+ },
+ { 
+ "howMany":356,
+ "value":"sdewey",
+ "cleanValue":"70",
+ "libelleValue":""
+ },
+ { 
+ "howMany":3,
+ "value":"century",
+ "cleanValue":"11",
+ "libelleValue":"XIe siècle"
+ },
+ { 
+ "howMany":3,
+ "value":"century",
+ "cleanValue":"12",
+ "libelleValue":"XIIe siècle"
+ },
+ { 
+ "howMany":3,
+ "value":"century",
+ "cleanValue":"13",
+ "libelleValue":"XIIIe siècle"
+ },
+ { 
+ "howMany":7,
+ "value":"century",
+ "cleanValue":"14",
+ "libelleValue":"XIVe siècle"
+ },
+ { 
+ "howMany":32,
+ "value":"century",
+ "cleanValue":"15",
+ "libelleValue":"XVe siècle"
+ },
+ { 
+ "howMany":259,
+ "value":"century",
+ "cleanValue":"16",
+ "libelleValue":"XVIe siècle"
+ },
+ { 
+ "howMany":803,
+ "value":"century",
+ "cleanValue":"17",
+ "libelleValue":"XVIIe siècle"
+ },
+ { 
+ "howMany":1446,
+ "value":"century",
+ "cleanValue":"18",
+ "libelleValue":"XVIIIe siècle"
+ },
+ { 
+ "howMany":14223,
+ "value":"century",
+ "cleanValue":"19",
+ "libelleValue":"XIXe siècle"
+ },
+ { 
+ "howMany":7674,
+ "value":"century",
+ "cleanValue":"20",
+ "libelleValue":"XXe siècle"
+ },
+ { 
+ "howMany":43,
+ "value":"century",
+ "cleanValue":"21",
+ "libelleValue":"XXIe siècle"
+ },
+ { 
+ "howMany":20746,
+ "value":"typedoc",
+ "cleanValue":"monographies",
+ "libelleValue":""
+ },
+ { 
+ "howMany":3997,
+ "value":"typedoc",
+ "cleanValue":"periodiques",
+ "libelleValue":""
+ },
+ { 
+ "howMany":57,
+ "value":"typedoc",
+ "cleanValue":"manuscrits",
+ "libelleValue":""
+ },
+ { 
+ "howMany":33,
+ "value":"typedoc",
+ "cleanValue":"images",
+ "libelleValue":""
+ },
+ { 
+ "howMany":31,
+ "value":"typedoc",
+ "cleanValue":"partitions",
+ "libelleValue":""
+ },
+ { 
+ "howMany":22,
+ "value":"typedoc",
+ "cleanValue":"sonores",
+ "libelleValue":""
+ },
+ { 
+ "howMany":7,
+ "value":"typedoc",
+ "cleanValue":"cartes",
+ "libelleValue":""
+ },
+ { 
+ "howMany":24893,
+ "value":"free_access",
+ "cleanValue":"fayes",
+ "libelleValue":"Libre"
+ },
+ { 
+ "howMany":24556,
+ "value":"nqamoyen",
+ "cleanValue":"Texte disponible",
+ "libelleValue":"Disponible"
+ },
+ { 
+ "howMany":1,
+ "value":"date",
+ "cleanValue":"2012",
+ "libelleValue":""
+ },
+ { 
+ "howMany":1,
+ "value":"date",
+ "cleanValue":"2011",
+ "libelleValue":""
+ },
+ { 
+ "howMany":1,
+ "value":"date",
+ "cleanValue":"2010",
+ "libelleValue":""
+ },
+ { 
+ "howMany":5,
+ "value":"date",
+ "cleanValue":"2009",
+ "libelleValue":""
+ },
+ { 
+ "howMany":4,
+ "value":"date",
+ "cleanValue":"2008",
+ "libelleValue":""
+ },
+ { 
+ "howMany":2,
+ "value":"date",
+ "cleanValue":"2007",
+ "libelleValue":""
+ },
+ { 
+ "howMany":2,
+ "value":"date",
+ "cleanValue":"2006",
+ "libelleValue":""
+ },
+ { 
+ "howMany":6,
+ "value":"date",
+ "cleanValue":"2005",
+ "libelleValue":""
+ },
+ { 
+ "howMany":5,
+ "value":"date",
+ "cleanValue":"2004",
+ "libelleValue":""
+ },
+ { 
+ "howMany":4,
+ "value":"date",
+ "cleanValue":"2003",
+ "libelleValue":""
+ },
+ { 
+ "howMany":5,
+ "value":"date",
+ "cleanValue":"2002",
+ "libelleValue":""
+ },
+ { 
+ "howMany":7,
+ "value":"date",
+ "cleanValue":"2001",
+ "libelleValue":""
+ },
+ { 
+ "howMany":40,
+ "value":"date",
+ "cleanValue":"2000",
+ "libelleValue":""
+ },
+ { 
+ "howMany":43,
+ "value":"date",
+ "cleanValue":"1999",
+ "libelleValue":""
+ },
+ { 
+ "howMany":49,
+ "value":"date",
+ "cleanValue":"1998",
+ "libelleValue":""
+ },
+ { 
+ "howMany":58,
+ "value":"date",
+ "cleanValue":"1997",
+ "libelleValue":""
+ },
+ { 
+ "howMany":58,
+ "value":"date",
+ "cleanValue":"1996",
+ "libelleValue":""
+ },
+ { 
+ "howMany":60,
+ "value":"date",
+ "cleanValue":"1995",
+ "libelleValue":""
+ },
+ { 
+ "howMany":60,
+ "value":"date",
+ "cleanValue":"1994",
+ "libelleValue":""
+ },
+ { 
+ "howMany":61,
+ "value":"date",
+ "cleanValue":"1993",
+ "libelleValue":""
+ },
+ { 
+ "howMany":164,
+ "value":"creator",
+ "cleanValue":"Institut national de la statistique et des études économiques (France). Auteur du texte",
+ "libelleValue":""
+ },
+ { 
+ "howMany":81,
+ "value":"creator",
+ "cleanValue":"Cicéron (0106-0043 av. J.-C.)",
+ "libelleValue":""
+ },
+ { 
+ "howMany":63,
+ "value":"creator",
+ "cleanValue":"France. Ministère des affaires étrangères (1588-2007). Auteur du texte",
+ "libelleValue":""
+ },
+ { 
+ "howMany":62,
+ "value":"creator",
+ "cleanValue":"France",
+ "libelleValue":""
+ },
+ { 
+ "howMany":56,
+ "value":"creator",
+ "cleanValue":"France. Auteur du texte",
+ "libelleValue":""
+ },
+ { 
+ "howMany":49,
+ "value":"creator",
+ "cleanValue":"Molière (1622-1673)",
+ "libelleValue":""
+ },
+ { 
+ "howMany":46,
+ "value":"creator",
+ "cleanValue":"Cicéron (0106-0043 av. J.-C.). Auteur du texte",
+ "libelleValue":""
+ },
+ { 
+ "howMany":37,
+ "value":"creator",
+ "cleanValue":"Verne, Jules (1828-1905). Auteur du texte",
+ "libelleValue":""
+ },
+ { 
+ "howMany":33,
+ "value":"creator",
+ "cleanValue":"France. Ministère de la guerre (1791-1936). Auteur du texte",
+ "libelleValue":""
+ },
+ { 
+ "howMany":33,
+ "value":"creator",
+ "cleanValue":"Racine, Jean (1639-1699)",
+ "libelleValue":""
+ },
+ { 
+ "howMany":26,
+ "value":"creator",
+ "cleanValue":"Église catholique",
+ "libelleValue":""
+ },
+ { 
+ "howMany":25,
+ "value":"creator",
+ "cleanValue":"Virgile (0070-0019 av. J.-C.)",
+ "libelleValue":""
+ },
+ { 
+ "howMany":25,
+ "value":"creator",
+ "cleanValue":"Boileau, Nicolas (1636-1711)",
+ "libelleValue":""
+ },
+ { 
+ "howMany":24,
+ "value":"creator",
+ "cleanValue":"Algérie (Période coloniale). Auteur du texte",
+ "libelleValue":""
+ },
+ { 
+ "howMany":23,
+ "value":"creator",
+ "cleanValue":"Malot, Hector (1830-1907)",
+ "libelleValue":""
+ },
+ { 
+ "howMany":22,
+ "value":"creator",
+ "cleanValue":"Bibliothèque nationale (France). Auteur du texte",
+ "libelleValue":""
+ },
+ { 
+ "howMany":20,
+ "value":"creator",
+ "cleanValue":"Indochine française",
+ "libelleValue":""
+ },
+ { 
+ "howMany":19,
+ "value":"creator",
+ "cleanValue":"Kock, Paul de (1793-1871)",
+ "libelleValue":""
+ },
+ { 
+ "howMany":19,
+ "value":"creator",
+ "cleanValue":"O\u0027Monroy, Richard (1849-1916)",
+ "libelleValue":""
+ },
+ { 
+ "howMany":18,
+ "value":"creator",
+ "cleanValue":"Fénelon, François de (1651-1715)",
+ "libelleValue":""
+ }
+] 
+ Il est alors possible d'affiner la requête SRU initiale en fabriquant des requêtes CQL supplémentaires à ajouter à la requête initiale. 
+ Exemple : dans le flux ci-dessus, on trouve une entrée comme suit : 
+ {"howMany":57,"value":"typedoc","cleanValue":"manuscrits","libelleValue":""} 
+ Cela veut dire que dans la requête initiale, 57 documents sont des manuscrits. Si l'on souhaite affiner la requête initiale pour ne récupérer que ces manuscrits, écrire la requête CQL comme suit : 
+ Reprendre la requête du service SRU : gallica all "toto" 
+ Appliquer le mapping critère Categories vers CQL :  dc.type adj "manuscrits" 
+ Concaténer les deux avec l'opérateur "and" 
+ La requête SRU affinée est donc : https://gallica.bnf.fr/SRU?operation=searchRetrieve&version=1.2&query=gallica all "toto" and dc.type adj "manuscrits" 
+ Aide
+ Dublin Core
+ Format bibliographique 
+ Le Dublin Core simple propose 15 attributs, facultatifs et répétables : Contenu Titre dc:title    Sujet dc:subject    Description dc:description    Source, origine de l'information dc:source    Langue dc:language    Relation avec d'autres ressources dc:relation    Couverture chronologique et géographique dc:coverage Propriété intellectuelle Auteur dc:creator    Contributeur dc:contributor    Editeur dc:publisher    Droits, conditions d'utilisation dc:rights Instanciation Date dc:date    Type de document (texte, image, son, etc) dc:type    Format dc:format    Identifiant dc:identifier Pour aller plus loin :  Présentation des 15 éléments sur le site officiel du Dublin Core Guide d'utilisation du Dublin Core à la BnF décrivant notamment les choix d'implémentation spécifiques à l'établissement 
+ Accès 
+ Service de recherche SRU Gallica (protocole standard) 
+ accès : https://gallica.bnf.fr/SRU?operation=searchRetrieve&version=1.2&query= 
+ exemple : https://gallica.bnf.fr/SRU?operation=searchRetrieve&version=1.2&query=%28gallica%20all%20%22toto%22%29&suggest=0 
+ Service d'affinage de recherche 
+ accès : https://gallica.bnf.fr/services/Categories?SRU= 
+ exemple : https://gallica.bnf.fr/services/Categories?SRU=%28gallica%20all%20%22toto%22%29 
+ Fiche Technique 
+ Source des données 
+ Gallica 
+ Version 
+ 1
+ Date de dernière mise à jour 
+ 2025 
+ Formats techniques 
+ XML 
+ Technologies 
+ SRU 
+ Licence 
+ Conditions d'utilisation des contenus de Gallica
+ Contact 
+ gallica@bnf.fr 
+ Partage 
+ X
+ Facebook
+ Linkedin
+ © 2020 BnF 
+ À propos 
+ Conditions d'utilisation 
+ Mentions légales 
+ Politique de confidentialité 
+ RSS 
+ Écrire à la BnF 
+ Accessibilité (non conforme) 
+ DCAT 
+ X 
+ facebook 
+ instagram 
+ youtube 
+ Image agrandie dans une fenêtre modale

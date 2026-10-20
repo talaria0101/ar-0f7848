@@ -1,0 +1,34 @@
+{
+ "slug": "gallica",
+ "auth": "unreachable",
+ "auth_note": "Probe was blocked by a Cloudflare-style challenge page ('Just a moment...', 403) so anonymous access could not be confirmed; docs mention no key.",
+ "cost": "not established",
+ "rate_limit": "not established",
+ "data_license": "not established",
+ "bulk_access": "none documented",
+ "probe_status": 403,
+ "probe_observation": "Probe returned HTTP 403 with body 'Just a moment...' (bot challenge), not SRU XML.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "Just a moment...",
+   "snapshot": "data/snapshots/gallica/probe.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "Just a moment...",
+   "snapshot": "data/snapshots/gallica/probe.txt"
+  },
+  {
+   "claim": "other",
+   "quote": "Le service impl\u00e9mente le protocole de recherche SRU dans sa version 1.2",
+   "snapshot": "data/snapshots/gallica/extra-doc.txt"
+  },
+  {
+   "claim": "other",
+   "quote": "Cette API est une interface de recherche avec le moteur de recherche de Gallica.",
+   "snapshot": "data/snapshots/gallica/extra-doc.txt"
+  }
+ ],
+ "not_established": "Whether SRU needs auth: the live endpoint returned a 403 challenge to the sandbox, and the captured docs (extra-doc, api.bnf.fr/api-gallica-de-recherche) do not mention a key. Rate limits, cost and data license not stated; the licence page (gallica.bnf.fr/conditions-dutilisation..., extra-terms) was also challenged (403). The original docs URL in providers.json returned 404. No bulk route documented."
+}

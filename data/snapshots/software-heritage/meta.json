@@ -28,5 +28,59 @@
    "X-Ratelimit-Reset": "1792463490"
   },
   "text_bytes": 344
+ },
+ "extra": {
+  "swh-docs": {
+   "url": "https://docs.softwareheritage.org/devel/swh-web/uri-scheme-api.html",
+   "final_url": "https://docs.softwareheritage.org/devel/swh-web/uri-scheme-api.html",
+   "status": 200,
+   "content_type": "text/html",
+   "bytes": 412591,
+   "truncated": false,
+   "sha256": "f46d6a894e02ebdec2e61308010c95477fc73d6fc3d54b947cfb02070983be47",
+   "fetched_at": "2026-10-20T01:34:07+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 107972
+  },
+  "dataset": {
+   "url": "https://docs.softwareheritage.org/devel/swh-export/graph/dataset.html",
+   "final_url": "https://docs.softwareheritage.org/devel/swh-export/graph/dataset.html",
+   "status": 200,
+   "content_type": "text/html",
+   "bytes": 230447,
+   "truncated": false,
+   "sha256": "0f53d96be8e30749886d38b294cf31663b5169c220661e8a6a20e01412d560cf",
+   "fetched_at": "2026-10-20T01:34:59+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 47351
+  },
+  "terms": {
+   "url": "https://www.softwareheritage.org/legal/api-terms-of-use/",
+   "final_url": "https://www.softwareheritage.org/legal/api-terms-of-use/",
+   "status": 0,
+   "content_type": "",
+   "bytes": 138,
+   "truncated": false,
+   "sha256": "8288ed5a84cedfa641ee365d1294a690c8fa45bda21d2438486cb95b9f274260",
+   "fetched_at": "2026-10-20T01:35:00+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 138
+  },
+  "rest": {
+   "url": "https://archive.softwareheritage.org/api/1/stat/counters/",
+   "final_url": "https://archive.softwareheritage.org/api/1/stat/counters/",
+   "status": 200,
+   "content_type": "application/json",
+   "bytes": 199,
+   "truncated": false,
+   "sha256": "e2e422deba353d8c9d2aae46eea7ac3d103fd3c8a887ad1fdd3ce4d487bb56b3",
+   "fetched_at": "2026-10-20T01:35:01+00:00",
+   "ratelimit_headers": {
+    "X-Ratelimit-Limit": "120",
+    "X-Ratelimit-Remaining": "118",
+    "X-Ratelimit-Reset": "1792463490"
+   },
+   "text_bytes": 199
+  }
  }
 }

@@ -1,0 +1,54 @@
+{
+ "auth": "key-free",
+ "auth_note": "Anonymous calls work on a shared daily budget; a free account key gives its own daily budget.",
+ "cost": "freemium",
+ "rate_limit": "Anonymous: shared $0.10 per day per IP; free key: $1 per day, resets midnight UTC; probe header X-RateLimit-Limit 1000 with 993 remaining.",
+ "data_license": "CC0",
+ "bulk_access": "s3://openalex (full snapshot, JSONL and Parquet; browse at openalex.s3.amazonaws.com/browse.html)",
+ "probe_status": 200,
+ "probe_observation": "Probe returned JSON with meta.count 328113516 and a notice that keyless requests share a $0.10 daily budget per IP.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "Get a free key with its own $1/day at https://openalex.org/settings/api and add api_key=YOUR_KEY to your requests.",
+   "snapshot": "data/snapshots/openalex/probe.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "\"count\": 328113516",
+   "snapshot": "data/snapshots/openalex/probe.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "No API key, so this request shares one free daily budget ($0.10) with everyone on your network's IP address.",
+   "snapshot": "data/snapshots/openalex/probe.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "every account gets $1 of API usage per day for free",
+   "snapshot": "data/snapshots/openalex/extra-pricing.txt"
+  },
+  {
+   "claim": "cost",
+   "quote": "every account gets $1 of API usage per day for free , and if you need more than that, there are exactly two ways to get it \u2014 pay as you go , or an annual plan",
+   "snapshot": "data/snapshots/openalex/extra-pricing.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "released under a CC0 public-domain license",
+   "snapshot": "data/snapshots/openalex/extra-pricing.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "The snapshot is published in two formats, each a complete copy of the same data",
+   "snapshot": "data/snapshots/openalex/extra-dl.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "s3://openalex/",
+   "snapshot": "data/snapshots/openalex/extra-dl.txt"
+  }
+ ],
+ "not_established": "Whether anonymous access remains available beyond the $0.10 shared daily budget; per-second request caps not captured.",
+ "slug": "openalex"
+}

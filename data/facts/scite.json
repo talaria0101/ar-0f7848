@@ -1,0 +1,29 @@
+{
+ "slug": "scite",
+ "auth": "none",
+ "auth_note": "Tallies endpoint answered anonymously; other endpoints need a token (self-service API keys exist, per the OpenAPI description).",
+ "cost": "not established",
+ "rate_limit": "Without an Authentication Token: up to 10 requests per second, up to 40 requests per minute; tallies and papers endpoints are uncapped (docs). Probe response headers showed X-RateLimit-Limit-Minute 60.",
+ "data_license": "not established",
+ "bulk_access": "none documented",
+ "probe_status": 200,
+ "probe_observation": "GET /tallies/10.1038/nature12373 returned JSON starting {\"total\":1930,\"supporting\":22,... with doi and citingPublications 2153, no credentials sent.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "{\"total\":1930,\"supporting\":22,\"contradicting\":1,\"mentioning\":1898,\"unclassified\":9,\"doi\":\"10.1038/nature12373\",\"citingPublications\":2153}",
+   "snapshot": "data/snapshots/scite/probe.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "Scite Endpoints require tokens in order to be used (aside from tallies and papers endpoints).",
+   "snapshot": "data/snapshots/scite/extra-openapi.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "Without an Authentication Token, the default rate limit is up to 10 requests per second, up to 40 requests per minute.",
+   "snapshot": "data/snapshots/scite/extra-openapi.txt"
+  }
+ ],
+ "not_established": "Cost/pricing of tokens not found (scite.ai/api returned CloudFront 403 from this sandbox; OpenAPI says contact sales@scite.ai or use self-service keys, prices not stated). Data license not found in the OpenAPI doc (only a link to https://scite.ai/terms, not captured). Docs page api.scite.ai/docs is a JS shell (docs.txt is 14 bytes), so the OpenAPI JSON was used instead. No bulk route documented. Documented 40/min differs from the 60/min header observed on the probe."
+}

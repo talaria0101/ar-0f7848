@@ -1,0 +1,24 @@
+{
+ "slug": "europepmc",
+ "auth": "none",
+ "auth_note": "Anonymous search request returned HTTP 200 with results; no key was sent.",
+ "cost": "not established",
+ "rate_limit": "not established",
+ "data_license": "not established",
+ "bulk_access": "none documented",
+ "probe_status": 200,
+ "probe_observation": "The probe returned JSON with version \"6.9\", hitCount 8786514 and a resultList with one result (pageSize 1).",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "\"hitCount\":8786514,\"nextCursorMark\"",
+   "snapshot": "data/snapshots/europepmc/probe.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "\"request\":{\"queryString\":\"test\",\"resultType\":\"lite\"",
+   "snapshot": "data/snapshots/europepmc/probe.txt"
+  }
+ ],
+ "not_established": "Cost, rate limits, data license and bulk routes: europepmc.org pages (RestfulWebService, downloads, Copyright, about, Help) returned HTTP 403 with a 16-byte challenge body (Cloudflare-style challenge to the sandbox, not an outage); ebi.ac.uk/europepmc/webservices/rest/ root and openapi.json returned 404; raw GitHub README returned 404. The generic EMBL-EBI terms page was captured but is not Europe PMC specific, so it was not used."
+}

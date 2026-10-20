@@ -1,0 +1,92 @@
+Altmetric Documentation 
+ Skip to content
+ Altmetric Documentation
+ Search
+ Home
+ MCP Server
+ Details Page API
+ Explorer API
+ BigQuery
+ Badges
+ Implementation Guide
+ Altmetric Documentation
+ Home
+ MCP Server
+ MCP Server
+ Tools Reference
+ Details Page API
+ Details Page API
+ Getting Started
+ Endpoints
+ Endpoints
+ Counts
+ Fetch
+ Citations
+ Translate
+ Appendix
+ Appendix
+ Licensing
+ Attribution
+ Reasonable Use
+ X (Twitter) Data
+ Explorer API
+ Explorer API
+ Getting Started
+ Endpoints
+ Endpoints
+ Research Outputs
+ Attention Summary
+ Demographics
+ Mentions
+ Mention Sources
+ Journals
+ Departments
+ Identifier Lists
+ Demo
+ API Client
+ Appendix
+ Reasonable Use
+ BigQuery
+ BigQuery
+ Getting Started
+ GCP Setup
+ Service Accounts
+ Data Sources
+ Data Sources
+ Overview
+ Attention Sources
+ Posts
+ Research Outputs
+ Publications
+ Organizations
+ Tutorials
+ Examples
+ Notebooks
+ Performance & Cost
+ Cost Reduction
+ FAQ
+ Release Notes
+ Reasonable Use
+ Badges
+ Badges
+ Getting Started
+ Customizations
+ Playground
+ Implementation Guide
+ Implementation Guide
+ Explorer for Institutions (EFI)
+ Explorer for Institutions (EFI)
+ Getting Started
+ Branding
+ Securing Access
+ Populating Data
+ Altmetric Apps
+ Altmetric Apps
+ Share of Voice (SoV) Dashboard
+ Publication Impact Dashboard (PID)
+ Journal Selection Dashboard (JSD)
+ Impact Metrics and Data Provision
+ Support & Training
+ 404 - Not found 
+ Back to top
+ © 2026 Altmetric , a Digital Science company  |  Terms  ·  Privacy  |  Found an error? Let us know

@@ -1,0 +1,49 @@
+{
+ "slug": "arquivo-pt",
+ "auth": "none",
+ "auth_note": "CDX endpoint answered anonymously with 200; dados.gov.pt lists authentication as None (public access).",
+ "cost": "free",
+ "rate_limit": "Rate limit listed as 250 a 400 on dados.gov.pt (unit and window not stated there)",
+ "data_license": "not established",
+ "bulk_access": "CDXJ index files publicly available for bulk download (announced at https://sobre.arquivo.pt/en/tag/api/)",
+ "probe_status": 200,
+ "probe_observation": "The CDX probe returned 200 text/x-ndjson with two JSON lines for example.com (urlkey com,example)/, timestamps 2009...), collection AWP5.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "\"urlkey\": \"com,example)/\", \"timestamp\": \"20091014042001\"",
+   "snapshot": "data/snapshots/arquivo-pt/probe.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "Access conditions Access OPEN Authentication None (public access)",
+   "snapshot": "data/snapshots/arquivo-pt/extra-dados.txt"
+  },
+  {
+   "claim": "cost",
+   "quote": "All the developed resources are freely available in open-access.",
+   "snapshot": "data/snapshots/arquivo-pt/extra-apiabout.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "Rate limit 250 a 400",
+   "snapshot": "data/snapshots/arquivo-pt/extra-dados.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "Arquivo.pt begun making all its CDXJ index files publicly available in real-time to facilitate the bulk download of web-archived data.",
+   "snapshot": "data/snapshots/arquivo-pt/extra-apiabout.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "\"filename\": \"IAH-20091014040944-16140-p5.arquivo.pt.arc.gz\"",
+   "snapshot": "data/snapshots/arquivo-pt/probe.txt"
+  },
+  {
+   "claim": "other",
+   "quote": "a full-text search returns a maximum of 500 results per request ( maxItems )",
+   "snapshot": "data/snapshots/arquivo-pt/docs.txt"
+  }
+ ],
+ "not_established": "Data license of archived content/metadata not found in wiki, OpenAPI, FAQ or dados.gov.pt (arquivo.pt/termsofuse and the CDX wiki page snapshot returned 404/empty form). Rate limit unit/window not in docs text; the probe response headers (in meta.json, not a text snapshot) show X-RateLimit-Policy 250;w=60, scope ip, but this is not quotable evidence."
+}

@@ -24,5 +24,31 @@
   "fetched_at": "2026-10-20T01:31:54+00:00",
   "ratelimit_headers": {},
   "text_bytes": 1374
+ },
+ "extra": {
+  "auth": {
+   "url": "https://guides.dataverse.org/en/latest/api/auth.html",
+   "final_url": "https://guides.dataverse.org/en/latest/api/auth.html",
+   "status": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 42530,
+   "truncated": false,
+   "sha256": "4036f03bc992e11c53dd3bb9ec8aeee44cd56a72847d877d6e2c530a18b56eb5",
+   "fetched_at": "2026-10-20T01:39:33+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 10103
+  },
+  "ratelimit": {
+   "url": "https://guides.dataverse.org/en/latest/admin/rate-limiting.html",
+   "final_url": "https://guides.dataverse.org/en/latest/admin/rate-limiting.html",
+   "status": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 33300,
+   "truncated": false,
+   "sha256": "785ca299ffc037dc772d0083d5080745a91c691ac6141f8925e793be7c1dc4a1",
+   "fetched_at": "2026-10-20T01:39:35+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 7481
+  }
  }
 }

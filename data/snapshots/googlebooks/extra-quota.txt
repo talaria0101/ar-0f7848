@@ -1,0 +1,315 @@
+Getting Started  |  Google Books APIs  |  Google for Developers 
+ Skip to main content
+ Books APIs
+ / 
+ English 
+ Deutsch 
+ Español 
+ Español – América Latina 
+ Français 
+ Indonesia 
+ Italiano 
+ Polski 
+ Português – Brasil 
+ Tiếng Việt 
+ Türkçe 
+ Русский 
+ עברית 
+ العربيّة 
+ فارسی 
+ हिंदी 
+ বাংলা 
+ ภาษาไทย 
+ 中文 – 简体 
+ 中文 – 繁體 
+ 日本語 
+ 한국어 
+ Sign in 
+ Home
+ Guides
+ Reference
+ Samples
+ Books APIs
+ Home
+ Guides
+ Reference
+ Samples
+ Books API v1 
+ Overview Getting Started Using the API Performance Tips 
+ Embedded Viewer API 
+ Developer's Guide 
+ Branding 
+ Branding Guidelines Common Translations 
+ Home
+ Products
+ Google Books APIs
+ Guides
+ Getting Started 
+ Stay organized with collections
+ Save and categorize content based on your preferences.
+ Page Summary 
+ outlined_flag 
+ This document is a guide for developers to use the Google Books API, which allows searching, organizing, and modifying an authenticated user's personal book library. 
+ Before starting, developers need a Google account for testing, should familiarize themselves with Google Books concepts, and learn about authorizing requests and identifying their application. 
+ The Google Books API is based on concepts like Volume, Bookshelf, Review, and Reading Position, which are represented as Volume and Bookshelf resources in the API's data model. 
+ The API supports standard REST operations (list, insert, get, update, delete) on these resources, with specific operations requiring authentication for private user data. 
+ The API can be invoked using REST directly or from JavaScript, with data typically exchanged in JSON format. 
+ This document details the background knowledge that you need in order to use
+the Google Books API. 
+ Introduction 
+ Before you start 
+ Get a Google account 
+ Get familiar with Books 
+ Learn about authorizing requests and identifying your application 
+ Books API background 
+ Books concepts 
+ Books API data model 
+ Books API operations 
+ Calling style 
+ REST 
+ Data format 
+ JSON 
+ Introduction 
+ This document is intended for developers who want to write applications that
+can interact with the Google Books API. Google Books 
+has a vision to digitize the world's books. You can use the Google Books API to
+search content, organize an authenticated user's personal library and modify it
+as well. 
+ Before you start 
+ Get a Google account 
+ You need a Google account 
+for testing purposes. If you already have a test account, then you're all set;
+you can visit the Google Books user
+interface to set up, edit, or view your test data. 
+ Get familiar with Books 
+ If you're unfamiliar with Google Books concepts, you should read this
+document and experiment with the user interface 
+before starting to code. This document assumes that you're familiar with web
+programming concepts and web data formats. 
+ Learn about authorizing requests and identifying your application 
+ When your application requests private data, the request must be authorized by an authenticated user who has access to that data. 
+ In particular, all operations under "My Library" in the Google Books API are considered to be private and require authentication and authorization. In addition, any operation that modifies Google Books data can be performed only by the user who owns that data. 
+ When your application requests public data, the request doesn't need to authorized, but does need to be accompanied by an identifier, such as an API key. 
+ For information about how to authorize requests and use API keys, see Authorizing requests and identifying your application in the Using the API document. 
+ Books API background 
+ Books concepts 
+ Google Books is built upon four basic concepts: 
+ Volume : A volume represents the data that Google Books hosts about
+ a book or magazine. It is the primary resource in the Books API. All other
+ resources in this API either contain or annotate a volume. 
+ Bookshelf : A bookshelf is a collection of volumes. Google Books
+ provides a set of predefined bookshelves for each user, some of which are
+ completely managed by the user, some of which are automatically filled in
+ based on user's activity, and some of which are mixed. Users can create,
+ modify or delete other bookshelves, which are always filled with volumes
+ manually. Bookshelves can be made private or public by the user.
+ Note: Creating and deleting bookshelves as
+ well as modifying privacy settings on bookshelves can currently only be done
+ through the Google Books site. 
+ Review : A review of a volume is a combination of a star rating
+ and/or text. A user can submit one review per volume. Reviews are also
+ available from outside sources and are attributed appropriately. 
+ Reading Position : A reading position indicates the last read
+ position in a volume for a user. A user can only have one reading position per
+ volume. If the user has not opened that volume before, then the reading
+ position does not exist. The reading position can store detailed position
+ information down to the resolution of a word. This information is always
+ private to the user.
+ Books API data model 
+ A resource is an individual data entity with a unique identifier. The Books
+API operates on two types of resources, based on the concepts described
+above: 
+ Volume resource : Represents a volume. 
+ Bookshelf resource : Represents a single bookshelf for a
+ particular user. 
+ The Books API data model is based on groups of resources, called collections: 
+ Volume collection 
+ The volume collection , is a collection
+ of every volume resource managed by Google Books.
+ As such, you cannot list all volume resources,
+ but you can list all volumes that match a set of
+ search terms. 
+ Bookshelf collection 
+ A bookshelf collection consists of all
+ the bookshelf resources managed by Google Books.
+ Bookshelves must always be referenced in the context of a specific user's library.
+ Bookshelves can contain zero or more volumes. 
+ Google provides a set of pre-defined bookshelves for each user:
+ Favorites: Mutable bookshelf. 
+ Purchased: Populated with volumes the user has purchased. The user cannot
+ manually add or remove volumes. 
+ To Read: Mutable bookshelf. 
+ Reading Now: Mutable bookshelf. 
+ Have Read: Mutable bookshelf. 
+ Reviewed: Populated with volumes the user has reviewed. The user cannot
+ manually add or remove volumes. 
+ Recently Viewed: Populated with volumes the user has recently opened in
+ a web reader. The user cannot manually add volumes. 
+ My eBooks: Mutable bookshelf. Purchased books are automatically added,
+ but can be manually removed. 
+ Books For You: Populated with personalized volume recommendations. If
+ we have no recommendations for the user, this bookshelf does not exist. 
+ Example bookshelves:
+ "Favorites" 
+ "Harry Potter" 
+ "My eBooks" 
+ "Switch" 
+ "Twilight" 
+ "The Girl with the Dragon Tattoo" 
+ Books API operations 
+ You can invoke five different methods on collections and resources in the
+Books API, as described in the following table. 
+ Operation 
+ Description 
+ REST HTTP mappings 
+ list 
+ Lists a specified subset of resources within a collection. 
+ GET on a collection URI. 
+ insert 
+ Inserts a new resource into a collection (creating a new resource). 
+ POST on a collection URI, where you pass in data for a new resource. 
+ get 
+ Gets a specific resource. 
+ GET on resource URI. 
+ update 
+ Updates a specific resource. 
+ PUT on resource URI, where you pass in data for the updated resource. 
+ delete 
+ Deletes a specific resource. 
+ DELETE on resource URI, where you pass in data for the resource to be deleted. 
+ The operations that are supported for the various types of resources are
+summarized in the table below. Operations that apply to a user's private data are
+called "My Library" operations, and they all require authentication . 
+ Resource Type 
+ Supported Operations 
+ list 
+ insert 
+ get 
+ update 
+ delete 
+ Volumes 
+ yes* 
+ yes 
+ Bookshelves 
+ yes* 
+ yes, AUTHENTICATED 
+ yes* 
+ yes, AUTHENTICATED 
+ yes, AUTHENTICATED 
+ Reading Positions 
+ yes, AUTHENTICATED 
+ yes, AUTHENTICATED 
+ yes, AUTHENTICATED 
+ yes, AUTHENTICATED 
+ *Both AUTHENTICATED and
+unauthenticated versions of these operations are available, where the
+authenticated requests operate on the user's private "My Library" data, and
+unauthenticated requests operate on public data only. 
+ Calling styles 
+ There are several ways to invoke the API: 
+ Using REST directly
+ Using REST from JavaScript (no server-side code required) 
+ REST 
+ REST is a style of software architecture that provides a convenient and consistent approach to requesting and modifying data. 
+ The term REST is short for " Representational State Transfer ." In the context of Google APIs, it refers to using HTTP verbs to retrieve and modify representations of data stored by Google. 
+ In a RESTful system, resources are stored in a data store; a client sends a request that the server perform a particular action (such as creating, retrieving, updating, or deleting a resource), and the server performs the action and sends a response, often in the form of a representation of the specified resource. 
+ In Google's RESTful APIs, the client specifies an action using an HTTP verb such as POST , GET , PUT , or  DELETE . It specifies a resource by a globally-unique URI of the following form: 
+https://www.googleapis.com/ apiName / apiVersion / resourcePath ? parameters 
+ Because all API resources have unique HTTP-accessible URIs, REST enables data caching and is optimized to work with the web's distributed infrastructure. 
+ You may find the method definitions in the HTTP 1.1 standards documentation useful; they include specifications for GET , POST , PUT , and DELETE . 
+ REST in the Books API 
+ The supported Books operations map directly to REST HTTP verbs, as described
+in Books API operations . 
+ The specific format for Books API URIs are: 
+ https://www.googleapis.com/books/v1/{collectionName}/ resourceID ? parameters 
+ where resourceID is the identifier for a volume
+or bookshelf resource, and  parameters  are
+any parameters to apply to the query. See Query parameter reference for details. 
+ The format of the resourceID path extensions lets you identify the resource you're currently operating on, for example: 
+https://www.googleapis.com/books/v1/volumes
+https://www.googleapis.com/books/v1/volumes/ volumeId 
+https://www.googleapis.com/books/v1/mylibrary/bookshelves
+https://www.googleapis.com/books/v1/mylibrary/bookshelves/ shelf 
+https://www.googleapis.com/books/v1/mylibrary/bookshelves/ shelf /volumes
+... 
+ Note that operations with mylibrary in the URI apply only to the
+currently authenticated user's private library data. The full set of URIs used
+for each supported operation in the API is summarized in the Books API Reference document. 
+ Here are a couple of examples of how this works in the Books API. 
+ Perform a search for quilting: 
+GET https://www.googleapis.com/books/v1/volumes?q=quilting
+ Get information on volume s1gVAAAAYAAJ: 
+ GET https://www.googleapis.com/books/v1/volumes/ s1gVAAAAYAAJ 
+ REST from JavaScript 
+ You can invoke the Books API using REST from JavaScript (also called JSON-P ), using the callback query parameter and a callback function. This allows you to write rich applications that display Books data without writing any server side code. 
+ Note: You can call authenticated methods by passing an OAuth 2.0 token using the access_token parameter. To obtain an OAuth 2.0 token for use with JavaScript, follow the instructions described in OAuth 2.0 for client-side web applications . In the "API Access" tab of the APIs Console , be sure set up a Client ID for web applications, and to use those OAuth 2.0 credentials when getting your token. 
+ The following example uses this approach to display search results for "harry potter": 
+ < html >
+ < head >
+ < title>Books API Example < / title >
+ < / head >
+ < body >
+ < div id = "content" >< / div >
+ < script >
+ function handleResponse ( response ) { 
+ for ( var i = 0 ; i < response . items . length ; i ++ ) { 
+ var item = response . items [ i ] ; 
+ // in production code , item . text should have the HTML entities escaped . 
+ document . getElementById ( "content" ). innerHTML += "<br>" + item . volumeInfo . title ; 
+ } 
+ } 
+ < / script >
+ < script src = "https://www.googleapis.com/books/v1/volumes?q=harry+potter&callback=handleResponse" >< / script >
+ < / body >
+< / html > 
+ Data format 
+ JSON 
+ JSON (JavaScript Object Notation) is a common, language-independent data format that provides a simple text representation of arbitrary data structures. For more information, see json.org . 
+ Except as otherwise noted, the content of this page is licensed under the Creative Commons Attribution 4.0 License , and code samples are licensed under the Apache 2.0 License . For details, see the Google Developers Site Policies . Java is a registered trademark of Oracle and/or its affiliates. 
+ Last updated 2024-06-26 UTC. 
+ [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Missing the information I need","missingTheInformationINeed","thumb-down"],["Too complicated / too many steps","tooComplicatedTooManySteps","thumb-down"],["Out of date","outOfDate","thumb-down"],["Samples / code issue","samplesCodeIssue","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2024-06-26 UTC."],[],[]]
+ Product Info 
+ Terms of Service
+ Case Studies
+ Connect 
+ Google Books API Forums
+ Build 
+ Android
+ Chrome
+ Firebase
+ Google AI Studio
+ Google Antigravity
+ Google Cloud
+ Google Play
+ View all
+ Android
+ Chrome
+ Firebase
+ Google Cloud Platform
+ Google AI
+ All products
+ Terms
+ Privacy
+ Manage cookies
+ English 
+ Deutsch 
+ Español 
+ Español – América Latina 
+ Français 
+ Indonesia 
+ Italiano 
+ Polski 
+ Português – Brasil 
+ Tiếng Việt 
+ Türkçe 
+ Русский 
+ עברית 
+ العربيّة 
+ فارسی 
+ हिंदी 
+ বাংলা 
+ ภาษาไทย 
+ 中文 – 简体 
+ 中文 – 繁體 
+ 日本語 
+ 한국어

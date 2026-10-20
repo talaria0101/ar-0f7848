@@ -1,0 +1,63 @@
+ClinicalTrials.gov API Version 2.0 Now Available. NLM Technical Bulletin. 2024 Mar–Apr 
+ Skip to main content 
+ An official website of the United States government 
+ Here’s how you know 
+ Here’s how you know 
+ Official websites use .gov 
+ A .gov website belongs to an official government
+ organization in the United States. 
+ Secure .gov websites use HTTPS 
+ A lock ( 
+ Lock 
+ A locked padlock 
+ ) or https:// means you’ve safely connected to
+ the .gov website. Share sensitive information only on official,
+ secure websites. 
+ Search archive 
+ Menu 
+ Home 
+ Current Issue 
+ Past Issues 
+ About 
+ Contact Us 
+ Subscribe   
+ ClinicalTrials.gov API Version 2.0 Now Available 
+ ClinicalTrials.gov 
+ ClinicalTrials.gov API Version 2.0 Now Available. 2024 Mar-Apr;( 457 ):e2. 
+ March 19, 2024 [posted]
+ The ClinicalTrials.gov API version 2.0 is now available on the modernized ClinicalTrials.gov website. The API, or application programming interface, is a tool to help researchers and developers access the data in ClinicalTrials.gov study records. This new version differs from the legacy API on the classic ClinicalTrials.gov website in important ways, some of which we highlight below. 
+ The ClinicalTrials.gov API version 2.0 is a REST API and uses the OpenAPI Specification 3.0 to describe its meta information. This approach has the following benefits:
+ Allows the support of third-party OpenAPI 3.0 libraries and applications that rely on the ClinicalTrials.gov API to build customized interfaces and workflows. 
+ Aligns with standard expectations for publicly accessible modern APIs. 
+ Specific differences in how data are handled by the new ClinicalTrials.gov API include:
+ Standardizing and changing the data type of certain fields (e.g., Intervention Type) from text to enumurated values, meaning users can choose from a set of values. 
+ Standardizing number fields. 
+ Using the ISO 8601 format for dates. 
+ Using the CommonMark Markdown format for rich-text data. 
+ Using JSON as the primary response data. 
+ The benefits of these changes for ClinicalTrials.gov API users include:
+ Reducing the data transformation burden. 
+ Reducing the validation burden. 
+ Allowing users to more readily predict, consume, and use rich-text data. 
+ Meeting users' expectations for data from publicly accessible, modern APIs. 
+ To support users as they transition to the modernized API, we have provided support documentation such as a Migration Guide , which discusses the differences between the classic ClinicalTrials.gov API and the ClinicalTrials.gov API version 2.0. It also covers how legacy endpoints are supported through the modernized API. Additional documentation includes: 
+ Study Data Structure. 
+ Search Areas. 
+ CSV Download. 
+ Beginning in April, users may experience brief disruptions in legacy API services during a series of planned outages. Users are strongly encouraged to migrate to the new API as soon as possible. The classic ClinicalTrials.gov API will be retired in June 2024. For more information on the new ClinicalTrials.gov API, please see About the API on the modernized ClinicalTrials.gov website. 
+ Figure 1: An API Migration Guide is available on the ClinicalTrials.gov website for additional support. 
+ Figure 2: Additional information about the new ClinicalTrials.gov API is available on the modernized ClinicalTrials.gov website. 
+ ISSN 2161-2986 (Online) 
+ Last updated on 19 March 2024 
+ Connect with NLM 
+ National Library of Medicine 
+ 8600 Rockville Pike 
+ Bethesda, MD 20894 
+ Web Policies 
+ FOIA 
+ HHS Vulnerability
+ Disclosure 
+ NLM Support Center 
+ Accessibility 
+ Careers 
+ NLM | NIH | HHS | USA.gov

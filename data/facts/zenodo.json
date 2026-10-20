@@ -1,0 +1,54 @@
+{
+ "slug": "zenodo",
+ "auth": "none",
+ "auth_note": "Search/read endpoints work anonymously; tokens are needed for deposit and give higher page size.",
+ "cost": "free",
+ "rate_limit": "not established",
+ "data_license": "CC0 for metadata (Creative Commons Zero); files carry per-record licenses",
+ "bulk_access": "OAI-PMH at https://zenodo.org/oai2d (docs also mention metadata dumps)",
+ "probe_status": 200,
+ "probe_observation": "The probe returned JSON starting with {\"hits\": {\"hits\": [ with one record (DOI 10.5281/zenodo.23487323).",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "Maximum 25 for anonymous requests, 100 for authenticated requests.",
+   "snapshot": "data/snapshots/zenodo/docs.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "{\"hits\": {\"hits\": [{\"created\": \"2026-10-20T01:30:31.386811+00:00\"",
+   "snapshot": "data/snapshots/zenodo/probe.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "{\"hits\": {\"hits\": [{\"created\": \"2026-10-20T01:30:31.386811+00:00\"",
+   "snapshot": "data/snapshots/zenodo/probe.txt"
+  },
+  {
+   "claim": "cost",
+   "quote": "Content may be uploaded free of charge by those without ready access to an organised data centre.",
+   "snapshot": "data/snapshots/zenodo/extra-z3.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "Unless specified otherwise, Zenodo metadata may be freely reused under the CC0 waiver",
+   "snapshot": "data/snapshots/zenodo/extra-z3.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "All metadata is licensed under Creative Commons Zero",
+   "snapshot": "data/snapshots/zenodo/docs.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "Our OAI-PMH base endpoint is at https://zenodo.org/oai2d .",
+   "snapshot": "data/snapshots/zenodo/docs.txt"
+  },
+  {
+   "claim": "other",
+   "quote": "429 Too Many Requests Request failed, due to rate limiting.",
+   "snapshot": "data/snapshots/zenodo/docs.txt"
+  }
+ ],
+ "not_established": "Numeric rate limit is not in any captured page (docs only list HTTP 429 for rate limiting; the probe response headers in meta.json show x-ratelimit-limit 30 with retry-after 59, but headers are not in a snapshot text file). Whether the service stays free for downloads at volume is not stated."
+}

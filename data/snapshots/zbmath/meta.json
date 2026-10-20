@@ -24,5 +24,43 @@
   "fetched_at": "2026-10-20T01:31:48+00:00",
   "ratelimit_headers": {},
   "text_bytes": 10148
+ },
+ "extra": {
+  "terms": {
+   "url": "https://api.zbmath.org/v1/",
+   "final_url": "https://api.zbmath.org/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 1027,
+   "truncated": false,
+   "sha256": "6946b6702b9e10912708b10cdebc3ed62ce378bc7a5da14f973868acdeb44623",
+   "fetched_at": "2026-10-20T01:38:50+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 122
+  },
+  "openapi": {
+   "url": "https://api.zbmath.org/v1/openapi.json",
+   "final_url": "https://api.zbmath.org/v1/openapi.json",
+   "status": 200,
+   "content_type": "application/json",
+   "bytes": 118038,
+   "truncated": false,
+   "sha256": "773a301f828da976b1e9242df087eedb35bd6ff4d55eb70b33d63cfa7ff6e7bb",
+   "fetched_at": "2026-10-20T01:38:51+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 117993
+  },
+  "oai": {
+   "url": "https://oai.zbmath.org/",
+   "final_url": "https://oai.zbmath.org/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 906,
+   "truncated": false,
+   "sha256": "59e4f879d4d5583f06b67e4e3729e230417ba762aa96f39d8f0c667d780847d5",
+   "fetched_at": "2026-10-20T01:38:53+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 124
+  }
  }
 }

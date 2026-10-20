@@ -1,0 +1,59 @@
+{
+ "auth": "none",
+ "auth_note": "No sign-up needed; optional mailto parameter selects the polite pool; Plus keys are for the paid tier.",
+ "cost": "freemium",
+ "rate_limit": "Per-IP limiting; probe headers showed x-rate-limit-limit 1 with x-rate-limit-interval 1s on the public pool; back off on HTTP 429. Docs give no other numbers.",
+ "data_license": "No named license: docs say almost none of the metadata is subject to copyright and it may be used for any purpose (some abstracts may be copyrighted)",
+ "bulk_access": "Annual public data file (all data); monthly snapshot and OAI-PMH for paid Metadata Plus subscribers",
+ "probe_status": 200,
+ "probe_observation": "Probe returned JSON beginning status ok, message-type work-list, with total-results 187797949.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "{\"status\":\"ok\",\"message-type\":\"work-list\",\"message-version\":\"1.0.0\",\"message\":{\"facets\":{},\"total-results\":187797949",
+   "snapshot": "data/snapshots/crossref/probe.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "No sign-up is required to use the REST API",
+   "snapshot": "data/snapshots/crossref/docs.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "\"total-results\":187797949",
+   "snapshot": "data/snapshots/crossref/probe.txt"
+  },
+  {
+   "claim": "cost",
+   "quote": "No sign-up is required to use the REST API, and almost none of the metadata is subject to copyright, and you may use it for any purpose.",
+   "snapshot": "data/snapshots/crossref/docs.txt"
+  },
+  {
+   "claim": "cost",
+   "quote": "To use Metadata Plus, an optional paid-for service, you do not need to be a member.",
+   "snapshot": "data/snapshots/crossref/extra-plus.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "\"x-rate-limit-limit\": \"1\", \"x-rate-limit-interval\": \"1s\"",
+   "snapshot": "data/snapshots/crossref/meta.json"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "back off if you start seeing 429 statuses, which means you are being rate limited",
+   "snapshot": "data/snapshots/crossref/extra-tips.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "almost none of the metadata is subject to copyright, and you may use it for any purpose. Some abstracts contained in the metadata may be subject to copyright by publishers or authors.",
+   "snapshot": "data/snapshots/crossref/docs.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "We have an annual public data file that contains all of our data. If you are a Metadata Plus subscriber, you have access to a monthly snapshot.",
+   "snapshot": "data/snapshots/crossref/extra-tips.txt"
+  }
+ ],
+ "not_established": "Numeric rate limits for the polite pool and exact license name; the Metadata Plus fee; URL of the annual public data file not captured.",
+ "slug": "crossref"
+}

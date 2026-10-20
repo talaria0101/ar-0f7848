@@ -1,0 +1,49 @@
+{
+ "slug": "pubmed-eutils",
+ "auth": "none",
+ "auth_note": "Anonymous esearch returned HTTP 200; an optional free api_key raises the rate limit.",
+ "cost": "free",
+ "rate_limit": "3 requests/second per IP without an API key; 10 requests/second per key with one (NCBI Insights post).",
+ "data_license": "not established",
+ "bulk_access": "PubMed FTP baseline and daily update files, see https://pubmed.ncbi.nlm.nih.gov/download/",
+ "probe_status": 200,
+ "probe_observation": "The probe returned JSON with esearchresult count \"4035291\", retmax \"1\" and idlist [\"42896178\"].",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "\"esearchresult\":{\"count\":\"4035291\",\"retmax\":\"1\"",
+   "snapshot": "data/snapshots/pubmed-eutils/probe.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "\"header\":{\"type\":\"esearch\",\"version\":\"0.3\"}",
+   "snapshot": "data/snapshots/pubmed-eutils/probe.txt"
+  },
+  {
+   "claim": "cost",
+   "quote": "The E-utilities API is a free service open to the public and will continue to be",
+   "snapshot": "data/snapshots/pubmed-eutils/extra-blog.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "any computer (IP address) that submits more than three E-utility requests per second will receive an error message",
+   "snapshot": "data/snapshots/pubmed-eutils/extra-blog.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "By default, your key will increase the limit to 10 requests/second for all activity from that key.",
+   "snapshot": "data/snapshots/pubmed-eutils/extra-blog.txt"
+  },
+  {
+   "claim": "other",
+   "quote": "NLM does not claim the copyright on the abstracts in PubMed ; however, journal publishers or authors may.",
+   "snapshot": "data/snapshots/pubmed-eutils/extra-copyright.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "PubMed data are available via our FTP servers and via the E-utilities API.",
+   "snapshot": "data/snapshots/pubmed-eutils/extra-bulk.txt"
+  }
+ ],
+ "not_established": "No formal data license: only a statement that NLM does not claim copyright on abstracts (publishers or authors may); FTP terms are in a README.txt not captured. The configured docs page (NBK25497) was a reCAPTCHA 'Checking your browser' challenge, so the official usage-guidelines page was not captured; rate limits come from a 2017-era NCBI Insights post, which may be out of date."
+}

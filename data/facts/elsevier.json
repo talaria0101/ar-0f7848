@@ -1,0 +1,49 @@
+{
+ "slug": "elsevier",
+ "auth": "key-approval",
+ "auth_note": "An API key is required (probe gets 401 Invalid API Key) and a new key alone gives no access until an entitlement or approval is verified.",
+ "cost": "institutional",
+ "rate_limit": "Per-API weekly quotas and per-second throttling, e.g. Scopus Search 20,000 requests per week at 9 requests/second; ScienceDirect Article Retrieval 50,000 per week at 10/second; quotas reset every seven days.",
+ "data_license": "not established",
+ "bulk_access": "none documented",
+ "probe_status": 401,
+ "probe_observation": "The anonymous probe returned HTTP 401 JSON with AUTHENTICATION_ERROR / Invalid API Key.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "New API keys do not provide data or content access by default. Access to individual APIs, datasets and content is enabled only after the relevant customer, partner or approved-integration entitlement has been verified.",
+   "snapshot": "data/snapshots/elsevier/extra-keys.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "Registering for or holding an API key does not by itself grant access to Elsevier data or content.",
+   "snapshot": "data/snapshots/elsevier/docs.txt"
+  },
+  {
+   "claim": "cost",
+   "quote": "Elsevier APIs are available to eligible customers, approved partners and other authorized integrations with a valid entitlement.",
+   "snapshot": "data/snapshots/elsevier/docs.txt"
+  },
+  {
+   "claim": "cost",
+   "quote": "APIs are available (for commercial use), with an API license and subscription",
+   "snapshot": "data/snapshots/elsevier/docs.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "Quotas, meaning the number of requests run, are reset every seven days.",
+   "snapshot": "data/snapshots/elsevier/extra-keys.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "COMPLETE view / Max 25 results COMPONENT view / Max 25 results 5000 item total result limit without",
+   "snapshot": "data/snapshots/elsevier/extra-keys.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "{\"service-error\":{\"status\":{\"statusCode\":\"AUTHENTICATION_ERROR\",\"statusText\":\"Invalid API Key\"}}}",
+   "snapshot": "data/snapshots/elsevier/probe.txt"
+  }
+ ],
+ "not_established": "Data license/reuse terms of returned data not found in captured pages (the API Service Agreement and Use Policies were not captured). Price of the commercial API license not stated. Whether any free institutional-entitlement route exists for individual researchers was not captured. No bulk dump or OAI-PMH route documented."
+}

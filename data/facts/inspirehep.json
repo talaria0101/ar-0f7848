@@ -1,0 +1,34 @@
+{
+ "slug": "inspirehep",
+ "auth": "none",
+ "auth_note": "Anonymous GET to the literature endpoint returned 200 JSON with no credentials.",
+ "cost": "not established",
+ "rate_limit": "15 requests in a 5s window per IP address; exceeding returns HTTP 429",
+ "data_license": "Most metadata CC0; restrictions apply to some fields; bulk collection of email addresses not allowed",
+ "bulk_access": "none documented",
+ "probe_status": 200,
+ "probe_observation": "Probe returned JSON starting {\"hits\":{\"hits\":[{\"metadata\":{\"control_number\":821335,... with one literature record's titles.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "{\"hits\":{\"hits\":[{\"metadata\":{\"control_number\":821335",
+   "snapshot": "data/snapshots/inspirehep/probe.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "\"titles\":[{\"title\":\"Chi-Square Tests for Comparison Weighted Histograms\"}",
+   "snapshot": "data/snapshots/inspirehep/probe.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "every IP address is allowed 15 requests in a 5s window. If you exceed those limits, you will receive a response with HTTP status code 429.",
+   "snapshot": "data/snapshots/inspirehep/docs.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "most of the metadata is available under a CC0 license , but restrictions apply to some fields, and bulk collection of email addresses is not allowed.",
+   "snapshot": "data/snapshots/inspirehep/docs.txt"
+  }
+ ],
+ "not_established": "Cost/pricing is not stated in the docs (anonymous access works, but no explicit free statement captured). No bulk dump or OAI-PMH route is mentioned in the captured docs."
+}

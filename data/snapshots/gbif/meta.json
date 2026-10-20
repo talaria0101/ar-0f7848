@@ -26,5 +26,83 @@
   "fetched_at": "2026-10-20T01:31:54+00:00",
   "ratelimit_headers": {},
   "text_bytes": 931
+ },
+ "extra": {
+  "terms": {
+   "url": "https://www.gbif.org/terms",
+   "final_url": "https://www.gbif.org/terms",
+   "status": 403,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 5513,
+   "truncated": false,
+   "sha256": "6d5f2760371e5b8927865759b297c472616f10bd9e8c0b43dc25b3bc3fb65015",
+   "fetched_at": "2026-10-20T01:39:53+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 16
+  },
+  "datause": {
+   "url": "https://techdocs.gbif.org/en/data-use/api-downloads",
+   "final_url": "https://techdocs.gbif.org/en/data-use/api-downloads",
+   "status": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 34293,
+   "truncated": false,
+   "sha256": "e29e764bd2ca419c1871763194a678309cf4604c63e7697e00cd4208722505c7",
+   "fetched_at": "2026-10-20T01:39:54+00:00",
+   "ratelimit_headers": {
+    "X-RateLimit": ""
+   },
+   "text_bytes": 13823
+  },
+  "tos2": {
+   "url": "https://www.gbif.org/terms/data-user",
+   "final_url": "https://www.gbif.org/terms/data-user",
+   "status": 403,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 5671,
+   "truncated": false,
+   "sha256": "ca47d3e204848e0b2cfe32e5e7427bb2d563565f41f2668de3e2fb9b7fc69668",
+   "fetched_at": "2026-10-20T01:39:55+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 16
+  },
+  "license": {
+   "url": "https://api.gbif.org/v1/enumeration/license",
+   "final_url": "https://api.gbif.org/v1/enumeration/license",
+   "status": 200,
+   "content_type": "application/json",
+   "bytes": 203,
+   "truncated": false,
+   "sha256": "f51e39b8068ea10053583fcefac42136783759efe8a9d09f03991aedbdde96c4",
+   "fetched_at": "2026-10-20T01:40:11+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 203
+  },
+  "tos3": {
+   "url": "https://techdocs.gbif.org/en/data-use/",
+   "final_url": "https://techdocs.gbif.org/en/data-use/",
+   "status": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 14789,
+   "truncated": false,
+   "sha256": "5d46a30518a2708f4f87f89456c2d7c58cf5279ae231cfddf3407274fdccff1a",
+   "fetched_at": "2026-10-20T01:40:13+00:00",
+   "ratelimit_headers": {
+    "X-RateLimit": ""
+   },
+   "text_bytes": 3505
+  },
+  "cc0": {
+   "url": "https://www.gbif.org/terms/data-user",
+   "final_url": "https://www.gbif.org/terms/data-user",
+   "status": 403,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 5671,
+   "truncated": false,
+   "sha256": "96d11cc98cdd27b884b147e3295d6e28ca42c8ecb6ef237ff9672428a4e90d82",
+   "fetched_at": "2026-10-20T01:40:14+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 16
+  }
  }
 }

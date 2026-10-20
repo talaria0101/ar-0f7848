@@ -1,0 +1,54 @@
+{
+ "auth": "none",
+ "auth_note": "Anonymous reads work; POST, PUT, DELETE and some GET requests (such as occurrence downloads) need HTTP Basic auth with a GBIF user account.",
+ "cost": "not established",
+ "rate_limit": "No fixed numbers; search APIs may return HTTP 429 depending on server load, and the maximum rate is not guaranteed. Scripts running over 15 minutes should use the download API.",
+ "data_license": "Per dataset: CC0 1.0, CC BY 4.0 or CC BY-NC 4.0 (list of supported GBIF licenses)",
+ "bulk_access": "Occurrence download API (asynchronous, registered users); monthly occurrence exports on AWS, Google GCS and Azure (https://techdocs.gbif.org/en/data-use/)",
+ "probe_status": 200,
+ "probe_observation": "Probe returned JSON starting {\"offset\":0,\"limit\":1,\"endOfRecords\":false,\"count\":1075,\"results\":[...] with a Puma genus record.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "{\"offset\":0,\"limit\":1,\"endOfRecords\":false,\"count\":1075,\"results\":[{\"key\":157251292",
+   "snapshot": "data/snapshots/gbif/probe.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "Most use of the GBIF API does not require authentication. ... POST, PUT, DELETE and some GET requests require authentication.",
+   "snapshot": "data/snapshots/gbif/docs.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "Rapid or numerous queries to search APIs may be rate limited , depending on our server load. If this happens, you will receive an HTTP 429 error",
+   "snapshot": "data/snapshots/gbif/docs.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "we do not guarantee any particular query rate will work",
+   "snapshot": "data/snapshots/gbif/docs.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "[\"http://creativecommons.org/publicdomain/zero/1.0/legalcode\",\"http://creativecommons.org/licenses/by/4.0/legalcode\",\"http://creativecommons.org/licenses/by-nc/4.0/legalcode\"",
+   "snapshot": "data/snapshots/gbif/extra-license.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "Each month, an export of GBIF occurrence data is uploaded to various cloud computing services.",
+   "snapshot": "data/snapshots/gbif/extra-tos3.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "asynchronous download services to request large, batch downloads",
+   "snapshot": "data/snapshots/gbif/docs.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "\"endOfRecords\":false,\"count\":1075",
+   "snapshot": "data/snapshots/gbif/probe.txt"
+  }
+ ],
+ "not_established": "Cost/pricing statement not found in captured pages (gbif.org/terms returned HTTP 403 challenge from this sandbox, 16 bytes text, so the data user agreement and any licence-of-metadata terms were not captured). Licence is per dataset, no single API-wide licence established. Numeric rate limit not documented.",
+ "slug": "gbif"
+}

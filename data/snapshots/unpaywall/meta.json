@@ -24,5 +24,169 @@
   "fetched_at": "2026-10-20T01:31:42+00:00",
   "ratelimit_headers": {},
   "text_bytes": 5404
+ },
+ "extra": {
+  "api": {
+   "url": "https://unpaywall.org/products/api",
+   "final_url": "https://unpaywall.org/products/api",
+   "status": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 1421,
+   "truncated": false,
+   "sha256": "0445953f2b1255c157c7fb0aa91d60f75298895086bded982c89e46d6c5d5b01",
+   "fetched_at": "2026-10-20T01:36:29+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 9
+  },
+  "readme": {
+   "url": "https://raw.githubusercontent.com/ourresearch/oadoi/master/README.md",
+   "final_url": "https://raw.githubusercontent.com/ourresearch/oadoi/master/README.md",
+   "status": 200,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 0,
+   "truncated": false,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "fetched_at": "2026-10-20T01:36:39+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 0
+  },
+  "data": {
+   "url": "https://unpaywall.org/products/snapshot",
+   "final_url": "https://unpaywall.org/products/snapshot",
+   "status": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 1421,
+   "truncated": false,
+   "sha256": "0445953f2b1255c157c7fb0aa91d60f75298895086bded982c89e46d6c5d5b01",
+   "fetched_at": "2026-10-20T01:36:40+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 9
+  },
+  "v2": {
+   "url": "https://api.unpaywall.org/v2/",
+   "final_url": "https://api.unpaywall.org/v2/",
+   "status": 200,
+   "content_type": "application/json",
+   "bytes": 91,
+   "truncated": false,
+   "sha256": "d4c47ec3e46221abe995dda22bc0fc7401b4d74fe43075e503587682946a0481",
+   "fetched_at": "2026-10-20T01:36:41+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 90
+  },
+  "docs2": {
+   "url": "https://unpaywall.org/data-format",
+   "final_url": "https://unpaywall.org/data-format",
+   "status": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 1421,
+   "truncated": false,
+   "sha256": "0445953f2b1255c157c7fb0aa91d60f75298895086bded982c89e46d6c5d5b01",
+   "fetched_at": "2026-10-20T01:36:42+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 9
+  },
+  "api-v2": {
+   "url": "https://unpaywall.org/api/v2",
+   "final_url": "https://unpaywall.org/api/v2",
+   "status": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 1421,
+   "truncated": false,
+   "sha256": "0445953f2b1255c157c7fb0aa91d60f75298895086bded982c89e46d6c5d5b01",
+   "fetched_at": "2026-10-20T01:36:55+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 9
+  },
+  "dataformat": {
+   "url": "https://unpaywall.org/data-format",
+   "final_url": "https://unpaywall.org/data-format",
+   "status": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 1421,
+   "truncated": false,
+   "sha256": "0445953f2b1255c157c7fb0aa91d60f75298895086bded982c89e46d6c5d5b01",
+   "fetched_at": "2026-10-20T01:36:56+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 9
+  },
+  "gh": {
+   "url": "https://github.com/ourresearch/oadoi",
+   "final_url": "https://github.com/ourresearch/oadoi",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 478122,
+   "truncated": false,
+   "sha256": "6f184aef84351aa3372680b163ff086db61407cb32b37d721ddfe9b9090c65cd",
+   "fetched_at": "2026-10-20T01:36:57+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 7377
+  },
+  "ghraw": {
+   "url": "https://raw.githubusercontent.com/ourresearch/oadoi/master/README.md",
+   "final_url": "https://raw.githubusercontent.com/ourresearch/oadoi/master/README.md",
+   "status": 200,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 0,
+   "truncated": false,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "fetched_at": "2026-10-20T01:36:58+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 0
+  },
+  "products": {
+   "url": "https://unpaywall.org/products",
+   "final_url": "https://unpaywall.org/products",
+   "status": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 1421,
+   "truncated": false,
+   "sha256": "0445953f2b1255c157c7fb0aa91d60f75298895086bded982c89e46d6c5d5b01",
+   "fetched_at": "2026-10-20T01:36:58+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 9
+  },
+  "faq": {
+   "url": "https://unpaywall.org/faq",
+   "final_url": "https://unpaywall.org/faq",
+   "status": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 1421,
+   "truncated": false,
+   "sha256": "0445953f2b1255c157c7fb0aa91d60f75298895086bded982c89e46d6c5d5b01",
+   "fetched_at": "2026-10-20T01:36:59+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 9
+  },
+  "oadoidocs": {
+   "url": "https://oadoi.org/api/v2",
+   "final_url": "https://unpaywall.org/data",
+   "status": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 1421,
+   "truncated": false,
+   "sha256": "0445953f2b1255c157c7fb0aa91d60f75298895086bded982c89e46d6c5d5b01",
+   "fetched_at": "2026-10-20T01:37:00+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 9
+  },
+  "ghapi": {
+   "url": "https://api.github.com/repos/ourresearch/oadoi/readme",
+   "final_url": "https://api.github.com/repos/ourresearch/oadoi/readme",
+   "status": 200,
+   "content_type": "application/vnd.github.raw; charset=utf-8",
+   "bytes": 0,
+   "truncated": false,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "fetched_at": "2026-10-20T01:37:14+00:00",
+   "ratelimit_headers": {
+    "X-RateLimit-Limit": "60",
+    "X-RateLimit-Remaining": "59",
+    "X-RateLimit-Used": "1",
+    "X-RateLimit-Resource": "core",
+    "X-RateLimit-Reset": "1792463828"
+   },
+   "text_bytes": 0
+  }
  }
 }

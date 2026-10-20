@@ -24,5 +24,157 @@
   "fetched_at": "2026-10-20T01:33:19+00:00",
   "ratelimit_headers": {},
   "text_bytes": 546
+ },
+ "extra": {
+  "api": {
+   "url": "https://orkg.org/api/v3/api-docs",
+   "final_url": "https://orkg.org/api/v3/api-docs",
+   "status": 404,
+   "content_type": "application/problem+json",
+   "bytes": 287,
+   "truncated": false,
+   "sha256": "97d2940c0c8610d3a8796c54fe4f00206be1b2e2450935513b9841cdc8088f89",
+   "fetched_at": "2026-10-20T01:38:22+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 287
+  },
+  "docs": {
+   "url": "https://orkg.gitlab.io/orkg/orkg-backend/api-doc/",
+   "final_url": "https://orkg.gitlab.io/orkg/orkg-backend/api-doc/",
+   "status": 403,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 5684,
+   "truncated": false,
+   "sha256": "48a43490ae79775678620d6e9f49fada120bab7c2fe462de4387491c1b68ff83",
+   "fetched_at": "2026-10-20T01:38:23+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 16
+  },
+  "terms": {
+   "url": "https://orkg.org/about/18/Terms_of_Use",
+   "final_url": "https://orkg.org/about/18/Terms_of_Use",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 46327,
+   "truncated": false,
+   "sha256": "275524bf18f1fc7bfd6bbf759c3c1b1af64644b84f1b9134b9b4136bcc31134c",
+   "fetched_at": "2026-10-20T01:38:25+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 384
+  },
+  "gh": {
+   "url": "https://raw.githubusercontent.com/TIBHannover/orkg-backend/master/README.md",
+   "final_url": "https://raw.githubusercontent.com/TIBHannover/orkg-backend/master/README.md",
+   "status": 404,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 14,
+   "truncated": false,
+   "sha256": "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed",
+   "fetched_at": "2026-10-20T01:38:26+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 14
+  },
+  "data": {
+   "url": "https://orkg.org/about/5/Data_Protection",
+   "final_url": "https://orkg.org/about/5/Data_Protection",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 46338,
+   "truncated": false,
+   "sha256": "6270aba83630d540b1e8f4704e89100b777e45316046f8748cce6a0ea3674c06",
+   "fetched_at": "2026-10-20T01:38:34+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 386
+  },
+  "ghapi": {
+   "url": "https://raw.githubusercontent.com/TIBHannover/orkg-backend/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/TIBHannover/orkg-backend/main/README.md",
+   "status": 404,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 14,
+   "truncated": false,
+   "sha256": "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed",
+   "fetched_at": "2026-10-20T01:38:35+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 14
+  },
+  "lic": {
+   "url": "https://orkg.org/about/20/Data_Licensing",
+   "final_url": "https://orkg.org/about/20/Data_Licensing",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 46311,
+   "truncated": false,
+   "sha256": "4a7c954feaa22f02c8805d2762861e17fccc68c4490297715333105a1bff4e3c",
+   "fetched_at": "2026-10-20T01:38:35+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 380
+  },
+  "oas": {
+   "url": "https://orkg.org/api/v3/api-docs/all",
+   "final_url": "https://orkg.org/api/v3/api-docs/all",
+   "status": 404,
+   "content_type": "application/problem+json",
+   "bytes": 303,
+   "truncated": false,
+   "sha256": "fe3a12a7e2dbb80dd65b2393737eeb2d04b11bbfad637aa856eaa03e2be8d48f",
+   "fetched_at": "2026-10-20T01:38:45+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 303
+  },
+  "oas2": {
+   "url": "https://orkg.org/api/api-docs",
+   "final_url": "https://orkg.org/api/api-docs",
+   "status": 404,
+   "content_type": "application/problem+json",
+   "bytes": 275,
+   "truncated": false,
+   "sha256": "3ce5a910dd6c6f7f8de3453f6bdef96aafdc2aecb67131a7f49be9de20d0316e",
+   "fetched_at": "2026-10-20T01:38:46+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 275
+  },
+  "gl": {
+   "url": "https://gitlab.com/TIBHannover/orkg/orkg-backend/-/raw/master/README.md",
+   "final_url": "https://gitlab.com/TIBHannover/orkg/orkg-backend/-/raw/master/README.md",
+   "status": 404,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 2679,
+   "truncated": false,
+   "sha256": "8e23c27ef91374c6c33691ac0c61ec1f16966b3c0aba90db007c6da09b852958",
+   "fetched_at": "2026-10-20T01:38:47+00:00",
+   "ratelimit_headers": {
+    "ratelimit-limit": "500",
+    "ratelimit-name": "throttle_unauthenticated_web",
+    "ratelimit-observed": "1",
+    "ratelimit-remaining": "499",
+    "ratelimit-reset": "1792460340"
+   },
+   "text_bytes": 205
+  },
+  "ghd": {
+   "url": "https://raw.githubusercontent.com/TIBHannover/orkg-backend/master/docs/index.adoc",
+   "final_url": "https://raw.githubusercontent.com/TIBHannover/orkg-backend/master/docs/index.adoc",
+   "status": 404,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 14,
+   "truncated": false,
+   "sha256": "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed",
+   "fetched_at": "2026-10-20T01:38:48+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 14
+  },
+  "wiki": {
+   "url": "https://orkg.org/help-center/article/46/ORKG_REST_API",
+   "final_url": "https://orkg.org/help-center/article/46/ORKG_REST_API",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 46898,
+   "truncated": false,
+   "sha256": "cc40b48b2afb5563659d6bea05e0c4ce83a3d92ddbf243aca7fb1d6fef13742f",
+   "fetched_at": "2026-10-20T01:38:48+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 386
+  }
  }
 }

@@ -1,0 +1,44 @@
+{
+ "slug": "orcid",
+ "auth": "none",
+ "auth_note": "The anonymous probe on pub.orcid.org search returned results without a token; docs say a /read-public token from free public API credentials is needed for API use, but that browser searches need no credentials.",
+ "cost": "not established",
+ "rate_limit": "not established",
+ "data_license": "CC0 1.0",
+ "bulk_access": "ORCID Public Data File (annual release), documented at https://info.orcid.org/public-data-file-use-policy/",
+ "probe_status": 200,
+ "probe_observation": "The probe returned JSON starting with a result array holding one orcid-identifier (0000-0002-6104-6796) and num-found 328927.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "\"num-found\":328927",
+   "snapshot": "data/snapshots/orcid/probe.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "You can also complete the search using your browser. The URL is constructed the same way but you do not need to use any API credentials. Please note that this can only be completed using the public API.",
+   "snapshot": "data/snapshots/orcid/extra-pubtos.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "The Public Data File is available under a Creative Commons CC0 1.0 Universal public domain dedication.",
+   "snapshot": "data/snapshots/orcid/extra-pubdata.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "annually releases a Public Data File of all public data in the ORCID Registry",
+   "snapshot": "data/snapshots/orcid/extra-pubdata.txt"
+  },
+  {
+   "claim": "other",
+   "quote": "Please note the Public API is limited to 10,000 results.",
+   "snapshot": "data/snapshots/orcid/extra-pubtos.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "\"num-found\":328927",
+   "snapshot": "data/snapshots/orcid/probe.txt"
+  }
+ ],
+ "not_established": "Cost and a numeric request rate limit were not found (tried docs.txt, extra-pubtos, extra-pubdata; tos, limits, faq, public-data-file and usage-limits URLs returned 404). The CC0 license is documented for the Public Data File, not stated for API responses. Docs say search needs a /read-public token yet the anonymous probe worked, so token enforcement is not established. The Public API search is capped at 10,000 results."
+}

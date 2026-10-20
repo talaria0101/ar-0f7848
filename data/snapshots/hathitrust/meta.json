@@ -24,5 +24,127 @@
   "fetched_at": "2026-10-20T01:31:36+00:00",
   "ratelimit_headers": {},
   "text_bytes": 761
+ },
+ "extra": {
+  "bibapi": {
+   "url": "https://babel.hathitrust.org/cgi/ls?a=page;page=bib_api",
+   "final_url": "https://babel.hathitrust.org/cgi/ls?a=page;page=bib_api",
+   "status": 403,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 66900,
+   "truncated": false,
+   "sha256": "68982a8f3c7e2cac7d1f5dbcab135ba93e125f34fd2b257024276da111cc8ab2",
+   "fetched_at": "2026-10-20T01:35:13+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 1125
+  },
+  "bibdoc": {
+   "url": "https://www.hathitrust.org/the-collection/data/bib-api",
+   "final_url": "https://www.hathitrust.org/the-collection/data/bib-api",
+   "status": 403,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 66900,
+   "truncated": false,
+   "sha256": "6ec6bea9f3a29c7eb1932e6803730752c69da3038af04624f702d23ba01c613b",
+   "fetched_at": "2026-10-20T01:35:14+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 1125
+  },
+  "dataapi": {
+   "url": "https://github.com/hathitrust/hathitrust-bib-api",
+   "final_url": "https://github.com/hathitrust/hathitrust-bib-api",
+   "status": 404,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 264868,
+   "truncated": false,
+   "sha256": "2c34c307d718ff4433365a722626122e4a967f740ff2120fc2a4bcbe8c172558",
+   "fetched_at": "2026-10-20T01:35:14+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 2930
+  },
+  "oai": {
+   "url": "https://www.hathitrust.org/member-libraries/resources-for-librarians/data-resources/hathifiles/",
+   "final_url": "https://www.hathitrust.org/member-libraries/resources-for-librarians/data-resources/hathifiles/",
+   "status": 403,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 66900,
+   "truncated": false,
+   "sha256": "7270916a63eb37a0d31d9b13c87f1c0013deb1343a24091085fbeacbd33ff041",
+   "fetched_at": "2026-10-20T01:35:15+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 1125
+  },
+  "bibapi2": {
+   "url": "https://www.hathitrust.org/member-libraries/resources-for-librarians/data-resources/bibliographic-api/",
+   "final_url": "https://www.hathitrust.org/member-libraries/resources-for-librarians/data-resources/bibliographic-api/",
+   "status": 403,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 66900,
+   "truncated": false,
+   "sha256": "874d86faf053f5b5a4b5b0ac0bdc548bf079acfbb46b53118593dbc786ee357b",
+   "fetched_at": "2026-10-20T01:35:28+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 1125
+  },
+  "old": {
+   "url": "https://old.www.hathitrust.org/bib_api.html",
+   "final_url": "https://old.www.hathitrust.org/bib_api.html",
+   "status": 403,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 66900,
+   "truncated": false,
+   "sha256": "6917fa06d7cbd97e7f74c32cbdb8f8a4982bbecc41b94d6a4d49ccbfa3fb3d58",
+   "fetched_at": "2026-10-20T01:35:28+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 1125
+  },
+  "oldterms": {
+   "url": "https://old.www.hathitrust.org/data_api.html",
+   "final_url": "https://old.www.hathitrust.org/data_api.html",
+   "status": 403,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 66900,
+   "truncated": false,
+   "sha256": "0c27c014dd186e60b977d5e43818c87db473b3891b8d36fcee44996d58c4a434",
+   "fetched_at": "2026-10-20T01:35:28+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 1125
+  },
+  "integrate": {
+   "url": "https://www.hathitrust.org/member-libraries/resources-for-librarians/improve-discovery/integrate-records/",
+   "final_url": "https://www.hathitrust.org/member-libraries/resources-for-librarians/improve-discovery/integrate-records/",
+   "status": 403,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 66900,
+   "truncated": false,
+   "sha256": "d5a6155bc5cc8f343282ce113164c08e8b205bdcbcfbeaff43f2515bf603f7bb",
+   "fetched_at": "2026-10-20T01:35:29+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 1125
+  },
+  "kltng": {
+   "url": "https://raw.githubusercontent.com/kltng/humanities-skills/main/hathitrust-catalog/references/api_reference.md",
+   "final_url": "https://raw.githubusercontent.com/kltng/humanities-skills/main/hathitrust-catalog/references/api_reference.md",
+   "status": 200,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 3226,
+   "truncated": false,
+   "sha256": "4821f6eea85f6fdc0f65a05589adcb7f0b48f64ebc64dd315f84b9ec4f3ee8bc",
+   "fetched_at": "2026-10-20T01:35:37+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 3221
+  },
+  "rlmv": {
+   "url": "https://raw.githubusercontent.com/rlmv/hathitrust-api/master/README.md",
+   "final_url": "https://raw.githubusercontent.com/rlmv/hathitrust-api/master/README.md",
+   "status": 200,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 2330,
+   "truncated": false,
+   "sha256": "e5e7fd949a27e3fc660359b36cb495d57c0b32779e23e8c5ab94617bea258670",
+   "fetched_at": "2026-10-20T01:35:37+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 2329
+  }
  }
 }

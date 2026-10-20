@@ -24,5 +24,103 @@
   "fetched_at": "2026-10-20T01:31:46+00:00",
   "ratelimit_headers": {},
   "text_bytes": 272
+ },
+ "extra": {
+  "faq": {
+   "url": "https://dblp.org/faq/How+to+use+the+dblp+search+API.html",
+   "final_url": "https://dblp.org/faq/How+to+use+the+dblp+search+API.html",
+   "status": 202,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 3338,
+   "truncated": false,
+   "sha256": "4fa594fa147a57c0afea69d63bf71798882f4f11cb6e17f7466b55578320ef63",
+   "fetched_at": "2026-10-20T01:37:45+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 272
+  },
+  "xml": {
+   "url": "https://dblp.org/xml/",
+   "final_url": "https://dblp.org/xml/",
+   "status": 200,
+   "content_type": "text/html;charset=UTF-8",
+   "bytes": 2512,
+   "truncated": false,
+   "sha256": "e0d1bf2b8008f9d6f647a78a537fb30f198022b09ad170584fe0aa777e2acac3",
+   "fetched_at": "2026-10-20T01:37:46+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 456
+  },
+  "lic": {
+   "url": "https://dblp.org/faq/Am+I+allowed+to+crawl+the+dblp+website.html",
+   "final_url": "https://dblp.org/faq/Am+I+allowed+to+crawl+the+dblp+website.html",
+   "status": 202,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 3348,
+   "truncated": false,
+   "sha256": "605324b99392b146147b43a443d2a5f9280077e0dfd6570ee19e7f59663ab210",
+   "fetched_at": "2026-10-20T01:37:47+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 272
+  },
+  "rawlic": {
+   "url": "https://raw.githubusercontent.com/dblp/dblp.github.io/master/README.md",
+   "final_url": "https://raw.githubusercontent.com/dblp/dblp.github.io/master/README.md",
+   "status": 404,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 14,
+   "truncated": false,
+   "sha256": "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed",
+   "fetched_at": "2026-10-20T01:37:48+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 14
+  },
+  "readme": {
+   "url": "https://dblp.org/xml/README.txt",
+   "final_url": "https://dblp.org/xml/README.txt",
+   "status": 200,
+   "content_type": "text/plain",
+   "bytes": 3601,
+   "truncated": false,
+   "sha256": "a7ad1781b2e47b34ea393fcd93d02070583330357240d9797a6a66a56f2cb52f",
+   "fetched_at": "2026-10-20T01:37:58+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 3599
+  },
+  "lic2": {
+   "url": "https://dblp.org/xml/release/",
+   "final_url": "https://drops.dagstuhl.de/entities/collection/10.4230/dblp.xml",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 143586,
+   "truncated": false,
+   "sha256": "2b943712aaf5daa946e621f812da06914777da02e4edda885d414c6cf2ff998b",
+   "fetched_at": "2026-10-20T01:37:59+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 20450
+  },
+  "gh": {
+   "url": "https://raw.githubusercontent.com/dblp/dblp-doc/master/README.md",
+   "final_url": "https://raw.githubusercontent.com/dblp/dblp-doc/master/README.md",
+   "status": 404,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 14,
+   "truncated": false,
+   "sha256": "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed",
+   "fetched_at": "2026-10-20T01:38:01+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 14
+  },
+  "licpage": {
+   "url": "https://dblp.org/faq/Which+licence+is+applied+to+the+data+stored+in+dblp.html",
+   "final_url": "https://dblp.org/faq/Which+licence+is+applied+to+the+data+stored+in+dblp.html",
+   "status": 202,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 2995,
+   "truncated": false,
+   "sha256": "b95299ec40913819842e75242d9f46cc85d1542747d040658a8b3f35d014bdda",
+   "fetched_at": "2026-10-20T01:38:02+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 272
+  }
  }
 }

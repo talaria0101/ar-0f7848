@@ -24,5 +24,31 @@
   "fetched_at": "2026-10-20T01:31:38+00:00",
   "ratelimit_headers": {},
   "text_bytes": 719
+ },
+ "extra": {
+  "licensing": {
+   "url": "https://openlibrary.org/developers/licensing",
+   "final_url": "https://openlibrary.org/developers/licensing",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 47032,
+   "truncated": false,
+   "sha256": "e4f29d347f6caa97d39ba38241e4611c94caa1c3635f3730a712cdade26a4a4d",
+   "fetched_at": "2026-10-20T01:35:38+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 2921
+  },
+  "dumps": {
+   "url": "https://openlibrary.org/developers/dumps",
+   "final_url": "https://openlibrary.org/developers/dumps",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 52818,
+   "truncated": false,
+   "sha256": "e0ea703271fce4f7a154328fc74f89f85a592b25c847b516eb35efc91a92f02d",
+   "fetched_at": "2026-10-20T01:35:40+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 5742
+  }
  }
 }

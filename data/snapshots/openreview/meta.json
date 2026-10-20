@@ -32,5 +32,99 @@
    "ratelimit-reset": "60"
   },
   "text_bytes": 265
+ },
+ "extra": {
+  "api2": {
+   "url": "https://docs.openreview.net/reference/api-v2.md",
+   "final_url": "https://docs.openreview.net/reference/api-v2.md",
+   "status": 200,
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 4417,
+   "truncated": false,
+   "sha256": "8e35427abaa3017684f516efb6a37856215377ac4e27f18e5f1b182ac8bbf291",
+   "fetched_at": "2026-10-20T01:38:54+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 4416
+  },
+  "using": {
+   "url": "https://docs.openreview.net/getting-started/using-the-api.md",
+   "final_url": "https://docs.openreview.net/getting-started/using-the-api.md",
+   "status": 200,
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 2848,
+   "truncated": false,
+   "sha256": "167b585069e9858cbf380857c11052e2fe9d14050ef7c6b894f6807ee027521c",
+   "fetched_at": "2026-10-20T01:38:55+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 2847
+  },
+  "faq": {
+   "url": "https://docs.openreview.net/getting-started/frequently-asked-questions.md",
+   "final_url": "https://docs.openreview.net/getting-started/frequently-asked-questions.md",
+   "status": 200,
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 8321,
+   "truncated": false,
+   "sha256": "36d72719bc9b4aa2a71be5dc201830cdd1b14bee41cff8dcaa9733d7fec39cb2",
+   "fetched_at": "2026-10-20T01:38:55+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 8320
+  },
+  "llms": {
+   "url": "https://docs.openreview.net/llms.txt",
+   "final_url": "https://docs.openreview.net/llms.txt",
+   "status": 200,
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 69137,
+   "truncated": false,
+   "sha256": "33ad0401ab0a131ddba932e647ae07f1a07ace706f0eba436b42a31022a18f35",
+   "fetched_at": "2026-10-20T01:39:09+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 69136
+  },
+  "openapi": {
+   "url": "https://api2.openreview.net/docs/api.yml",
+   "final_url": "https://api2.openreview.net/docs/api.yml",
+   "status": 200,
+   "content_type": "text/yaml; charset=UTF-8",
+   "bytes": 344731,
+   "truncated": false,
+   "sha256": "2ca9f32b8adbbb87f837f927c87b990a749629c02a1744cdcd50752d3436544e",
+   "fetched_at": "2026-10-20T01:39:09+00:00",
+   "ratelimit_headers": {
+    "x-ratelimit-limit": "180",
+    "x-ratelimit-remaining": "178",
+    "x-ratelimit-reset": "1792460353",
+    "ratelimit-policy": "180;w=60",
+    "ratelimit-limit": "180",
+    "ratelimit-remaining": "178",
+    "ratelimit-reset": "10"
+   },
+   "text_bytes": 344726
+  },
+  "signup": {
+   "url": "https://docs.openreview.net/getting-started/creating-an-openreview-profile/signing-up-for-openreview.md",
+   "final_url": "https://docs.openreview.net/getting-started/creating-an-openreview-profile/signing-up-for-openreview.md",
+   "status": 200,
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 8281,
+   "truncated": false,
+   "sha256": "27f47471c76d066ea1dd5120649907300060bd6b3098a94d4b4afdfb291654ea",
+   "fetched_at": "2026-10-20T01:39:26+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 8268
+  },
+  "rl": {
+   "url": "https://docs.openreview.net/getting-started/using-the-api/rate-limits.md",
+   "final_url": "https://docs.openreview.net/getting-started/using-the-api/rate-limits.md",
+   "status": 200,
+   "content_type": "text/markdown; charset=utf-8",
+   "bytes": 2505,
+   "truncated": false,
+   "sha256": "e26256a53b3ec30d381ace8a2ff0b3ffa9a8e2e07fb710b08a3a7b542762f698",
+   "fetched_at": "2026-10-20T01:39:27+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 2498
+  }
  }
 }

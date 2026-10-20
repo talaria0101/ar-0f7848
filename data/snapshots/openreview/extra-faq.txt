@@ -1,0 +1,93 @@
+> For the complete documentation index, see [llms.txt](https://docs.openreview.net/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.openreview.net/getting-started/frequently-asked-questions.md).
+
+# Frequently Asked Questions
+
+#### I have a question about:
+
+* [My profile](#for-openreview-profiles)
+* [My venue](#for-program-chairs)
+* [My submission](#for-authors)
+* [My reviews](#for-reviewers)
+
+## For OpenReview Profiles
+
+* [I am an Independent Researcher, how do I sign up?](/getting-started/frequently-asked-questions/i-am-an-independent-researcher-how-do-i-sign-up.md)
+* [I didn't receive a password reset email, what do I do?](/getting-started/frequently-asked-questions/i-didnt-receive-a-password-reset-email-what-do-i-do.md)
+* [I don't want my profile visible to the public, how do I change this?](/getting-started/frequently-asked-questions/i-dont-want-my-profile-visible-to-the-public-how-do-i-change-this.md)
+* [I had an account previously, but lost access to my email, what do I do?](/getting-started/frequently-asked-questions/i-had-an-account-previously-but-lost-access-to-my-email-what-do-i-do.md)
+* [Why can't I update my DBLP link?](/getting-started/frequently-asked-questions/why-cant-i-update-my-dblp-link.md)
+
+## For Program Chairs
+
+### Setting up a venue
+
+* [How can I access the request form for my venue](/getting-started/hosting-a-venue-on-openreview/navigating-your-venue-pages.md)?
+* [How do I find a venue id?](/getting-started/frequently-asked-questions/how-do-i-find-a-venue-id.md)
+* [How do I add a Program Chair to my venue?](/getting-started/frequently-asked-questions/how-do-i-add-a-program-chair-to-my-venue.md)
+* [How can I override the information on my venue homepage](/how-to-guides/modifying-venue-homepages/how-to-customize-your-venue-homepage.md)?
+* [How do I recruit reviewers?](/getting-started/frequently-asked-questions/how-do-i-recruit-reviewers.md)
+* [How can I edit the Submission Form?](/getting-started/hosting-a-venue-on-openreview/customizing-your-submission-form.md)
+* [How can I test my venue workflow](/how-to-guides/workflow/how-to-test-your-venue-workflow.md)?
+* [What customizations are available for emails sent through OpenReview](/how-to-guides/communication/how-to-customize-emails-sent-through-openreview.md)?
+* [Reviewers for my venue cannot see their assigned submissions, what should I do?](/getting-started/frequently-asked-questions/reviewers-for-my-venue-cannot-see-their-assigned-submissions-what-should-i-do.md)
+* [What do the default submission, review, metareview, and decision forms look like](/reference/default-forms.md)?
+* [How can I allow LLM generated submissions?](/getting-started/frequently-asked-questions/how-can-i-allow-llm-generated-submissions.md)
+
+### Managing active venues
+
+* [How can I extend the Submission deadline](/getting-started/hosting-a-venue-on-openreview/changing-your-submission-deadline.md)?
+* [How can I release reviews](/how-to-guides/workflow/how-to-release-reviews-decisions-and-metareviews.md)?
+* [How can I enable Camera-Ready Revisions](/how-to-guides/workflow/how-to-use-the-camera-ready-revision-step-for-accepted-papers.md)?
+* [How can I manually assign Reviewers/Area Chairs](/how-to-guides/paper-matching-and-assignment/how-to-do-manual-assignments.md)?
+* [How can I automatically assign Reviewers/Area Chairs](/how-to-guides/paper-matching-and-assignment/how-to-do-automatic-assignments.md)?
+* [What do the different 'status' values mean in the message logs?](/getting-started/frequently-asked-questions/what-do-the-different-status-values-mean-in-the-message-logs.md)
+* [How can I contact Reviewers, Area Chairs, and/or Authors](/how-to-guides/communication/how-to-send-messages-through-the-ui.md)?
+* [An author of a submission cannot access their own paper, what is the problem](/getting-started/frequently-asked-questions/an-author-of-a-submission-cannot-access-their-own-paper-what-is-the-problem.md)?
+* [What is the max file size for uploads](/getting-started/frequently-asked-questions/what-is-the-max-file-size-for-uploads-1.md)?
+* [What is the difference between due date (duedate) and expiration date (expdate)](/getting-started/frequently-asked-questions/what-is-the-difference-between-due-date-duedate-and-expiration-date-expdate.md)?
+* [Will Reviewers be notified of their Assignments?](/getting-started/frequently-asked-questions/will-reviewers-be-notified-of-their-assignments.md)
+* [How do I hide a submission field?](/getting-started/frequently-asked-questions/how-do-i-hide-a-submission-field-from-the-submissions-readers.md)
+
+## For Reviewers
+
+* [I am a reviewer and I don't have papers for Expertise Selection, what do I do?](/getting-started/frequently-asked-questions/i-am-a-reviewer-and-i-dont-have-papers-for-expertise-selection-what-do-i-do.md)
+* [How can I add formatting to my reviews/comments](/how-to-guides/submissions-comments-reviews-and-decisions/how-to-add-formatting-to-reviews-or-comments.md)?
+* [I am a reviewer but I can't access my assigned submissions, what do I do?](/getting-started/frequently-asked-questions/i-am-a-reviewer-but-i-cant-access-my-assigned-submissions-what-do-i-do.md)
+* [How do I obtain a letter of proof for my services as a reviewer](/getting-started/frequently-asked-questions/how-do-i-obtain-a-letter-of-proof-for-my-services-as-a-reviewer.md)?
+
+## For Authors
+
+* [How do I add/change an author of my submission after the deadline?](/getting-started/frequently-asked-questions/how-do-i-add-change-an-author-of-my-submission-after-the-deadline.md)
+* [Why is my LaTeX code not displaying properly](/reference/openreview-tex/common-issues-with-latex-code-display.md)?
+* [When will I be able to withdraw my submission?](/getting-started/frequently-asked-questions/when-will-i-be-able-to-withdraw-my-submission.md)
+* [I accidentally withdrew a submission, what do I do?](/getting-started/frequently-asked-questions/i-accidentally-withdrew-a-submission-what-do-i-do.md)
+* [I want to delete my withdrawn or desk-rejected paper, what do I do?](/getting-started/frequently-asked-questions/i-want-to-delete-my-withdrawn-or-desk-rejected-paper-what-do-i-do.md)
+
+### Other
+
+* [What should I do if my question is not answered here](/getting-started/frequently-asked-questions/what-should-i-do-if-my-question-is-not-answered-here.md)?
+* [What should I do if I find a vulnerability in OpenReview](/getting-started/frequently-asked-questions/what-should-i-do-if-i-find-a-vulnerability-in-openreview.md)?
+* [How can I report a bug or request a feature](/getting-started/frequently-asked-questions/how-can-i-report-a-bug-or-request-a-feature.md)?
+* [How do I locate the date a submission is made public?](/getting-started/frequently-asked-questions/how-do-i-locate-the-date-a-submission-is-made-public.md)
+
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information that is not directly available in this page, you can query the documentation by asking a question.
+
+Perform an HTTP GET request on the following URL with the `ask` and `goal` query parameters:
+
+```
+GET https://docs.openreview.net/getting-started/frequently-asked-questions.md?ask=<question>&goal=<user_goal>
+```
+
+`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
+`goal` is what the user is ultimately trying to achieve, the reason they need the answer. Sharing it helps GitBook give you a better, more relevant answer. A goal is most helpful when it describes the outcome the user wants rather than restating the question. For example, with `ask=how do I create an API token`, a goal like `automate deployments from our CI pipeline` lets GitBook tailor the answer to that use case.
+
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

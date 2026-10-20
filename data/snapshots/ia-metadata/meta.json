@@ -24,5 +24,43 @@
   "fetched_at": "2026-10-20T01:31:35+00:00",
   "ratelimit_headers": {},
   "text_bytes": 6703
+ },
+ "extra": {
+  "bots": {
+   "url": "https://archive.org/developers/bots.html",
+   "final_url": "https://archive.org/developers/bots.html",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 28225,
+   "truncated": false,
+   "sha256": "a9501d1d96a1612f083c6ad5206f907f8a229a0ec6a16ebca44adaf200b18ac3",
+   "fetched_at": "2026-10-20T01:34:00+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 5095
+  },
+  "read": {
+   "url": "https://archive.org/developers/md-read.html",
+   "final_url": "https://archive.org/developers/md-read.html",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 33230,
+   "truncated": false,
+   "sha256": "62318b2e758451d2553469b45196c7691daf0447940ca6a8a555fd53ff0adade",
+   "fetched_at": "2026-10-20T01:34:02+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 6551
+  },
+  "terms": {
+   "url": "https://archive.org/about/terms.php",
+   "final_url": "https://archive.org/about/terms",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 1951,
+   "truncated": false,
+   "sha256": "7fd0001d8ff3c6122db5e3d3ef32ea3f47615ba046cebfd3a1d9d02e53b7b4ec",
+   "fetched_at": "2026-10-20T01:34:32+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 93
+  }
  }
 }

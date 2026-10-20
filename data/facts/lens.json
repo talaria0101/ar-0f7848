@@ -1,0 +1,39 @@
+{
+ "slug": "lens",
+ "auth": "key-approval",
+ "auth_note": "Access to the API must be requested and granted, then a token is created in the Lens user profile.",
+ "cost": "not established",
+ "rate_limit": "not established",
+ "data_license": "not established",
+ "bulk_access": "Bulk Data Downloads of scholarly and patent files via the API or UI (https://docs.api.lens.org/bulk-data.html); access is requested from the Lens account",
+ "probe_status": 401,
+ "probe_observation": "The anonymous probe returned HTTP 401 JSON with message 'Missing/Incorrect Authorization Header'.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "Granted access to our API service ( request access ). ... Create an Access Token from your user profile page.",
+   "snapshot": "data/snapshots/lens/extra-start.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "Lens uses token-based API authentication, you can request access and manage your access plan and tokens from your Lens user profile.",
+   "snapshot": "data/snapshots/lens/extra-start.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "Once you go over any rate limit you will receive a 429 - Too many requests error with respective messages.",
+   "snapshot": "data/snapshots/lens/extra-start.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "Bulk data downloads enable users to download scholarly and patent bulk data files via the API or UI.",
+   "snapshot": "data/snapshots/lens/extra-bulkdata.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "Missing/Incorrect Authorization Header",
+   "snapshot": "data/snapshots/lens/probe.txt"
+  }
+ ],
+ "not_established": "Numeric rate limits (docs describe x-rate-limit-* headers and per-minute/per-month quotas but give no numbers). Cost/plans and whether approval is free (no pricing page captured). Data license (terms pages docs.api.lens.org/terms-scholarly.html and bulk.html 404, about.lens.org/policies 403 from sandbox). Whether the Lens snapshot's own license for bulk files applies."
+}

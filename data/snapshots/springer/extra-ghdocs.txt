@@ -1,0 +1,1 @@
+{"status": "Fail","message": "The requested URL was not found on this server", "error": { "error": "Not Found", "error_description": "Kindly refer to the API Endpoints section on https://dev.springernature.com/docs/introduction/" } }

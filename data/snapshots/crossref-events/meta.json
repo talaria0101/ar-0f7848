@@ -24,5 +24,91 @@
   "fetched_at": "2026-10-20T01:31:46+00:00",
   "ratelimit_headers": {},
   "text_bytes": 76
+ },
+ "extra": {
+  "docs": {
+   "url": "https://www.crossref.org/documentation/event-data/",
+   "final_url": "https://www.crossref.org/documentation/event-data/",
+   "status": 200,
+   "content_type": "text/html",
+   "bytes": 301,
+   "truncated": false,
+   "sha256": "396cfa07ff7dde78d85219d91eec5e115b52d287d922d23d0ea6af77452248dc",
+   "fetched_at": "2026-10-20T01:38:26+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 36
+  },
+  "terms": {
+   "url": "https://www.crossref.org/documentation/event-data/terms-of-use/",
+   "final_url": "https://www.crossref.org/documentation/event-data/terms-of-use/",
+   "status": 404,
+   "content_type": "application/xml",
+   "bytes": 326,
+   "truncated": false,
+   "sha256": "a83fb0dd7f8dfb680b16e4723f78dc07159afdda97a5e15c2d41809e8964c44b",
+   "fetched_at": "2026-10-20T01:38:27+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 326
+  },
+  "gh": {
+   "url": "https://raw.githubusercontent.com/CrossRef/event-data-docs/master/README.md",
+   "final_url": "https://raw.githubusercontent.com/CrossRef/event-data-docs/master/README.md",
+   "status": 404,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 14,
+   "truncated": false,
+   "sha256": "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed",
+   "fetched_at": "2026-10-20T01:38:28+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 14
+  },
+  "docs2": {
+   "url": "https://www.crossref.org/documentation/event-data/",
+   "final_url": "https://www.crossref.org/documentation/event-data/",
+   "status": 200,
+   "content_type": "text/html",
+   "bytes": 301,
+   "truncated": false,
+   "sha256": "396cfa07ff7dde78d85219d91eec5e115b52d287d922d23d0ea6af77452248dc",
+   "fetched_at": "2026-10-20T01:38:41+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 36
+  },
+  "gh2": {
+   "url": "https://raw.githubusercontent.com/crossref/event-data-docs/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/crossref/event-data-docs/main/README.md",
+   "status": 404,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 14,
+   "truncated": false,
+   "sha256": "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed",
+   "fetched_at": "2026-10-20T01:38:42+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 14
+  },
+  "api": {
+   "url": "https://api.eventdata.crossref.org/v1/events?rows=1",
+   "final_url": "https://api.eventdata.crossref.org/v1/events?rows=1",
+   "status": 0,
+   "content_type": "",
+   "bytes": 76,
+   "truncated": false,
+   "sha256": "827902037efde5f0988e94d8c881353fe54c846b290a0e59ef00ade936917d7e",
+   "fetched_at": "2026-10-20T01:38:43+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 76
+  },
+  "dep": {
+   "url": "https://www.crossref.org/deprecated/",
+   "final_url": "https://www.crossref.org/deprecated/",
+   "status": 200,
+   "content_type": "text/html",
+   "bytes": 41861,
+   "truncated": false,
+   "sha256": "0fabaddd47186838b60bebed6019e37541926f963927884c63fc02b0091a595c",
+   "fetched_at": "2026-10-20T01:38:48+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 12658
+  }
  }
 }

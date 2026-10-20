@@ -1,0 +1,16 @@
+BASE HTTP Interface 
+ Skip to navigation 
+ Skip to content 
+ Search BASE 
+ About BASE 
+ Become a content provider 
+ Contact 
+ Legal notice 
+ BASE HTTP Interface 
+ BASE (Bielefeld Academic Search Engine) harvests metadata of academic web resources (mainly repositories and journals) via OAI-PMH. It is based on the open source search engine software Lucene/SOLR. Currently more than 12,000 content providers and more than 400 million documents are covered in BASE and grouped into different collections. The data structure related to the index structure is based on Dublin Core with several extensions. 
+ You can integrate the BASE index into your own local infrastructure ( for example e.g. meta search engines, library catalogues). For the realisation we provide a HTTP interface. A manual is available for download: 
+ Download BASE Interface Guide (PDF) 
+ Before you can start testing and using the interface, you need to apply for an API key via this form . Please specify your use case. Within a few days, we will send you an email containing your API key (subject: "Your BASE API key"). 
+ BASE - Bielefeld Academic Search Engine
+ © 2004-2026 by
+ Bielefeld University Library

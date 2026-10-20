@@ -24,5 +24,19 @@
   "fetched_at": "2026-10-20T01:31:35+00:00",
   "ratelimit_headers": {},
   "text_bytes": 199
+ },
+ "extra": {
+  "terms": {
+   "url": "https://archive.org/about/terms.php",
+   "final_url": "https://archive.org/about/terms",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 1951,
+   "truncated": false,
+   "sha256": "7fd0001d8ff3c6122db5e3d3ef32ea3f47615ba046cebfd3a1d9d02e53b7b4ec",
+   "fetched_at": "2026-10-20T01:34:09+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 93
+  }
  }
 }

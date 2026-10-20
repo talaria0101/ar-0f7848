@@ -1,0 +1,44 @@
+Serveur OAI-PMH | API Archive Ouverte HAL
+ Toggle navigation 
+ Serveur OAI-PMH 
+ Documentation 
+ OAI server (dernière mise à jour le 27/10/2014) 
+ 1. Introduction 
+ L' archive ouverte HAL et ses portails sont moissonnables via le protocole OAI-PMH . 
+ L'URL des serveurs est de la forme https://api.archives-ouvertes.fr/oai/ identifiant du portail / .
+ Pour HAL, il faudra donc utiliser https://api.archives-ouvertes.fr/oai/hal/ comme Url de base ( baseURL ) et https://api.archives-ouvertes.fr /oai/hal/?verb=Identify pour le verbe Identify par exemple. 
+ L'ensemble de l'archive peut être moissonné par groupes ( set OAI ). Ceux-ci sont constitués des :
+ types de document ; 
+ disciplines scientifiques ; 
+ collections. 
+ 2. Conditions d'utilisation 
+ Aucune inscription dans HAL n’est nécessaire pour utiliser le serveur OAI de HAL. 
+ Les métadonnées de HAL peuvent être consultées de façon totale ou partielle par moissonnage OAI-PMH dans le
+ respect du code de la propriété intellectuelle. 
+ Pas d'utilisation commerciale des données extraites. 
+ Contact 
+ Support 
+ Resources 
+ Documentation 
+ FAQ 
+ API 
+ OAI-PMH 
+ AuréHAL 
+ Hal Monitor 
+ Information 
+ Données personnelles 
+ Mentions légales 
+ Accessibility 
+ RGAA compliance 
+ Legal issues 
+ I publish, what are my rights? 
+ Sherpa Romeo 
+ Portals 
+ Liste des portails 
+ HAL SHS 
+ HAL Thèses 
+ mediHAL 
+ CCSD 
+ CCSD 
+ episciences.org 
+ sciencesconf.org

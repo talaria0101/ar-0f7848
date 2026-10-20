@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>public/documentation/retrieve-metadata/rest-api/rest-api-metadata-license-information/index.html</Key><RequestId>Q1TED6YWNTWZM15Q</RequestId><HostId>3FtB8wVoLQo8NC6UTVWGOumL1dDSSC/eVtdaklAlBFp1P+zR+uQY8tZTIu+SJRJMDVGVPP3NKauHpSJmE5d1Kwb4lZA46Kvc</HostId></Error>

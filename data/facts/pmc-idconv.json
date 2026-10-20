@@ -1,0 +1,44 @@
+{
+ "slug": "pmc-idconv",
+ "auth": "none",
+ "auth_note": "Anonymous probe without tool or email returned records; docs only request tool and email params.",
+ "cost": "not established",
+ "rate_limit": "not established",
+ "data_license": "not established",
+ "bulk_access": "PMC-ids.csv.gz at https://ftp.ncbi.nlm.nih.gov/pub/pmc/PMC-ids.csv.gz (docs also list an OAI-PMH Service page, not captured)",
+ "probe_status": 200,
+ "probe_observation": "Returned JSON with status ok, warnings that query params email and tool are missing, and one record mapping DOI 10.1038/nature12373 to PMC4221854 / PMID 23903748.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "\"warnings\":[\"query param `email` is missing.\",\"query param `tool` is missing.\"] ... \"pmcid\":\"PMC4221854\"",
+   "snapshot": "data/snapshots/pmc-idconv/probe.txt"
+  },
+  {
+   "claim": "other",
+   "quote": "we request that you: use the tool and email parameters to identify the application making the request.",
+   "snapshot": "data/snapshots/pmc-idconv/docs.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "download the PMC-ids.csv.gz file, as described on the FTP Service page",
+   "snapshot": "data/snapshots/pmc-idconv/docs.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "https://ftp.ncbi.nlm.nih.gov/pub/pmc/PMC-ids.csv.gz",
+   "snapshot": "data/snapshots/pmc-idconv/extra-ftp.txt"
+  },
+  {
+   "claim": "other",
+   "quote": "It can accept up to 200 IDs separated by commas.",
+   "snapshot": "data/snapshots/pmc-idconv/docs.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "\"status\":\"ok\"",
+   "snapshot": "data/snapshots/pmc-idconv/probe.txt"
+  }
+ ],
+ "not_established": "Cost (no statement on API pricing), numeric rate limit (docs captured give none; only 200 IDs per request), and license of the returned ID mappings (copyright notice covers articles, not the API output)."
+}

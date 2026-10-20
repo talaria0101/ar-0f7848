@@ -1,0 +1,44 @@
+{
+ "slug": "software-heritage",
+ "auth": "none",
+ "auth_note": "Anonymous requests work; a free-account bearer token only raises the rate limit.",
+ "cost": "not established",
+ "rate_limit": "120 requests per hour for anonymous users, 1200 per hour for authenticated users (per origin IP for anonymous).",
+ "data_license": "not established",
+ "bulk_access": "https://docs.softwareheritage.org/devel/swh-export/graph/dataset.html (graph dataset exports, ORC and compressed graph, public S3, no login)",
+ "probe_status": 200,
+ "probe_observation": "Probe returned HTTP 200 JSON for the torvalds/linux origin starting with {\"url\":\"https://github.com/torvalds/linux\",\"visit_types\":[\"git\"], with X-Ratelimit-Limit 120 in the headers (meta.json).",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "{\"url\":\"https://github.com/torvalds/linux\",\"visit_types\":[\"git\"]",
+   "snapshot": "data/snapshots/software-heritage/probe.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "maximum number of permitted requests per hour ( 120 for anonymous users, 1200 for authenticated users)",
+   "snapshot": "data/snapshots/software-heritage/docs.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "We aim to provide regular exports of the Software Heritage graph in two different formats",
+   "snapshot": "data/snapshots/software-heritage/extra-dataset.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "All datasets below are available publicly and with no login required",
+   "snapshot": "data/snapshots/software-heritage/extra-dataset.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "\"visit_types\":[\"git\"]",
+   "snapshot": "data/snapshots/software-heritage/probe.txt"
+  },
+  {
+   "claim": "other",
+   "quote": "The source code files archived by Software Heritage are available under their own copyright and licenses.",
+   "snapshot": "data/snapshots/software-heritage/docs.txt"
+  }
+ ],
+ "not_established": "Cost/pricing statement (no free/paid wording captured); license of API metadata (docs only say archived source files keep their own licenses); the api-terms-of-use page on softwareheritage.org was unreachable from the sandbox (HTTP 0 proxy error, extra-terms)."
+}

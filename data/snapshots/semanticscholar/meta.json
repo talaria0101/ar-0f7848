@@ -24,5 +24,67 @@
   "fetched_at": "2026-10-20T01:33:19+00:00",
   "ratelimit_headers": {},
   "text_bytes": 112
+ },
+ "extra": {
+  "overview": {
+   "url": "https://raw.githubusercontent.com/allenai/s2-folks/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/allenai/s2-folks/main/README.md",
+   "status": 200,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 410,
+   "truncated": false,
+   "sha256": "f8aeca491f78f77b9c963ed43e48efa4869f97d1eff50869a54e6656203d2ec6",
+   "fetched_at": "2026-10-20T01:36:24+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 409
+  },
+  "apiinfo": {
+   "url": "https://www.semanticscholar.org/product/api",
+   "final_url": "https://www.semanticscholar.org/product/api",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 38434,
+   "truncated": false,
+   "sha256": "e44e94c49f3dee8af281fddfb7ee132609f55ebed7d97ef574d6ba9a3307fb33",
+   "fetched_at": "2026-10-20T01:36:24+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 5464
+  },
+  "tutorial": {
+   "url": "https://www.semanticscholar.org/product/api/tutorial",
+   "final_url": "https://www.semanticscholar.org/product/api/tutorial",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 141335,
+   "truncated": false,
+   "sha256": "0fb9972653f9ce4f48e120315e273255f54203d580bbfc54c320979dadb884bf",
+   "fetched_at": "2026-10-20T01:36:25+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 48119
+  },
+  "license": {
+   "url": "https://api.semanticscholar.org/api-docs/graph",
+   "final_url": "https://api.semanticscholar.org/api-docs/graph",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 1752,
+   "truncated": false,
+   "sha256": "b7533929074f34552a47fa750dab762541ef3d7240232b1fe852d463323eb3c6",
+   "fetched_at": "2026-10-20T01:36:26+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 103
+  },
+  "licagr": {
+   "url": "https://www.semanticscholar.org/product/api/license",
+   "final_url": "https://www.semanticscholar.org/product/api/license",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 46124,
+   "truncated": false,
+   "sha256": "f8928577a2cd80f8236e523b2ce0a30b507e729bb0148827342d1e67d2cac663",
+   "fetched_at": "2026-10-20T01:36:49+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 22203
+  }
  }
 }

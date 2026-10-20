@@ -24,5 +24,55 @@
   "fetched_at": "2026-10-20T01:31:34+00:00",
   "ratelimit_headers": {},
   "text_bytes": 322
+ },
+ "extra": {
+  "terms": {
+   "url": "https://archive.org/about/terms.php",
+   "final_url": "https://archive.org/about/terms",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 1951,
+   "truncated": false,
+   "sha256": "7fd0001d8ff3c6122db5e3d3ef32ea3f47615ba046cebfd3a1d9d02e53b7b4ec",
+   "fetched_at": "2026-10-20T01:34:05+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 93
+  },
+  "apihelp": {
+   "url": "https://archive.org/developers/wayback-cdx-server.html",
+   "final_url": "https://archive.org/developers/wayback-cdx-server.html",
+   "status": 404,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 146,
+   "truncated": false,
+   "sha256": "55f7d9e99b8e2d4e0e193b2f0275501e6d9c1ebd29cadbea6a0da48a8587e3e0",
+   "fetched_at": "2026-10-20T01:34:07+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 37
+  },
+  "devdocs": {
+   "url": "https://archive.org/developers/index-apis.html",
+   "final_url": "https://archive.org/developers/index-apis.html",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 41923,
+   "truncated": false,
+   "sha256": "b49aa06a75e92e10f49851ef8b5b90782bd54081aa643f273145ecbeb1acbaa3",
+   "fetched_at": "2026-10-20T01:34:22+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 7447
+  },
+  "wbhelp": {
+   "url": "https://help.archive.org/help/wayback-machine-general-information/",
+   "final_url": "https://help.archive.org/help/wayback-machine-general-information/",
+   "status": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 47053,
+   "truncated": false,
+   "sha256": "71778764ad1c3ecc4c75ee9963ac1c37efdf98c80696d4e10cf6594845a11997",
+   "fetched_at": "2026-10-20T01:34:23+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 7676
+  }
  }
 }

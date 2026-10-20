@@ -24,5 +24,43 @@
   "fetched_at": "2026-10-20T01:31:47+00:00",
   "ratelimit_headers": {},
   "text_bytes": 658798
+ },
+ "extra": {
+  "dumps": {
+   "url": "https://download.opencitations.net/",
+   "final_url": "https://download.opencitations.net/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 49516,
+   "truncated": false,
+   "sha256": "5abccda9169dea97947f29d65dc282ce54f4da862c09f28fd5815a862d8c93d6",
+   "fetched_at": "2026-10-20T01:38:19+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 7804
+  },
+  "about": {
+   "url": "https://opencitations.net/about",
+   "final_url": "https://opencitations.net/governance/",
+   "status": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 119382,
+   "truncated": false,
+   "sha256": "d3809f9ebd7961bf37175685c60a60042c2c3bc0078597f5e5093e2fb754bb17",
+   "fetched_at": "2026-10-20T01:38:20+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 5506
+  },
+  "token": {
+   "url": "https://opencitations.net/accesstoken",
+   "final_url": "https://opencitations.net/accesstoken/",
+   "status": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 114632,
+   "truncated": false,
+   "sha256": "e8989a886148713aa05fa0380327d27aa86ff2af9ac8eed0360928f8c9904a88",
+   "fetched_at": "2026-10-20T01:38:24+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 4137
+  }
  }
 }

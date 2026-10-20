@@ -1,0 +1,15 @@
+---
+updatedAt: 2026-08-07T14:15:07.000Z
+agentTools:
+  projectIndex: https://support.datacite.org/llms.txt
+---
+
+# REST API
+
+## Overview
+
+The DataCite REST API returns information about DataCite content. The API is RESTFUL and returns results in JSON. It follows the [JSONAPI](http://jsonapi.org/) specification. The mime-type for API results is `application/vnd.api+json`.
+
+More information about the DataCite REST API can be found in the [REST API Guide](https://support.datacite.org/docs/api).
+
+For upcoming changes to DataCite APIs and services, including the REST API, see [Upcoming Changes](https://support.datacite.org/docs/upcoming-changes).

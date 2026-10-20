@@ -1,0 +1,24 @@
+{
+ "slug": "orkg",
+ "auth": "none",
+ "auth_note": "Anonymous GET to the resources endpoint returned data with no key or header.",
+ "cost": "not established",
+ "rate_limit": "not established",
+ "data_license": "not established",
+ "bulk_access": "none documented",
+ "probe_status": 200,
+ "probe_observation": "JSON body starting with a content array holding resource R0 and page.total_elements 1294064.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "\"label\":\"Gruber's design of ontologies\"",
+   "snapshot": "data/snapshots/orkg/probe.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "\"page\":{\"size\":1,\"number\":0,\"total_elements\":1294064,\"total_pages\":1294064}",
+   "snapshot": "data/snapshots/orkg/probe.txt"
+  }
+ ],
+ "not_established": "Cost, rate limits, data license and bulk dump not established. The documented swagger-ui URL returned 404, api-docs paths returned 404, the GitLab docs host returned a 403 challenge, raw GitHub README paths returned 404, and the orkg.org about/help pages are a JavaScript shell with no body text."
+}

@@ -24,5 +24,79 @@
   "fetched_at": "2026-10-20T01:31:44+00:00",
   "ratelimit_headers": {},
   "text_bytes": 427
+ },
+ "extra": {
+  "oai": {
+   "url": "https://api.archives-ouvertes.fr/docs/oai",
+   "final_url": "https://api.archives-ouvertes.fr/docs/oai",
+   "status": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 9755,
+   "truncated": false,
+   "sha256": "723924bd28b1c4955c4f1329f988a1548369c793e4a2ea185837d91fb16d4e63",
+   "fetched_at": "2026-10-20T01:37:53+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 1411
+  },
+  "data": {
+   "url": "https://doc.hal.science/en/hal-data/",
+   "final_url": "https://doc.hal.science/en/hal-data/",
+   "status": 404,
+   "content_type": "text/html",
+   "bytes": 43516,
+   "truncated": false,
+   "sha256": "5cb1bb553f817de9d2416d5107d9287edeedc37b4489c22170ba444288906ee3",
+   "fetched_at": "2026-10-20T01:37:55+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 4556
+  },
+  "legal": {
+   "url": "https://doc.hal.science/en/legal-notice/",
+   "final_url": "https://doc.hal.science/en/legal-notice/",
+   "status": 404,
+   "content_type": "text/html",
+   "bytes": 43516,
+   "truncated": false,
+   "sha256": "5cb1bb553f817de9d2416d5107d9287edeedc37b4489c22170ba444288906ee3",
+   "fetched_at": "2026-10-20T01:38:08+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 4556
+  },
+  "docs": {
+   "url": "https://doc.hal.science/en/",
+   "final_url": "https://doc.hal.science/en/",
+   "status": 200,
+   "content_type": "text/html",
+   "bytes": 48453,
+   "truncated": false,
+   "sha256": "d6a3a6e5e991ea4647839d3d069917e72864acdf6fabe4e1a84628fbf76af479",
+   "fetched_at": "2026-10-20T01:38:09+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 5827
+  },
+  "swagger": {
+   "url": "https://api.archives-ouvertes.fr/docs",
+   "final_url": "https://api.archives-ouvertes.fr/docs",
+   "status": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 10027,
+   "truncated": false,
+   "sha256": "35e5d6977c8f4d90e13ed82ae84924ad9b3ab3b0d7dda7fe6bc0f0ba3a3067e3",
+   "fetched_at": "2026-10-20T01:38:33+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 857
+  },
+  "hallic": {
+   "url": "https://doc.hal.science/en/droits/",
+   "final_url": "https://doc.hal.science/en/droits/",
+   "status": 404,
+   "content_type": "text/html",
+   "bytes": 43516,
+   "truncated": false,
+   "sha256": "5cb1bb553f817de9d2416d5107d9287edeedc37b4489c22170ba444288906ee3",
+   "fetched_at": "2026-10-20T01:38:34+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 4556
+  }
  }
 }

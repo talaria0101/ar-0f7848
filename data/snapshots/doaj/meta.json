@@ -24,5 +24,43 @@
   "fetched_at": "2026-10-20T01:31:42+00:00",
   "ratelimit_headers": {},
   "text_bytes": 3256
+ },
+ "extra": {
+  "faq": {
+   "url": "https://doaj.org/docs/faq/",
+   "final_url": "https://doaj.org/docs/faq/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 77216,
+   "truncated": false,
+   "sha256": "b1453ee6c0aec3ba41e3441dd420bd780f06caef3a2363453defea2977ee3228",
+   "fetched_at": "2026-10-20T01:36:45+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 17542
+  },
+  "dump": {
+   "url": "https://doaj.org/docs/public-data-dump/",
+   "final_url": "https://doaj.org/docs/public-data-dump/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 54954,
+   "truncated": false,
+   "sha256": "2a718e6ba2974b4a4400738065d3b0d8bd7fbd3a1fbae40965d4770908b160b4",
+   "fetched_at": "2026-10-20T01:36:46+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 3585
+  },
+  "terms": {
+   "url": "https://doaj.org/terms/",
+   "final_url": "https://doaj.org/terms/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 61865,
+   "truncated": false,
+   "sha256": "4375dbc29d9bd959d1a69423f6b880304f6391e9388e45d6ba03bf29777b6832",
+   "fetched_at": "2026-10-20T01:36:46+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 7628
+  }
  }
 }

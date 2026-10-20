@@ -24,5 +24,43 @@
   "fetched_at": "2026-10-20T01:31:33+00:00",
   "ratelimit_headers": {},
   "text_bytes": 35224
+ },
+ "extra": {
+  "terms": {
+   "url": "https://commoncrawl.org/terms-of-use",
+   "final_url": "https://commoncrawl.org/terms-of-use",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 47964,
+   "truncated": false,
+   "sha256": "cf611940d6e82bbc6a47aae017b72b646fad52c6a673c3a6399d4f9dd4e7e101",
+   "fetched_at": "2026-10-20T01:34:09+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 30072
+  },
+  "faq": {
+   "url": "https://commoncrawl.org/faq",
+   "final_url": "https://commoncrawl.org/faq",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 43144,
+   "truncated": false,
+   "sha256": "330cd8c4be31312945abeb03c6f04064937ac4984f8d009fc572b87562f8ac20",
+   "fetched_at": "2026-10-20T01:34:09+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 8526
+  },
+  "indexinfo": {
+   "url": "https://index.commoncrawl.org/",
+   "final_url": "https://index.commoncrawl.org/",
+   "status": 200,
+   "content_type": "text/html",
+   "bytes": 7391,
+   "truncated": false,
+   "sha256": "7beb65c8ff3f5ed6b0744426593bfae7f2d6640bb8927ef79ac0a07839fe4c8c",
+   "fetched_at": "2026-10-20T01:34:09+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 1340
+  }
  }
 }

@@ -1,0 +1,34 @@
+{
+ "slug": "dpla",
+ "auth": "key-free",
+ "auth_note": "Anonymous probe was refused with invalid_api_key (HTTP 403); a free key is requested by POSTing an email address and is emailed back.",
+ "cost": "free",
+ "rate_limit": "not established",
+ "data_license": "not established",
+ "bulk_access": "none documented",
+ "probe_status": 403,
+ "probe_observation": "The probe returned JSON {\"error\":\"invalid_api_key\",\"message\":\"Invalid or inactive API key.\"} with HTTP 403.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "All API search and fetch requests must include an API access key parameter named 'api_key' containing a valid API key.",
+   "snapshot": "data/snapshots/dpla/extra-gh.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "To request an API access key, simply make a HTTP **POST** request that includes your email address. Your API access key will be emailed to you.",
+   "snapshot": "data/snapshots/dpla/extra-gh.txt"
+  },
+  {
+   "claim": "cost",
+   "quote": "Obtain a free key by sending a POST to /apikey/{email}.",
+   "snapshot": "data/snapshots/dpla/extra-apievo.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "\"error\":\"invalid_api_key\",\"message\":\"Invalid or inactive API key.\"",
+   "snapshot": "data/snapshots/dpla/probe.txt"
+  }
+ ],
+ "not_established": "pro.dp.la pages (api-codex, policies, terms-of-service, bulk-download) and dp.la guides returned CloudFront 403 'Request blocked' from this sandbox, so rate limits, data license and bulk download route are not established. The key-request text comes from the old dpla/platform GitHub README and an API Evangelist listing (third-party), and may be out of date."
+}

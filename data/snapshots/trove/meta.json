@@ -24,5 +24,67 @@
   "fetched_at": "2026-10-20T01:31:59+00:00",
   "ratelimit_headers": {},
   "text_bytes": 96
+ },
+ "extra": {
+  "terms": {
+   "url": "https://trove.nla.gov.au/about/create-something/using-api/api-terms-use",
+   "final_url": "https://trove.nla.gov.au/about/create-something/using-api/api-terms-use",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 7522,
+   "truncated": false,
+   "sha256": "d39e47113aa34e4723463ab631f06404b86f46d1de76a96334775b63bf47de59",
+   "fetched_at": "2026-10-20T01:40:51+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 1335
+  },
+  "bulk": {
+   "url": "https://trove.nla.gov.au/about/create-something/bulk-download",
+   "final_url": "https://trove.nla.gov.au/about/create-something/bulk-download",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 8744,
+   "truncated": false,
+   "sha256": "50bdcea5716c7c545706bc8b8d4e51ea0a188d95d2c058b06eb606288352aa2f",
+   "fetched_at": "2026-10-20T01:40:52+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 1335
+  },
+  "terms2": {
+   "url": "https://trove.nla.gov.au/about/create-something/using-api/api-terms-of-use",
+   "final_url": "https://trove.nla.gov.au/about/create-something/using-api/api-terms-of-use",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 7522,
+   "truncated": false,
+   "sha256": "b0822ad6e3f2aa26bb0efa058dc253e5927598bff8561aec89283efbc581c491",
+   "fetched_at": "2026-10-20T01:41:07+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 1335
+  },
+  "techguide": {
+   "url": "https://trove.nla.gov.au/about/create-something/using-api/api-technical-guide",
+   "final_url": "https://trove.nla.gov.au/about/create-something/using-api/api-technical-guide",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 7522,
+   "truncated": false,
+   "sha256": "1ba06ad62e5eccebf03ac8179c65b2f440b37557eb9c19148f5dc17609dc8e83",
+   "fetched_at": "2026-10-20T01:41:09+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 1335
+  },
+  "ghdocs": {
+   "url": "https://raw.githubusercontent.com/GLAM-Workbench/trove-api-intro/master/README.md",
+   "final_url": "https://raw.githubusercontent.com/GLAM-Workbench/trove-api-intro/master/README.md",
+   "status": 200,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 5790,
+   "truncated": false,
+   "sha256": "a52b587f05df17e343b15604a27f85fc8a84b351a193eda2b4efeea3fc0d3f0e",
+   "fetched_at": "2026-10-20T01:41:11+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 5778
+  }
  }
 }

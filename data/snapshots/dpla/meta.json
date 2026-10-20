@@ -24,5 +24,139 @@
   "fetched_at": "2026-10-20T01:31:36+00:00",
   "ratelimit_headers": {},
   "text_bytes": 132
+ },
+ "extra": {
+  "codex": {
+   "url": "https://pro.dp.la/developers/api-codex",
+   "final_url": "https://pro.dp.la/developers/api-codex",
+   "status": 403,
+   "content_type": "text/html",
+   "bytes": 919,
+   "truncated": false,
+   "sha256": "657a48b4946856253c81e89943d3469e83d319ca5c45602af19e3f29ee601717",
+   "fetched_at": "2026-10-20T01:35:15+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 558
+  },
+  "gh": {
+   "url": "https://raw.githubusercontent.com/dpla/platform/develop/README.md",
+   "final_url": "https://raw.githubusercontent.com/dpla/platform/develop/README.md",
+   "status": 200,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 19497,
+   "truncated": false,
+   "sha256": "52fa1adc6807ca4806cc99ae6b94b1281ac2391d83b88e69ea4d1c3f9beabd42",
+   "fetched_at": "2026-10-20T01:35:15+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 19496
+  },
+  "terms": {
+   "url": "https://pro.dp.la/developers/terms-of-service",
+   "final_url": "https://pro.dp.la/developers/terms-of-service",
+   "status": 403,
+   "content_type": "text/html",
+   "bytes": 919,
+   "truncated": false,
+   "sha256": "e3c4794ba35e845dec4cff179a8975f1cb68939b56b150c12a7216bc46b42542",
+   "fetched_at": "2026-10-20T01:35:16+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 558
+  },
+  "bulk": {
+   "url": "https://pro.dp.la/developers/bulk-download",
+   "final_url": "https://pro.dp.la/developers/bulk-download",
+   "status": 403,
+   "content_type": "text/html",
+   "bytes": 919,
+   "truncated": false,
+   "sha256": "0ce624cfd0e5ea9f7eb35ae532c9a6c01abbdc002cfa305ecf20611cf92621d1",
+   "fetched_at": "2026-10-20T01:35:16+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 558
+  },
+  "policies": {
+   "url": "https://pro.dp.la/developers/policies",
+   "final_url": "https://pro.dp.la/developers/policies",
+   "status": 403,
+   "content_type": "text/html",
+   "bytes": 919,
+   "truncated": false,
+   "sha256": "561302ae59aead30c857f847630e02445585dc6293ed74b8840c4e74ee4e2d12",
+   "fetched_at": "2026-10-20T01:35:17+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 558
+  },
+  "guide": {
+   "url": "https://dp.la/guides/for-developers",
+   "final_url": "https://dp.la/guides/for-developers",
+   "status": 403,
+   "content_type": "text/html",
+   "bytes": 919,
+   "truncated": false,
+   "sha256": "aa6e59fe270fd8f40f81454819ec8a6077b656aa0cb142135750e8667617425c",
+   "fetched_at": "2026-10-20T01:35:29+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 558
+  },
+  "guide2": {
+   "url": "https://www.dp.la/guides/guide?guide=for-developers",
+   "final_url": "https://www.dp.la/guides/guide?guide=for-developers",
+   "status": 403,
+   "content_type": "text/html",
+   "bytes": 919,
+   "truncated": false,
+   "sha256": "93be3a8725727ce3855acf0c6a04d29f6f8c19d2d59bcfbb7c997d102e4a21f0",
+   "fetched_at": "2026-10-20T01:35:30+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 558
+  },
+  "apievo": {
+   "url": "https://apis.apievangelist.com/store/dpla-items-api/",
+   "final_url": "https://apis.apievangelist.com/store/dpla-items-api/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 111037,
+   "truncated": false,
+   "sha256": "e968e8d5aaef777b9b1cd790af0fcd130bb27beccd35272449b245355dc73a28",
+   "fetched_at": "2026-10-20T01:35:30+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 10052
+  },
+  "rights": {
+   "url": "https://dp.la/about/rights-statements",
+   "final_url": "https://dp.la/about/rights-statements",
+   "status": 403,
+   "content_type": "text/html",
+   "bytes": 919,
+   "truncated": false,
+   "sha256": "d17db0af98a295d3a956476cc020dee1c8168dff7c8ed306ea9eacce074a05f0",
+   "fetched_at": "2026-10-20T01:35:31+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 558
+  },
+  "policies2": {
+   "url": "https://raw.githubusercontent.com/dpla/platform/develop/docs/policies.md",
+   "final_url": "https://raw.githubusercontent.com/dpla/platform/develop/docs/policies.md",
+   "status": 404,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 14,
+   "truncated": false,
+   "sha256": "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed",
+   "fetched_at": "2026-10-20T01:35:42+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 14
+  },
+  "apievo2": {
+   "url": "https://apis.apievangelist.com/store/dpla-items-api/",
+   "final_url": "https://apis.apievangelist.com/store/dpla-items-api/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 111037,
+   "truncated": false,
+   "sha256": "e968e8d5aaef777b9b1cd790af0fcd130bb27beccd35272449b245355dc73a28",
+   "fetched_at": "2026-10-20T01:35:42+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 10052
+  }
  }
 }

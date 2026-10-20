@@ -1,0 +1,34 @@
+{
+ "slug": "figshare",
+ "auth": "none",
+ "auth_note": "Public article listing worked anonymously; tokens (OAuth or personal) are needed for account/private endpoints.",
+ "cost": "not established",
+ "rate_limit": "No automatic rate limiting; docs recommend no more than one request per second and reserve the right to throttle or block.",
+ "data_license": "not established",
+ "bulk_access": "OAI-PMH at https://api.figshare.com/v3/oai",
+ "probe_status": 200,
+ "probe_observation": "The probe returned a JSON array starting with [{\"id\": 34704678, with one article record.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "\"url_public_api\": \"https://api.figshare.com/v2/articles/34704678\"",
+   "snapshot": "data/snapshots/figshare/probe.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "[{\"id\": 34704678, \"title\": \"Earthquake Rate Variability in the Auckland Volcanic Field",
+   "snapshot": "data/snapshots/figshare/probe.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "We do not have automatic rate limiting in place for API requests. ... do not make more than one request per second. We reserve the right to throttle or block requests if we detect abuse.",
+   "snapshot": "data/snapshots/figshare/docs.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "fig share 's OAI-PMH v2.0 protocol implementation has the following baseURL : https://api.figshare.com/v3/oai",
+   "snapshot": "data/snapshots/figshare/docs.txt"
+  }
+ ],
+ "not_established": "Cost and data license of returned metadata are not stated in the captured docs; the terms-of-service URL tried (info.figshare.com user-guide) returned 404 and no other terms page was captured."
+}

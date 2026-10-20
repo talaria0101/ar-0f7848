@@ -24,5 +24,182 @@
   "fetched_at": "2026-10-20T01:31:55+00:00",
   "ratelimit_headers": {},
   "text_bytes": 234
+ },
+ "extra": {
+  "plans": {
+   "url": "https://dev.springernature.com/subscription",
+   "final_url": "https://dev.springernature.com/subscription/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 82621,
+   "truncated": false,
+   "sha256": "c1b4ff79cf434fef1e65c7d878d4e0c032a69348e5c870e7439ea7c5d22aa21c",
+   "fetched_at": "2026-10-20T01:40:11+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 206
+  },
+  "meta": {
+   "url": "https://dev.springernature.com/docs/api-endpoints/meta-api/",
+   "final_url": "https://dev.springernature.com/docs/api-endpoints/meta-api/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 121067,
+   "truncated": false,
+   "sha256": "4269ccb829462696af01611534cc1cf5b8259e6b4c8fe3d70bb2dfe5892a1a6d",
+   "fetched_at": "2026-10-20T01:40:13+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 223
+  },
+  "terms": {
+   "url": "https://dev.springernature.com/additional-terms-for-api-users",
+   "final_url": "https://dev.springernature.com/additional-terms-for-api-users",
+   "status": 404,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 85586,
+   "truncated": false,
+   "sha256": "940ce6049ec15d090c3a8ad4c05f3e6ec02dfd606cb310c25bde8bd84cfccb9b",
+   "fetched_at": "2026-10-20T01:41:25+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 279
+  },
+  "basic": {
+   "url": "https://dev.springernature.com/docs/",
+   "final_url": "https://dev.springernature.com/docs/introduction/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 101346,
+   "truncated": false,
+   "sha256": "3242303101cd8dd18ea650503b023f6c3c5164a03b73cf91ef3ebe130db3f8b0",
+   "fetched_at": "2026-10-20T01:41:26+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 206
+  },
+  "faq": {
+   "url": "https://dev.springernature.com/faq",
+   "final_url": "https://dev.springernature.com/faq",
+   "status": 404,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 85586,
+   "truncated": false,
+   "sha256": "940ce6049ec15d090c3a8ad4c05f3e6ec02dfd606cb310c25bde8bd84cfccb9b",
+   "fetched_at": "2026-10-20T01:41:28+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 279
+  },
+  "oa": {
+   "url": "https://dev.springernature.com/docs/api-endpoints/openaccess-api/",
+   "final_url": "https://dev.springernature.com/docs/api-endpoints/openaccess-api/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 91052,
+   "truncated": false,
+   "sha256": "2ad8dd1962f763d01d174e10a18986661ce517a78ffdae4f68a766988bc7225d",
+   "fetched_at": "2026-10-20T01:41:30+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 197
+  },
+  "get": {
+   "url": "https://dev.springernature.com/docs/getting-started",
+   "final_url": "https://dev.springernature.com/docs/getting-started/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 91009,
+   "truncated": false,
+   "sha256": "5e34f0b90eefa12134b45884f2016c0f90b9f29d162af2b91201d349a0474681",
+   "fetched_at": "2026-10-20T01:41:31+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 197
+  },
+  "sub": {
+   "url": "https://dev.springernature.com/subscription/",
+   "final_url": "https://dev.springernature.com/subscription/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 82621,
+   "truncated": false,
+   "sha256": "c1b4ff79cf434fef1e65c7d878d4e0c032a69348e5c870e7439ea7c5d22aa21c",
+   "fetched_at": "2026-10-20T01:41:33+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 206
+  },
+  "ghdocs": {
+   "url": "https://api.springernature.com/openapi/index.html",
+   "final_url": "https://api.springernature.com/openapi/index.html",
+   "status": 404,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 233,
+   "truncated": false,
+   "sha256": "4d9fdadf8fc1f08e74c7dc1302069a17538bc473a7ddb758b8232b2b1d22faaf",
+   "fetched_at": "2026-10-20T01:41:33+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 233
+  },
+  "ratelimits": {
+   "url": "https://dev.springernature.com/docs/rate-limit-details/rate-limits/",
+   "final_url": "https://dev.springernature.com/docs/rate-limit-details/rate-limits/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 105090,
+   "truncated": false,
+   "sha256": "6255daa6ed9953a90e82012723935c11b646e057c792116a95f4689abd09c914",
+   "fetched_at": "2026-10-20T01:41:39+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 214
+  },
+  "apiaccess": {
+   "url": "https://dev.springernature.com/docs/quick-start/api-access/",
+   "final_url": "https://dev.springernature.com/docs/quick-start/api-access/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 110425,
+   "truncated": false,
+   "sha256": "c32e9d3da387246ee6bb3d5fcf01eb57c0cfca3dbe8a05c2dfaa0036210753b2",
+   "fetched_at": "2026-10-20T01:41:40+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 212
+  },
+  "linkapi": {
+   "url": "https://support.springernature.com/en/support/solutions/articles/6000195668-springer-nature-link-api-details",
+   "final_url": "https://support.springernature.com/en/support/solutions/articles/6000195668-springer-nature-link-api-details",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 44141,
+   "truncated": false,
+   "sha256": "b53bc3a9a04f274323f5ce350a7be8101469a1f349db4d82bb5c018482c038eb",
+   "fetched_at": "2026-10-20T01:41:42+00:00",
+   "ratelimit_headers": {
+    "x-ratelimit-limit": "300",
+    "x-ratelimit-reset": "201026014235",
+    "x-ratelimit-remaining": "199.0",
+    "x-fw-ratelimiting-managed": "true",
+    "x-ratelimit-total": "200.0",
+    "x-ratelimit-used-currentrequest": "1"
+   },
+   "text_bytes": 2778
+  },
+  "dsoa": {
+   "url": "https://datasolutions.springernature.com/products/open-access/",
+   "final_url": "https://datasolutions.springernature.com/products/open-access/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 140810,
+   "truncated": false,
+   "sha256": "aae19bcbac12ea8822fec1d0bd34b16d2ab958e4fb3eb36f3d7c3e0e31fd35ea",
+   "fetched_at": "2026-10-20T01:41:42+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 4125
+  },
+  "dsmeta": {
+   "url": "https://datasolutions.springernature.com/products/meta-data/",
+   "final_url": "https://datasolutions.springernature.com/products/meta-data/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 142278,
+   "truncated": false,
+   "sha256": "0c2d032194f89a730539c1b8ce63a40f8925b6392cc1c77b07e83d303becdce0",
+   "fetched_at": "2026-10-20T01:41:44+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 3672
+  }
  }
 }

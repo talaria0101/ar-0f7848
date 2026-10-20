@@ -1,0 +1,34 @@
+{
+ "auth": "none",
+ "auth_note": "Search of published content needs no token; anonymous probe returned HTTP 200. Token needed only for unpublished content.",
+ "cost": "not established",
+ "rate_limit": "not established",
+ "data_license": "not established",
+ "bulk_access": "none documented",
+ "probe_status": 200,
+ "probe_observation": "The probe returned JSON {\"status\":\"OK\",\"data\":{\"q\":\"test\",\"total_count\":29421 with one dataset item.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "{\"status\":\"OK\",\"data\":{\"q\":\"test\",\"total_count\":29421",
+   "snapshot": "data/snapshots/dataverse/probe.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "{\"status\":\"OK\",\"data\":{\"q\":\"test\",\"total_count\":29421",
+   "snapshot": "data/snapshots/dataverse/probe.txt"
+  },
+  {
+   "claim": "other",
+   "quote": "To search unpublished content, you must pass in an API token as described in the API Tokens and Authentication section.",
+   "snapshot": "data/snapshots/dataverse/docs.txt"
+  },
+  {
+   "claim": "other",
+   "quote": "Rate limiting can be configured on a tier level with tier 0 being reserved for guest users and tiers 1-any for authenticated users.",
+   "snapshot": "data/snapshots/dataverse/extra-ratelimit.txt"
+  }
+ ],
+ "not_established": "Harvard Dataverse's actual rate limits (the Dataverse software makes limits per-installation configurable, no default numbers given, none captured for Harvard); cost; data license (per-dataset, set by depositors); bulk/OAI-PMH route not found in captured pages.",
+ "slug": "dataverse"
+}

@@ -24,5 +24,55 @@
   "fetched_at": "2026-10-20T01:31:38+00:00",
   "ratelimit_headers": {},
   "text_bytes": 717
+ },
+ "extra": {
+  "etiquette": {
+   "url": "https://www.mediawiki.org/wiki/API:Etiquette",
+   "final_url": "https://www.mediawiki.org/wiki/API:Etiquette",
+   "status": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 95068,
+   "truncated": false,
+   "sha256": "23c4dc872ef35632119a5c4f6fd1165d8e0b26717ebf404fc0b25190765cb49c",
+   "fetched_at": "2026-10-20T01:35:34+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 9604
+  },
+  "dumps": {
+   "url": "https://dumps.wikimedia.org/",
+   "final_url": "https://dumps.wikimedia.org/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 4954,
+   "truncated": false,
+   "sha256": "9067022b0d590108a48901603859a0c1b01aa90e419874e4748b6b9daff9c9ab",
+   "fetched_at": "2026-10-20T01:35:35+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 2798
+  },
+  "terms": {
+   "url": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use",
+   "final_url": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use",
+   "status": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 152858,
+   "truncated": false,
+   "sha256": "3b90bd3b3c6eac58c7d75220b37d06a1f3ae6cc3b90c180ba7c515e2780b1c3b",
+   "fetched_at": "2026-10-20T01:35:36+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 53433
+  },
+  "robot": {
+   "url": "https://api.wikimedia.org/wiki/Rate_limits",
+   "final_url": "https://www.mediawiki.org/wiki/Wikimedia_APIs",
+   "status": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 85823,
+   "truncated": false,
+   "sha256": "03665a2873a5939690f6a264f1f28e5c71f805849ab54959038e4e1fa6fb7cc7",
+   "fetched_at": "2026-10-20T01:35:37+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 7129
+  }
  }
 }

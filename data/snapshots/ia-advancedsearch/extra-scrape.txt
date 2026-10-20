@@ -1,0 +1,269 @@
+Tools and APIs — Internet Archive Developer Portal 
+ Skip to main content 
+ Back to top 
+ Ctrl + K 
+ Ctrl + K 
+ Home
+ Tutorials 
+ Get your Internet Archive credentials 
+ See whether a website exists in the archives 
+ Compare two versions of a website 
+ Tools and APIs 
+ Bots, LLMs, and Automated Access 
+ Internet Archive Items 
+ Internet Archive Metadata 
+ Command-Line Interface 
+ The Internet Archive Python Library 
+ ias3 Internet archive S3-like API 
+ Item Metadata API 
+ Item Metadata API: Read 
+ Item Metadata API: Write 
+ Item Metadata API: Record details 
+ Item Metadata API: Advanced Topics & Extensions 
+ API for discovering changes to archive.org items 
+ Views data service api 
+ Item Engagement counting on the archive.org website. 
+ Internet Archive RESTful microservices 
+ Internet Archive Tasks API 
+ Simple Lists (Relationships API) 
+ Reviews API 
+ OCR at the Internet Archive with Tesseract and hOCR 
+ PDF analysis, generation and compression at the Internet Archive 
+ .rst 
+ .pdf 
+ Tools and APIs 
+ Tools and APIs # 
+ Here’s a list of the Internet Archive APIs, tools, and services. 
+ Name 
+ Description 
+ Available as 
+ Interactive documentation 
+ Tutorials 
+ Bots, LLMs, and Automated Access 
+ Best practices for bots, AI agents, LLMs, and automated tools accessing archive.org APIs. 
+ N/A 
+ N/A 
+ Internet Archive Metadata 
+ Metadata is used for locating and viewing information. 
+ XML 
+ N/A 
+ Command-Line Interface 
+ The Command-Line Tool (CLI) is for interacting with various archive.org services from the command-line. 
+ Binary program 
+ N/A 
+ Quick start with the ia command line tool 
+ The Internet Archive Python Library 
+ This is a Python interface for interacting with various archive.org services. 
+ Python library 
+ N/A 
+ S3-like API 
+ This API is for creating items, uploading files, and managing metadata on an Amazon S3-like server. 
+ Python library, REST API, SOAP API 
+ Item Metadata API 
+ This API is for fetching the entire metadata of an item in a single transaction. 
+ PHP library, REST API 
+ Item Metadata API: Read 
+ This API is for fetching metadata. 
+ PHP library, REST API 
+ Item Metadata API: Write 
+ This API is for updating metadata. 
+ PHP library, REST API 
+ Item Metadata API: Record details 
+ This API is for fetching number of fields for an item. 
+ PHP library, REST API 
+ Item Metadata API: Advanced Topics & Extensions 
+ This API is for updating item metadata through JSON patches. 
+ JSON 
+ N/A 
+ Changes API 
+ This API is for fetching identifiers that have changed within a particular time period. 
+ REST API 
+ Views data service api 
+ This API is for fetching the view data of items and collections. 
+ REST API 
+ Internet Archive RESTful microservices 
+ These microservices are stateless, representational programming interfaces that accept and return JSON payloads. 
+ N/A 
+ N/A 
+ Tasks API 
+ This API is for fetching information about running, pending, and completed tasks. 
+ Relationships API 
+ This API is for creating relationships between items on the Internet Archive. 
+ Reviews API 
+ This API is for storing reviews of items. Registered users can review items. 
+ OCR module 
+ N/A 
+ PDF generation module 
+ N/A 
+ Wayback machine APIs 
+ These APIs are for determining if a URL is stored on the Wayback Machine and for querying, filtering and analysis of snapshot data. 
+ REST API 
+ Wayback API reference and Wayback API visualization 
+ See whether a website exists in the archives , Compare two versions of a website 
+ Table of Contents: 
+ Bots, LLMs, and Automated Access 
+ AI Coding Assistants 
+ User-Agent Requirements 
+ Rate Limiting 
+ Best Practices 
+ Internet Archive Items 
+ What Is an Item? 
+ How Items Are Structured 
+ Item Limitations 
+ Collections 
+ Archival URLs 
+ Internet Archive Metadata 
+ Archive.org Identifiers 
+ Custom Metadata Fields 
+ Metadata Schema 
+ File Metadata Schema 
+ Command-Line Interface 
+ Quick Start 
+ Metadata 
+ Upload 
+ Download 
+ Delete 
+ Search 
+ Tasks 
+ List 
+ Copy 
+ Move 
+ Performance Tips 
+ Getting Help 
+ The Internet Archive Python Library 
+ Quick start 
+ Documentation 
+ Setup & Configuration 
+ User Interfaces 
+ Performance & Scaling 
+ Development & Community 
+ Help & Support 
+ Reference 
+ Authors 
+ Authors 
+ Indices and tables 
+ ias3 Internet archive S3-like API 
+ What the S3-like API does: 
+ Python Library 
+ POST Support 
+ How this is different from normal S3 
+ Skip request signing 
+ Skip derive process 
+ Delete derived files when an original is deleted 
+ Keep old versions of files 
+ Hint the archive about the final size of an item 
+ Express queue 
+ Dealing with API errors 
+ Use Limits 
+ Examples 
+ Fast GET downloads 
+ Bucket activity 
+ Questions? 
+ Item Metadata API 
+ Introduction 
+ Item identifiers 
+ Authentication 
+ Compression 
+ Metadata Read 
+ Metadata Write 
+ Item Metadata API: Read 
+ Partial reads 
+ Errors 
+ Item Metadata API: Write 
+ Lookahead 
+ Transaction workflow 
+ Targets 
+ JSON Patch & JSON Pointer 
+ Rate limits 
+ Priority 
+ Single target writes 
+ Multi-target writes 
+ Errors 
+ Item Metadata API: Record details 
+ Location fields 
+ Metadata field 
+ Files fields 
+ Reviews field 
+ Catalog fields 
+ Item state fields 
+ SimpleLists field 
+ User JSON fields 
+ Meta-metadata fields 
+ Item Metadata API: Advanced Topics & Extensions 
+ Introduction 
+ Tasks 
+ Per-item write locking 
+ “no changes to _meta.xml” 
+ Problems with concurrent writes 
+ Concurrency strategies 
+ JSON Patch extensions 
+ API for discovering changes to archive.org items 
+ Changes API 
+ Starting from now, see the changes in the archive 
+ Starting from a date, see changes made after midnight on that UTC day 
+ Starting from nothing, load all the identifiers, then pick up changes 
+ Views data service api 
+ Simple summary view count data 
+ Per day view data 
+ Detailed, aggregated collection access data with geolocation region information 
+ Detailed, aggregated item access data with geolocation region information 
+ Detailed, aggregated access data by contributor with geolocation region information 
+ Legacy summary view count data 
+ Item Engagement counting on the archive.org website. 
+ Views API 
+ Measuring use. 
+ Collections. 
+ Technical details. 
+ Footnote: what is the deal with privacy protecting hashes instead of IP numbers in our logs? 
+ Differences between pre-2017 (old) counting system: 
+ Internet Archive RESTful microservices 
+ Introduction 
+ Service transaction 
+ Common HTTP methods 
+ Common HTTP statuses 
+ Custom headers 
+ Examples 
+ Further reading 
+ Internet Archive Tasks API 
+ What is a Task? 
+ Service Overview 
+ Task Listings 
+ Task Logs 
+ Task Submission 
+ Rerunning a task 
+ Examples 
+ Simple Lists (Relationships API) 
+ Introduction 
+ Simple Lists Relationships 
+ Fetching relationships 
+ Modifying relationships 
+ Reviews API 
+ Introduction 
+ Review structure, syntax, and policies 
+ Metadata API 
+ Reviews service 
+ OCR at the Internet Archive with Tesseract and hOCR 
+ Introduction 
+ Motivation 
+ Basic workflow 
+ OCR metadata 
+ Searching 
+ Summary of the OCR module modes and functionality 
+ Supported languages 
+ Code repositories 
+ Contributing 
+ Release history 
+ PDF analysis, generation and compression at the Internet Archive 
+ Introduction 
+ Motivation 
+ Basic workflow 
+ PDF Analysis module 
+ Release history 
+ Code repositories 
+ Contributing 
+ previous 
+ Compare two versions of a website 
+ next 
+ Bots, LLMs, and Automated Access 
+By Internet Archive
+ © Copyright 2018-2026, Internet Archive.

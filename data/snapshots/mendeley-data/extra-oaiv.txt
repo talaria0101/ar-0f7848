@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><?xml-stylesheet type="text/xsl" href="/oai-pmh-repository/static/oai2.xsl"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+    <responseDate>2026-10-20T01:40:15Z</responseDate>
+    <request verb="Identify">https://data.mendeley.com/oai</request>
+    <Identify>
+        <repositoryName>Mendeley Data</repositoryName>
+        <baseURL>https://data.mendeley.com/oai</baseURL>
+        <protocolVersion>2.0</protocolVersion>
+        <adminEmail>data-queries@mendeley.com</adminEmail>
+        <earliestDatestamp>1971-01-01T11:00:00Z</earliestDatestamp>
+        <deletedRecord>no</deletedRecord>
+        <granularity>YYYY-MM-DDThh:mm:ssZ</granularity>
+    </Identify>
+</OAI-PMH>

@@ -1,0 +1,78 @@
+Wayback Machine General Information – Internet Archive Help Center 
+ Skip to content 
+ Go to the Internet Archive 
+ Wayback Machine General Information 
+ Home 
+ The Wayback Machine Wayback Machine & Web Archiving Wayback Machine General Information 
+ 0 
+ What is the Wayback Machine? 
+ The Internet Archive Wayback Machine is a service that allows people to visit archived versions of Web sites. Visitors to the Wayback Machine can type in a URL, select a date range, and then begin surfing on an archived version of the Web. Imagine surfing circa 1999 and looking at all the Y2K hype, or revisiting an older version of your favorite Web site. The Internet Archive Wayback Machine can make all of this possible. 
+ What are the sources of your captures? 
+ When you roll over individual web captures (that pop-up when you roll over the dots on the calendar page for a URL,) you may notice some text links shows up above the calendar, along with the word “why”. Those links will take you to the Collection of web captures associated with the specific web crawl the capture came from. Every day hundreds of web crawls contribute to the web captures available via the Wayback Machine. Behind each, there is a story about factors like who, why, when and how. 
+ Why is the Internet Archive collecting sites from the Internet? What makes the information useful? 
+ Most societies place importance on preserving artifacts of their culture and heritage. Without such artifacts, civilization has no memory and no mechanism to learn from its successes and failures. Our culture now produces more and more artifacts in digital form. The Archive’s mission is to help preserve those artifacts and create an Internet library for researchers, historians, and scholars. The Archive collaborates with institutions including the Library of Congress and the Smithsonian. 
+ Where does the name come from? 
+ The Wayback Machine is named in reference to the famous Mr. Peabody’s WABAC (pronounced way-back) machine from the Rocky and Bullwinkle cartoon show. 
+ Who was involved in the creation of the Internet Archive Wayback Machine? 
+ “The original idea for the Internet Archive Wayback Machine began in 1996, when the Internet Archive first began archiving the web. Now, five years later, with over 100 terabytes and a dozen web crawls completed, the Internet Archive has made the Internet Archive Wayback Machine available to the public. The Internet Archive has relied on donations of web crawls, technology, and expertise from Alexa Internet and others. The Internet Archive Wayback Machine is owned and operated by the Internet Archive.” 
+ How was the Wayback Machine made? 
+ Alexa Internet, in cooperation with the Internet Archive, has designed a three dimensional index that allows browsing of web documents over multiple time periods, and turned this unique feature into the Wayback Machine. 
+ How do you archive dynamic pages? 
+ There are many different kinds of dynamic pages, some of which are easily stored in an archive and some of which fall apart completely. When a dynamic page renders standard html, the archive works beautifully. When a dynamic page contains forms, JavaScript, or other elements that require interaction with the originating host, the archive will not contain the original site’s functionality. 
+ Do you collect all the sites on the Web? 
+ No, the Archive collects web pages that are publicly available. We do not archive pages that require a password to access, pages that are only accessible when a person types into and sends a form, or pages on secure servers. Pages may not be archived due to robots exclusions and some sites are excluded by direct site owner request. 
+ Do you archive email? Chat? 
+ No, we do not collect or archive chat systems or personal email messages that have not been posted to Usenet bulletin boards or publicly accessible online message boards. 
+ Is there any personal information in these collections? 
+ We collect Web pages that are publicly accessible. These may include pages with personal information. 
+ Who has access to the collections? What about the public? 
+ Anyone can access our collections through our website archive.org. The web archive can be searched using the Wayback Machine. 
+ The Archive makes the collections available at no cost to researchers, historians, and scholars. At present, it takes someone with a certain level of technical knowledge to access collections in a way other than our website, but there is no requirement that a user be affiliated with any particular organization. 
+ What is the Wayback Machine’s Copyright Policy? 
+ The Internet Archive respects the intellectual property rights and other proprietary rights of others. The Internet Archive may, in appropriate circumstances and at its discretion, remove certain content or disable access to content that appears to infringe the copyright or other intellectual property rights of others. If you believe that your copyright has been violated by material available through the Internet Archive, please provide the Internet Archive Copyright Agent with the following information: 
+ Identification of the copyrighted work that you claim has been infringed; An exact description of where the material about which you complain is located within the Internet Archive collections; Your address, telephone number, and email address; A statement by you that you have a good-faith belief that the disputed use is not authorized by the copyright owner, its agent, or the law; A statement by you, made under penalty of perjury, that the above information in your notice is accurate and that you are the owner of the copyright interest involved or are authorized to act on behalf of that owner; Your electronic or physical signature. The Internet Archive Copyright Agent can be reached as follows: 
+ Internet Archive Copyright Agent Internet Archive 300 Funston Ave. San Francisco, CA 94118 Phone: 415-561-6767 Email: info at archive dot org 
+ How can I help the Internet Archive and the Wayback Machine? 
+ The Internet Archive actively seeks donations of digital materials for preservation. If you have digital materials that may be of interest to future generations, please let us know by sending an email to info at archive dot org. The Internet Archive is also seeking additional funding to continue this important mission. You can click the donate tab above or click here. Thank you for considering us in your charitable giving. 
+ How do I contact the Internet Archive? 
+ All questions about the Wayback Machine, or other Internet Archive projects, should be addressed to  info@archive.org . 
+ Search Search Accounts 
+ Archive-it Service 
+ Archive.org 
+ Archive.org General Information 
+ Audio and Music Items Information 
+ Books and Texts Information 
+ Borrow a Book from Archive.org 
+ Charges & Refunds 
+ Collections 
+ Disability Access 
+ Donating Physical Items to the Archive 
+ Donating to the Internet Archive 
+ Donations 
+ Downloading 
+ Favorites 
+ Files, Formats, and Derivatives 
+ Forums 
+ General Interest 
+ Lists 
+ Managing and Editing Your Items 
+ Media Players 
+ Most Frequently Asked Questions 
+ Movies and Videos 
+ Organization Information 
+ Reporting problems or errors 
+ Reports 
+ Resource Guides 
+ Search 
+ Software 
+ Tax Information 
+ Technical Information 
+ The Wayback Machine 
+ Uploading 
+ Wayback Machine & Web Archiving 
+ Recent Posts 
+ How do I request removal of intimate images of me published without my consent? 
+ FAQ: Publishers Blocking the Wayback Machine 
+ First time using the Internet Archive? Start Here. 
+ Does the Internet Archive have a bug bounty program? 
+ Does the Internet Archive Have an Onion Address?

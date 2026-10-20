@@ -24,5 +24,127 @@
   "fetched_at": "2026-10-20T01:31:54+00:00",
   "ratelimit_headers": {},
   "text_bytes": 23985
+ },
+ "extra": {
+  "terms": {
+   "url": "https://clinicaltrials.gov/about-site/terms-conditions",
+   "final_url": "https://clinicaltrials.gov/about-site/terms-conditions",
+   "status": 200,
+   "content_type": "text/html",
+   "bytes": 94247,
+   "truncated": false,
+   "sha256": "c8f2db34b30c0fd6a31735436288114df705be51bf54fbaf2ad98f957f1af94d",
+   "fetched_at": "2026-10-20T01:39:56+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 183
+  },
+  "about": {
+   "url": "https://clinicaltrials.gov/data-api/about-api",
+   "final_url": "https://clinicaltrials.gov/data-api/about-api",
+   "status": 200,
+   "content_type": "text/html",
+   "bytes": 94247,
+   "truncated": false,
+   "sha256": "c8f2db34b30c0fd6a31735436288114df705be51bf54fbaf2ad98f957f1af94d",
+   "fetched_at": "2026-10-20T01:39:57+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 183
+  },
+  "spec": {
+   "url": "https://clinicaltrials.gov/api/v2/version",
+   "final_url": "https://clinicaltrials.gov/api/v2/version",
+   "status": 200,
+   "content_type": "application/json",
+   "bytes": 71,
+   "truncated": false,
+   "sha256": "af457defb1e08dcfe9fd767aa604db8bf21700aa63a9ba2cbf6c2ec366734306",
+   "fetched_at": "2026-10-20T01:39:58+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 71
+  },
+  "dl": {
+   "url": "https://clinicaltrials.gov/data-api/about-api/api-migration",
+   "final_url": "https://clinicaltrials.gov/data-api/about-api/api-migration",
+   "status": 200,
+   "content_type": "text/html",
+   "bytes": 94247,
+   "truncated": false,
+   "sha256": "c8f2db34b30c0fd6a31735436288114df705be51bf54fbaf2ad98f957f1af94d",
+   "fetched_at": "2026-10-20T01:39:58+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 183
+  },
+  "oas": {
+   "url": "https://clinicaltrials.gov/api/oas/v2",
+   "final_url": "https://clinicaltrials.gov/api/oas/v2",
+   "status": 200,
+   "content_type": "application/yaml",
+   "bytes": 80983,
+   "truncated": false,
+   "sha256": "ba31adaea67e6bb09ff77af5c0c11daf36d5aff7f5d6cbed89f0aab04b297aea",
+   "fetched_at": "2026-10-20T01:40:09+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 80980
+  },
+  "gh": {
+   "url": "https://raw.githubusercontent.com/cthoyt/clinicaltrials-api-docs/main/README.md",
+   "final_url": "https://raw.githubusercontent.com/cthoyt/clinicaltrials-api-docs/main/README.md",
+   "status": 404,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 14,
+   "truncated": false,
+   "sha256": "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed",
+   "fetched_at": "2026-10-20T01:40:10+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 14
+  },
+  "terms2": {
+   "url": "https://clinicaltrials.gov/about-site/terms-conditions.html",
+   "final_url": "https://clinicaltrials.gov/about-site/terms-conditions.html",
+   "status": 200,
+   "content_type": "text/html",
+   "bytes": 94247,
+   "truncated": false,
+   "sha256": "c8f2db34b30c0fd6a31735436288114df705be51bf54fbaf2ad98f957f1af94d",
+   "fetched_at": "2026-10-20T01:40:10+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 183
+  },
+  "techbull": {
+   "url": "https://www.nlm.nih.gov/pubs/techbull/ma24/ma24_clinicaltrials_api.html",
+   "final_url": "https://www.nlm.nih.gov/pubs/techbull/ma24/ma24_clinicaltrials_api.html",
+   "status": 200,
+   "content_type": "text/html",
+   "bytes": 22078,
+   "truncated": false,
+   "sha256": "d50dbca2c356bd7f0bae3814b9b4db489cb6bf3693fff8d8e890c1cb8486809c",
+   "fetched_at": "2026-10-20T01:40:40+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 3639
+  },
+  "nlmpolicy": {
+   "url": "https://www.nlm.nih.gov/web_policies.html",
+   "final_url": "https://www.nlm.nih.gov/web_policies.html",
+   "status": 200,
+   "content_type": "text/html",
+   "bytes": 43526,
+   "truncated": false,
+   "sha256": "c8b7026b5c3fcfd1b0cb88755077f6a99a5f2159eecd42b0e7d1a5ad9b30ec55",
+   "fetched_at": "2026-10-20T01:40:41+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 23797
+  },
+  "ctapi": {
+   "url": "https://classic.clinicaltrials.gov/ct2/about-site/terms-conditions",
+   "final_url": "https://clinicaltrials.gov/about-site/terms-conditions",
+   "status": 200,
+   "content_type": "text/html",
+   "bytes": 94247,
+   "truncated": false,
+   "sha256": "c8f2db34b30c0fd6a31735436288114df705be51bf54fbaf2ad98f957f1af94d",
+   "fetched_at": "2026-10-20T01:40:42+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 183
+  }
  }
 }

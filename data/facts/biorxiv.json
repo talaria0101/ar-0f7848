@@ -1,0 +1,49 @@
+{
+ "slug": "biorxiv",
+ "auth": "none",
+ "auth_note": "Anonymous probe returned 200 with metadata; docs describe no key or registration for the API.",
+ "cost": "free",
+ "rate_limit": "not established",
+ "data_license": "Per-article, chosen by authors (CC-BY, CC-BY-NC, CC-BY-NC-ND, CC-BY-ND, CC0 and no-CC); stated in the license field of each record's metadata",
+ "bulk_access": "Full text via Amazon S3 requester-pays bucket s3://biorxiv-src-monthly (monthly deposits; AWS charges borne by user); metadata via API pagination with OAI-PMH style XML format",
+ "probe_status": 200,
+ "probe_observation": "Returned JSON starting with a messages array (status ok, interval 2024-01-01:2024-01-02, count 30, total 220) followed by a collection of preprint records.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "\"messages\":[{\"status\":\"ok\",\"category\":\"all\",\"interval\":\"2024-01-01:2024-01-02\",\"cursor\":0,\"count\":30",
+   "snapshot": "data/snapshots/biorxiv/probe.txt"
+  },
+  {
+   "claim": "cost",
+   "quote": "bioRxiv provides free and unrestricted access to all articles posted on the server.",
+   "snapshot": "data/snapshots/biorxiv/extra-tdm.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "please consult the licensing terms applied by the authors, which are provided in the metadata",
+   "snapshot": "data/snapshots/biorxiv/extra-tdm.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "CC0 (The paper is placed in the public domain and no longer restricted by copyright.",
+   "snapshot": "data/snapshots/biorxiv/extra-about.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "Full-text access via Amazon S3 is available via a requester pays bucket",
+   "snapshot": "data/snapshots/biorxiv/extra-tdm.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "s3://biorxiv-src-monthly",
+   "snapshot": "data/snapshots/biorxiv/extra-tdm.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "\"messages\":[{\"status\":\"ok\"",
+   "snapshot": "data/snapshots/biorxiv/probe.txt"
+  }
+ ],
+ "not_established": "Rate limits are not documented in the API page, TDM page or FAQ captured. The 'free' cost rests on the site statement about free access to articles; the API page itself has no pricing statement. Data license is per record, no single license for the metadata as a whole."
+}

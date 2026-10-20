@@ -1,0 +1,6 @@
+---
+agentTools:
+  projectIndex: https://support.datacite.org/llms.txt
+---
+
+Page not found. The full index is at https://support.datacite.org/llms.txt. Use the agentTools in the front matter above to search the docs or browse the index.

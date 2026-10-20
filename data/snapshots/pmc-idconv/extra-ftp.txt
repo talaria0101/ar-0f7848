@@ -1,0 +1,125 @@
+FTP Service - PMC
+ Skip to main content
+ An official website of the United States government
+ Here's how you know 
+ Here's how you know 
+ Official websites use .gov 
+ A
+ .gov website belongs to an official
+ government organization in the United States.
+ Secure .gov websites use HTTPS 
+ A lock (
+ ) or https:// means you've safely
+ connected to the .gov website. Share sensitive
+ information only on official, secure websites.
+ Search
+ Log in 
+ Dashboard
+ Publications
+ Account settings
+ Log out
+ Search…
+ Search NCBI
+ Primary site navigation
+ Search
+ Logged in as:
+ Dashboard
+ Publications
+ Account settings
+ Log in
+ Search PMC Full-Text Archive 
+ Search in PMC 
+ Journal List
+ User Guide
+ About PMC 
+ About PMC
+ Accessibility
+ Citation Search
+ Copyright Notice
+ Disclaimer
+ FAQs
+ Journal List
+ Journal Selection Statistics
+ National Advisory Committee
+ New in PMC
+ PMC and Research Funder Policies
+ PMC International
+ Policies
+ User Guide
+ Collections 
+ Collections - Home
+ Author Manuscripts
+ Back Issue Digitization
+ COVID-19 Collection
+ Journal List
+ Mpox Collection
+ NIH Preprint Pilot
+ Open Access Subset
+ PMC Article Datasets
+ Selective Deposit Collections
+ For Authors 
+ For Authors - Home
+ Author Manuscripts in PMC
+ FAQs for Authors
+ Journal List
+ NIH Manuscript Submission System
+ NIH Public Access and PMC
+ PMC and Research Funder Policies
+ PMC ID Converter
+ For Publishers 
+ For Publishers - Home
+ FAQs for Publishers
+ File Submission Specifications
+ PMC Banner Specifications
+ File Validation Tools
+ Application and Evaluation Process
+ Journal Selection for PMC
+ Minimum Data Criteria
+ Participation Agreements
+ Policies
+ Production Data Requirements
+ For Developers 
+ For Developers - Home
+ Cloud Service
+ FTP Service
+ OAI-PMH Service
+ PMC Article Datasets
+ PMC ID Converter
+ PMC ID Converter API
+ FTP Service 
+ August 26, 2026: PMC's Article Dataset Distribution Service Changes Are Complete 
+ Changes to PMC's Article Dataset Distribution Service, first announced in February , are now complete. All legacy PMC Article Dataset files on the FTP and Cloud Services were removed the week of August 24, 2026. 
+ For complete details about this transition, please see the NCBI Insights blog post and our documentation on Accessing PMC Article Datasets Using Amazon Web Services 
+ The PMC File Transfer Protocol (FTP) Service supports PMC with the following service: 
+ PMC ID Cross-referencing 
+ Cross reference any PMC article ID with identifiers such as PubMed IDs, DOIs, and Author Manuscript IDs 
+ File: PMC-ids.csv.gz, a file in the top-level FTP directory 
+ Base FTP URL: https://ftp.ncbi.nlm.nih.gov/pub/pmc 
+ NCBI supports secure FTP via SFTP. Please use SFTP or the HTTPS protocol, e.g. https://ftp.ncbi.nlm.nih.gov/pub/pmc/PMC-ids.csv.gz 
+ Last modified: Thu Aug. 20 2026
+ Related Links 
+ PMC Article Datasets 
+ Cloud Service 
+ Follow NCBI
+ NCBI on X (formerly known as Twitter) 
+ NCBI on Facebook 
+ NCBI on LinkedIn 
+ NCBI on GitHub 
+ NCBI RSS feed 
+ Connect with NLM
+ NLM on X (formerly known as Twitter) 
+ NLM on Facebook 
+ NLM on YouTube 
+ National Library of Medicine
+ 8600 Rockville Pike Bethesda, MD 20894 
+ Web Policies
+ FOIA
+ HHS Vulnerability Disclosure
+ Help
+ Accessibility
+ Careers
+ NLM
+ NIH
+ HHS
+ USA.gov
+ Back to Top

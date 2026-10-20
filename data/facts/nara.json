@@ -1,0 +1,39 @@
+{
+ "slug": "nara",
+ "auth": "key-approval",
+ "auth_note": "Catalog API key must be requested by email to NARA; the x-api-key header is used. The anonymous probe returned an HTML page, not API data.",
+ "cost": "not established",
+ "rate_limit": "10,000 queries per month per API key by default; key blocked until the first of the next month when exceeded; higher limit on request.",
+ "data_license": "Public domain (US federal government work), with rare exceptions",
+ "bulk_access": "API can facilitate bulk downloads of records (no separate dump URL documented in captured text)",
+ "probe_status": 200,
+ "probe_observation": "The probe returned HTTP 200 with a 5454-byte text/html page (Swagger/SPA shell) that rendered to empty text, so no JSON search result was captured.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "To request a Catalog API key, please send an email to Catalog_API@nara.gov with your name and the email address you would like associated with your key.",
+   "snapshot": "data/snapshots/nara/extra-gh.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "NARA limits the number of Catalog API requests to a default rate of 10,000 queries per month per API key.",
+   "snapshot": "data/snapshots/nara/extra-gh.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "NARA's archival metadata is all assumed to be in the public domain, as a work of the federal government, with only rare exceptions",
+   "snapshot": "data/snapshots/nara/extra-gh.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "The API may also be used to facilitate bulk downloads of records from the National Archives Catalog.",
+   "snapshot": "data/snapshots/nara/extra-gh.txt"
+  },
+  {
+   "claim": "other",
+   "quote": "If your research or development efforts require a higher limit, please contact Catalog_API@nara.gov with your use case/research need and justification.",
+   "snapshot": "data/snapshots/nara/extra-gh.txt"
+  }
+ ],
+ "not_established": "Cost/pricing is not stated in captured text. Whether key approval is automatic or discretionary is not stated (key-approval chosen because issuance is by email request to engineers). docs.txt and probe.txt are empty JS shells; the OpenAPI JSON route (extra-api) also rendered to 10 bytes. No live API response captured; key-less behaviour of the probe is not shown."
+}

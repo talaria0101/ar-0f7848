@@ -1,0 +1,39 @@
+{
+ "slug": "openlibrary",
+ "auth": "none",
+ "auth_note": "Search probe answered HTTP 200 anonymously; docs ask (not require) a User-Agent with contact email and an optional app registration.",
+ "cost": "free",
+ "rate_limit": "Default (non-identified) 1 request per second; identified requests with User-Agent and email 3 requests per second.",
+ "data_license": "No new copyright asserted by the Internet Archive over Open Library database material; no named open license (e.g. CC0) stated on the captured pages.",
+ "bulk_access": "Free monthly data dumps, https://openlibrary.org/developers/dumps",
+ "probe_status": 200,
+ "probe_observation": "The probe returned JSON starting {\"numFound\":189539,\"start\":0,\"numFoundExact\":true ... with one doc (author Jon Ronson).",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "{\"numFound\":189539,\"start\":0,\"numFoundExact\":true",
+   "snapshot": "data/snapshots/openlibrary/probe.txt"
+  },
+  {
+   "claim": "cost",
+   "quote": "please download our free monthly data dumps",
+   "snapshot": "data/snapshots/openlibrary/docs.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "Default (non-identified requests): ... 1 request per second ... Identified requests (with User-Agent and email ): ... 3 requests per second",
+   "snapshot": "data/snapshots/openlibrary/docs.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "The Internet Archive does not assert any new copyright or other proprietary rights over any of the material in the Open Library database.",
+   "snapshot": "data/snapshots/openlibrary/extra-licensing.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "Open Library provides dumps of all its data, generated every month.",
+   "snapshot": "data/snapshots/openlibrary/extra-dumps.txt"
+  }
+ ],
+ "not_established": "No explicit named license (CC0 etc.) for the data was found on the captured pages. Cost of the API is inferred from free anonymous access and 'free' dumps wording; docs state no price page. Docs say violations may bring blocking but give no numeric quota beyond the two per-second figures."
+}

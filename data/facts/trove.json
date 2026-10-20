@@ -1,0 +1,44 @@
+{
+ "slug": "trove",
+ "auth": "key-approval",
+ "auth_note": "API key requires a Trove account plus an application form reviewed by NLA; most requests answered within a week.",
+ "cost": "not established",
+ "rate_limit": "Per-key call rate is requested on the application form and set on approval; the review-levels table lists a call rate of 200m (unit not stated).",
+ "data_license": "not established",
+ "bulk_access": "Docs navigation links a 'Bulk download' page (https://trove.nla.gov.au/about/create-something/bulk-download); page itself not captured",
+ "probe_status": 401,
+ "probe_observation": "GET /v3/result?q=test&category=newspaper without a key returned HTTP 401 JSON with message \"No API key found in request\".",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "No API key found in request",
+   "snapshot": "data/snapshots/trove/probe.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "Once you have a Trove account, complete the Request a Trove API key form to apply for a Trove API key.",
+   "snapshot": "data/snapshots/trove/docs.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "Once you have submitted your application, we will review the form to determine the level of review. ... Most requests will be answered within a week",
+   "snapshot": "data/snapshots/trove/docs.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "the rate of calls you require",
+   "snapshot": "data/snapshots/trove/docs.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "You can find your Trove API key, your rate of calls and other details about your access to the Trove API in your Trove account.",
+   "snapshot": "data/snapshots/trove/docs.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "Bulk download",
+   "snapshot": "data/snapshots/trove/docs.txt"
+  }
+ ],
+ "not_established": "Cost not stated on captured pages. Data license and documented numeric rate limit not found: API terms of use, technical guide and bulk download pages all returned an Anubis proof-of-work challenge (HTTP 200 body 'Making sure you're not a bot!') so no content was captured. The 200m figure in Table 1 has no unit stated. Whether 'approval' vs instant self-serve applies per level is only partly shown (Level 1 reviews 'Is the form complete?')."
+}

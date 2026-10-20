@@ -1,0 +1,34 @@
+{
+ "slug": "altmetric",
+ "auth": "key-approval",
+ "auth_note": "API key required for all calls; docs say access is requested from Altmetric support or sales, individual-researcher route not captured.",
+ "cost": "not established",
+ "rate_limit": "not established",
+ "data_license": "not established",
+ "bulk_access": "none documented",
+ "probe_status": 403,
+ "probe_observation": "The anonymous probe returned HTTP 403 with text starting 'You must supply an API key in a parameter named 'key'' and stating all users need a key since 10 November 2025.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "You must supply an API key in a parameter named 'key'. As of 10 November 2025, all users need an API key to access the Altmetric Details Page API.",
+   "snapshot": "data/snapshots/altmetric/probe.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "You can request API access from our support team ... Contact us to request a demo or more details on how to get access",
+   "snapshot": "data/snapshots/altmetric/extra-solutions.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "To obtain access, register for an API key at https://www.altmetric.com/solutions/altmetric-api/",
+   "snapshot": "data/snapshots/altmetric/probe.txt"
+  },
+  {
+   "claim": "other",
+   "quote": "If you find that you frequently hit the rate limit then you might want to consider throttling your requests or purchasing a commercial API key.",
+   "snapshot": "data/snapshots/altmetric/extra-start.txt"
+  }
+ ],
+ "not_established": "Cost (no pricing page; docs mention a commercial key and a subscription but no free tier is stated); numeric rate limits (docs only say to read X-HourlyRateLimit-Limit and X-DailyRateLimit-Limit headers; meta.json recorded 720 hourly and 1200 daily on the 403 response, but that is not in a text snapshot and the docs text predates the mandatory key); data license (docs Licensing and Reasonable Use pages returned 404 at the guessed URLs); bulk access. The probe text says to 'register', which could mean self-serve; the solutions page says support/sales contact, so key-free vs key-approval is not settled."
+}

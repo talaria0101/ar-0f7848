@@ -1,0 +1,29 @@
+{
+ "auth": "none",
+ "auth_note": "Anonymous request to /api/v2/studies returned HTTP 200 with study data; no key needed for that call.",
+ "cost": "not established",
+ "rate_limit": "not established",
+ "data_license": "not established",
+ "bulk_access": "none documented",
+ "probe_status": 200,
+ "probe_observation": "Probe returned JSON starting {\"studies\":[ with one study record (NCT02684435) and a nextPageToken.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "{\"studies\":[ {\"protocolSection\":{\"identificationModule\":{\"nctId\":\"NCT02684435\"",
+   "snapshot": "data/snapshots/clinicaltrials/probe.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "\"nextPageToken\":\"ZVNj7o2Elu8o3lpzWomz5Oytmo6QeZdmZvKm2fg\"",
+   "snapshot": "data/snapshots/clinicaltrials/probe.txt"
+  },
+  {
+   "claim": "other",
+   "quote": "title: \"ClinicalTrials.gov REST API\"",
+   "snapshot": "data/snapshots/clinicaltrials/extra-oas.txt"
+  }
+ ],
+ "not_established": "docs page, about-api, terms-conditions and migration pages are a JS single-page shell (183 bytes of text), so rate limit, cost and data licence text were not captured; the OpenAPI spec (extra-oas) has no rate or licence text; NLM web policies page has no ClinicalTrials.gov licence statement. A bulk download route was not documented in captured text (third-party pages mention ~50 requests/minute per IP but were not captured from an official source so are not used).",
+ "slug": "clinicaltrials"
+}

@@ -24,5 +24,43 @@
   "fetched_at": "2026-10-20T01:31:36+00:00",
   "ratelimit_headers": {},
   "text_bytes": 16
+ },
+ "extra": {
+  "json-yaml": {
+   "url": "https://www.loc.gov/apis/json-and-yaml/working-within-limits/",
+   "final_url": "https://www.loc.gov/apis/json-and-yaml/working-within-limits/",
+   "status": 200,
+   "content_type": "text/html",
+   "bytes": 57835,
+   "truncated": false,
+   "sha256": "6f5407f694671c10d70d8b9833898778a81ac9a4e3e4b4fe6cbe5db07e8acebe",
+   "fetched_at": "2026-10-20T01:34:03+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 11647
+  },
+  "ghdocs": {
+   "url": "https://raw.githubusercontent.com/LibraryOfCongress/data-exploration/master/README.md",
+   "final_url": "https://raw.githubusercontent.com/LibraryOfCongress/data-exploration/master/README.md",
+   "status": 200,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 641,
+   "truncated": false,
+   "sha256": "3ea81e84db0d3fa2d4709baf33d6a9254ca1081065d3baa73017a76eb8960b1b",
+   "fetched_at": "2026-10-20T01:34:04+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 639
+  },
+  "apis-json": {
+   "url": "https://www.loc.gov/apis/json-and-yaml/",
+   "final_url": "https://www.loc.gov/apis/json-and-yaml/",
+   "status": 200,
+   "content_type": "text/html",
+   "bytes": 44782,
+   "truncated": false,
+   "sha256": "e4c5434e86bd081930c25ac21ce4a912dd32d3af84bef25d6e8296a76470b574",
+   "fetched_at": "2026-10-20T01:34:04+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 4565
+  }
  }
 }

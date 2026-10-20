@@ -1,0 +1,49 @@
+{
+ "slug": "smithsonian",
+ "auth": "key-free",
+ "auth_note": "Uses an api.data.gov key; the probe worked with the shared DEMO_KEY. api.data.gov docs say sign-up gives a personal key and is quick.",
+ "cost": "not established",
+ "rate_limit": "api.data.gov defaults: 1,000 requests per hour per key; DEMO_KEY 30 per IP per hour and 50 per IP per day. Probe response header showed X-Ratelimit-Limit: 10.",
+ "data_license": "CC0 (per-record access field in probe; GitHub README does not state licence)",
+ "bulk_access": "https://registry.opendata.aws/smithsonian-open-access/ (S3 bucket, line-delimited JSON, index at https://smithsonian-open-access.s3-us-west-2.amazonaws.com/metadata/edan/index.txt)",
+ "probe_status": 200,
+ "probe_observation": "The probe returned HTTP 200 JSON with status 200, responseCode 1, rowCount 17502 and one row (NMAH record, access CC0).",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "your own, unique API key. ... In documentation examples, the special DEMO_KEY api key is used. This API key can be used for initially exploring APIs prior to signing up",
+   "snapshot": "data/snapshots/smithsonian/extra-apidocs.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "signup is quick and easy",
+   "snapshot": "data/snapshots/smithsonian/extra-apidocs.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "Hourly Limit: 1,000 requests per hour",
+   "snapshot": "data/snapshots/smithsonian/extra-apidocs.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "Hourly Limit: 30 requests per IP address per hour Daily Limit: 50 requests per IP address per day",
+   "snapshot": "data/snapshots/smithsonian/extra-apidocs.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "\"access\": \"CC0\"",
+   "snapshot": "data/snapshots/smithsonian/probe.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "Registry of Open Data on AWS (https://registry.opendata.aws/smithsonian-open-access/)",
+   "snapshot": "data/snapshots/smithsonian/extra-gh.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "\"status\": 200, \"responseCode\": 1 ... \"rowCount\": 17502",
+   "snapshot": "data/snapshots/smithsonian/probe.txt"
+  }
+ ],
+ "not_established": "Cost is not stated in captured text. The Smithsonian-specific limit is not documented in captured text (api.data.gov generic defaults quoted; the Smithsonian service may override them). docs.txt is a 'Loading...' JS shell and si.edu/openaccess/devtools returned 403 (challenge), so the Smithsonian's own key and terms pages were not captured."
+}

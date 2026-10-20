@@ -1,0 +1,39 @@
+{
+ "slug": "hal",
+ "auth": "none",
+ "auth_note": "Anonymous GET to the search endpoint returned results; the HAL OAI-PMH page says no registration is needed.",
+ "cost": "not established",
+ "rate_limit": "not established",
+ "data_license": "not established",
+ "bulk_access": "OAI-PMH: https://api.archives-ouvertes.fr/oai/hal/",
+ "probe_status": 200,
+ "probe_observation": "The probe returned JSON starting with a response object with numFound 141710 and one doc (docid 3187974).",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "\"numFound\":141710,",
+   "snapshot": "data/snapshots/hal/probe.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "Aucune inscription dans HAL n\u2019est n\u00e9cessaire pour utiliser le serveur OAI de HAL.",
+   "snapshot": "data/snapshots/hal/extra-oai.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "L'URL des serveurs est de la forme https://api.archives-ouvertes.fr/oai/ identifiant du portail / .",
+   "snapshot": "data/snapshots/hal/extra-oai.txt"
+  },
+  {
+   "claim": "other",
+   "quote": "Pas d'utilisation commerciale des donn\u00e9es extraites.",
+   "snapshot": "data/snapshots/hal/extra-oai.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "\"numFound\":141710,",
+   "snapshot": "data/snapshots/hal/probe.txt"
+  }
+ ],
+ "not_established": "Cost, numeric rate limit and a named data license were not found in the captured search docs, OAI page, API index or doc.hal.science home (tried docs.txt, extra-oai, extra-swagger, extra-docs; legal-notice, hal-data and droits URLs returned 404). The OAI page only says metadata is usable within intellectual property law and not for commercial use; this is stated for OAI harvesting, not for the search API."
+}

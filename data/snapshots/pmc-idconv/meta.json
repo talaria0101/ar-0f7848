@@ -24,5 +24,31 @@
   "fetched_at": "2026-10-20T01:31:42+00:00",
   "ratelimit_headers": {},
   "text_bytes": 401
+ },
+ "extra": {
+  "ftp": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/tools/ftp/",
+   "final_url": "https://pmc.ncbi.nlm.nih.gov/tools/ftp/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 81308,
+   "truncated": false,
+   "sha256": "9da3e868eadf31111b43fc917dc2d0843b8b3f272fb951554a47e7b1536a368a",
+   "fetched_at": "2026-10-20T01:36:43+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 3251
+  },
+  "copyright": {
+   "url": "https://pmc.ncbi.nlm.nih.gov/about/copyright/",
+   "final_url": "https://pmc.ncbi.nlm.nih.gov/about/copyright/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 85464,
+   "truncated": false,
+   "sha256": "ceced8e4e08d9a426ee2b49dc1c1cf9260a791906731ea2d3a56af83621c0d31",
+   "fetched_at": "2026-10-20T01:36:44+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 7040
+  }
  }
 }

@@ -1,0 +1,24 @@
+IEEE Xplore - Getting Started 
+ IEEE Xplore 
+ Sign In 
+ Register 
+ Getting Started 
+ Step 1: Register for a User Account 
+ In the top right corner of this page above the search box, click Register and complete the form. You will receive an email with a link to confirm your registration. Ignore this step if you have already registered and have a user account.. 
+ Step 2: Obtain an API Key 
+ You will need an API key to start using the API. Tell us about your application and/or how you plan to use the IEEE Xplore API and provide your organization's website URL. NOTE: Only one API key per application. API keys are issued during business hours (8am-5pm) Eastern time, Monday - Friday. Depending on the nature of your application, it may take longer to issue API keys. 
+ Step 3: Review the Interactive Documentation 
+ If you're not ready to create your own API queries, you can "test drive" the IEEE Xplore API with our Dynamic Query Tool . We will preload your API key so all you need to do is choose a call and click "Try It". 
+ Step 4: Review the API Documentation 
+ If you are ready to write your own API queries, check out the Documentation .  
+ Getting Started 
+ Dynamic Query Tool 
+ Documentation 
+ SDKs 
+ Contact Us 
+ Terms of Use 
+ IEEE.org 
+ Contact Us 
+ Terms of Use 
+ IEEE.org 
+ Copyright IEEE - All rights reserved.

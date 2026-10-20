@@ -1,0 +1,49 @@
+{
+ "slug": "doaj",
+ "auth": "none",
+ "auth_note": "Anonymous GET to the public search route returned results; API keys are only for publishers submitting data.",
+ "cost": "not established",
+ "rate_limit": "two requests per second on all API routes, bursts of up to five queued requests per user",
+ "data_license": "CC0",
+ "bulk_access": "OAI-PMH feed and a public data dump (access granted case-by-case by emailing the platform manager); journal CSV also listed",
+ "probe_status": 200,
+ "probe_observation": "Returned JSON with total 896398 for query 'test', page 1, pageSize 1, and one article result.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "{\"total\": 896398, \"page\": 1, \"pageSize\": 1",
+   "snapshot": "data/snapshots/doaj/probe.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "API keys are usually only available to publishers who submit data to DOAJ.",
+   "snapshot": "data/snapshots/doaj/docs.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "There is a rate limit of two requests per second on all API routes. \"Bursts\" are permitted, which means up to five requests per user are queued by the system",
+   "snapshot": "data/snapshots/doaj/docs.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "Copyrights and related rights for article metadata waived via CC0 1.0 Universal (CC0) Public Domain Dedication .",
+   "snapshot": "data/snapshots/doaj/docs.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "access to the dumps is granted on a case-by-case basis. If you would like access, please email the platform manager",
+   "snapshot": "data/snapshots/doaj/extra-dump.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "OAI-PMH",
+   "snapshot": "data/snapshots/doaj/docs.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "\"query\": \"test\"",
+   "snapshot": "data/snapshots/doaj/probe.txt"
+  }
+ ],
+ "not_established": "Cost/pricing of API use is not stated on captured pages (docs, FAQ, terms, data-dump page); whether anonymous rate limit differs from keyed is not stated; OAI-PMH endpoint URL not captured."
+}

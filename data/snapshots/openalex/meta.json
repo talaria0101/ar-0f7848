@@ -34,5 +34,43 @@
    "X-RateLimit-Reset": "80907"
   },
   "text_bytes": 18234
+ },
+ "extra": {
+  "pricing": {
+   "url": "https://help.openalex.org/hc/en-us/articles/24397762024087-Pricing",
+   "final_url": "https://help.openalex.org/access/pricing/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 33098,
+   "truncated": false,
+   "sha256": "84d2adbaf980ab045abd2c6807a79ec85c24320c9ce5983b60bb6eb14796c07a",
+   "fetched_at": "2026-10-20T01:35:56+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 5125
+  },
+  "llms": {
+   "url": "https://help.openalex.org/llms.txt",
+   "final_url": "https://help.openalex.org/llms.txt",
+   "status": 200,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 34907,
+   "truncated": false,
+   "sha256": "7167ae5565c7969cf22708f8f0c84aaf132bc9b4404f25bee4d4be37fbfb3fb9",
+   "fetched_at": "2026-10-20T01:35:56+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 34772
+  },
+  "dl": {
+   "url": "https://docs.openalex.org/download-all-data/openalex-snapshot",
+   "final_url": "https://help.openalex.org/access/snapshot/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 48607,
+   "truncated": false,
+   "sha256": "702cbc5a63b309c877ef6e7aaef246b74a021f4ea91fb4610bf61d04488149f1",
+   "fetched_at": "2026-10-20T01:35:57+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 10859
+  }
  }
 }

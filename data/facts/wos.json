@@ -1,0 +1,34 @@
+{
+ "slug": "wos",
+ "auth": "key-approval",
+ "auth_note": "Clarivate API key required; subscription requests need approval that may take a few days.",
+ "cost": "freemium",
+ "rate_limit": "not established",
+ "data_license": "not established",
+ "bulk_access": "none documented",
+ "probe_status": 401,
+ "probe_observation": "The anonymous probe returned HTTP 401 JSON: {\"message\":\"No API key found in request\", ...}.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "Note: The approval process may take a few days.",
+   "snapshot": "data/snapshots/wos/docs.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "\"auth\":\"key-auth\"",
+   "snapshot": "data/snapshots/wos/extra-starter.txt"
+  },
+  {
+   "claim": "cost",
+   "quote": "\"plans\":[\"wos-starter-free\",\"wos-starter-advanced\",\"wos-starter-integration\",\"publisher-plan\",\"internal-plan\"]",
+   "snapshot": "data/snapshots/wos/extra-starter.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "No API key found in request",
+   "snapshot": "data/snapshots/wos/probe.txt"
+  }
+ ],
+ "not_established": "Numeric rate limits per plan (plan pages 404 or require login: tried developer.clarivate.com/apis/wos-starter/plans 404, swagger.json 401, GitHub client README has no limits). Data license of returned metadata. Whether the free plan is approval-gated vs instant (docs only say approval may take a few days). Bulk/data-feed route: a separate Data Feed API is listed but its terms were not captured."
+}

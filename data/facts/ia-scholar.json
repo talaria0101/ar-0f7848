@@ -1,0 +1,39 @@
+{
+ "slug": "ia-scholar",
+ "auth": "unreachable",
+ "auth_note": "Probe and docs hosts (api.fatcat.wiki, guide.fatcat.wiki) were unreachable from this sandbox, so read access was not observed; docs only state that mutating calls need a Bearer token.",
+ "cost": "not established",
+ "rate_limit": "not established",
+ "data_license": "CC0",
+ "bulk_access": "https://archive.org/details/fatcat_snapshots_and_exports (database dumps, changelog, identifier snapshots, entity exports)",
+ "probe_status": 0,
+ "probe_observation": "Probe returned no API response: the sandbox proxy error 'URLError: Tunnel connection failed: 502 upstream unreachable' (status 0), meaning unreachable from this sandbox, not API down.",
+ "evidence": [
+  {
+   "claim": "probe",
+   "quote": "Tunnel connection failed: 502 upstream unreachable",
+   "snapshot": "data/snapshots/ia-scholar/probe.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "The Fatcat catalog content license is the Creative Commons Zero (\"CC-0\") license, which is effectively a public domain grant.",
+   "snapshot": "data/snapshots/ia-scholar/extra-policies.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "All exports and dumps get uploaded to the Internet Archive under the [\"Fatcat Database Snapshots and Bulk Metadata Exports\"](https://archive.org/details/fatcat_snapshots_and_exports?&sort=-publicdate) collection.",
+   "snapshot": "data/snapshots/ia-scholar/extra-bulk.txt"
+  },
+  {
+   "claim": "other",
+   "quote": "All mutating API calls (POST, PUT, DELETE HTTP verbs) require token-based authentication using an HTTP Bearer token.",
+   "snapshot": "data/snapshots/ia-scholar/extra-ghdoc.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "Tunnel connection failed: 502 upstream unreachable",
+   "snapshot": "data/snapshots/ia-scholar/docs.txt"
+  }
+ ],
+ "not_established": "Read-access auth (probe host api.fatcat.wiki and guide.fatcat.wiki blocked by sandbox egress, 502); cost; rate limits (none in captured fatcat guide pages); whether Bearer tokens are free."
+}

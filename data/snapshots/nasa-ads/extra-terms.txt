@@ -1,0 +1,132 @@
+Terms of Use 
+  ads help
+ About 
+ About ADS
+ What's New
+ ADS Blog
+ ADS Help Pages
+ ADS Legacy
+ Services
+ Careers@ADS
+ astrophysics  data system
+ Getting Started 
+ Searching for a Specific Paper 
+ Building a library and calculating metrics 
+ Beginning a literature search 
+ Searching for papers by an author with a common name 
+ Making a Query 
+ Search Syntax 
+ Citation and Reference Operators 
+ Second-Order Queries 
+ Filter Your Search 
+ Positional Field Searches 
+ Comprehensive List of Solr Fields & Operators 
+ (Advanced) Search Syntax 
+ (Advanced) Author Search 
+ Search Results 
+ Sort Results 
+ Metrics 
+ Export Results 
+ Author Affiliation 
+ Visualize Results 
+ Quick Links 
+ Article View 
+ Bibcodes 
+ Journal Macros 
+ User Preferences 
+ Library Link Servers 
+ myADS 
+ ADS Libraries 
+ Creating and editing a library 
+ Making your library public and managing permissions 
+ Set Operations 
+ Visualisations, Metrics, and Exports 
+ Citation Helper 
+ Library Example 
+ ORCID 
+ Claiming papers in ORCID 
+ Searching for papers in ORCID 
+ Data & Curation 
+ Data & Curation Frequently Asked Questions (FAQs) 
+ Conference Proceedings 
+ Submissions Formatting 
+ Journal Inclusion 
+ ADS Curation Model 
+ Technical Standards for Scanning Legacy Literature 
+ Bibgroups 
+ Troubleshooting 
+ How to Generate a HAR File 
+ Videos 
+ Welcome to the New ADS 
+ Introduction to the New ADS 
+ Modernizing ADS Infrastructure: From 1992 to 2019 
+ Searchable Full Text in the new ADS 
+ Working with ADS Libraries 
+ Policies 
+ Terms of Use 
+ Privacy Policy 
+ Accessibility Policy 
+ Name Change Policy 
+ Update Policy 
+ ADS Mirror Links Policy 
+ API Rate Limit Policy 
+ AI Policy 
+ What's New 
+ Frequently Asked Questions 
+ Using the ADS API 
+ #ADSHelp 
+ Handouts 
+ Legacy Services 
+ Logos 
+ Edit help pages on GitHub 
+ toggle sidebar
+ ADS Terms and Conditions of Use 
+ Use of ADS services implies that the user has read and agrees to the following terms and conditions: 
+ Full-text articles and abstracts of papers available from ADS databases are copyrighted by the respective publishers and are subject to all applicable copyright protection under the laws of the United States and other countries. The reproduction of full-text articles or abstracts requires express written permission from the publisher. 
+ Individual users may download, store and print copies of such abstracts and articles for personal use only and provided that such copies are not sold or redistributed. 
+ Users may not perform systematic downloads of articles, abstracts, or tables of contents for any purpose, whether commercial or not, without the written permission of ADS. This includes indiscriminate, mass downloads of search results and the use of robots. 
+ ADS makes reasonable efforts to ensure that the contents of its archives are accurate. However, ADS does not guarantee the completeness, accuracy or usefulness of its databases and search interfaces. ADS is not to be considered liable for any delay, downtime, or other failure of performance in providing its services. 
+ Acknowledgements 
+ If you wish to acknowledge the services provided by ADS in a publication, kindly use a phrase such as the following: 
+ This research has made use of the Astrophysics Data System, funded by NASA under Cooperative Agreement 80NSSC25M7105. 
+ ADS API Terms and Conditions of Use 
+ The ADS encourages the use of its API to create and release new and interesting ways to access and use the information held in our corpus and promotes tools made by the community, for the community. 
+ However, to stop abuse of our systems, and to ensure ADS runs smoothly for other users and developers, there are some rules and regulations that API developers must follow. 
+ Use of ADS API implies that the developer has read and agrees to the following terms and conditions: 
+ Do not try to circumvent the restrictions placed on the API client tokens (e.g., rate limits and scopes) so that you can exceed your allowed quota of requests to our services. Contact us at adshelp@cfa.harvard.edu if you believe you need your allowed daily quota of requests to our system increased. Generally, we are able to help you modify your scripts to access our API in a more efficient manner and remain within the standard quota. On rare occasions, as we deem necessary and with proper justification, we are able to grant exceptional and temporary quota increases within the limits of our legal publisher agreements. In any case, access cannot violate the rest of our API terms of use or create a risk for the reliability and stability of our system. Also, do not try to access content that has been restricted. If ADS thinks you are trying to abuse its API in this way, we will have to block or delete your account. 
+ You won’t try and reproduce the core experience that is given by ADS and its services - instead your should give us feedback for your suggested changes. You also shouldn’t redistribute any data you obtain from our services to third-parties. 
+ You won’t try to create a partial or full copy of the data maintained and made available by the API, either by systematically downloading or crawling our content. If you need to download and store ADS data returned by the API on a regular basis, you should contact us first. Failure to do so will lead to the suspension or deletion of your account. 
+ You should expect that ADS may change, or update the API periodically. Unfortunately, this could lead to some of your services not working due to backwards-incompatability issues, and you should handle this appropriately. Please pay attention to our news posts for possible information on API changes. 
+ It should be clear to you that if we suspect any abuse of an account that does not directly fall into the specific cases mentioned in the API terms of use, that we will still have to either suspend or delete your account. If this situation does arise, you will be notified with the e-mail address you used to sign-up with. 
+ If you feel that you do not agree with our API terms of use, then you should no longer access the API. By using the API, you are agreeing with the API terms of use outlined on this page. 
+ In the case of a dispute, we retain the possibility to share your contact information with other people who are affected by your use of the API, including users and providers of ADS data. 
+ We encourage new applications, logos based on ADS, and community content. As such, you acknowledge that we may use your name, logos, content, and information, including screenshots and video captures of your application, to demonstrate or feature your use of ADS API, worldwide and royalty-free. 
+ To ensure our services run smoothly, and to build services based on usage from our developer community, you understand and acknolwedge that ADS will collect certain private information about you. The information we collect is described in our privacy policy , and if you do not agree with it, then you should stop using the ADS API. 
+ As an API user, you and your application, should comply with all applicable laws or regulations. Do not violate any rights of any person, including but not limited to intellectual property rights, rights of privacy, or rights of personality. 
+ Enjoy using ADS API, and please let us know at adshelp@cfa.harvard.edu if you come up with a new and interesting app! 
+ © The SAO Astrophysics Data System
+ adshelp[at]cfa.harvard.edu
+ The ADS is operated by the Smithsonian Astrophysical Observatory under
+ NASA Cooperative Agreement 80NSSC21M0056 
+ *The material contained in this document is based upon work supported by
+ a National Aeronautics and Space Administration (NASA) grant or
+ cooperative agreement. Any opinions, findings, conclusions or
+ recommendations expressed in this material are those of the author and
+ do not necessarily reflect the views of NASA.
+ Resources 
+ About ADS
+ ADS Help
+ What's New
+ Careers@ADS
+ Accessibility
+ Social 
+ @adsabs
+ ADS Blog
+ Project 
+ Switch to basic HTML 
+ Privacy Policy 
+ Terms of Use 
+ Smithsonian Astrophysical Observatory 
+ Smithsonian Institution 
+ NASA 
+ 🌓

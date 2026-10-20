@@ -24,5 +24,91 @@
   "fetched_at": "2026-10-20T01:31:38+00:00",
   "ratelimit_headers": {},
   "text_bytes": 76
+ },
+ "extra": {
+  "fatcat": {
+   "url": "https://api.fatcat.wiki/",
+   "final_url": "https://api.fatcat.wiki/",
+   "status": 0,
+   "content_type": "",
+   "bytes": 76,
+   "truncated": false,
+   "sha256": "827902037efde5f0988e94d8c881353fe54c846b290a0e59ef00ade936917d7e",
+   "fetched_at": "2026-10-20T01:34:07+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 76
+  },
+  "guide": {
+   "url": "https://guide.fatcat.wiki/",
+   "final_url": "https://guide.fatcat.wiki/",
+   "status": 0,
+   "content_type": "",
+   "bytes": 76,
+   "truncated": false,
+   "sha256": "827902037efde5f0988e94d8c881353fe54c846b290a0e59ef00ade936917d7e",
+   "fetched_at": "2026-10-20T01:34:12+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 76
+  },
+  "ghdoc": {
+   "url": "https://raw.githubusercontent.com/internetarchive/fatcat/master/guide/src/http_api.md",
+   "final_url": "https://raw.githubusercontent.com/internetarchive/fatcat/master/guide/src/http_api.md",
+   "status": 200,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 3674,
+   "truncated": false,
+   "sha256": "7e0a9f3c5fa21ae39ce21db10cda3354bf68786d12ea998b81c37ef53e251b4d",
+   "fetched_at": "2026-10-20T01:34:17+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 3672
+  },
+  "scholar": {
+   "url": "https://scholar.archive.org/api",
+   "final_url": "https://scholar.archive.org/api",
+   "status": 404,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 179,
+   "truncated": false,
+   "sha256": "5547992afdadb59737c5c0feb1a35dff294cd27145bf290c031737ecf8a2577d",
+   "fetched_at": "2026-10-20T01:34:18+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 74
+  },
+  "license": {
+   "url": "https://raw.githubusercontent.com/internetarchive/fatcat/master/guide/src/overview.md",
+   "final_url": "https://raw.githubusercontent.com/internetarchive/fatcat/master/guide/src/overview.md",
+   "status": 200,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 620,
+   "truncated": false,
+   "sha256": "d2759f4ca71037fd83cad3b05a87893f87545b9a3a1e56fcb92448101d95f2d3",
+   "fetched_at": "2026-10-20T01:34:34+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 617
+  },
+  "bulk": {
+   "url": "https://raw.githubusercontent.com/internetarchive/fatcat/master/guide/src/bulk_exports.md",
+   "final_url": "https://raw.githubusercontent.com/internetarchive/fatcat/master/guide/src/bulk_exports.md",
+   "status": 200,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 3494,
+   "truncated": false,
+   "sha256": "982fb1dd6e3df735c44e976c288462b916d168315bddeb0bb104e6e582d57e03",
+   "fetched_at": "2026-10-20T01:34:34+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 3492
+  },
+  "policies": {
+   "url": "https://raw.githubusercontent.com/internetarchive/fatcat/master/guide/src/policies.md",
+   "final_url": "https://raw.githubusercontent.com/internetarchive/fatcat/master/guide/src/policies.md",
+   "status": 200,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 3120,
+   "truncated": false,
+   "sha256": "a19d94ef7b0d0ce9d54f23253838fdecf20a991f4349b47dd4dbc514d6439406",
+   "fetched_at": "2026-10-20T01:34:35+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 3118
+  }
  }
 }

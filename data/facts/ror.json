@@ -1,0 +1,49 @@
+{
+ "slug": "ror",
+ "auth": "none",
+ "auth_note": "The docs say no registration is currently required, and the anonymous probe returned results.",
+ "cost": "free",
+ "rate_limit": "2000 requests in a 5-minute period per IP address",
+ "data_license": "CC0 1.0",
+ "bulk_access": "Data dump on Zenodo: https://doi.org/10.5281/zenodo.6347574",
+ "probe_status": 200,
+ "probe_observation": "The probe returned JSON starting with number_of_results 34 and an items array of organization records for query 'harvard'.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "No registration is currently required to use the ROR API",
+   "snapshot": "data/snapshots/ror/docs.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "{\"number_of_results\":34,\"time_taken\":5,\"items\":[",
+   "snapshot": "data/snapshots/ror/probe.txt"
+  },
+  {
+   "claim": "cost",
+   "quote": "The entire ROR registry dataset is freely available on Zenodo at https://doi.org/10.5281/zenodo.6347574",
+   "snapshot": "data/snapshots/ror/extra-data-dump.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "the rate limit is a maximum of 2000 requests in a 5-minute period per IP address",
+   "snapshot": "data/snapshots/ror/docs.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "All ROR IDs and metadata in the data dump are provided under the Creative Commons CC0 1.0 Universal Public Domain Dedication",
+   "snapshot": "data/snapshots/ror/extra-data-dump.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "The entire ROR registry dataset is freely available on Zenodo at https://doi.org/10.5281/zenodo.6347574",
+   "snapshot": "data/snapshots/ror/extra-data-dump.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "{\"number_of_results\":34,\"time_taken\":5,\"items\":[",
+   "snapshot": "data/snapshots/ror/probe.txt"
+  }
+ ],
+ "not_established": "A separate terms page (ror.org/about/terms) was not captured: it returned HTTP 429 (Vercel Security Checkpoint challenge). The meta.json docs capture shows x-ratelimit-limit 100 headers, which differs from the documented 2000 per 5 minutes; not resolved. The CC0 license is documented for the data dump, not explicitly for API responses. Cost 'free' rests on the dump page and no-registration statement; no pricing page was found."
+}

@@ -1,0 +1,265 @@
+New API Keys for the E-utilities - NCBI Insights 
+ Skip to content 
+ News about NCBI resources and events 
+ Search 
+ NCBI Insights 
+ New API Keys for the E-utilities 
+ This post was updated on February 2, 2017. 
+ If you regularly use the E-utilities API, we have important news for you: NCBI is now providing API keys for the E-utilities! After May 1, 2018, NCBI will limit your access to the E-utilities unless you have one of these keys. Obtaining an API key is quick, and simple, and will allow you to access NCBI data faster. If you don’t have an API key, E-utilities will still work, but you may be limited to fewer requests than allowed with an API key. 
+ What is an API key? 
+ An API key is a unique string that you include in your HTTP requests that identifies you to NCBI servers. Think of the API key as a ‘turbocharger’ that lets you get more data, faster, from NCBI. 
+ Why are we doing this? 
+ Sustainability . The E-utilities API is a free service open to the public and will continue to be; however, without any limits, a single user making too many requests could slow down the service for others. Limiting usage for non-API key users will keep the service faster for everyone. 
+ Security . Internet security threats abound, and having key-restricted access better enables us to protect the service from malicious attacks and other forms of abuse. 
+ Performance.  API keys give us greater insight into how the community is using the E-utilities, thereby assisting us in making them a better service for you. 
+ Who needs to get a key? 
+ For most casual use, you won’t need an API key at all – you only need to get one if you expect to access E-utilities at a rate of more than three requests per second from a single computer (IP address). Even for higher rates of usage, you won’t need a key before May 1, 2018. After May 1, 2018, any computer (IP address) that submits more than three E-utility requests per second will receive an error message. This limit applies to any combination of requests to EInfo, ESearch, ESummary, EFetch, ELink, EPost, ESpell, and EGquery. Just to be clear, this rate applies only to when we receive the request, not to how long the request executes. You can have more than three concurrent requests running as long as you don’t initiate more than three requests in any one-second window. Even though you won’t need a key before May 1,  keys are already available. You can get one now and begin using it right away. 
+ How do I get a key? 
+ First, you will need an NCBI account. Registering is easy. If you already have an NCBI account, you’re good to go. 
+ To create the key, go to the “Settings” page of your NCBI account. (Hint: after signing in, simply click on your NCBI username in the upper right corner of any NCBI page.) 
+ You’ll see a new “API Key Management” area. Click the “Create an API Key” button, and copy the resulting key. Use the key by adding the parameter api_key to any E-utilities request. 
+ Example: Let’s say that you create a key and its value is “ABCD123”. This would be a simple EInfo request that includes your key: 
+ https://www.ncbi.nlm.nih.gov/entrez/eutils/einfo.fcgi?db=pubmed &api_key=ABCD123 
+ Now that I have a key, are there still access limits? 
+ Yes. By default, your key will increase the limit to 10 requests/second for all activity from that key. If we receive requests at a higher frequency that include the same key, all requests using that key will receive an error message. If you need higher rates of access, please contact us and we can discuss your situation. 
+ Keep in mind that the request limit applies to all requests using a given key, regardless of the IP address. So if multiple computers are using the same key, then if the  sum of their activity causes the request rate to exceed 10 per second, then  all of those computers will receive errors. 
+ Here’s what you need to remember: 
+ Requests without a key will be rate-limited by all activity from their IP address. 
+ Requests with a key will be rate-limited by all activity from that key.  
+ Here’s another scenario: let’s say computer A and B both share the same IP address, but only A is using a key. A posts 7 requests / second, while B posts 2 requests / second. A will be fine, but B will receive errors. Why? Since B does not include a key, B’s requests are limited by the IP address, which also includes A’s activity. So the total for that IP is 9 requests / second, which exceeds the limit of three requests / second, resulting in errors for B. A does not receive errors because A’s activity is limited by A’s key, which is only producing 7 requests / second, below the limit of 10 requests / second. 
+ How many keys can I get? 
+ We allow only one API key for each NCBI account. If for any reason you want to replace an existing key with a new one, you can do that on your NCBI account settings page. 
+ I author software that accesses the E-utilities, and this software is used by other people. Do those users need keys? 
+ Yes, but only if your software allows them to post more than three requests/second. For such cases, we recommend that you allow users to enter their own API key as a setting in the software.  Please contact us if you have questions or for more information on this approach. 
+ Questions? 
+ Please contact us if you have any questions or concerns about these new keys, and stay tuned to this blog and our documentation for updates. 
+ Share this post: 
+ Share on LinkedIn (Opens in new window) 
+ LinkedIn 
+ Share on X (Opens in new window) 
+ X 
+ Share on Facebook (Opens in new window) 
+ Facebook 
+ Print (Opens in new window) 
+ Print 
+ Email a link to a friend (Opens in new window) 
+ Email 
+ Like this: Like Loading… What's New 
+ NCBI Staff November 2, 2017 December 31, 2020 
+ API e-utilities 
+ Post navigation 
+ Variation feature changes in NCBI Reference Sequences coming in 2018 November 8 NCBI Minute: New API keys for better E-utilities & EDirect access to NCBI data 
+ 11 thoughts on “ New API Keys for the E-utilities ” 
+ Pingback: November 8 NCBI Minute: New API keys for better E-utilities & EDirect access to NCBI data | NCBI Insights 
+ Pingback: Weekly Postings | The MARquee 
+ Pingback: New API Keys for the E-utilities – Science 
+ Pingback: Links 2/8/18 | Mike the Mad Biologist 
+ Pingback: NLM Technical Bulletin, Mar-Apr 2018, NCBI Minute Webinar: Upcoming Testing Periods for the New NCBI API Keys on March 14, 2018 [Cancelled] – Heathy Casa 
+ Pingback: Testing Periods for New API Keys | NCBI Insights 
+ carl lawyer MD says: 
+ May 3, 2018 at 4:41 pm 
+ terrible problem with API keys interfering with our Parkinsons Disease research. We will only use Uniprot from now on. 
+ Please discontinue API key implementation.”Now that I have a key, are there still access limits? 
+“Yes. By default, your key will increase the limit to 10 requests/second for all activity from that key.” 
+ Loading... 
+ Reply 
+ Pingback: Release Plan for E-utility API Keys | NCBI Insights 
+ Micheal says: 
+ March 12, 2019 at 10:39 am 
+ Found this piece useful, thanks 
+ Loading... 
+ Reply 
+ Pingback: NCBI datasets and genome assembly data | EdwardsLab 
+ Pingback: Vortex scripting literature searches – Macs in Chemistry 
+ Leave a Reply Cancel reply Comment Name Email Website 
+ Δ 
+ About NCBI 
+ About This Blog 
+ NCBI Website 
+ Mailing Lists NCBI Outreach Events 
+ Upcoming activities Learn about webinars, workshops, codeathons, conferences and other events where you can engage with NCBI staff. 
+ Searchable events Find upcoming and past events which have links to recordings, teaching materials and websites to help you learn more about NCBI resources. 
+ NCBI Insights Archives NCBI Insights Archives 
+ Select Month 
+ October 2026 
+ September 2026 
+ August 2026 
+ July 2026 
+ June 2026 
+ May 2026 
+ April 2026 
+ March 2026 
+ February 2026 
+ January 2026 
+ December 2025 
+ September 2025 
+ August 2025 
+ July 2025 
+ June 2025 
+ May 2025 
+ April 2025 
+ March 2025 
+ February 2025 
+ January 2025 
+ December 2024 
+ November 2024 
+ October 2024 
+ September 2024 
+ August 2024 
+ July 2024 
+ June 2024 
+ May 2024 
+ April 2024 
+ March 2024 
+ February 2024 
+ January 2024 
+ December 2023 
+ November 2023 
+ October 2023 
+ September 2023 
+ August 2023 
+ July 2023 
+ June 2023 
+ May 2023 
+ April 2023 
+ March 2023 
+ February 2023 
+ January 2023 
+ December 2022 
+ November 2022 
+ October 2022 
+ September 2022 
+ August 2022 
+ July 2022 
+ June 2022 
+ May 2022 
+ April 2022 
+ March 2022 
+ February 2022 
+ January 2022 
+ December 2021 
+ November 2021 
+ October 2021 
+ September 2021 
+ August 2021 
+ July 2021 
+ June 2021 
+ May 2021 
+ April 2021 
+ March 2021 
+ February 2021 
+ January 2021 
+ December 2020 
+ November 2020 
+ October 2020 
+ September 2020 
+ August 2020 
+ July 2020 
+ June 2020 
+ May 2020 
+ April 2020 
+ March 2020 
+ February 2020 
+ January 2020 
+ December 2019 
+ November 2019 
+ October 2019 
+ September 2019 
+ August 2019 
+ July 2019 
+ June 2019 
+ May 2019 
+ April 2019 
+ March 2019 
+ February 2019 
+ January 2019 
+ December 2018 
+ November 2018 
+ October 2018 
+ September 2018 
+ August 2018 
+ July 2018 
+ June 2018 
+ May 2018 
+ April 2018 
+ March 2018 
+ February 2018 
+ January 2018 
+ December 2017 
+ November 2017 
+ October 2017 
+ September 2017 
+ August 2017 
+ July 2017 
+ June 2017 
+ May 2017 
+ April 2017 
+ March 2017 
+ February 2017 
+ January 2017 
+ December 2016 
+ November 2016 
+ October 2016 
+ September 2016 
+ July 2016 
+ May 2016 
+ March 2016 
+ February 2016 
+ January 2016 
+ December 2015 
+ October 2015 
+ September 2015 
+ August 2015 
+ July 2015 
+ May 2015 
+ April 2015 
+ March 2015 
+ February 2015 
+ December 2014 
+ October 2014 
+ August 2014 
+ June 2014 
+ May 2014 
+ April 2014 
+ March 2014 
+ January 2014 
+ December 2013 
+ November 2013 
+ October 2013 
+ September 2013 
+ July 2013 
+ June 2013 
+ May 2013 
+ April 2013 
+ March 2013 
+ February 2013 
+ January 2013 
+ NCBI News Archive 1994-2017 
+ Contact NCBI on 
+ Connect with NLM 
+ National Library of Medicine 
+ 8600 Rockville Pike 
+ Bethesda, MD 20894 
+ Copyright 
+ FOIA 
+ Privacy 
+ HHS Vulnerability Disclosure 
+ Help 
+ Accessibility 
+ Careers 
+ NLM 
+ NIH 
+ HHS 
+ USA.gov 
+ Back To Top 
+ Discover more from NCBI Insights 
+ Subscribe now to keep reading and get access to the full archive. 
+ Type your email… 
+ Subscribe 
+ Continue reading 
+ Loading Comments... 
+ Write a Comment... 
+ Email (Required) 
+ Name (Required) 
+ Website 
+ %d

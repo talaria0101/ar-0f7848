@@ -1,0 +1,29 @@
+{
+ "slug": "hathitrust",
+ "auth": "none",
+ "auth_note": "Bibliographic API probe answered HTTP 200 with JSON without any key or login.",
+ "cost": "not established",
+ "rate_limit": "not established",
+ "data_license": "not established",
+ "bulk_access": "OAI-PMH or HathiFiles (named only by a third-party reference page, not by HathiTrust docs in this sandbox)",
+ "probe_status": 200,
+ "probe_observation": "The probe returned JSON starting {\"records\":{\"000578050\":... for record \"Infinite series\" (OCLC 424023) with an items array.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "\"titles\":[\"Infinite series\"]",
+   "snapshot": "data/snapshots/hathitrust/probe.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "Bulk data**: Use HathiFiles or OAI-PMH instead",
+   "snapshot": "data/snapshots/hathitrust/extra-kltng.txt"
+  },
+  {
+   "claim": "other",
+   "quote": "Sorry, your attempt to access HathiTrust has been blocked.",
+   "snapshot": "data/snapshots/hathitrust/docs.txt"
+  }
+ ],
+ "not_established": "All official hathitrust.org docs pages (docs, bibliographic-api, old.www bib_api/data_api, integrate-records, hathifiles) returned a Cloudflare 403 block page from this sandbox, so cost, documented rate limits, data license and bulk dump URLs are not established from official text. A third-party GitHub reference says no documented limits and OAI-PMH/HathiFiles for bulk; not verified against HathiTrust. Data API (OAuth) not probed."
+}

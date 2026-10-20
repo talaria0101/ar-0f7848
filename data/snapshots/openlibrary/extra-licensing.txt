@@ -1,0 +1,158 @@
+Developer Center / Licensing | Open Library 
+ Skip to main content 
+ It looks like you're offline. 
+ Donate ♥ 
+ English 
+ العربية 
+ Azərbaycanca 
+ Čeština 
+ Deutsch 
+ English 
+ Español 
+ Français 
+ हिंदी 
+ Hrvatski 
+ Italiano 
+ 한국어 
+ Português 
+ Română 
+ Sardu 
+ తెలుగు 
+ Українська 
+ 中文 
+ Filipino 
+ Page Status 
+ My Books
+ Browse
+ Subjects 
+ Browse books by topic 
+ Trending 
+ Most popular right now 
+ Library Explorer 
+ Browse the virtual shelves 
+ Lists 
+ Reader-curated collections 
+ Collections
+ K-12 Student Library
+ Book Talks
+ Random Book
+ Advanced Search
+ Search 
+ Log In 
+ Sign Up 
+ My Open Library 
+ Log In 
+ Sign Up 
+ Browse 
+ Subjects 
+ Trending 
+ Library Explorer 
+ Lists 
+ Collections 
+ K-12 Student Library 
+ Book Talks 
+ Random Book 
+ Advanced Search 
+ Contribute 
+ Improve the Catalog 
+ Add a Book 
+ Recent Community Edits 
+ Resources 
+ Help & Support 
+ Developer Center 
+ Librarians Portal 
+ My Books
+ Browse
+ Subjects 
+ Browse books by topic 
+ Trending 
+ Most popular right now 
+ Library Explorer 
+ Browse the virtual shelves 
+ Lists 
+ Reader-curated collections 
+ Collections
+ K-12 Student Library
+ Book Talks
+ Random Book
+ Advanced Search
+ Last edited by Mek 
+ June 27, 2021 | History 
+ Edit 
+ Developer Center / Licensing 
+ Developer Center (Home) 
+ | 
+ Web API 
+ | 
+ Client Library 
+ | 
+ Data Dumps 
+ | 
+ Source Code 
+ | 
+ Report an Issue 
+ | 
+ Licensing 
+ The Internet Archive does not assert any new copyright or other proprietary rights over any of the material in the Open Library database. There may be existing rights issues on some contributions and in some jurisdictions. When it comes to community projects, the legal issues are, frankly, very confusing, but we are attempting to make a database that can be openly used for a wide variety of purposes. We appreciate all that have contributed.
+ History
+ Created November 21, 2009 
+ 8 revisions 
+ June 27, 2021 
+ Edited by Mek 
+ March 10, 2010 
+ Edited by Lance Arthur 
+Remove subnav (in macro)
+ March 6, 2010 
+ Edited by brewster 
+ November 21, 2009 
+ Edited by George 
+ November 21, 2009 
+ Created by George 
+ Open Library 
+ Vision 
+ Volunteer 
+ Partner With Us 
+ Careers 
+ Blog 
+ Terms of Service 
+ Donate 
+ Discover 
+ Home 
+ Books 
+ Authors 
+ Subjects 
+ Collections 
+ Advanced Search 
+ Return to Top 
+ Develop 
+ Developer Center 
+ API Documentation 
+ Bulk Data Dumps 
+ Writing Bots 
+ Help 
+ Help Center 
+ Contact Us 
+ Suggesting Edits 
+ Add a Book 
+ Release Notes 
+ Change Website Language 
+ العربية 
+ Azərbaycanca 
+ Čeština 
+ Deutsch 
+ English 
+ Español 
+ Français 
+ हिंदी 
+ Hrvatski 
+ Italiano 
+ 한국어 
+ Português 
+ Română 
+ Sardu 
+ తెలుగు 
+ Українська 
+ 中文 
+ Filipino 
+ Open Library is an initiative of the Internet Archive , a 501(c)(3) non-profit, building a digital library of Internet sites and other cultural artifacts in digital form. Other projects include the Wayback Machine , archive.org and archive-it.org 
+ version d52436c

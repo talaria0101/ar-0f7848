@@ -1,0 +1,54 @@
+{
+ "slug": "datacite",
+ "auth": "none",
+ "auth_note": "Public API (retrieval) needs no authentication; authentication is only for creating/updating DOIs. Anonymous probe returned data.",
+ "cost": "not established",
+ "rate_limit": "Unidentified: 500 requests per 5 minutes per IP address; identified (User-Agent email or mailto=): 1000 per 5 minutes; authenticated: 3000 per 5 minutes; 429 when limited.",
+ "data_license": "CC0 (documented for metadata in the DataCite Public Data File)",
+ "bulk_access": "https://datafiles.datacite.org/ (DataCite Public Data File, annual); docs also list a Monthly Data File and an OAI-PMH guide",
+ "probe_status": 200,
+ "probe_observation": "The probe returned JSON starting with {\"data\":[{\"id\":\"10.15468/dl.rc9muf\",\"type\":\"dois\" with one DOI record (GBIF Occurrence Download).",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "{\"data\":[{\"id\":\"10.15468/dl.rc9muf\",\"type\":\"dois\",\"attributes\":{\"doi\":\"10.15468/dl.rc9muf\"",
+   "snapshot": "data/snapshots/datacite/probe.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "Accessed **without** authentication: used for **retrieving metadata**",
+   "snapshot": "data/snapshots/datacite/extra-api-guide.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "Unidentified | The request does not contain: a valid `Authorization` header; *or* a `User-Agent` header with an email address; *or* a request URL with a `mailto=` query parameter containing an email address. | 500 requests per 5 minutes per IP address",
+   "snapshot": "data/snapshots/datacite/extra-rate.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "If your request has been rate limited, the API will return a 429 response code.",
+   "snapshot": "data/snapshots/datacite/extra-rate.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "All metadata contained in the file is freely available under a CC0 waiver.",
+   "snapshot": "data/snapshots/datacite/extra-pdf.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "All available public data files are accessible through <https://datafiles.datacite.org/>.",
+   "snapshot": "data/snapshots/datacite/extra-pdf.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "DataCite Public Data File DataCite Monthly Data File DataCite Data File Use Policy DataCite OAI-PMH Guide",
+   "snapshot": "data/snapshots/datacite/docs.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "{\"data\":[{\"id\":\"10.15468/dl.rc9muf\",\"type\":\"dois\"",
+   "snapshot": "data/snapshots/datacite/probe.txt"
+  }
+ ],
+ "not_established": "Cost of API use: no captured page states pricing or says the public API is free. CC0 is documented for the Public Data File metadata; no captured page states the licence of API responses explicitly. OAI-PMH guide page (guessed .md URL) returned 404; DataCite terms page returned 403 from the sandbox, so its content was not read."
+}

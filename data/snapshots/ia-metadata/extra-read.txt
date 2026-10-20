@@ -1,0 +1,162 @@
+Item Metadata API: Read — Internet Archive Developer Portal 
+ Skip to main content 
+ Back to top 
+ Ctrl + K 
+ Ctrl + K 
+ Home
+ Tutorials 
+ Get your Internet Archive credentials 
+ See whether a website exists in the archives 
+ Compare two versions of a website 
+ Tools and APIs 
+ Bots, LLMs, and Automated Access 
+ Internet Archive Items 
+ Internet Archive Metadata 
+ Command-Line Interface 
+ The Internet Archive Python Library 
+ ias3 Internet archive S3-like API 
+ Item Metadata API 
+ Item Metadata API: Read 
+ Item Metadata API: Write 
+ Item Metadata API: Record details 
+ Item Metadata API: Advanced Topics & Extensions 
+ API for discovering changes to archive.org items 
+ Views data service api 
+ Item Engagement counting on the archive.org website. 
+ Internet Archive RESTful microservices 
+ Internet Archive Tasks API 
+ Simple Lists (Relationships API) 
+ Reviews API 
+ OCR at the Internet Archive with Tesseract and hOCR 
+ PDF analysis, generation and compression at the Internet Archive 
+ .md 
+ .pdf 
+ Item Metadata API: Read 
+ On this page 
+ Partial reads 
+ Errors 
+ Extended errors 
+ Extended error code list 
+ Item Metadata API: Read # 
+ Item Metadata API (MDAPI) Read fetches an item’s metadata. 
+ ( NOTE: In this document, JSON is pretty-printed for legibility.) 
+ An item’s metadata may be fetched by making an HTTP GET request to 
+ https : // archive . org / metadata / { identifier } 
+ where {identifier} is the exact item identifier. MDAPI will return the item’s metadata record in JSON format. 
+ An example request: 
+ GET / metadata / xfetch HTTP / 1.1 
+ Host : archive . org 
+ And a successful response (some fields trimmed for compactness): 
+ HTTP / 1.1 200 OK 
+ Content - Type : application / json 
+ Transfer - Encoding : chunked 
+ { 
+ "created" : 1616004182 , 
+ "d1" : "ia600308.us.archive.org" , 
+ "d2" : "ia800308.us.archive.org" , 
+ "dir" : "/21/items/xfetch" , 
+ "files" : [ 
+ { 
+ "name" : "xfetch.pdf" , 
+ "source" : "original" , 
+ "format" : "Text PDF" , 
+ "mtime" : "1479169618" , 
+ "size" : "419170" , 
+ "md5" : "ee68c235c2cfc1007a5ab998d21d643c" , 
+ "crc32" : "4db3022d" , 
+ "sha1" : "abceccfc74a577ed06a5aeb7bebe365e9ff8946d" 
+ }, 
+ { 
+ "name" : "xfetch_files.xml" , 
+ "source" : "original" , 
+ "format" : "Metadata" , 
+ "md5" : "d6ea3edc409f11ecfd69c061719e9368" , 
+ "summation" : "md5" 
+ }, 
+ // ... additional files ... 
+ ], 
+ "files_count" : 13 , 
+ "item_last_updated" : 1613804036 , 
+ "item_size" : 10682344 , 
+ "metadata" : { 
+ "mediatype" : "texts" , 
+ "collection" : [ 
+ "opensource" , 
+ "community" 
+ ], 
+ "title" : "XFETCH: Optimal Probabilistic Cache Stampede Prevention" , 
+ // ... additional key - value metadata fields ... 
+ }, 
+ "server" : "ia800308.us.archive.org" , 
+ "uniq" : 267404775 , 
+ "workable_servers" : [ 
+ "ia800308.us.archive.org" , 
+ "ia600308.us.archive.org" 
+ ] 
+ } 
+ Most of the top-level fields ( d1 , dir , files_count , etc.) are available across all items. Some are optional and not always available. Others depend on the content within the item itself. 
+ A full description of each item record field may be found here . 
+ Partial reads # 
+ Partial MDAPI records may be fetched by addressing the field (or even a sub-field) directly. For example, to fetch the server field, call https://archive.org/metadata/xfetch/server . 
+ A partial fetch successful response: 
+ HTTP / 1.1 200 OK 
+ Content - Type : application / json 
+ Transfer - Encoding : chunked 
+ { 
+ "result" : "ia800308.us.archive.org" 
+ } 
+ Or, to fetch the first file in the files list, call https://archive.org/metadata/xfetch/files/0 : 
+ HTTP / 1.1 200 OK 
+ Content - Type : application / json 
+ Transfer - Encoding : chunked 
+ { 
+ "result" : { 
+ "name" : "__ia_thumb.jpg" , 
+ "source" : "original" , 
+ "mtime" : "1613804036" , 
+ "size" : "14393" , 
+ "format" : "JPEG Thumb" , 
+ "rotation" : "0" , 
+ "md5" : "1fe0b765283352b5556e6dea4e0fb4ae" , 
+ "crc32" : "cd8a1de7" , 
+ "sha1" : "f39cb5dec565af57de5cca03a77edf6231aa1dd3" 
+ } 
+ } 
+ When using partial reads, two query parameters are available for slicing elements out of a large array: 
+ start - index to start slice 
+ count - length of slice 
+ For example, if an item has hundreds of files, files from 100 to 104 may be retrieved as so: 
+ https://archive.org/metadata/gov.uspto.patents.application.10743335/files?start=100&count=5
+ Errors # 
+ If the item identifier does not exist or cannot be found, MD Read returns an empty array. 
+ For other errors, MDAPI returns an error field with a human-readable string explaining the problem. 
+ If a partial read is performed (e.g., https://archive.org/metadata/xfetch/files/0 ), MD Read will return an error if the item cannot be found, not an empty array. 
+ Extended errors # 
+ To simplify error-handling, extended errors can be enabled. This is a newer feature of MDAPI and is not enabled by default for backwards compatibility. 
+ When enabled, the returned value is different in three important ways: 
+ For a certain class of errors, an integer errcode value is returned along with error . This integer code is machine-parsable. (See below.) 
+ If the item fails to locate in the data cluster and its history cannot be found, an empty array is returned (keeping with prior behavior). 
+ If an item cannot be located but there’s an indication the item exists or existed, rather than returning an empty array, errcode and error are returned. 
+ Extended errors are available on the /metadata/ endpoint by adding extended_err=1 as a request URL parameter. 
+ Extended error code list # 
+ User-visible extended error codes defined at this time: 
+ 101 : Item creation is pending. 
+ 102 : Item is unavailable (data node(s) are offline or not responding). 
+ 103 : Unbacked user item. (Older user items, e.g., @example , were not automatically created when the account was created.) 
+ 104 : Item was deleted. 
+ 105 : Primary data node not found. (Only returned when primaryonly option is set.) 
+ 106 : Unbalanced locations. (The most authoritative copy of the item metadata is not available, so a secondary copy was used.) 
+ 400 : Inaccurate lookahead. (Tasks are queued that update the metadata, but one or more cannot be applied without errors.) 
+ See Metadata\ExtendedError for a full list of codes. 
+ Not all MDAPI errors have been adapted to extended errors at this time. No errcode will be present for these errors. 
+ previous 
+ Item Metadata API 
+ next 
+ Item Metadata API: Write 
+ On this page
+ Partial reads 
+ Errors 
+ Extended errors 
+ Extended error code list 
+By Internet Archive
+ © Copyright 2018-2026, Internet Archive.

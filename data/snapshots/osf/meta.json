@@ -24,5 +24,91 @@
   "fetched_at": "2026-10-20T01:31:51+00:00",
   "ratelimit_headers": {},
   "text_bytes": 4849
+ },
+ "extra": {
+  "rate": {
+   "url": "https://raw.githubusercontent.com/CenterForOpenScience/developer.osf.io/master/docs/index.md",
+   "final_url": "https://raw.githubusercontent.com/CenterForOpenScience/developer.osf.io/master/docs/index.md",
+   "status": 404,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 14,
+   "truncated": false,
+   "sha256": "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed",
+   "fetched_at": "2026-10-20T01:39:24+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 14
+  },
+  "ratelimit": {
+   "url": "https://developer.osf.io/#tag/Rate-Limiting",
+   "final_url": "https://developer.osf.io/#tag/Rate-Limiting",
+   "status": 200,
+   "content_type": "text/html",
+   "bytes": 551,
+   "truncated": false,
+   "sha256": "8fcdce0773fb855ff9a8cd1da929347522aed744a5b20516ba94829d0094494e",
+   "fetched_at": "2026-10-20T01:39:24+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 23
+  },
+  "terms": {
+   "url": "https://github.com/CenterForOpenScience/centerforopenscience.org/blob/master/TERMS_OF_USE.md",
+   "final_url": "https://github.com/CenterForOpenScience/cos.io/blob/master/TERMS_OF_USE.md",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 394768,
+   "truncated": false,
+   "sha256": "45f860badc86a4837ded13f1786eb44ae1301e90dd5f83b41286d9b042f48d42",
+   "fetched_at": "2026-10-20T01:39:25+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 41912
+  },
+  "apidocs": {
+   "url": "https://raw.githubusercontent.com/CenterForOpenScience/osf.io/develop/api/base/throttling.py",
+   "final_url": "https://raw.githubusercontent.com/CenterForOpenScience/osf.io/develop/api/base/throttling.py",
+   "status": 200,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 3562,
+   "truncated": false,
+   "sha256": "28388bd33f55dfebcc5a157ca198b21f32d55f8599f9ea4fb73733c60d1bad12",
+   "fetched_at": "2026-10-20T01:39:36+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 3561
+  },
+  "apitos": {
+   "url": "https://api.osf.io/v2/",
+   "final_url": "https://api.osf.io/v2/",
+   "status": 200,
+   "content_type": "application/vnd.api+json; charset=utf-8",
+   "bytes": 1375,
+   "truncated": false,
+   "sha256": "2c2b8d5a41ac640670244c64579d7d48d68df78d804f6d14499208aeb9edc510",
+   "fetched_at": "2026-10-20T01:39:37+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 1375
+  },
+  "docsrepo": {
+   "url": "https://raw.githubusercontent.com/CenterForOpenScience/developer.osf.io/master/README.md",
+   "final_url": "https://raw.githubusercontent.com/CenterForOpenScience/developer.osf.io/master/README.md",
+   "status": 200,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 1352,
+   "truncated": false,
+   "sha256": "b8d93b61a54e2b44c58328bfb94bbefdfc25496dcdc4f59349e3b001216fead8",
+   "fetched_at": "2026-10-20T01:39:48+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 1350
+  },
+  "docsrate": {
+   "url": "https://raw.githubusercontent.com/CenterForOpenScience/osf.io/develop/api/base/settings/defaults.py",
+   "final_url": "https://raw.githubusercontent.com/CenterForOpenScience/osf.io/develop/api/base/settings/defaults.py",
+   "status": 200,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 11746,
+   "truncated": false,
+   "sha256": "012497dc85029a5a7259e87d9d910c9d0b3d5ef82e1509512d733cf041a59944",
+   "fetched_at": "2026-10-20T01:39:49+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 11745
+  }
  }
 }

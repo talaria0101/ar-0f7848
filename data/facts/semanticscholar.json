@@ -1,0 +1,59 @@
+{
+ "slug": "semanticscholar",
+ "auth": "none",
+ "auth_note": "Most endpoints work without a key; an API key (by request, sent by email) gives higher limits and is required for some endpoints, e.g. dataset download links. Anonymous probe returned data.",
+ "cost": "free",
+ "rate_limit": "Unauthenticated: 1000 requests per second shared among all unauthenticated users, may be throttled further; introductory API key rate 1 RPS on all endpoints.",
+ "data_license": "Varies per dataset: S2 Data Licenses such as CC BY-NC or ODC-BY",
+ "bulk_access": "Datasets API https://api.semanticscholar.org/datasets/v1/release/ (S2AG downloadable JSON archive; download links need an API key)",
+ "probe_status": 200,
+ "probe_observation": "The probe returned JSON {\"paperId\": \"a5de30ad...\", \"title\": \"Nanometer scale thermometry in a living cell\"} for DOI:10.1038/nature12373.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "{\"paperId\": \"a5de30adc5c22bc86e8cfabe7fbd07c052d196a8\", \"title\": \"Nanometer scale thermometry in a living cell\"}",
+   "snapshot": "data/snapshots/semanticscholar/probe.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "Most Semantic Scholar endpoints are available to the public without authentication",
+   "snapshot": "data/snapshots/semanticscholar/extra-apiinfo.txt"
+  },
+  {
+   "claim": "cost",
+   "quote": "We also provide the following datasets as free and open resources.",
+   "snapshot": "data/snapshots/semanticscholar/extra-apiinfo.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "they are rate-limited to 1000 requests per second shared among all unauthenticated users",
+   "snapshot": "data/snapshots/semanticscholar/extra-apiinfo.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "The introductory rate limit for an API key is 1 RPS on all endpoints.",
+   "snapshot": "data/snapshots/semanticscholar/extra-apiinfo.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "governed by the licenses that accompany such S2 Data, such as CC BY-NC or ODC-BY",
+   "snapshot": "data/snapshots/semanticscholar/extra-licagr.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "Datasets : Provides downloadable links of datasets in the academic graph.",
+   "snapshot": "data/snapshots/semanticscholar/extra-apiinfo.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "This step requires the use of a Semantic Scholar API key.",
+   "snapshot": "data/snapshots/semanticscholar/extra-tutorial.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "\"title\": \"Nanometer scale thermometry in a living cell\"",
+   "snapshot": "data/snapshots/semanticscholar/probe.txt"
+  }
+ ],
+ "not_established": "The captured docs.txt (api-docs) is a 103-byte SPA shell; limits and licence come from the product overview page and API License Agreement. Which licence applies to which endpoint's data is not stated in captured text (only 'such as CC BY-NC or ODC-BY'). Whether API key issuance is automatic or needs approval is not stated (only 'You will receive your private API key via email'). Whether the 1000 RPS unauthenticated limit applies currently to the probe was not measured."
+}

@@ -1,0 +1,34 @@
+{
+ "slug": "wayback-spn2",
+ "auth": "key-free",
+ "auth_note": "Anonymous probe is refused with 401; docs require S3 API keys from an archive.org account (or login cookies).",
+ "cost": "not established",
+ "rate_limit": "Daily bandwidth: 5GB per authenticated user, 2GB per anonymous user, 100GB per host (docs); per-URL daily capture cap is not stated as a limit (the number 10 appears only inside an example error message)",
+ "data_license": "not established",
+ "bulk_access": "none documented",
+ "probe_status": 401,
+ "probe_observation": "Anonymous request to /save/status/system returned HTTP 401 JSON {\"message\":\"You need to be logged in to use Save Page Now.\"}.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "You need to be logged in to use Save Page Now.",
+   "snapshot": "data/snapshots/wayback-spn2/probe.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "requires authentication using two alternative methods: ... S3 API Keys (highly preferable). Get your account",
+   "snapshot": "data/snapshots/wayback-spn2/docs.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "You need to be logged in to use Save Page Now.",
+   "snapshot": "data/snapshots/wayback-spn2/probe.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "An authenticated user can archive up to 5GB per day. ... An anonymous user can archive up to 2GB per day. ... SPN2 can archive up to 100GB per day from a host.",
+   "snapshot": "data/snapshots/wayback-spn2/docs.txt"
+  }
+ ],
+ "not_established": "Whether the account/keys are free is not stated in the SPN2 docs (account sign-up page archive.org returned an Anubis/JS shell, 93 bytes; spn-api details page 404); key-free is inferred from self-serve S3 key page only. Cost, data license, and concurrent-session number not established."
+}

@@ -24,5 +24,31 @@
   "fetched_at": "2026-10-20T01:31:52+00:00",
   "ratelimit_headers": {},
   "text_bytes": 1195
+ },
+ "extra": {
+  "terms": {
+   "url": "https://info.figshare.com/user-guide/figshare-terms-of-service/",
+   "final_url": "https://info.figshare.com/user-guide/figshare-terms-of-service/",
+   "status": 404,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 63393,
+   "truncated": false,
+   "sha256": "9a94ec2809a2fa29d3fe6bef71990039201f8384b1f088e7962646f1b4bbfd5a",
+   "fetched_at": "2026-10-20T01:39:47+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 1325
+  },
+  "faq": {
+   "url": "https://docs.figshare.com/#figshare_documentation_api_description_rate_limiting",
+   "final_url": "https://docs.figshare.com/v2/",
+   "status": 200,
+   "content_type": "text/html",
+   "bytes": 243312,
+   "truncated": false,
+   "sha256": "fd0f3c90f9ba5f8d08d3ee10e8e91ae3344a0f226c8dd364384cf2262d344de4",
+   "fetched_at": "2026-10-20T01:39:48+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 141044
+  }
  }
 }

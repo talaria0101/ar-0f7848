@@ -24,5 +24,43 @@
   "fetched_at": "2026-10-20T01:31:43+00:00",
   "ratelimit_headers": {},
   "text_bytes": 152
+ },
+ "extra": {
+  "help": {
+   "url": "https://www.base-search.net/about/en/about_develop.php?x=1",
+   "final_url": "https://www.base-search.net/about/en/about_develop.php?x=1",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 7814,
+   "truncated": false,
+   "sha256": "1f360d76a9f2a86c8d8c85a3f48a3d65b8a6a254808c38dae235aa43f06c1147",
+   "fetched_at": "2026-10-20T01:37:02+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 1504
+  },
+  "oai": {
+   "url": "https://oai.base-search.net/",
+   "final_url": "https://oai.base-search.net/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 65566,
+   "truncated": false,
+   "sha256": "4710c877bfa22b24b9bcad71b859c1810f9b266939f0c73fc3a072be23443ec5",
+   "fetched_at": "2026-10-20T01:37:03+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 22110
+  },
+  "apidoc": {
+   "url": "https://api.base-search.net/",
+   "final_url": "https://api.base-search.net/",
+   "status": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 5189,
+   "truncated": false,
+   "sha256": "0bb8f6067ba62cd4355941ac4461f50017b5732a31a07cecdc3dc76987dc5384",
+   "fetched_at": "2026-10-20T01:37:05+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 1179
+  }
  }
 }

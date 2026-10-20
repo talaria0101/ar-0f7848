@@ -1,0 +1,205 @@
+Open Library Data Dumps | Open Library 
+ Skip to main content 
+ It looks like you're offline. 
+ Donate ♥ 
+ English 
+ العربية 
+ Azərbaycanca 
+ Čeština 
+ Deutsch 
+ English 
+ Español 
+ Français 
+ हिंदी 
+ Hrvatski 
+ Italiano 
+ 한국어 
+ Português 
+ Română 
+ Sardu 
+ తెలుగు 
+ Українська 
+ 中文 
+ Filipino 
+ Page Status 
+ My Books
+ Browse
+ Subjects 
+ Browse books by topic 
+ Trending 
+ Most popular right now 
+ Library Explorer 
+ Browse the virtual shelves 
+ Lists 
+ Reader-curated collections 
+ Collections
+ K-12 Student Library
+ Book Talks
+ Random Book
+ Advanced Search
+ Search 
+ Log In 
+ Sign Up 
+ My Open Library 
+ Log In 
+ Sign Up 
+ Browse 
+ Subjects 
+ Trending 
+ Library Explorer 
+ Lists 
+ Collections 
+ K-12 Student Library 
+ Book Talks 
+ Random Book 
+ Advanced Search 
+ Contribute 
+ Improve the Catalog 
+ Add a Book 
+ Recent Community Edits 
+ Resources 
+ Help & Support 
+ Developer Center 
+ Librarians Portal 
+ My Books
+ Browse
+ Subjects 
+ Browse books by topic 
+ Trending 
+ Most popular right now 
+ Library Explorer 
+ Browse the virtual shelves 
+ Lists 
+ Reader-curated collections 
+ Collections
+ K-12 Student Library
+ Book Talks
+ Random Book
+ Advanced Search
+ Last edited by Drini 
+ June 10, 2025 | History 
+ Edit 
+ Open Library Data Dumps 
+ Open Library provides dumps of all its data, generated every month. Most of the data dumps are formatted as tab separated files with the following columns:
+ type - type of record (/type/edition, /type/work etc.) 
+ key - unique key of the record (/books/OL1M etc.) 
+ revision - revision number of the record 
+ last_modified - last modified timestamp 
+ JSON - the complete record in JSON format
+ Dumps 
+ editions dump (~ 9.2G) 
+ works dump (~ 2.9G) 
+ authors dump (~ 0.5G) 
+ all types dump (~ 12.4G) : includes editions, works, authors, redirects, etc. 
+ complete dump (~ 29.6G) : also includes past revisions of all the records in Open Library 
+ ratings dump (~ 5M) : with columns: "Work Key, Edition Key (optional), Rating, Date" 
+ reading log dump (~ 65M) : with columns "Work Key, Edition Key (optional), Shelf, Date" 
+ redirects dump (~ 50M) 
+ deletes dump (~ 75M) 
+ lists dump (~ 30M) 
+ other dump (~ 10M) 
+ covers metadata dump (~ 70M) : with columns "id, width, height, created" 
+ wikidata dump (~ 700M) ( NEW ): Wikidata records relevant to Open Library -- currently only authors. Columns "Wikidata ID, JSON"
+ For past dumps, see: https://archive.org/details/ol_exports?sort=-publicdate 
+ Downloading the dumps take too long? Checkout the link above and download via torrent for higher speeds!
+ Format of JSON records 
+ A JSON schema for the various types is located at https://github.com/internetarchive/openlibrary-client/tree/master/olclient/schemata 
+ Author Records: JSON serialization of a type/author 
+ Edition Records: JSON serialization of a type/edition 
+ Work Records: JSON serialization of a type/work 
+ Using Open Library Data Dumps 
+ This guide by contributor on the LibrariesHacked GitHub about how to load Open Library's data dumps into PostgreSQL to make it more easily queriable: 
+ https://github.com/LibrariesHacked/openlibrary-search 
+ DuckDB 
+ DuckDB is another easy tool to query the dump without much work.
+ For example: 
+ If you wanted to get all the Wikidata IDs currently in the authors table:
+ SELECT json_extract(column4, '$.remote_ids.wikidata') as wikidata_id
+FROM read_csv('ol_dump_authors_2024-07-31.txt.gz')
+WHERE wikidata_id IS NOT NULL
+LIMIT 100;
+ GraphQL 
+ DiFronzo on GitHub has produced a GraphQL proxy to search books using work, edition and ISBN with the Open Library API. Deployed with Deno and GraphQL:
+ https://github.com/DiFronzo/OpenLibrary-GraphQL 
+ DiFronzo/OpenLibrary-GraphQL
+ OL Covers Dump 
+ We do not yet have rolling monthly dumps of our book covers, despite a shared desire for their existence. Some historical cover dumps may be explored here: 
+ https://archive.org/details/ol_data?tab=collection&query=identifier%3A covers &sort=-addeddate 
+ Most covers are archived in the following items. Note covers_0006 and covers_0007 are presently unavailable.
+ https://archive.org/details/covers_0000 
+ https://archive.org/details/covers_0001 
+ https://archive.org/details/covers_0002 
+ https://archive.org/details/covers_0003 
+ https://archive.org/details/covers_0004 
+ https://archive.org/details/covers_0005 
+ https://archive.org/details/covers_0008 
+ https://archive.org/details/covers_0009 
+ https://archive.org/details/covers_0010 
+ https://archive.org/details/covers_0011 
+ https://archive.org/details/covers_0012 
+ https://archive.org/details/covers_0013 
+ https://archive.org/details/covers_0014 
+ History
+ Created December 14, 2011 
+ 39 revisions 
+ June 10, 2025 
+ Edited by Drini 
+ June 5, 2025 
+ Edited by Drini 
+ June 5, 2025 
+ Edited by Drini 
+Add coming soon wikidata link
+ January 10, 2025 
+ Edited by raybb 
+fix typos
+ December 14, 2011 
+ Created by Anand Chitipothu 
+Documented Open Library Data Dumps
+ Open Library 
+ Vision 
+ Volunteer 
+ Partner With Us 
+ Careers 
+ Blog 
+ Terms of Service 
+ Donate 
+ Discover 
+ Home 
+ Books 
+ Authors 
+ Subjects 
+ Collections 
+ Advanced Search 
+ Return to Top 
+ Develop 
+ Developer Center 
+ API Documentation 
+ Bulk Data Dumps 
+ Writing Bots 
+ Help 
+ Help Center 
+ Contact Us 
+ Suggesting Edits 
+ Add a Book 
+ Release Notes 
+ Change Website Language 
+ العربية 
+ Azərbaycanca 
+ Čeština 
+ Deutsch 
+ English 
+ Español 
+ Français 
+ हिंदी 
+ Hrvatski 
+ Italiano 
+ 한국어 
+ Português 
+ Română 
+ Sardu 
+ తెలుగు 
+ Українська 
+ 中文 
+ Filipino 
+ Open Library is an initiative of the Internet Archive , a 501(c)(3) non-profit, building a digital library of Internet sites and other cultural artifacts in digital form. Other projects include the Wayback Machine , archive.org and archive-it.org 
+ version d52436c

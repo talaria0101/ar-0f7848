@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "limit": 1,
+        "offset": 0,
+        "filter": {},
+        "total": 2281
+    },
+    "objects": [
+        {
+            "code": "2636-2147",
+            "collection": "dom",
+            "processing_date": "2024-03-08"
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+ "slug": "oabutton",
+ "auth": "unreachable",
+ "auth_note": "Probe host did not resolve from the sandbox, and the docs page says the service has shut down.",
+ "cost": "not established",
+ "rate_limit": "not established",
+ "data_license": "not established",
+ "bulk_access": "none documented",
+ "probe_status": 0,
+ "probe_observation": "Probe failed with URLError: Tunnel connection failed: 502 the name did not resolve (unreachable from this sandbox).",
+ "evidence": [
+  {
+   "claim": "probe",
+   "quote": "Tunnel connection failed: 502 the name did not resolve",
+   "snapshot": "data/snapshots/oabutton/probe.txt"
+  },
+  {
+   "claim": "other",
+   "quote": "As of November 18th 2025, the Open Access Button is no longer available.",
+   "snapshot": "data/snapshots/oabutton/docs.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "Tunnel connection failed: 502 the name did not resolve",
+   "snapshot": "data/snapshots/oabutton/probe.txt"
+  }
+ ],
+ "not_established": "Auth, cost, rate limit and license not established: the API host was unreachable from this sandbox (proxy 502, not evidence of outage) and the provider's own page states the Open Access Button was retired on 2025-11-18, with Unpaywall recommended instead. The OA.Works blog snapshot (extra-blog) held no API documentation."
+}

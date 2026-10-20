@@ -1,0 +1,138 @@
+API – sobre.arquivo.pt 
+ Skip to content 
+ Skip to content 
+ Menu 
+ Arquivo.pt 
+ News 
+ Latest news 
+ Channels 
+ Examples 
+ Examples of preserved pages 
+ Online exhibitions 
+ User testimonials 
+ Publications 
+ Scientific publications 
+ Technical reports 
+ Open datasets 
+ News on media 
+ Audio 
+ Videos 
+ Presentations 
+ Research work and data sets derived from Arquivo.pt 
+ Examples of derived research and data sets 
+ Collaborate 
+ Arquivo.pt Awards 
+ Disseminate Arquivo.pt 
+ Suggest website 
+ Archive a webpage now 
+ Fix broken links 
+ Recommendations 
+ Preserve your historical website 
+ Colaborative collections 
+ Donate web data 
+ Open data sets for research 
+ Research projects 
+ API & Open-source 
+ Partnerships & collaborations 
+ About 
+ Services catalog 
+ Arquivo.pt in numbers 
+ History 
+ Honors 
+ Press area 
+ Team 
+ Legal information 
+ FAQ 
+ What is Arquivo.pt? 
+ Crawling web content 
+ Page search 
+ Page advanced search 
+ Image search 
+ Image advanced search 
+ Access and removal requests 
+ Training 
+ Site map 
+ Contact 
+ Português 
+ sobre.arquivo.pt > API 
+ API 
+ CDXJ index files are available to support bulk access 
+ August 22, 2024 April 18, 2023 by admin 
+ Last updated on August 22nd, 2024 at 10:48 am The research and education community has been requesting the bulk download of web-archived data and index files ( CDXJ ), for instance, to feed AI training models, optimize routing of web archive requests or recover information from selected websites (e.g. news). 
+ Arquivo.pt begun making all its CDXJ index files publicly available in real-time to facilitate the bulk download of web-archived data. Learn how at: 
+ https://arquivo.pt/api#bulk 
+ Your feedback with comments or suggestions is most welcome to improve this service! 
+ Please disseminate this information among potentially interested parties. 
+ Categories News Tags API , awards , bulk access , CDXJ 
+ Tutorial: how to explore Arquivo.pt using Python 
+ August 5, 2024 July 29, 2022 by admin 
+ Last updated on August 5th, 2024 at 04:50 pm 
+ The Programming Historian aims to develop digital skills among the Humanities researchers through the publication of practical lessons  in several languages. 
+ The call Computational analysis skills for large-scale humanities data  originated 7 new lessons. 
+ One of them was the tutorial “Timeline summarization for large-scale past-web events with Python: the case of Arquivo.pt” developed by Daniel Gomes and Ricardo Campos . 
+ It shows how to explore Arquivo.pt user interface and the Application Programming Interface (API) to execute advanced queries, process large amount of data or build new services, such as Tell me stories . 
+ All the developed resources are freely available in open-access. 
+ Open-access resources of the tutorial “Timeline summarization for large-scale past-web events with Python: the case of Arquivo.pt” 
+ Colab project that enables editing and running directly the code examples of the tutorial ( English , Portuguese ) 
+ Official tutorial page on Programming Historian 
+ Video presented on May 5, 2022 , as part of the Programming Historian webinars and tutorials “Developing computational skills for digital collections”
+ Slides 
+ Categories News Tags API , Digital Humanities , Training , Tutorial 
+ Millions of images from the past! 
+ August 23, 2022 April 1, 2021 by Ricardo Basílio 
+ Last updated on August 23rd, 2022 at 04:21 pm Arquivo.pt launched a new version named Dionisius, on March 24th 2021. 
+ 1.8 billion images from the past Web are now searchable on Arquivo.pt. 
+ Supporting large-scale image search over Web archives is a world-wide innovation. 
+ To learn more about the development of this system, watch the video “ Arquivo.pt image search 2020-2021 “. 
+ Try for example, how a search for images about “golf” returns images gathered from archived websites. 
+ Results page from a search for the term “golf” on Arquivo.pt. 
+ The new image search API also allows you to create new works to apply for the Arquivo.pt Awards . 
+ Help us to improve! 
+ To help us, just try to perform an image search on Arquivo.pt using any device (e.g. laptop, mobile phone, tablet). 
+ If you have any comment, please contact us ! 
+ Remember to always send us the URL of the page you are referring to. 
+ To know more 
+ The Anatomy of a Web Archive Image Search Engine (technical report) 
+ Source code of image search system 
+ Image Search Indexing 
+ Solr Cloud Scripts 
+ ImageSearchAPI 
+ Image Indexing GPU classifier 
+ List of the 34 solved issues 
+ ImageSearch API v1.1 (beta) 
+ Arquivo.pt 2021 Award 
+ Categories News Tags API , Arquivo.pt , Arquivo.pt Awards , image search , new release 
+ News Arquivo.pt at the TPDL Conference in Universidade do Algarve Thematic collections of websites to explore on Arquivo.pt Meet the winners of the Arquivo.pt Award 2026! Arquivo.pt at the librarians and archivists national meeting APBAD in Porto Archiving the Black Web – a community-focused project More news ... 
+ About 
+ What is Arquivo.pt? 
+ API & Open-source 
+ MOOC 
+ Terms and conditions 
+ Privacy policy 
+ Cookies policy 
+ Contact 
+ News 
+ Subscribe mailing list 
+ Channels 
+ Latest news 
+ Publications 
+ Exhibitions 
+ Press 
+ Dissemination material 
+ Collaborate 
+ Arquivo.pt awards 
+ Suggest a website 
+ Fix broken links 
+ Memorial 
+ Archive page now 
+ Preserve citations 
+ Open data sets 
+ Help 
+ Page search 
+ Image search 
+ Crawling 
+ Access 
+ Training courses 
+ Catalog 
+ Site map 
+ © 2026 sobre.arquivo.pt • Powered by GeneratePress

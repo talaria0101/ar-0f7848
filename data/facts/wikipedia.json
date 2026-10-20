@@ -1,0 +1,49 @@
+{
+ "slug": "wikipedia",
+ "auth": "none",
+ "auth_note": "Anonymous read access works with no key; a descriptive User-Agent is required by policy.",
+ "cost": "free",
+ "rate_limit": "No hard speed limit on read requests; make requests in series; edit/state-changing requests are rate limited per action and user rights. Dumps: 3 connections per IP.",
+ "data_license": "CC BY-SA 4.0 (text contributions under Wikimedia Terms of Use)",
+ "bulk_access": "https://dumps.wikimedia.org/ (monthly dumps; MediaWiki Content File Exports)",
+ "probe_status": 200,
+ "probe_observation": "The probe returned HTTP 200 JSON starting {\"batchcomplete\":\"\" with a search list of one hit and totalhits 340215.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "\"batchcomplete\":\"\",\"continue\":{\"sroffset\":1,\"continue\":\"-||\"},\"query\":{\"searchinfo\":{\"totalhits\":340215",
+   "snapshot": "data/snapshots/wikipedia/probe.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "There is no hard speed limit on read requests, but be considerate and try not to take a site down.",
+   "snapshot": "data/snapshots/wikipedia/extra-etiquette.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "Downloads are also rate limited and capped at 3 connections per-IP.",
+   "snapshot": "data/snapshots/wikipedia/extra-dumps.txt"
+  },
+  {
+   "claim": "cost",
+   "quote": "hosting the full content of these wiki-based Projects for the public free of charge.",
+   "snapshot": "data/snapshots/wikipedia/extra-terms.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "you agree to license the modified or added content under CC BY-SA 4.0 or later",
+   "snapshot": "data/snapshots/wikipedia/extra-terms.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "These snapshots are provided monthly.",
+   "snapshot": "data/snapshots/wikipedia/extra-dumps.txt"
+  },
+  {
+   "claim": "other",
+   "quote": "Set an informative User-Agent string with contact information, or you may be IP-blocked without notice.",
+   "snapshot": "data/snapshots/wikipedia/extra-etiquette.txt"
+  }
+ ],
+ "not_established": "Numeric limits for anonymous reads are not documented (docs say none hard). Licence of other content types (images, Wikidata) not covered. Cost 'free' rests on the Terms of Use statement about hosting content free of charge."
+}

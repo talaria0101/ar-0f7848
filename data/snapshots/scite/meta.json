@@ -38,5 +38,39 @@
    "RateLimit-Remaining": "59"
   },
   "text_bytes": 137
+ },
+ "extra": {
+  "openapi": {
+   "url": "https://api.scite.ai/openapi.json",
+   "final_url": "https://api.scite.ai/openapi.json",
+   "status": 200,
+   "content_type": "application/json",
+   "bytes": 593579,
+   "truncated": false,
+   "sha256": "e32a2e737a7cea4f8f574623fce983f8699b1fd31f9fb50f0926543876502d43",
+   "fetched_at": "2026-10-20T01:40:47+00:00",
+   "ratelimit_headers": {
+    "RateLimit-Reset": "1",
+    "X-RateLimit-Remaining-Minute": "59",
+    "RateLimit-Limit": "13",
+    "X-RateLimit-Remaining-Second": "12",
+    "X-RateLimit-Limit-Second": "13",
+    "X-RateLimit-Limit-Minute": "60",
+    "RateLimit-Remaining": "12"
+   },
+   "text_bytes": 593230
+  },
+  "home": {
+   "url": "https://scite.ai/api",
+   "final_url": "https://scite.ai/api",
+   "status": 403,
+   "content_type": "text/html",
+   "bytes": 919,
+   "truncated": false,
+   "sha256": "d1e7816c1f64a448fb22117418412482c8ace52909aec1826e3a3c6ba0cabe25",
+   "fetched_at": "2026-10-20T01:40:50+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 558
+  }
  }
 }

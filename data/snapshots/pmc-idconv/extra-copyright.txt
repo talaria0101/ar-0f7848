@@ -1,0 +1,146 @@
+PMC Copyright Notice - PMC
+ Skip to main content
+ An official website of the United States government
+ Here's how you know 
+ Here's how you know 
+ Official websites use .gov 
+ A
+ .gov website belongs to an official
+ government organization in the United States.
+ Secure .gov websites use HTTPS 
+ A lock (
+ ) or https:// means you've safely
+ connected to the .gov website. Share sensitive
+ information only on official, secure websites.
+ Search
+ Log in 
+ Dashboard
+ Publications
+ Account settings
+ Log out
+ Search…
+ Search NCBI
+ Primary site navigation
+ Search
+ Logged in as:
+ Dashboard
+ Publications
+ Account settings
+ Log in
+ Search PMC Full-Text Archive 
+ Search in PMC 
+ Journal List
+ User Guide
+ About PMC 
+ About PMC
+ Accessibility
+ Citation Search
+ Copyright Notice
+ Disclaimer
+ FAQs
+ Journal List
+ Journal Selection Statistics
+ National Advisory Committee
+ New in PMC
+ PMC and Research Funder Policies
+ PMC International
+ Policies
+ User Guide
+ Collections 
+ Collections - Home
+ Author Manuscripts
+ Back Issue Digitization
+ COVID-19 Collection
+ Journal List
+ Mpox Collection
+ NIH Preprint Pilot
+ Open Access Subset
+ PMC Article Datasets
+ Selective Deposit Collections
+ For Authors 
+ For Authors - Home
+ Author Manuscripts in PMC
+ FAQs for Authors
+ Journal List
+ NIH Manuscript Submission System
+ NIH Public Access and PMC
+ PMC and Research Funder Policies
+ PMC ID Converter
+ For Publishers 
+ For Publishers - Home
+ FAQs for Publishers
+ File Submission Specifications
+ PMC Banner Specifications
+ File Validation Tools
+ Application and Evaluation Process
+ Journal Selection for PMC
+ Minimum Data Criteria
+ Participation Agreements
+ Policies
+ Production Data Requirements
+ For Developers 
+ For Developers - Home
+ Cloud Service
+ FTP Service
+ OAI-PMH Service
+ PMC Article Datasets
+ PMC ID Converter
+ PMC ID Converter API
+ PMC Copyright Notice 
+ Articles available from PubMed Central (PMC) are provided by the respective publishers or authors. Articles in PMC usually include an explicit copyright statement. To see the details for any given record, see the “Copyright and License information” link on an article record. In the absence of a copyright statement, users should assume that standard copyright protection applies, unless the article contains an explicit statement to the contrary. In case of doubt, contact the journal publisher to verify the copyright status of an article. 
+ Users of PMC are directly and solely responsible for compliance with copyright restrictions and are expected to adhere to the terms and conditions defined by the copyright holder. Transmission, reproduction, or reuse of protected material, beyond the license terms or those allowed by the fair use principles of the copyright laws, requires the written permission of the copyright owners. U.S. fair use information is available from the U.S. Copyright Office. 
+ Restrictions on the Systematic Downloading of Articles 
+ Systematic downloading of batches of articles from the main PMC web site, in any way, is prohibited because of copyright restrictions. 
+ PMC makes certain subsets of articles (i.e., the PMC Article Datasets ) accessible through auxiliary services that may be used for automated retrieval and downloading. These are: 
+ the PMC OAI-PMH service ; 
+ the PMC FTP service ; and 
+ the PMC Cloud Service . 
+ These services are the only services that may be used for this purpose. Do not use any other automated processes for downloading articles, even if you are only retrieving articles from the PMC Article Datasets (including the PMC Open Access Subset ). 
+ Open Access Articles 
+ Articles that are "open access" in PMC are made available under a Creative Commons or similar license that allows more liberal redistribution and reuse than a traditional copyrighted work. Many articles in PMC are protected by U.S. and/or foreign copyright laws, even though PMC provides free access to it. Some journals use the label "open access" for an article that is available free at time of publication, but is still subject to traditional copyright restrictions. 
+ Open access articles are included in the PMC Open Access Subset and can be found in PMC by searching open access[filter] . This subset also includes a number of U.S. government publications, e.g., 
+ Addiction Science & Clinical Practice (vol. 1 through vol. 6) 
+ Alcohol Research: Current Reviews 
+ Emerging Infectious Diseases 
+ Environmental Health Perspectives 
+ Journal of Research of NIST 
+ Morbidity and Mortality Weekly Report 
+ Preventing Chronic Disease 
+ Articles published in these journals are in the public domain and may be used and reproduced without special permission. However, anyone using the material is requested to properly cite and acknowledge the source. 
+ Please note open access and public domain articles may still contain photographs or illustrations copyrighted by other commercial organizations or individuals that may not be used without obtaining prior approval from the holder of the copyright. 
+ Author Manuscripts 
+ Author manuscripts added to PMC in compliance with a funder policy often do not include copyright statements or license terms. Authors own the original copyrights to materials they write. Consistent with individual arrangements with authors' employing institutions, authors often transfer some or all of these rights to the publisher when the journal agrees to publish their paper. Some publishers may ask authors to transfer these rights when the paper is first submitted to the journal. Journal-level policy details may be available from the publisher’s website. 
+ PMC provides long-term preservation of author manuscripts and makes them available free to read, text mine , and for other uses consistent with the principles of Fair Use. 
+ Digitized Articles 
+ Articles added to PMC as part of a digitization project often do not include copyright statements. Users should assume that standard copyright protection applies, unless the article contains an explicit statement to the contrary. 
+ Some of the digitized articles are distributed under a Creative Commons license and note that in the article record. Those that are covered by a Creative Commons license are included in the PMC Open Access Subset . 
+ Digitized articles that are in the public domain carry a statement indicating that they are free from known copyright as described by the Creative Commons Public Domain Mark 1.0 . These articles are also included in the PMC Open Access Subset . 
+ Last modified: Tue Sept. 9 2025
+ Table of Contents 
+ Restrictions on Systematic Downloading of Articles 
+ Open Access Articles 
+ Author Manuscripts 
+ Digitized Articles 
+ Follow NCBI
+ NCBI on X (formerly known as Twitter) 
+ NCBI on Facebook 
+ NCBI on LinkedIn 
+ NCBI on GitHub 
+ NCBI RSS feed 
+ Connect with NLM
+ NLM on X (formerly known as Twitter) 
+ NLM on Facebook 
+ NLM on YouTube 
+ National Library of Medicine
+ 8600 Rockville Pike Bethesda, MD 20894 
+ Web Policies
+ FOIA
+ HHS Vulnerability Disclosure
+ Help
+ Accessibility
+ Careers
+ NLM
+ NIH
+ HHS
+ USA.gov
+ Back to Top

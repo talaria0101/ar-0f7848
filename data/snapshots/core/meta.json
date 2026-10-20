@@ -28,5 +28,71 @@
    "x-ratelimit-retry-after": "2026-10-20T01:32:01+0000"
   },
   "text_bytes": 1230
+ },
+ "extra": {
+  "rate": {
+   "url": "https://api.core.ac.uk/docs/v3",
+   "final_url": "https://api.core.ac.uk/docs/v3",
+   "status": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 148085,
+   "truncated": false,
+   "sha256": "797dd1e499187df166ceb1343df390dac2f20d242f48cc71ca897364dd607ec6",
+   "fetched_at": "2026-10-20T01:36:27+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 22
+  },
+  "dataset": {
+   "url": "https://core.ac.uk/services/dataset",
+   "final_url": "https://core.ac.uk/services/dataset",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 1500000,
+   "truncated": true,
+   "sha256": "d074dec596b5007dda9a8973933a0113cb15d498cbf658be530a7bfb78e5a414",
+   "fetched_at": "2026-10-20T01:36:33+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 1423540
+  },
+  "terms": {
+   "url": "https://core.ac.uk/terms",
+   "final_url": "https://core.ac.uk/terms",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 72430,
+   "truncated": false,
+   "sha256": "16a89b8d70c2cb99cbc62edaf5c27bbba754abfbf26156e3b2be18606ce400c1",
+   "fetched_at": "2026-10-20T01:36:50+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 7481
+  },
+  "v3docs": {
+   "url": "https://api.core.ac.uk/docs/v3.yaml",
+   "final_url": "https://api.core.ac.uk/docs/v3.yaml",
+   "status": 404,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 88,
+   "truncated": false,
+   "sha256": "335edbfa3ef0afb7847b529212f61db27155765e99e2424ab14999fbf438ecad",
+   "fetched_at": "2026-10-20T01:36:51+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 88
+  },
+  "v3oas": {
+   "url": "https://api.core.ac.uk/docs/v3/openapi.json",
+   "final_url": "https://api.core.ac.uk/docs/v3/openapi.json",
+   "status": 404,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 97,
+   "truncated": false,
+   "sha256": "ebbc3152797fda21239bdf25a343ee80246c4fe030bd53105ae9828445e47521",
+   "fetched_at": "2026-10-20T01:37:21+00:00",
+   "ratelimit_headers": {
+    "x-ratelimit-limit": "10",
+    "x-ratelimit-remaining": "6",
+    "x-ratelimit-retry-after": "2026-10-20T01:37:14+0000"
+   },
+   "text_bytes": 97
+  }
  }
 }

@@ -24,5 +24,31 @@
   "fetched_at": "2026-10-20T01:31:38+00:00",
   "ratelimit_headers": {},
   "text_bytes": 559
+ },
+ "extra": {
+  "ua": {
+   "url": "https://foundation.wikimedia.org/wiki/Policy:Wikimedia_Foundation_User-Agent_Policy",
+   "final_url": "https://foundation.wikimedia.org/wiki/Policy:Wikimedia_Foundation_User-Agent_Policy",
+   "status": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 99930,
+   "truncated": false,
+   "sha256": "963e759d656b64e2e3b61d0ab7ce6519e7b86a8a31572d4913b4a3aa0d65a520",
+   "fetched_at": "2026-10-20T01:35:57+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 10752
+  },
+  "rl": {
+   "url": "https://api.wikimedia.org/wiki/Rate_limits",
+   "final_url": "https://www.mediawiki.org/wiki/Wikimedia_APIs",
+   "status": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 85823,
+   "truncated": false,
+   "sha256": "03665a2873a5939690f6a264f1f28e5c71f805849ab54959038e4e1fa6fb7cc7",
+   "fetched_at": "2026-10-20T01:35:58+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 7129
+  }
  }
 }

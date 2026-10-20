@@ -1,0 +1,290 @@
+Elsevier Developer Portal 
+ Skip to main content 
+ Elsevier Developer Portal 
+ My API Key 
+ FAQ 
+ Products 
+ Scopus 
+ ScienceDirect 
+ SciVal 
+ Engineering Village 
+ Embase 
+ SUSHI COP5 
+ Documentation 
+ API Specification 
+ Use Cases 
+ Use Policies 
+ API Service Agreement 
+ Text and Data Mining 
+ Start Coding 
+ How to Guides 
+ Interactive APIs 
+ Examples 
+ Python SDK 
+ API Key Settings 
+ Contact Us 
+ (Opens new window) 
+ My API
+ Key 
+ Products 
+ Scopus 
+ ScienceDirect 
+ SciVal 
+ Engineering Village 
+ Embase 
+ SUSHI COP5 
+ Documentation 
+ API Specification 
+ Use Cases 
+ Use Policies 
+ API Service Agreement 
+ Text and Data Mining 
+ Start Coding 
+ How to Guides 
+ Interactive APIs 
+ Examples 
+ Python SDK 
+ API Key Settings 
+ Support 
+ FAQ 
+ Contact Us 
+ (Opens new window) 
+ Home 
+ Start Coding: Default API Key Settings 
+ How much data can I retrieve with my APIKey? 
+ New API keys do not provide data or content access by default. Access to individual APIs, datasets and content is
+ enabled only after the relevant customer, partner or approved-integration entitlement has been verified.
+ Applicable quotas and service levels are determined by that entitlement and the governing terms. 
+ Once an entitlement is verified, your API Key comes with the ability to run a certain number of requests for data from the APIs. Quotas, meaning the
+ number of requests run, are reset every seven days. You can view the quotas and throttling rates of our suite of
+ APIs below. Quota limits are unique to each API, there is not a single global setting for a given APIKey. If you
+ find that the quota of a particular API is not enough for your project needs, please write API Support with: 
+ your API Key 
+ full institution name 
+ a brief description of your use case 
+ API name and requested quota increase 
+ Additionally, access to specialized APIs is not enabled by default, as use cases for specialized APIs require review
+ from Elsevier’s API Support team. API Support cannot guarantee permission to use access-controlled APIs. The
+ access-controlled APIs include: 
+ Scopus Citation Overview 
+ Scopus Author Feedback 
+ ScienceDirect Full-Text Entitlement 
+ ScienceDirect Article Hosting Permissions 
+ ScienceDirect Holdings Report 
+ Embase Search and Retrieval 
+ Engineering Village Search and Retrieval 
+ SUSHI COP5 API 
+ If you would like to request access to one of these access-controlled APIs, please write API Support with the
+ following information: 
+ your API Key 
+ full institution name 
+ a brief description of your use case 
+ API name and requested quota increase 
+ How do I check my quota? 
+ You can look to the following response headers to check your quota: 
+ Review quota using the following response headers: 
+X-RateLimit-Limit 
+ What should I do when I get a http 429 TOO MANY REQUESTS Error? 
+ There are two possible reasons that you are experiencing a 429 error. If the quota is exceeded, X-RateLimit-Limit and
+ X-RateLimit-Remaining don’t return. Instead, the APIs deliver an http 429 TOO MANY REQUESTS msg, along with the
+ following response headers: 
+X-ELS-Status QUOTA_EXCEEDED - Quota Exceeded
+X-RateLimit-Reset 1234567891 
+ Alternately, if requests exceed the throttling rate, the APIs also return an http 429 TOO MANY REQUESTS msg 
+ Throttling Rates are listed in the table below in column requests/second. If requests exceed the
+ throttling rate, the APIs also return an http 429 TOO MANY REQUESTS msg 
+    Scopus APIs 
+ API Name 
+ Views 
+ Weekly Quota 
+ Requests per second 
+ Serial Title 
+ STANDARD, COVERIMAGE, ENHANCED 
+ Default 25 results / Max 200 results
+ 20,000 
+ 6 
+ Citations Count Metadata 
+ STANDARD view Default
+ 25 results / Max 200 results
+ 50,000 
+ 10 
+ Subject Classifications 
+ STANDARD view 
+ Default 25 results / Max 200 results
+ N/A 
+ N/A 
+ Abstract Retrieval 
+ All views, default FULL view 
+ 10,000 
+ 9 
+ Affiliation Retrieval 
+ All views, default STANDARD view 
+ 5,000 
+ 9 
+ Author Retrieval 
+ All views, default STANDARD view 
+ 5,000 
+ 3 
+ Affiliation Search 
+ Default 25 results / Max 200 results 
+ 5000 item result limit
+ 5,000 
+ 6 
+ Author Search 
+ Default 25 results / Max 200 results 
+ 5000 item result limit
+ 5,000 
+ 2 
+ Scopus Search 
+ STANDARD view / Max 200 results 
+ COMPLETE view / Max 25 results 
+ COMPONENT view / Max 25 results 
+ 5000 item total result limit without ‘cursor pagination’ explained in Q4 of FAQ
+ 20,000 
+ 9 
+    ScienceDirect APIs 
+ API Name 
+ Views 
+ Weekly Quota 
+ Requests per second 
+ Serial Title 
+ STANDARD, COVERIMAGE views 
+ Default 25 results / Max 200 results
+ 20,000 
+ 6 
+ Nonserial Title 
+ STANDARD, COVERIMAGE views 
+ Default 25 results / Max 200 results
+ 20,000 
+ 6 
+ Subject Classifications 
+ No restrictions 
+ No restrictions 
+ N/A 
+ Article Retrieval 
+ All Subscribed, OpenAccess and Complimentary Articles 
+ 50,000 Unlimited for Text Mining API Keys 
+ 10 
+ Article Metadata API 
+ 25 results- a field restricted search against ScienceDirect serial/nonserial full-text
+ articles 
+ 6000 item total results limit
+ N/A 
+ 6 
+ ScienceDirect Search v2 
+ STANDARD view / Max 200 results 
+ 6000 item total results limit
+ 20,000 
+ 2 
+    SciVal API 
+ API Name 
+ Views 
+ Weekly Quota 
+ Requests per second 
+ SciVal Author Lookup 
+ Default 100 results / Max 500 results 
+ *5000 
+ 6 
+ SciVal Country Lookup 
+ Maximum 100 results for Metrics resource 
+ No limit on total results (varies by resource)
+ *5000 
+ 6 
+ SciVal Country Group Lookup 
+ Maximum 100 results for Metrics resource 
+ No limit on total results (varies by resource)
+ *5000 
+ 6 
+ SciVal Institution Lookup 
+ Maximum 100 results for Metrics resource 
+ No limit on total results (varies by resource)
+ *5000 
+ 6 
+ SciVal Institution Group Lookup 
+ Maximum 100 results for Metrics resource 
+ No limit on total results (varies by resource)
+ *5000 
+ 6 
+ SciVal Publication Lookup 
+ Maximum 100 results for Metrics resource 
+ No limit on total results (varies by resource)
+ *5000 
+ 6 
+ SciVal Scopus Source Lookup 
+ Maximum 100 results for Metrics resource 
+ No limit on total results (varies by resource)
+ *5000 
+ 6 
+ SciVal Subject Area 
+ Maximum 100 results for Metrics resource 
+ No limit on total results (varies by resource)
+ *5000 
+ 6 
+ SciVal Topic Lookup 
+ Maximum 100 results for Metrics resource 
+ No limit on total results (varies by resource)
+ *5000 
+ 6 
+ SciVal Topic Cluster Lookup 
+ Maximum 100 results for Metrics resource 
+ No limit on total results (varies by resource)
+ *5000 
+ 6 
+ SciVal World Lookup 
+ Maximum 100 results for Metric resource 
+ No limit on total results (varies by resource)
+ *5000 
+ 6 
+    Access-Controlled APIs 
+ API Name 
+ Views 
+ Weekly Quota 
+ Requests per second 
+ Scopus Citation Overview 
+ STANDARD view 
+ Default 25 results / Max 200 results
+ 20,000 
+ 4 
+ Scopus Author Feedback 
+ N/A 
+ N/A 
+ N/A 
+ ScienceDirect Full-Text Entitlement 
+ N/A 
+ N/A 
+ 6 
+ ScienceDirect Article Hosting Permissions 
+ Provides open access information for a single full text article 
+ N/A 
+ 6 
+ ScienceDirect Holdings Report 
+ N/A 
+ N/A 
+ 2 
+ Embase Search 
+ Default 25 results 
+ No limit on total results
+ N/A 
+ 6 
+ Embase Retrieval 
+ 1 document per request 
+ N/A 
+ 6 
+ Engineering Village Search 
+ Default 25 results 
+ N/A 
+ N/A 
+ Engineering Village Retrieval 
+ 1 document per request 
+ N/A 
+ N/A 
+ SUSHI COP5 API 
+ 1 request per metric type 
+ N/A 
+ 6 
+ Support 
+ Terms and conditions 
+ Privacy policy 
+ Cookie policy 
+ Copyright © Elsevier B.V. All rights reserved, including those for text and data mining, AI training, and similar technologies. Elsevier Developers is a registered trademark of Elsevier B.V. 
+ We use cookies to help provide and enhance our service and tailor content. Cookie Settings

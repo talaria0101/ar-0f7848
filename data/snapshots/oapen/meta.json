@@ -24,5 +24,67 @@
   "fetched_at": "2026-10-20T01:31:51+00:00",
   "ratelimit_headers": {},
   "text_bytes": 46
+ },
+ "extra": {
+  "oai": {
+   "url": "https://library.oapen.org/oai/request?verb=Identify",
+   "final_url": "https://library.oapen.org/oai/request?verb=Identify",
+   "status": 200,
+   "content_type": "text/xml;charset=UTF-8",
+   "bytes": 1274,
+   "truncated": false,
+   "sha256": "54b95a266521ef240c161b545bff7766f43a87d333286d7fa1c6b4a1b35f78aa",
+   "fetched_at": "2026-10-20T01:38:27+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 1274
+  },
+  "docs": {
+   "url": "https://oapen.atlassian.net/wiki/spaces/OC/pages/1536/OAPEN+Library+API",
+   "final_url": "https://oapen.atlassian.net/wiki/spaces/OC/pages/1536/OAPEN+Library+API",
+   "status": 404,
+   "content_type": "application/json",
+   "bytes": 70,
+   "truncated": false,
+   "sha256": "02551e7e3a1d94c5b4e2de659c8417870674503af71a57c2ae9d39ca84082fd3",
+   "fetched_at": "2026-10-20T01:38:27+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 70
+  },
+  "help": {
+   "url": "https://www.oapen.org/oapen/Content/api",
+   "final_url": "https://www.oapen.org/oapen/Content/api",
+   "status": 404,
+   "content_type": "text/html;charset=UTF-8",
+   "bytes": 275,
+   "truncated": false,
+   "sha256": "490c448f6120e78507040480e462a98145c1eab69ecda6ec33a1c567207c7dd7",
+   "fetched_at": "2026-10-20T01:38:28+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 201
+  },
+  "rest": {
+   "url": "https://library.oapen.org/rest",
+   "final_url": "https://library.oapen.org/rest",
+   "status": 403,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 46,
+   "truncated": false,
+   "sha256": "e1fbecd1ac19766cfb40ca82ac50b1ff87ab115a4f0d66ab02a9c0267017253c",
+   "fetched_at": "2026-10-20T01:38:37+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 46
+  },
+  "apihelp": {
+   "url": "https://oapen.org/resources/api",
+   "final_url": "https://oapen.org/resources/api",
+   "status": 404,
+   "content_type": "text/html;charset=UTF-8",
+   "bytes": 44109,
+   "truncated": false,
+   "sha256": "3e74004d40765e28df5ac7ff701fcc7d190fb010bc0e38c7a86b8b4c9c1baf51",
+   "fetched_at": "2026-10-20T01:38:38+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 1042
+  }
  }
 }

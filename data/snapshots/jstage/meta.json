@@ -24,5 +24,31 @@
   "fetched_at": "2026-10-20T01:31:49+00:00",
   "ratelimit_headers": {},
   "text_bytes": 2338
+ },
+ "extra": {
+  "webapi": {
+   "url": "https://www.jstage.jst.go.jp/static/pages/JstageServices/TAB3/-char/en",
+   "final_url": "https://www.jstage.jst.go.jp/static/pages/JstageServices/TAB3/-char/en",
+   "status": 200,
+   "content_type": "text/html;charset=utf-8",
+   "bytes": 36421,
+   "truncated": false,
+   "sha256": "eb35d7ff1fbe16524ff354b36aa9fa2175cfb21648dc2f793b8c49cdb140f471",
+   "fetched_at": "2026-10-20T01:39:27+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 7596
+  },
+  "manual": {
+   "url": "https://www.jstage.jst.go.jp/static/files/ja/manual_api.pdf",
+   "final_url": "https://www.jstage.jst.go.jp/static/files/ja/manual_api.pdf",
+   "status": 200,
+   "content_type": "application/pdf;charset=UTF-8",
+   "bytes": 328401,
+   "truncated": false,
+   "sha256": "4688015493b411896905cf84fdc5e0cf1a5eb3bd9652276e03ec2941d6866b2d",
+   "fetched_at": "2026-10-20T01:39:28+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 311947
+  }
  }
 }

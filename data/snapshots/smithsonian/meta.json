@@ -28,5 +28,45 @@
    "X-Ratelimit-Remaining": "9"
   },
   "text_bytes": 6043
+ },
+ "extra": {
+  "gh": {
+   "url": "https://raw.githubusercontent.com/Smithsonian/OpenAccess/master/README.md",
+   "final_url": "https://raw.githubusercontent.com/Smithsonian/OpenAccess/master/README.md",
+   "status": 200,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 2494,
+   "truncated": false,
+   "sha256": "005707b61d6747b008a87e52aac85c3fd72df873500052e89c37ba90328bb87e",
+   "fetched_at": "2026-10-20T01:35:20+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 2492
+  },
+  "apidocs": {
+   "url": "https://api.data.gov/docs/developer-manual/",
+   "final_url": "https://api.data.gov/docs/developer-manual/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 24393,
+   "truncated": false,
+   "sha256": "c09641f25041d3c81f39988262f0fef407a166eb9210fbecf04d803afadc0c62",
+   "fetched_at": "2026-10-20T01:35:20+00:00",
+   "ratelimit_headers": {
+    "X-Api-Umbrella-Request-Id": "d1arpcpg2kn7emhefgmg"
+   },
+   "text_bytes": 7064
+  },
+  "oa": {
+   "url": "https://www.si.edu/openaccess/devtools",
+   "final_url": "https://www.si.edu/openaccess/devtools",
+   "status": 403,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 46621,
+   "truncated": false,
+   "sha256": "09e203f4e89b77ad84d338805d75d6d53cef0165b65b3dedcdfc6e36a8f43f8b",
+   "fetched_at": "2026-10-20T01:35:22+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 155
+  }
  }
 }

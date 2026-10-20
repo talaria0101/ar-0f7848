@@ -1,0 +1,357 @@
+Dpla Items Api - API Evangelist APIs 
+ How AI is applied across API Evangelist and APIs.io. 
+ Read my AI disclosure → 
+ Stories 
+ Stories 
+ Areas 
+ Conversations 
+ Developer 
+ Papers 
+ About 
+ Contact 
+ API Evangelist 
+ Discovery 
+ search Search
+ storefront Products
+ hub MCP Server
+ monitoring Analytics
+ workspace_premium Score
+ Learnings 
+ auto_stories Stories
+ category Areas
+ help FAQ
+ forum Conversations
+ description Papers
+ mail Newsletters
+ API Evangelist 
+ The Specification Layer 
+ video_library Videos
+ timeline Timeline
+ API 
+ Resources 
+ Industry 
+ People 
+ Guidance 
+ code Technology of APIs
+ business_center Business of APIs
+ campaign Evangelism of APIs
+ gavel Governance of APIs
+ history History of APIs
+ account_balance Politics of APIs
+ Toolbox 
+ domain Providers
+ Alphabetical 
+ Industries 
+ Countries 
+ api APIs
+ cloud Solutions
+ build Tools
+ verified Standards
+ gavel Regulations
+ horizontal_rule Headers
+ layers Overlays
+ extension Extensions
+ schema Schema
+ policy Policies
+ rule Rules
+ Alignment 
+ sync Lifecycle
+ strategy Strategies
+ psychology Experiences
+ menu_book Vocabularies
+ API Evangelist LLC 
+ info About
+ API Evangelist 
+ Kin Lane 
+ Papers 
+ Use of AI 
+ Where This Data Comes From 
+ query_stats Search Terms
+ contact_support Contact
+ Contact Form 
+ LinkedIn 
+ Bluesky 
+ Mastodon 
+ Newsletter 
+ Specification Layer 
+ Apple Podcasts 
+ Spotify 
+ Postman 
+ GitHub 
+ RSS Feed 
+ Discovery 
+ search Search
+ storefront Products
+ hub MCP Server
+ monitoring Analytics
+ workspace_premium Score
+ Learnings 
+ auto_stories Stories
+ category Areas
+ help FAQ
+ forum Conversations
+ description Papers
+ mail Newsletters
+ API Evangelist 
+ The Specification Layer 
+ video_library Videos
+ timeline Timeline
+ API 
+ Resources 
+ Industry 
+ People 
+ Guidance 
+ code Technology of APIs
+ business_center Business of APIs
+ campaign Evangelism of APIs
+ gavel Governance of APIs
+ history History of APIs
+ account_balance Politics of APIs
+ Toolbox 
+ domain Providers
+ Alphabetical 
+ Industries 
+ Countries 
+ api APIs
+ cloud Solutions
+ build Tools
+ verified Standards
+ gavel Regulations
+ horizontal_rule Headers
+ layers Overlays
+ extension Extensions
+ schema Schema
+ policy Policies
+ rule Rules
+ Alignment 
+ sync Lifecycle
+ strategy Strategies
+ psychology Experiences
+ menu_book Vocabularies
+ API Evangelist LLC 
+ info About
+ API Evangelist 
+ Kin Lane 
+ Papers 
+ Use of AI 
+ Where This Data Comes From 
+ query_stats Search Terms
+ contact_support Contact
+ Contact Form 
+ LinkedIn 
+ Bluesky 
+ Mastodon 
+ Newsletter 
+ Specification Layer 
+ Apple Podcasts 
+ Spotify 
+ Postman 
+ GitHub 
+ RSS Feed 
+ Need help? 
+ Contact us 
+ Explore by tag 
+ In the spotlight 
+ Browse all top tags 
+ No tag matches that. 
+ APIs 
+ Digital Public Library of America 
+ Digital Public Library of America Items API 
+ Digital Public Library of America 
+ Digital Public Library of America Items API 
+ Search and retrieve cultural heritage item metadata records 
+ Documentation 
+ Provider Profile 
+ APIs.io 
+ OpenAPI 
+ GitHub 
+ Digital Public Library of America Items API is one of 5 APIs that Digital Public Library of America publishes on the APIs.io network, described by a machine-readable OpenAPI specification. 
+ Tagged areas include Item. The published artifact set on APIs.io includes an OpenAPI specification, API documentation, a getting-started guide, authentication docs, and a GitHub repository. 
+ This API exposes
+ 2 operations 
+ across 2 paths ,
+ and defines 14 schemas .
+ It is described by OpenAPI 3.2.0, at version 2. 
+ Requests are made against a single base URL, https://api.dp.la/v2 . 
+ 2 operations 
+ 2 paths 
+ 14 schemas 
+ 2 GET 
+ Metadata 
+ The identity and technical contract details declared by the specification. 
+ Specification OpenAPI 3.2.0 
+ API Version 2 
+ Base URL https://api.dp.la/v2 
+ Authentication API Key, API Key 
+ Contact DPLA Developer Portal 
+ License MIT 
+ Terms of Service View terms 
+ Resource Areas 1 
+ Authentication & Security 2 
+ Digital Public Library of America Items API declares
+ 2 security schemes 
+ for authenticating requests.
+ An API key is passed in the query as api_key ( ApiKeyQuery ).
+ An API key is passed in the header as Authorization ( ApiKeyHeader ).
+ By default, every request must be authenticated. 
+ ApiKeyQuery — DPLA API key passed as a query parameter. Obtain a free key by sending a POST to /apikey/{email}. ApiKeyHeader — DPLA API key passed as an Authorization header value (not Bearer scheme — just the raw 32-character key). 
+ Paths & Operations 2 
+ Across 2 paths , the API surfaces 2 operations — 2 GET . Each is listed below with its method, path, parameters, and response codes. 
+ Items 2 
+ Search and retrieve cultural heritage item metadata records 
+ GET 
+ /items 
+ Search cultural heritage items 
+ searchItems 
+ 43 params 
+ → 200400403500 
+ GET 
+ /items/{id} 
+ Fetch a single item by ID 
+ fetchItem 
+ 2 params 
+ → 200403404500 
+ Schemas 14 
+ The contract defines 14 schemas that model the data the API accepts and returns. The most detailed are SourceResource (20 properties), DPLAItem (17 properties), SpatialLocation (8 properties), ItemSearchResponse (7 properties). Each schema is shown below with its type and property counts. 
+ ItemSearchResponse 
+ object 
+ JSON-LD response envelope for a list of DPLA item records. 
+ 7 properties 
+ Language 
+ object 
+ Language of the item. 
+ 2 properties 
+ Collection 
+ object 
+ The collection this item belongs to at the contributing institution. 
+ 4 properties 
+ DateRange 
+ object 
+ A date or date range associated with the item. 
+ 5 properties 
+ SpatialLocation 
+ object 
+ A geographic location associated with the item. 
+ 8 properties 
+ Agent 
+ object 
+ An organization or institution acting as provider or data provider. 
+ 3 properties 
+ FacetTerm 
+ object 
+ A single facet term with its document count. 
+ 2 properties 
+ DPLAItem 
+ object 
+ A single DPLA cultural heritage item metadata record (DPLA MAP v4). 
+ 17 properties 
+ WebResource 
+ object 
+ A web-accessible representation or view of the item. 
+ 4 properties 
+ FacetResult 
+ object 
+ Aggregated facet counts for a specific field. 
+ 2 properties 
+ SubjectTerm 
+ object 
+ A subject heading term. 
+ 4 properties 
+ SourceResource 
+ object 
+ The intellectual content and descriptive metadata of the original cultural heritage object, following DPLA Metadata Application Profile. 
+ 20 properties 
+ ItemFetchResponse 
+ object 
+ JSON-LD response for a single DPLA item or batch of items. 
+ 4 properties 
+ ErrorResponse 
+ object 
+ Standard error response body. 
+ 3 properties 
+ 2 required 
+ Specification 
+ The full machine-readable OpenAPI contract behind this narrative. 
+ Source 
+ dpla-items-api-openapi.yml 
+ YAML 
+ JSON 
+ Download 
+ Raw ↑ 
+ Copy 
+ More from Digital Public Library of America 4 
+ Other APIs Digital Public Library of America publishes across the network. 
+ DPLA API Key Registration 
+ AE Profile 
+ APIs.io 
+ Digital Public Library of America Authentication API 
+ AE Profile 
+ APIs.io 
+ Digital Public Library of America Primary Source Sets API 
+ AE Profile 
+ APIs.io 
+ Digital Public Library of America Utilities API 
+ AE Profile 
+ APIs.io 
+ #Item 
+ ← Back to D APIs 
+ API Details 
+ ID dpla:dpla-items-api 
+ Base URL https://api.dp.la/v2 
+ Docs https://pro.dp.la/developers/api-codex 
+ Provider 
+ Digital Public Library of America 
+ APIs.io → 
+   GitHub → 
+ Explore more 
+ All APIs 
+ Providers 
+ APIs.io Network 
+ Work with this as data 
+ Every API here is available over the API and to AI agents over MCP. APIs is not yet its own endpoint on the v1 API. Reach this content through network search and the tag graph, or the MCP server below. 
+ Installs https://mcp.apievangelist.com/mcp in Claude, Cursor, VS Code and the rest — one button, every client.
+ MCP tools for apis 
+ 4 tools reach this content 
+ search_api_evangelist Search every content type across the network at once. 
+ find_related The shared-tag relevance graph — what else covers this. 
+ get_tag Everything one tag labels, across all content types. 
+ guide_topic PRO — a curated bundle for a topic: area, guidance, rules, papers, stories, services. 
+ All tools & prompts 
+ Call it yourself 
+ curl for this page 
+ Search the network for this 
+ curl "https://api.apievangelist.com/v1/search?q=dpla-items-api&limit=10" 
+ Everything under a tag 
+ curl "https://api.apievangelist.com/v1/tags/dpla-items-api" 
+ Discovery needs no key. Full bodies and the synthesis endpoints are Pro. 
+ Get an API key 
+ Free tier, no email required. Sign in with whichever identity you already have. 
+ GitHub 
+ Google 
+ LinkedIn 
+ A second provider on the same verified email joins the account you already have.
+ Your account 
+ ⓘ 
+ Where this information came from 
+ This is an independent, third-party profile of Digital Public Library of America Items API, published by
+ API Evangelist . We do not operate, host, resell, or
+ support these APIs , and we are not affiliated with or endorsed by the company unless stated above.
+ Everything here is built from publicly available information — the company's own site,
+ developer portal, documentation, public repositories, and the specifications it publishes for public use.
+ Nothing is obtained by breaching a system, defeating an access control, or using credentials.
+ The Kin Score and Agent Readiness rating are independently calculated assessments of a company's
+ public API artifacts, scored against a published rubric. They are not certifications,
+ endorsements, security assessments, or audits.
+ Corrections, re-scores, and removal are free — no partnership or purchase required, and
+ you do not need to justify the request. A removed company is recorded as unrated , never scored
+ zero for having asked. Acknowledgement within one business day; removal within two.
+ info@apievangelist.com 
+ ·
+ Read the full data-sourcing policy → 
+ On a security or compliance team? Put security in the subject line and
+ you will get a person, not a form — we will tell you exactly which public URLs this profile was built from. 
+ © 2026 API Evangelist 
+ About 
+ Contact 
+ GitHub 
+ Newsletter

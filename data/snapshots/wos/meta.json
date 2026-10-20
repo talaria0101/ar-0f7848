@@ -24,5 +24,67 @@
   "fetched_at": "2026-10-20T01:31:57+00:00",
   "ratelimit_headers": {},
   "text_bytes": 96
+ },
+ "extra": {
+  "starter": {
+   "url": "https://developer.clarivate.com/apis/wos-starter",
+   "final_url": "https://developer.clarivate.com/apis/wos-starter",
+   "status": 200,
+   "content_type": "application/json; charset=utf-8",
+   "bytes": 1020,
+   "truncated": false,
+   "sha256": "f24932096caa1f2ca508970756ea3b59f09d587dee7788b590928c5dcb0136b9",
+   "fetched_at": "2026-10-20T01:40:29+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 1020
+  },
+  "faq": {
+   "url": "https://clarivate.com/academia-government/scientific-and-academic-research/research-discovery-and-referencing/web-of-science/web-of-science-api/",
+   "final_url": "https://clarivate.com/academia-government/scientific-and-academic-research/research-discovery-and-referencing/web-of-science/web-of-science-api/",
+   "status": 404,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 292966,
+   "truncated": false,
+   "sha256": "010004575c082e27403a6bf12a983c188f24b3afa930c00257f2f550efda2737",
+   "fetched_at": "2026-10-20T01:40:31+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 9236
+  },
+  "plans": {
+   "url": "https://developer.clarivate.com/apis/wos-starter/plans",
+   "final_url": "https://developer.clarivate.com/apis/wos-starter/plans",
+   "status": 404,
+   "content_type": "application/json; charset=utf-8",
+   "bytes": 118,
+   "truncated": false,
+   "sha256": "914dcad8b2e9f65dc5006d8bbdd71d7360a0668b4443e631163ce8f4b2efba7c",
+   "fetched_at": "2026-10-20T01:40:43+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 118
+  },
+  "swagger": {
+   "url": "https://api.clarivate.com/apis/wos-starter/v1/swagger.json",
+   "final_url": "https://api.clarivate.com/apis/wos-starter/v1/swagger.json",
+   "status": 401,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 236,
+   "truncated": false,
+   "sha256": "4297bb887a1d055fcbd8c05c4a804aa9b285ab9ab292bf90236667ebef7a5f07",
+   "fetched_at": "2026-10-20T01:40:44+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 91
+  },
+  "gh": {
+   "url": "https://raw.githubusercontent.com/clarivate/wosstarter_python_client/master/README.md",
+   "final_url": "https://raw.githubusercontent.com/clarivate/wosstarter_python_client/master/README.md",
+   "status": 200,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 14018,
+   "truncated": false,
+   "sha256": "32a1459710357f5d664d3492053fbafe2117ff1c9e6df06096ecac044601579d",
+   "fetched_at": "2026-10-20T01:40:44+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 14001
+  }
  }
 }

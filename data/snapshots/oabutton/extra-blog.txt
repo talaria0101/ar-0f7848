@@ -1,0 +1,146 @@
+OA.Works Blog 
+ Subscribe 
+ major-news 
+ Sunsetting the Open Access Button & InstantILL
+ How we’re refocusing our work to serve the Open Access movement. 
+ 16 Jun 2025 
+ 5 min read 
+ OA.Report 
+ How OA.Report measures Howard Hughes Medical Institute’s OA policy compliance using ROR IDs
+ Late last year, I sat down with our friends at the Research Organization Registry (ROR) and the Howard Hughes Medical Institute (HHMI) to discuss how OA.Report uses ROR IDs to support HHMI with OA policy compliance checking.
+Read the case study
+This was a fantastic opportunity to celebrate the 
+ 02 Jun 2025 
+ 1 min read 
+ major-news 
+ Featured 
+ OA.Works turns 12 🎂
+ Turning policy into practice, ideas into impact, and the email that started it all. 
+ 25 Apr 2025 
+ 4 min read 
+ Introducing our Articles of Governance
+ Here are three quick things we think you should know
+This week, our Advisory Committee approved OA.Works' Articles of Governance. Articles of Governance set the rules for how organizations like ours are run, and so, despite the unusual name, they’re critical to understand. Today, we’re sharing 
+ 31 Jul 2023 
+ 2 min read 
+ OA.Report 
+ Featured 
+ OA.Report now free for thousands of funders to analyze and increase their impact using open research
+ We’re releasing free OA.Reports so that thousands of funders can find articles they’ve funded, see how open their research is, and increase their impact. Built with the Gates Foundation, OA.Report is used at the Robert Wood Johnson Foundation, Wellcome, the Michael J. Fox Foundation, and others. 
+ 10 Jul 2023 
+ 4 min read 
+ OA.Report 
+ Join the OA.Report for libraries pilot to simplify compliance checking for your institutional & funder’s OA policies.
+ Today, we’re happy to announce that you can join the OA.Report for libraries pilot! If you’re interested in joining: read on and get in touch!
+Get in touch💡About OA.Report
+OA.Report is an open-source tool that identifies research outputs organizations have supported, analyzes their 
+ 10 Jul 2023 
+ 3 min read 
+ OA.Report 
+ Wellcome is using OA.Report to report OA policy compliance
+ We’re thrilled to share that Wellcome has contracted OA.Report to support data analysis linked to their Open Access Policy!
+💡About OA.Report
+OA.Report is an open-source tool that identifies research outputs organizations have supported, analyzes their openness (including OA policy compliance), and then streamlines taking action 
+ 03 Jul 2023 
+ 1 min read 
+ OA.Report 
+ MJFF starts using OA.Report to measure OA policy compliance & demonstrate its impact
+ We’re thrilled to share that The Michael J.Fox Foundation for Parkinson’s Research (MJFF) has signed up to use OA.Report to help implement its Open Access Policy.
+💡About OA.Report
+OA.Report is an open-source tool that identifies research outputs organizations have supported, analyzes their openness 
+ 26 Jun 2023 
+ 1 min read 
+ OA.Report 
+ HHMI starts using OA.Report to measure and improve OA policy compliance
+ We’re thrilled to share that Howard Hughes Medical Institute (HHMI) has signed up to use OA.Report to help implement its Open Access Policy.
+💡About OA.Report
+OA.Report is an open-source tool that identifies research outputs organizations have supported, analyzes their openness (including OA policy compliance), and 
+ 23 Mar 2023 
+ 1 min read 
+ OA.Report 
+ OA.Report gets investment from Aligning Science Across Parkinson's
+ We’re thrilled to share that Aligning Science Across Parkinson’s (ASAP) is investing in new OA.Report features and increasing it’s usage of the tool after a successful 6-month pilot.
+💡About OA.Report
+OA.Report is an open-source tool that identifies research outputs organizations have supported, 
+ 14 Feb 2023 
+ 1 min read 
+ Nature features OA.Report's work putting OA policy into practice!
+ After a couple of years of working to support institutions implementing their OA policies, we're so proud to see OA.Report, our development partner, and one of our collaborators featured in Nature. We appreciate Nature bringing attention to the progress being made in more effectively implementing OA policies. 
+ 24 Jan 2023 
+ 1 min read 
+ OA.Report 
+ OA.Report helps funders measure and increase OA policy compliance and their investment’s impact
+ Available to more organizations later this year. 
+ 09 Jan 2023 
+ 5 min read 
+ OA.Report 
+ In the works at OA.Works in 2022
+ Some of our highlights from the past year 
+ 06 Jan 2023 
+ 3 min read 
+ How to unlock your paper and help the climate crisis
+ United Nations library event launches new initiative and collaboration. 
+ 14 Dec 2022 
+ 1 min read 
+ OA.Works' receives grant from Robert Wood Johnson Foundation
+ Helps enable OA.Report to support more organizations to discover, analyze, and unlock papers they’ve supported. 
+ 08 Nov 2022 
+ 2 min read 
+ Featured 
+ OA.Works joins Code for Science & Society
+ New home allows us to capitalize on growth 
+ 18 Oct 2022 
+ 3 min read 
+ OA.Works’ Natalia Norori Goes Back to the UN to Talk about Equity and Open
+ In this talk at the UN, Norori dives into the difference between open and equitable, using her life experience as a Nicaraguan scientist who has been impacted by migration. 
+ 21 Sep 2021 
+ 6 min read 
+ Featured 
+ OA.Works receives $1.9 million to bolster OA policies
+ Investment from the Bill & Melinda Gates Foundation creates a new partnership and open tools for OA policy implementation and self-archiving. 
+ 06 Jul 2021 
+ 2 min read 
+ Featured 
+ The Open Access Button is now OA.Works!
+ We're rebranding the Open Access Button organization to OA.Works to better reflect who we are! 
+ 26 Apr 2021 
+ 2 min read 
+ RSCVD partner given global award for impact
+ And awarded a grant to expand RSCVD’s work.
+In the past month, our partners for RSCVD have received an award and a grant to
+both strengthen and recognise its achievements!
+This is critical. RSCVD started as an emergency response to COVID-19 so that, as
+libraries were forced to 
+ 18 Mar 2021 
+ 1 min read 
+ Shareyourpaper.org 
+ Talking ShareYourPaper.org with EIFL
+ The team at EIFL [https://www.eifl.net/] (Electronic Information for Libraries)
+and their coalition at large have been doing stelar work in the repository and
+Open Access world for many years. So, when Iryna Kuchma (one of our original
+steering committee members) asked us to give a webinar
+[https: 
+ 16 Feb 2021 
+ 1 min read 
+ Shareyourpaper.org 
+ An interview with the Scholcomm Librarian behind ShareYourPaper.org
+ This month, we released ShareYourPaper.org for Libraries. Leila Sterman co-designed ShareYourPaper.org and the version for libraries as the Scholarly Communication Librarian and an Assistant Professor at Montana State University Library. As 2020 came to an end, Jake Orlowitz caught up with her. 
+ 02 Feb 2021 
+ 5 min read 
+ Shareyourpaper.org for Libraries out now.
+ Here’s how it works 
+ 06 Jan 2021 
+ 7 min read 
+ Shareyourpaper.org 
+ Our first six months using Shareyourpaper.org for Libraries
+ A post by Leila Sterman, our partner at Montana State, on their first 6 months with Shareyourpaper.org. 
+ 15 Dec 2020 
+ 4 min read 
+ An update on RSCVD at the Forum on Interlending in the UK
+ For three of the past four years we’ve had the honor of speaking to the Forum for Interlending in the UK about our work on integrating Open Access into Interlibrary Loan. 
+ 25 Nov 2020 
+ Page 1 of 8 
+ Older Posts → 
+ OA.Works Blog © 2026 
+ Subscribe 
+ This website’s content is licensed under a Creative Commons Attribution 4.0 International License .

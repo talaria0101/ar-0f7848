@@ -1,0 +1,29 @@
+{
+ "slug": "memento",
+ "auth": "unreachable",
+ "auth_note": "Nothing was captured: the sandbox proxy returned 502 for timetravel.mementoweb.org docs, probe and retries.",
+ "cost": "not established",
+ "rate_limit": "not established",
+ "data_license": "not established",
+ "bulk_access": "none documented",
+ "probe_status": 502,
+ "probe_observation": "The probe body is empty (0 bytes) with status 502, a sandbox egress proxy failure, not evidence the API is down.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "URLError: <urlopen error Tunnel connection failed: 502 the name did not resolve>",
+   "snapshot": "data/snapshots/memento/extra-mementoweb-api.txt"
+  },
+  {
+   "claim": "other",
+   "quote": "URLError: <urlopen error Tunnel connection failed: 502 the name did not resolve>",
+   "snapshot": "data/snapshots/memento/extra-mementoweb-api.txt"
+  },
+  {
+   "claim": "other",
+   "quote": "JSON TimeMaps specifies an application/json serialization for TimeMaps that may be",
+   "snapshot": "data/snapshots/memento/extra-lanl.txt"
+  }
+ ],
+ "not_established": "Auth, cost, rate limits, data license and bulk access of the Time Travel API: timetravel.mementoweb.org is unreachable from this sandbox (502 proxy, DNS did not resolve) for docs, probe and https retry; mementoweb.org/depot and the GitHub raw README guesses returned 404; mementoweb.org/guide/ gave only a link overview with none of these facts."
+}

@@ -1,0 +1,54 @@
+{
+ "slug": "springer",
+ "auth": "key-free",
+ "auth_note": "An API key is required (anonymous/invalid key gets 401); the Basic plan is free and self-serve via the developer portal account.",
+ "cost": "freemium",
+ "rate_limit": "Basic plan: 500 hits/day and 100 hits/min throttling for the Open Access API; Premium plan: 10,000 hits/day and 300 hits/min.",
+ "data_license": "not established",
+ "bulk_access": "Premium plan lists bulk data access (no dump or OAI-PMH route documented in captured pages)",
+ "probe_status": 401,
+ "probe_observation": "The probe with api_key=invalid returned HTTP 401 JSON: Authentication failed. API key is invalid or missing.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "API key is invalid or missing. Ensure that a valid API key is included in the request URL.",
+   "snapshot": "data/snapshots/springer/probe.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "Basic Plan For individual researchers and small teams needing free access. 500 Hits/Day for Open Access API. Throttling: 100 Hits/Min to ensure fair access. Single API Key Per Account.",
+   "snapshot": "data/snapshots/springer/extra-dsoa.txt"
+  },
+  {
+   "claim": "cost",
+   "quote": "Open Access API offers a free tier for general access and a Premium plan tailored for academic institutions, government agencies, and enterprises requiring higher usage limits",
+   "snapshot": "data/snapshots/springer/extra-dsoa.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "500 Hits/Day for Open Access API. Throttling: 100 Hits/Min to ensure fair access.",
+   "snapshot": "data/snapshots/springer/extra-dsoa.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "10,000 Hits/Day for Open Access API. Throttling: 300 Hits/Min for improved efficiency.",
+   "snapshot": "data/snapshots/springer/extra-dsoa.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "Priority support and bulk data access.",
+   "snapshot": "data/snapshots/springer/extra-dsmeta.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "Authentication failed. API key is invalid or missing",
+   "snapshot": "data/snapshots/springer/probe.txt"
+  },
+  {
+   "claim": "other",
+   "quote": "Basic Plan Free Access Retrieve standard bibliographic metadata. Limited request volume per month.",
+   "snapshot": "data/snapshots/springer/extra-dsmeta.txt"
+  }
+ ],
+ "not_established": "Data license of returned metadata/full text not found in captured pages. The dev.springernature.com portal is a JS single-page app: its rate-limit, API-access and terms pages captured as 200-byte shells, so the limits come from the datasolutions.springernature.com product pages and cover the Open Access API; the Meta API per-day/per-minute numbers (Meta page says only 'Limited request volume per month') and Premium price are not established. Bulk route not documented."
+}

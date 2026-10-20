@@ -1,0 +1,12 @@
+Memento "Time Travel for the Web" - Guide 
+ Memento "Time Travel for the Web" - Guide 
+ RFC 7089 is the authoritative technical specification of the 
+ Memento protocol. But the following resources provide a more accessible overview:
+ Introduction to Memento. 
+ Resource Versioning and Memento , 
+ describes how wikis, content management systems, and software versioning systems that use a common versioning pattern can support the Memento protocol. 
+ Determining Resource Type details how 
+ clients can recognize a Memento (a historic version of a web resource), a TimeGate, and an Original Resource. 
+ JSON TimeMaps specifies an application/json serialization for TimeMaps that may be 
+ supported in addition to the application/link-format serialization specified by the Memento protocol. 
+ The Memento 101 tutorial slides.

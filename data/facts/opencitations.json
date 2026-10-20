@@ -1,0 +1,54 @@
+{
+ "slug": "opencitations",
+ "auth": "none",
+ "auth_note": "Anonymous GET returned data; an access token is optional and free by email.",
+ "cost": "free",
+ "rate_limit": "180 requests/minute per IP address",
+ "data_license": "CC0",
+ "bulk_access": "https://download.opencitations.net/ (dumps on Zenodo, Figshare and Internet Archive)",
+ "probe_status": 200,
+ "probe_observation": "The probe returned a JSON array of citation records (oci, citing, cited, creation, timespan, journal_sc, author_sc), 658798 bytes, starting with oci 06010048871-06120344846.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "\"oci\": \"06010048871-06120344846\"",
+   "snapshot": "data/snapshots/opencitations/probe.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "Use of an Open Citations Access Token is not compulsory",
+   "snapshot": "data/snapshots/opencitations/extra-token.txt"
+  },
+  {
+   "claim": "cost",
+   "quote": "Getting the Open Citations Access Token is voluntary, easy, and does not cost anything to you.",
+   "snapshot": "data/snapshots/opencitations/extra-token.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "API calls are rate-limited to 180 requests/minute per IP address",
+   "snapshot": "data/snapshots/opencitations/docs.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "The data held in any of the OpenCitations datasets are available under a  Creative Commons public domain dedication (CC0)",
+   "snapshot": "data/snapshots/opencitations/extra-about.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "For large-scale data retrieval, please use the database dumps available at download.opencitations.net",
+   "snapshot": "data/snapshots/opencitations/docs.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "Data available through Zenodo , Figshare and the Internet Archive",
+   "snapshot": "data/snapshots/opencitations/extra-dumps.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "\"citing\": \"omid:br/06010048871 openalex:W4409995113 doi:10.1063/5.0251893\"",
+   "snapshot": "data/snapshots/opencitations/probe.txt"
+  }
+ ],
+ "not_established": "Nothing material. Cost is inferred from the free token statement and the CC0 data statement; no pricing page exists in the capture."
+}

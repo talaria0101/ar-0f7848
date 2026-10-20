@@ -1,0 +1,18 @@
+Common Crawl Index Server 
+ Index Server 
+ Search the CDX URL index for any Common Crawl archive. 
+ Select an archive from the list below, enter a URL pattern, and hit Search to query the index. See the PyWB CDX Server API Reference for more about the query API. Replace the API endpoint coll/cdx with one of the endpoints listed below (also available as a JSON list ). 
+ Crawl archive 
+ URL pattern 
+ Search 
+ View Archive Listing 
+ Command-line tools 
+ Tools for working with the CDX server and downloading from Common Crawl can be found on our Examples page. 
+ About the data 
+ Common Crawl data is stored on Amazon Web Services' Public Data Sets . All data and index files are free to download. Feel free to run your own index server, or analyze the index offline. 
+ Please do not overload the URL index server. For bulk downloads (e.g. all records of the entire .com top-level domain), see the download instructions . The Columnar Index is a better fit for bulk filtering and aggregation. 
+ More about the URL index in the original announcement . For help, visit the Common Crawl user forum or Discord server . See also Getting Started . 
+ Common Crawl is a California 501(c)(3) registered non-profit organization.
+ Hosting of Common Crawl data is covered by Amazon Web Services' Open Data Sponsorship Program .
+ Terms of Use 
+ Privacy

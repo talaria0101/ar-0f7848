@@ -24,5 +24,31 @@
   "fetched_at": "2026-10-20T01:31:37+00:00",
   "ratelimit_headers": {},
   "text_bytes": 50335
+ },
+ "extra": {
+  "readme": {
+   "url": "https://raw.githubusercontent.com/garethbjohnson/gutendex/master/README.md",
+   "final_url": "https://raw.githubusercontent.com/garethbjohnson/gutendex/master/README.md",
+   "status": 404,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 14,
+   "truncated": false,
+   "sha256": "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed",
+   "fetched_at": "2026-10-20T01:35:23+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 14
+  },
+  "gh": {
+   "url": "https://github.com/garethbjohnson/gutendex",
+   "final_url": "https://github.com/garethbjohnson/gutendex",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 312029,
+   "truncated": false,
+   "sha256": "6bec53e9e8da692509e5cd11f08efbd122add0caf6301c630369912f081e5d44",
+   "fetched_at": "2026-10-20T01:35:33+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 8520
+  }
  }
 }

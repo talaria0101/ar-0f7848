@@ -1,0 +1,392 @@
+API Downloads :: Technical Documentation 
+ Technical Documentation 
+ Data publishing 
+ Data processing 
+ Data use 
+ API 
+ Cloud services 
+ System components 
+ English 
+ Leave feedback on GitHub 
+ Send feedback by email 
+ Edit this page on GitHub 
+ Data Use 
+ Data downloads 
+ Occurrence download formats 
+ Importing into ArcGIS 
+ Importing into Excel 
+ Importing into LibreOffice 
+ Importing into QGIS 
+ Issues and flags 
+ Occurrence issues and flags 
+ Checklist issues and flags 
+ API Usage 
+ API Introduction 
+ rgbif 
+ pygbif 
+ Java 
+ API Downloads 
+ API Downloads 
+ API SQL Downloads 
+ API SQL Downloads – Functions 
+ Species occurrence cubes 
+ Cloud computing services 
+ Citation 
+ Data Use 
+ API Downloads 
+ API Downloads 
+ API Downloads 
+ The GBIF Occurrence Download API provides a service to download occurrence records and retrieve information about those downloads. 
+ Occurrence downloads are created asynchronously — the user requests a download and, once the download is prepared, is sent an email with a link to the resulting file. 
+ It is necessary to register as a user on GBIF.org to create a download request, and to authenticate using the username (not the email) and password. 
+ Complete technical details are provided in the API reference documentation . 
+ Requesting an occurrence download 
+ A download request includes your username, email address, the download format, and a filter for the required data in the form of a predicate . 
+ A basic example using the curl command to make the request: 
+ Put this in a file called query.json , replacing userName with your username and userEmail@example.org with your email address: 
+ {
+ "notificationAddresses": [ "userEmail@example.org" ],
+ "sendNotification": true,
+ "format": "SIMPLE_CSV",
+ "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+ "predicate": {
+ "type": "and",
+ "predicates": [
+ {
+ "type": "equals",
+ "key": "BASIS_OF_RECORD",
+ "value": "PRESERVED_SPECIMEN"
+ },
+ {
+ "type": "in",
+ "key": "COUNTRY",
+ "values": [ "VC", "GD" ]
+ }
+ ]
+ }
+} 
+ format can be changed to one of SIMPLE_CSV , DWCA , SPECIES_LIST or FASTA_ARCHIVE , see Occurrence download formats . 
+ Then use this Curl command: 
+ curl --include --user userName:PASSWORD --header "Content-Type: application/json" --data @query.json https://api.gbif.org/v1/occurrence/download/request 
+ A download key is returned. Querying that download key shows the download information, including the download link and DOI once the download is ready. Run this repeatedly, until you see SUCCEEDED , replacing the key with the key for your download: 
+ curl -Ss https://api.gbif.org/v1/occurrence/download/0001005-130906152512535 
+ You can then download the resulting file: 
+ curl --location --remote-name https://api.gbif.org/occurrence/download/request/0001005-130906152512535.zip 
+ Downloads using predicates can also be made through the website at create new download . 
+ Occurrence search parameters 
+ Most of the predicates below use a key which specifies the field to search on. 
+ The keys are listed and described on the /occurrence/search API call , and in the Java documentation . Note they must be provided in UPPER_CASE_WITH_UNDERSCORES for the download APIs. 
+ Occurrence download predicates 
+ These are the supported predicates that can be combined to build download requests. 
+ equals 
+ Equality comparison. Tests for exact equality of the term and the value, or case-sensitive equality if matchCase is set to true . 
+ {
+ "notificationAddresses": ["userName@example.org"],
+ "sendNotification": true,
+ "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+ "predicate": {
+ "type": "equals",
+ "key": "BASIS_OF_RECORD",
+ "value": "LITERATURE"
+ }
+} 
+ or 
+ {
+ "notificationAddresses": ["userName@example.org"],
+ "sendNotification": true,
+ "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+ "predicate": {
+ "type": "equals",
+ "key": "HAS_COORDINATE",
+ "value": "true"
+ }
+} 
+ or 
+ {
+ "notificationAddresses": ["userName@example.org"],
+ "sendNotification": true,
+ "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+ "predicate": {
+ "type": "equals",
+ "key": "CATALOG_NUMBER",
+ "value": "Ax1",
+ "matchCase":"true"
+ }
+} 
+ and 
+ Logical conjuction, "and". The sub-predicates must all be true. 
+ {
+ "notificationAddresses": ["userName@example.org"],
+ "sendNotification": true,
+ "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+ "predicate": {
+ "type": "and",
+ "predicates": [
+ { "type": "equals", "key": "HAS_GEOSPATIAL_ISSUE", "value": "false"},
+ { "type": "equals", "key": "TAXON_KEY", "value": "59R5F", "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b" }
+ ]
+ }
+} 
+ or 
+ Logical disjunction, "or". At least one of the sub-predicates must be true. 
+ When requesting many values of the same field (for example, multiple taxa or countries) the in predicate (just below) is more appropriate. 
+ {
+ "notificationAddresses": ["userName@example.org"],
+ "sendNotification": true,
+ "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+ "predicate": {
+ "type": "or",
+ "predicates": [
+ { "type": "equals", "key": "HAS_GEOSPATIAL_ISSUE", "value": "false"},
+ { "type": "equals", "key": "TAXON_KEY", "value": "59R5F", "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b" }
+ ]
+ }
+} 
+ in 
+ Specify multiple values to be compared. "matchCase": true can be added if required. 
+ {
+ "notificationAddresses": ["userName@example.org"],
+ "sendNotification": true,
+ "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+ "predicate": {
+ "type": "in",
+ "key": "CATALOG_NUMBER",
+ "values": ["cat1", "cat2", "cat3"]
+ }
+} 
+ lessThan 
+ Less than. Returns occurrences with term values strictly less than the provided value. 
+ {
+ "notificationAddresses": ["userName@example.org"],
+ "sendNotification": true,
+ "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+ "predicate": {
+ "type": "lessThan",
+ "key": "YEAR",
+ "value": "1900"
+ }
+} 
+ lessThanOrEquals 
+ Less than or equals. Returns occurrences with term values less than or equal to the provided value. 
+ {
+ "notificationAddresses": ["userName@example.org"],
+ "sendNotification": true,
+ "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+ "predicate": {
+ "type": "lessThanOrEquals",
+ "key": "ELEVATION",
+ "value": "1000"
+ }
+} 
+ greaterThan 
+ Greater than. Returns occurrences with term values strictly greater than the provided value. 
+ {
+ "notificationAddresses": ["userName@example.org"],
+ "sendNotification": true,
+ "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+ "predicate": {
+ "type": "greaterThan",
+ "key": "YEAR",
+ "value": "1900"
+ }
+} 
+ greaterThanOrEquals 
+ Greater than or equals. Returns occurrences with term values greater than or equal to the provided value 
+ {
+ "notificationAddresses": ["userName@example.org"],
+ "sendNotification": true,
+ "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+ "predicate": {
+ "type": "greaterThanOrEquals",
+ "key": "ELEVATION",
+ "value": "1000"
+ }
+} 
+ within 
+ Geospatial predicate that checks if the coordinates are inside a polygon. 
+ The polygon should be specified in Well-known text (WKT) format. If you have problems, first check your polygon with Wicket — ensure the points are ordered anti-clockwise. (A polygon with clockwise points represents the opposite: the whole world except the polygon.) 
+ {
+ "notificationAddresses": ["userName@example.org"],
+ "sendNotification": true,
+ "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+ "predicate": {
+ "type": "within",
+ "geometry": "POLYGON((-130.78125 51.179342,
+ -130.78125 22.593726,
+ -62.578125 22.593726,
+ -62.578125 51.179342,
+ -130.78125 51.179342))"
+ }
+} 
+ geoDistance 
+ Geospatial distance. This predicate checks if coordinates are within a specified distance of a geographical coordinate. The distance is specified with a unit, e.g. 5km or 1250m . 
+ {
+ "notificationAddresses": ["userName@example.org"],
+ "sendNotification": true,
+ "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+ "predicate": {
+ "type": "geoDistance",
+ "latitude": "90",
+ "longitude": "100",
+ "distance": "5km"
+ }
+} 
+ not 
+ Logical negation. Gives the opposite of the sub-predicate. 
+ {
+ "notificationAddresses": ["userName@example.org"],
+ "sendNotification": true,
+ "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+ "predicate": {
+ "type": "not",
+ "predicate": {
+ "type": "equals",
+ "key": "DATASET_KEY",
+ "value": "4fa7b334-ce0d-4e88-aaae-2e0c138d049e"
+ }
+ }
+} 
+ like 
+ Search for a pattern. ? matches exactly one character, * matches zero or more characters. "matchCase": true can be added if required. 
+ {
+ "notificationAddresses": ["userName@example.org"],
+ "sendNotification": true,
+ "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+ "predicate": {
+ "type": "like",
+ "key": "CATALOG_NUMBER",
+ "value": "PAPS5-560*"
+ }
+} 
+ isNull 
+ Has an empty (null) value. 
+ {
+ "notificationAddresses": ["userName@example.org"],
+ "sendNotification": true,
+ "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+ "predicate": {
+ "type": "isNull",
+ "parameter": "CONTINENT"
+ }
+} 
+ isNotNull 
+ Has a non-empty value 
+ {
+ "notificationAddresses": ["userName@example.org"],
+ "sendNotification": true,
+ "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+ "predicate": {
+ "type": "isNotNull",
+ "parameter":"ISSUE"
+ }
+} 
+ Predicate support for multiple taxonomies 
+ the equals , in support multiple taxonomies by adding a checklistKey property to the predicate. 
+ {
+ "notificationAddresses": ["userName@example.org"],
+ "sendNotification": true,
+ "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+ "predicate": {
+ "type": "equals",
+ "key": "TAXON_KEY",
+ "value": "5WZLF",
+ "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b"
+ }
+} 
+ {
+ "notificationAddresses": ["userName@example.org"],
+ "sendNotification": true,
+ "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+ "predicate": {
+ "type": "in",
+ "key": "TAXON_KEY",
+ "value": ["BSJCX", "3BQFW"],
+ "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b"
+ }
+} 
+ Downloads with a specific taxonomy 
+ Users can specify the taxonomy to be included in occurrence downloads by adding the checklistKey parameter to the download request. If no checklistKey is supplied the obsolete GBIF Backbone Taxonomy will be used. The checklistKey should be specified for the whole request (for the taxonomy used for output) as well as in taxonomic filters. 
+ {
+ "notificationAddresses": ["userEmail@example.org"],
+ "sendNotification": true,
+ "format": "SIMPLE_CSV",
+ "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b" (1) 
+ "predicate": {
+ "type": "equals",
+ "key": "TAXON_KEY",
+ "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b", (2) 
+ "value": "5WZLF"
+ }
+} 
+ 1 
+ Use the Catalogue of Life for the output, i.e. species , scientificName , taxonKey etc columns 
+ 2 
+ Use the Catalogue of Life for filtering to taxon 5WZLF ( Carcharodon carcharias ) . 
+ Verbatim extension data 
+ A download in Darwin Core Archive ( DWCA ) format includes three tables by default, as described in detail on Occurrence download formats . 
+ Additional Darwin Core extension data can also be included in the archive. These data tables are not processed by GBIF; they are as-published. 
+ The extension tables available for download are provided using this API call , under verbatimExtensions . They can be requested by adding a verbatimExtensions property to the download request: 
+ {
+ "format": "DWCA",
+ "predicate": {
+ …
+ },
+ "verbatimExtensions": [
+ "http://rs.gbif.org/terms/1.0/DNADerivedData",
+ "http://rs.tdwg.org/dwc/terms/MeasurementOrFact"
+ ]
+} 
+ For descriptions of the extensions and their terms, see GBIF Registered Extensions . 
+ Interpreted extension data 
+ Some extensions are also available in the form processed by GBIF. These are requested with an interpretedExtensions property, and are included in the archive as ordinary extension tables, described in meta.xml : 
+ {
+ "format": "DWCA",
+ "predicate": {
+ …
+ },
+ "interpretedExtensions": [
+ "http://rs.gbif.org/terms/1.0/DNADerivedData"
+ ]
+} 
+ The DNA Derived Data extension is added to the archive as dnaderiveddata.txt , with the columns gbifID , target_gene and dna_sequence . Unlike the verbatim table, the target gene is normalised against the GBIF target gene vocabulary and the sequence is the sanitized one — see DNA sequence sanitization . The other terms of the extension are not repeated here; request the verbatim extension as well to get them as published. 
+ FASTA Archive downloads 
+ A download in FASTA_ARCHIVE format is a Darwin Core Archive with the sanitized sequences added in FASTA format, together with their quality metrics. It is described in detail on Occurrence download formats . 
+ The format restricts the download to occurrences with at least one sanitized sequence, so no predicate is needed for that. Filters on the sequences themselves use the NUCLEOTIDE_SEQUENCE_* keys, for example to request the COI sequences of Insecta in Norway: 
+ {
+ "notificationAddresses": [ "userEmail@example.org" ],
+ "sendNotification": true,
+ "format": "FASTA_ARCHIVE",
+ "predicate": {
+ "type": "and",
+ "predicates": [
+ {
+ "type": "equals",
+ "key": "NUCLEOTIDE_SEQUENCE_TARGET_GENE",
+ "value": "COI"
+ },
+ {
+ "type": "equals",
+ "key": "TAXON_KEY",
+ "value": "216"
+ },
+ {
+ "type": "equals",
+ "key": "COUNTRY",
+ "value": "NO"
+ }
+ ]
+ },
+ "verbatimExtensions": [
+ "http://rs.gbif.org/terms/1.0/DNADerivedData" (1) 
+ ]
+} 
+ 1 
+ Optional. Adds the DNA Derived Data extension as published, including the MIxS terms and the original sequences. 
+ The target_gene , taxonomic and geographic filters of the request are also used to build the citation of the download, so a request phrased in these terms produces a citation describing what the archive contains. 
+ Java 
+ API SQL Downloads 
+ GBIF.org 
+ Data blog 
+ Terms and agreements 
+ Contact 
+ GBIF Secretariat • Universitetsparken 15 • DK-2100 Copenhagen Ø • Denmark

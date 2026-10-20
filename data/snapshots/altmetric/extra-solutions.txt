@@ -1,0 +1,210 @@
+Altmetric API - Altmetric 
+ Search for: 
+About us
+ Altmetric 
+ About us 
+ What are altmetrics? 
+ Our data 
+ Altmetric Details Page 
+ Altmetric Attention Score 
+ Altmetric news 
+ Our team 
+ Brand 
+ Let’s collaborate 
+ Request more information 
+Solutions
+ Altmetric Explorer 
+ Altmetric Badges 
+ Altmetric API 
+ Altmetric on GBQ 
+ Altmetric for Books 
+ Altmetric Consulting Services 
+ Compass by Dimensions 
+ Dashboards 
+ Share of Voice 
+ Journal Selection 
+ Publication Impact 
+ Journal Benchmark 
+ Sentiment Analysis 
+ Attention Digest 
+ History of Altmetric Attention Score 
+Who we serve
+ Who is Altmetric for? 
+ Institutions 
+ Publishers 
+ Researchers 
+ Nonprofits 
+ Corporate R&D 
+ Medical Affairs 
+ Request a demo 
+Resources
+ Resources 
+ Blog 
+ Events 
+ Case studies 
+ Use cases 
+ Whitepapers / Reports 
+ Free tools 
+ Product updates 
+ Sign up for our newsletter 
+Support
+ Support 
+ Support centre 
+ Getting started 
+ Resource library 
+ Product support 
+ Implementation guide 
+ Altmetric Details Page API documentation 
+ $refs.searchInput.focus());">
+ Sign In 
+ Contact us 
+About us 
+ Altmetric 
+ About us 
+ What are altmetrics? 
+ Our data 
+ Altmetric Details Page 
+ Altmetric Attention Score 
+ Altmetric news 
+ Our team 
+ Brand 
+ Let’s collaborate 
+ Request more information 
+Solutions 
+ Altmetric Explorer 
+ Altmetric Badges 
+ Altmetric API 
+ Altmetric on GBQ 
+ Altmetric for Books 
+ Altmetric Consulting Services 
+ Compass by Dimensions 
+ Dashboards 
+ Share of Voice 
+ Journal Selection 
+ Publication Impact 
+ Journal Benchmark 
+ Sentiment Analysis 
+ Attention Digest 
+ History of Altmetric Attention Score 
+Who we serve 
+ Who is Altmetric for? 
+ Institutions 
+ Publishers 
+ Researchers 
+ Nonprofits 
+ Corporate R&D 
+ Medical Affairs 
+ Request a demo 
+Resources 
+ Resources 
+ Blog 
+ Events 
+ Case studies 
+ Use cases 
+ Whitepapers / Reports 
+ Free tools 
+ Product updates 
+ Sign up for our newsletter 
+Support 
+ Support 
+ Support centre 
+ Getting started 
+ Resource library 
+ Product support 
+ Implementation guide 
+ Altmetric Details Page API documentation 
+ Sign In 
+ Contact us 
+ Altmetric API 
+ The Altmetric APIs provide the flexibility to leverage Altmetric data in the way that works best for your organization. 
+ Talk to us 
+ Flexibility as you need it 
+ Altmetric APIs help you to intuitively assess your global online reach 
+ The Altmetric APIs prioritize flexibility. Teams with technical expertise can now conduct more complex searches, ask granular questions, build custom visualizations and merge their own data with the Altmetric data to perform unique analyses. 
+ Tap into a world of data with the Altmetric APIs. 
+ Plug-in to the world of data today 
+ Request a demo 
+ Built for speed 
+ Built for exploration 
+ Your data, your way 
+ Built for speed 
+ The Details Page API 
+ This API allows you to quickly find out everything you need to know about an individual DOI or Journal ID for research or visualization purposes. With real-time access to counts (official name: Altmetric Details Page API – counts only) and even full text of mentions. 
+ Built for exploration 
+ The Explorer API 
+ This API gives users the ability to explore and understand the data we collect in more detail, and analyze and visualize the data in custom ways. 
+ Whatever your requirements, our friendly team can help you choose which API better suits your needs. 
+ Complete flexibility 
+ Here are some of the things you can do with the API: 
+ Tailor your dashboard to keep your most relevant metrics front and foremost 
+ Create custom filters and searches 
+ Use the data for internal dashboards and reports 
+ Automate queries for reporting 
+ Access the data how you want to 
+ Our Support team can help with any questions about your API access 
+ My organization has a subscription 
+ You can request API access from our support team 
+ Learn more 
+ My organization does not have a subscription 
+ Contact us to request a demo or more details on how to get access 
+ Learn more 
+ I want access as an individual 
+ Find out how to access the Altmetric API as an individual researcher 
+ Learn more 
+ Altmetric 
+ A Digital Science solution 
+ Research impact beyond citations – tracking online attention across news, social media, policy, clinical guidelines, blogs, and more. 
+ LinkedIn 
+ X 
+ YouTube 
+ Bluesky 
+ Subscribe to newsletter 
+ Audiences 
+ Publishers 
+ Institutions 
+ Researchers 
+ Nonprofits 
+ Corporate 
+ Pharmaceutical 
+ Products 
+ Altmetric Explorer 
+ Altmetric Badges 
+ Altmetric API 
+ Altmetric Books 
+ Consulting Services 
+ Free tools 
+ Resources 
+ Blog 
+ News 
+ Case studies 
+ Whitepapers 
+ Use cases 
+ About 
+ About us 
+ Our team 
+ Careers 
+ Our data 
+ Collaborate 
+ Contact us 
+ Support 
+ Get support 
+ Help center 
+ System status 
+ Digital Science 
+ Research. Smarter. 
+ Innovative, AI-powered technology driving global research progress – solutions for researchers, institutions, governments, funders, and publishers. 
+ www.digital-science.com 
+ Discover the Digital Science Ecosystem 
+ Dimensions 
+ Figshare 
+ IFI CLAIMS Patent Services 
+ metaphactory 
+ Overleaf 
+ ReadCube 
+ Symplectic Elements 
+ Copyright 2026 Altmetric. A Digital Science solution. All rights reserved. 
+ Privacy 
+ Terms 
+ Cookie Settings 
+ Security 
+ Accessibility

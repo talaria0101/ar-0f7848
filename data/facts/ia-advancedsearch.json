@@ -1,0 +1,29 @@
+{
+ "slug": "ia-advancedsearch",
+ "auth": "none",
+ "auth_note": "Anonymous request returned data with HTTP 200.",
+ "cost": "not established",
+ "rate_limit": "Docs give no numbers: automated tools should add delays, honor 429 responses and Retry-After headers, and send a descriptive User-Agent.",
+ "data_license": "not established",
+ "bulk_access": "none documented",
+ "probe_status": 200,
+ "probe_observation": "Anonymous GET returned JSON with responseHeader status 0, numFound 52786480 and one doc (identifier sim_raw_scan_IA40778805-51).",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "\"numFound\":52786480,\"start\":0,\"docs\":[{\"identifier\":\"sim_raw_scan_IA40778805-51\"}]",
+   "snapshot": "data/snapshots/ia-advancedsearch/probe.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "\"numFound\":52786480,\"start\":0,\"docs\":[{\"identifier\":\"sim_raw_scan_IA40778805-51\"}]",
+   "snapshot": "data/snapshots/ia-advancedsearch/probe.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "Honor 429 Too Many Requests responses and Retry-After headers",
+   "snapshot": "data/snapshots/ia-advancedsearch/extra-bots.txt"
+  }
+ ],
+ "not_established": "No documented numeric rate limit, license of returned metadata, or cost statement on the captured advancedsearch page or the Bots page; no bulk dump route documented (the captured Tools and APIs page was also checked)."
+}

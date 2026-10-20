@@ -1,0 +1,34 @@
+{
+ "slug": "gutendex",
+ "auth": "none",
+ "auth_note": "Anonymous GET to /books returned results with no key or header.",
+ "cost": "not established",
+ "rate_limit": "not established",
+ "data_license": "not established",
+ "bulk_access": "none documented (docs say Project Gutenberg itself publishes nightly catalog archives, and to self-host Gutendex for long-term use)",
+ "probe_status": 200,
+ "probe_observation": "Probe returned JSON starting {\"count\":231,\"next\":\"https://gutendex.com/books/?page=2&search=dickens\" with a results array of books.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "{\"count\":231,\"next\":\"https://gutendex.com/books/?page=2&search=dickens\",\"previous\":null,\"results\":[{\"id\":98,\"title\":\"A Tale of Two Cities\"",
+   "snapshot": "data/snapshots/gutendex/probe.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "{\"count\":231,\"next\":\"https://gutendex.com/books/?page=2&search=dickens\"",
+   "snapshot": "data/snapshots/gutendex/probe.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "it publishes nightly archives of complicated XML files",
+   "snapshot": "data/snapshots/gutendex/extra-gh.txt"
+  },
+  {
+   "claim": "other",
+   "quote": "For long-term use, please run your own server with the code and installation instructions on GitHub",
+   "snapshot": "data/snapshots/gutendex/docs.txt"
+  }
+ ],
+ "not_established": "No rate limit, cost statement, or data license for the returned metadata is in the docs or GitHub README (the repo MIT license covers the code, not the data). Anonymous access worked, but no cost is documented."
+}

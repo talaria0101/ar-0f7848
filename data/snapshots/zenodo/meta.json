@@ -29,5 +29,67 @@
    "retry-after": "59"
   },
   "text_bytes": 12253
+ },
+ "extra": {
+  "z1": {
+   "url": "https://inveniordm.docs.cern.ch/reference/rest_api_index/",
+   "final_url": "https://inveniordm.docs.cern.ch/reference/rest_api_index/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 132940,
+   "truncated": false,
+   "sha256": "2e08352a7b309b6437418c5b47b14803642d5d38fbe6831e093395126c0b9e40",
+   "fetched_at": "2026-10-20T01:39:44+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 8288
+  },
+  "z2": {
+   "url": "https://help.zenodo.org/docs/about/policies/",
+   "final_url": "https://help.zenodo.org/docs/about/policies/",
+   "status": 404,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 9379,
+   "truncated": false,
+   "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+   "fetched_at": "2026-10-20T01:39:46+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 427
+  },
+  "z3": {
+   "url": "https://about.zenodo.org/terms/",
+   "final_url": "https://about.zenodo.org/terms/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 14429,
+   "truncated": false,
+   "sha256": "bbfc65e42c81063b3ffa3b679bd6a712227b048b37888e39a5670cee14b9f659",
+   "fetched_at": "2026-10-20T01:39:47+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 3827
+  },
+  "faq": {
+   "url": "https://help.zenodo.org/faqs/",
+   "final_url": "https://help.zenodo.org/faqs/",
+   "status": 404,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 9379,
+   "truncated": false,
+   "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+   "fetched_at": "2026-10-20T01:40:00+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 427
+  },
+  "ratelimit": {
+   "url": "https://github.com/zenodo/zenodo/blob/master/docs/rest-api.rst",
+   "final_url": "https://github.com/zenodo/zenodo/blob/master/docs/rest-api.rst",
+   "status": 404,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 191287,
+   "truncated": false,
+   "sha256": "f84cd3fd6f9eff311f5476501c30a290ce808c59d839c815e3d064cacb247bf8",
+   "fetched_at": "2026-10-20T01:40:01+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 2510
+  }
  }
 }

@@ -1,0 +1,638 @@
+dblp computer science bibliography – Monthly Snapshot XML Release 
+ Dagstuhl Publishing 
+ Dagstuhl Publishing
+ Dagstuhl Publishing Team
+ Publication Ethics
+ GenAI Statement
+ About DROPS
+ Contact
+ Series
+ LIPIcs – Leibniz International Proceedings in Informatics
+ OASIcs – Open Access Series in Informatics
+ Dagstuhl Follow-Ups
+ Schloss Dagstuhl Jahresbericht
+ Discontinued Series 
+ Journals
+ DARTS – Dagstuhl Artifacts Series
+ Dagstuhl Reports
+ Dagstuhl Manifestos
+ LITES – Leibniz Transactions on Embedded Systems
+ TGDK – Transactions on Graph Data and Knowledge
+ Conferences
+ AFT
+ AIB
+ AofA
+ APPROX
+ ATMOS
+ CALCO
+ CCC
+ CONCUR
+ COSIT
+ CP
+ CPM
+ CSL
+ DISC
+ DITAM
+ DNA
+ ECOOP
+ ECRTS
+ ESA
+ FAB
+ FMBC
+ FORC
+ FSCD
+ FSTTCS
+ FUN
+ GD
+ GIScience
+ ICALP
+ ICDT
+ ICPEC
+ IPEC
+ iPMVM
+ ISAAC
+ ITC
+ ITCS
+ ITP
+ LDK
+ MFCS
+ Microservices
+ NG-RES
+ OPODIS
+ PARMA
+ RANDOM
+ SAND
+ SAT
+ SEA
+ SLATE
+ SNAPL
+ SoCG
+ STACS
+ SWAT
+ TIME
+ Tokenomics
+ TQC
+ TYPES
+ WABI
+ WCET
+ Artifacts
+ Supplementary Materials (Software, Datasets, ...)
+ dblp Artifacts
+ DARTS (Evaluated Artifacts)
+ Metadata Export 
+ Metadata Export 
+ OAI Interface 
+ Collection
+ Export XML
+ Export BibTeX
+ dblp computer science bibliography – Monthly Snapshot XML Release 
+ Author
+ dblp Team 
+ Part of: 
+ Collection:
+ dblp Artifacts 
+ License:   
+ Creative Commons Zero v1.0 Universal
+ Publication Date: 2026-09-14
+ Document Identifiers 
+ DOI: 10.4230/dblp.xml 
+ URN: urn:nbn:de:0030-drops-222720 
+ Author Details 
+ dblp Team 
+ Creator 
+ Schloss Dagstuhl – Leibniz Center for Informatics
+ Cite As Get BibTex 
+ dblp Team. dblp computer science bibliography – Monthly Snapshot XML Release. Schloss Dagstuhl – Leibniz-Zentrum für Informatik
+ https://doi.org/10.4230/dblp.xml 
+ BibTex 
+ @misc{dblp.xml,
+ title = {{dblp computer science bibliography – Monthly Snapshot XML Release}},
+ author = {dblp Team},
+ doi = {10.4230/dblp.xml},
+ url = {https://doi.org/10.4230/dblp.xml},
+ publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik} 
+} 
+ @misc{dblp.xml,
+ title = {{dblp computer science bibliography – Monthly Snapshot XML Release}},
+ author = {dblp Team},
+ doi = {10.4230/dblp.xml},
+ url = {https://doi.org/10.4230/dblp.xml},
+ publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik} 
+} 
+ Close 
+ Copy BibTex To Clipboard 
+ Description 
+ This file contains all the raw dblp XML record data in a single file. The dblp computer science bibliography is the open indexing service and knowledge graph of the computer science community. dblp provides quality-checked and curated bibliographic metadata on major computer science journals, proceedings, and monographs, as well as metadata and identifiers about their authors and the venues they have been published in.
+ Subject Classification 
+ Keywords 
+ dblp 
+ computer science 
+ bibliography 
+ knowledge graph 
+ open data 
+ Snapshot Releases 
+ ‹ 
+ 1 
+ 2 
+ 3 
+ 4 
+ 5 
+ 6 
+ 7 
+ 8 
+ 9 
+ 10 
+ ›
+ Artifact 
+ Dataset 
+ DOI: 10.4230/dblp.xml.2026-10-03 
+ dblp computer science bibliography – Monthly Snapshot XML Release of October 2026
+ Authors: 
+ dblp Team 
+ Abstract 
+ Cite as 
+ dblp Team. dblp computer science bibliography – Monthly Snapshot XML Release of October 2026. Schloss Dagstuhl – Leibniz-Zentrum für Informatik 
+ Copy BibTex To Clipboard 
+ @misc{dblp.xml.2026-10-03,
+ title = {{dblp computer science bibliography – Monthly Snapshot XML Release of October 2026}},
+ author = {dblp Team},
+ doi = {10.4230/dblp.xml.2026-10-03},
+ url = {https://doi.org/10.4230/dblp.xml.2026-10-03},
+ month = {October},
+ year = {2026},
+ publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik} 
+} 
+ @misc{dblp.xml.2026-10-03,
+ title = {{dblp computer science bibliography – Monthly Snapshot XML Release of October 2026}},
+ author = {dblp Team},
+ doi = {10.4230/dblp.xml.2026-10-03},
+ url = {https://doi.org/10.4230/dblp.xml.2026-10-03},
+ month = {October},
+ year = {2026},
+ publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik} 
+} 
+ Artifact 
+ Dataset 
+ DOI: 10.4230/dblp.xml.2026-09-01 
+ dblp computer science bibliography – Monthly Snapshot XML Release of September 2026
+ Authors: 
+ dblp Team 
+ Abstract 
+ Cite as 
+ dblp Team. dblp computer science bibliography – Monthly Snapshot XML Release of September 2026. Schloss Dagstuhl – Leibniz-Zentrum für Informatik 
+ Copy BibTex To Clipboard 
+ @misc{dblp.xml.2026-09-01,
+ title = {{dblp computer science bibliography – Monthly Snapshot XML Release of September 2026}},
+ author = {dblp Team},
+ doi = {10.4230/dblp.xml.2026-09-01},
+ url = {https://doi.org/10.4230/dblp.xml.2026-09-01},
+ month = {September},
+ year = {2026},
+ publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik} 
+} 
+ @misc{dblp.xml.2026-09-01,
+ title = {{dblp computer science bibliography – Monthly Snapshot XML Release of September 2026}},
+ author = {dblp Team},
+ doi = {10.4230/dblp.xml.2026-09-01},
+ url = {https://doi.org/10.4230/dblp.xml.2026-09-01},
+ month = {September},
+ year = {2026},
+ publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik} 
+} 
+ Artifact 
+ Dataset 
+ DOI: 10.4230/dblp.xml.2026-08-01 
+ dblp computer science bibliography – Monthly Snapshot XML Release of August 2026
+ Authors: 
+ dblp Team 
+ Abstract 
+ Cite as 
+ dblp Team. dblp computer science bibliography – Monthly Snapshot XML Release of August 2026. Schloss Dagstuhl – Leibniz-Zentrum für Informatik 
+ Copy BibTex To Clipboard 
+ @misc{dblp.xml.2026-08-01,
+ title = {{dblp computer science bibliography – Monthly Snapshot XML Release of August 2026}},
+ author = {dblp Team},
+ doi = {10.4230/dblp.xml.2026-08-01},
+ url = {https://doi.org/10.4230/dblp.xml.2026-08-01},
+ month = {August},
+ year = {2026},
+ publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik} 
+} 
+ @misc{dblp.xml.2026-08-01,
+ title = {{dblp computer science bibliography – Monthly Snapshot XML Release of August 2026}},
+ author = {dblp Team},
+ doi = {10.4230/dblp.xml.2026-08-01},
+ url = {https://doi.org/10.4230/dblp.xml.2026-08-01},
+ month = {August},
+ year = {2026},
+ publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik} 
+} 
+ Artifact 
+ Dataset 
+ DOI: 10.4230/dblp.xml.2026-07-01 
+ dblp computer science bibliography – Monthly Snapshot XML Release of July 2026
+ Authors: 
+ dblp Team 
+ Abstract 
+ Cite as 
+ dblp Team. dblp computer science bibliography – Monthly Snapshot XML Release of July 2026. Schloss Dagstuhl – Leibniz-Zentrum für Informatik 
+ Copy BibTex To Clipboard 
+ @misc{dblp.xml.2026-07-01,
+ title = {{dblp computer science bibliography – Monthly Snapshot XML Release of July 2026}},
+ author = {dblp Team},
+ doi = {10.4230/dblp.xml.2026-07-01},
+ url = {https://doi.org/10.4230/dblp.xml.2026-07-01},
+ month = {July},
+ year = {2026},
+ publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik} 
+} 
+ @misc{dblp.xml.2026-07-01,
+ title = {{dblp computer science bibliography – Monthly Snapshot XML Release of July 2026}},
+ author = {dblp Team},
+ doi = {10.4230/dblp.xml.2026-07-01},
+ url = {https://doi.org/10.4230/dblp.xml.2026-07-01},
+ month = {July},
+ year = {2026},
+ publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik} 
+} 
+ Artifact 
+ Dataset 
+ DOI: 10.4230/dblp.xml.2026-06-01 
+ dblp computer science bibliography – Monthly Snapshot XML Release of June 2026
+ Authors: 
+ dblp Team 
+ Abstract 
+ Cite as 
+ dblp Team. dblp computer science bibliography – Monthly Snapshot XML Release of June 2026. Schloss Dagstuhl – Leibniz-Zentrum für Informatik 
+ Copy BibTex To Clipboard 
+ @misc{dblp.xml.2026-06-01,
+ title = {{dblp computer science bibliography – Monthly Snapshot XML Release of June 2026}},
+ author = {dblp Team},
+ doi = {10.4230/dblp.xml.2026-06-01},
+ url = {https://doi.org/10.4230/dblp.xml.2026-06-01},
+ month = {June},
+ year = {2026},
+ publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik} 
+} 
+ @misc{dblp.xml.2026-06-01,
+ title = {{dblp computer science bibliography – Monthly Snapshot XML Release of June 2026}},
+ author = {dblp Team},
+ doi = {10.4230/dblp.xml.2026-06-01},
+ url = {https://doi.org/10.4230/dblp.xml.2026-06-01},
+ month = {June},
+ year = {2026},
+ publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik} 
+} 
+ Artifact 
+ Dataset 
+ DOI: 10.4230/dblp.xml.2026-05-01 
+ dblp computer science bibliography – Monthly Snapshot XML Release of May 2026
+ Authors: 
+ dblp Team 
+ Abstract 
+ Cite as 
+ dblp Team. dblp computer science bibliography – Monthly Snapshot XML Release of May 2026. Schloss Dagstuhl – Leibniz-Zentrum für Informatik 
+ Copy BibTex To Clipboard 
+ @misc{dblp.xml.2026-05-01,
+ title = {{dblp computer science bibliography – Monthly Snapshot XML Release of May 2026}},
+ author = {dblp Team},
+ doi = {10.4230/dblp.xml.2026-05-01},
+ url = {https://doi.org/10.4230/dblp.xml.2026-05-01},
+ month = {May},
+ year = {2026},
+ publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik} 
+} 
+ @misc{dblp.xml.2026-05-01,
+ title = {{dblp computer science bibliography – Monthly Snapshot XML Release of May 2026}},
+ author = {dblp Team},
+ doi = {10.4230/dblp.xml.2026-05-01},
+ url = {https://doi.org/10.4230/dblp.xml.2026-05-01},
+ month = {May},
+ year = {2026},
+ publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik} 
+} 
+ Artifact 
+ Dataset 
+ DOI: 10.4230/dblp.xml.2026-04-01 
+ dblp computer science bibliography – Monthly Snapshot XML Release of April 2026
+ Authors: 
+ dblp Team 
+ Abstract 
+ Cite as 
+ dblp Team. dblp computer science bibliography – Monthly Snapshot XML Release of April 2026. Schloss Dagstuhl – Leibniz-Zentrum für Informatik 
+ Copy BibTex To Clipboard 
+ @misc{dblp.xml.2026-04-01,
+ title = {{dblp computer science bibliography – Monthly Snapshot XML Release of April 2026}},
+ author = {dblp Team},
+ doi = {10.4230/dblp.xml.2026-04-01},
+ url = {https://doi.org/10.4230/dblp.xml.2026-04-01},
+ month = {April},
+ year = {2026},
+ publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik} 
+} 
+ @misc{dblp.xml.2026-04-01,
+ title = {{dblp computer science bibliography – Monthly Snapshot XML Release of April 2026}},
+ author = {dblp Team},
+ doi = {10.4230/dblp.xml.2026-04-01},
+ url = {https://doi.org/10.4230/dblp.xml.2026-04-01},
+ month = {April},
+ year = {2026},
+ publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik} 
+} 
+ Artifact 
+ Dataset 
+ DOI: 10.4230/dblp.xml.2026-03-01 
+ dblp computer science bibliography – Monthly Snapshot XML Release of March 2026
+ Authors: 
+ dblp Team 
+ Abstract 
+ Cite as 
+ dblp Team. dblp computer science bibliography – Monthly Snapshot XML Release of March 2026. Schloss Dagstuhl – Leibniz-Zentrum für Informatik 
+ Copy BibTex To Clipboard 
+ @misc{dblp.xml.2026-03-01,
+ title = {{dblp computer science bibliography – Monthly Snapshot XML Release of March 2026}},
+ author = {dblp Team},
+ doi = {10.4230/dblp.xml.2026-03-01},
+ url = {https://doi.org/10.4230/dblp.xml.2026-03-01},
+ month = {March},
+ year = {2026},
+ publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik} 
+} 
+ @misc{dblp.xml.2026-03-01,
+ title = {{dblp computer science bibliography – Monthly Snapshot XML Release of March 2026}},
+ author = {dblp Team},
+ doi = {10.4230/dblp.xml.2026-03-01},
+ url = {https://doi.org/10.4230/dblp.xml.2026-03-01},
+ month = {March},
+ year = {2026},
+ publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik} 
+} 
+ Artifact 
+ Dataset 
+ DOI: 10.4230/dblp.xml.2026-02-01 
+ dblp computer science bibliography – Monthly Snapshot XML Release of February 2026
+ Authors: 
+ dblp Team 
+ Abstract 
+ Cite as 
+ dblp Team. dblp computer science bibliography – Monthly Snapshot XML Release of February 2026. Schloss Dagstuhl – Leibniz-Zentrum für Informatik 
+ Copy BibTex To Clipboard 
+ @misc{dblp.xml.2026-02-01,
+ title = {{dblp computer science bibliography – Monthly Snapshot XML Release of February 2026}},
+ author = {dblp Team},
+ doi = {10.4230/dblp.xml.2026-02-01},
+ url = {https://doi.org/10.4230/dblp.xml.2026-02-01},
+ month = {February},
+ year = {2026},
+ publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik} 
+} 
+ @misc{dblp.xml.2026-02-01,
+ title = {{dblp computer science bibliography – Monthly Snapshot XML Release of February 2026}},
+ author = {dblp Team},
+ doi = {10.4230/dblp.xml.2026-02-01},
+ url = {https://doi.org/10.4230/dblp.xml.2026-02-01},
+ month = {February},
+ year = {2026},
+ publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik} 
+} 
+ Artifact 
+ Dataset 
+ DOI: 10.4230/dblp.xml.2026-01-01 
+ dblp computer science bibliography – Monthly Snapshot XML Release of January 2026
+ Authors: 
+ dblp Team 
+ Abstract 
+ Cite as 
+ dblp Team. dblp computer science bibliography – Monthly Snapshot XML Release of January 2026. Schloss Dagstuhl – Leibniz-Zentrum für Informatik 
+ Copy BibTex To Clipboard 
+ @misc{dblp.xml.2026-01-01,
+ title = {{dblp computer science bibliography – Monthly Snapshot XML Release of January 2026}},
+ author = {dblp Team},
+ doi = {10.4230/dblp.xml.2026-01-01},
+ url = {https://doi.org/10.4230/dblp.xml.2026-01-01},
+ month = {January},
+ year = {2026},
+ publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik} 
+} 
+ @misc{dblp.xml.2026-01-01,
+ title = {{dblp computer science bibliography – Monthly Snapshot XML Release of January 2026}},
+ author = {dblp Team},
+ doi = {10.4230/dblp.xml.2026-01-01},
+ url = {https://doi.org/10.4230/dblp.xml.2026-01-01},
+ month = {January},
+ year = {2026},
+ publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik} 
+} 
+ Artifact 
+ Dataset 
+ DOI: 10.4230/dblp.xml.2025-12-01 
+ dblp computer science bibliography – Monthly Snapshot XML Release of December 2025
+ Authors: 
+ dblp Team 
+ Abstract 
+ Cite as 
+ dblp Team. dblp computer science bibliography – Monthly Snapshot XML Release of December 2025. Schloss Dagstuhl – Leibniz-Zentrum für Informatik 
+ Copy BibTex To Clipboard 
+ @misc{dblp.xml.2025-12-01,
+ title = {{dblp computer science bibliography – Monthly Snapshot XML Release of December 2025}},
+ author = {dblp Team},
+ doi = {10.4230/dblp.xml.2025-12-01},
+ url = {https://doi.org/10.4230/dblp.xml.2025-12-01},
+ month = {December},
+ year = {2025},
+ publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik} 
+} 
+ @misc{dblp.xml.2025-12-01,
+ title = {{dblp computer science bibliography – Monthly Snapshot XML Release of December 2025}},
+ author = {dblp Team},
+ doi = {10.4230/dblp.xml.2025-12-01},
+ url = {https://doi.org/10.4230/dblp.xml.2025-12-01},
+ month = {December},
+ year = {2025},
+ publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik} 
+} 
+ Artifact 
+ Dataset 
+ DOI: 10.4230/dblp.xml.2025-11-01 
+ dblp computer science bibliography – Monthly Snapshot XML Release of November 2025
+ Authors: 
+ dblp Team 
+ Abstract 
+ Cite as 
+ dblp Team. dblp computer science bibliography – Monthly Snapshot XML Release of November 2025. Schloss Dagstuhl – Leibniz-Zentrum für Informatik 
+ Copy BibTex To Clipboard 
+ @misc{dblp.xml.2025-11-01,
+ title = {{dblp computer science bibliography – Monthly Snapshot XML Release of November 2025}},
+ author = {dblp Team},
+ doi = {10.4230/dblp.xml.2025-11-01},
+ url = {https://doi.org/10.4230/dblp.xml.2025-11-01},
+ month = {November},
+ year = {2025},
+ publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik} 
+} 
+ @misc{dblp.xml.2025-11-01,
+ title = {{dblp computer science bibliography – Monthly Snapshot XML Release of November 2025}},
+ author = {dblp Team},
+ doi = {10.4230/dblp.xml.2025-11-01},
+ url = {https://doi.org/10.4230/dblp.xml.2025-11-01},
+ month = {November},
+ year = {2025},
+ publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik} 
+} 
+ Artifact 
+ Dataset 
+ DOI: 10.4230/dblp.xml.2025-10-01 
+ dblp computer science bibliography – Monthly Snapshot XML Release of October 2025
+ Authors: 
+ dblp Team 
+ Abstract 
+ Cite as 
+ dblp Team. dblp computer science bibliography – Monthly Snapshot XML Release of October 2025. Schloss Dagstuhl – Leibniz-Zentrum für Informatik 
+ Copy BibTex To Clipboard 
+ @misc{dblp.xml.2025-10-01,
+ title = {{dblp computer science bibliography – Monthly Snapshot XML Release of October 2025}},
+ author = {dblp Team},
+ doi = {10.4230/dblp.xml.2025-10-01},
+ url = {https://doi.org/10.4230/dblp.xml.2025-10-01},
+ month = {October},
+ year = {2025},
+ publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik} 
+} 
+ @misc{dblp.xml.2025-10-01,
+ title = {{dblp computer science bibliography – Monthly Snapshot XML Release of October 2025}},
+ author = {dblp Team},
+ doi = {10.4230/dblp.xml.2025-10-01},
+ url = {https://doi.org/10.4230/dblp.xml.2025-10-01},
+ month = {October},
+ year = {2025},
+ publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik} 
+} 
+ Artifact 
+ Dataset 
+ DOI: 10.4230/dblp.xml.2025-09-01 
+ dblp computer science bibliography – Monthly Snapshot XML Release of September 2025
+ Authors: 
+ dblp Team 
+ Abstract 
+ Cite as 
+ dblp Team. dblp computer science bibliography – Monthly Snapshot XML Release of September 2025. Schloss Dagstuhl – Leibniz-Zentrum für Informatik 
+ Copy BibTex To Clipboard 
+ @misc{dblp.xml.2025-09-01,
+ title = {{dblp computer science bibliography – Monthly Snapshot XML Release of September 2025}},
+ author = {dblp Team},
+ doi = {10.4230/dblp.xml.2025-09-01},
+ url = {https://doi.org/10.4230/dblp.xml.2025-09-01},
+ month = {September},
+ year = {2025},
+ publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik} 
+} 
+ @misc{dblp.xml.2025-09-01,
+ title = {{dblp computer science bibliography – Monthly Snapshot XML Release of September 2025}},
+ author = {dblp Team},
+ doi = {10.4230/dblp.xml.2025-09-01},
+ url = {https://doi.org/10.4230/dblp.xml.2025-09-01},
+ month = {September},
+ year = {2025},
+ publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik} 
+} 
+ Artifact 
+ Dataset 
+ DOI: 10.4230/dblp.xml.2025-08-01 
+ dblp computer science bibliography – Monthly Snapshot XML Release of August 2025
+ Authors: 
+ dblp Team 
+ Abstract 
+ Cite as 
+ dblp Team. dblp computer science bibliography – Monthly Snapshot XML Release of August 2025. Schloss Dagstuhl – Leibniz-Zentrum für Informatik 
+ Copy BibTex To Clipboard 
+ @misc{dblp.xml.2025-08-01,
+ title = {{dblp computer science bibliography – Monthly Snapshot XML Release of August 2025}},
+ author = {dblp Team},
+ doi = {10.4230/dblp.xml.2025-08-01},
+ url = {https://doi.org/10.4230/dblp.xml.2025-08-01},
+ month = {August},
+ year = {2025},
+ publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik} 
+} 
+ @misc{dblp.xml.2025-08-01,
+ title = {{dblp computer science bibliography – Monthly Snapshot XML Release of August 2025}},
+ author = {dblp Team},
+ doi = {10.4230/dblp.xml.2025-08-01},
+ url = {https://doi.org/10.4230/dblp.xml.2025-08-01},
+ month = {August},
+ year = {2025},
+ publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik} 
+} 
+ ‹ 
+ 1 
+ 2 
+ 3 
+ 4 
+ 5 
+ 6 
+ 7 
+ 8 
+ 9 
+ 10 
+ ›
+ Free-Text Filter 
+ Refine by Year 
+ 12 
+ 2021
+ 12 
+ 2020
+ 12 
+ 2019
+ 12 
+ 2018
+ 12 
+ 2017
+ Show More...
+ Metrics 
+ Access Statistics
+ Total Accesses (updated on a weekly basis)
+ 0 
+ Metadata 
+ 0 
+ Downloads 
+ Any Issues? 
+ X 
+ Feedback on the Current Page 
+ Send 
+ Submit 
+ Thanks for your feedback! 
+ Feedback submitted to Dagstuhl Publishing 
+ OK 
+ Could not send message 
+ Please try again later or send an E-mail 
+ OK 
+ About DROPS 
+ Schloss Dagstuhl - Leibniz Center for Informatics has been operating the Dagstuhl Research Online Publication Server (short: DROPS) since 2004. DROPS enables publication of the latest research findings in a fast, uncomplicated manner, in addition to providing unimpeded, open access to them. All the requisite metadata on each publication is administered in accordance with general guidelines pertaining to online publications (cf. Dublin Core). This enables the online publications to be authorized for citation and made accessible to a wide readership on a permanent basis. Access is free of charge for readers following the open access idea which fosters unimpeded access to scientific publications. 
+ More about DROPS 
+ Instructions for Authors 
+ Dagstuhl Series 
+ LIPIcs 
+ OASIcs 
+ Dagstuhl Follow-Ups 
+ Dagstuhl Journals 
+ DARTS – Dagstuhl Artifacts Series 
+ Dagstuhl Reports 
+ Dagstuhl Manifestos 
+ LITES 
+ TGDK – Transactions on Graph Data and Knowledge 
+ Instructions for Editors 
+ Dagstuhl Series 
+ LIPIcs 
+ OASIcs 
+ Dagstuhl Follow-Ups 
+ Dagstuhl Journals 
+ DARTS – Dagstuhl Artifacts Series 
+ Dagstuhl Reports 
+ Dagstuhl Manifestos 
+ LITES 
+ TGDK – Transactions on Graph Data and Knowledge 
+ © 2023-2026 Schloss Dagstuhl – LZI GmbH Schloss Dagstuhl – LZI GmbH 
+ About DROPS 
+ Imprint 
+ Privacy 
+ Contact

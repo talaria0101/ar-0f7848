@@ -1,0 +1,44 @@
+{
+ "slug": "arxiv",
+ "auth": "none",
+ "auth_note": "Anonymous request to the query endpoint returned HTTP 200 with no key; docs describe public API access.",
+ "cost": "free",
+ "rate_limit": "Legacy APIs (OAI-PMH, RSS, arXiv API): no more than one request every three seconds, single connection at a time; limits apply to all machines under your control and may change.",
+ "data_license": "Descriptive metadata is CC0 1.0 (Public Domain Dedication); full text follows each e-print's own license.",
+ "bulk_access": "OAI-PMH (preferred for bulk metadata); full text via Amazon S3 and Kaggle; see https://info.arxiv.org/help/bulk_data.html",
+ "probe_status": 200,
+ "probe_observation": "The probe returned an Atom XML feed (opensearch:itemsPerPage 1) titled 'arXiv Query: search_query=all:test...' with a totalResults element.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "<opensearch:itemsPerPage>1</opensearch:itemsPerPage>",
+   "snapshot": "data/snapshots/arxiv/probe.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "<title>arXiv Query: search_query=all:test&amp;id_list=&amp;start=0&amp;max_results=1</title>",
+   "snapshot": "data/snapshots/arxiv/probe.txt"
+  },
+  {
+   "claim": "cost",
+   "quote": "Providing free Application Programming Interfaces (APIs)",
+   "snapshot": "data/snapshots/arxiv/extra-terms.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "make no more than one request every three seconds, and limit requests to a single connection at a time.",
+   "snapshot": "data/snapshots/arxiv/extra-terms.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "under the terms of the Creative Commons Universal (CC0 1.0) Public Domain",
+   "snapshot": "data/snapshots/arxiv/extra-terms.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "arXiv supports the OAI protocol for metadata harvesting (OAI-PMH) to provide access to metadata for all articles, updated daily",
+   "snapshot": "data/snapshots/arxiv/extra-bulk.txt"
+  }
+ ],
+ "not_established": "Nothing material; Amazon S3/Kaggle full-text terms were not read in detail."
+}

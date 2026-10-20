@@ -24,5 +24,33 @@
   "fetched_at": "2026-10-20T01:31:35+00:00",
   "ratelimit_headers": {},
   "text_bytes": 60
+ },
+ "extra": {
+  "spnhelp": {
+   "url": "https://archive.org/details/spn-api",
+   "final_url": "https://archive.org/details/spn-api",
+   "status": 404,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 147920,
+   "truncated": false,
+   "sha256": "9e78d6d4593cee1989cfeec881b49177e6aa4b0d689aa6cb689e189f202c48f9",
+   "fetched_at": "2026-10-20T01:34:11+00:00",
+   "ratelimit_headers": {
+    "Retry-After": "3600"
+   },
+   "text_bytes": 2920
+  },
+  "home": {
+   "url": "https://archive.org/",
+   "final_url": "https://archive.org/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 1951,
+   "truncated": false,
+   "sha256": "7fd0001d8ff3c6122db5e3d3ef32ea3f47615ba046cebfd3a1d9d02e53b7b4ec",
+   "fetched_at": "2026-10-20T01:34:37+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 93
+  }
  }
 }

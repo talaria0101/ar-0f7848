@@ -27,5 +27,127 @@
    "X-Ratelimit-Remaining": "2"
   },
   "text_bytes": 490
+ },
+ "extra": {
+  "keyinfo": {
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK25497/#chapter2.Usage_Guidelines_and_Requiremen",
+   "final_url": "https://www.ncbi.nlm.nih.gov/books/NBK25497/#chapter2.Usage_Guidelines_and_Requiremen",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 21332,
+   "truncated": false,
+   "sha256": "971f87cf97fd6cb89e0cbd11246a9da3e10f5da5b65565bbee5d6826dc2f4e1b",
+   "fetched_at": "2026-10-20T01:36:33+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 165
+  },
+  "raw": {
+   "url": "https://raw.githubusercontent.com/ncbi/entrez-direct/master/README",
+   "final_url": "https://raw.githubusercontent.com/ncbi/entrez-direct/master/README",
+   "status": 404,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 14,
+   "truncated": false,
+   "sha256": "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed",
+   "fetched_at": "2026-10-20T01:36:34+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 14
+  },
+  "copyright": {
+   "url": "https://www.ncbi.nlm.nih.gov/home/about/policies/",
+   "final_url": "https://www.ncbi.nlm.nih.gov/home/about/policies/",
+   "status": 200,
+   "content_type": "text/html",
+   "bytes": 38936,
+   "truncated": false,
+   "sha256": "8ad8f6f186ca51ec73a5fb8935ecfa17b8cbaad300b7025b381898ab72621869",
+   "fetched_at": "2026-10-20T01:36:34+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 9942
+  },
+  "pmcopy": {
+   "url": "https://pubmed.ncbi.nlm.nih.gov/about/",
+   "final_url": "https://pubmed.ncbi.nlm.nih.gov/about/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 34357,
+   "truncated": false,
+   "sha256": "ff667ad6906e9cb5dd5bdf7035de9d02deeaf188ee1cc28d3d6b9ff9b768fd77",
+   "fetched_at": "2026-10-20T01:36:36+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 3384
+  },
+  "usage": {
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK25497/?report=reader",
+   "final_url": "https://www.ncbi.nlm.nih.gov/books/NBK25497/?report=reader",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 21389,
+   "truncated": false,
+   "sha256": "b20ec74575b0796275ee536a896e1e5ab6f4e01467ac5b8fde5e154158f73b1d",
+   "fetched_at": "2026-10-20T01:36:49+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 165
+  },
+  "apikey": {
+   "url": "https://support.nlm.nih.gov/kbArticle/?pn=KA-05318",
+   "final_url": "https://support.nlm.nih.gov/kbArticle/?pn=KA-05318",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 40495,
+   "truncated": false,
+   "sha256": "a7a41830d8f6e17e0b941c4657fb1162937cbc28a85bde2b0eb0123a7466e94c",
+   "fetched_at": "2026-10-20T01:36:50+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 545
+  },
+  "blog": {
+   "url": "https://ncbiinsights.ncbi.nlm.nih.gov/2017/11/02/new-api-keys-for-the-e-utilities/",
+   "final_url": "https://ncbiinsights.ncbi.nlm.nih.gov/2017/11/02/new-api-keys-for-the-e-utilities/",
+   "status": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 152217,
+   "truncated": false,
+   "sha256": "c38506b0e10ef7576e2f5b9cab1763c68d21953922f92523d2661dc5fe034423",
+   "fetched_at": "2026-10-20T01:36:51+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 10378
+  },
+  "eutilshelp": {
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK25499/",
+   "final_url": "https://www.ncbi.nlm.nih.gov/books/NBK25499/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 21304,
+   "truncated": false,
+   "sha256": "b19e41d4e221170ea08774447e4fa7f567d39ec32efe0940ca7032df31dd9052",
+   "fetched_at": "2026-10-20T01:36:54+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 165
+  },
+  "bulk": {
+   "url": "https://pubmed.ncbi.nlm.nih.gov/download/",
+   "final_url": "https://pubmed.ncbi.nlm.nih.gov/download/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 38286,
+   "truncated": false,
+   "sha256": "1688c16d093411a7d389669772dfc267d7deb707c97c0c96119cd9e5f915953f",
+   "fetched_at": "2026-10-20T01:36:55+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 4335
+  },
+  "ftp": {
+   "url": "https://ftp.ncbi.nlm.nih.gov/pubmed/README.txt",
+   "final_url": "https://ftp.ncbi.nlm.nih.gov/pubmed/README.txt",
+   "status": 200,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 4599,
+   "truncated": false,
+   "sha256": "3f3cf62990cde9eca955e52a8b8282d4ab8342fb107ca3412ba2834de94a1ac7",
+   "fetched_at": "2026-10-20T01:36:56+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 4599
+  }
  }
 }

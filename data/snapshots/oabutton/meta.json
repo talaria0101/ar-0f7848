@@ -24,5 +24,19 @@
   "fetched_at": "2026-10-20T01:31:47+00:00",
   "ratelimit_headers": {},
   "text_bytes": 80
+ },
+ "extra": {
+  "blog": {
+   "url": "https://blog.oa.works/",
+   "final_url": "https://blog.oa.works/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 87063,
+   "truncated": false,
+   "sha256": "35cfbb2728adbcb7fbd18e4ff86855dc610119eaec02c988ae174fd8941d878f",
+   "fetched_at": "2026-10-20T01:38:39+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 7478
+  }
  }
 }

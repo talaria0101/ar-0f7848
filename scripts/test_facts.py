@@ -26,15 +26,20 @@ def norm(s):
     return re.sub(r"\s+", " ", s).strip()
 
 
+def jload(path):
+    with open(path) as fh:
+        return json.load(fh)
+
+
 def providers():
-    return json.load(open(os.path.join(ROOT, "data", "providers.json")))
+    return jload(os.path.join(ROOT, "data", "providers.json"))
 
 
 def facts():
     d = os.path.join(ROOT, "data", "facts")
     if not os.path.isdir(d):
         return {}
-    return {f[:-5]: json.load(open(os.path.join(d, f))) for f in sorted(os.listdir(d)) if f.endswith(".json")}
+    return {f[:-5]: jload(os.path.join(d, f)) for f in sorted(os.listdir(d)) if f.endswith(".json")}
 
 
 class T(unittest.TestCase):
@@ -72,7 +77,8 @@ class T(unittest.TestCase):
                 if not sp.startswith(f"data/snapshots/{s}/") or not os.path.exists(path):
                     bad.append(f"{s}: snapshot {sp!r} not under own dir or absent")
                     continue
-                txt = norm(open(path, encoding="utf-8", errors="replace").read())
+                with open(path, encoding="utf-8", errors="replace") as fh:
+                    txt = norm(fh.read())
                 for frag in [f for f in re.split(r"\s*(?:\.\.\.|\u2026)\s*", q) if f.strip()]:
                     if norm(frag) not in txt:
                         bad.append(f"{s}: {frag[:70]!r} not in {sp}")
@@ -92,9 +98,39 @@ class T(unittest.TestCase):
     def test_probe_status_matches_capture(self):
         bad = []
         for s, r in facts().items():
-            m = json.load(open(os.path.join(ROOT, "data", "snapshots", s, "meta.json")))
+            m = jload(os.path.join(ROOT, "data", "snapshots", s, "meta.json"))
             if r.get("probe_status") != m["probe"]["status"]:
                 bad.append(f"{s}: facts {r.get('probe_status')} vs capture {m['probe']['status']}")
+        self.assertEqual([], bad)
+
+    def test_snapshot_bytes_match_recorded_sha256(self):
+        import gzip, hashlib
+        bad = []
+        for p in providers():
+            s = p["slug"]
+            d = os.path.join(ROOT, "data", "snapshots", s)
+            m = jload(os.path.join(d, "meta.json"))
+            caps = {k: m[k] for k in ("docs", "probe")}
+            caps.update({"extra-" + k: v for k, v in m.get("extra", {}).items()})
+            for name, cap in caps.items():
+                path = os.path.join(d, name + ".gz")
+                if not os.path.exists(path):
+                    bad.append(f"{s}: {name}.gz absent")
+                    continue
+                with gzip.open(path) as gz:
+                    raw = gz.read()
+                if hashlib.sha256(raw).hexdigest() != cap["sha256"] or len(raw) != cap["bytes"]:
+                    bad.append(f"{s}: {name} bytes differ from meta.json")
+        self.assertEqual([], bad)
+
+    def test_every_extra_snapshot_is_recorded(self):
+        bad = []
+        for p in providers():
+            d = os.path.join(ROOT, "data", "snapshots", p["slug"])
+            m = jload(os.path.join(d, "meta.json"))
+            on_disk = {f[6:-3] for f in os.listdir(d) if f.startswith("extra-") and f.endswith(".gz")}
+            if on_disk != set(m.get("extra", {})):
+                bad.append(f"{p['slug']}: disk {sorted(on_disk)} vs meta {sorted(m.get('extra', {}))}")
         self.assertEqual([], bad)
 
 

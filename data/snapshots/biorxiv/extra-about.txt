@@ -1,0 +1,206 @@
+Frequently Asked Questions (FAQ) | bioRxiv 
+ Skip to main content 
+ Home 
+ About 
+ Submit 
+ ALERTS / RSS 
+ Search for this keyword 
+ Advanced Search 
+ Frequently Asked Questions (FAQ) 
+ Table of contents (50 questions) 
+ What is a preprint? 
+ Are bioRxiv preprints peer-reviewed? 
+ Who is responsible for the content posted on bioRxiv? 
+ Are submissions to bioRxiv scrutinized before posting? 
+ How do I submit to bioRxiv? 
+ Is there a charge for submitting manuscripts to bioRxiv? 
+ How long does it take for a preprint to appear on bioRxiv? 
+ What is the Impact Factor of bioRxiv? 
+ Can I submit a manuscript to bioRxiv that I have submitted to a journal? 
+ Can I submit my article to a journal directly from bioRxiv? 
+ Which journals allow posting of preprints prior to submission? 
+ What types of content can be posted on bioRxiv? 
+ My preprint has been recommended for transfer to medRxiv, what does this mean? 
+ What are subject categories? 
+ Can I choose more than one subject category for my preprint? 
+ Can I post a review article on bioRxiv? 
+ Can I post methods or protocols on bioRxiv? 
+ Can I post a clinical paper on bioRxiv? 
+ Can I post a bioinformatics/computational paper on bioRxiv? 
+ My preprint includes nucleotide sequence database accession numbers—when will the sequences be released to the public? 
+ Can I include images of individuals in my preprint? 
+ Can I post a response on bioRxiv to another preprint or an article published in a journal? 
+ Can I post a manuscript that is not in English? 
+ Who holds copyright for bioRxiv preprints and what licensing options are supported? 
+ What do I do if I think copyright has been infringed in a preprint? 
+ How can I acknowledge my funders in my preprint? 
+ How should I acknowledge the use of generative AI for writing my preprint? 
+ Can I submit a manuscript to bioRxiv and another preprint server? 
+ What file formats are acceptable when submitting my manuscript? 
+ In what formats are bioRxiv preprints available? 
+ Why have some details changed in the Abstract or other metadata? 
+ I see full text HTML for some papers but not others. Why? 
+ What are the different options for printing and downloading bioRxiv preprints? 
+ Can I revise my preprint? 
+ How do I submit a revised version of my preprint? 
+ Can I make a silent name change to an article? 
+ I have changes to my Supplemental files but not to my previously posted bioRxiv preprint. Do I need to submit a new version of my manuscript when I submit revised Supplemental files? 
+ Can I remove a manuscript that has been posted on bioRxiv? 
+ Where are bioRxiv preprints indexed? 
+ Will bioRxiv content remain permanently accessible and usable in the future? 
+ How do I cite bioRxiv preprints? 
+ Can I cite bioRxiv preprints in my NIH application? 
+ My preprint has now been published in a journal. What happens next? 
+ What are Channels and how can I request a Channel? 
+ How do I subscribe to one or more Subject Area Alerts from bioRxiv? 
+ Does bioRxiv provide metrics for preprints? 
+ Can I comment on a preprint on bioRxiv? 
+ Does bioRxiv provide bulk access to full text and metadata or an API? 
+ How does bioRxiv address concerns about posting manuscripts that are not certified by peer review? 
+ Who runs bioRxiv? 
+ What is a preprint? 
+ Before formal publication in a scholarly journal, scientific and medical articles are traditionally certified by “peer review.” In this process, the journal’s editors take advice from various experts—called “referees”—who have assessed the paper and may identify weaknesses in its assumptions, methods, and conclusions. Typically, a journal will only publish an article once the editors are satisfied that the authors have addressed referees’ concerns and that the data presented support the conclusions drawn in the paper. 
+ Because this process can be lengthy, authors use the bioRxiv service to make their manuscripts available as “preprints” before certification by peer review, allowing other scientists to see, discuss, and comment on the findings immediately. Readers should therefore be aware that articles on bioRxiv have not been finalized by authors, might contain errors, and report information that has not yet been accepted or endorsed in any way by the scientific or medical community. 
+ We also urge journalists and other individuals who report on medical research to the general public to consider this when discussing work that appears on bioRxiv preprints and emphasize it may not yet have been evaluated by the medical community and the information presented may be erroneous. 
+ Some journals and independent peer review services make peer reviews publicly available before a paper appears in a journal. In these instances, the peer reviews can be accessed via the bioRxiv dashboard . 
+ Are bioRxiv preprints peer-reviewed? 
+ Manuscripts submitted to bioRxiv are not certified by scientific peer review, edited, or typeset before being posted online. This means they may contain errors and/or omissions. Some manuscripts might be undergoing peer review, and the journals or other organizations who are responsible for this process, have the opportunity to post peer reviews alongside preprints in the article dashboard (see above). 
+ Who is responsible for the content posted on bioRxiv? 
+ Authors are solely responsible for the content posted on bioRxiv. All submissions are screened for appropriateness (see below). 
+ Are submissions to bioRxiv scrutinized before posting? 
+ All articles are screened on submission for plagiarism, non-scientific content, inappropriate article types, and material that could potentially endanger the health of individual patients or the public. The latter may include, but is not limited to, studies describing dual-use research of concern and works that challenge or could compromise accepted public health measures and advice regarding infectious disease transmission, immunization, and therapy. Some manuscripts may receive extra scrutiny if there are concerns about their content or prior submissions. 
+ How do I submit to bioRxiv? 
+ To submit a manuscript to bioRxiv, you must first create an account in our submission system ( submit.biorxiv.org ). After logging in to the Author Area, click "Submit a new manuscript", and then provide article and author metadata, confirm you have approval from all co-authors, select a license, add relevant funding information, and upload your manuscript file(s). The most straightforward way to upload your manuscript is to create one PDF file including all manuscript text, tables, and figures. Supplemental data can be uploaded as separate files. Please review all information provided before completing your submission to bioRxiv. 
+ To learn more and submit, go to the submission guide or see the more detailed help pages . 
+ Is there a charge for submitting manuscripts to bioRxiv? 
+ There is no fee to submit articles to bioRxiv. 
+ How long does it take for a preprint to appear on bioRxiv? 
+ Preprints usually appear on bioRxiv within 72 hours; however, screening may take longer over a weekend or holiday, or if there are issues with the content that need addressing or extra scrutiny. 
+ What is the Impact Factor of bioRxiv? 
+ bioRxiv is not a journal so it has no Impact Factor. 
+ Can I submit a manuscript to bioRxiv that I have submitted to a journal? 
+ A manuscript can be submitted to bioRxiv at any time up to the point it is published by a journal. If a manuscript has been published by a journal, it cannot be submitted to bioRxiv. 
+ Can I submit my article to a journal directly from bioRxiv? 
+ Yes, you can directly submit from bioRxiv to an increasing number of journals. Once you have completed a preprint submission/revision, the option "Submit bioRxiv Preprint to a Journal or Peer Review Service" will be available in your Author Area, with a list of available destinations. The current list of destinations can also be found on bioRxiv's About page and Submit page. 
+ Which journals allow posting of preprints prior to submission? 
+ Most basic research journals will consider manuscripts that were posted on bioRxiv and other preprint servers prior to submission. Lists of journal policies can be found on Wikipedia , and Jisc Open policy finder . Authors should consult these lists, individual journal websites, and other sources of information before submitting to bioRxiv and if in doubt, contact the journal to which they ultimately intend to submit. 
+ A growing number of journals (249 and counting) are integrated with bioRxiv either by accepting direct submission of preprints (bioRxiv-to-journal, B2J) or by facilitating co-submission of manuscripts to bioRxiv (journal-to-bioRxiv, J2B). 
+ What types of content can be posted on bioRxiv? 
+ bioRxiv is for the distribution of preprints, which are complete but unpublished manuscripts. Research articles reporting new, confirmatory, or contradictory findings may be posted. 
+bioRxiv is NOT intended for:
+ Case reports/series 
+ Work not premised on modern biology/physiology 
+ Clinical veterinary medicine studies 
+ Narrative reviews (see below) 
+ Editorials, letters, opinion pieces 
+ Announcements of tools or services without data 
+ Product advertisements 
+ Addenda 
+ Hypotheses without new data 
+ Laboratory protocols/recipes 
+ Meeting reports 
+ White papers or policy statements 
+ Guidelines 
+ Theses/undergraduate dissertations, term papers, textbook excerpts 
+ Teaching/instructive materials 
+ Individual components of research articles, such as figures, tables, and datasets 
+Articles of the above types are considered out of scope and will not be posted. 
+ My preprint has been recommended for transfer to medRxiv, what does this mean? 
+ If your submission to bioRxiv is considered better suited for our server medRxiv during screening, you will be notified via email and your submission to bioRxiv will be closed. The email will contain further information on how to proceed with the transfer of your manuscript. This transfer process is required to ensure that manuscripts are screened by the appropriate screening team. 
+ Please note that bioRxiv and medRxiv, although co-managed, have separate policies on scope and screening procedures (for details, see bioRxiv and medRxiv ). However, both servers are indexed by CrossRef, Google Scholar and others, and both servers automatically post new preprints from the respective Twitter/X, Mastodon and Bluesky accounts. Also, all preprints are searchable from the Advanced Search of either website. If you have any questions about the submission process, please don’t hesitate to contact [email protected] . 
+ What are subject categories? 
+ bioRxiv posts preprints of articles covering all aspects of research in the biological sciences. When posting an article, the author assigns it to one of ~25 subject categories. Subject categories are used primarily for categorization of article feeds, Twitter posts, etc. This is not a formal ontology and papers may appear in one subject category but would be equally appropriate to another. 
+ Can I choose more than one subject category for my preprint? 
+ Only one subject area can be selected for a preprint on bioRxiv. This maximizes convenience for readers by ensuring article feeds are not redundant. 
+ Can I post a review article on bioRxiv? 
+ No. bioRxiv is intended for rapid sharing of new research, defined as experimental, mathematical, or computational work. Systematic reviews that include meta-analyses with new analyses of existing data may be appropriate. Narrative reviews, viewpoints and essays that primarily summarize existing knowledge are not appropriate. Neither are hypothesis articles, guidelines, policy statements, theses/undergraduate dissertations, term papers and textbook excerpts. 
+ Can I post methods or protocols on bioRxiv? 
+ Complete biological research articles summarizing new experimental or computational methods and tools are appropriate and may include step-by-step protocols. Tool announcements and step-by-step protocols alone are not sufficient and must be placed in the context of a complete research article that includes elements such as Introduction, Results, and Discussion. 
+ Can I post a clinical paper on bioRxiv? 
+ Clinical papers should now be submitted to medRxiv ( submit.medrxiv.org ) rather than bioRxiv. In June 2019, bioRxiv successfully completed a restricted preprint pilot for clinical research, leading to the launch of medRxiv as a dedicated preprint server covering all health science research. The bioRxiv subject categories Clinical Trials and Epidemiology are now closed to new submissions, but revisions to papers already on bioRxiv will be accepted. Papers that report results of Clinical Trials must now be submitted to medRxiv. Most Epidemiology papers should also be submitted to medRxiv, but if a paper contains no health-related information, authors may choose to submit it to another bioRxiv subject category (e.g., Genetics or Microbiology). 
+ Can I post a bioinformatics/computational paper on bioRxiv? 
+ bioRxiv welcomes computational papers. These should be full research papers and include methodological details and results. Simple automated/computational analyses of public data, molecular modeling, sequence alignments and results of database searches are generally not sufficient; nor are software announcements that do not include detailed methods and research data produced by their output/application. 
+ My preprint includes nucleotide sequence database accession numbers—when will the sequences be released to the public? 
+ Databases that are members of the International Nucleotide Sequence Database Consortium (DDBJ, ENA, and GenBank/SRA) release sequences once a manuscript posts on a preprint server. For other databases, authors should check the policy of the database concerned. 
+ Can I include images of individuals in my preprint? 
+ No. bioRxiv does not post articles that include images or information that could identify an individual. As a preprint server, we cannot verify whether appropriate consent has been obtained. To protect participant confidentiality, we will decline manuscripts containing images that may identify an individual. Therefore, we request that authors remove all figure elements containing photographs in which an individual's face or other identifying features are present prior to submission. Please note obscuring, blurring, covering, or pixelation of the faces is not sufficient for posting on bioRxiv. 
+ Can I post a response on bioRxiv to another preprint or an article published in a journal? 
+ bioRxiv is intended for the rapid sharing of new research and not for commentary that simply contests or rebuts research published in journals. However, articles that augment or challenge earlier work with bona fide new data and/or complete re-analyses of published data sets may be deemed appropriate for the Contradictory Results section of bioRxiv. 
+ Can I post a manuscript that is not in English? 
+ Articles must be submitted in English as we are only able to screen for inappropriate or dangerous content in English. If you wish to make material in another language available, you should advise readers to contact the corresponding author to request it or provide a link to data elsewhere. 
+ Who holds copyright for bioRxiv preprints and what licensing options are supported? 
+ Authors retain copyright of their manuscripts and can choose from a number of distribution/reuse options, including: 
+ No reuse/adaptation without permission (Anyone who wishes to share, reuse, remix, or adapt this material must obtain permission from the corresponding author.) 
+ CC-BY-NC-ND (Anyone can share this material, provided it remains unaltered in any way, this is not done for commercial purposes, and the original authors and source are credited and cited. Anyone who wishes to remix/adapt the work or reuse it for commercial purposes must first obtain permission from the corresponding author.) 
+ CC-BY-ND (Anyone can share this material, providing it remains unaltered in any way and the original authors and source are credited and cited. Anyone who wishes to remix/adapt the work must first obtain permission from the corresponding author.) 
+ CC-BY-NC (Anyone can share, reuse, remix, or adapt this material, providing this is not done for commercial purposes and the original authors and source are credited and cited. Anyone who wishes to reuse the work for commercial purposes must first obtain permission from the corresponding author.) 
+ CC-BY (Anyone can share, reuse, remix, or adapt this material for any purpose, providing the original authors and source are credited and cited.) 
+ CC0 (The paper is placed in the public domain and no longer restricted by copyright. Anyone can legally share, reuse, mix, or adapt this material for any purpose without crediting the original authors or source.) 
+ The licensing terms selected by the author determine the parameters for reuse. The copyright holder and licensing information for each manuscript are displayed beneath the Abstract and on the Info/History tab on the preprint page. 
+ What do I do if I think copyright has been infringed in a preprint? 
+ openRxiv will respond to notices of alleged copyright infringement that comply with applicable law. If you believe any preprints on bioRxiv infringe your copyright, you may request removal of those materials from bioRxiv by submitting written notification to our copyright agent designated below. In accordance with the Online Copyright Infringement Liability Limitation Act of the Digital Millennium Copyright Act (17 U.S.C. § 512) ("DMCA"), the written notice (the "DMCA Notice") must include substantially the following: 
+ Your physical or electronic signature; 
+ Identification of the copyrighted work you believe to have been infringed or, if the claim involves multiple works on bioRxiv, a representative list of such works; 
+ Identification of the material you believe to be infringing in a sufficiently precise manner to allow us to locate that material; 
+ Adequate information by which we can contact you (including your name, postal address, telephone number, and, if available, email address); 
+ A statement that you have a good faith belief that use of the copyrighted material is not authorized by the copyright owner, its agent, or the law; 
+ A statement that the information in the written notice is accurate; and 
+ A statement, under penalty of perjury, that you are authorized to act on behalf of the copyright owner. 
+ Our designated copyright agent to receive DMCA Notices is: Dr Richard Sever, OPENRXIV CORP, 417 Mace Blvd. STE J110, Davis, CA 95618. If you fail to comply with all of the requirements of Section 512(c)(3) of the DMCA, your DMCA Notice may not be effective. Please be aware that if you knowingly materially misrepresent that material or activity on bioRxiv is infringing your copyright, you may be held liable for damages (including costs and attorneys' fees) under Section 512(f) of the DMCA. It is our policy in appropriate circumstances to disable and/or terminate the accounts of users who are repeat infringers. 
+ How can I acknowledge my funders in my preprint? 
+ During the submission process authors should provide details of organizations that funded the work performed, along with all relevant grant numbers. Authors can select from a standardized list of funder Research Organization Registry (ROR) IDs or add freeform text if their funder is not included in the registry. They are also able to add individual grant numbers. Both the funder information and the grant number will then be included in the metadata associated with the preprint when it is posted on bioRxiv, and this will also be indexed by search tools.  
+ How should I acknowledge the use of generative AI for writing my preprint? 
+ Authors are responsible for the content they submit, including material produced by generative AI and related technologies. As with other computational methodologies, use of these tools should be detailed in manuscripts, and the output must not plagiarize other work or breach copyright.  In any case, authors are accountable for the accuracy, integrity, and originality of their work. AI tools and large language models (LLMs) do not meet this requirement and should not be listed as authors on articles. 
+ Can I submit a manuscript to bioRxiv and another preprint server? 
+ We strongly recommend that a preprint be posted on only one server. bioRxiv provides metrics for article views, PDF downloads, and attention scores. Authors will find these metrics are underestimated in article-to-article comparisons if a manuscript appears on more than one server. In addition, readers may be frustrated by encountering the same preprint in more than one location. Posting to both bioRxiv and medRxiv is not permitted and will result in article withdrawal. Manuscripts already present on other preprint servers will not be posted. 
+ What file formats are acceptable when submitting my manuscript? 
+ Authors may submit either a single PDF file to bioRxiv or individual text and figure files, which then undergo automated PDF conversion. Text files should be submitted as Word, WordPerfect, or PDF files. Authors must convert TeX files (including LaTeX) to PDF prior to submission. If images and tables are submitted as separate files, acceptable file formats are GIF, TIFF, EPS, and JPEG, as well as most common word-processing formats for tables. Supplemental files are posted “as is” and can be submitted in a wide range of file formats. 
+ In what formats are bioRxiv preprints available? 
+ Papers on bioRxiv are first posted as PDF files derived from the original author’s manuscript. The files are also converted to full text HTML and XML, a process that can take up to 48 hours, which means the full text HTML typically will post 1-2 days after the PDF has posted. XML is available for text mining purposes . Each version of a manuscript is available in PDF, HTML, and XML formats. Supplemental files are available in the format submitted by the authors. 
+ Why have some details changed in the Abstract or other metadata? 
+ Metadata details (manuscript title, author list, abstract, etc.) are supplied by the author during the submission process and initially post with the PDF. These are replaced with final metadata extracted from each PDF file once the full text HTML is generated. There may be small differences between the metadata the authors supply and the corresponding text derived from their PDF files. 
+ I see full text HTML for some papers but not others. Why? 
+ Manuscripts are posted in PDF form as soon as they are accepted and simultaneously sent for XML conversion. The full text HTML for recently posted manuscripts typically appears within 2 days after the PDF posts. 
+ What are the different options for printing and downloading bioRxiv preprints? 
+ PDF files on bioRxiv are created by the authors. Since these vary considerably in layout, bioRxiv also generates a full text version with in-line figures that readers can print directly or save as PDF if they prefer this to the author’s original file. We also provide an XML version, which may work with dedicated viewers but is typically used for text mining . Note that the tagged full text versions are typically generated 24-48 hours after the PDF first posts (the links are grayed out before these become available). 
+ Can I revise my preprint? 
+ The revision process is intended for substantially updating the content of the manuscript, e.g., new datasets used, reanalyses, expanded discussion or supplemental information. If errors are entered in the Title, Author names, Author affiliations or Abstract fields in the submission system but are correct in the PDF, they will only appear on the site for approximately 48 hours before they are replaced with final metadata extracted from the PDF file. Therefore, authors should refrain from submitting revisions to fix those issues exclusively. 
+ Otherwise, a manuscript posted on bioRxiv can be revised at any time until it is published in a journal. 
+ How do I submit a revised version of my preprint? 
+ To submit a revised version of your preprint, select “Submit a revision” within the Author area, find your submission ID# and click on the link “Submit a revised manuscript”. The revision will be posted under the same DOI and the original version of the manuscript will remain accessible in the Info/History tab on the article page. If the content of the manuscript has changed sufficiently for you to consider it a different article, you should submit it as a new manuscript, not a revision, and it will be assigned a new DOI. 
+ If you wish to revise a paper that was submitted to bioRxiv indirectly via a journal’s submission process (journal-to-biorxiv, J2B), you must do so by using the bioRxiv submission system. First, the corresponding author must ensure they are registered at bioRxiv by clicking ‘create a new account’ at https://submit.biorxiv.org and providing the same email address entered during journal submission. The corresponding author will then be able to complete their account registration and log into their Author Area on bioRxiv to submit revisions. 
+ Can I make a silent name change to an article? 
+ bioRxiv allows author name changes, defined as an update to an individual author's first/last name, without an accompanying revision or correction notice (so-called "silent" changes) if an author requests this. This provision does not cover author name removals or author list re-ordering. Requests for silent name changes should be made by email. No explanation is required. Note that you can still make non-silent name changes by simply submitting a revised version of the article. Most authors will prefer this latter option as it maximizes the likelihood that the change is perpetuated to third-party indexing services. 
+ I have changes to my Supplemental files but not to my previously posted bioRxiv preprint. Do I need to submit a new version of my manuscript when I submit revised Supplemental files? 
+ The bioRxiv article must accompany revised Supplemental files, even if no changes are made to the article file itself. 
+ Can I remove a manuscript that has been posted on bioRxiv? 
+ No. Manuscripts posted on bioRxiv receive DOI's and thus are citable and part of the scientific record. They are indexed by services such as Google Scholar and Crossref, creating a permanent digital presence independent of bioRxiv records. Consequently, bioRxiv’s policy is that papers cannot be removed. Authors may withdraw their article if they no longer stand by their findings/conclusions or discover fundamental errors in the article. In these cases, a statement explaining the reason for the withdrawal is posted on the bioRxiv article page to which the DOI defaults; the original manuscript is still accessible via the Info/History tab on bioRxiv and a "Withdrawn" watermark is added to the PDF of all posted versions of the main text of the manuscript. To initiate the withdrawal process, navigate to the "Submit a Revision" section of your Author Area, find your submission ID# and click on the “Submit a Withdrawal Statement” link to proceed. 
+In extremely rare cases, papers have been removed because of legal or safety reasons. 
+ Where are bioRxiv preprints indexed? 
+ bioRxiv preprints are indexed by Google, all other search engines, Google Scholar, Crossref, Semantic Scholar, Europe PubMed Central, and Preprint Citation Index (connected to the Web of Science). Preprints of NIH-funded studies are also indexed by PubMed. 
+ Will bioRxiv content remain permanently accessible and usable in the future? 
+ Yes, all bioRxiv papers are archived at Portico . 
+ How do I cite bioRxiv preprints? 
+ Preprints deposited in bioRxiv should be cited using their digital object identifier (DOI). 
+ Example: Author AN, Author BT. 2013. My article title. bioRxiv doi: 10.1101/2019.12.11.123456 
+ If there are multiple versions of the preprint and you wish to cite a specific version, you can do so by adding the version-specific URL. 
+ Example: doi: 10.1101/2019.12.11.123456 version 2, https://www.biorxiv.org/content/10.1101/2019.12.11.123456v2 
+ Can I cite bioRxiv preprints in my NIH application? 
+ Yes. From Reporting Preprints and Other Interim Research Products: “The NIH encourages investigators to use interim research products, such as preprints, to speed the dissemination and enhance the rigor of their work.” 
+ My preprint has now been published in a journal. What happens next? 
+ Nothing further from authors is usually required. All preprint versions will remain on the site and bioRxiv will usually automatically add a link to the published version within approximately two (2) weeks of journal publication. The corresponding author should receive an email from bioRxiv requesting confirmation of the link.  
+ On rare occasions a match is not made for technical reasons. If the link does not appear, please wait 2-3 weeks before contacting bioRxiv staff ( [email protected] ) or leave a comment in the comment section for your preprint. We will verify all such requests before linking preprints to the published article. 
+ What are Channels and how can I request a Channel? 
+ Channels are curated collections of preprints that share the subject area focus of a particular organization (e.g., the 4D Nucleome Program). They are accessible from the Channels tab at bioRxiv.org. If your organization is interested in maintaining a Channel, please contact [email protected] . bioRxiv does not curate the collections algorithmically: a curator will be needed from your organization to manually tag appropriate papers after they have posted on bioRxiv. 
+ How do I subscribe to one or more Subject Area Alerts from bioRxiv? 
+ You can add or remove Subject Area Alerts at any time by checking or unchecking subject categories from the Sign Up for Subject Area Alerts page. 
+ Does bioRxiv provide metrics for preprints? 
+ Metrics can be found on each preprint's Metrics tab. Article usage based on Abstract and PDF views is updated daily. In addition, altmetrics are provided that track attention to the article in blogs, tweets, news reports, and other media. 
+ Can I comment on a preprint on bioRxiv? 
+ You can comment on each version of a preprint by using Disqus. Disqus can be accessed by clicking on the “Comment” link of the “Reviews and Context” widget on the right-hand side column of the preprint page (or at the bottom of the page, on mobile view). Comments should address the scientific content of the article and may include feedback and/or specific questions about a preprint's methodology, results, or data. Preprint reviews can be submitted as comments, but the journal, reviewer, and editor names must not be included. Comments must be in English and submitted only once. They are moderated, which takes 24-48h. Any comments that are not directly related to the content of the preprint (e.g., personal stories), violate our policy, are offensive, or question the character, abilities, or motivation of authors will be excluded. bioRxiv cannot correspond with commenters. See this post for more information on commenting on bioRxiv. 
+ Does bioRxiv provide bulk access to full text and metadata or an API? 
+ bioRxiv provides free and unrestricted access to all articles posted on the server. We believe this should apply not only to human readers but also to machine analysis of the content. A growing variety of resources , including APIs and feeds, have been created to facilitate this. 
+ How does bioRxiv address concerns about posting manuscripts that are not certified by peer review? 
+ Submissions to bioRxiv undergo a multi-step screening process to identify content that is non-scientific or could endanger the public. All preprints posted to bioRxiv are accompanied by a prominent statement that the content has not been certified by peer review. PDFs also receive a stamp indicating this. See this post for more information about the screening process at bioRxiv. 
+ Who runs bioRxiv? 
+ bioRxiv is operated by openRxiv , a non-profit organization dedicated to advancing science communication. It was founded by Cold Spring Harbor Laboratory and is funded by generous contributions from The Chan Zuckerberg Initiative, Cold Spring Harbor Laboratory, the Sergey Brin Family Foundation, California Institute of Technology, Centre National de la Recherche Scientifique, Fred Hutchinson Cancer Center, Imperial College London, Massachusetts Institute of Technology, Stanford University, The University of Edinburgh, University of Washington, and Vrije Universiteit Amsterdam.

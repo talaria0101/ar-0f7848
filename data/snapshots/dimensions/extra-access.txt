@@ -1,0 +1,226 @@
+API Access — Dimensions Search Language 
+ Skip to main content 
+ Back to top 
+ Ctrl + K 
+ Search 
+ Ctrl + K 
+ The Dimensions Search Language
+ Getting Started Checklist 
+ A Tour of the DSL 
+ Query Syntax 
+ Functions Syntax 
+ Expert Identification 
+ Data Sources 
+ Publications 
+ Grants 
+ Patents 
+ Clinical Trials 
+ Policy Documents 
+ Datasets 
+ Source Titles 
+ Reports 
+ Researchers 
+ Organizations 
+ Funder Groups 
+ Research Org Groups 
+ Example Queries and Results 
+ API Access 
+ Dimensions Analytics MCP 
+ Google Sheets / Excel Add-in 
+ Google Sheets Connector 
+ Dimensions API Connector for Microsoft Excel 
+ Glossary 
+ Reasonable Use 
+ Release Notes and Deprecations 
+ Frequently Asked Questions 
+ .rst 
+ .pdf 
+ System Settings 
+ Light 
+ Dark 
+ API Access 
+ Contents 
+ The Analytics API and the CRIS API 
+ Getting an API Key 
+ Querying the API 
+ API Endpoints 
+ Python : raw access 
+ Python : Dimcli 
+ curl + jq 
+ PowerShell 
+ Postman 
+ Dimensions Analytics MCP 
+ Third-party Libraries and Tools 
+ API Access # 
+ The Dimensions Analytics API is available through an institutional subscription, subject to restrictions on use. Contact us for more information on licensing for your institution. Digital Science offers free access to the Analytics API for eligible scientometric research projects; please click here to learn more . 
+ The Analytics API and the CRIS API # 
+ The Dimensions Search Language is the query language behind two Dimensions
+APIs. Both use the same grammar, the same data sources and the same two-step
+authentication flow described on this page — but they are separate products,
+served from separate endpoints, and each is intended for a different type of
+use. 
+ Analytics API The main Dimensions API, and the primary subject of this documentation.
+It supports the full DSL feature set , including faceting and
+aggregations, expert identification and all
+ functions . It is designed for complex, interactive
+analytical tasks — scientometric analyses, reporting, one-off data
+investigations — and is not intended to power applications, dashboards
+or other derivative products (see Reasonable use ). 
+ CRIS API A simplified version of the Analytics API for integrating Dimensions
+metadata into research information management software — CRIS systems,
+institutional repositories, faculty activity systems and similar. It is
+served from a dedicated endpoint (e.g. https://cris-api.dimensions.ai )
+and is versioned independently of the Analytics API, with a slower release
+cadence so that integrations remain stable. Compared to the Analytics API
+it does not support faceting or the expert identification workflow. 
+ Note 
+ If you have questions about your organizational subscriptions to Dimensions,
+or if you’re a current subscriber and need help using the APIs,
+ please contact us . 
+ Getting an API Key # 
+ Once you have API access, you’ll be able to generate a new API Key by going to the ‘My Account’ section of the Dimensions web application. 
+ Querying the API # 
+ Querying the Dimensions API always involves two steps : 
+ Sending your credentials (key) to the authentication url, in order to retrieve a query token . 
+ Sending the token and a DSL query to the query url, in order to retrieve JSON data . 
+ Important 
+ The Analytics API and the CRIS API are limited to 30 requests per IP
+address per minute. The query token is valid for around 2 hours, so it
+should be re-obtained when it expires. 
+ The diagram below provides an overview of these operations. 
+ API Endpoints # 
+ The API includes two groups of endpoints: a) for authentication and b) for querying. 
+ The authentication endpoint is the same for all versions of the API. The querying endpoints instead are for specific versions of the API. 
+ Authentication Endpoint # 
+ Name 
+ Endpoint Path 
+ Description 
+ API Authentication 
+ /api/auth 
+ The single authentication endpoint for all API versions. Returns a query token. 
+ Querying Endpoints # 
+ Name 
+ Endpoint Path 
+ Description 
+ V1 (legacy) 
+ /api/dsl/v1 
+ V1 API. Currenlty in maintenance mode. Removed in March 2022. 
+ V2 (latest) 
+ /api/dsl/v2 
+ V2 API. Current major version of the DSL. 
+ Current (alias) 
+ /api/dsl 
+ Alias for current version of API. Will point to V1 till Dec 2021, then will point to V2. 
+ Current (alias, alternative path) 
+ /api/dsl.json 
+ Alias for current version of API. Will point to V1 till Dec 2021, then will point to V2. 
+ Important 
+ Add your Dimensions URL to the endpoint path in order to obtain the final API URL. Eg if your Dimensions URL is https://app.dimensions.ai , your final authentication URL will be https://app.dimensions.ai/api/auth . 
+ Python : raw access # 
+ The following code snippet shows how to connect to the Dimensions API only using Python’s requests library. 
+ import requests 
+ # The credentials to be used 
+ login = { 
+ 'key' : "your API key" 
+ } 
+ # Send credentials to login url to retrieve token. Raise 
+ # an error, if the return code indicates a problem. 
+ # Please use the URL of the system you'd like to access the API 
+ # in the example below. 
+ resp = requests . post ( 'https://<your-url.dimensions.ai>/api/auth' , json = login ) 
+ resp . raise_for_status () 
+ # Create http header using the generated token. 
+ headers = { 
+ 'Authorization' : "JWT " + resp . json ()[ 'token' ] 
+ } 
+ # Execute DSL query. 
+ resp = requests . post ( 
+ 'https://<your-url.dimensions.ai>/api/dsl/v2' , 
+ data = 'search publications return publications' . encode (), 
+ headers = headers ) 
+ # Display raw result 
+ print ( resp . json ()) 
+ The snippet above uses the key authentication method, which is the primary method for most API servers (see also Getting an API Key for more information on how to obtain a key). 
+ Note 
+ Please note escaping rules in Python .
+For example, when writing a query with escaped quotes, such as: 
+ search publications for "\"phrase 1\" AND \"phrase 2\""
+ in Python, it is necessary to escape the backslashes as well, so it would look like: 
+ resp = requests.post(
+ 'https://<your-url.dimensions.ai>/api/dsl/v2',
+ data='search publications for "\\"phrase 1\\" AND \\"phrase 2\\""',
+ headers=headers)
+ Similar escaping rules might apply to other programming languages than Python as well.
+ Alternatively , Using triple quotes can be used to avoid having to escape quote characters. 
+ Python : Dimcli # 
+ Dimensions APIs can be accessed also using Dimcli , an open-source Python client. Dimcli is a convenient way to
+connect to, query and analyze the results of Dimensions API. 
+ import dimcli 
+ dimcli . login ( key = "123456789qwertyuiop" , 
+ endpoint = "https://app.dimensions.ai/api/dsl/v2" ) 
+ dsl = dimcli . Dsl () 
+ data = dsl . query ( """search grants for "malaria" return researchers""" ) 
+ print ( data . json ) 
+ # {'researchers': [{'id': 'ur.01332073522.49', 
+ # 'count': 75, 
+ # 'last_name': 'White', 
+ # 'first_name': 'Nicholas J'}, 
+ # {'id': 'ur.01343654360.43', 
+ # 'count': 59, 
+ # 'last_name': 'Marsh', 
+ # 'first_name': 'Kevin'}, 
+ # ............. 
+ # ], 
+ # '_stats': {'total_count': 8735}} 
+ The API Lab includes several notebooks demonstrating the practical use of Dimcli. In particular, these two are a good place to start: 
+ The Dimcli Python library: Installation and Querying 
+ The Dimcli Python library: Working with Pandas Dataframes 
+ Note 
+ Dimcli includes also a command line interface (CLI) that makes it easier to learn the grammar of the Dimensions Search Language. Calling dimcli from a Terminal opens an interactive query console with syntax autocompletion, persistent history across sessions, pretty-printing and preview of JSON results, export to HTML and CSV, and more. 
+ curl + jq # 
+ This example shows a minimal way to query the API. This should be easily transferable to any other programming language or environment. 
+ export DSL_TOKEN = $( curl https://<your-url.dimensions.ai>/api/auth.json -d '{"key": "your API key"}' -s | jq -r .token ) 
+curl https://<your-url.dimensions.ai>/api/dsl/v2 -H "Authorization: JWT $DSL_TOKEN " -d 'search publications return publications' -s | jq
+ Note 
+ Note that jq tool is used to extract a “token” value from the JSON response in the first request.
+In the second request, jq is used only to pretty print the result so it’s use is optional. 
+ PowerShell # 
+ This is an equivalent example of the above CURL + JQ Example, but usable in the PowerShell enivornment. 
+ $DSL_TOKEN = ( Invoke-RestMethod -Uri https://<your-url.dimensions.ai>/api/auth.json -Method Post -Body ( @ { 'key' = 'your API key' } | ConvertTo-JSON )) .token
+Invoke-RestMethod -Uri https://<your-url.dimensions.ai>/api/dsl/v2 -Method Post -H @ { Authorization = "JWT $DSL_TOKEN " } -Body 'search publications return publications' 
+ Postman # 
+ This examples shows how to set up Postman to query the Dimensions API. This can be achieved in two simple steps. 
+ 1. Obtaining a JWT token 
+ Make a POST request to https://app.dimensions.ai/api/auth.json with body { "key": "<your-API-key>"} 
+ This will return a JWT token, which should be noted as it will be used in the next step. 
+ 2. Using the token to query the API 
+ Make a new POST request by adding the token to the Headers panel in this format: Authorization : JWT {theToken} . 
+ Finally, Compose your query in the request body section: 
+ Note 
+ Another approach to get started with Postman is by using the cURL importer . 
+ Dimensions Analytics MCP # 
+ The Dimensions Analytics MCP server connects AI assistants to the Dimensions API through the Model Context Protocol. Once configured, your assistant can search publications, grants, and researchers; run analytics; and explore the live schema — all via natural language. See the MCP documentation for installation and usage. 
+ Third-party Libraries and Tools # 
+ dimensionsR Library The dimensionsR library is an open-source R-package to gather bibliographic data using the Dimensions API and the DSL. 
+ rdimensions Library Another client library rdimensions for interacting with the Dimensions API from the R environment. 
+ Sidewall Python Library The Sidewall library is a Python package providing object classes for Dimensions entities, fetches data incrementally, caches results, copes with rate limits, and more, to make working with Dimensions in Python more natural. 
+ Biblioshiny Bibliometrix facilitates bibliometric analysis, using several APIs including the Dimensions Analytics API. Biblioshiny is a Shiny app, providing a web-interface for bibliometrix. 
+ previous 
+ Example Queries and Results 
+ next 
+ Dimensions Analytics MCP 
+ Contents
+ The Analytics API and the CRIS API 
+ Getting an API Key 
+ Querying the API 
+ API Endpoints 
+ Python : raw access 
+ Python : Dimcli 
+ curl + jq 
+ PowerShell 
+ Postman 
+ Dimensions Analytics MCP 
+ Third-party Libraries and Tools 
+ Last updated on Oct 15, 2026.
+ © Copyright 2026 Digital Science & Research Solutions, Inc. All Rights Reserved | About us · Privacy policy · Legal terms 
+ Cookie Settings

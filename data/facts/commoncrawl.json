@@ -1,0 +1,44 @@
+{
+ "slug": "commoncrawl",
+ "auth": "none",
+ "auth_note": "The CDX/collection index answered an anonymous request with 200; bulk data over HTTPS needs no AWS account.",
+ "cost": "free",
+ "rate_limit": "not established",
+ "data_license": "not established",
+ "bulk_access": "https://data.commoncrawl.org/ (HTTPS), s3://commoncrawl/ (authenticated S3 API only); Columnar Index recommended for bulk",
+ "probe_status": 200,
+ "probe_observation": "collinfo.json returned 200 with a JSON array of crawl entries starting with id CC-MAIN-2026-39 and its cdx-api URL.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "\"id\": \"CC-MAIN-2026-39\", \"name\": \"September 2026 Index\"",
+   "snapshot": "data/snapshots/commoncrawl/probe.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "There is no need to create an AWS account in order to access the data using this method.",
+   "snapshot": "data/snapshots/commoncrawl/docs.txt"
+  },
+  {
+   "claim": "cost",
+   "quote": "Crawl data is free to access by anyone from anywhere.",
+   "snapshot": "data/snapshots/commoncrawl/docs.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "The data is accessible via the https://data.commoncrawl.org/[...] URL scheme.",
+   "snapshot": "data/snapshots/commoncrawl/docs.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "Please do not overload the URL index server. For bulk downloads (e.g. all records of the entire .com top-level domain), see the download instructions .",
+   "snapshot": "data/snapshots/commoncrawl/extra-indexinfo.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "\"cdx-api\": \"https://index.commoncrawl.org/CC-MAIN-2026-39-index\"",
+   "snapshot": "data/snapshots/commoncrawl/probe.txt"
+  }
+ ],
+ "not_established": "No numeric rate limit is documented (only 'do not overload the URL index server'). No data license stated: Terms of Use say Crawled Content may be subject to the separate terms of its owners, no CC0/CC-BY-style grant was found in docs, terms, FAQ or index page."
+}

@@ -31,5 +31,86 @@
    "X-RateLimit-Scope": "ip"
   },
   "text_bytes": 734
+ },
+ "extra": {
+  "openapi": {
+   "url": "https://arquivo.pt/textsearch/api-docs/v3",
+   "final_url": "https://arquivo.pt/textsearch/api-docs/v3",
+   "status": 200,
+   "content_type": "application/json",
+   "bytes": 6337,
+   "truncated": false,
+   "sha256": "c972df3db2e3476f129c28a3f70dc874c280bc0b2184712243e63e2cab6cd5d2",
+   "fetched_at": "2026-10-20T01:34:11+00:00",
+   "ratelimit_headers": {
+    "X-RateLimit-Limit": "250",
+    "X-RateLimit-Reset": "t=1792460045056609",
+    "RateLimit-Limit": "250",
+    "RateLimit-Reset": "60",
+    "X-RateLimit-Policy": "250;w=60",
+    "X-RateLimit-Scope": "ip"
+   },
+   "text_bytes": 6335
+  },
+  "cdxwiki": {
+   "url": "https://github.com/arquivo/pwa-technologies/wiki/Arquivo.pt-CDX-server-API",
+   "final_url": "https://github.com/arquivo/pwa-technologies/wiki/Arquivo.pt-CDX-server-API",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 196335,
+   "truncated": false,
+   "sha256": "780235833323abdd745d474c6f2e1dc851361982a1db6781b7071d6959669798",
+   "fetched_at": "2026-10-20T01:34:12+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 3560
+  },
+  "terms": {
+   "url": "https://arquivo.pt/termsofuse",
+   "final_url": "https://arquivo.pt/termsofuse",
+   "status": 404,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 8687,
+   "truncated": false,
+   "sha256": "9145dc97ca260a4442c4b726b198f041af40b0027422bc0f5977cd8a2d38caa3",
+   "fetched_at": "2026-10-20T01:34:13+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 205
+  },
+  "dados": {
+   "url": "https://dados.gov.pt/dataservices/api-arquivo-pt",
+   "final_url": "https://dados.gov.pt/en/dataservices/api-arquivo-pt",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 410835,
+   "truncated": false,
+   "sha256": "d445f8877d93775787242080fb9413e17423411eae54438ca86bbb24713bf9af",
+   "fetched_at": "2026-10-20T01:34:27+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 1500
+  },
+  "faq": {
+   "url": "https://sobre.arquivo.pt/en/help/",
+   "final_url": "https://sobre.arquivo.pt/en/help/",
+   "status": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 84348,
+   "truncated": false,
+   "sha256": "a2ae6b67f9107f2ebc32d0772c6d40b0c819d3ae5f4a52169505b0550ed0fe6a",
+   "fetched_at": "2026-10-20T01:34:31+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 2355
+  },
+  "apiabout": {
+   "url": "https://sobre.arquivo.pt/en/tag/api/",
+   "final_url": "https://sobre.arquivo.pt/en/tag/api/",
+   "status": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 95720,
+   "truncated": false,
+   "sha256": "23485b4f3c5af7909b4c7a7fb63b7b1a980f0e8312a9a57f7534a11cc5b90168",
+   "fetched_at": "2026-10-20T01:34:33+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 5501
+  }
  }
 }

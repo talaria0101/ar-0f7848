@@ -1,0 +1,60 @@
+Springer Nature Link API details : Springer Nature Support 
+ Request Support
+ English English Chinese German Japanese Welcome Login 
+ Springer Nature Support
+ Solution home 
+ Springer Nature Link 
+ Features 
+ Enter your search term here... 
+ Search
+ Springer Nature Link API details
+ Modified on: Thu, 25 Jun, 2026 at 2:37 AM 
+ API documentation and details are available on our Company's API Documentation page. We have created multiple APIs for developers to access our freely available content for non-commercial use:                      Springer Metadata API - Provides metadata for almost 12 million online documents (e.g., journal articles, book chapters, protocols).    Springer Meta API - Provides new versioned metadata for almost 12 million online documents (e.g., journal articles, book chapters, protocols). Springer Open Access API - Provides metadata and full-text content where available for more than 460,000 online documents from Springer open access xml, including BioMed Central and SpringerOpen journals. Access requires registration via the subscription portal . New: JATS xml formatting has now been added to the list of OpenAccess formats. Integro API - Provides a means to access information about Springer’s journals (e.g. Information about the journal’s title, publisher, DOI, subject groups, dates of publication). Model Context Protocol (MCP) - Currently, Springer Nature does not offer MCP-based access to our content or platforms for direct use in AI-assisted research workflows. Access to licensed scholarly content continues to be governed through our existing delivery channels and APIs. For information or interest in our existing state of the art APIs, please visit dev.springernature.com to request access to our APIs once you have the appropriate TDM terms in place. Springer APIs provide a variety of different output formats, including XML and JSON. 
+ Did you find it helpful? 
+ Yes 
+ No Send feedback Sorry we couldn't be helpful. Help us improve this article with your feedback. 
+ Related Articles
+ Export citations 
+ Link resolvers 
+ Springer Nature Link's compatibility with mobile devices 
+ “Download book PDF” feature 
+ Purchase a Springer Nature book chapter 
+ MyCopy Book information 
+ Living and Static Reference Works 
+ Products
+ Journals
+ Books
+ Platforms
+ Databases
+ Researchers & Partners
+ Authors
+ Editors
+ Open research
+ Societies
+ Partners
+ Policies
+ Librarians
+ Overview
+ Products
+ Licensing
+ Tools & Services
+ Account administration
+ News & Events
+ Sales and account contacts
+ Our company
+ Overview
+ About us
+ Careers
+ Education
+ Professional
+ Press office
+ Locations & Contact
+ Information
+ Shop
+ Contact
+ Legal notice
+ General terms and conditions
+ Privacy Policy
+ Manage cookies
+ Accessibility
+ Theme by Breezy Themes

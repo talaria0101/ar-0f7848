@@ -30,5 +30,67 @@
    "X-DailyRateLimit-Remaining": "1199"
   },
   "text_bytes": 242
+ },
+ "extra": {
+  "start": {
+   "url": "https://docs.altmetric.com/details-page-api/getting-started/",
+   "final_url": "https://docs.altmetric.com/details-page-api/getting-started/",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 62302,
+   "truncated": false,
+   "sha256": "bee665d1ae87855c2662854cad362ca3b69f6968168205bc80af8ba6951212f5",
+   "fetched_at": "2026-10-20T01:38:29+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 9625
+  },
+  "reasonable": {
+   "url": "https://docs.altmetric.com/details-page-api/appendix/reasonable-use/",
+   "final_url": "https://docs.altmetric.com/details-page-api/appendix/reasonable-use/",
+   "status": 404,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 48385,
+   "truncated": false,
+   "sha256": "8d7c10c50a211de1dba1d817b8ef6db98cedd1fdc6a0eb724a7f693e33d3a4f4",
+   "fetched_at": "2026-10-20T01:38:29+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 1490
+  },
+  "licensing": {
+   "url": "https://docs.altmetric.com/details-page-api/appendix/licensing/",
+   "final_url": "https://docs.altmetric.com/details-page-api/appendix/licensing/",
+   "status": 404,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 48385,
+   "truncated": false,
+   "sha256": "8d7c10c50a211de1dba1d817b8ef6db98cedd1fdc6a0eb724a7f693e33d3a4f4",
+   "fetched_at": "2026-10-20T01:38:30+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 1490
+  },
+  "lic2": {
+   "url": "https://docs.altmetric.com/details-page-api/appendix/licensing/",
+   "final_url": "https://docs.altmetric.com/details-page-api/appendix/licensing/",
+   "status": 404,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 48385,
+   "truncated": false,
+   "sha256": "8d7c10c50a211de1dba1d817b8ef6db98cedd1fdc6a0eb724a7f693e33d3a4f4",
+   "fetched_at": "2026-10-20T01:38:39+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 1490
+  },
+  "solutions": {
+   "url": "https://www.altmetric.com/solutions/altmetric-api/",
+   "final_url": "https://www.altmetric.com/solutions/altmetric-api/",
+   "status": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 127904,
+   "truncated": false,
+   "sha256": "493f4b860002b24eef1d0045be54a0176d98e6f9d625417846caa22ea8877c18",
+   "fetched_at": "2026-10-20T01:38:39+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 5246
+  }
  }
 }

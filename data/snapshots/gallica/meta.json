@@ -24,5 +24,31 @@
   "fetched_at": "2026-10-20T01:31:38+00:00",
   "ratelimit_headers": {},
   "text_bytes": 16
+ },
+ "extra": {
+  "doc": {
+   "url": "https://api.bnf.fr/api-gallica-de-recherche",
+   "final_url": "https://api.bnf.fr/api-gallica-de-recherche",
+   "status": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 71718,
+   "truncated": false,
+   "sha256": "65efe1cf29ca9bb72a71dfac6dee00f92049a976ea1b721f74d406560b3b2031",
+   "fetched_at": "2026-10-20T01:35:20+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 33906
+  },
+  "terms": {
+   "url": "https://gallica.bnf.fr/conditions-dutilisation-des-contenus-de-gallica",
+   "final_url": "https://gallica.bnf.fr/conditions-dutilisation-des-contenus-de-gallica",
+   "status": 403,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 5812,
+   "truncated": false,
+   "sha256": "0f703e9e6045a6e9ab498e712c4180b35b92096203bfa7185263c8fef43a584a",
+   "fetched_at": "2026-10-20T01:35:35+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 16
+  }
  }
 }

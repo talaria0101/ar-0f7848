@@ -1,0 +1,227 @@
+Metadata Plus - Crossref 
+ Menu 
+ Home 
+ Home 
+ Join 
+ Members 
+ Documentation 
+ Forum 
+ Blog 
+ Contact Get involved Overview Become a member Events Service providers Special programs Working for you Data citation Sponsors program Ambassadors Working groups Code of conduct Fees API Learning Hub Find a service Overview Content Registration Metadata Retrieval Metadata Plus Grant Linking System (GLS) Research Organization Registry (ROR) Open Funder Registry (OFR) Support for Reference Linking Similarity Check Cited-by Crossmark Documentation Overview Setting up as a member The Research Nexus Metadata principles and practices Register and maintain your records Schema library Reports Crossmark Cited-by Similarity Check Metadata Retrieval About us Overview Operations & sustainability Board & governance Publications Strategic agenda and roadmap Our truths Our people Organisation chart Jobs Latest blog posts 2026 October 06 How Grobid uses Crossref metadata to enrich bibliographic information Crossref members register around 37,000 records daily. All this metadata is openly shared with the global scholarly community through our free APIs. We receive over two billion calls to our API each month, signalling its use by hundreds of tools and services worldwide, supporting the discovery and assessment of scholarly metadata. As part of a new series in our blog, we will spotlight the diversity of tools and integrations that rely on Crossref metadata to serve the scholarly community. In this initial post, we chat to Luca Foppiano, the developer and maintainer of Grobid1, to learn about how Grobid uses Crossref metadata to improve the extraction and enrichment of bibliographic information from scholarly PDFs. ...Find out more 2026 September 21 2026 board election slate On behalf of the Nominating Committee, I’m pleased to share the slate of candidates for the 2026 board election. Every active member organisation is invited to submit a ballot to elect the incoming board class. ...Find out more 2026 September 17 July 2026 board meeting summary We’re providing a summary of the board’s July 2026 meeting. The July board meeting is our only in-person meeting. The board gathers for two days of strategic thinking and long-range planning, as well as conducting annual board business. This year, we focused on allocating surplus funds we have on hand to invest in a three-year project to redesign the content system. In a related discussion, we decided to lower content registration fees starting in 2027 because we’ve had a demonstrated history of generating surpluses, exceeding what we need to run Crossref. We also discussed the board structure, as part of our regular review of stakeholder governance. And we conducted annual board business, such as approving the audited financial statements and reviewed our risk register and mitigation plans. The resolutions are available on the dedicated section of our website, which also lists the members of the Board and offers further information about our governance. We also managed to squeeze in watching a World Cup game over dinner. ...Find out more 2026 September 15 Improving how funding connects to research outputs Starting today, funder names deposited in Crossref metadata without an identifier will be matched to ROR IDs, to support an open and connected Research Nexus . Funding information is an increasingly important part of the scholarly record. The improved matching strategy supports researchers, funders, institutions, and meta-researchers, who rely on that information to understand how research is supported and what outcomes that support produces. ...Find out more 
+ Menu 
+ search Documentation Home > Documentation > Metadata Plus 
+ Documentation Menu Documentation 
+ Setting up as a member 
+ Your Crossref account credentials 
+ Constructing your DOIs 
+ DOIs for different levels 
+ Suffixes containing special characters 
+ Suggested DOI registration workflow, including suffix generator 
+ DOIs and DSpace repositories 
+ Creating a landing page 
+ Working with a service provider 
+ Hosting platforms 
+ Manuscript submission systems 
+ Planning a platform migration 
+ Checklist for platform migration 
+ Leveling up as a member 
+ The Research Nexus 
+ Introduction to books and chapters 
+ Introduction to conference proceedings 
+ Introduction to datasets 
+ Introduction to dissertations 
+ Introduction to grants 
+ Introduction to journals and articles 
+ Introduction to peer reviews 
+ Introduction to pending publications 
+ Introduction to posted content (includes preprints) 
+ Introduction to reports and working papers 
+ Introduction to standards 
+ Metadata principles and practices 
+ Metadata best practices 
+ Abstracts 
+ Bibliographic metadata 
+ Funding metadata 
+ License metadata 
+ Multi-language material and translations 
+ References 
+ Relationship metadata 
+ Version control, corrections, and retractions 
+ Books and chapters 
+ Conference proceedings and papers 
+ Datasets 
+ Dissertations 
+ Grants 
+ Journals and articles 
+ Peer review 
+ Posted content 
+ Reports and working papers 
+ Standards 
+ Register and maintain your records 
+ Choosing a content registration method 
+ OJS platform 
+ OJS 3.5 
+ OJS 3.4 
+ OJS 3.3 
+ Web deposit form 
+ Metadata Manager 
+ Direct deposit of XML 
+ Upload XML files using our admin tool 
+ XML deposit using HTTPS POST 
+ POSTing files using our upload tool 
+ Testing your XML 
+ Using JATS XML 
+ Verify your registration 
+ Submission queue and log 
+ Interpret submission logs 
+ Troubleshooting submissions 
+ Notification callback service 
+ Creating and managing DOIs 
+ Changing or deleting DOIs 
+ Transferring responsibility for titles and DOIs 
+ Transferring prefixes between different Registration Agencies 
+ Multiple resolution 
+ Maintaining your metadata 
+ Updating your metadata 
+ Adding references to your metadata record 
+ Resource-only deposit 
+ Registering updates 
+ Metadata removal markup guide 
+ Updating metadata for inherited DOIs after a title transfer 
+ Schema library 
+ Required, recommended, and optional metadata 
+ Markup guides for metadata segments 
+ Abstracts 
+ Affiliations and ROR 
+ Archive locations 
+ Article numbers or IDs 
+ Contributors 
+ Data and software citation deposit guide 
+ Face markup 
+ Resource and full-text URLs 
+ Funding information 
+ ISSNs and ISBNs 
+ License information 
+ MathML 
+ Translated and multi-language materials 
+ References 
+ Relationships 
+ Titles 
+ Markup guides for record types 
+ Books and chapters markup guide 
+ Components 
+ Conference proceedings markup guide 
+ Datasets markup guide 
+ Dissertations markup guide 
+ Grants markup guide 
+ Journals and articles markup guide 
+ Peer reviews markup guide 
+ Pending publications markup guide 
+ Posted content (includes preprints) markup guide 
+ Reports and working papers markup guide 
+ Standards markup guide 
+ XSD schema quick reference 
+ Schema versions 
+ Metadata deposit schema 5.5.0 
+ Metadata deposit schema 5.4.0 
+ Grants schema 
+ Resource-only deposit schema 5.4.0 
+ Schema deprecation guide 
+ Metadata deposit schema 
+ Reports 
+ Browsable title list 
+ Conflict report 
+ Depositor report 
+ DOI crawler report 
+ DOI error report 
+ Field or missing metadata report 
+ Missed conflict report 
+ Participation Reports 
+ Resolution report 
+ Schematron report 
+ Reference Linking 
+ How do I find and create reference links? 
+ Crossmark 
+ Participating in Crossmark 
+ Update policy page 
+ Crossmark button guidelines 
+ Linked clinical trials 
+ Crossmark and transferring responsibility for DOIs 
+ Crossmark terms 
+ Cited-by 
+ How to participate in Cited-by 
+ Retrieve citations using Cited-by 
+ Open Funder Registry 
+ Accessing the Open Funder Registry 
+ Funding data overview 
+ Updating funding deposits with new registry info 
+ Funder data via the API 
+ Similarity Check 
+ How to participate in Similarity Check 
+ Checking your eligibility and applying 
+ Adding full-text URLs to new deposits 
+ Adding full-text URLs to existing deposits 
+ Setting up your iThenticate v1 account (admins only) 
+ Administrator checklist 
+ Admin settings 
+ Account information 
+ Manage users 
+ Setting up your iThenticate 2.0 account for use directly in the browser (admins only) 
+ Administrator checklist 
+ Exclusions 
+ Private repository 
+ Manage users and folders 
+ Setting up your iThenticate 2.0 account MTS integration (admins only) 
+ Administrator checklist 
+ Setting up your MTS integration with an API key 
+ Exclusions 
+ Private repository 
+ Manage users and folders 
+ Using your iThenticate account 
+ Folders 
+ Documents overview 
+ Submit a document 
+ Creating and finding your Similarity Report 
+ Working with your Similarity Report 
+ Doc-to-doc comparison 
+ Your Similarity Check user account 
+ Settings 
+ Understanding your Similarity Report 
+ Upgrading from iThenticate v1 to iThenticate 2.0 
+ iThenticate v1 or iThenticate 2.0? 
+ Upgrade FAQs 
+ Get help with Similarity Check 
+ Similarity Check (Português Brasileiro) 
+ Lista de verificação do(a) administrador(a) 
+ Similarity Check (Româna) 
+ Listă de verificare pentru administrator 
+ Similarity Check (Español) 
+ Lista de comprobación para administradores 
+ Metadata Retrieval 
+ REST API 
+ Access and authentication 
+ REST API filters Tips and tricks 
+ XML API 
+ Query schema 
+ Query examples 
+ Public data files and snapshots 
+ Data citations 
+ OAI-PMH 
+ OpenURL 
+ DOIs, OpenURL, and link resolvers 
+ Retraction Watch 
+ Simple Text Query 
+ Content negotiation 
+ Matched references 
+ Accessing full texts 
+ API Versions XML output formats 
+ UNIXSD query output format 
+ UNIXREF query output format 
+ XSD XML query output format 
+ Metadata Plus 
+ Metadata Plus keys 
+ Metadata Plus snapshots Back to top
+ Questions? Visit forum 
+or contact us Metadata Plus Metadata Plus gives you enhanced access to all our supported APIs, guarantees service levels and support, and additional features such as snapshots and priority service/rate limits. To use Metadata Plus, an optional paid-for service, you do not need to be a member. In addition to enhanced access to all our supported APIs ( OAI-PMH and REST APIs ) and metadata in XML and JSON, Metadata Plus provides you with: a service level agreement guaranteeing you extra service and support, giving you a consistent and predictable experience additional features such as snapshots and priority service/rate limits. Metadata Plus users may use either or both of the included API interfaces: OAI-PMH: this API retrieves metadata in XML using the Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH) version 2 repository framework REST API: this API searches and filters metadata, is generally RESTFUL, and returns results in JSON. Learn more in our REST API documentation . Description of Service Feature Defined as Notes Snapshots User-requested full-file downloads. Data may be requested in JSON and XML via an interface separate from each API. Pre-generated reports available via machine request and human user interface. Filters based on commonly used data are in *under consideration*: + ISSN + Month and year + Publisher + Journal title Priority Service/Rate Limits Plus users will be prioritized via isolated resources. Minimum number of queries per second per IP address. Rate limiting of the API is primarily on a per IP basis. If a method allows, for example, for 150 requests per rate limit window, then it allows 150 requests per IP. This number can depend on the system state and may need to change. If it does, Crossref will publish it in the response headers. In the exceptional event that a release is not backwards-compatible, Crossref will provide extensive lead time to communicate the changes, as part of our proactive support for Plus users. How Metadata Plus works Start by contacting us about Metadata Plus access . Plus subscribers can create their own API keys to use either or both the OAI-PMH and the REST API. Learn more in our extensive documentation for both the REST API and OAI-PMH interfaces. Service level agreement (SLA) Crossref will maintain an aggregated, average uptime for all of the interfaces that together comprise the Crossref Metadata Service of 99.5%, reported on a monthly basis. Crossref will provide technical support to Subscriber through Crossref’s existing support channels as requested by Subscriber, and will provide a response within one (1) business day to support requests received during normal working hours in the United States and the United Kingdom. “Business days” do not include weekends or legal holidays in the United States and the United Kingdom. “Response” means that support requests will be acknowledged. The time required for resolution will depend upon the nature of the request. Agreement and fees for Metadata Plus Learn more about the Metadata Plus service terms , and fees and pricing tiers for Metadata Plus. Page maintainer: Martyn Rittman Last updated: 2020-April-08 Join the community Get email updates Membership Governance Sustainability Services Documentation Status page API Learning Hub Community forum Join Contact Jobs Blog 
+ The content of this site is licensed under a Creative Commons Attribution 4.0 International License Accessibility 
+ Privacy

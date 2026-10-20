@@ -28,5 +28,51 @@
   "fetched_at": "2026-10-20T01:31:44+00:00",
   "ratelimit_headers": {},
   "text_bytes": 26038
+ },
+ "extra": {
+  "data-dump": {
+   "url": "https://ror.readme.io/docs/data-dump",
+   "final_url": "https://ror.readme.io/docs/data-dump",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 145833,
+   "truncated": false,
+   "sha256": "c8da0492d295c6da53c912f1c6f22793220e2f743d2f69a819978fce1d9c9d4d",
+   "fetched_at": "2026-10-20T01:37:48+00:00",
+   "ratelimit_headers": {
+    "x-ratelimit-limit": "100",
+    "x-ratelimit-remaining": "99",
+    "x-ratelimit-reset": "1792460264"
+   },
+   "text_bytes": 6095
+  },
+  "terms": {
+   "url": "https://ror.org/about/terms/",
+   "final_url": "https://ror.org/about/terms/",
+   "status": 429,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 34222,
+   "truncated": false,
+   "sha256": "2a253942770de9da277783b2fce0a19dc4dfea55c6a060978ef6c4e2761de885",
+   "fetched_at": "2026-10-20T01:37:49+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 167
+  },
+  "data-license": {
+   "url": "https://ror.readme.io/docs/data-structure",
+   "final_url": "https://ror.readme.io/docs/data-structure",
+   "status": 404,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 74321,
+   "truncated": false,
+   "sha256": "3c1ea33cb3d23ceddfa19bdb8b2954663059a6e966abf04a1861b8597fe5604c",
+   "fetched_at": "2026-10-20T01:37:49+00:00",
+   "ratelimit_headers": {
+    "x-ratelimit-limit": "100",
+    "x-ratelimit-remaining": "99",
+    "x-ratelimit-reset": "1792460265"
+   },
+   "text_bytes": 387
+  }
  }
 }

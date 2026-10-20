@@ -1,0 +1,1 @@
+{"type":"orkg:problem:not_found","title":"Not Found","status":404,"detail":"No static resource api/v3/api-docs.","instance":"/api/v3/api-docs","error":"Not Found","message":"No static resource api/v3/api-docs.","path":"/api/v3/api-docs","timestamp":"2026-10-20T03:38:16.171787071+02:00"}

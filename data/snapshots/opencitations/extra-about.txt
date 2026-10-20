@@ -1,0 +1,83 @@
+OpenCitations Governance - OpenCitations 
+ Close Search 
+ Search for: 
+ Search 
+ Skip to content 
+ OpenCitations 
+ Menu 
+ Home Page 
+ About 
+ Story 
+ Team 
+ Governance 
+ Why OpenCitations? 
+ Mission 
+ What we do 
+ Support us 
+ How to 
+ Members & Donors 
+ FAQs 
+ Community 
+ Partner Projects 
+ Awards 
+ Publications 
+ News 
+ Blog 
+ Newsletter 
+ More 
+ Search for: 
+ Search 
+ Open Search 
+ OpenCitations Governance 
+ OpenCitations Governance 
+ OpenCitations is managed by the Research Centre for Open Scholarly Metadata at the University of Bologna. The University of Bologna is the  Hosting Member  of OpenCitations, as a public and not-for-profit legal entity that supports the activities of OpenCitations by making available in-kind resources, services and personnel for the administrative, financial, technological and infrastructure management of OpenCitations. The Hosting Member is also the legal entity that manages the budget, carries out the administration of OpenCitations and legally represents OpenCitations. OpenCitations organizational structure consists of four collective Bodies:  
+ Council  
+ International Advisory Board  
+ Trustee Network 
+ Management Team  
+ and two single-person Bodies   
+ Director   
+ Vice Director  
+ 1. The Council 
+ The OpenCitations Council comprises one delegate appointed by each OpenCitations Member.  Each delegate has the mandate to speak on behalf of his/her Party, and should have sufficient expertise to participate in informed discussion and to vote on Council proposals.    The Council meets regularly annually, either face-to-face or online, with the Director serving as chair.  
+ 2. The International Advisory Board 
+ The International Advisory Board for OpenCitations is a committee with the purpose of guiding the future developments of OpenCitations in terms of its policies, strategies and activities, building the OpenCitations collaborations, membership and support community, and ensuring its financial sustainability.  
+ The Board assists the OpenCitations Director and Vice Director in their role.  
+ The Board comprises:  
+ Marcel R. Ackermann  (Team Lead of dblp Computer Science Bibliography) 
+ Maria Gould  (Product Director at DataCite and Director of ROR) 
+ Catriona MacCallum (Director, Future of Scholarly Research, Wiley) 
+ Philippe Mongeon  (Associate Professor and Chair of the Department of Information Science at University of Montreal) 
+ Cameron Neylon  (Professor of Research Communications, Centre for Culture and Technology, Curtin University) 
+ Dominika Tkaczyk  (Director of Data Science at CrossRef) 
+ Ludo Waltman (Professor of Quantitative Science Studies and Deputy Director, Centre for Science and Technology Studies (CWTS), Leiden University) 
+ 3. Trustee Network 
+ Legal Public Entities willing to support OpenCitations with at least 40,000 euros per year may be entitled to join as members of the OpenCitations Trustee Network (OTN) by signing a specific agreement with the Hosting Member for at least two years.  
+ The OTN supervises the scientific strategy of OpenCitations and may propose updates and future policies, to be proposed to the I.A. Board for its advice. The OTN is also responsible for monitoring that the work carried out by OpenCitations has been done in accordance with the principles of the statutes and mission and can propose corrective measures if necessary to the I.A. Board.  
+ 4. Management Team 
+ The Management Team is an administrative body appointed by the Director. I coordinates all the administrative, accounting and communication activities of OpenCitations, supporting both the Director and the Vice Director by undertaking administrative and secretarial tasks, and, under the supervision of the Director, by preparing the biannual OpenCitations progress reports and the annual OpenCitations budget and financial report.   
+ 5. Director and Vice Director 
+ The Director has the ultimate responsibility for the purpose, development, operation, and financial management of OpenCitations. The Director ensures, with the collaboration of the I.A. Board and the Vice Director, the efficient organization and operation of all activities, and coordinates all the activities of the IT supporting infrastructure of OpenCitations, and its accounting, legal and administration activities.   
+ The Vice Director is proposed by the Director and approved by the I.A. Board to assist the Director in the management of OpenCitations.   
+ OpenCitations organizational bodies, their election and composition,  are fully described in this document . 
+ OPENCITATIONS 
+ OpenCitations is managed by the  Research Centre for Open Scholarly Metadata , an independent research centre within the  University of Bologna . 
+ LICENSE 
+ The data held in any of the OpenCitations datasets are available under a  Creative Commons public domain dedication (CC0) . The text of the web pages that comprise the OpenCitations website is available under a  Creative Commons Attribution 4.0 International Public License.  The software is available on  GitHub  under the  ISC License. 
+ PRIVACY POLICY 
+ The use of the OpenCitations trademark is subject to the OpenCitations TRADEMARK POLICY AND BRAND GUIDELINES 
+ CONTACTS 
+ For general inquiries, please contact: contact@opencitations.net 
+ For assistance with OpenCitations services, please contact: tech@opencitations.net 
+ Your opinion matters 
+ CC-BY 4.0 | OpenCitations 
+ Mail 
+ GitHub 
+ X 
+ LinkedIn 
+ Mastodon 
+ Bluesky 
+ OpenCitations 
+ Close 
+ Previous 
+ Next

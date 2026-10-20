@@ -1,0 +1,37 @@
+IEEE Xplore - Currently Available APIs 
+ IEEE Xplore 
+ Sign In 
+ Register 
+ Previous:   Up:   Next: API Use Cases 
+ Currently Available APIs 
+ Metadata Search API 
+ Query and retrieve metadata records including abstracts for more than 6 million documents in IEEE Xplore® including Journals, Conference Proceedings, Books, Courses and Standards. The Metadata API supports both simple and Boolean searches . 
+ IEEE Open Access API 
+ Query and retrieve full-text articles designated as Open Access as well as chargeable Full-Text. 
+ IEEE Full-Text Access API 
+ Query and retrieve full-text articles designated as chargeable. 
+ Digital Object Identifier (DOI) API 
+ Query up to 25 DOI (Digital Object Identifier) numbers and retrieve metadata records including abstracts. 
+ version 65 as of 2 years ago by Manny Rechani 
+ Previous:   Up:   Next: API Use Cases 
+ Docs Navigation 
+ Currently Available APIs 
+ API Use Cases 
+ API Query Basics 
+ Search Parameters 
+ Filtering Parameters 
+ Sorting and Paging Parameters 
+ Boolean Search Operators 
+ Data Fields Returned 
+ API Use Case Examples 
+ Getting Started 
+ Dynamic Query Tool 
+ Documentation 
+ SDKs 
+ Contact Us 
+ Terms of Use 
+ IEEE.org 
+ Contact Us 
+ Terms of Use 
+ IEEE.org 
+ Copyright IEEE - All rights reserved.

@@ -1,0 +1,34 @@
+{
+ "slug": "loc",
+ "auth": "none",
+ "auth_note": "Docs say the loc.gov JSON API needs no key or authentication; the live probe was blocked by a Cloudflare challenge so anonymous success was not observed from this sandbox.",
+ "cost": "not established",
+ "rate_limit": "loc.gov JSON/YAML API: 20 requests per minute, blocked 1 hour if exceeded; Text and Image services 150 per minute; Streaming 60 per minute; MARCXML on lccn.loc.gov 30 per minute, blocked 72 hours.",
+ "data_license": "not established",
+ "bulk_access": "MARC Open Access dataset (catalog records up through 2014); the docs name it but give no URL in the captured text",
+ "probe_status": 403,
+ "probe_observation": "Probe returned HTTP 403 with a body of only 'Just a moment...', a Cloudflare challenge page, so no API JSON was observed.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "The API is accessible to the public with no API key or authentication required.",
+   "snapshot": "data/snapshots/loc/extra-json-yaml.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "JSON/YAML API for loc.gov Requests per minute 20 Time blocked, if rate is exceeded 1 hour",
+   "snapshot": "data/snapshots/loc/extra-json-yaml.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "See the MARC Open Access dataset for bulk access to the catalog records up through 2014.",
+   "snapshot": "data/snapshots/loc/extra-apis-json.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "Just a moment...",
+   "snapshot": "data/snapshots/loc/probe.txt"
+  }
+ ],
+ "not_established": "Cost statement and data license/rights of returned metadata (not in captured pages; rights are per item). Live anonymous access unverified because the probe got a Cloudflare challenge (403). URL of the MARC Open Access dataset not captured."
+}

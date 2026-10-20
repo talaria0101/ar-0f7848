@@ -1,0 +1,29 @@
+{
+ "slug": "openreview",
+ "auth": "key-free",
+ "auth_note": "Docs say an OpenReview account (username and password) is needed to use the API; sign-up is self-serve by email. Anonymous probe got a 403 challenge page from the sandbox.",
+ "cost": "not established",
+ "rate_limit": "not established",
+ "data_license": "not established",
+ "bulk_access": "none documented",
+ "probe_status": 403,
+ "probe_observation": "Probe returned JSON error ChallengeRequiredError 'Challenge verification required' with status 403 and a challengeUrl on openreview.net, so no data was returned to the sandbox.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "You need an OpenReview account to use the API. You authenticate with the same username and password you use on the website",
+   "snapshot": "data/snapshots/openreview/extra-using.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "Enter an email address and click the \"Sign Up\" button. You'll be prompted to create a password.",
+   "snapshot": "data/snapshots/openreview/extra-signup.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "{\"name\":\"ChallengeRequiredError\",\"message\":\"Challenge verification required",
+   "snapshot": "data/snapshots/openreview/probe.txt"
+  }
+ ],
+ "not_established": "Whether sign-up is free is not stated in captured pages (cost not established); signup page notes public-email domains can take up to 2 weeks to activate. Rate limit: meta.json shows response headers ratelimit-policy 180;w=60 on the challenge response, but no captured docs page states a limit. Data license not found in docs/OpenAPI captured. No bulk dump documented in captured pages (docs index and OpenAPI searched). Probe is a bot challenge (403), so anonymous data access was not shown; the API data itself was not seen from this sandbox."
+}

@@ -1,0 +1,49 @@
+{
+ "slug": "europeana",
+ "auth": "key-free",
+ "auth_note": "An API key is required; anyone with a free-to-register Europeana account can self-serve a Personal key, Project keys need a request.",
+ "cost": "not established",
+ "rate_limit": "not established",
+ "data_license": "CC0",
+ "bulk_access": "https://pro.europeana.eu dataset download via ftp://download.europeana.eu/dataset/XML/ and OAI-PMH at https://api.europeana.eu/oai/record/",
+ "probe_status": 200,
+ "probe_observation": "Probe with the public demo key wskey=api2demo returned HTTP 200 JSON starting {\"apikey\":\"api2demo\",\"success\":true, itemsCount 1, totalResults 46542; ratelimit-policy header (meta.json) shows q=1000000;w=3600 for the demo project key.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "Anyone can obtain a Personal API key.",
+   "snapshot": "data/snapshots/europeana/extra-access.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "{\"success\":false,\"error\":\"Unauthorized\",\"message\":\"Invalid API key provided!\",\"code\":\"invalid_apikey\"}",
+   "snapshot": "data/snapshots/europeana/extra-tos.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "The metadata is available as CC0 the same way as all the metadata exposed via the API",
+   "snapshot": "data/snapshots/europeana/extra-oaipmh.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "The base URL for all requests is https://api.europeana.eu/oai/record/ .",
+   "snapshot": "data/snapshots/europeana/extra-oaipmh.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "ftp://download.europeana.eu/dataset/XML/2021672.zip",
+   "snapshot": "data/snapshots/europeana/extra-oaipmh.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "Europeana may specify a limit per type of request and/or accross all Europeana APIs, to which you will be required to adhere.",
+   "snapshot": "data/snapshots/europeana/extra-fairuse.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "{\"apikey\":\"api2demo\",\"success\":true",
+   "snapshot": "data/snapshots/europeana/probe.txt"
+  }
+ ],
+ "not_established": "Numeric rate limits (docs captured give only a fair use policy and say personal key limits were reduced until April 2026; the numeric policy appears only in a response header, not in docs); explicit cost/pricing wording; the original docs page (pro.europeana.eu/page/search) and get-api page returned 403 challenge; Terms of Use page not captured. Project key approval criteria not fully read."
+}

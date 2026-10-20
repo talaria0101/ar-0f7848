@@ -1,0 +1,79 @@
+---
+updatedAt: 2026-09-25T11:45:59.000Z
+agentTools:
+  projectIndex: https://support.datacite.org/llms.txt
+---
+
+# DataCite REST API
+
+## About the DataCite REST API
+
+The [DataCite REST API](https://support.datacite.org/reference) enables creation and update of DataCite DOI metadata records and account information.
+
+The API is generally RESTful and returns results in JSON (following the [JSON:API](http://jsonapi.org/) specification).
+
+### REST API Guide
+
+These guides will walk you through the basic operations of the DataCite REST API for creating and updating DOIs and metadata:
+
+* [Creating DOIs with the REST API](https://support.datacite.org/docs/api-create-dois)
+* [Updating metadata with the REST API](https://support.datacite.org/docs/updating-metadata-with-the-rest-api)
+
+### REST API Reference
+
+> 📘
+>
+> Access the [REST API Reference](https://support.datacite.org/reference/introduction) to explore all REST API functions and parameters.
+
+### Additional resources
+
+* Our [DataCite API Training](https://youtu.be/mh_r6ohJOac) video walks through the basics of the REST API.
+* Fork the [DataCite REST API Training collection](https://www.postman.com/datacite/workspace/datacite-rest-api-training/overview) on Postman to explore examples.
+
+## Member vs. Public API
+
+The REST API is split into two versions: a Public API and a Member API. Traffic is directed to a different set of servers if users authenticate:
+
+* [Member API](https://support.datacite.org/v1.8/docs/api#member-api-requires-authentication): Accessed **with** authentication: used for **creating and updating metadata**
+* [Public API](https://support.datacite.org/v1.8/docs/rest-api#public-api-no-authentication): Accessed **without** authentication: used for **retrieving metadata**
+
+These two APIs use the same URL (starting with <https://api.datacite.org>) and run the same code. When users authenticate to access the Member API, they have access to additional functionality, depending on their account type.
+
+### Member API (Requires authentication)
+
+Authentication provides access to additional functionality to create and update DOIs, view draft records and Registered DOIs, and view contact information.
+
+Users must authenticate with a Repository account to create and update DOIs.
+
+| Account Type                              | Create and update DOIs | View draft records and Registered (non-Findable) state DOIs | View organization contact information |
+| :---------------------------------------- | :--------------------- | :---------------------------------------------------------- | :------------------------------------ |
+| Repository                                | x                      | x                                                           |                                       |
+| Member (Direct Member or Consortium Lead) |                        | x                                                           | x                                     |
+| Consortium Organization                   |                        | x                                                           | x                                     |
+
+## Test vs. Production
+
+The REST API is available in both test and production. Many examples in this guide use the test endpoint.
+
+* Test endpoint: <https://api.test.datacite.org>
+* Production endpoint: <https://api.datacite.org>
+
+Learn more about the differences between Test and Production in our [Testing Guide](https://support.datacite.org/docs/testing-guide).
+
+## API Versions
+
+The current version of the REST API is version 2. Endpoints like `/works`, `/members`, and `/data-centers` correspond to [version 1](https://support.datacite.org/docs/api-v1), which is [now deprecated](https://support.datacite.org/docs/datacite-rest-api-legacy-endpoints-deprecation).
+
+> 🚧
+>
+> When making frequent requests to DataCite APIs using a script or integration, include a `User-Agent` header with 1) an identification of your script or integration and 2) contact information in a `mailto:` . For example:
+>
+> ```
+>  MyCustomScript/1.0 (https://mycustomscript.org; mailto:youremail@example.com)
+> ```
+>
+> This information helps DataCite communicate about issues and changes and troubleshoot problems.
+
+> 📘 Would you like to know more?
+>
+> If you have any questions, requests or ideas please [contact us!](https://support.datacite.org/docs/how-to-contact-datacite)

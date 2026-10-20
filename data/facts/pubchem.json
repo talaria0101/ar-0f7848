@@ -1,0 +1,59 @@
+{
+ "slug": "pubchem",
+ "auth": "none",
+ "auth_note": "The anonymous probe returned data; docs say API keys are not offered.",
+ "cost": "free",
+ "rate_limit": "Asked to make no more than 5 requests per second; no API keys or whitelists to exceed this; automated throttling applies.",
+ "data_license": "No single license: NCBI places no restrictions itself, but PubChem data sources may claim rights and license per source.",
+ "bulk_access": "https://ftp.ncbi.nlm.nih.gov/pubchem/ (PubChem FTP site for bulk download)",
+ "probe_status": 200,
+ "probe_observation": "The anonymous JSON probe for aspirin returned a PropertyTable with CID 2244 and MolecularFormula C9H8O4.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "\"PropertyTable\": { \"Properties\": [ { \"CID\": 2244, \"MolecularFormula\": \"C9H8O4\"",
+   "snapshot": "data/snapshots/pubchem/probe.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "We cannot offer API keys or whitelists to exceed these limits.",
+   "snapshot": "data/snapshots/pubchem/extra-progmd.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "We ask that any user, application, or organization not make more than 5 requests per second, in order to avoid overloading these servers.",
+   "snapshot": "data/snapshots/pubchem/extra-progmd.txt"
+  },
+  {
+   "claim": "cost",
+   "quote": "is a free to use database with most of the data readily available for download.",
+   "snapshot": "data/snapshots/pubchem/extra-md-downloads.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "NCBI itself places no restrictions on the use or distribution of the data contained therein. However, some submitters of the original data may claim patent, copyright, or other intellectual property rights",
+   "snapshot": "data/snapshots/pubchem/extra-readme.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "A data source may provide explicit data license information. One should check with the PubChem data source for the most current data licensing information.",
+   "snapshot": "data/snapshots/pubchem/extra-md-downloads.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "The PubChem File Transfer Protocol (FTP) site allows the user to download PubChem data in bulk.",
+   "snapshot": "data/snapshots/pubchem/extra-readme.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "\"CID\": 2244, \"MolecularFormula\": \"C9H8O4\"",
+   "snapshot": "data/snapshots/pubchem/probe.txt"
+  },
+  {
+   "claim": "other",
+   "quote": "Checking your browser - reCAPTCHA Checking your browser before accessing pubchem.ncbi.nlm.nih.gov",
+   "snapshot": "data/snapshots/pubchem/docs.txt"
+  }
+ ],
+ "not_established": "The official docs pages (pubchem.ncbi.nlm.nih.gov/docs/*, pubchemdocs, NCBI scripting guidelines) return a reCAPTCHA browser challenge to the sandbox (HTTP 200, 169-byte body), so the docs were read from the pcfe/docs/markdown/*.md paths instead. The dynamic-request-throttling page (400 req/min, 300 s server time/min) was not captured. No single machine-readable data license is stated; the per-source licenses were not enumerated."
+}

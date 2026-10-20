@@ -1,0 +1,29 @@
+{
+ "slug": "ia-metadata",
+ "auth": "none",
+ "auth_note": "Anonymous request returned data with HTTP 200; docs say only some user fields and all writes need S3 keys or cookies.",
+ "cost": "not established",
+ "rate_limit": "Docs give no numbers: automated tools should add delays, honor 429 responses and Retry-After headers, and send a descriptive User-Agent.",
+ "data_license": "not established",
+ "bulk_access": "none documented",
+ "probe_status": 200,
+ "probe_observation": "Anonymous GET of /metadata/nasa returned a JSON item record beginning with alternate_locations, d1, d2, dir and a files list.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "\"alternate_locations\":{\"servers\":[{\"server\":\"dn790001.ca.archive.org\",\"dir\":\"/0/items/nasa\"}]",
+   "snapshot": "data/snapshots/ia-metadata/probe.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "\"alternate_locations\":{\"servers\":[{\"server\":\"dn790001.ca.archive.org\",\"dir\":\"/0/items/nasa\"}]",
+   "snapshot": "data/snapshots/ia-metadata/probe.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "Honor 429 Too Many Requests responses and Retry-After headers",
+   "snapshot": "data/snapshots/ia-metadata/extra-bots.txt"
+  }
+ ],
+ "not_established": "No numeric rate limit, metadata license, or explicit cost statement found in the metadata docs, Read page or Bots page; no bulk route documented."
+}

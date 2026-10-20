@@ -24,5 +24,43 @@
   "fetched_at": "2026-10-20T01:31:44+00:00",
   "ratelimit_headers": {},
   "text_bytes": 70309
+ },
+ "extra": {
+  "tdm": {
+   "url": "https://www.biorxiv.org/tdm",
+   "final_url": "https://www.biorxiv.org/tdm",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 28709,
+   "truncated": false,
+   "sha256": "768e843d74cebe4ef6dfa46e56c84f38e2a2f7e28a9951d4657314806d35990b",
+   "fetched_at": "2026-10-20T01:37:06+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 4318
+  },
+  "pubshelp": {
+   "url": "https://api.biorxiv.org/pubs/help",
+   "final_url": "https://api.biorxiv.org/pubs/help",
+   "status": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 4963,
+   "truncated": false,
+   "sha256": "bdaad967f3dd2ec486c823f37d112df0fa5149ce94abbf2e04480a5e61d36400",
+   "fetched_at": "2026-10-20T01:37:06+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 2101
+  },
+  "about": {
+   "url": "https://www.biorxiv.org/about/FAQ",
+   "final_url": "https://www.biorxiv.org/about/FAQ",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 69612,
+   "truncated": false,
+   "sha256": "0d028f534b4b63082a3350f22c9822b19ff724473d3695726ebcb5b606f1cc76",
+   "fetched_at": "2026-10-20T01:37:08+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 32686
+  }
  }
 }

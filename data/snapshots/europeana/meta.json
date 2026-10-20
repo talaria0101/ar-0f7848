@@ -27,5 +27,79 @@
    "ratelimit-policy": "\"project\";q=1000000;w=3600"
   },
   "text_bytes": 3063
+ },
+ "extra": {
+  "pro-api": {
+   "url": "https://europeana.atlassian.net/wiki/spaces/EF/pages/2385739812/Search+API+Documentation",
+   "final_url": "https://europeana.atlassian.net/wiki/spaces/EF/pages/2385739812/Search+API+Documentation",
+   "status": 200,
+   "content_type": "text/html; charset=\"utf-8\"",
+   "bytes": 1500000,
+   "truncated": true,
+   "sha256": "4b6ac93b68cdc6631316cc67900280873c0fc3a58883932706b40fd2eee5f311",
+   "fetched_at": "2026-10-20T01:34:04+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 294168
+  },
+  "apikey": {
+   "url": "https://pro.europeana.eu/pages/get-api",
+   "final_url": "https://pro.europeana.eu/pages/get-api",
+   "status": 403,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 5712,
+   "truncated": false,
+   "sha256": "47e26cf80dd99ee8ff1f59d4693ec5835bb9b75d5c9ccb84d52ab68265821a1c",
+   "fetched_at": "2026-10-20T01:34:07+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 16
+  },
+  "tos": {
+   "url": "https://api.europeana.eu/record/v2/search.json?query=test",
+   "final_url": "https://api.europeana.eu/record/v2/search.json?query=test",
+   "status": 401,
+   "content_type": "application/json;charset=UTF-8",
+   "bytes": 102,
+   "truncated": false,
+   "sha256": "3cebaece173c5ca1b49f1cdd61b5c36402f794c181b30b3b4abe0d00256c441f",
+   "fetched_at": "2026-10-20T01:34:07+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 102
+  },
+  "access": {
+   "url": "https://europeana.atlassian.net/wiki/spaces/EF/pages/2462351393/Accessing+the+APIs",
+   "final_url": "https://europeana.atlassian.net/wiki/spaces/EF/pages/2462351393/Accessing+the+APIs",
+   "status": 200,
+   "content_type": "text/html; charset=\"utf-8\"",
+   "bytes": 1300773,
+   "truncated": false,
+   "sha256": "19281ccfaa63ea2619181b4ea1844933dca9b8b8505e7363eaaeaa0efbefa93b",
+   "fetched_at": "2026-10-20T01:34:22+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 6966
+  },
+  "fairuse": {
+   "url": "https://europeana.atlassian.net/wiki/spaces/EF/pages/2704146433/Fair+use+policy+guidelines",
+   "final_url": "https://europeana.atlassian.net/wiki/spaces/EF/pages/2704146433/Fair+use+policy+guidelines",
+   "status": 200,
+   "content_type": "text/html; charset=\"utf-8\"",
+   "bytes": 1094750,
+   "truncated": false,
+   "sha256": "00e13f01a679824f8373a306c8b3d5658582a7f8b7de1668dbcacf7502e1bc66",
+   "fetched_at": "2026-10-20T01:34:24+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 3936
+  },
+  "oaipmh": {
+   "url": "https://europeana.atlassian.net/wiki/spaces/EF/pages/2324463617/Dataset+download+and+OAI-PMH+service",
+   "final_url": "https://europeana.atlassian.net/wiki/spaces/EF/pages/2324463617/Dataset+download+and+OAI-PMH+service",
+   "status": 200,
+   "content_type": "text/html; charset=\"utf-8\"",
+   "bytes": 1318780,
+   "truncated": false,
+   "sha256": "b17600e23277f47d544e7ddc145ee2ea7edfe0c9d389195884c6ca5a2fd688e7",
+   "fetched_at": "2026-10-20T01:34:26+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 11936
+  }
  }
 }

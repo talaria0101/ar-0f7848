@@ -1,0 +1,34 @@
+{
+ "slug": "oapen",
+ "auth": "ip-allowlist",
+ "auth_note": "The REST probe was refused on the basis of the caller address; whether this is a general block or a sandbox-specific one is not known.",
+ "cost": "not established",
+ "rate_limit": "not established",
+ "data_license": "CC BY 4.0",
+ "bulk_access": "OAI-PMH at https://library.oapen.org/oai/request",
+ "probe_status": 403,
+ "probe_observation": "Body is the plain text 'You address is not allowed to access this API.' with HTTP 403.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "You address is not allowed to access this API.",
+   "snapshot": "data/snapshots/oapen/probe.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "You address is not allowed to access this API.",
+   "snapshot": "data/snapshots/oapen/probe.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "If not noted otherwise all contents are available under Attribution 4.0 International ( CC BY 4.0 )",
+   "snapshot": "data/snapshots/oapen/docs.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "<baseURL>https://library.oapen.org/oai/request</baseURL><protocolVersion>2.0</protocolVersion>",
+   "snapshot": "data/snapshots/oapen/extra-oai.txt"
+  }
+ ],
+ "not_established": "REST API (/rest) refused this sandbox address (403) so its output, auth model beyond that refusal, and rate limits are unknown; the 403 may be a sandbox-IP block rather than a documented allowlist. No documentation of cost or API rate limits found (docs page only gives UI export caps of 500/15000 items; oapen.org API help URLs 404). License CC BY 4.0 is stated site-wide 'if not noted otherwise', per-item licenses vary."
+}

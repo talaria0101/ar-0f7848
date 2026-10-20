@@ -24,5 +24,127 @@
   "fetched_at": "2026-10-20T01:31:44+00:00",
   "ratelimit_headers": {},
   "text_bytes": 148
+ },
+ "extra": {
+  "tos": {
+   "url": "https://info.orcid.org/public-apis-terms-of-service/",
+   "final_url": "https://info.orcid.org/public-apis-terms-of-service/",
+   "status": 404,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 147333,
+   "truncated": false,
+   "sha256": "6d3e3f8c84c10126d591baaeb36ffa6ffc5aa176bde972fbdf0a1422af87e5ee",
+   "fetched_at": "2026-10-20T01:37:50+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 6722
+  },
+  "limits": {
+   "url": "https://info.orcid.org/documentation/integration-guide/orcid-api-usage-limits/",
+   "final_url": "https://info.orcid.org/documentation/integration-guide/orcid-api-usage-limits/",
+   "status": 404,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 147794,
+   "truncated": false,
+   "sha256": "050ad62c214372e2a886ba1534c8658d83c73cf835db9bca9a4f54fc4b5cb5ed",
+   "fetched_at": "2026-10-20T01:37:52+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 6722
+  },
+  "pubtos": {
+   "url": "https://info.orcid.org/documentation/api-tutorials/api-tutorial-searching-the-orcid-registry/",
+   "final_url": "https://info.orcid.org/documentation/api-tutorials/api-tutorial-searching-the-orcid-registry/",
+   "status": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 230049,
+   "truncated": false,
+   "sha256": "a8b2a34b5aa2dcdc2e5ff68d2bb3425498db18581db93f8efa73e6f4d0afeb7b",
+   "fetched_at": "2026-10-20T01:38:04+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 28104
+  },
+  "faq": {
+   "url": "https://info.orcid.org/documentation/integration-guide/integration-and-api-faq/",
+   "final_url": "https://info.orcid.org/documentation/integration-guide/integration-and-api-faq/",
+   "status": 404,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 147811,
+   "truncated": false,
+   "sha256": "df931bf9a5655780bcc068d1375a6b1753e549380e5de397006fd52c3abbe869",
+   "fetched_at": "2026-10-20T01:38:04+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 6722
+  },
+  "pdf": {
+   "url": "https://info.orcid.org/documentation/integration-guide/working-with-the-public-data-file/",
+   "final_url": "https://info.orcid.org/documentation/integration-guide/working-with-the-public-data-file/",
+   "status": 404,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 147981,
+   "truncated": false,
+   "sha256": "2c94ba71ad04ee85303f5cfc030dcf0fb85befc440e1a109923c049b5526cb7e",
+   "fetched_at": "2026-10-20T01:38:05+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 6722
+  },
+  "tos2": {
+   "url": "https://info.orcid.org/orcid-public-client-terms-of-service/",
+   "final_url": "https://info.orcid.org/orcid-public-client-terms-of-service/",
+   "status": 404,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 147469,
+   "truncated": false,
+   "sha256": "2b5c2b72dc605d6287b4f9d78dd3a92aad2ea194d3d317e46f012a0ce4915e4d",
+   "fetched_at": "2026-10-20T01:38:06+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 6722
+  },
+  "ghapi": {
+   "url": "https://raw.githubusercontent.com/ORCID/ORCID-Source/main/orcid-api-web/tutorial/README.md",
+   "final_url": "https://raw.githubusercontent.com/ORCID/ORCID-Source/main/orcid-api-web/tutorial/README.md",
+   "status": 404,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 14,
+   "truncated": false,
+   "sha256": "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed",
+   "fetched_at": "2026-10-20T01:38:17+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 14
+  },
+  "pdfpolicy": {
+   "url": "https://info.orcid.org/documentation/integration-guide/orcid-api-usage-limits/",
+   "final_url": "https://info.orcid.org/documentation/integration-guide/orcid-api-usage-limits/",
+   "status": 404,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 147794,
+   "truncated": false,
+   "sha256": "a9dda536ee126ed9270230cee30f45688403a576920ac2b5b2f89170831626cd",
+   "fetched_at": "2026-10-20T01:38:18+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 6722
+  },
+  "dataterms": {
+   "url": "https://info.orcid.org/documentation/features/public-data-file/",
+   "final_url": "https://info.orcid.org/documentation/features/public-data-file/",
+   "status": 404,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 147539,
+   "truncated": false,
+   "sha256": "6e99b7d49ea99f840c84d70b754ad12b4ae95f2a52e0f0cd38a9953eea37d4fd",
+   "fetched_at": "2026-10-20T01:38:31+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 6722
+  },
+  "pubdata": {
+   "url": "https://info.orcid.org/public-data-file-use-policy/",
+   "final_url": "https://info.orcid.org/public-data-file-use-policy/",
+   "status": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 129105,
+   "truncated": false,
+   "sha256": "39d300005899869eeeb96c13a1f094036d6a19a8837044316917315062e113c4",
+   "fetched_at": "2026-10-20T01:38:33+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 7234
+  }
  }
 }

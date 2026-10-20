@@ -1,0 +1,2680 @@
+swh-web API URLs — Software Heritage documentation 
+ Skip to main content 
+ Back to top 
+ Ctrl + K 
+ Development
+ API reference
+ Usage
+ Resources
+ Infrastructure
+ About
+ System Settings 
+ Light 
+ Dark 
+ GitLab 
+ PyPI 
+ System Status 
+ Software Heritage Homepage 
+ Development
+ API reference
+ Usage
+ Resources
+ Infrastructure
+ About
+ System Settings 
+ Light 
+ Dark 
+ GitLab 
+ PyPI 
+ System Status 
+ Software Heritage Homepage 
+ Collapse Sidebar 
+ Expand Sidebar 
+ Section Navigation 
+ swh.alter 
+ Using swh-alter 
+ Removal algorithm 
+ Recovery bundles 
+ swh.alter package 
+ swh.alter.bech32 module 
+ swh.alter.cli module 
+ swh.alter.inventory module 
+ swh.alter.mirror_notification_watcher module 
+ swh.alter.notifications module 
+ swh.alter.operations module 
+ swh.alter.progressbar module 
+ swh.alter.recovery_bundle module 
+ swh.alter.removable module 
+ swh.alter.subgraph module 
+ swh.alter.utils module 
+ swh.auth 
+ Command-line interface 
+ Django components 
+ swh.auth package 
+ swh.auth.django package 
+ swh.auth.django.backends module 
+ swh.auth.django.middlewares module 
+ swh.auth.django.models module 
+ swh.auth.django.utils module 
+ swh.auth.django.views module 
+ swh.auth.starlette package 
+ swh.auth.starlette.backends module 
+ swh.auth.cli module 
+ swh.auth.keycloak module 
+ swh.auth.pytest_plugin module 
+ swh.auth.utils module 
+ swh.coarnotify 
+ Explanations 
+ What’s COAR Notify ? 
+ What are we doing with the metadata ? 
+ swh.coarnotify package 
+ swh.coarnotify.server package 
+ swh.coarnotify.server.management package 
+ swh.coarnotify.server.admin module 
+ swh.coarnotify.server.apps module 
+ swh.coarnotify.server.forms module 
+ swh.coarnotify.server.handlers module 
+ swh.coarnotify.server.models module 
+ swh.coarnotify.server.signals module 
+ swh.coarnotify.server.utils module 
+ swh.coarnotify.server.validators module 
+ swh.coarnotify.server.views module 
+ swh.coarnotify.settings package 
+ swh.coarnotify.settings.common module 
+ swh.coarnotify.settings.development module 
+ swh.coarnotify.settings.production module 
+ swh.coarnotify.settings.tests module 
+ swh.coarnotify.cli module 
+ swh.coarnotify.client module 
+ swh.coarnotify.indexer module 
+ swh.coarnotify.manage module 
+ swh.coarnotify.namespaces module 
+ swh.coarnotify.parsers module 
+ swh.coarnotify.relationships module 
+ swh.coarnotify.renderers module 
+ swh.coarnotify.tasks module 
+ swh.coarnotify.urls module 
+ How-to guides 
+ Install swh-coarnotify 
+ Access the inbox 
+ Send a mention of a software in a scientific paper 
+ References 
+ Workflows 
+ Specifications 
+ Rest API 
+ Command Line Interface 
+ Notification payloads 
+ swh.core 
+ Command-line interface 
+ Common database utilities 
+ swh.core package 
+ swh.core.api package 
+ swh.core.api.asynchronous module 
+ swh.core.api.classes module 
+ swh.core.api.gunicorn_config module 
+ swh.core.api.negotiation module 
+ swh.core.api.serializers module 
+ swh.core.cli package 
+ swh.core.cli.backend module 
+ swh.core.cli.db module 
+ swh.core.cli.nar module 
+ swh.core.cli.sentry module 
+ swh.core.db package 
+ swh.core.db.common module 
+ swh.core.db.db_utils module 
+ swh.core.github package 
+ swh.core.github.pytest_plugin module 
+ swh.core.github.utils module 
+ swh.core.s3 namespace 
+ swh.core.s3.downloader module 
+ swh.core.s3.pytest_plugin module 
+ swh.core.api_async module 
+ swh.core.collections module 
+ swh.core.config module 
+ swh.core.constants module 
+ swh.core.logger module 
+ swh.core.logging module 
+ swh.core.nar module 
+ swh.core.pytest_plugin module 
+ swh.core.retry module 
+ swh.core.sentry module 
+ swh.core.statsd module 
+ swh.core.tarball module 
+ swh.core.utils module 
+ swh.counters 
+ swh.counters package 
+ swh.counters.api package 
+ swh.counters.api.client module 
+ swh.counters.api.server module 
+ swh.counters.cli module 
+ swh.counters.history module 
+ swh.counters.in_memory module 
+ swh.counters.interface module 
+ swh.counters.journal_client module 
+ swh.counters.redis module 
+ swh.dataportal 
+ How to guides 
+ How to install 
+ How to use the CLI 
+ How to update datasets 
+ References 
+ Static site generation process 
+ Data used to generate the website 
+ datasets.json export 
+ Deployment 
+ swh.datasets 
+ Luigi workflows 
+ Command-line interface 
+ swh.datasets package 
+ swh.datasets.luigi package 
+ swh.datasets.luigi.aggregate_datasets module 
+ swh.datasets.luigi.blobs_datasets module 
+ swh.datasets.luigi.file_names module 
+ swh.datasets.luigi.impact module 
+ swh.datasets.luigi.origin_contributors module 
+ swh.datasets.luigi.specific_languages_datasets module 
+ swh.datasets.cli module 
+ swh.datasets.download module 
+ swh.datasets.shell module 
+ swh.deposit 
+ Deposit API 
+ User Manual 
+ API Documentation 
+ Service document 
+ Create deposit 
+ Update content 
+ Update metadata 
+ Retrieve status 
+ Display content 
+ Deposit metadata 
+ Use cases 
+ Register account 
+ Deposit internals 
+ Running swh-deposit locally 
+ Production deployment 
+ Authentication 
+ Loading workflow 
+ Specifications 
+ Loading specification 
+ Protocol reference 
+ The metadata-only deposit 
+ swh.deposit package 
+ swh.deposit.api package 
+ swh.deposit.api.private package 
+ swh.deposit.api.collection module 
+ swh.deposit.api.common module 
+ swh.deposit.api.content module 
+ swh.deposit.api.converters module 
+ swh.deposit.api.edit module 
+ swh.deposit.api.edit_media module 
+ swh.deposit.api.service_document module 
+ swh.deposit.api.state module 
+ swh.deposit.api.sword_edit module 
+ swh.deposit.api.urls module 
+ swh.deposit.api.utils module 
+ swh.deposit.cli package 
+ swh.deposit.cli.admin module 
+ swh.deposit.cli.client module 
+ swh.deposit.fixtures package 
+ swh.deposit.loader package 
+ swh.deposit.loader.checker module 
+ swh.deposit.loader.checks module 
+ swh.deposit.loader.tasks module 
+ swh.deposit.templates package 
+ swh.deposit.templates.deposit package 
+ swh.deposit.tests_migration package 
+ swh.deposit.apps module 
+ swh.deposit.auth module 
+ swh.deposit.client module 
+ swh.deposit.config module 
+ swh.deposit.errors module 
+ swh.deposit.exception module 
+ swh.deposit.gunicorn_config module 
+ swh.deposit.manage module 
+ swh.deposit.models module 
+ swh.deposit.parsers module 
+ swh.deposit.urls module 
+ swh.deposit.utils module 
+ Command-line interface 
+ swh.digestmap 
+ Design document for a hash conversion service 
+ swh.digestmap package 
+ swh.export 
+ Software Heritage Graph Dataset 
+ Dataset 
+ Relational schema 
+ Setup on Amazon Athena 
+ Setup on Azure Databricks 
+ Exporting a dataset 
+ Exporting a subdataset 
+ swh.export package 
+ swh.export.exporters package 
+ swh.export.exporters.edges module 
+ swh.export.exporters.orc module 
+ swh.export.athena module 
+ swh.export.cli module 
+ swh.export.exporter module 
+ swh.export.fullnames module 
+ swh.export.journalprocessor module 
+ swh.export.luigi module 
+ swh.export.relational module 
+ swh.export.utils module 
+ swh.fuse 
+ Tutorial 
+ Configuration 
+ Advice for parallelization 
+ Design notes 
+ Command-line interface 
+ swh.fuse package 
+ swh.fuse.backends package 
+ swh.fuse.backends.compressed module 
+ swh.fuse.backends.objstorage module 
+ swh.fuse.backends.web_api module 
+ swh.fuse.fs namespace 
+ swh.fuse.fs.artifact module 
+ swh.fuse.fs.entry module 
+ swh.fuse.fs.mountpoint module 
+ swh.fuse.cache module 
+ swh.fuse.cli module 
+ swh.fuse.fuse module 
+ swh.graph 
+ Quickstart 
+ Graph Querying HTTP API 
+ Using the gRPC API 
+ Rust API 
+ Design tips for Rust code using swh-graph 
+ Memory & Performance tuning 
+ Graph compression 
+ Command-line interface 
+ Docker environment 
+ git2graph 
+ Test graphs 
+ Example dataset 
+ Provenance index 
+ swh-graph glossary 
+ swh.graph namespace 
+ swh.graph.example_dataset package 
+ swh.graph.example_dataset.generate_dataset module 
+ swh.graph.grpc namespace 
+ swh.graph.grpc.swhgraph_pb2 module 
+ swh.graph.grpc.swhgraph_pb2_grpc module 
+ swh.graph.libs package 
+ swh.graph.libs.luigi package 
+ swh.graph.libs.shell module 
+ swh.graph.luigi package 
+ swh.graph.luigi.compressed_graph module 
+ swh.graph.luigi.subdataset module 
+ swh.graph.luigi.utils module 
+ swh.graph.cli module 
+ swh.graph.client module 
+ swh.graph.config module 
+ swh.graph.download module 
+ swh.graph.e2e_check module 
+ swh.graph.find_context module 
+ swh.graph.grpc_server module 
+ swh.graph.http_client module 
+ swh.graph.http_naive_client module 
+ swh.graph.http_rpc_server module 
+ swh.graph.naive_client module 
+ swh.graph.pytest_plugin module 
+ swh.graph.shell module 
+ swh.graph.utils module 
+ swh.graph.webgraph module 
+ swh.graph.libs 
+ Topological order 
+ Descendant and path counts 
+ swh.graph.libs package 
+ swh.graph.libs.luigi package 
+ swh.graph.libs.luigi.topology module 
+ swh.graph.libs.shell module 
+ Software Heritage GraphQL API 
+ swh.indexer 
+ Software Heritage - Indexer 
+ Metadata workflow 
+ Custom indexers and metadata mappings 
+ SwhPkg Vocabulary 
+ swh.indexer package 
+ swh.indexer.citation package 
+ swh.indexer.citation.bibtex module 
+ swh.indexer.citation.codemeta_data module 
+ swh.indexer.citation.csl module 
+ swh.indexer.citation.exceptions module 
+ swh.indexer.metadata_mapping package 
+ swh.indexer.metadata_mapping.base module 
+ swh.indexer.metadata_mapping.cff module 
+ swh.indexer.metadata_mapping.codemeta module 
+ swh.indexer.metadata_mapping.composer module 
+ swh.indexer.metadata_mapping.dart module 
+ swh.indexer.metadata_mapping.gitea module 
+ swh.indexer.metadata_mapping.github module 
+ swh.indexer.metadata_mapping.maven module 
+ swh.indexer.metadata_mapping.npm module 
+ swh.indexer.metadata_mapping.nuget module 
+ swh.indexer.metadata_mapping.python module 
+ swh.indexer.metadata_mapping.ruby module 
+ swh.indexer.metadata_mapping.sword module 
+ swh.indexer.metadata_mapping.utils module 
+ swh.indexer.storage package 
+ swh.indexer.storage.api package 
+ swh.indexer.storage.converters module 
+ swh.indexer.storage.db module 
+ swh.indexer.storage.exc module 
+ swh.indexer.storage.in_memory module 
+ swh.indexer.storage.interface module 
+ swh.indexer.storage.metrics module 
+ swh.indexer.storage.model module 
+ swh.indexer.storage.writer module 
+ swh.indexer.cli module 
+ swh.indexer.codemeta module 
+ swh.indexer.exception module 
+ swh.indexer.fossology_license module 
+ swh.indexer.indexer module 
+ swh.indexer.journal_client module 
+ swh.indexer.metadata module 
+ swh.indexer.metadata_detector module 
+ swh.indexer.mimetype module 
+ swh.indexer.namespaces module 
+ swh.indexer.origin_head module 
+ Command-line interface 
+ swh.journal 
+ Software Heritage Journal clients 
+ swh.journal package 
+ swh.journal.writer package 
+ swh.journal.writer.inmemory module 
+ swh.journal.writer.interface module 
+ swh.journal.writer.kafka module 
+ swh.journal.writer.stream module 
+ swh.journal.cli module 
+ swh.journal.client module 
+ swh.journal.pytest_plugin module 
+ swh.journal.serializers module 
+ swh.lister 
+ Tutorial: list the content of your favorite forge in just a few steps 
+ Tutorial: run a lister within docker-dev in just a few steps 
+ Save a forge 
+ swh.lister package 
+ swh.lister.arch package 
+ swh.lister.arch.lister module 
+ swh.lister.arch.tasks module 
+ swh.lister.aur package 
+ swh.lister.aur.lister module 
+ swh.lister.aur.tasks module 
+ swh.lister.bioconductor package 
+ swh.lister.bioconductor.lister module 
+ swh.lister.bioconductor.tasks module 
+ swh.lister.bitbucket package 
+ swh.lister.bitbucket.lister module 
+ swh.lister.bitbucket.tasks module 
+ swh.lister.bower package 
+ swh.lister.bower.lister module 
+ swh.lister.bower.tasks module 
+ swh.lister.cgit package 
+ swh.lister.cgit.lister module 
+ swh.lister.cgit.tasks module 
+ swh.lister.conda package 
+ swh.lister.conda.lister module 
+ swh.lister.conda.tasks module 
+ swh.lister.cpan package 
+ swh.lister.cpan.lister module 
+ swh.lister.cpan.tasks module 
+ swh.lister.cran package 
+ swh.lister.cran.lister module 
+ swh.lister.cran.tasks module 
+ swh.lister.crates package 
+ swh.lister.crates.lister module 
+ swh.lister.crates.tasks module 
+ swh.lister.debian package 
+ swh.lister.debian.lister module 
+ swh.lister.debian.tasks module 
+ swh.lister.dlang package 
+ swh.lister.dlang.lister module 
+ swh.lister.dlang.tasks module 
+ swh.lister.elm package 
+ swh.lister.elm.lister module 
+ swh.lister.elm.tasks module 
+ swh.lister.forgejo package 
+ swh.lister.forgejo.lister module 
+ swh.lister.forgejo.tasks module 
+ swh.lister.gerrit package 
+ swh.lister.gerrit.lister module 
+ swh.lister.gerrit.tasks module 
+ swh.lister.gitea package 
+ swh.lister.gitea.lister module 
+ swh.lister.gitea.tasks module 
+ swh.lister.github package 
+ swh.lister.github.lister module 
+ swh.lister.github.tasks module 
+ swh.lister.gitiles package 
+ swh.lister.gitiles.lister module 
+ swh.lister.gitiles.tasks module 
+ swh.lister.gitlab package 
+ swh.lister.gitlab.lister module 
+ swh.lister.gitlab.tasks module 
+ swh.lister.gitweb package 
+ swh.lister.gitweb.lister module 
+ swh.lister.gitweb.tasks module 
+ swh.lister.gnu package 
+ swh.lister.gnu.lister module 
+ swh.lister.gnu.tasks module 
+ swh.lister.gnu.tree module 
+ swh.lister.gogs package 
+ swh.lister.gogs.lister module 
+ swh.lister.gogs.tasks module 
+ swh.lister.golang package 
+ swh.lister.golang.lister module 
+ swh.lister.golang.tasks module 
+ swh.lister.grokmirror package 
+ swh.lister.grokmirror.lister module 
+ swh.lister.grokmirror.tasks module 
+ swh.lister.hackage package 
+ swh.lister.hackage.lister module 
+ swh.lister.hackage.tasks module 
+ swh.lister.heptapod package 
+ swh.lister.heptapod.lister module 
+ swh.lister.heptapod.tasks module 
+ swh.lister.hex package 
+ swh.lister.hex.lister module 
+ swh.lister.hex.tasks module 
+ swh.lister.hgweb package 
+ swh.lister.hgweb.lister module 
+ swh.lister.hgweb.tasks module 
+ swh.lister.julia package 
+ swh.lister.julia.lister module 
+ swh.lister.julia.tasks module 
+ swh.lister.launchpad package 
+ swh.lister.launchpad.lister module 
+ swh.lister.launchpad.tasks module 
+ swh.lister.maven package 
+ swh.lister.maven.lister module 
+ swh.lister.maven.tasks module 
+ swh.lister.nixguix package 
+ swh.lister.nixguix.lister module 
+ swh.lister.nixguix.tasks module 
+ swh.lister.npm package 
+ swh.lister.npm.lister module 
+ swh.lister.npm.tasks module 
+ swh.lister.nuget package 
+ swh.lister.nuget.lister module 
+ swh.lister.nuget.tasks module 
+ swh.lister.opam package 
+ swh.lister.opam.lister module 
+ swh.lister.opam.tasks module 
+ swh.lister.packagist package 
+ swh.lister.packagist.lister module 
+ swh.lister.packagist.tasks module 
+ swh.lister.pagure package 
+ swh.lister.pagure.lister module 
+ swh.lister.pagure.tasks module 
+ swh.lister.phabricator package 
+ swh.lister.phabricator.lister module 
+ swh.lister.phabricator.tasks module 
+ swh.lister.phorge package 
+ swh.lister.phorge.lister module 
+ swh.lister.phorge.tasks module 
+ swh.lister.pubdev package 
+ swh.lister.pubdev.lister module 
+ swh.lister.pubdev.tasks module 
+ swh.lister.puppet package 
+ swh.lister.puppet.lister module 
+ swh.lister.puppet.tasks module 
+ swh.lister.pypi package 
+ swh.lister.pypi.lister module 
+ swh.lister.pypi.tasks module 
+ swh.lister.rpm package 
+ swh.lister.rpm.lister module 
+ swh.lister.rpm.tasks module 
+ swh.lister.rubygems package 
+ swh.lister.rubygems.lister module 
+ swh.lister.rubygems.tasks module 
+ swh.lister.save_bulk package 
+ swh.lister.save_bulk.lister module 
+ swh.lister.save_bulk.tasks module 
+ swh.lister.sourceforge package 
+ swh.lister.sourceforge.lister module 
+ swh.lister.sourceforge.tasks module 
+ swh.lister.stagit package 
+ swh.lister.stagit.lister module 
+ swh.lister.stagit.tasks module 
+ swh.lister.tuleap package 
+ swh.lister.tuleap.lister module 
+ swh.lister.tuleap.tasks module 
+ swh.lister.cli module 
+ swh.lister.pattern module 
+ swh.lister.utils module 
+ Command-line interface 
+ swh.loader 
+ swh.loader.core 
+ VCS Loader Overview 
+ Package Loader Tutorial 
+ Package loader specifications 
+ swh.loader.core package 
+ swh.loader.core.converters module 
+ swh.loader.core.loader module 
+ swh.loader.core.metadata_fetchers module 
+ swh.loader.core.tasks module 
+ swh.loader.core.utils module 
+ Command-line interface 
+ swh.loader.bzr 
+ Software Heritage - How Bazaar/Breezy works 
+ swh.loader.bzr package 
+ swh.loader.bzr.loader module 
+ swh.loader.bzr.tasks module 
+ Software Heritage - CVS loader 
+ swh.loader.git 
+ swh.loader.git package 
+ swh.loader.git.base module 
+ swh.loader.git.converters module 
+ swh.loader.git.directory module 
+ swh.loader.git.from_disk module 
+ swh.loader.git.loader module 
+ swh.loader.git.remote_logs module 
+ swh.loader.git.tasks module 
+ swh.loader.git.utils module 
+ swh.loader.mercurial 
+ swh.loader.mercurial package 
+ swh.loader.mercurial.archive_extract module 
+ swh.loader.mercurial.converters module 
+ swh.loader.mercurial.directory module 
+ swh.loader.mercurial.hgutil module 
+ swh.loader.mercurial.identify module 
+ swh.loader.mercurial.loader module 
+ swh.loader.mercurial.tasks module 
+ swh.loader.mercurial.utils module 
+ swh.loader.metadata 
+ swh.loader.metadata package 
+ swh.loader.metadata.base module 
+ swh.loader.metadata.cli module 
+ swh.loader.metadata.gitea module 
+ swh.loader.metadata.github module 
+ swh.loader.metadata.journal_client module 
+ swh.loader.svn 
+ swh.loader.svn package 
+ swh.loader.svn.converters module 
+ swh.loader.svn.directory module 
+ swh.loader.svn.exception module 
+ swh.loader.svn.fast_crawler module 
+ swh.loader.svn.loader module 
+ swh.loader.svn.replay module 
+ swh.loader.svn.svn_repo module 
+ swh.loader.svn.svn_retry module 
+ swh.loader.svn.tasks module 
+ swh.loader.svn.utils module 
+ swh.model 
+ Data model 
+ SoftWare Hash persistent IDentifiers (SWHIDs) 
+ Command-line interface 
+ swh.model package 
+ swh.model.fields package 
+ swh.model.fields.compound module 
+ swh.model.fields.hashes module 
+ swh.model.fields.simple module 
+ swh.model.cli module 
+ swh.model.collections module 
+ swh.model.discovery module 
+ swh.model.exceptions module 
+ swh.model.from_disk module 
+ swh.model.git_objects module 
+ swh.model.hashutil module 
+ swh.model.hypothesis_strategies module 
+ swh.model.merkle module 
+ swh.model.model module 
+ swh.model.swhids module 
+ swh.model.toposort module 
+ swh.model.validators module 
+ swh.mosaic 
+ swh.objstorage 
+ Command-line interface 
+ Winery back-end 
+ swh.objstorage namespace 
+ swh.objstorage.api namespace 
+ swh.objstorage.api.client module 
+ swh.objstorage.api.server module 
+ swh.objstorage.backends package 
+ swh.objstorage.backends.seaweedfs package 
+ swh.objstorage.backends.winery package 
+ swh.objstorage.backends.azure module 
+ swh.objstorage.backends.http module 
+ swh.objstorage.backends.in_memory module 
+ swh.objstorage.backends.libcloud module 
+ swh.objstorage.backends.mosaic module 
+ swh.objstorage.backends.noop module 
+ swh.objstorage.backends.pathslicing module 
+ swh.objstorage.proxies namespace 
+ swh.objstorage.proxies.readonly module 
+ swh.objstorage.replayer package 
+ swh.objstorage.replayer.cli module 
+ swh.objstorage.replayer.replay module 
+ swh.objstorage.cli module 
+ swh.objstorage.constants module 
+ swh.objstorage.exc module 
+ swh.objstorage.factory module 
+ swh.objstorage.interface module 
+ swh.objstorage.multiplexer module 
+ swh.objstorage.objstorage module 
+ swh.objstorage.pytest_plugin module 
+ swh.objstorage.utils module 
+ swh.objstorage.replayer 
+ Command-line interface 
+ swh.objstorage.replayer package 
+ swh.objstorage.replayer.cli module 
+ swh.objstorage.replayer.replay module 
+ Software Heritage - Provenance 
+ swh.scanner 
+ Command-line interface 
+ swh.scanner package 
+ swh.scanner.dashboard package 
+ swh.scanner.dashboard.dashboard module 
+ swh.scanner.cli module 
+ swh.scanner.config module 
+ swh.scanner.data module 
+ swh.scanner.exceptions module 
+ swh.scanner.output module 
+ swh.scanner.policy module 
+ swh.scanner.scanner module 
+ swh.scanner.setup_wizard module 
+ swh.scheduler 
+ Command-line interface 
+ Software Heritage Scheduler Simulator 
+ swh.scheduler package 
+ swh.scheduler.api package 
+ swh.scheduler.api.client module 
+ swh.scheduler.api.serializers module 
+ swh.scheduler.api.server module 
+ swh.scheduler.celery_backend package 
+ swh.scheduler.celery_backend.config module 
+ swh.scheduler.celery_backend.first_visits module 
+ swh.scheduler.celery_backend.pika_listener module 
+ swh.scheduler.celery_backend.recurrent_visits module 
+ swh.scheduler.celery_backend.runner module 
+ swh.scheduler.celery_backend.utils module 
+ swh.scheduler.cli package 
+ swh.scheduler.cli.add_forge_now module 
+ swh.scheduler.cli.admin module 
+ swh.scheduler.cli.celery_monitor module 
+ swh.scheduler.cli.click_utils module 
+ swh.scheduler.cli.config module 
+ swh.scheduler.cli.journal module 
+ swh.scheduler.cli.origin module 
+ swh.scheduler.cli.origin_utils module 
+ swh.scheduler.cli.simulator module 
+ swh.scheduler.cli.task module 
+ swh.scheduler.cli.task_type module 
+ swh.scheduler.cli.utils module 
+ swh.scheduler.simulator package 
+ swh.scheduler.simulator.common module 
+ swh.scheduler.simulator.origin_scheduler module 
+ swh.scheduler.simulator.origins module 
+ swh.scheduler.simulator.task_scheduler module 
+ swh.scheduler.sql package 
+ swh.scheduler.sql.upgrades package 
+ swh.scheduler.backend module 
+ swh.scheduler.cli_utils module 
+ swh.scheduler.exc module 
+ swh.scheduler.in_memory module 
+ swh.scheduler.interface module 
+ swh.scheduler.journal_client module 
+ swh.scheduler.model module 
+ swh.scheduler.pytest_plugin module 
+ swh.scheduler.task module 
+ swh.scheduler.utils module 
+ swh.scrubber 
+ Command-line interface 
+ swh.scrubber package 
+ swh.scrubber.base_checker module 
+ swh.scrubber.cli module 
+ swh.scrubber.db module 
+ swh.scrubber.fixer module 
+ swh.scrubber.journal_checker module 
+ swh.scrubber.objstorage_checker module 
+ swh.scrubber.origin_locator module 
+ swh.scrubber.storage_checker module 
+ swh.scrubber.utils module 
+ swh.search 
+ Command-line interface 
+ Search Query Language 
+ swh.search package 
+ swh.search.api package 
+ swh.search.api.client module 
+ swh.search.api.server module 
+ swh.search.cli module 
+ swh.search.elasticsearch module 
+ swh.search.exc module 
+ swh.search.in_memory module 
+ swh.search.interface module 
+ swh.search.journal_client module 
+ swh.search.metrics module 
+ swh.search.query_language_binding module 
+ swh.search.translator module 
+ swh.search.utils module 
+ swh.shard 
+ Read Shard format 
+ Benchmarks 
+ swh.shard package 
+ swh.shard.cli module 
+ swh.storage 
+ Extrinsic metadata specification 
+ Object Masking 
+ swh.storage package 
+ swh.storage.algos package 
+ swh.storage.algos.diff module 
+ swh.storage.algos.dir_iterators module 
+ swh.storage.algos.directory module 
+ swh.storage.algos.discovery module 
+ swh.storage.algos.origin module 
+ swh.storage.algos.revisions_walker module 
+ swh.storage.algos.snapshot module 
+ swh.storage.algos.swhid module 
+ swh.storage.api package 
+ swh.storage.api.client module 
+ swh.storage.api.serializers module 
+ swh.storage.api.server module 
+ swh.storage.cassandra package 
+ swh.storage.cassandra.common module 
+ swh.storage.cassandra.converters module 
+ swh.storage.cassandra.cql module 
+ swh.storage.cassandra.diagram module 
+ swh.storage.cassandra.migrations module 
+ swh.storage.cassandra.model module 
+ swh.storage.cassandra.schema module 
+ swh.storage.cassandra.storage module 
+ swh.storage.postgresql package 
+ swh.storage.postgresql.converters module 
+ swh.storage.postgresql.db module 
+ swh.storage.postgresql.storage module 
+ swh.storage.proxies package 
+ swh.storage.proxies.blocking package 
+ swh.storage.proxies.masking package 
+ swh.storage.proxies.buffer module 
+ swh.storage.proxies.filter module 
+ swh.storage.proxies.record_references module 
+ swh.storage.proxies.retry module 
+ swh.storage.proxies.tenacious module 
+ swh.storage.proxies.validate module 
+ swh.storage.backfill module 
+ swh.storage.cli module 
+ swh.storage.common module 
+ swh.storage.exc module 
+ swh.storage.fixer module 
+ swh.storage.in_memory module 
+ swh.storage.interface module 
+ swh.storage.metrics module 
+ swh.storage.migrate_extrinsic_metadata module 
+ swh.storage.noop module 
+ swh.storage.objstorage module 
+ swh.storage.pytest_plugin module 
+ swh.storage.replay module 
+ swh.storage.utils module 
+ swh.storage.writer module 
+ Database schema 
+ Cassandra migrations 
+ Storage replayer 
+ Command-line interface 
+ swh.vault 
+ Getting started 
+ Vault API Reference 
+ Cooker configuration 
+ swh.vault package 
+ swh.vault.api package 
+ swh.vault.api.client module 
+ swh.vault.api.serializers module 
+ swh.vault.api.server module 
+ swh.vault.cookers package 
+ swh.vault.cookers.base module 
+ swh.vault.cookers.directory module 
+ swh.vault.cookers.git_bare module 
+ swh.vault.cookers.revision_flat module 
+ swh.vault.cookers.revision_gitfast module 
+ swh.vault.cookers.utils module 
+ swh.vault.backend module 
+ swh.vault.cache module 
+ swh.vault.cli module 
+ swh.vault.cooking_tasks module 
+ swh.vault.exc module 
+ swh.vault.in_memory_backend module 
+ swh.vault.interface module 
+ swh.vault.to_disk module 
+ Command-line interface 
+ swh.web 
+ Developers Information 
+ swh-web API URLs 
+ URI scheme for swh-web Browse application 
+ URI scheme for SoftWare Hash IDentifiers (SWHIDs) 
+ Miscellaneous URLs 
+ swh.web package 
+ swh.web.add_forge_now package 
+ swh.web.add_forge_now.admin_views module 
+ swh.web.add_forge_now.api_views module 
+ swh.web.add_forge_now.apps module 
+ swh.web.add_forge_now.models module 
+ swh.web.add_forge_now.signal_receivers module 
+ swh.web.add_forge_now.urls module 
+ swh.web.add_forge_now.utils module 
+ swh.web.add_forge_now.views module 
+ swh.web.admin package 
+ swh.web.admin.apps module 
+ swh.web.admin.urls module 
+ swh.web.alter package 
+ swh.web.alter.templatetags package 
+ swh.web.alter.apps module 
+ swh.web.alter.emails module 
+ swh.web.alter.forms module 
+ swh.web.alter.models module 
+ swh.web.alter.urls module 
+ swh.web.alter.utils module 
+ swh.web.alter.views module 
+ swh.web.api package 
+ swh.web.api.views package 
+ swh.web.api.apidoc module 
+ swh.web.api.apiresponse module 
+ swh.web.api.apiurls module 
+ swh.web.api.parsers module 
+ swh.web.api.renderers module 
+ swh.web.api.serializers module 
+ swh.web.api.throttling module 
+ swh.web.api.urls module 
+ swh.web.api.utils module 
+ swh.web.archive_coverage package 
+ swh.web.archive_coverage.urls module 
+ swh.web.archive_coverage.views module 
+ swh.web.auth package 
+ swh.web.auth.apps module 
+ swh.web.auth.models module 
+ swh.web.auth.urls module 
+ swh.web.auth.utils module 
+ swh.web.auth.views module 
+ swh.web.badges package 
+ swh.web.badges.urls module 
+ swh.web.banners package 
+ swh.web.banners.urls module 
+ swh.web.banners.views module 
+ swh.web.browse package 
+ swh.web.browse.views package 
+ swh.web.browse.browseurls module 
+ swh.web.browse.identifiers module 
+ swh.web.browse.snapshot_context module 
+ swh.web.browse.urls module 
+ swh.web.browse.utils module 
+ swh.web.client package 
+ swh.web.client.cli module 
+ swh.web.client.client module 
+ swh.web.deposit package 
+ swh.web.deposit.urls module 
+ swh.web.inbound_email package 
+ swh.web.inbound_email.management package 
+ swh.web.inbound_email.apps module 
+ swh.web.inbound_email.handle_message module 
+ swh.web.inbound_email.signals module 
+ swh.web.inbound_email.urls module 
+ swh.web.inbound_email.utils module 
+ swh.web.inbound_email.views module 
+ swh.web.jslicenses package 
+ swh.web.jslicenses.urls module 
+ swh.web.mailmap package 
+ swh.web.mailmap.management package 
+ swh.web.mailmap.apps module 
+ swh.web.mailmap.models module 
+ swh.web.mailmap.urls module 
+ swh.web.mailmap.views module 
+ swh.web.metrics package 
+ swh.web.metrics.prometheus module 
+ swh.web.metrics.urls module 
+ swh.web.metrics.views module 
+ swh.web.provenance package 
+ swh.web.provenance.api_views module 
+ swh.web.provenance.apps module 
+ swh.web.provenance.urls module 
+ swh.web.save_bulk package 
+ swh.web.save_bulk.api_views module 
+ swh.web.save_bulk.apps module 
+ swh.web.save_bulk.models module 
+ swh.web.save_bulk.urls module 
+ swh.web.save_bulk.views module 
+ swh.web.save_code_now package 
+ swh.web.save_code_now.management package 
+ swh.web.save_code_now.admin_views module 
+ swh.web.save_code_now.api_views module 
+ swh.web.save_code_now.apps module 
+ swh.web.save_code_now.models module 
+ swh.web.save_code_now.origin_save module 
+ swh.web.save_code_now.origin_visit_webhook module 
+ swh.web.save_code_now.urls module 
+ swh.web.save_code_now.views module 
+ swh.web.save_origin_webhooks package 
+ swh.web.save_origin_webhooks.bitbucket module 
+ swh.web.save_origin_webhooks.forgejo module 
+ swh.web.save_origin_webhooks.generic_receiver module 
+ swh.web.save_origin_webhooks.gitea module 
+ swh.web.save_origin_webhooks.github module 
+ swh.web.save_origin_webhooks.gitlab module 
+ swh.web.save_origin_webhooks.gogs module 
+ swh.web.save_origin_webhooks.sourceforge module 
+ swh.web.save_origin_webhooks.urls module 
+ swh.web.utils package 
+ swh.web.utils.management package 
+ swh.web.utils.archive module 
+ swh.web.utils.bootstrap module 
+ swh.web.utils.citation module 
+ swh.web.utils.converters module 
+ swh.web.utils.exc module 
+ swh.web.utils.highlightjs module 
+ swh.web.utils.identifiers module 
+ swh.web.utils.middlewares module 
+ swh.web.utils.origin_visits module 
+ swh.web.utils.query module 
+ swh.web.utils.swh_templatetags module 
+ swh.web.utils.typing module 
+ swh.web.utils.url_path_converters module 
+ swh.web.utils.urlsindex module 
+ swh.web.vault package 
+ swh.web.vault.api_views module 
+ swh.web.vault.urls module 
+ swh.web.vulns package 
+ swh.web.vulns.api_views module 
+ swh.web.vulns.apps module 
+ swh.web.vulns.urls module 
+ swh.web.webapp package 
+ swh.web.webapp.urls module 
+ swh.web.config module 
+ swh.web.gunicorn_config module 
+ swh.web.manage module 
+ swh.web.urls module 
+ swh.web.client 
+ swh.webhooks 
+ swh.webhooks package 
+ swh.webhooks.cli module 
+ swh.webhooks.interface module 
+ swh.webhooks.journal_client module 
+ swh.webhooks.svix_retry module 
+ swh.webhooks.utils module 
+ Development 
+ API reference 
+ Software Heritage - Web applications 
+ swh-web API URLs 
+ swh-web API URLs # 
+ Content # 
+ GET /api/1/content/known/ ( sha1 ) [, ( sha1 ) , ..., ( sha1 ) ]/ # 
+ Check whether some content(s) (aka “blob(s)”) is present in the archive
+based on its sha1 checksum. 
+ Parameters : 
+ sha1 ( string ) – hexadecimal representation of the sha1 checksum value
+for the content to check existence. Multiple values can be provided
+separated by ‘,’. 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Request JSON Object : 
+ search_res ( array ) – array holding the search result for each provided
+ sha1 
+ search_stats ( object ) – some statistics regarding the number of sha1 
+provided and the percentage of those found in the archive 
+ Status Codes : 
+ 200 OK – no error 
+ 400 Bad Request – an invalid sha1 has been provided 
+ Example: 
+ https://archive.softwareheritage.org/api/1/content/known/dc2830a9e72f23c1dfebef4413003221baa5fb62,0c3f19cb47ebfbe643fb19fa94c874d18fa62d12/ 
+ GET /api/1/content/[ ( hash_type ) :] ( hash ) / # 
+ Get information about a content (aka a “blob”) object.
+In the archive, a content object is identified based on checksum
+values computed using various hashing algorithms. 
+ Parameters : 
+ hash_type ( string ) – optional parameter specifying which hashing algorithm
+has been used to compute the content checksum. It can be either sha1 ,
+ sha1_git , sha256 or blake2s256 . If that parameter is not
+provided, it is assumed that the hashing algorithm used is sha1 . 
+ hash ( string ) – hexadecimal representation of the checksum value computed
+with the specified hashing algorithm. 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Request JSON Object : 
+ checksums ( object ) – object holding the computed checksum values for the
+requested content 
+ data_url ( string ) – link to
+ GET /api/1/content/[(hash_type):](hash)/raw/ 
+for downloading the content raw bytes 
+ filetype_url ( string ) – link to
+ GET /api/1/content/[(hash_type):](hash)/filetype/ 
+for getting information about the content MIME type 
+ language_url ( string ) – link to
+ GET /api/1/content/[(hash_type):](hash)/language/ 
+for getting information about the programming language used in the content 
+ length ( number ) – length of the content in bytes 
+ license_url ( string ) – link to
+ GET /api/1/content/[(hash_type):](hash)/license/ 
+for getting information about the license of the content 
+ swhid ( string ) – the SoftWare Hash IDentifier 
+of the content 
+ Status Codes : 
+ 200 OK – no error 
+ 400 Bad Request – an invalid hash_type or hash has been provided 
+ 404 Not Found – requested content cannot be found in the archive 
+ Example: 
+ https://archive.softwareheritage.org/api/1/content/sha1_git:fe95a46679d128ff167b7c55df5d02356c5a1ae1/ 
+ GET /api/1/content/[ ( hash_type ) :] ( hash ) /raw/ # 
+ Get the raw content of a content object (aka a “blob”), as a byte sequence. 
+ Parameters : 
+ hash_type ( string ) – optional parameter specifying which hashing algorithm
+has been used to compute the content checksum. It can be either sha1 ,
+ sha1_git , sha256 or blake2s256 . If that parameter is not
+provided, it is assumed that the hashing algorithm used is sha1 . 
+ hash ( string ) – hexadecimal representation of the checksum value computed
+with the specified hashing algorithm. 
+ Query Parameters : 
+ filename ( string ) – if provided, the downloaded content will get that
+filename 
+ Response Headers : 
+ Content-Type – application/octet-stream 
+ Status Codes : 
+ 200 OK – no error 
+ 400 Bad Request – an invalid hash_type or hash has been provided 
+ 404 Not Found – requested content cannot be found in the archive 
+ Example: 
+ https://archive.softwareheritage.org/api/1/content/sha1:dc2830a9e72f23c1dfebef4413003221baa5fb62/raw/ 
+ GET /api/1/content/[ ( hash_type ) :] ( hash ) /filetype/ # 
+ Get information about the detected MIME type of a content object. 
+ Parameters : 
+ hash_type ( string ) – optional parameter specifying which hashing algorithm
+has been used to compute the content checksum. It can be either sha1 ,
+ sha1_git , sha256 or blake2s256 . If that parameter is not
+provided, it is assumed that the hashing algorithm used is sha1 . 
+ hash ( string ) – hexadecimal representation of the checksum value computed
+with the specified hashing algorithm. 
+ Request JSON Object : 
+ content_url ( object ) – link to
+ GET /api/1/content/[(hash_type):](hash)/ for getting information
+about the content 
+ encoding ( string ) – the detected content encoding 
+ id ( string ) – the sha1 identifier of the content 
+ mimetype ( string ) – the detected MIME type of the content 
+ tool ( object ) – information about the tool used to detect the content
+filetype 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Status Codes : 
+ 200 OK – no error 
+ 400 Bad Request – an invalid hash_type or hash has been provided 
+ 404 Not Found – requested content cannot be found in the archive 
+ Example: 
+ https://archive.softwareheritage.org/api/1/content/sha1:dc2830a9e72f23c1dfebef4413003221baa5fb62/filetype/ 
+ GET /api/1/content/[ ( hash_type ) :] ( hash ) /language/ # 
+ Get information about the programming language used in a content object. 
+ Note: this endpoint currently returns no data. 
+ Parameters : 
+ hash_type ( string ) – optional parameter specifying which hashing algorithm
+has been used to compute the content checksum. It can be either sha1 ,
+ sha1_git , sha256 or blake2s256 . If that parameter is not
+provided, it is assumed that the hashing algorithm used is sha1 . 
+ hash ( string ) – hexadecimal representation of the checksum value computed
+with the specified hashing algorithm. 
+ Request JSON Object : 
+ content_url ( object ) – link to
+ GET /api/1/content/[(hash_type):](hash)/ for getting information
+about the content 
+ id ( string ) – the sha1 identifier of the content 
+ lang ( string ) – the detected programming language if any 
+ tool ( object ) – information about the tool used to detect the programming
+language 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Status Codes : 
+ 200 OK – no error 
+ 400 Bad Request – an invalid hash_type or hash has been provided 
+ 404 Not Found – requested content cannot be found in the archive 
+ Example: 
+ https://archive.softwareheritage.org/api/1/content/sha1:dc2830a9e72f23c1dfebef4413003221baa5fb62/language/ 
+ GET /api/1/content/[ ( hash_type ) :] ( hash ) /license/ # 
+ Get information about the license of a content object. 
+ Parameters : 
+ hash_type ( string ) – optional parameter specifying which hashing algorithm
+has been used to compute the content checksum. It can be either sha1 ,
+ sha1_git , sha256 or blake2s256 . If that parameter is not
+provided, it is assumed that the hashing algorithm used is sha1 . 
+ hash ( string ) – hexadecimal representation of the checksum value computed
+with the specified hashing algorithm. 
+ Request JSON Object : 
+ content_url ( object ) – link to
+ GET /api/1/content/[(hash_type):](hash)/ for getting information
+about the content 
+ id ( string ) – the sha1 identifier of the content 
+ licenses ( array ) – array of strings containing the detected license names 
+ tool ( object ) – information about the tool used to detect the license 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Status Codes : 
+ 200 OK – no error 
+ 400 Bad Request – an invalid hash_type or hash has been provided 
+ 404 Not Found – requested content cannot be found in the archive 
+ Example: 
+ https://archive.softwareheritage.org/api/1/content/sha1:dc2830a9e72f23c1dfebef4413003221baa5fb62/license/ 
+ Directory # 
+ GET /api/1/directory/ ( sha1_git ) /[ ( path ) /] # 
+ Get information about directory objects.
+Directories are identified by sha1 checksums, compatible with Git
+directory identifiers.
+See swh.model.git_objects.directory_git_object() in our data model
+module for details about how they are computed. 
+ When given only a directory identifier, this endpoint returns information
+about the directory itself, returning its content (usually a list of directory
+entries). When given a directory identifier and a path, this endpoint returns
+information about the directory entry pointed by the relative path, starting
+path resolution from the given directory. 
+ Parameters : 
+ sha1_git ( string ) – hexadecimal representation of the directory
+ sha1_git identifier 
+ path ( string ) – optional parameter to get information about the
+directory entry pointed by that relative path 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Request JSON Array of Objects : 
+ checksums ( object ) – object holding the computed checksum values for
+a directory entry (only for file entries) 
+ dir_id ( string ) – sha1_git identifier of the requested directory 
+ length ( number ) – length of a directory entry in bytes (only for file
+entries) for getting information about the content MIME type 
+ name ( string ) – the directory entry name 
+ perms ( number ) – permissions for the directory entry 
+ target ( string ) – sha1_git identifier of the directory entry 
+ target_url ( string ) – link to
+ GET /api/1/content/[(hash_type):](hash)/ 
+or GET /api/1/directory/(sha1_git)/[(path)/] 
+depending on the directory entry type 
+ type ( string ) – the type of the directory entry, can be either
+ dir , file or rev 
+ Status Codes : 
+ 200 OK – no error 
+ 400 Bad Request – an invalid hash_type or hash has been provided 
+ 404 Not Found – requested directory cannot be found in the archive 
+ Example: 
+ https://archive.softwareheritage.org/api/1/directory/977fc4b98c0e85816348cebd3b12026407c368b6/ 
+ External IDentifiers # 
+ GET /api/1/extid/ ( extid_type ) / ( extid_format ) : ( extid ) / # 
+ Get information about an external identifier. 
+ An external identifier 
+is used by a system that does not fit the Software Heritage data model. 
+ As an external identifier is stored in binary into the archive database, the format
+used to decode its ASCII representation must be explicitly specified. The available
+formats are the following: 
+ base64url : the external identifier is encoded to base64url . 
+ hex : the external identifier is a checksum in hexadecimal representation 
+ raw : the external identifier is an ASCII string 
+ The types of external identifier that can be requested are given below. 
+ VCS related: 
+ bzr-nodeid : Revision ASCII identifier of a Bazaar repository, to get such
+identifiers use the following command in your Bazaar repository:
+ bzr log --show-ids . 
+ hg-nodeid : Node hash identifier for the revision of a Mercurial repository,
+to get such identifier execute the following command in your Mercurial repository:
+ hg id -r <rev_num> --template '{node}' . 
+ Guix and
+ Nix related (must be queried with the
+ extid_version query parameter set to 1 to ensure correctness): 
+ nar-sha256 : sha256 checksum of a Nix Archive (NAR) , used to deterministically
+identifies the contents of a source tree (corresponds to recursive hash mode used
+by Guix and Nix) 
+ checksum-sha256 : sha256 checksum of a file, typically a tarball (corresponds to
+ flat hash mode used by Guix and Nix) 
+ checksum-sha512 : sha512 checksum of a file, typically a tarball (corresponds to
+ flat hash mode used by Guix and Nix) 
+ Parameters : 
+ extid_type ( string ) – the type of external identifier 
+ extid_format ( string ) – the format used to encode the extid to an ASCII string,
+either base64url , hex or raw 
+ extid ( string ) – the external identifier value 
+ Query Parameters : 
+ extid_version ( number ) – optional version number of external identifier type 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Request JSON Object : 
+ extid_type ( string ) – the type of the external identifier 
+ extid ( string ) – the value of the external identifier 
+ target ( string ) – the SWHID of the archived object targeted by the
+external identifier 
+ target_url ( string ) – URL to browse the targeted archived object 
+ extid_version ( number ) – the version of the external identifier 
+ Status Codes : 
+ 200 OK – no error 
+ 404 Not Found – requested external identifier cannot be found 
+ Example: 
+ https://archive.softwareheritage.org/api/1/extid/bzr-nodeid/raw:rodney.dawes@canonical.com-20090512192901-f22ja60nsgq9j5a4/ 
+ https://archive.softwareheritage.org/api/1/extid/hg-nodeid/hex:1ce49c60732c9020ce2f98d03a7a71ec8d5be191/ 
+ https://archive.softwareheritage.org/api/1/extid/checksum-sha256/base64url:s4lFKlaGmGiN2jiAIGg3ihbBXEr5sVPN2ZtlORKSu8c/?extid_version=1 
+ https://archive.softwareheritage.org/api/1/extid/nar-sha256/base64url:AAAlhKVqm86FeTUVYEKY-LOx6Ul-APxjYaDC5zHAY_M/?extid_version=1 
+ https://archive.softwareheritage.org/api/1/extid/checksum-sha512/base64url:AL5bxZ-gStT5UpzSc1dN-XVxxWN9FHtvBlZoFeFFMowwgMKWq9GLZHV8DWX-g7ugiKxlKa2ph2oTQCqvhixDQw/?extid_version=1 
+ GET /api/1/extid/target/ ( swhid ) / # 
+ Get information about external identifiers targeting an archived object. 
+ An external identifier 
+is used by a system that does not fit the Software Heritage data model. 
+ Parameters : 
+ swhid ( string ) – a SWHID to check if external identifiers target it 
+ Query Parameters : 
+ extid_type ( string ) – optional external identifier type to use as a filter,
+must be provided if extid_version parameter is. 
+ extid_version ( number ) – optional version number of external identifier
+type, must be provided if extid_type parameter is. 
+ extid_format ( string ) – the format used to encode an extid to an ASCII
+string, either base64url , hex or raw (default to hex ). 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Request JSON Array of Objects : 
+ extid_type ( string ) – the type of the external identifier 
+ extid ( string ) – the value of the external identifier 
+ target ( string ) – the SWHID of the archived object targeted by the
+external identifier 
+ target_url ( string ) – URL to browse the targeted archived object 
+ extid_version ( number ) – the version of the external identifier 
+ Status Codes : 
+ 200 OK – no error 
+ 400 Bad Request – provided parameters are invalid 
+ 404 Not Found – external identifier targeting SWHID cannot be found 
+ Example: 
+ https://archive.softwareheritage.org/api/1/extid/target/swh:1:rev:a2903689803b2c07890a930284425838436425a6/?extid_format=raw 
+ https://archive.softwareheritage.org/api/1/extid/target/swh:1:rev:6b29add7cb6b5f6045df308c43e4177f1f854a56/?extid_format=hex 
+ Graph # 
+ GET /api/1/graph/ ( graph_query ) / # 
+ Provide fast access to the graph representation of the Software Heritage
+archive. 
+ That endpoint acts as a proxy for the Software Heritage Graph service . 
+ It provides fast access to the graph representation 
+of the Software Heritage archive. 
+ For more details please refer to the Graph RPC API documentation . 
+ Warning 
+ That endpoint is not publicly available and requires authentication and
+special user permission in order to be able to request it. 
+ Parameters : 
+ graph_query ( string ) – query to forward to the Software Heritage Graph
+archive (see its documentation ) 
+ Query Parameters : 
+ resolve_origins ( boolean ) – extra parameter defined by that proxy enabling
+to resolve origin urls from their sha1 representations 
+ Status Codes : 
+ 200 OK – no error 
+ 400 Bad Request – an invalid graph query has been provided 
+ 404 Not Found – provided graph node cannot be found 
+ Examples: 
+ https://archive.softwareheritage.org/api/1/graph/leaves/swh:1:dir:432d1b21c1256f7408a07c577b6974bbdbcc1323/ 
+ https://archive.softwareheritage.org/api/1/graph/neighbors/swh:1:rev:f39d7d78b70e0f39facb1e4fab77ad3df5c52a35/ 
+ https://archive.softwareheritage.org/api/1/graph/visit/nodes/swh:1:snp:40f9f177b8ab0b7b3d70ee14bbc8b214e2b2dcfc?direction=backward&resolve_origins=true 
+ https://archive.softwareheritage.org/api/1/graph/visit/edges/swh:1:snp:40f9f177b8ab0b7b3d70ee14bbc8b214e2b2dcfc?direction=backward&resolve_origins=true 
+ SWHIDs (SoftWare Hash IDentifiers) # 
+ GET /api/1/resolve/ ( swhid ) / # 
+ Resolve a SoftWare Hash IDentifier (SWHID) 
+ Try to resolve a provided SoftWare Hash IDentifier 
+into an url for browsing the pointed archive object. 
+ If the provided identifier is valid, the existence of the object in
+the archive will also be checked. 
+ Parameters : 
+ swhid ( string ) – a SoftWare Hash IDentifier 
+ Request JSON Object : 
+ browse_url ( string ) – the url for browsing the pointed object 
+ metadata ( object ) – object holding optional parts of the SWHID 
+ namespace ( string ) – the SWHID namespace 
+ object_id ( string ) – the hash identifier of the pointed object 
+ object_type ( string ) – the type of the pointed object 
+ scheme_version ( number ) – the scheme version of the SWHID 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Status Codes : 
+ 200 OK – no error 
+ 400 Bad Request – an invalid SWHID has been provided 
+ 404 Not Found – the pointed object does not exist in the archive 
+ Example: 
+ https://archive.softwareheritage.org/api/1/resolve/swh:1:rev:96db9023b881d7cd9f379b0c154650d6c108e9a3;origin=https://github.com/openssl/openssl/ 
+ POST /api/1/known/ # 
+ Check if a list of objects are present in the Software Heritage
+archive. 
+ The objects to check existence must be provided using
+ SoftWare Hash IDentifiers . 
+ Response JSON Array of Objects : 
+ - ( string ) – input array of SWHIDs, its length cannot exceed 1000. 
+ Request JSON Object : 
+ <swhid> ( object ) – an object whose keys are input SWHIDs and values
+objects with the following keys: 
+ known (bool) : whether the object was found 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Status Codes : 
+ 200 OK – no error 
+ 400 Bad Request – an invalid SWHID was provided 
+ 413 Request Entity Too Large – the input array of SWHIDs is too large 
+ GET /api/1/raw/ ( swhid ) / # 
+ Get the object corresponding to the SWHID in raw form. 
+ This endpoint exposes the internal representation (see the
+ *_git_object functions in swh.model.git_objects ), and
+so can be used to fetch a binary blob which hashes to the same
+identifier. 
+ Parameters : 
+ swhid ( string ) – the object’s SWHID 
+ Response Headers : 
+ Content-Type – application/octet-stream 
+ Status Codes : 
+ 200 OK – no error 
+ 404 Not Found – the requested object cannot be found in the archive 
+ Example: 
+ https://archive.softwareheritage.org/api/1/raw/swh:1:snp:6a3a2cf0b2b90ce7ae1cf0a221ed68035b686f5a 
+ Origin # 
+ GET /api/1/origins/ # 
+ Get list of archived software origins. 
+ Warning 
+ This endpoint used to provide an origin_from query parameter,
+and guarantee an order on results. This is no longer true,
+and only the Link header should be used for paginating through
+results. 
+ Query Parameters : 
+ origin_count ( int ) – The maximum number of origins to return
+(default to 100, cannot exceed 10000) 
+ Request JSON Array of Objects : 
+ origin_visits_url ( string ) – link to in order to get information
+about the visits for that origin 
+ url ( string ) – the origin canonical url 
+ metadata_authorities_url ( string ) – link to
+ GET /api/1/raw-extrinsic-metadata/swhid/(target)/authorities/ 
+to get the list of metadata authorities providing extrinsic metadata
+on this origin (and, indirectly, to the origin’s extrinsic metadata itself) 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Link – indicates that a subsequent result page is
+available and contains the url pointing to it 
+ Status Codes : 
+ 200 OK – no error 
+ Example: 
+ https://archive.softwareheritage.org/api/1/origins?origin_count=500 
+ GET /api/1/origin/ ( origin_url ) /get/ # 
+ Get information about a software origin. 
+ Parameters : 
+ origin_url ( string ) – the origin url 
+ Request JSON Object : 
+ origin_visits_url ( string ) – link to in order to get information
+about the visits for that origin 
+ url ( string ) – the origin canonical url 
+ metadata_authorities_url ( string ) – link to
+ GET /api/1/raw-extrinsic-metadata/swhid/(target)/authorities/ 
+to get the list of metadata authorities providing extrinsic metadata
+on this origin (and, indirectly, to the origin’s extrinsic metadata itself) 
+ visit_types ( array ) – set of visit types for that origin 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Status Codes : 
+ 200 OK – no error 
+ 404 Not Found – requested origin cannot be found in the archive 
+ Example: 
+ https://archive.softwareheritage.org/api/1/origin/https://github.com/python/cpython/get/ 
+ GET /api/1/origin/search/ ( url_pattern ) / # 
+ Search for software origins whose urls contain a provided string
+pattern. The search is performed in a case insensitive way. 
+ Warning 
+ This endpoint used to provide an offset query parameter,
+and guarantee an order on results. This is no longer true,
+and only the Link header should be used for paginating through
+results. 
+ Parameters : 
+ url_pattern ( string ) – a string pattern 
+ Query Parameters : 
+ use_ql ( boolean ) – whether to use swh search query language or not 
+ limit ( int ) – the maximum number of found origins to return
+(bounded to 1000) 
+ with_visit ( boolean ) – if true, only return origins with at least
+one visit by Software heritage 
+ visit_type ( string ) – if provided, only return origins with that
+specific visit type (see search page for the supported visit types) 
+ Request JSON Array of Objects : 
+ origin_visits_url ( string ) – link to in order to get information
+about the visits for that origin 
+ url ( string ) – the origin canonical url 
+ metadata_authorities_url ( string ) – link to
+ GET /api/1/raw-extrinsic-metadata/swhid/(target)/authorities/ 
+to get the list of metadata authorities providing extrinsic metadata
+on this origin (and, indirectly, to the origin’s extrinsic metadata itself) 
+ has_visits ( boolean ) – indicates if Software Heritage made at
+least one full visit of the origin 
+ nb_visits ( int ) – the total number of visits for the origin 
+ last_visit_date ( string ) – ISO8601/RFC3339 representation of
+the last visit date (in UTC) 
+ last_eventful_visit_date ( string ) – ISO8601/RFC3339 representation of
+the last eventful_visit date (in UTC) 
+ snapshot_id ( string ) – identifier of the last snapshot for the origin 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Link – indicates that a subsequent result page is
+available and contains the url pointing to it 
+ X-Total-Count – the total number of origins whose URL
+contains the provided string pattern 
+ Status Codes : 
+ 200 OK – no error 
+ Example: 
+ https://archive.softwareheritage.org/api/1/origin/search/python/?limit=2 
+ GET /api/1/origin/ ( origin_url ) /visits/ # 
+ Get information about all visits of a software origin.
+Visits are returned sorted in descending order according
+to their date. 
+ Parameters : 
+ origin_url ( str ) – a software origin URL 
+ Query Parameters : 
+ per_page ( int ) – specify the number of visits to list, for
+pagination purposes 
+ last_visit ( int ) – visit to start listing from, for pagination
+purposes 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Link – indicates that a subsequent result page is
+available and contains the url pointing to it 
+ Request JSON Array of Objects : 
+ date ( string ) – ISO8601/RFC3339 representation of the visit date (in UTC) 
+ origin ( str ) – the origin canonical url 
+ origin_url ( string ) – link to get information about the origin 
+ snapshot ( string ) – the snapshot identifier of the visit
+(may be null if status is not full ). 
+ snapshot_url ( string ) – link to
+ GET /api/1/snapshot/(snapshot_id)/ in order to get
+information about the snapshot of the visit
+(may be null if status is not full ). 
+ status ( string ) – status of the visit (either full ,
+ partial or ongoing ) 
+ type ( string ) – visit type for the origin 
+ visit ( number ) – the unique identifier of the visit 
+ id ( number ) – the unique identifier of the origin 
+ origin_visit_url ( string ) – link to
+ GET /api/1/origin/(origin_url)/visit/(visit_id)/ 
+in order to get information about the visit 
+ Status Codes : 
+ 200 OK – no error 
+ 404 Not Found – requested origin cannot be found in the archive 
+ Example: 
+ https://archive.softwareheritage.org/api/1/origin/https://github.com/hylang/hy/visits/ 
+ GET /api/1/origin/ ( origin_url ) /visit/ ( visit_id ) / # 
+ Get information about a specific visit of a software origin. 
+ Parameters : 
+ origin_url ( str ) – a software origin URL 
+ visit_id ( int ) – a visit identifier 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Request JSON Object : 
+ date ( string ) – ISO8601/RFC3339 representation of the visit date (in UTC) 
+ origin ( str ) – the origin canonical url 
+ origin_url ( string ) – link to get information about the origin 
+ snapshot ( string ) – the snapshot identifier of the visit
+(may be null if status is not full ). 
+ snapshot_url ( string ) – link to
+ GET /api/1/snapshot/(snapshot_id)/ in order to get
+information about the snapshot of the visit
+(may be null if status is not full ). 
+ status ( string ) – status of the visit (either full ,
+ partial or ongoing ) 
+ type ( string ) – visit type for the origin 
+ visit ( number ) – the unique identifier of the visit 
+ Status Codes : 
+ 200 OK – no error 
+ 404 Not Found – requested origin or visit cannot be found in the
+archive 
+ Example: 
+ https://archive.softwareheritage.org/api/1/origin/https://github.com/hylang/hy/visit/1/ 
+ GET /api/1/origin/ ( origin_url ) /visit/latest/ # 
+ Get information about the latest visit of a software origin. 
+ Parameters : 
+ origin_url ( str ) – a software origin URL 
+ Query Parameters : 
+ require_snapshot ( boolean ) – if true, only return a visit
+with a snapshot 
+ visit_type ( str ) – if provided, filter visits by type 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Request JSON Object : 
+ date ( string ) – ISO8601/RFC3339 representation of the visit date (in UTC) 
+ origin ( str ) – the origin canonical url 
+ origin_url ( string ) – link to get information about the origin 
+ snapshot ( string ) – the snapshot identifier of the visit
+(may be null if status is not full ). 
+ snapshot_url ( string ) – link to
+ GET /api/1/snapshot/(snapshot_id)/ in order to get
+information about the snapshot of the visit
+(may be null if status is not full ). 
+ status ( string ) – status of the visit (either full ,
+ partial or ongoing ) 
+ type ( string ) – visit type for the origin 
+ visit ( number ) – the unique identifier of the visit 
+ Status Codes : 
+ 200 OK – no error 
+ 404 Not Found – requested origin or visit cannot be found in the
+archive 
+ Example: 
+ https://archive.softwareheritage.org/api/1/origin/https://github.com/hylang/hy/visit/latest/ 
+ GET /api/1/origin/metadata-search/ # 
+ Search for software origins whose metadata (expressed as a
+JSON-LD/CodeMeta dictionary) match the provided criteria.
+For now, only full-text search on this dictionary is supported. 
+ Query Parameters : 
+ fulltext ( str ) – a string that will be matched against origin
+metadata; results are ranked and ordered starting with the best
+ones. 
+ limit ( int ) – the maximum number of found origins to return
+(bounded to 100) 
+ Request JSON Array of Objects : 
+ origin_visits_url ( string ) – link to in order to get information
+about the visits for that origin 
+ url ( string ) – the origin canonical url 
+ metadata_authorities_url ( string ) – link to
+ GET /api/1/raw-extrinsic-metadata/swhid/(target)/authorities/ 
+to get the list of metadata authorities providing extrinsic metadata
+on this origin (and, indirectly, to the origin’s extrinsic metadata itself) 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Status Codes : 
+ 200 OK – no error 
+ Example: 
+ https://archive.softwareheritage.org/api/1/origin/metadata-search/?limit=2&fulltext=node-red-nodegen 
+ GET /api/1/intrinsic-metadata/origin/ # 
+ Get intrinsic metadata of a software origin (as a JSON-LD/CodeMeta dictionary). 
+ Query Parameters : 
+ origin_url ( string ) – the URL of the origin 
+ Request JSON Array of Objects : 
+ ??? ( ??? ) – intrinsic metadata field of the origin 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Status Codes : 
+ 200 OK – no error 
+ 404 Not Found – requested origin cannot be found in the archive 
+ Example: 
+ https://archive.softwareheritage.org/api/1/intrinsic-metadata/origin/?origin_url=https://github.com/node-red/node-red-nodegen 
+ GET /api/1/extrinsic-metadata/origin/ # 
+ Get extrinsic metadata of a software origin (as a JSON-LD/CodeMeta dictionary). 
+ Query Parameters : 
+ origin_url ( str ) – parameter for origin url 
+ Request JSON Array of Objects : 
+ ??? ( ??? ) – extrinsic metadata field of the origin 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Status Codes : 
+ 200 OK – no error 
+ 404 Not Found – requested origin cannot be found in the archive 
+ Example: 
+ https://archive.softwareheritage.org/api/1/extrinsic-metadata/origin/?origin_url=https://github.com/node-red/node-red-nodegen 
+ Provenance # 
+ GET /api/1/provenance/whereis/ ( target ) / # 
+ Given a core SWHID return a qualified SWHID with some provenance info: 
+ the release or revision containing that content or directory 
+ the url of the origin containing that content or directory 
+ This can also be called for revision, release or snapshot to retrieve
+origin url information if any. When using a revision, the anchor will
+be an associated release if any. 
+ Note 
+ The quality of the result is not guaranteed whatsoever. Since the
+definition of “best” likely varies from one usage to the next, this API
+will evolve in the future when this notion gets better defined. 
+ Warning 
+ That endpoint is not publicly available and requires authentication and
+special user permission in order to request it. 
+ Parameters : 
+ target ( string ) – a core SWHID targeting an archived object 
+ The response is a string containing a qualified SWHID with provenance info. 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Status Codes : 
+ 200 OK – no error 
+ 400 Bad Request – provided core SWHID is invalid 
+ 401 Unauthorized – request is not authenticated 
+ 403 Forbidden – user does not have permission to query the endpoint 
+ Example: 
+ https://archive.softwareheritage.org/api/1/provenance/whereis/swh:1:cnt:dcb2d732994e615aab0777bfe625bd1f07e486ac/ 
+ POST /api/1/provenance/whereare/ # 
+ Given a list of core SWHIDs return qualified SWHIDs with some provenance info. 
+ See GET /api/1/provenance/whereis/(target)/ documentation for more details. 
+ Warning 
+ That endpoint is not publicly available and requires authentication and
+special user permission in order to request it. 
+ Response JSON Array of Objects : 
+ - ( string ) – input array of core SWHIDs 
+ The response is a JSON array of strings containing qualified SWHIDs with
+provenance info. 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Status Codes : 
+ 200 OK – no error 
+ 400 Bad Request – provided core SWHID is invalid 
+ 401 Unauthorized – request is not authenticated 
+ 403 Forbidden – user does not have permission to query the endpoint 
+ Release # 
+ GET /api/1/release/ ( sha1_git ) / # 
+ Get information about a release in the archive. Releases are identified
+by sha1 checksums, compatible with Git tag identifiers. See
+ swh.model.git_objects.release_git_object() in our data model
+module for details about how they are computed. 
+ Parameters : 
+ sha1_git ( string ) – hexadecimal representation of the release
+ sha1_git identifier 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Request JSON Object : 
+ author ( object ) – information about the author of the release 
+ date ( string ) – RFC3339 representation of the release date 
+ id ( string ) – the release unique identifier 
+ message ( string ) – the message associated to the release 
+ name ( string ) – the name of the release 
+ target ( string ) – the target identifier of the release 
+ target_type ( string ) – the type of the target, can be either
+ release , revision , content , directory 
+ target_url ( string ) – a link to the adequate api url based on the
+target type 
+ Status Codes : 
+ 200 OK – no error 
+ 400 Bad Request – an invalid sha1_git value has been provided 
+ 404 Not Found – requested release cannot be found in the archive 
+ Example: 
+ https://archive.softwareheritage.org/api/1/release/208f61cc7a5dbc9879ae6e5c2f95891e270f09ef/ 
+ Request archival # 
+ POST /api/1/add-forge/request/create/ # 
+ Create a new request to add a forge to the list of those crawled regularly
+by Software Heritage. 
+ Warning 
+ That endpoint is not publicly available and requires authentication
+in order to be able to request it. 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Response JSON Object : 
+ forge_type ( string ) – the type of forge 
+ forge_url ( string ) – the base URL of the forge 
+ forge_contact_email ( string ) – email of an administrator of the forge to
+contact 
+ forge_contact_name ( string ) – the name of the administrator 
+ forge_contact_comment ( string ) – to explain how Software Heritage can
+verify forge administrator info are valid 
+ Status Codes : 
+ 201 Created – request successfully created 
+ 400 Bad Request – missing or invalid field values 
+ 403 Forbidden – user not authenticated 
+ POST /api/1/add-forge/request/ ( id ) /update/ # 
+ Update a request to add a forge to the list of those crawled regularly
+by Software Heritage. 
+ Warning 
+ That endpoint is not publicly available and requires authentication
+in order to be able to request it. 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Response JSON Object : 
+ text ( string ) – comment about new request status 
+ new_status ( string ) – the new request status 
+ Status Codes : 
+ 200 OK – request successfully updated 
+ 400 Bad Request – missing or invalid field values 
+ 403 Forbidden – user is not a moderator 
+ GET /api/1/add-forge/request/list/ # 
+ List add forge requests submitted by users. 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Link – indicates that a subsequent result page is
+available and contains the url pointing to it 
+ Query Parameters : 
+ page ( int ) – optional page number 
+ per_page ( int ) – optional number of elements per page (bounded to 1000) 
+ Status Codes : 
+ 200 OK – always 
+ GET /api/1/add-forge/request/ ( id ) /get/ # 
+ Return all details about an add-forge request. 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Parameters : 
+ id ( int ) – add-forge request identifier 
+ Status Codes : 
+ 200 OK – request details successfully returned 
+ 400 Bad Request – request identifier does not exist 
+ POST /api/1/add-forge/request/create/ # 
+ Create a new request to add a forge to the list of those crawled regularly
+by Software Heritage. 
+ Warning 
+ That endpoint is not publicly available and requires authentication
+in order to be able to request it. 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Response JSON Object : 
+ forge_type ( string ) – the type of forge 
+ forge_url ( string ) – the base URL of the forge 
+ forge_contact_email ( string ) – email of an administrator of the forge to
+contact 
+ forge_contact_name ( string ) – the name of the administrator 
+ forge_contact_comment ( string ) – to explain how Software Heritage can
+verify forge administrator info are valid 
+ Status Codes : 
+ 201 Created – request successfully created 
+ 400 Bad Request – missing or invalid field values 
+ 403 Forbidden – user not authenticated 
+ POST /api/1/origin/save/bulk/ # 
+ Request the saving of multiple software origins into the archive. 
+ That endpoint enables to request the archival of multiple software origins through
+a POST request containing a list of origin URLs and their visit types in its body. 
+ The following visit types are supported: bzr , cvs , hg , git ,
+ svn and tarball-directory . 
+ The origins list data can be provided using the following content types: 
+ text/csv (default) 
+ When using CSV format, first column must contain origin URLs and second
+column the visit types. 
+ "https://git.example.org/user/project" , "git" 
+ "https://download.example.org/project/source.tar.gz" , "tarball-directory" 
+ To post the content of such file to the endpoint, you can use the following
+ curl command. 
+ $ curl -X POST -H "Authorization: Bearer ****" \ 
+ -H "Content-Type: text/csv" \ 
+ --data-binary @/path/to/origins.csv \ 
+ https://archive.softwareheritage.org/api/1/origin/save/bulk/
+ application/json 
+ When using JSON format, the following schema must be used. 
+ [ 
+ { 
+ "origin_url" : "https://git.example.org/user/project" , 
+ "visit_type" : "git" 
+ }, 
+ { 
+ "origin_url" : "https://download.example.org/project/source.tar.gz" , 
+ "visit_type" : "tarball-directory" 
+ } 
+ ] 
+ To post the content of such file to the endpoint, you can use the following
+ curl command. 
+ $ curl -X POST -H "Authorization: Bearer ****" \ 
+ -H "Content-Type: application/json" \ 
+ --data-binary @/path/to/origins.json \ 
+ https://archive.softwareheritage.org/api/1/origin/save/bulk/
+ application/yaml 
+ When using YAML format, the following schema must be used. 
+ - origin_url : https://git.example.org/user/project 
+ visit_type : git 
+ - origin_url : https://download.example.org/project/source.tar.gz 
+ visit_type : tarball-directory 
+ To post the content of such file to the endpoint, you can use the following
+ curl command. 
+ $ curl -X POST -H "Authorization: Bearer ****" \ 
+ -H "Content-Type: application/yaml" \ 
+ --data-binary @/path/to/origins.yaml \ 
+ https://archive.softwareheritage.org/api/1/origin/save/bulk/
+ Once received, origins data are checked for correctness by validating URLs and
+verifying if visit types are supported. A request cannot be accepted if at least
+one origin is not valid. All origins with invalid format will be reported in the
+rejected request response. 
+ Warning 
+ That endpoint is not publicly available and requires authentication and
+special user permission in order to request it. 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Content-Type – the content type of posted data,
+either text/csv (default), application/json or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Request JSON Object : 
+ status ( string ) – either accepted or rejected 
+ reason ( string ) – details about why a request got rejected 
+ request_id ( string ) – request identifier (only when it its accepted) 
+ rejected_origins ( array ) – list of rejected origins and details about the reasons
+(only when the request is rejected) 
+ Status Codes : 
+ 200 OK – no error 
+ 400 Bad Request – provided origins data are not valid 
+ 401 Unauthorized – request is not authenticated 
+ 403 Forbidden – user does not have permission to query the endpoint 
+ 415 Unsupported Media Type – payload format is not supported 
+ GET /api/1/origin/save/bulk/requests/ # 
+ List previously submitted save bulk requests. 
+ That endpoint enables to list the save bulk requests submitted by
+your user account and get their info URLs
+(see GET /api/1/origin/save/bulk/request/(request_id)/ ).
+That list is returned in a paginated way if the number or requests
+is large. 
+ Warning 
+ That endpoint is not publicly available and requires authentication and
+special user permission in order to request it. 
+ Query Parameters : 
+ page ( number ) – The submitted requests page number to retrieve 
+ per_page ( number ) – Number of submitted requests per page, default to 1000,
+maximum is 10000 
+ Request JSON Array of Objects : 
+ request_id ( string ) – UUID identifier of the request 
+ request_date ( date ) – the date the request was submitted 
+ request_info_url ( string ) – URL to get detailed info about the request 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Link – indicates that a subsequent result page is
+available and contains the url pointing to it 
+ Status Codes : 
+ 200 OK – no error 
+ 401 Unauthorized – request is not authenticated 
+ 403 Forbidden – user does not have permission to query the endpoint 
+ GET /api/1/origin/save/bulk/request/ ( request_id ) / # 
+ Get feedback about loading statuses of origins submitted through a save bulk request. 
+ That endpoint enables to track the archival statuses of origins sumitted through a POST
+request using the POST /api/1/origin/save/bulk/ endpoint. Info about submitted
+origins are returned in a paginated way. 
+ Note 
+ Only origin visits whose dates are greater than the request date are reported by
+that endpoint. 
+ Warning 
+ That endpoint is not publicly available and requires authentication and
+special user permission in order to request it. Staff users are also
+allowed to query it. 
+ Warning 
+ Only the user that created a save bulk request or a staff user can get
+feedback about it. 
+ Parameters : 
+ request_id ( string ) – UUID identifier of a save bulk request 
+ Query Parameters : 
+ page ( number ) – The submitted origins info page number to retrieve 
+ per_page ( number ) – Number of submitted origins info per page, default to 1000,
+maximum is 10000 
+ Request JSON Array of Objects : 
+ origin_url ( string ) – URL of submitted origin 
+ visit_type ( string ) – visit type for the origin 
+ status ( string ) – submitted origin status, either pending , accepted 
+or rejected 
+ last_scheduling_date ( date ) – ISO8601/RFC3339 representation of the last date
+(in UTC) when the origin was scheduled for loading into the archive, null if
+the origin got rejected 
+ last_visit_date ( date ) – ISO8601/RFC3339 representation of the last date
+(in UTC) when the origin was visited by Software Heritage, null if the origin
+got rejected or was not visited yet 
+ last_visit_status ( string ) – last visit status for the origin, either
+ successful or failed , null if the origin got rejected or was not
+visited yet 
+ last_snapshot_swhid ( string ) – last produced snapshot SWHID associated to the
+visit, null if the origin got rejected or was not visited yet 
+ rejection_reason ( string ) – if the origin got rejected gives more details
+about it 
+ browse_url ( string ) – URL to browse the submitted origin if it got accepted
+and loaded into the archive, null if the origin got rejected or was not
+visited yet 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Link – indicates that a subsequent result page is
+available and contains the url pointing to it 
+ Status Codes : 
+ 200 OK – no error 
+ 401 Unauthorized – request is not authenticated 
+ 403 Forbidden – user does not have permission to query the endpoint or get feedback
+about a request he did not submit 
+ GET /api/1/origin/save/ ( visit_type ) /url/ ( origin_url ) / # 
+ POST /api/1/origin/save/ ( visit_type ) /url/ ( origin_url ) / # 
+ GET /api/1/origin/save/?visit_type= ( visit_type ) &origin_url= ( origin_url ) # 
+ POST /api/1/origin/save/?visit_type= ( visit_type ) &origin_url= ( origin_url ) # 
+ GET /api/1/origin/save/ ( request_id ) / # 
+ Request the saving of a software origin into the archive
+or check the status of previously created save requests. 
+ That endpoint enables to create a saving task for a software origin
+through a POST request. 
+ Depending of the provided origin url, the save request can either be: 
+ immediately accepted , for well known code hosting providers
+like for instance GitHub or GitLab 
+ rejected , in case the url is blocked by Software Heritage 
+ put in pending state until a manual check is done in order to
+determine if it can be loaded or not 
+ Once a saving request has been accepted, its associated saving task
+status can then be checked through a GET request on the same url.
+Returned status can either be: 
+ not created : no saving task has been created 
+ pending : saving task has been created and will be scheduled
+for execution 
+ scheduled : the task execution has been scheduled 
+ running : the task is currently executed 
+ succeeded : the saving task has been successfully executed 
+ failed : the saving task has been executed but it failed 
+ When issuing a POST request an object will be returned while a GET
+request will return an array of objects (as multiple save requests
+might have been submitted for the same origin). 
+ It is also possible to get info about a specific save request by
+sending a GET request to the /api/1/origin/save/(request_id)/ 
+endpoint. 
+ Important 
+ If the origin URL contains special characters like a white space
+or a question mark (meaning the URL has query parameters), you
+should rather pass the percent encoded origin_url 
+and visit_type values through query parameters instead of URL
+arguments. 
+ Parameters : 
+ visit_type ( string ) – the type of visit to perform
+(currently the supported types are bzr , cvs , git , hg ,
+ svn , and tarball ) 
+ origin_url ( string ) – the url of the origin to save 
+ request_id ( number ) – a save request identifier 
+ Query Parameters : 
+ visit_type ( string ) – the type of visit to perform
+(currently the supported types are bzr , cvs , git , hg ,
+ svn , and tarball ) 
+ origin_url ( string ) – the url of the origin to save 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Request JSON Object : 
+ id ( number ) – the save request identifier 
+ request_url ( string ) – Web API URL to follow up on that request 
+ origin_url ( string ) – the url of the origin to save 
+ visit_type ( string ) – the type of visit to perform 
+ save_request_date ( string ) – the date (in iso format) the save
+request was issued 
+ save_request_status ( string ) – the status of the save request,
+either accepted , rejected or pending 
+ save_task_status ( string ) – the status of the origin saving task,
+either not created , pending , scheduled , running ,
+ succeeded or failed 
+ visit_date ( string ) – the date (in iso format) of the visit if a visit
+occurred, null otherwise. 
+ visit_status ( string ) – the status of the visit, either full ,
+ partial , not_found or failed if a visit occurred, null
+otherwise. 
+ note ( string ) – optional note giving details about the save request,
+for instance why it has been rejected 
+ snapshot_swhid ( string ) – SWHID of snapshot associated to the visit
+(null if it is missing or unknown) 
+ snapshot_url ( string ) – Web API URL to retrieve snapshot data 
+ from_webhook ( boolean ) – indicates if the save request was created
+from a popular forge webhook receiver
+(see POST /api/1/origin/save/webhook/github/ for instance) 
+ webhook_origin ( string ) – indicates which forge type sent the webhook,
+currently the supported types are: bitbucket , forgejo , gitea , github , gitlab , gogs , and sourceforge 
+ Status Codes : 
+ 200 OK – no error 
+ 400 Bad Request – an invalid visit type or origin url has been provided 
+ 403 Forbidden – the provided origin url is blocked 
+ 404 Not Found – no save requests have been found for a given origin 
+ POST /api/1/origin/save/webhook/bitbucket/ # 
+ Webhook receiver for Bitbucket to request or update the archival of
+a repository when new commits are pushed to it. 
+ To add such webhook to one of your git repository hosted on
+Bitbucket, please follow Bitbucket’s webhooks guide . 
+ The expected content type for the webhook payload must be application/json . 
+ Please note that to avoid abusing the archival service offered by Software Heritage
+at most one request per hour is created so the effective loading of the
+repository into the archive might be delayed. 
+ Request JSON Object : 
+ id ( number ) – the save request identifier 
+ request_url ( string ) – Web API URL to follow up on that request 
+ origin_url ( string ) – the url of the origin to save 
+ visit_type ( string ) – the type of visit to perform 
+ save_request_date ( string ) – the date (in iso format) the save
+request was issued 
+ save_request_status ( string ) – the status of the save request,
+either accepted , rejected or pending 
+ save_task_status ( string ) – the status of the origin saving task,
+either not created , pending , scheduled , running ,
+ succeeded or failed 
+ save_task_next_run ( string ) – the date and time from which the
+request is executed 
+ Status Codes : 
+ 200 OK – save request for repository has been successfully created
+from the webhook payload. 
+ 400 Bad Request – no save request has been created due to invalid POST
+request or missing data in webhook payload 
+ POST /api/1/origin/save/webhook/forgejo/ # 
+ Webhook receiver for Forgejo to request or update the archival of
+a repository when new commits are pushed to it. 
+ To add such webhook to one of your git repository hosted on
+Forgejo, please follow Forgejo’s webhooks guide . 
+ The expected content type for the webhook payload must be application/json . 
+ Please note that to avoid abusing the archival service offered by Software Heritage
+at most one request per hour is created so the effective loading of the
+repository into the archive might be delayed. 
+ Request JSON Object : 
+ id ( number ) – the save request identifier 
+ request_url ( string ) – Web API URL to follow up on that request 
+ origin_url ( string ) – the url of the origin to save 
+ visit_type ( string ) – the type of visit to perform 
+ save_request_date ( string ) – the date (in iso format) the save
+request was issued 
+ save_request_status ( string ) – the status of the save request,
+either accepted , rejected or pending 
+ save_task_status ( string ) – the status of the origin saving task,
+either not created , pending , scheduled , running ,
+ succeeded or failed 
+ save_task_next_run ( string ) – the date and time from which the
+request is executed 
+ Status Codes : 
+ 200 OK – save request for repository has been successfully created
+from the webhook payload. 
+ 400 Bad Request – no save request has been created due to invalid POST
+request or missing data in webhook payload 
+ POST /api/1/origin/save/webhook/gitea/ # 
+ Webhook receiver for Gitea to request or update the archival of
+a repository when new commits are pushed to it. 
+ To add such webhook to one of your git repository hosted on
+Gitea, please follow Gitea’s webhooks guide . 
+ The expected content type for the webhook payload must be application/json . 
+ Please note that to avoid abusing the archival service offered by Software Heritage
+at most one request per hour is created so the effective loading of the
+repository into the archive might be delayed. 
+ Request JSON Object : 
+ id ( number ) – the save request identifier 
+ request_url ( string ) – Web API URL to follow up on that request 
+ origin_url ( string ) – the url of the origin to save 
+ visit_type ( string ) – the type of visit to perform 
+ save_request_date ( string ) – the date (in iso format) the save
+request was issued 
+ save_request_status ( string ) – the status of the save request,
+either accepted , rejected or pending 
+ save_task_status ( string ) – the status of the origin saving task,
+either not created , pending , scheduled , running ,
+ succeeded or failed 
+ save_task_next_run ( string ) – the date and time from which the
+request is executed 
+ Status Codes : 
+ 200 OK – save request for repository has been successfully created
+from the webhook payload. 
+ 400 Bad Request – no save request has been created due to invalid POST
+request or missing data in webhook payload 
+ POST /api/1/origin/save/webhook/github/ # 
+ Webhook receiver for GitHub to request or update the archival of
+a repository when new commits are pushed to it. 
+ To add such webhook to one of your git repository hosted on
+GitHub, please follow GitHub’s webhooks guide . 
+ The expected content type for the webhook payload must be application/json . 
+ Please note that to avoid abusing the archival service offered by Software Heritage
+at most one request per hour is created so the effective loading of the
+repository into the archive might be delayed. 
+ Request JSON Object : 
+ id ( number ) – the save request identifier 
+ request_url ( string ) – Web API URL to follow up on that request 
+ origin_url ( string ) – the url of the origin to save 
+ visit_type ( string ) – the type of visit to perform 
+ save_request_date ( string ) – the date (in iso format) the save
+request was issued 
+ save_request_status ( string ) – the status of the save request,
+either accepted , rejected or pending 
+ save_task_status ( string ) – the status of the origin saving task,
+either not created , pending , scheduled , running ,
+ succeeded or failed 
+ save_task_next_run ( string ) – the date and time from which the
+request is executed 
+ Status Codes : 
+ 200 OK – save request for repository has been successfully created
+from the webhook payload. 
+ 400 Bad Request – no save request has been created due to invalid POST
+request or missing data in webhook payload 
+ POST /api/1/origin/save/webhook/gitlab/ # 
+ Webhook receiver for GitLab to request or update the archival of
+a repository when new commits are pushed to it. 
+ To add such webhook to one of your git repository hosted on
+GitLab, please follow GitLab’s webhooks guide . 
+ The expected content type for the webhook payload must be application/json . 
+ Please note that to avoid abusing the archival service offered by Software Heritage
+at most one request per hour is created so the effective loading of the
+repository into the archive might be delayed. 
+ Request JSON Object : 
+ id ( number ) – the save request identifier 
+ request_url ( string ) – Web API URL to follow up on that request 
+ origin_url ( string ) – the url of the origin to save 
+ visit_type ( string ) – the type of visit to perform 
+ save_request_date ( string ) – the date (in iso format) the save
+request was issued 
+ save_request_status ( string ) – the status of the save request,
+either accepted , rejected or pending 
+ save_task_status ( string ) – the status of the origin saving task,
+either not created , pending , scheduled , running ,
+ succeeded or failed 
+ save_task_next_run ( string ) – the date and time from which the
+request is executed 
+ Status Codes : 
+ 200 OK – save request for repository has been successfully created
+from the webhook payload. 
+ 400 Bad Request – no save request has been created due to invalid POST
+request or missing data in webhook payload 
+ POST /api/1/origin/save/webhook/gogs/ # 
+ Webhook receiver for Gogs to request or update the archival of
+a repository when new commits are pushed to it. 
+ To add such webhook to one of your git repository hosted on
+Gogs, please follow Gogs’s webhooks guide . 
+ The expected content type for the webhook payload must be application/json . 
+ Please note that to avoid abusing the archival service offered by Software Heritage
+at most one request per hour is created so the effective loading of the
+repository into the archive might be delayed. 
+ Request JSON Object : 
+ id ( number ) – the save request identifier 
+ request_url ( string ) – Web API URL to follow up on that request 
+ origin_url ( string ) – the url of the origin to save 
+ visit_type ( string ) – the type of visit to perform 
+ save_request_date ( string ) – the date (in iso format) the save
+request was issued 
+ save_request_status ( string ) – the status of the save request,
+either accepted , rejected or pending 
+ save_task_status ( string ) – the status of the origin saving task,
+either not created , pending , scheduled , running ,
+ succeeded or failed 
+ save_task_next_run ( string ) – the date and time from which the
+request is executed 
+ Status Codes : 
+ 200 OK – save request for repository has been successfully created
+from the webhook payload. 
+ 400 Bad Request – no save request has been created due to invalid POST
+request or missing data in webhook payload 
+ POST /api/1/origin/save/webhook/sourceforge/ # 
+ Webhook receiver for SourceForge to request or update the archival of
+a repository when new commits are pushed to it. 
+ To add such webhook to one of your git, hg or svn repository hosted on
+SourceForge, please follow SourceForge’s webhooks guide . 
+ The expected content type for the webhook payload must be application/json . 
+ Please note that to avoid abusing the archival service offered by Software Heritage
+at most one request per hour is created so the effective loading of the
+repository into the archive might be delayed. 
+ Request JSON Object : 
+ id ( number ) – the save request identifier 
+ request_url ( string ) – Web API URL to follow up on that request 
+ origin_url ( string ) – the url of the origin to save 
+ visit_type ( string ) – the type of visit to perform 
+ save_request_date ( string ) – the date (in iso format) the save
+request was issued 
+ save_request_status ( string ) – the status of the save request,
+either accepted , rejected or pending 
+ save_task_status ( string ) – the status of the origin saving task,
+either not created , pending , scheduled , running ,
+ succeeded or failed 
+ save_task_next_run ( string ) – the date and time from which the
+request is executed 
+ Status Codes : 
+ 200 OK – save request for repository has been successfully created
+from the webhook payload. 
+ 400 Bad Request – no save request has been created due to invalid POST
+request or missing data in webhook payload 
+ Revision # 
+ GET /api/1/revision/ ( sha1_git ) / # 
+ Get information about a revision in the archive. Revisions are
+identified by sha1 checksums, compatible with Git commit
+identifiers.
+See swh.model.git_objects.revision_git_object() in our data model
+module for details about how they are computed. 
+ Parameters : 
+ sha1_git ( string ) – hexadecimal representation of the revision
+ sha1_git identifier 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Request JSON Object : 
+ author ( object ) – information about the author of the revision 
+ committer ( object ) – information about the committer of the
+revision 
+ committer_date ( string ) – RFC3339 representation of the commit date 
+ date ( string ) – RFC3339 representation of the revision date 
+ directory ( string ) – the unique identifier that revision points to 
+ directory_url ( string ) – link to
+ GET /api/1/directory/(sha1_git)/[(path)/] to get
+information about the directory associated to the revision 
+ id ( string ) – the revision unique identifier 
+ merge ( boolean ) – whether or not the revision corresponds to a
+merge commit 
+ message ( string ) – the message associated to the revision 
+ parents ( array ) – the parents of the revision, i.e. the previous
+revisions that head directly to it, each entry of that array
+contains an unique parent revision identifier but also a link to
+ GET /api/1/revision/(sha1_git)/ to get more information
+about it 
+ type ( string ) – the type of the revision 
+ Status Codes : 
+ 200 OK – no error 
+ 400 Bad Request – an invalid sha1_git value has been provided 
+ 404 Not Found – requested revision cannot be found in the archive 
+ Example: 
+ https://archive.softwareheritage.org/api/1/revision/aafb16d69fd30ff58afdd69036a26047f3aebdc6/ 
+ GET /api/1/revision/ ( sha1_git ) /directory/[ ( path ) /] # 
+ Get information about directory (entry) objects associated to revisions.
+Each revision is associated to a single “root” directory.
+This endpoint behaves like GET /api/1/directory/(sha1_git)/[(path)/] ,
+but operates on the root directory associated to a given revision. 
+ Parameters : 
+ sha1_git ( string ) – hexadecimal representation of the revision
+ sha1_git identifier 
+ path ( string ) – optional parameter to get information about the
+directory entry pointed by that relative path 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Request JSON Object : 
+ content ( array ) – directory entries as returned by
+ GET /api/1/directory/(sha1_git)/[(path)/] 
+ path ( string ) – path of directory from the revision root one 
+ revision ( string ) – the unique revision identifier 
+ type ( string ) – the type of the directory 
+ Status Codes : 
+ 200 OK – no error 
+ 400 Bad Request – an invalid sha1_git value has been provided 
+ 404 Not Found – requested revision cannot be found in the archive 
+ Example: 
+ https://archive.softwareheritage.org/api/1/revision/f1b94134a4b879bc55c3dacdb496690c8ebdc03f/directory/ 
+ GET /api/1/revision/ ( sha1_git ) /log/ # 
+ Get a list of all revisions heading to a given one, in other words show
+the commit log. 
+ The revisions are returned in the breadth-first search order while
+visiting the revision graph. The number of revisions to return is also
+bounded by the limit query parameter. 
+ Warning 
+ To get the full BFS traversal of the revision graph when the
+total number of revisions is greater than 1000, it is up to
+the client to keep track of the multiple branches of history
+when there’s merge revisions in the returned objects.
+In other words, identify all the continuation points that need
+to be followed to get the full history through recursion. 
+ Parameters : 
+ sha1_git ( string ) – hexadecimal representation of the revision
+ sha1_git identifier 
+ Query Parameters : 
+ limit ( int ) – maximum number of revisions to return when performing
+BFS traversal on the revision graph (default to 10, cannot exceed 1000) 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Request JSON Array of Objects : 
+ author ( object ) – information about the author of the revision 
+ committer ( object ) – information about the committer of the
+revision 
+ committer_date ( string ) – RFC3339 representation of the commit date 
+ date ( string ) – RFC3339 representation of the revision date 
+ directory ( string ) – the unique identifier that revision points to 
+ directory_url ( string ) – link to
+ GET /api/1/directory/(sha1_git)/[(path)/] to get
+information about the directory associated to the revision 
+ id ( string ) – the revision unique identifier 
+ merge ( boolean ) – whether or not the revision corresponds to a
+merge commit 
+ message ( string ) – the message associated to the revision 
+ parents ( array ) – the parents of the revision, i.e. the previous
+revisions that head directly to it, each entry of that array
+contains an unique parent revision identifier but also a link to
+ GET /api/1/revision/(sha1_git)/ to get more information
+about it 
+ type ( string ) – the type of the revision 
+ Status Codes : 
+ 200 OK – no error 
+ 400 Bad Request – an invalid sha1_git value has been provided 
+ 404 Not Found – head revision cannot be found in the archive 
+ Example: 
+ https://archive.softwareheritage.org/api/1/revision/e1a315fa3fa734e2a6154ed7b5b9ae0eb8987aad/log/ 
+ Snapshot # 
+ GET /api/1/snapshot/ ( snapshot_id ) / # 
+ Get information about a snapshot in the archive. 
+ A snapshot is a set of named branches, which are pointers to objects
+at any level of the Software Heritage DAG. It represents a full picture
+of an origin at a given time. 
+ As well as pointing to other objects in the Software Heritage DAG,
+branches can also be aliases, in which case their target is the name of
+another branch in the same snapshot, or dangling, in which case the
+target is unknown. 
+ A snapshot identifier is a salted sha1. See
+ swh.model.git_objects.snapshot_git_object() in our data model
+module for details about how they are computed. 
+ Parameters : 
+ snapshot_id ( sha1 ) – a snapshot identifier 
+ Query Parameters : 
+ branches_from ( str ) – optional parameter used to skip branches
+whose name is lesser than it before returning them 
+ branches_count ( int ) – optional parameter used to restrain
+the amount of returned branches (default to 1000) 
+ target_types ( str ) – optional comma separated list parameter
+used to filter the target types of branch to return (possible
+values that can be contained in that list are content ,
+ directory , revision , release , snapshot or
+ alias ) 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Link – indicates that a subsequent result page is
+available and contains the url pointing to it 
+ Request JSON Object : 
+ branches ( object ) – object containing all branches associated to
+the snapshot,for each of them the associated target type and id are
+given but also a link to get information about that target 
+ id ( string ) – the unique identifier of the snapshot 
+ Status Codes : 
+ 200 OK – no error 
+ 400 Bad Request – an invalid snapshot identifier or invalid query parameters has
+been provided 
+ 404 Not Found – requested snapshot cannot be found in the archive 
+ Example: 
+ https://archive.softwareheritage.org/api/1/snapshot/6a3a2cf0b2b90ce7ae1cf0a221ed68035b686f5a/ 
+ Archive statistics # 
+ GET /api/1/stat/counters/ # 
+ Get statistics about the content of the archive. 
+ Request JSON Object : 
+ content ( number ) – current number of content objects (aka files)
+in the archive 
+ directory ( number ) – current number of directory objects
+in the archive 
+ origin ( number ) – current number of software origins
+(an origin is a “place” where code source can be found, e.g. a git
+repository, a tarball, …) in the archive 
+ origin_visit ( number ) – current number of visits on software
+origins to fill the archive 
+ person ( number ) – current number of persons (code source authors
+or committers) in the archive 
+ release ( number ) – current number of releases objects in the
+archive 
+ revision ( number ) – current number of revision objects
+(aka commits) in the archive 
+ skipped_content ( number ) – current number of content objects
+(aka files) which were not inserted in the archive 
+ snapshot ( number ) – current number of snapshot objects
+(aka set of named branches) in the archive 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Status Codes : 
+ 200 OK – no error 
+ Example: 
+ https://archive.softwareheritage.org/api/1/stat/counters/ 
+ Vault # 
+ GET /api/1/vault/flat/ ( swhid ) / # 
+ POST /api/1/vault/flat/ ( swhid ) / # 
+ Request the cooking of a simple archive, typically for a directory. 
+ That endpoint enables to create a vault cooking task for a directory
+through a POST request or check the status of a previously created one
+through a GET request. 
+ Once the cooking task has been executed, the resulting archive can
+be downloaded using the dedicated endpoint
+ GET /api/1/vault/flat/(swhid)/raw/ : 
+ $ curl -LOJ https://archive.softwareheritage.org/api/1/vault/flat/swh:1:dir:*/raw/
+ Then to extract the cooked directory in the current one, use: 
+ $ tar xvf path/to/swh_1_*.tar.gz
+ (replace swh:1:dir:* with the SWHID of the requested directory). 
+ Parameters : 
+ swhid ( string ) – the object’s SWHID 
+ Query Parameters : 
+ email ( string ) – e-mail to notify when the archive is ready 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Request JSON Object : 
+ fetch_url ( string ) – the url from which to download the archive
+once it has been cooked
+(see GET /api/1/vault/flat/(swhid)/raw/ ) 
+ progress_message ( string ) – message describing the cooking task
+progress 
+ id ( number ) – the cooking task id 
+ status ( string ) – the cooking task status
+(either new , pending , done or failed ) 
+ swhid ( string ) – the identifier of the object to cook 
+ Status Codes : 
+ 200 OK – no error 
+ 400 Bad Request – an invalid directory identifier has been provided 
+ 404 Not Found – requested directory did not receive any cooking
+request yet (in case of GET) or cannot be found in the archive
+(in case of POST) 
+ GET /api/1/vault/flat/ ( swhid ) /raw/ # 
+ Fetch the cooked archive for a flat bundle. 
+ See GET /api/1/vault/flat/(swhid)/ to get more
+details on ‘flat’ bundle cooking. 
+ Parameters : 
+ swhid ( string ) – the SWHID of the object to cook 
+ Response Headers : 
+ Content-Type – application/gzip 
+ Status Codes : 
+ 200 OK – no error 
+ 404 Not Found – requested directory did not receive any cooking
+request yet (in case of GET) or cannot be found in the archive
+(in case of POST) 
+ GET /api/1/vault/git-bare/ ( swhid ) / # 
+ POST /api/1/vault/git-bare/ ( swhid ) / # 
+ Request the cooking of a git-bare archive or check its cooking status. 
+ That endpoint enables to create a git-bare archive cooking task for a: 
+ revision : produced repository only includes a single branch
+heading to the revision 
+ release : produced repository only includes a single branch
+heading to the release 
+ snapshot : produced repository includes all branches and releases
+contained in the snapshot 
+ directory : produced repository only includes a single branch
+with a single commit targeting the directory 
+ A cooking task must be created through a POST request while checking
+the status of a previously created one can be done through a GET request. 
+ Once the cooking task has been executed, the resulting git-bare archive
+can be downloaded using the dedicated endpoint
+ GET /api/1/vault/git-bare/(swhid)/raw/ : 
+ $ curl -LOJ https://archive.softwareheritage.org/api/1/vault/git-bare/swh:1:*/raw/
+ Then to import the repository in the current directory, use: 
+ $ tar -xf path/to/swh_1_*.git.tar
+$ git clone swh:1:*.git new_repository
+ (replace swh:1:* with the SWHID of the requested revision or snapshot). 
+ This will create a directory called new_repository , which is a git
+repository containing the requested objects. 
+ Parameters : 
+ swhid ( string ) – the revision’s or snapshot’s permanent identifier 
+ Query Parameters : 
+ email ( string ) – e-mail to notify when the git-bare archive is ready 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Request JSON Object : 
+ fetch_url ( string ) – the url from which to download the archive
+once it has been cooked
+(see GET /api/1/vault/git-bare/(swhid)/raw/ ) 
+ progress_message ( string ) – message describing the cooking task
+progress 
+ id ( number ) – the cooking task id 
+ status ( string ) – the cooking task status (new/pending/done/failed) 
+ swhid ( string ) – the identifier of the object to cook 
+ Status Codes : 
+ 200 OK – no error 
+ 404 Not Found – requested directory did not receive any cooking
+request yet (in case of GET) or cannot be found in the archive
+(in case of POST) 
+ GET /api/1/vault/git-bare/ ( swhid ) /raw/ # 
+ Fetch the cooked git-bare archive for a revision. 
+ See GET /api/1/vault/git-bare/(swhid)/ to get more
+details on git-bare cooking. 
+ Parameters : 
+ swhid ( string ) – the revision’s permanent identifier 
+ Response Headers : 
+ Content-Type – application/x-tar 
+ Status Codes : 
+ 200 OK – no error 
+ 404 Not Found – requested directory did not receive any cooking
+request yet (in case of GET) or cannot be found in the archive
+(in case of POST) 
+ GET /api/1/vault/gitfast/ ( swhid ) / # 
+ POST /api/1/vault/gitfast/ ( swhid ) / # 
+ Request the cooking of a gitfast archive for a revision or check
+its cooking status. 
+ That endpoint enables to create a vault cooking task for a revision
+through a POST request or check the status of a previously created one
+through a GET request. 
+ Once the cooking task has been executed, the resulting gitfast archive
+can be downloaded using the dedicated endpoint
+ GET /api/1/vault/gitfast/(swhid)/raw/ : 
+ $ curl -LOJ https://archive.softwareheritage.org/api/1/vault/gitfast/swh:1:rev:*/raw/
+ Then to import the revision in the current directory, use: 
+ $ git init
+$ zcat path/to/swh_1_rev_*.gitfast.gz | git fast-import
+$ git checkout HEAD
+ (replace swh:1:rev:* with the SWHID of the requested revision). 
+ Parameters : 
+ swhid ( string ) – the revision’s permanent identifiers 
+ Query Parameters : 
+ email ( string ) – e-mail to notify when the gitfast archive is ready 
+ Request Headers : 
+ Accept – the requested response content type,
+either application/json (default) or application/yaml 
+ Response Headers : 
+ Content-Type – this depends on Accept 
+header of request 
+ Request JSON Object : 
+ fetch_url ( string ) – the url from which to download the archive
+once it has been cooked
+(see GET /api/1/vault/gitfast/(swhid)/raw/ ) 
+ progress_message ( string ) – message describing the cooking task
+progress 
+ id ( number ) – the cooking task id 
+ status ( string ) – the cooking task status (new/pending/done/failed) 
+ swhid ( string ) – the identifier of the object to cook 
+ Status Codes : 
+ 200 OK – no error 
+ 404 Not Found – requested directory did not receive any cooking
+request yet (in case of GET) or cannot be found in the archive
+(in case of POST) 
+ GET /api/1/vault/gitfast/ ( swhid ) /raw/ # 
+ Fetch the cooked gitfast archive for a revision. 
+ See GET /api/1/vault/gitfast/(swhid)/ to get more
+details on gitfast cooking. 
+ Parameters : 
+ rev_id ( string ) – the revision’s sha1 identifier 
+ Response Headers : 
+ Content-Type – application/gzip 
+ Status Codes : 
+ 200 OK – no error 
+ 404 Not Found – requested directory did not receive any cooking
+request yet (in case of GET) or cannot be found in the archive
+(in case of POST) 
+ GET /api/1/vault/directory/ ( dir_id ) / # 
+ This endpoint was replaced by GET /api/1/vault/flat/(swhid)/ 
+ GET /api/1/vault/directory/ ( dir_id ) /raw/ # 
+ This endpoint was replaced by GET /api/1/vault/flat/(swhid)/raw/ 
+ GET /api/1/vault/revision/ ( rev_id ) /gitfast/ # 
+ This endpoint was replaced by GET /api/1/vault/gitfast/(swhid)/ 
+ previous 
+ Developers Information 
+ next 
+ URI scheme for swh-web Browse application 
+ On this page
+ Content 
+ Directory 
+ External IDentifiers 
+ Graph 
+ SWHIDs (SoftWare Hash IDentifiers) 
+ Origin 
+ Provenance 
+ Release 
+ Request archival 
+ Revision 
+ Snapshot 
+ Archive statistics 
+ Vault 
+ Edit
+ Show Source
+ © Copyright 2015-2025 The Software Heritage developers.
+ Created using Sphinx 8.2.3.
+ Built with the PyData Sphinx Theme 0.23.0.

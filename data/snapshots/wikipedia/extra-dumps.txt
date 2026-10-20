@@ -1,0 +1,35 @@
+Wikimedia Downloads 
+ Wikimedia Downloads 
+ If you are reading this on Wikimedia servers, please note that we are now enforcing the Wikimedia Foundation User-Agent Policy for dumps downloads. Downloads are also rate limited and capped at 3 connections per-IP. These controls will help to ensure that everyone can access the files with reasonable download times. Clients that do not respect the user-agent policy or who try to evade these limits may be blocked.
+ Data downloads 
+ MediaWiki Content File Exports 
+ A complete copy of all public Wikimedia wikis, in the form of wikitext source and metadata embedded in XML - the editable source of each page. 
+ Database backup dumps 
+ A complete copy of all public Wikimedia wikis, in the form of wikitext source and metadata embedded in XML ( Note: These XML dumps are deprecated and will be sunset in January 2027, please use MediaWiki Content File Exports instead. More information about how to migrate can be found on the project page . ). A number of raw database tables in SQL form are also available. 
+ These snapshots are provided monthly. If you are a regular user of these dumps, please consider subscribing to xmldatadumps-l for regular updates. 
+ Backups of some Wikimedia wikis that no longer exist - including the Sept. 11 wiki - are also available . 
+ Mirror sites: the XML dumps above are also mirrored elsewhere - check the complete list . 
+ Wikimedia Enterprise HTML dumps 
+ Bulk rendered HTML of articles - the page as readers see it, rather than wikitext source. This content is provided through Wikimedia Enterprise , the Wikimedia Foundation's commercial service: its Snapshot API provides regularly updated HTML dumps and its On-demand API serves individual articles - both available with a free account, or via your Wikimedia Cloud Services developer account. Static HTML dumps that remain hosted on this site are listed on the HTML dumps archive page. 
+ Analytics data files 
+ Pageview, Mediacount, Unique, and other stats. 
+ Other files 
+ Additional datasets including Wikidata entity dumps, Structured Data from Commons, CirrusSearch search indexes, daily page and media titles, short URLs, and more. 
+ Kiwix files 
+ Static dumps of wiki projects in OpenZim format 
+ Software downloads 
+ MediaWiki 
+ MediaWiki is a free software wiki package written in PHP, originally for
+ use on Wikipedia. It is now used by several other projects of the
+ non-profit Wikimedia Foundation and by many other wikis.
+ Legal 
+ App Guidelines 
+ Guidelines for developers on how to properly reuse Wikimedia data, trademarks, and content. 
+ Copyright licensing 
+ Copyright
+ licensing information for these dumps. 
+ Privacy 
+ The privacy
+ policy for Wikimedia Foundation websites. 
+ Terms of use 
+ The terms of use for Wikimedia Foundation websites.

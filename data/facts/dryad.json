@@ -1,0 +1,39 @@
+{
+ "auth": "none",
+ "auth_note": "Search API needs no authentication; anonymous probe returned HTTP 200. API accounts (self-serve via ORCID login) give higher rates and private data.",
+ "cost": "not established",
+ "rate_limit": "not established",
+ "data_license": "Datasets are published under CC0 (per Terms of Service).",
+ "bulk_access": "none documented",
+ "probe_status": 200,
+ "probe_observation": "The probe returned JSON with count 1 and total 17017 matching datasets, with _embedded stash:datasets.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "Searches do not require authenticated access",
+   "snapshot": "data/snapshots/dryad/extra-search.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "\"count\":1,\"total\":17017",
+   "snapshot": "data/snapshots/dryad/probe.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "\"count\":1,\"total\":17017,\"_embedded\":{\"stash:datasets\"",
+   "snapshot": "data/snapshots/dryad/probe.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "the Submitter grants Dryad irrevocable permission to make the Dataset available to the public under a CC0 instrument.",
+   "snapshot": "data/snapshots/dryad/extra-terms.txt"
+  },
+  {
+   "claim": "other",
+   "quote": "Access the API at higher rates",
+   "snapshot": "data/snapshots/dryad/extra-readme.txt"
+  }
+ ],
+ "not_established": "Numeric rate limits (docs only say API accounts get 'higher rates'); explicit API pricing statement; bulk dump route (only the reports API and a dryad-data GitHub repo are mentioned, not captured).",
+ "slug": "dryad"
+}

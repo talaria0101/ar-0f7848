@@ -1,0 +1,33 @@
+bioRxiv API 
+ API   |   Reports 
+ bioRxiv/medRxiv API Summary 
+ Preprint published article detail for specified server (bioRxiv or medRxiv) 
+The format of the endpoint is https://api.biorxiv.org/pubs/[server]/[interval]/[cursor] or https://api.biorxiv.org/pubs/[server]/[DOI]/na/[format]. The help documentation 
+is here: 
+https://api.biorxiv.org/pubs/help . 
+ where 'server' can be either 'bioRxiv' or 'medRxiv' and 'interval' can be 1) two YYYY-MM-DD dates separted by '/' and 'cursor' is the start point which defaults to 0 if not supplied, or 2) a numeric value for the N most recent published articles, or 3) a numeric with the letter 'd' for the most recent N days of articles. 
+ Results are paginated with 100 articles served in a call. The 'cursor' value can be used to iterate through the result. 
+ For instance, https://api.biorxiv.org/pubs/medrxiv/2020-03-01/2020-03-30/5 will output 
+metadata for the published version of the 100 medRxiv papers (if that many remain) published within the date range of 2020-03-01 to 2020-03-30 beginning from article 5. 
+ https://api.biorxiv.org/pubs/biorxiv/2020-03-01/2020-03-30/5 will do the same for bioRxiv papers for that period. 
+ https://api.biorxiv.org/pubs/[server]/[DOI]/na/[format] returns detail for a single manuscript. 
+For instance, 
+ https://api.biorxiv.org/pubs/medrxiv/10.1101/2021.04.29.21256344 will output 
+publication metadata for the biorxiv paper with DOI 10.1101/2021.04.29.21256344. Conversely, 
+ https://api.biorxiv.org/pubs/medrxiv/10.1371/journal.pone.0256482 will output 
+publication metadata for the biorxiv paper with published DOI 10.1371/journal.pone.0256482. 
+The 'messages' array in the output provides information about what is being displayed, including 
+cursor value and count of items for the requested interval. 
+ The following metadata elements are returned: 
+ biorxiv_doi 
+ published_doi 
+ published_journal 
+ preprint_platform 
+ preprint_title 
+ preprint_authors 
+ preprint_category 
+ preprint_date 
+ published_date 
+ preprint_abstract 
+ preprint_author_corresponding 
+ preprint_author_corresponding_institution

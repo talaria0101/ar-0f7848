@@ -1,0 +1,34 @@
+{
+ "slug": "jstage",
+ "auth": "none",
+ "auth_note": "Anonymous search request returned data with no key; commercial use needs permission by application form.",
+ "cost": "not established",
+ "rate_limit": "not established",
+ "data_license": "not established",
+ "bulk_access": "none documented",
+ "probe_status": 200,
+ "probe_observation": "The probe returned an Atom XML feed with status WARN_002 in its result element, opensearch:totalResults 644708 and one article entry.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "<opensearch:totalResults>644708</opensearch:totalResults>",
+   "snapshot": "data/snapshots/jstage/probe.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "<opensearch:totalResults>644708</opensearch:totalResults>",
+   "snapshot": "data/snapshots/jstage/probe.txt"
+  },
+  {
+   "claim": "other",
+   "quote": "Permission is required for commercial use of the J-STAGE WebAPI, regardless of whether the use leads to commercial gain for the user.",
+   "snapshot": "data/snapshots/jstage/extra-webapi.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "Note that downloading a large amount of data is not permitted under the J-STAGE Browsing Policy",
+   "snapshot": "data/snapshots/jstage/extra-webapi.txt"
+  }
+ ],
+ "not_established": "Cost statement, numeric rate limit and data license were not found: the configured docs URL returns 404, the English WebAPI page has no limits or license, and the Japanese manual PDF capture (extra-manual) is undecoded binary. Terms of Use page (Japanese only) not captured. Meaning of WARN_002 not documented in captured pages."
+}

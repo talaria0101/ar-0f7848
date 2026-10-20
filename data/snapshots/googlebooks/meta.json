@@ -24,5 +24,19 @@
   "fetched_at": "2026-10-20T01:31:38+00:00",
   "ratelimit_headers": {},
   "text_bytes": 1305
+ },
+ "extra": {
+  "quota": {
+   "url": "https://developers.google.com/books/docs/v1/getting_started",
+   "final_url": "https://developers.google.com/books/docs/v1/getting_started",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 85311,
+   "truncated": false,
+   "sha256": "9150cea26b20885763fac5dbe5500cd4b98009b90672e19bf04731e62f84068f",
+   "fetched_at": "2026-10-20T01:35:19+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 13924
+  }
  }
 }

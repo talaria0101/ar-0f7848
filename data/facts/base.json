@@ -1,0 +1,44 @@
+{
+ "slug": "base",
+ "auth": "key-approval",
+ "auth_note": "Docs say an API key must be applied for via a form with a use case and is emailed within a few days; the anonymous probe was refused with Access denied. The OAI-PMH route is IP-restricted and non-commercial only.",
+ "cost": "not established",
+ "rate_limit": "not established",
+ "data_license": "not established",
+ "bulk_access": "OAI-PMH at http://oai.base-search.net/oai (IP-restricted, non-commercial projects apply); full dump on request via contact for an initial load",
+ "probe_status": 200,
+ "probe_observation": "Probe returned HTTP 200 with a JSON body {\"error\": \"Access denied for IP address ... and user agent ar-research/0.1 ...\"}, i.e. an application-level refusal, no search results.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "you need to apply for an API key via this form . Please specify your use case. Within a few days, we will send you an email containing your API key",
+   "snapshot": "data/snapshots/base/extra-apidoc.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "\"error\": \"Access denied for IP address",
+   "snapshot": "data/snapshots/base/probe.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "Access to the BASE OAI-PMH interface is IP-restricted. Non-commercial projects may apply for access",
+   "snapshot": "data/snapshots/base/extra-oai.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "If you need a complete dump of the BASE data for your non-commercial project, please contact us for an initial",
+   "snapshot": "data/snapshots/base/extra-oai.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "\"error\": \"Access denied for IP address",
+   "snapshot": "data/snapshots/base/probe.txt"
+  },
+  {
+   "claim": "other",
+   "quote": "The OAI endpoint of this API is located at http://oai.base-search.net/oai .",
+   "snapshot": "data/snapshots/base/extra-oai.txt"
+  }
+ ],
+ "not_established": "Cost, rate limits and the license of returned data are not stated in the captured docs (the interface guide is a PDF not captured). The main docs page snapshot (docs.txt) is an Anubis proof-of-work challenge page, not content; content came from extra-apidoc and extra-oai. Probe denial text mentions IP and user agent, so whether the key or an IP allowlist is the gate for the search API is not fully established."
+}

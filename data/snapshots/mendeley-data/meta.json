@@ -24,5 +24,115 @@
   "fetched_at": "2026-10-20T01:31:54+00:00",
   "ratelimit_headers": {},
   "text_bytes": 39
+ },
+ "extra": {
+  "oai": {
+   "url": "https://data.mendeley.com/oai",
+   "final_url": "https://data.mendeley.com/oai",
+   "status": 200,
+   "content_type": "application/xml",
+   "bytes": 517,
+   "truncated": false,
+   "sha256": "199fb41b4618e86193c35e3a289b0766808be5da5f476b114a9aaff87c252284",
+   "fetched_at": "2026-10-20T01:39:59+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 516
+  },
+  "terms": {
+   "url": "https://data.mendeley.com/terms-of-use",
+   "final_url": "https://data.mendeley.com/terms-of-use",
+   "status": 404,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 105811,
+   "truncated": false,
+   "sha256": "2be12af44d68d83af0ca898d6516f692297d255413f73a1087723b4ba3af7ccf",
+   "fetched_at": "2026-10-20T01:40:00+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 637
+  },
+  "faq": {
+   "url": "https://data.mendeley.com/faq",
+   "final_url": "https://data.mendeley.com/faq",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 222347,
+   "truncated": false,
+   "sha256": "d3a98548fc98c260bb01687c7ce451edf60044529e48ce4fcdc9d5d41dca5559",
+   "fetched_at": "2026-10-20T01:40:01+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 68642
+  },
+  "sw": {
+   "url": "https://data.mendeley.com/api/docs/swagger.json",
+   "final_url": "https://data.mendeley.com/api/docs/swagger.json",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 411414,
+   "truncated": false,
+   "sha256": "e6105658ad563c60090e806bda8e99bfa93647396db8c06a18a002c0f09ef107",
+   "fetched_at": "2026-10-20T01:40:02+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 530
+  },
+  "ds": {
+   "url": "https://data.mendeley.com/api/datasets-v2/datasets?query=test",
+   "final_url": "https://data.mendeley.com/api/datasets-v2/datasets?query=test",
+   "status": 404,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 524,
+   "truncated": false,
+   "sha256": "7bae703192c021b61cdcf1fb6fb9cbf343ea03537dfe7a475259a9d47e63ccc9",
+   "fetched_at": "2026-10-20T01:40:20+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 44
+  },
+  "ds2": {
+   "url": "https://data.mendeley.com/api/datasets?query=test",
+   "final_url": "https://data.mendeley.com/api/datasets?query=test",
+   "status": 200,
+   "content_type": "application/json; charset=utf-8",
+   "bytes": 37161,
+   "truncated": false,
+   "sha256": "176603b62c73d868d49e23c175f728d33bf99bd9ef426a76749e2a5f8af6858e",
+   "fetched_at": "2026-10-20T01:40:20+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 37097
+  },
+  "tou": {
+   "url": "https://data.mendeley.com/terms",
+   "final_url": "https://data.mendeley.com/terms",
+   "status": 403,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 4934,
+   "truncated": false,
+   "sha256": "3831930cab381c278ffd52a178054d0b2f121d13113c1c694f45d551e44306ef",
+   "fetched_at": "2026-10-20T01:40:21+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 808
+  },
+  "about": {
+   "url": "https://data.mendeley.com/about",
+   "final_url": "https://data.mendeley.com/about",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 111821,
+   "truncated": false,
+   "sha256": "0af356abbd301a7ea06697154d0c4f74979c28c2fbdd8b94ff56630897ea7a31",
+   "fetched_at": "2026-10-20T01:40:22+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 5318
+  },
+  "oaiv": {
+   "url": "https://data.mendeley.com/oai?verb=Identify",
+   "final_url": "https://data.mendeley.com/oai?verb=Identify",
+   "status": 200,
+   "content_type": "application/xml",
+   "bytes": 897,
+   "truncated": false,
+   "sha256": "0e4030cad44a2b34038bf10374e0ede2b0356c6ea8eb55ea1ce16e94b1470699",
+   "fetched_at": "2026-10-20T01:40:22+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 896
+  }
  }
 }

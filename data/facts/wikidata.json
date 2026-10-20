@@ -1,0 +1,44 @@
+{
+ "auth": "none",
+ "auth_note": "Anonymous request to the public API returned results with no key.",
+ "cost": "free",
+ "rate_limit": "Docs give no numbers: on HTTP 429 stop and honour Retry-After; send a good User-Agent; global Wikimedia API rate limits apply.",
+ "data_license": "CC0 for main data namespaces",
+ "bulk_access": "https://dumps.wikimedia.org (Wikidata dumps)",
+ "probe_status": 200,
+ "probe_observation": "Probe returned JSON starting with searchinfo for 'Marie Curie' and a first hit with id Q7186.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "{\"searchinfo\":{\"search\":\"Marie Curie\"},\"search\":[{\"id\":\"Q7186\"",
+   "snapshot": "data/snapshots/wikidata/probe.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "\"label\":\"Marie Curie\"",
+   "snapshot": "data/snapshots/wikidata/probe.txt"
+  },
+  {
+   "claim": "cost",
+   "quote": "We offer the data in Wikidata freely and with no requirement for attribution under CC-0",
+   "snapshot": "data/snapshots/wikidata/docs.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "If you get a 429 Too Many Requests response, stop sending further requests for a while (see the Retry-After response header).",
+   "snapshot": "data/snapshots/wikidata/docs.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "All that data is licensed CC0 , \"No rights reserved\", for the public domain.",
+   "snapshot": "data/snapshots/wikidata/docs.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "Wikidata dumps are complete exports of all the Entities in Wikidata: https://dumps.wikimedia.org",
+   "snapshot": "data/snapshots/wikidata/docs.txt"
+  }
+ ],
+ "not_established": "No numeric request-rate limit found in the captured Data_access, User-Agent policy or api.wikimedia.org rate-limits pages.",
+ "slug": "wikidata"
+}

@@ -1,0 +1,39 @@
+{
+ "slug": "dimensions",
+ "auth": "key-paid",
+ "auth_note": "API key is generated in the Dimensions web app once API access exists; access is via institutional subscription (free for eligible scientometric research projects on application).",
+ "cost": "institutional",
+ "rate_limit": "30 requests per IP address per minute (Analytics API and CRIS API); query token valid for around 2 hours",
+ "data_license": "not established",
+ "bulk_access": "none documented",
+ "probe_status": 404,
+ "probe_observation": "GET https://app.dimensions.ai/api/auth (a credential-exchange endpoint) returned HTTP 404 with the 2-byte body {}.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "Once you have API access ... generate a new API Key by going to the",
+   "snapshot": "data/snapshots/dimensions/extra-access.txt"
+  },
+  {
+   "claim": "cost",
+   "quote": "The Dimensions Analytics API is available through an institutional subscription, subject to restrictions on use.",
+   "snapshot": "data/snapshots/dimensions/docs.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "The Analytics API and the CRIS API are limited to 30 requests per IP address per minute.",
+   "snapshot": "data/snapshots/dimensions/extra-access.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "The Dimensions Analytics API is not intended for bulk data or to power dashboards or other derivative products.",
+   "snapshot": "data/snapshots/dimensions/docs.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "{}",
+   "snapshot": "data/snapshots/dimensions/probe.txt"
+  }
+ ],
+ "not_established": "Data license of returned data not found (the Reasonable Use page guessed at docs.dimensions.ai/dsl/limits.html and reasonable_use.html returned 404; terms page not captured). Exact criteria for the free scientometric-research access not captured. Probe was a GET on the auth endpoint without credentials, which returned 404 and so does not demonstrate the auth gate directly; auth value rests on the docs text."
+}

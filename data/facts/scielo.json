@@ -1,0 +1,34 @@
+{
+ "slug": "scielo",
+ "auth": "none",
+ "auth_note": "Anonymous GET of ArticleMeta journal endpoint returned data with no key.",
+ "cost": "not established",
+ "rate_limit": "not established",
+ "data_license": "CC-BY for journal content (standard since 2015; journals indexed earlier may keep original license); license of API metadata itself not stated",
+ "bulk_access": "none documented",
+ "probe_status": 200,
+ "probe_observation": "Probe returned a JSON array (truncated at 1.5 MB) of journal records starting with code 0001-6365, collection ven, despite limit=1 being ignored; a second endpoint (identifiers, limit=1) returned meta.total 2281 and one object.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "[\n    {\n        \"code\": \"0001-6365\",\n        \"collection\": \"ven\",",
+   "snapshot": "data/snapshots/scielo/probe.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "\"code\": \"0001-6365\"",
+   "snapshot": "data/snapshots/scielo/probe.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "The CC-BY license is adopted by SciELO indexing criteria as the standard OA attribution since 2015.",
+   "snapshot": "data/snapshots/scielo/extra-about.txt"
+  },
+  {
+   "claim": "other",
+   "quote": "\"total\": 2281",
+   "snapshot": "data/snapshots/scielo/extra-ratelimit.txt"
+  }
+ ],
+ "not_established": "Documented rate limit, cost statement, and metadata-specific license not found. Configured docs URL github.com/scieloorg/articlemeta is a 404 (status 404 in meta.json); the repo scieloorg/articles_meta README only covers docker deployment. Tried articlemeta.scielo.org /api/v1/, /api/v1/docs, /oai/ (all 404). The ArticleMeta OAI-PMH route was not found at that path; no bulk dump documented in captured pages."
+}

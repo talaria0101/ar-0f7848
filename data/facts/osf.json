@@ -1,0 +1,34 @@
+{
+ "auth": "none",
+ "auth_note": "Anonymous GET of /v2/nodes/ returned HTTP 200 with public project data and no credentials; api.osf.io root reports current_user null.",
+ "cost": "not established",
+ "rate_limit": "Per api/base/settings/defaults.py (source code, not prose docs): non-cookie-auth 100/hour, user 10000/day, burst 10/second, files 75/minute.",
+ "data_license": "Per-record: public content is under the license identified by the project Administrator.",
+ "bulk_access": "none documented",
+ "probe_status": 200,
+ "probe_observation": "The probe returned a JSON:API document starting {\"data\":[{\"id\":\"nmcfe\",\"type\":\"nodes\" with one public node.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "{\"data\":[{\"id\":\"nmcfe\",\"type\":\"nodes\"",
+   "snapshot": "data/snapshots/osf/probe.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "{\"data\":[{\"id\":\"nmcfe\",\"type\":\"nodes\"",
+   "snapshot": "data/snapshots/osf/probe.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "'user': '10000/day', 'non-cookie-auth': '100/hour', 'add-contributor': '10/second'",
+   "snapshot": "data/snapshots/osf/extra-docsrate.txt"
+  },
+  {
+   "claim": "data_license",
+   "quote": "Content marked as \"Public\" will be available to the public for viewing and commercial and non-commercial use under the terms of the license identified by the Administrator.",
+   "snapshot": "data/snapshots/osf/extra-terms.txt"
+  }
+ ],
+ "not_established": "Cost of API use stated only as 'shares with the public free of charge any data marked as Public' in terms, not an API pricing statement, so cost left unestablished. developer.osf.io docs.txt is a 23-byte SPA shell (JS-rendered); rate limits come from source code settings, not documentation prose, and bulk dump/OAI-PMH route not found in captured pages.",
+ "slug": "osf"
+}

@@ -1,0 +1,44 @@
+{
+ "slug": "ieee",
+ "auth": "key-approval",
+ "auth_note": "An API key is required and IEEE reviews each application and issues the key only if approved.",
+ "cost": "institutional",
+ "rate_limit": "not established",
+ "data_license": "not established",
+ "bulk_access": "none documented",
+ "probe_status": 403,
+ "probe_observation": "The anonymous probe returned HTTP 403 with the body '<h1>Developer Inactive</h1>' (text/xml).",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "IEEE will review your application and, if approved, will assign one or more unique API keys",
+   "snapshot": "data/snapshots/ieee/extra-terms.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "You will need an API key to start using the API.",
+   "snapshot": "data/snapshots/ieee/extra-gs.txt"
+  },
+  {
+   "claim": "cost",
+   "quote": "Access to the IEEE Xplore API is limited to current IEEE customers unless the requesting Licensee agrees to a specifc license in addition to these terms of use.",
+   "snapshot": "data/snapshots/ieee/extra-terms.txt"
+  },
+  {
+   "claim": "rate_limit",
+   "quote": "limited to the number of calls per minute, hour, day, etc. set forth on the Rate Limits displayed during the user registration process",
+   "snapshot": "data/snapshots/ieee/extra-terms.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "you may only present the Content in response to an individual query; you may not present the Content in bulk format",
+   "snapshot": "data/snapshots/ieee/extra-terms.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "<h1>Developer Inactive</h1>",
+   "snapshot": "data/snapshots/ieee/probe.txt"
+  }
+ ],
+ "not_established": "Numeric rate limits (shown only during registration, not captured). Data license of returned metadata (terms grant only a limited non-commercial license; no data license named). Whether any fee applies beyond being a current IEEE customer. Docs home is a thin page; the Getting Started and Terms pages were captured as extra-gs and extra-terms. No bulk/OAI route documented; terms forbid bulk presentation."
+}

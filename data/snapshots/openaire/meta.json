@@ -27,5 +27,67 @@
    "x-ratelimit-limit": "7199"
   },
   "text_bytes": 2791
+ },
+ "extra": {
+  "terms": {
+   "url": "https://graph.openaire.eu/docs/apis/terms-of-use/",
+   "final_url": "https://graph.openaire.eu/docs/apis/terms-of-use/",
+   "status": 404,
+   "content_type": "text/html; charset=iso-8859-1",
+   "bytes": 279,
+   "truncated": false,
+   "sha256": "c213a4d16953ee3d9296c352ab3dbc344074678c7b3c3ac5f46194b4a47dba7a",
+   "fetched_at": "2026-10-20T01:37:16+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 136
+  },
+  "bulk": {
+   "url": "https://graph.openaire.eu/docs/downloads/full-graph",
+   "final_url": "https://graph.openaire.eu/docs/downloads/full-graph/",
+   "status": 200,
+   "content_type": "text/html",
+   "bytes": 20386,
+   "truncated": false,
+   "sha256": "f065b2825a2c5715988521a77609992b24420272b9e48fda36eafb3f5485ca81",
+   "fetched_at": "2026-10-20T01:36:58+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 2409
+  },
+  "license": {
+   "url": "https://graph.openaire.eu/docs/license",
+   "final_url": "https://graph.openaire.eu/docs/license/",
+   "status": 200,
+   "content_type": "text/html",
+   "bytes": 11873,
+   "truncated": false,
+   "sha256": "6e9d279de060f14d4638d0486ce6f8323db06c23a48540f661bc36db89b5096e",
+   "fetched_at": "2026-10-20T01:37:00+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 692
+  },
+  "auth": {
+   "url": "https://graph.openaire.eu/docs/apis/authentication/",
+   "final_url": "https://graph.openaire.eu/docs/apis/authentication/",
+   "status": 200,
+   "content_type": "text/html",
+   "bytes": 79904,
+   "truncated": false,
+   "sha256": "af1e8835051705236a08d11cece7881fc315b0f09ac8afd9fd20eb2005d7062c",
+   "fetched_at": "2026-10-20T01:37:17+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 14190
+  },
+  "limits": {
+   "url": "https://graph.openaire.eu/docs/apis/terms",
+   "final_url": "https://graph.openaire.eu/docs/apis/terms/",
+   "status": 200,
+   "content_type": "text/html",
+   "bytes": 16997,
+   "truncated": false,
+   "sha256": "08a5d867d69f2cc3d6b75917ed7cc3aeb5ea4603820398167c87bdf54f3f248b",
+   "fetched_at": "2026-10-20T01:37:37+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 2012
+  }
  }
 }

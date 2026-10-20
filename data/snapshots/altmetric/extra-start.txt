@@ -1,0 +1,176 @@
+Getting Started - Altmetric Documentation 
+ Skip to content
+ Altmetric Documentation
+ Getting Started
+ Search
+ Home
+ MCP Server
+ Details Page API
+ Explorer API
+ BigQuery
+ Badges
+ Implementation Guide
+ Altmetric Documentation
+ Home
+ MCP Server
+ MCP Server
+ Tools Reference
+ Details Page API
+ Details Page API
+ Getting Started
+ Getting Started
+ On this page
+ Authentication
+ Versioning
+ Endpoints
+ Endpoints
+ Counts
+ Fetch
+ Citations
+ Translate
+ Appendix
+ Appendix
+ Licensing
+ Attribution
+ Reasonable Use
+ X (Twitter) Data
+ Explorer API
+ Explorer API
+ Getting Started
+ Endpoints
+ Endpoints
+ Research Outputs
+ Attention Summary
+ Demographics
+ Mentions
+ Mention Sources
+ Journals
+ Departments
+ Identifier Lists
+ Demo
+ API Client
+ Appendix
+ Reasonable Use
+ BigQuery
+ BigQuery
+ Getting Started
+ GCP Setup
+ Service Accounts
+ Data Sources
+ Data Sources
+ Overview
+ Attention Sources
+ Posts
+ Research Outputs
+ Publications
+ Organizations
+ Tutorials
+ Examples
+ Notebooks
+ Performance & Cost
+ Cost Reduction
+ FAQ
+ Release Notes
+ Reasonable Use
+ Badges
+ Badges
+ Getting Started
+ Customizations
+ Playground
+ Implementation Guide
+ Implementation Guide
+ Explorer for Institutions (EFI)
+ Explorer for Institutions (EFI)
+ Getting Started
+ Branding
+ Securing Access
+ Populating Data
+ Altmetric Apps
+ Altmetric Apps
+ Share of Voice (SoV) Dashboard
+ Publication Impact Dashboard (PID)
+ Journal Selection Dashboard (JSD)
+ Impact Metrics and Data Provision
+ Support & Training
+ On this page
+ Authentication
+ Versioning
+ Getting Started ¶ 
+ Authentication ¶ 
+ An API key is required when accessing all API endpoints . This key is a token that allows our application to verify that you are authorized to use the API and should be included when making requests. To do this you will need to include a parameter named key that contains your assigned API key. 
+ For example, if your key was xxx-xxx-xxx-xxx your request would look like this: curl 'http://api.altmetric.com/v1/id/241939?key=xxx-xxx-xxx-xxx' 
+ For more information regarding obtaining an API key see our Licensing page. 
+ Versioning ¶ 
+ To ensure that the code you develop remains functional for as long as possible - endpoints will be assigned new revision numbers if breaking changes are introduced. The current Details Page API version is v1 and should be the version that you should use in production. 
+ You can specify which version of the API to use by changing the base URL for your requests, for example to use v1 you should use https://api.altmetric.com/v1/ and your actual request should look like: 
+ https://api.altmetric.com/v1/citations/1d 
+ https://api.altmetric.com/v1/doi/10.1038/480426a 
+ Identifiers ¶ 
+ Below is a list of our supported identifiers. 
+ Code 
+ Name 
+ Description 
+ dimensions_publication_id 
+ Dimensions Publication Identifier 
+ This is a unique and persistent string id representing a publication in the Dimensions database. You can read more about Dimensions here https://www.dimensions.ai/ 
+ doi 
+ Digital Object Identifier 
+ A DOI (Digital Object Identifier) is a unique and persistent string assigned to online articles, books, and other works. You can read more about DOIs here https://www.doi.org/ 
+ pmid 
+ PubMed Identifier 
+ A PMID is the unique identifier number used in PubMed for each article. PMIDs do not change over time or during processing and are never reused. You can read more about PubMed here https://pubmed.ncbi.nlm.nih.gov/ 
+ handle 
+ Handle 
+ The Handle System provides a general-purpose global name service enabling secure name resolution over the Internet, designed to enable a broad set of communities to use the technology to identify digital content independent of location. You can read more about Handles here https://www.handle.net/ 
+ arxiv 
+ arXiv Identifier 
+ Identifier of a document used in the arXiv pre-print archive. You can read more about arXiv Ids here https://arxiv.org/help/arxiv_identifier 
+ ads 
+ ADS Bibcode 
+ 19 digit identifier which describes a journal article and used to identify literature in the astrophysics data system. You can read more about the ADS Bibcode here https://ui.adsabs.harvard.edu/help/actions/bibcode 
+ ssrn 
+ Social Science Research Network identifier 
+ Identifer used on the Social Science Research Network repository for preprints. 
+ repec 
+ RePEc ID 
+ Identifier for a scholarly article in the RePEc (Research Papers in Economics) database. 
+ isbn 
+ International Standard Book Number 
+ The ISBN can be either ISBN-10 or ISBN-13 and does not need to be normalized. 
+ id 
+ Altmetric Internal Identifier 
+ Each article in the Altmetric database has a unique identifier which we include for reference. Altmetric IDs are transient and unstable over the medium term. For long term application it is recommended that persistent IDs such as DOIs, arXiv IDs or PMIDs are used instead. 
+ nct_id 
+ ClinicalTrials.gov ID 
+ Identifier used within the ClinicalTrials.gov database. 
+ urn 
+ Uniform Resource Name 
+ URNs are globally unique persistent identifiers assigned within defined namespaces so they will be available for a long period of time, even after the resource which they identify ceases to exist or becomes unavailable. URNs cannot be used to directly locate an item and need not be resolvable, as they are simply templates that another parser may use to find an item. 
+ Limitations ¶ 
+ Cross-site scripting ¶ 
+ To support older browsers you can use JSONP (JSON with Padding). To do this you will need to include a callback parameter that contains the name of the Javascript function to invoke when the call returns. 
+ For example: https://api.altmetric.com/v1/doi/10.1038/480426a?callback=my_callback 
+ Try it! 
+ Warning 
+ Altmetric is quite strict about what constitutes as a valid callback - only letters, digits and underscores are allowed. 
+ Rate limiting ¶ 
+ Every day the Details Page API handles a large number of requests. To help manage the volume of these requests, limits are placed on the number of requests that can be made from a specific IP. These limits help us provide a reliable and dependable API service that serves the Altmetric community. 
+ If you are using the API without a key you can check the X-HourlyRateLimit-Limit and X-DailyRateLimit-Limit headers for the current limits. The X-HourlyRateLimit-Remaining and X-DailyRateLimit-Remaining headers will tell you how many calls you have remaining. 
+ When your rate limit has been exceeded, a 429 'Too many requests' error is returned by the API. When this occurs it is recommended that you examine HTTP headers above and pause requests until sufficient time has passed. If you find that you frequently hit the rate limit then you might want to consider throttling your requests or purchasing a commercial API key. 
+ Twitter ¶ 
+ Due to a contractual agreement that Altmetric has with Twitter, a maximum of 1,500,000 unique tweet IDs can be retrieved in any rolling 30 day period. If your request returns tweet IDs, please check the X-TweetIDRateLimit-Limit and X-TweetIDRateLimit-Remaining headers to check how close you are to the limit. 
+ Multiple requests to the same research output will not decrement your remaining limit unless it has received new Twitter attention or the request is outside the rolling 30 day window. Where the research output has received new attention, the X-TweetIDRateLimit-Remaining will be reduced by the additional unique tweet IDs and not by the total amount of tweet IDs for the research output. 
+ If you exceed your quota a 429 response will be returned along with the message Tweet ID rate limit exceeded, please see X-TweetIdRateLimit headers and try again later . 
+ Tip 
+ If you are using the Fetch endpoint and don't require Twitter information you can use the exclude_sources query string parameter to remove Twitter information from the response. 
+ For example: curl https://api.altmetric.com/v1/fetch/doi/10.1371/journal.pone.0005083?key=xxx-xxx-xxx-xxx&exclude_sources=twitter 
+ For details on which API and CSV fields contain Tweet IDs and User IDs, how to reconstruct post URLs from them, how geographic data is derived, and how to hydrate Tweet IDs into full posts via X's own APIs, see X (Twitter) Data . 
+ Attention Score ¶ 
+ This API returns the Altmetric Attention Score unrounded, as a decimal: a research output with a single tweet is reported as 0.25 . 
+ Everywhere Altmetric displays a score it is rounded up to a whole number, so that same research output shows as 1 on its details page, on its badge, in the Explorer and in the Explorer API. The rounding is a ceiling, not to the nearest whole number: 0.25 , 0.5 and 1.0 all display as 1 , and 237.75 displays as 238 . 
+ If the figures in your integration need to agree with what a customer sees elsewhere in Altmetric, round the score up yourself. Averages need the same care: a mean of unrounded scores and a mean of rounded ones are different numbers, and the gap is widest across research outputs with little attention. 
+ News ¶ 
+ In the United Kingdom, under The Copyright Designs & Patents Act 1988, headlines are copyrighted. To collect the data from UK newspapers Altmetric signed an agreement with the Newspaper Licensing Authority, which prevents us from including the links and headline to a news story unless the user also has a license from this same agency. As we can't verify that every person who views our Details Pages has this license we choose not to display the headline and link. 
+ More information about why we can't display some news mentions is available here . 
+ Back to top
+ © 2026 Altmetric , a Digital Science company  |  Terms  ·  Privacy  |  Found an error? Let us know

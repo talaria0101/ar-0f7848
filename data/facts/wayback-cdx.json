@@ -1,0 +1,34 @@
+{
+ "slug": "wayback-cdx",
+ "auth": "none",
+ "auth_note": "Anonymous GET worked with no key; docs mention an optional cookie API key only for restricted data on self-run servers.",
+ "cost": "not established",
+ "rate_limit": "not established",
+ "data_license": "not established",
+ "bulk_access": "Pagination API (page=, showNumPages=, resumeKey=) for large queries; no dump documented",
+ "probe_status": 200,
+ "probe_observation": "Anonymous request returned HTTP 200 JSON: a header row [urlkey,timestamp,original,mimetype,statuscode,digest,length] plus 2 capture rows for example.com.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "[\"urlkey\",\"timestamp\",\"original\",\"mimetype\",\"statuscode\",\"digest\",\"length\"], [\"com,example)/\",\"20020120142510\",\"http://example.com:80/\",\"text/html\",\"200\"",
+   "snapshot": "data/snapshots/wayback-cdx/probe.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "[\"com,example)/\",\"20020328012821\",\"http://www.example.com:80/\",\"text/html\",\"200\"",
+   "snapshot": "data/snapshots/wayback-cdx/probe.txt"
+  },
+  {
+   "claim": "bulk_access",
+   "quote": "For doing large/bulk queries, the use of the Pagination API is recommended.",
+   "snapshot": "data/snapshots/wayback-cdx/docs.txt"
+  },
+  {
+   "claim": "other",
+   "quote": "the cdx server is freely available with the rest of the open-source wayback machine software in this repository.",
+   "snapshot": "data/snapshots/wayback-cdx/docs.txt"
+  }
+ ],
+ "not_established": "Numeric rate limits, data license and cost of the hosted web.archive.org service are not stated in the CDX README. Extra pages tried: archive.org/about/terms.php (Anubis/JS shell, 93 bytes), archive.org/developers/wayback-cdx-server.html (404), archive.org/developers/index-apis.html (only a table of contents mentioning Rate Limiting, no body), help.archive.org wayback general info (no limits or license)."
+}

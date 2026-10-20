@@ -1,0 +1,180 @@
+J-STAGE WebAPI 
+ Toggle navigation       
+ J-STAGE home 
+ Browse 
+ All titles 
+ All subject areas 
+ All publishers 
+ Search articles 
+ Search J-STAGE Data 
+ About J-STAGE 
+ Overview 
+ Services and features 
+ Public data 
+ Terms and Policy 
+ News and PR 
+ News 
+ Maintenance information 
+ Special contents 
+ Media resources 
+ Support 
+ User manuals 
+ Browser compatibility 
+ FAQ Contact 
+ Sitemap 
+ Sign in 
+ Cart 
+ EN 
+ English 
+ 日本語 
+ Browse 
+ All titles 
+ All subject areas 
+ All publishers 
+ Search articles 
+ Search J-STAGE Data 
+ About J-STAGE 
+ Overview 
+ Services and features 
+ Public data 
+ Terms and Policy 
+ News and PR 
+ News 
+ Maintenance information 
+ Special contents 
+ Media resources 
+ Support 
+ User manuals 
+ Browser compatibility 
+ FAQ Contact 
+ Sitemap 
+ Sign in 
+ Cart 
+ EN 
+ English 
+ 日本語 
+ Advanced search 
+ Services and features 
+ J-STAGE networks worldwide 
+ Data repository 
+ COUNTER report 
+ J-STAGE WebAPI 
+ Open URL 
+ J-STAGE WebAPI
+ J-STAGE networks worldwide 
+ Data repository 
+ COUNTER report 
+ Open URL 
+ J-STAGE home 
+ / 
+ About J-STAGE 
+ / 
+ Services and features 
+ / 
+ J-STAGE WebAPI 
+ J-STAGE WebAPI 
+ News 
+ March 26, 2026 
+ We released a published journals search function in J-STAGE Web API. 
+ March 26, 2022 
+ We released the modification of Web API to switch the URL to “https” in the response data. 
+ Please also use “https” as request URLs.
+ About J-STAGE WebAPI 
+ J-STAGE WebAPI is an application programming interface (API) that enables users to retrieve metadata for J-STAGE content in XML format. 
+ By implementing the J-STAGE WebAPI, users can: 
+ ・ 
+ Extract data from J-STAGE content 
+ You can store a list of published journals, issues and tables of contents from journals on J-STAGE. The XML data can be imported into Microsoft Excel and other applications and manipulated. 
+ Note that downloading a large amount of data is not permitted under the J-STAGE Browsing Policy . 
+ ・ 
+ Link to J-STAGE content from your own website 
+ Subscribing institutions and academic societies can extract lists of titles and published issues, tables of contents and URLs of journals from J-STAGE and display them on their websites. This lets their users access J-STAGE content quickly and easily. 
+ ・ 
+ Perform integrated searches with other databases 
+ J-STAGE WebAPI can be used in conjunction with APIs provided by JST (J-GLOBAL), the National Institute of Informatics (CiNii Articles), and the National Diet Library (NDL Search). Visit their websites to learn more about these APIs and their terms of use. 
+ ・ 
+ Obtain up-to-date information 
+ By registering the URL of J-STAGE WebAPI in an RSS reader, you can check updated information for articles. 
+ Using the J-STAGE WebAPI 
+ By specifying the search criteria with parameters and accessing the URL for the request, you can obtain the search result metadata from each content type.
+ Content Type 
+ Overview 
+ Search terms (specified by parameters) 
+ Available metadata (XML format) 
+ Journal issue 
+ Obtain a list of issue numbers for the specified title. 
+ Title, ISSN, year of publication, publication code, etc. 
+ A list of volumes and issues of titles that match the search criteria. Detailed information such as publisher, ISSN, latest release date, and the URL of the table of contents can be obtained at the same time. 
+ Result of article search 
+ Obtain a list of the table of contents for the specified title. You can also search for articles using specific search criteria. 
+ Title, ISSN, year of publication, publication code, article title, author, keywords, etc. 
+ List of articles published on J-STAGE. Detailed information such as DOI, publication date, and bibliographic information can be obtained at the same time. 
+ Result of journal search 
+ Obtain a list of the published journals for the specified title. You can also search for journals using specific search criteria. 
+ Journal title, ISSN, year of publication, publication code, publisher name, publication type, access type, language, peer review, immediate open access status, etc. 
+ List of journals published on J-STAGE. Detailed information such as journal title, publisher name, publication year, ISSN, and immediate open access information can be obtained at the same time. 
+ Content Type： 
+ Journal issue 
+ Overview： 
+ Obtain a list of issue numbers for the specified title. 
+ Search terms (specified by parameters)： 
+ Title, ISSN, year of publication, publication code, etc. 
+ Available metadata (XML format)： 
+ A list of volumes and issues of titles that match the search criteria. Detailed information such as publisher, ISSN, latest release date, and the URL of the table of contents can be obtained at the same time. 
+ Content Type： 
+ Result of article search 
+ Overview： 
+ Obtain a list of the table of contents for the specified title. You can also search for articles using specific search criteria. 
+ Search terms (specified by parameters)： 
+ Title, ISSN, year of publication, publication code, article title, author, keywords, etc. 
+ Available metadata (XML format)： 
+ List of articles published on J-STAGE. Detailed information such as DOI, publication date, and bibliographic information can be obtained at the same time. 
+ Content Type： 
+ Result of journal search 
+ Overview： 
+ Obtain a list of the published journals for the specified title. You can also search for journals using specific search criteria. 
+ Search terms (specified by parameters)： 
+ Journal title, ISSN, year of publication, publication code, publisher name, publication type, access type, language, peer review, immediate open access status, etc. 
+ Available metadata (XML format)： 
+ List of journals published on J-STAGE. Detailed information such as journal title, publisher name, publication year, ISSN, and immediate open access information can be obtained at the same time. 
+ For more information on how to use the J-STAGE WebAPI, please consult the User Manual (in Japanese) . 
+ Terms of use 
+ In order to use the J-STAGE WebAPI, you must agree to the Terms of Use (in Japanese only) . Use of the API implies that you have agreed to the Terms of Use. 
+ Please note that users take full responsibility for their own use of the J-STAGE WebAPI. JST takes no responsibility for third-party use of the API or their outcomes.
+ Commercial use 
+ Permission is required for commercial use of the J-STAGE WebAPI, regardless of whether the use leads to commercial gain for the user. Please download the 
+ application form for using the J-STAGE WebAPI (in Japanese) , fill it out, and submit to J-STAGE at contact[at]jstage.jst.go.jp (replace [at] with @).
+ Credit 
+ In accordance with the Terms of Use, when using the J-STAGE WebAPI, you must indicate that any information from J-STAGE that is displayed on or within the application of this API has been provided by JST, and include a link to J-STAGE.
+ For example: 
+ Powered by J-STAGE 
+ Powered by <a href="https://www.jstage.jst.go.jp/browse/-char/en">J-STAGE</a>
+ You can also download and use this banner (180 x 25 pixels): 
+ More information 
+ For more information on using the J-STAGE WebAPI, please consult the User Manual (in Japanese) . 
+ JST cannot respond to questions or provide support for the use of this API.
+ Top 
+ Top 
+ Browse 
+ All titles 
+ All subject areas 
+ All publishers 
+ Search articles 
+ Search J-STAGE Data 
+ About J-STAGE 
+ Overview 
+ Services and features 
+ Public data 
+ Terms and Policy 
+ News and PR 
+ News 
+ Maintenance information 
+ Special contents 
+ Media resources 
+ Support 
+ User manuals 
+ Browser compatibility 
+ FAQ Contact 
+ Sitemap 
+ feedback 
+ Top

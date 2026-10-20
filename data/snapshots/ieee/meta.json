@@ -24,5 +24,43 @@
   "fetched_at": "2026-10-20T01:31:57+00:00",
   "ratelimit_headers": {},
   "text_bytes": 27
+ },
+ "extra": {
+  "gs": {
+   "url": "https://developer.ieee.org/getting_started",
+   "final_url": "https://developer.ieee.org/getting_started",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 17030,
+   "truncated": false,
+   "sha256": "6b978ef4e50deb12ffa0ca3a63aefde55dc3ae3d78b0ab91cfdee8240e122100",
+   "fetched_at": "2026-10-20T01:40:26+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 1329
+  },
+  "terms": {
+   "url": "https://developer.ieee.org/API_Terms_of_Use2",
+   "final_url": "https://developer.ieee.org/API_Terms_of_Use2",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 39680,
+   "truncated": false,
+   "sha256": "1de7ef29505d51ec6cc3a220985847050e50be02072568d8ae1ea31311a40a6b",
+   "fetched_at": "2026-10-20T01:40:28+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 22727
+  },
+  "docs": {
+   "url": "https://developer.ieee.org/docs",
+   "final_url": "https://developer.ieee.org/docs",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 18478,
+   "truncated": false,
+   "sha256": "679216ebd8f67df92740e16275358adcb5191d39cd91fe2a8c2e6b811d3ed358",
+   "fetched_at": "2026-10-20T01:40:47+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 1264
+  }
  }
 }

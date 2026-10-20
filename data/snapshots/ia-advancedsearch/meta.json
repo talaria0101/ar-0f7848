@@ -24,5 +24,67 @@
   "fetched_at": "2026-10-20T01:31:35+00:00",
   "ratelimit_headers": {},
   "text_bytes": 253
+ },
+ "extra": {
+  "bots": {
+   "url": "https://archive.org/developers/bots.html",
+   "final_url": "https://archive.org/developers/bots.html",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 28225,
+   "truncated": false,
+   "sha256": "a9501d1d96a1612f083c6ad5206f907f8a229a0ec6a16ebca44adaf200b18ac3",
+   "fetched_at": "2026-10-20T01:34:03+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 5095
+  },
+  "terms": {
+   "url": "https://archive.org/about/terms.php",
+   "final_url": "https://archive.org/about/terms",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 1951,
+   "truncated": false,
+   "sha256": "7fd0001d8ff3c6122db5e3d3ef32ea3f47615ba046cebfd3a1d9d02e53b7b4ec",
+   "fetched_at": "2026-10-20T01:34:04+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 93
+  },
+  "terms2": {
+   "url": "https://archive.org/about/terms",
+   "final_url": "https://archive.org/about/terms",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 1951,
+   "truncated": false,
+   "sha256": "7fd0001d8ff3c6122db5e3d3ef32ea3f47615ba046cebfd3a1d9d02e53b7b4ec",
+   "fetched_at": "2026-10-20T01:34:26+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 93
+  },
+  "apis": {
+   "url": "https://archive.org/services/docs/api/internetarchive/quickstart.html",
+   "final_url": "https://archive.org/services/docs/api/internetarchive/quickstart.html",
+   "status": 404,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 146,
+   "truncated": false,
+   "sha256": "55f7d9e99b8e2d4e0e193b2f0275501e6d9c1ebd29cadbea6a0da48a8587e3e0",
+   "fetched_at": "2026-10-20T01:34:28+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 37
+  },
+  "scrape": {
+   "url": "https://archive.org/developers/index-apis.html",
+   "final_url": "https://archive.org/developers/index-apis.html",
+   "status": 200,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 41923,
+   "truncated": false,
+   "sha256": "b49aa06a75e92e10f49851ef8b5b90782bd54081aa643f273145ecbeb1acbaa3",
+   "fetched_at": "2026-10-20T01:34:30+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 7447
+  }
  }
 }

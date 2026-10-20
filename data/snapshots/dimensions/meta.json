@@ -24,5 +24,43 @@
   "fetched_at": "2026-10-20T01:31:57+00:00",
   "ratelimit_headers": {},
   "text_bytes": 2
+ },
+ "extra": {
+  "reasonable": {
+   "url": "https://docs.dimensions.ai/dsl/limits.html",
+   "final_url": "https://docs.dimensions.ai/dsl/limits.html",
+   "status": 404,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 370,
+   "truncated": false,
+   "sha256": "924343e871b92181ae1634dae6f57d79a624a4fbaf08a27a663f98c554a03698",
+   "fetched_at": "2026-10-20T01:40:45+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 252
+  },
+  "access": {
+   "url": "https://docs.dimensions.ai/dsl/api.html",
+   "final_url": "https://docs.dimensions.ai/dsl/api.html",
+   "status": 200,
+   "content_type": "text/html",
+   "bytes": 44183,
+   "truncated": false,
+   "sha256": "921e728244bcf85fda61e274f22752771ac5cde227fb19082ed24da25e287a88",
+   "fetched_at": "2026-10-20T01:40:46+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 10935
+  },
+  "reasonable2": {
+   "url": "https://docs.dimensions.ai/dsl/reasonable_use.html",
+   "final_url": "https://docs.dimensions.ai/dsl/reasonable_use.html",
+   "status": 404,
+   "content_type": "text/html; charset=utf-8",
+   "bytes": 358,
+   "truncated": false,
+   "sha256": "3a9196149d84199fa7337a3bf459518a6c0281b6e0df031bf024a22a54c3870c",
+   "fetched_at": "2026-10-20T01:41:06+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 240
+  }
  }
 }

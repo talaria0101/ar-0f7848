@@ -1,0 +1,149 @@
+Page not found - ORCID 
+ We’ve recently updated ORCID’S Privacy Policy and Terms of Use. Please read our blog post for further information. ✕ Skip to primary navigation Skip to main content Skip to primary sidebar 
+ Connecting research and researchers 
+ Sign in to ORCID 
+ About 
+ About ORCID Our Mission 
+ ORCID 2030: Advancing the Future of Research ORCID Trust Annual Reports DEI at ORCID ORCID’s First Decade: From Startup to Sustainability 
+ Team 
+ ORCID Board ORCID Team Work with Us! ORCID Partners 
+ Our Community 
+ Consortia Interest Group Funders Interest Group ORCID Researcher Advisory Council ORCID’s Historical Community ORCID Community Partners Peer PID and Scholarly Infrastructure Providers 
+ Services 
+ Affiliation Manager Member Portal Annual data files Member API Public API ORCID Registry 
+ Governance 
+ Audit and Risk Committee ORCID Board Charter Board Elections Board Nominating Committee Bylaws Certificate of Incorporation Executive Committee Charter Finance Committee Charter Membership and Fees Charter 
+ Policies 
+ API Version Policy Brand Guidelines Contract and Invoicing Policy Dispute Procedures Open Source Project License ORCID Guidance on Publishing Service Providers ORCID Policy on Mergers and Acquisitions of Member Organizations ORCID Privacy Policy Public APIs Terms of Service Public Data File Use Policy Schrems II FAQ Terms of Use Whistleblower Policy 
+ For Researchers 
+ ORCID for Researchers Researcher FAQ 
+ Video Tutorials 
+ Your ORCID Record Get Help 
+ Membership 
+ ORCID Membership is for Organizations 
+ ORCID for Funders and Facilities ORCID for Government and Policy Makers ORCID for Publishers ORCID for Journal Editors ORCID for Universities and Research Institutions 
+ Request Membership Member List How we set our fees Terms and Conditions for Direct Member Organizations 
+ Vendors and Service Providers 
+ Become an ORCID Certified Service Provider ORCID Certified Service Providers List 
+ CSP Criteria/ Best Practices 
+ Discovery Systems Manuscript Submission Systems Research Information Systems Repository Systems Grant/Facility Application Management Systems 
+ ORCID Consortia 
+ Building a Successful Consortium Consortia Lead Agreement Consortia Onboarding Checklist ORCID Regional Consortia Roles and Responsibilities of ORCID Consortia 
+ Consortia Tools 
+ Affiliation Manager Member Portal 
+ Documentation 
+ Documentation Workflows 
+ Journal Articles Employment Peer Review Funder and Grants View More 
+ Integration Guide 
+ Getting Started with Your Integration Registering a Member API Client Integration and API FAQ View More 
+ Integration Best Practices 
+ Collecting and sharing ORCID iDs Discovery Systems Grant/Facility Application Management Systems Manuscript Submission Systems Repository Systems Research Information Systems 
+ Member Portal 
+ Account Management Guide Affiliation Manager Guide Manage Membership Info Guide Member Reporting Guide 
+ Resources 
+ Resources Global Participation Program 
+ GPP Community Partners Global Participation Fund GPF Proposal Submission Global Participation Fund FAQ GPF Evaluation Rubric Global Participation Fund Outcomes 
+ Integration Resources 
+ API Documentation For Developers API Users Group Register a Sandbox API Client Register a Production API Client 
+ Other Resources 
+ Give Feedback ORCID Brand Guidelines ORCID Brand Library ORCID iD display guidelines ORCID Outreach Resources ORCID Public Data File on Google Big Query ORCID Statistics 
+ News & Events 
+ Upcoming Events & News News 
+ ORCID News Consortia News Registry Release Notes Integration News Blog Product Updates Use Cases 
+ Events 
+ Events Calendar In Person Events Webinars ORCID On-Demand 
+ Member News 
+ New Certified Service Providers New Integrations New Members 
+ Sorry, we can't find the page you're looking for. It looks like the page you are looking for is not here. Don't worry, this can happen for many reasons. The URL could be typed wrong, the page could have moved or something might have gone wrong with our site. We will do our best to put you back on track. 
+ What now? 
+ Search the ORCID Site 
+ Search this website 
+ Head back to our homepage and start again from there. 
+Or take a look at our most recent blog posts: 
+ Announcing the Global Participation Fund 8th Round Awardees 
+ 2026 updates to our Terms of Use and Privacy Policy 
+ Securing Priority and Expanding Reach: Key Takeaways from Our African Researcher Showcase 
+ Still need help? 
+ If you still can't find what you're looking for then please Contact us. 
+ Primary Sidebar 
+ Sign up for blog updates 
+ Please leave this field empty Email  * 
+ We will only use your email to notify you when we have new blog posts. You can unsubscribe at any time. See our Privacy Policy for more information. 
+ I agree to allow ORCID to use my email as described above 
+ This field is required. 
+ Check your inbox or spam folder to confirm your subscription.
+ Search 
+ Search this website 
+ Blog Posts by Category 
+ Blog (608)
+ Consortia News (73)
+ Features (21)
+ Integration News (82)
+ Member News (46)
+ ORCID News (297)
+ Product Interest Group (6)
+ Product Updates (98)
+ Use Cases (35)
+ Tags 
+ affiliation manager 
+ Annual Report 
+ Ask Me Anything 
+ board elections 
+ Board Nominations 
+ Certified Service Provider Program 
+ community governed 
+ Community Trust Network 
+ consortia 
+ Consortia lead workshop 
+ Consortia Member 
+ Enabling Value 
+ Events 
+ Global Participation Fund 
+ Global Participation Program 
+ GPF 
+ iamnw 
+ Increasing Global Participation 
+ integration 
+ Latin America 
+ Member Portal 
+ Membership 
+ open access 
+ open science 
+ ORCID Board 
+ ORCID Community 
+ ORCID Community Town Hall 
+ ORCID in Action 
+ ORCID in the Wild 
+ orcid record 
+ privacy 
+ privacy policy 
+ product development 
+ Public Data File 
+ researcher 
+ researchers 
+ Research Integrity 
+ ROR 
+ scholarly publishers 
+ trust 
+ trust markers 
+ Universities and Research Institutions 
+ Upholding Trust and Integrity 
+ user experience 
+ user interface 
+ Recent Posts 
+ Announcing the Global Participation Fund 8th Round Awardees 
+ 2026 updates to our Terms of Use and Privacy Policy 
+ Securing Priority and Expanding Reach: Key Takeaways from Our African Researcher Showcase 
+ Connecting the Funding Lifecycle: How ProposalCentral and ORCID are Improving Modern Grant Operations—Plus Insights for GPF Applicants 
+ Announcing the 2027 Board Slate 
+ The text of this website is published under a
+ CC0 license .
+ ORCID™ , the ORCID logo, and the iD logo are trademarks of ORCID, Inc. ORCID is registered in the US and other jurisdictions.
+ About ORCID 
+ Privacy Policy 
+ Terms of Use 
+ Accessibility Statement 
+ ORCID Help Centre 
+ Dispute Procedures 
+ Brand Guidelines 
+ Cookie Settings

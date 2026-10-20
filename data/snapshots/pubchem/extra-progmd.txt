@@ -1,0 +1,32 @@
+*Last updated: May 19, 2025*
+
+# Programmatic Access
+
+> WARNING
+>>**USAGE POLICY**: Please note that PubChem web services run on a limited pool of servers shared by all PubChem users. We ask that any user, application, or organization not make more than 5 requests per second, in order to avoid overloading these servers. For more detail on request volume limitations, including automated rate limiting (throttling), please read [this document](dynamic-request-throttling.md). We cannot offer API keys or whitelists to exceed these limits. If you have a large data set that you need to compute with, please contact us for help on optimizing your task, as there are likely more efficient ways to approach bulk access. See also the [help page for bulk data downloads](downloads.md).
+
+> WARNING
+>>**503 HTTP STATUS CODE**:  Please note that this status code may be returned when the server is temporarily unable to service your request due to maintenance downtime or capacity problems. (Please try again later.) Please also note that an HTML document may be returned.
+
+PubChem provides many types of programmatic access to its data, including:
+
+* **[PUG-REST](pug-rest-tutorial.md)**\
+PUG-REST, a [Representational State Transfer (REST)](https://en.wikipedia.org/wiki/Representational_state_transfer)\-style web service that supplies specific bits of information on one or more PubChem records, and is a good place to start for most users. PUG-REST is a simplified access route to PubChem without the overhead of XML or SOAP envelopes that are required with PUG and PUG-SOAP. PUG-REST provides convenient access to information on PubChem records not possible with the other PUG services. It is intended to handle short requests with simple inputs and outputs, and is synchronous - meaning the result is given in a single call that may last at most 30s (the default timeout on PubChem servers), without any intermediate step to poll whether that request has completed.
+
+* **[PUG-View](pug-view.md)**\
+PUG-View is a [REST](https://en.wikipedia.org/wiki/Representational_state_transfer)\-style web service that provides full reports, including third-party textual annotation, for individual PubChem records.  Its purpose is primarily to drive the PubChem summary web pages, but can also be used independently as a programmatic web service. PUG View provides complex, structured data reports (compared to PUG REST which has simpler outputs).
+
+* **[Power User Gateway (PUG)](power-user-gateway.md)**\
+PUG provides programmatic access to PubChem services via a single common gateway interface (CGI), called ‘pug.cgi’, available at [http://pubchem.ncbi.nlm.nih.gov/pug/pug.cgi](http://pubchem.ncbi.nlm.nih.gov/pug/pug.cgi). This CGI is a central gateway to several PubChem services. Instead of taking any Uniform Resource Locator (URL) arguments, PUG exchanges data through XML via a Hypertext Transfer Protocol (HTTP) POST.
+
+* **[PUG-SOAP](pug-soap.md)**\
+PUG-SOAP provides a web service access to PubChem data, using the [simple object access protocol (SOAP)](http://www.w3.org/TR/soap). It provides an easier programmatic access to much of the same functionality as PUG, but it breaks down operations into simpler functions as defined via the [web service definition language (WSDL)](http://www.w3.org/TR/wsdl), and uses SOAP-formatted message envelopes for information exchange.  This WSDL/SOAP layer is most suitable for SOAP-aware GUI workflow applications (e.g. Taverna and Pipeline Pilot) and programming/scripting languages (e.g. C, C++, C#, .NET, Perl, Python and Java).
+
+* **[PubChemRDF REST interface](rdf-rest.md)**\
+This is a REST-style interface designed to access RDF-encoded PubChem data. See [PubChemRDF](rdf.md) for more details.
+
+* **[Entrez Utilities](https://www.ncbi.nlm.nih.gov/books/NBK25501/) [(also called E-Utilities or E-Utils)](https://www.ncbi.nlm.nih.gov/books/NBK25501/)**\
+[E-Utils](http://www.ncbi.nlm.nih.gov/books/NBK25501/) are a set of programs used to access to information contained in the [Entrez](advanced-search-entrez.md) system.  While suited for accessing text or numeric-fielded data, they cannot deal with more complex types of data specific to PubChem, such as chemical structures and tabular bioactivity data.
+
+
+Also note that PubChem has a standard time limit of 30 seconds per web service request. If a request is not completed within the 30-second limit for any reason, a timeout error will be returned.  To work around certain slower operations, some services off an ‘asynchronous’ approach, where a so-called ‘key’ is returned as a response to the initial request.  This key is then used to check periodically whether the operation has finished, and, when complete, retrieve the results.

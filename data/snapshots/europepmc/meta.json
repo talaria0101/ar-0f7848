@@ -24,5 +24,151 @@
   "fetched_at": "2026-10-20T01:31:41+00:00",
   "ratelimit_headers": {},
   "text_bytes": 1187
+ },
+ "extra": {
+  "rest": {
+   "url": "https://europepmc.org/api",
+   "final_url": "https://europepmc.org/api",
+   "status": 404,
+   "content_type": "text/html;charset=UTF-8",
+   "bytes": 748,
+   "truncated": false,
+   "sha256": "4de50f514e1d8731f0362b8cff9d7a8c54b3851c7f19e45f27a74c25dec68a3d",
+   "fetched_at": "2026-10-20T01:36:37+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 201
+  },
+  "help": {
+   "url": "https://europepmc.org/RestfulWebService?x=1",
+   "final_url": "https://europepmc.org/RestfulWebService?x=1",
+   "status": 403,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 5727,
+   "truncated": false,
+   "sha256": "6743fd46c8c009dcaf551a5455f07e2f27249d34cf372c0f959148d52d96d2e4",
+   "fetched_at": "2026-10-20T01:36:37+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 16
+  },
+  "ftp": {
+   "url": "https://europepmc.org/downloads",
+   "final_url": "https://europepmc.org/downloads",
+   "status": 403,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 5633,
+   "truncated": false,
+   "sha256": "591a4b03d2ba7fd2b270a6c7d6faf7d0bd084655bf3b6290ddf546a6990108bb",
+   "fetched_at": "2026-10-20T01:36:37+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 16
+  },
+  "ebi": {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/",
+   "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/",
+   "status": 404,
+   "content_type": "text/html;charset=UTF-8",
+   "bytes": 275,
+   "truncated": false,
+   "sha256": "729feb9dac0afd2e016ff0ecbf881fecf9bf69f419aefb9014b7c6da06cf539a",
+   "fetched_at": "2026-10-20T01:36:38+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 201
+  },
+  "lic": {
+   "url": "https://europepmc.org/Copyright",
+   "final_url": "https://europepmc.org/Copyright",
+   "status": 403,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 5633,
+   "truncated": false,
+   "sha256": "7734b8b50c42980a88d72a5b927077442547f8658f31b5377571f51e40618677",
+   "fetched_at": "2026-10-20T01:36:39+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 16
+  },
+  "ws": {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=test&format=json&pageSize=1",
+   "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=test&format=json&pageSize=1",
+   "status": 200,
+   "content_type": "application/json;charset=UTF-8",
+   "bytes": 1187,
+   "truncated": false,
+   "sha256": "f552924e349d4d918261fe1198358c23e0663cb8839dac155f2628136be47805",
+   "fetched_at": "2026-10-20T01:36:57+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 1187
+  },
+  "gh": {
+   "url": "https://raw.githubusercontent.com/EuropePMC/europepmc.github.io/master/README.md",
+   "final_url": "https://raw.githubusercontent.com/EuropePMC/europepmc.github.io/master/README.md",
+   "status": 404,
+   "content_type": "text/plain; charset=utf-8",
+   "bytes": 14,
+   "truncated": false,
+   "sha256": "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed",
+   "fetched_at": "2026-10-20T01:36:58+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 14
+  },
+  "oa": {
+   "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/openapi.json",
+   "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/openapi.json",
+   "status": 404,
+   "content_type": "text/html;charset=UTF-8",
+   "bytes": 275,
+   "truncated": false,
+   "sha256": "b03eb79f5a7880e2701facdea714f7d7c8095dc71e6c6efafae5fdbc590e287e",
+   "fetched_at": "2026-10-20T01:36:59+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 201
+  },
+  "about": {
+   "url": "https://europepmc.org/about",
+   "final_url": "https://europepmc.org/about",
+   "status": 403,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 5621,
+   "truncated": false,
+   "sha256": "9b634e16fe85540643cb513e46b852d173d86812428c1f222cf059de16749f64",
+   "fetched_at": "2026-10-20T01:37:00+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 16
+  },
+  "ftp2": {
+   "url": "https://europepmc.org/ftp/oa/",
+   "final_url": "https://europepmc.org/ftp/oa/",
+   "status": 403,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 5627,
+   "truncated": false,
+   "sha256": "65e65391a0b4a8d78041276cf7ed92e2e11006bd6ab2994343a5c3fbb7e21e92",
+   "fetched_at": "2026-10-20T01:37:00+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 16
+  },
+  "ebiterms": {
+   "url": "https://www.ebi.ac.uk/about/terms-of-use",
+   "final_url": "https://www.ebi.ac.uk/about/terms-of-use/",
+   "status": 200,
+   "content_type": "text/html",
+   "bytes": 30260,
+   "truncated": false,
+   "sha256": "f0e32be0b599c81273f2197f5c2cf7a7d18ec2e8587e87ddd246b36b89100ab2",
+   "fetched_at": "2026-10-20T01:37:00+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 10263
+  },
+  "faq": {
+   "url": "https://europepmc.org/Help",
+   "final_url": "https://europepmc.org/Help",
+   "status": 403,
+   "content_type": "text/html; charset=UTF-8",
+   "bytes": 5640,
+   "truncated": false,
+   "sha256": "cda928782ca56d771cc0ccd27509bd60601a40a04710665f00ead9d23f8cafb8",
+   "fetched_at": "2026-10-20T01:37:02+00:00",
+   "ratelimit_headers": {},
+   "text_bytes": 16
+  }
  }
 }

@@ -1,0 +1,34 @@
+{
+ "slug": "googlebooks",
+ "auth": "key-free",
+ "auth_note": "Docs require an API key or OAuth 2.0 token on every request, even for public data; the key is created in the Google API Console. The anonymous probe got 429.",
+ "cost": "not established",
+ "rate_limit": "not established",
+ "data_license": "not established",
+ "bulk_access": "none documented",
+ "probe_status": 429,
+ "probe_observation": "Anonymous probe returned JSON error code 429 RESOURCE_EXHAUSTED: quota exceeded for 'Queries per day', with quota_limit_value 0 for the shared consumer project.",
+ "evidence": [
+  {
+   "claim": "auth",
+   "quote": "If the request doesn't require authorization (such as a request for public data), then the application must provide either the API key or an OAuth 2.0 token, or both",
+   "snapshot": "data/snapshots/googlebooks/docs.txt"
+  },
+  {
+   "claim": "auth",
+   "quote": "To acquire an API key: Open the Credentials page in the API Console.",
+   "snapshot": "data/snapshots/googlebooks/docs.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "Quota exceeded for quota metric 'Queries' and limit 'Queries per day' of service 'books.googleapis.com'",
+   "snapshot": "data/snapshots/googlebooks/probe.txt"
+  },
+  {
+   "claim": "probe",
+   "quote": "\"quota_limit_value\": \"0\"",
+   "snapshot": "data/snapshots/googlebooks/probe.txt"
+  }
+ ],
+ "not_established": "Numeric default quota and pricing are not in the captured docs (extra-quota snapshot, the getting_started page, is a generic page without them); whether a key costs anything is not stated. Content license of returned metadata not stated (page CC BY 4.0 licence covers the docs page only). No bulk route documented. The 429 is an anonymous shared-project quota of 0, not evidence of keyed limits."
+}
