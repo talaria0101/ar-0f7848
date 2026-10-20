@@ -13,7 +13,7 @@ An inventory of 69 academic, scholarly, library and web-archive services that ex
 
 ## Method
 
-1. Candidate list: 69 providers in six groups (web archives, libraries and archives, scholarly graphs and indexes, preprint/OA/repository services, biomedical and science data, publisher APIs), chosen for having a documented HTTP API.
+1. Candidate list: 69 providers in 11 categories (archive, library, encyclopedia, scholarly, preprint, biomed, oa, identifier, repository, science, publisher), chosen for having a documented HTTP API.
 2. Capture (`scripts/probe.py`): the docs page and one minimal anonymous API call per provider. A keyed API still gets a probe, because the refusal text is evidence of the gate.
 3. Facts: for each provider, auth, cost, rate limit, data license, bulk route, probe observation. A value needs a verbatim quote from a snapshot of that provider. Where docs were a JS shell or blocked, a better page was captured with `scripts/snap.py`. Where nothing was found after several routes, the value is `not established` and the reason is written down.
 4. Probe verdicts (`scripts/verdict.py`) are computed from the captured body, not from the HTTP status alone.
